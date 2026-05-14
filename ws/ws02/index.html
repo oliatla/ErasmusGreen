@@ -85,11 +85,13 @@ html, body {
   border-color: var(--green-dark);
   background: var(--green-tint-2);
 }
-.flag-btn svg {
+.flag-btn svg,
+.flag-btn img {
   width: 28px; height: 20px;
   display: block;
   border-radius: 2px;
   box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+  object-fit: cover;
 }
 .toolbar .spacer { flex: 1; }
 
@@ -589,53 +591,12 @@ body.bw-mode table.power-table th {
   <a href="../../index.html" class="back-btn" data-i18n="ui.back">← Til baka</a>
   <span class="label" data-i18n="ui.language">Tungumál:</span>
   <div class="flags" role="group" aria-label="Tungumál">
-    <button class="flag-btn" data-lang="is" aria-pressed="false" title="Íslenska">
-      <svg viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg">
-        <rect width="25" height="18" fill="#02529c"/>
-        <rect x="7" width="3" height="18" fill="#fff"/>
-        <rect y="7.5" width="25" height="3" fill="#fff"/>
-        <rect x="8" width="1.5" height="18" fill="#dc1e35"/>
-        <rect y="8.25" width="25" height="1.5" fill="#dc1e35"/>
-      </svg>
-    </button>
-    <button class="flag-btn" data-lang="en" aria-pressed="true" title="English">
-      <svg viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg">
-        <rect width="25" height="18" fill="#012169"/>
-        <path d="M0 0 L25 18 M25 0 L0 18" stroke="#fff" stroke-width="2"/>
-        <path d="M0 0 L25 18 M25 0 L0 18" stroke="#c8102e" stroke-width="1"/>
-        <path d="M12.5 0 V18 M0 9 H25" stroke="#fff" stroke-width="3"/>
-        <path d="M12.5 0 V18 M0 9 H25" stroke="#c8102e" stroke-width="1.8"/>
-      </svg>
-    </button>
-    <button class="flag-btn" data-lang="pt" aria-pressed="false" title="Português">
-      <svg viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg">
-        <rect width="10" height="18" fill="#046a38"/>
-        <rect x="10" width="15" height="18" fill="#da291c"/>
-        <circle cx="10" cy="9" r="3.2" fill="#fee100" stroke="#fff" stroke-width=".4"/>
-      </svg>
-    </button>
-    <button class="flag-btn" data-lang="hr" aria-pressed="false" title="Hrvatski">
-      <svg viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg">
-        <rect width="25" height="6" fill="#171796"/>
-        <rect y="6" width="25" height="6" fill="#fff"/>
-        <rect y="12" width="25" height="6" fill="#ff0000"/>
-      </svg>
-    </button>
-    <button class="flag-btn" data-lang="tr" aria-pressed="false" title="Türkçe">
-      <svg viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg">
-        <rect width="25" height="18" fill="#e30a17"/>
-        <circle cx="9" cy="9" r="4" fill="#fff"/>
-        <circle cx="10" cy="9" r="3.2" fill="#e30a17"/>
-        <polygon points="13,9 16.8,7.8 14.5,11.1 14.5,6.9 16.8,10.2" fill="#fff"/>
-      </svg>
-    </button>
-    <button class="flag-btn" data-lang="nl" aria-pressed="false" title="Nederlands">
-      <svg viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg">
-        <rect width="25" height="6" fill="#ae1c28"/>
-        <rect y="6" width="25" height="6" fill="#fff"/>
-        <rect y="12" width="25" height="6" fill="#21468b"/>
-      </svg>
-    </button>
+    <button class="flag-btn" data-lang="is" aria-pressed="false" title="Íslenska"><img src="../../img/flags/is.svg" alt="is"></button>
+    <button class="flag-btn" data-lang="en" aria-pressed="true" title="English"><img src="../../img/flags/en.svg" alt="en"></button>
+    <button class="flag-btn" data-lang="pt" aria-pressed="false" title="Português"><img src="../../img/flags/pt.svg" alt="pt"></button>
+    <button class="flag-btn" data-lang="hr" aria-pressed="false" title="Hrvatski"><img src="../../img/flags/hr.svg" alt="hr"></button>
+    <button class="flag-btn" data-lang="tr" aria-pressed="false" title="Türkçe"><img src="../../img/flags/tr.svg" alt="tr"></button>
+    <button class="flag-btn" data-lang="nl" aria-pressed="false" title="Nederlands"><img src="../../img/flags/nl.svg" alt="nl"></button>
   </div>
 
   <div class="spacer"></div>

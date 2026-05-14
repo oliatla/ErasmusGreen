@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Worksheet 03 — Dishwasher Efficiency</title>
+<title>Worksheet 06 — Total cost of ownership (Advanced)</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -589,6 +589,261 @@ ol.video-list li {
   margin: 0 0 1mm;
 }
 
+
+/* =================================================================
+   QUIZ — multiple-choice questions with A) B) C) D) options
+   ================================================================= */
+.quiz-q {
+  margin: 2mm 0 3.5mm;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.quiz-q .q-text {
+  font-size: 10.5pt;
+  margin: 0 0 1.5mm;
+  line-height: 1.4;
+}
+.quiz-q ol.q-opts {
+  list-style: none;
+  counter-reset: alpha;
+  margin: 0 0 0 4mm;
+  padding: 0;
+  font-size: 10pt;
+  column-count: 2;
+  column-gap: 8mm;
+}
+.quiz-q ol.q-opts li {
+  counter-increment: alpha;
+  margin: 0 0 .8mm;
+  padding-left: 8mm;
+  position: relative;
+  break-inside: avoid;
+}
+.quiz-q ol.q-opts li::before {
+  content: "○ " counter(alpha, upper-alpha) ")";
+  position: absolute;
+  left: 0;
+  font-weight: 600;
+  color: var(--ink-mute);
+  letter-spacing: .3mm;
+}
+.quiz-section-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 13pt;
+  color: var(--green-dark);
+  margin: 4mm 0 2mm;
+  text-transform: uppercase;
+  letter-spacing: .5mm;
+  border-bottom: 1pt solid var(--green-mid);
+  padding-bottom: 1mm;
+}
+
+/* Appliance section heading (1- ELECTRIC OVEN, 2-REFRIGERATOR, etc.) */
+.appliance-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 15pt;
+  color: var(--green-dark);
+  margin: 5mm 0 3mm;
+  letter-spacing: .3mm;
+}
+
+/* Sub-headers within an appliance (How It Works, Structure, etc.) */
+.sub-heading {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 11.5pt;
+  color: var(--green-mid);
+  margin: 3mm 0 1.5mm;
+}
+
+/* Compact bullet list */
+ul.compact-list {
+  list-style: none;
+  margin: 1mm 0 2.5mm;
+  padding: 0;
+}
+ul.compact-list li {
+  position: relative;
+  padding-left: 5mm;
+  margin: 0 0 1mm;
+  font-size: 10.5pt;
+  line-height: 1.45;
+}
+ul.compact-list li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: var(--green-mid);
+  font-size: 7pt;
+  top: 1pt;
+}
+
+/* Answer key — green box style */
+.answer-key {
+  margin: 4mm 0;
+  padding: 3mm 4mm;
+  background: var(--green-tint-2);
+  border-left: 3pt solid var(--green-mid);
+  border-radius: 1mm;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.answer-key h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 11pt;
+  margin: 0 0 1.5mm;
+  color: var(--green-dark);
+  letter-spacing: .3mm;
+  text-transform: uppercase;
+}
+.answer-key p {
+  margin: 0 0 .5mm;
+  font-size: 10pt;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+}
+body.bw-mode .answer-key {
+  background: var(--bw-bg);
+  border-left-color: var(--bw-line);
+}
+
+
+/* =================================================================
+   MATCHING EXERCISE — bulb to description
+   ================================================================= */
+ul.match-list {
+  list-style: none;
+  margin: 3mm 0;
+  padding: 0;
+}
+ul.match-list li {
+  display: grid;
+  grid-template-columns: 38mm 12mm 1fr;
+  gap: 0 3mm;
+  align-items: baseline;
+  padding: 2.5mm 0;
+  border-bottom: .25pt dashed var(--line);
+  font-size: 10.5pt;
+}
+ul.match-list li:last-child { border-bottom: none; }
+ul.match-list .item   { font-weight: 700; }
+ul.match-list .arrow  { color: var(--ink-mute); text-align: center; }
+ul.match-list .blank  {
+  display: inline-block;
+  min-width: 10mm;
+  border-bottom: .5pt solid var(--ink);
+  text-align: center;
+  margin-right: 2mm;
+}
+ul.match-list .desc { line-height: 1.45; }
+ul.match-list .desc strong { color: var(--green-dark); }
+
+/* Description choices block — listed before / above the items */
+.match-choices {
+  margin: 3mm 0 4mm;
+  padding: 3mm 4mm;
+  background: var(--green-tint-2);
+  border-left: 3pt solid var(--green-mid);
+  border-radius: 1mm;
+}
+.match-choices ol {
+  margin: 0;
+  padding-left: 5mm;
+  font-size: 10.5pt;
+  line-height: 1.55;
+}
+.match-choices ol li { margin-bottom: 1mm; }
+body.bw-mode .match-choices { background: var(--bw-bg); border-left-color: var(--bw-line); }
+
+/* =================================================================
+   WORKED-EXAMPLE STEPS — numbered list inside the green box
+   ================================================================= */
+ol.steps-list {
+  list-style: none;
+  counter-reset: step;
+  margin: 1mm 0 1mm;
+  padding: 0;
+}
+ol.steps-list li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 13mm;
+  margin: 1.5mm 0;
+  font-size: 10.5pt;
+  line-height: 1.5;
+}
+ol.steps-list li::before {
+  content: "Step " counter(step) ":";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+
+/* =================================================================
+   PREREQUISITE NOTE — warn-style box for "what you should know"
+   ================================================================= */
+.prereq-box {
+  background: #fff7e6;
+  border-left: 3pt solid #c08b00;
+  padding: 2.5mm 3.5mm;
+  margin: 3mm 0;
+  font-size: 10.5pt;
+  border-radius: 1mm;
+  break-inside: avoid;
+}
+.prereq-box strong { color: #8a6500; }
+.prereq-box em     { font-style: italic; color: var(--ink-soft); }
+body.bw-mode .prereq-box {
+  background: var(--bw-bg);
+  border-left-color: var(--bw-line);
+}
+body.bw-mode .prereq-box strong { color: var(--ink); }
+
+/* =================================================================
+   PLOT GRID — empty grid where students sketch their TCO curves
+   ================================================================= */
+.plot-area {
+  width: 100%;
+  height: 90mm;
+  border: .5pt solid var(--ink-mute);
+  margin: 3mm 0 1mm;
+  position: relative;
+  background:
+    repeating-linear-gradient(0deg,
+      transparent 0 8.95mm,
+      var(--line) 8.95mm 9mm),
+    repeating-linear-gradient(90deg,
+      transparent 0 8.95mm,
+      var(--line) 8.95mm 9mm);
+}
+.plot-area .x-label,
+.plot-area .y-label {
+  position: absolute;
+  font-size: 8.5pt;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+.plot-area .x-label { bottom: -5mm; right: 1mm; }
+.plot-area .y-label { top: 1mm; left: 1mm; transform: rotate(0deg); }
+
+/* =================================================================
+   CALCULATION WORKSPACE — taller empty white area for working out
+   ================================================================= */
+.workspace {
+  min-height: 35mm;
+  border: .5pt solid var(--line);
+  background: var(--paper);
+  margin: 2mm 0 3mm;
+  break-inside: avoid;
+}
+.workspace.short { min-height: 22mm; }
+.workspace.tall  { min-height: 55mm; }
+
 /* ===== PRINT ===== */
 @page { size: A4; margin: 0; }
 @media print {
@@ -639,7 +894,7 @@ ol.video-list li {
 
 
 <!-- ============================================================
-     PAGE 1 — Title, structural table, Introduction
+     PAGE 1 — Title, structural table, Introduction, Theory
 ============================================================ -->
 <section class="page" data-page="1">
 
@@ -653,42 +908,60 @@ ol.video-list li {
     </div>
   </div>
 
-  <h1 data-i18n="w03.worksheet">Worksheet 03</h1>
-  <div class="subtitle" data-i18n="w03.title">Energy and Water Efficiency of Dishwashers</div>
-  <div class="level"><span data-i18n="ui.level">Level:</span> <strong data-i18n="w03.level">BASIC / INTERMEDIATE</strong></div>
+  <h1 data-i18n="w06.worksheet">Worksheet 06</h1>
+  <div class="subtitle" data-i18n="w06.title">Total Cost of Ownership and Environmental Impact</div>
+  <div class="level"><span data-i18n="ui.level">Level:</span> <strong data-i18n="w06.level">ADVANCED</strong></div>
 
   <table class="struct">
     <tbody>
       <tr>
         <th data-i18n="ui.topic">Topic</th>
-        <td colspan="3" data-i18n="w03.topic">3.2 Energy and water efficiency of dishwashers</td>
+        <td colspan="3" data-i18n="w06.topic">Total cost of ownership and environmental impact of light bulbs.</td>
       </tr>
       <tr>
         <th data-i18n="ui.learningOutcomes">Learning outcomes</th>
         <td colspan="3">
           <ul>
-            <li><strong data-i18n="w03.lo.tech">Technical knowledge:</strong> <span data-i18n="w03.lo.tech.body">Students can explain how dishwashers consume energy (heating water) and water per cycle.</span></li>
-            <li><strong data-i18n="w03.lo.math">Mathematical skills:</strong> <span data-i18n="w03.lo.math.body">Students calculate annual costs using realistic usage scenarios.</span></li>
-            <li><strong data-i18n="w03.lo.env">Environmental awareness:</strong> <span data-i18n="w03.lo.env.body">Students compare energy and water consumption across dishwasher programmes.</span></li>
-            <li><strong data-i18n="w03.lo.green">Green skills:</strong> <span data-i18n="w03.lo.green.body">Students read energy labels, choose appliance settings, compare annual costs of different programmes and evaluate environmental impact.</span></li>
+            <li data-i18n="w06.lo1">Model the total cost of ownership (TCO) of different bulb types as a function of usage hours.</li>
+            <li data-i18n="w06.lo2">Perform a sensitivity analysis on electricity tariff and usage intensity.</li>
+            <li data-i18n="w06.lo3">Quantify lifecycle CO&#8322; emissions and discuss the embodied carbon of bulb manufacturing.</li>
           </ul>
         </td>
       </tr>
       <tr>
         <th data-i18n="ui.timeNeeded">Time needed</th>
-        <td colspan="3" data-i18n="w03.time">60 min</td>
+        <td colspan="3" data-i18n="w06.time">120 min</td>
       </tr>
       <tr>
         <th data-i18n="ui.resources">Resources needed</th>
-        <td colspan="3" data-i18n="w03.resources">Calculator, electricity tariff (e.g., 0.30 €/kWh), water tariff (e.g., 0.002 €/l), EU energy label for a dishwasher (from home or manufacturer website).</td>
+        <td colspan="3" data-i18n="w06.resources">Bulb specification table; calculator or spreadsheet software (recommended); access to current Dutch electricity tariff data.</td>
       </tr>
     </tbody>
   </table>
 
   <h2 class="section" data-i18n="ui.introduction">Introduction</h2>
 
-  <p class="body" data-i18n="w03.intro">
-    A modern dishwasher can actually use less water than washing by hand &mdash; but only if it is loaded correctly and run on the right programme. The choice between an intensive 70&nbsp;&deg;C programme and an eco programme can make a significant difference to your electricity bill and water use. In this worksheet you will investigate those differences and decide when each programme makes sense.
+  <p class="body" data-i18n="w06.intro">
+    When choosing between light bulbs, the cheapest option depends on how long you use them. For a lamp that is on for only a few minutes per day, an LED may never pay back its higher purchase price. For a lamp that burns 12 hours a day, an LED is far cheaper within a year. In this worksheet you will build a Total Cost of Ownership (TCO) model and analyse when each technology is the rational choice.
+  </p>
+
+  <div class="prereq-box">
+    <strong data-i18n="w06.prereq.label">What you should already know:</strong>
+    <em data-i18n="w06.prereq.body">This worksheet assumes you have completed Worksheet 1B (or are confident with luminous efficacy, kWh calculations, and the simple TCO concept).</em>
+  </div>
+
+  <h2 class="section" data-i18n="w06.theory.title">Theory</h2>
+
+  <p class="body" data-i18n="w06.theory.intro">
+    At this level we treat bulb selection as an <strong>optimisation problem</strong>. The TCO function from Worksheet 1B can be written more rigorously and analysed mathematically.
+  </p>
+
+  <p class="body" data-i18n="w06.theory.formulaIntro">The continuous form of TCO over a usage period of <em>t</em> hours is:</p>
+
+  <div class="formula-block">$$ \text{TCO}(t) \approx \frac{t}{L} \cdot P_{\text{bulb}} + \frac{W \cdot t}{1000} \cdot \tau $$</div>
+
+  <p class="body" data-i18n="w06.theory.formulaWhere">
+    where <strong>L</strong> is bulb lifetime (h), <strong>P<sub>bulb</sub></strong> is the unit purchase price (€), <strong>W</strong> is the wattage and <strong>τ</strong> is the electricity tariff (€/kWh). Strictly speaking, you cannot buy 0.7 of a bulb, so the realistic version uses the ceiling function ⌈t/L⌉ for the number of bulbs needed.
   </p>
 
   <div class="r-footer">
@@ -696,7 +969,7 @@ ol.video-list li {
       <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
       <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
     </div>
-    <div class="pageno"><span data-i18n="ui.page">Page</span> 1 <span data-i18n="ui.of">of</span> 8</div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 1 <span data-i18n="ui.of">of</span> 5</div>
   </div>
 </section>
 
@@ -713,41 +986,30 @@ ol.video-list li {
     </div>
   </div>
 
-  <h2 class="section" data-i18n="w03.theory.title">Theory</h2>
-
-  <p class="body" data-i18n="w03.theory.intro">
-    A dishwasher uses most of its energy to <strong>heat water</strong>. It also uses a small amount for the drying cycle (heating element).
-  </p>
-
-  <div class="box-tip no-break">
-    <h3 data-i18n="w03.theory.formulaTitle">Key formula for water heating</h3>
-    <p>$$ E_\text{kWh} = \dfrac{V_\text{L} \times 4.18 \times \Delta T}{3600} $$</p>
-    <p data-i18n="w03.theory.formulaNote"><em>Simplified: ~0.05 kWh per litre per 10&nbsp;&deg;C temperature rise.</em></p>
-  </div>
-
   <ul class="theory-list">
-    <li><strong data-i18n="w03.theory.intensive.label">Intensive programme (70&nbsp;&deg;C):</strong> <span data-i18n="w03.theory.intensive.body">Uses more water (18–20 l) and more electricity (1.5–2.0 kWh) — meant for pots and heavily soiled dishes.</span></li>
-    <li><strong data-i18n="w03.theory.auto.label">Auto programme:</strong> <span data-i18n="w03.theory.auto.body">Sensors adjust temperature and duration — convenient but often less efficient than Eco.</span></li>
-    <li><strong data-i18n="w03.theory.eco.label">Eco programme (50&nbsp;&deg;C):</strong> <span data-i18n="w03.theory.eco.body">Long cycle (3–4 hours) but lower temperature. Typical: 0.8–1.0 kWh, 10–12 l of water.</span></li>
-    <li><strong data-i18n="w03.theory.hand.label">Hand-washing comparison:</strong> <span data-i18n="w03.theory.hand.body">A running tap uses 6–12 l of water per minute. Washing dishes for 10 minutes with the tap half-open = 60–120 l — far more than a dishwasher.</span></li>
-    <li><strong data-i18n="w03.theory.label.label">Eco label:</strong> <span data-i18n="w03.theory.label.body">Since 2021, dishwashers carry an EU energy label rating from A (best) to G. The label shows: energy per cycle (kWh), water per cycle (l), noise level (dB), and programme duration.</span></li>
-    <li><strong data-i18n="w03.theory.half.label">Half-load:</strong> <span data-i18n="w03.theory.half.body">Running a half-loaded machine wastes energy and water. A half-load setting typically saves 20–30 % on both. Otherwise, waiting for a full load is more efficient.</span></li>
+    <li><strong data-i18n="w06.theory.be.label">Break-even analysis:</strong> <span data-i18n="w06.theory.be.body">comparing two bulb types A and B, the break-even hours <em>t*</em> is the value of <em>t</em> where TCO<sub>A</sub>(t) = TCO<sub>B</sub>(t). Below <em>t*</em>, the cheaper-to-buy option wins; above <em>t*</em>, the more efficient option wins. Solving for <em>t*</em> algebraically gives insight into when switching technology actually pays off.</span></li>
+    <li><strong data-i18n="w06.theory.sens.label">Sensitivity:</strong> <span data-i18n="w06.theory.sens.body">real-world conclusions depend on input assumptions (especially τ, which has varied between €0.10 and €0.70 per kWh in the Netherlands in recent years). A robust analysis tests how the conclusion changes when key inputs change.</span></li>
+    <li><strong data-i18n="w06.theory.life.label">Lifecycle CO&#8322;:</strong> <span data-i18n="w06.theory.life.body">the total environmental impact includes both manufacturing emissions (embodied carbon) and emissions from electricity used during the bulb&rsquo;s lifetime. Using the 2024 Dutch grid factor of 0.27 kg CO&#8322;/kWh, manufacturing typically dominates LED lifecycle emissions whereas electricity use dominates incandescent lifecycle emissions.</span></li>
   </ul>
 
-  <p class="body" data-i18n="w03.theory.videos">
-    <strong>Suggested videos</strong> for an intro to how dishwashers work and the difference between quick and eco cycles:
-  </p>
-  <ol class="video-list">
-    <li data-i18n="w03.theory.video1">How Does a Dishwasher Actually Work?</li>
-    <li data-i18n="w03.theory.video2">Dishwasher Eco Setting Explained</li>
-  </ol>
+  <div class="box-tip no-break">
+    <h3 data-i18n="w06.worked.title">Worked example — break-even between incandescent and LED</h3>
+    <p data-i18n="w06.worked.setup">Find the break-even hours between an <strong>incandescent</strong> bulb (W = 60, P = €0.50, L = 1,000 h) and an <strong>LED</strong> (W = 12, P = €1.33, L = 25,000 h) at τ = €0.30/kWh.</p>
+
+    <ol class="steps-list">
+      <li data-i18n="w06.worked.s1">Use the continuous TCO: TCO<sub>inc</sub>(t) = (t/1000)·0.50 + (60t/1000)·0.30 = 0.0005·t + 0.018·t = <strong>0.0185·t</strong></li>
+      <li data-i18n="w06.worked.s2">TCO<sub>LED</sub>(t) = (t/25000)·1.33 + (12t/1000)·0.30 = 0.0000532·t + 0.0036·t ≈ <strong>0.003653·t</strong></li>
+      <li data-i18n="w06.worked.s3">Set equal: 0.0185·t = 0.003653·t → this gives 0 = −0.014847·t, so they are equal only at t = 0.</li>
+      <li data-i18n="w06.worked.s4"><strong>Conclusion:</strong> with these prices the LED is cheaper from hour 1 onwards (its TCO grows much more slowly). The "break-even" question only becomes interesting if the LED&rsquo;s purchase price is much higher (e.g. €15), in which case there is a real positive break-even point.</li>
+    </ol>
+  </div>
 
   <div class="r-footer">
     <div class="footer-left">
       <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
       <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
     </div>
-    <div class="pageno"><span data-i18n="ui.page">Page</span> 2 <span data-i18n="ui.of">of</span> 8</div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 2 <span data-i18n="ui.of">of</span> 5</div>
   </div>
 </section>
 
@@ -764,47 +1026,45 @@ ol.video-list li {
     </div>
   </div>
 
-  <h2 class="section" data-i18n="w03.example.title">Worked example</h2>
-  <p class="body" data-i18n="w03.example.intro">A household runs the dishwasher 250 times per year.</p>
-
-  <div class="calc-line"><strong data-i18n="w03.example.intensive">Intensive programme:</strong> 1.9 kWh, 19 l water.</div>
-  <div class="calc-line">Cost per cycle = (1.9 &times; 0.30 &euro;) + (19 &times; 0.002 &euro;) = 0.57 &euro; + 0.038 &euro; = <strong>0.608 &euro;</strong></div>
-
-  <div class="calc-line"><strong data-i18n="w03.example.eco">Eco programme:</strong> 0.9 kWh, 11 l water.</div>
-  <div class="calc-line">Cost per cycle = (0.9 &times; 0.30 &euro;) + (11 &times; 0.002 &euro;) = 0.27 &euro; + 0.022 &euro; = <strong>0.292 &euro;</strong></div>
-
-  <div class="calc-line"><strong data-i18n="w03.example.saving">Saving per cycle:</strong> 0.316 &euro;</div>
-  <div class="calc-line"><strong data-i18n="w03.example.annual">Annual saving:</strong> 250 &times; 0.316 &euro; = <strong>79 &euro;</strong></div>
-
   <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 1</h2>
-  <div class="activity-sub" data-i18n="w03.act1.sub">Compare dishwasher programmes</div>
+  <div class="activity-sub" data-i18n="w06.act1.sub">Building a TCO model</div>
+  <p class="activity-intro" data-i18n="w06.act1.intro">The total cost of ownership over a period of <em>t</em> hours can be written as:</p>
+
+  <div class="formula-block">$$ \text{TCO}(t) = \left\lceil \frac{t}{L} \right\rceil \times P_{\text{bulb}} + \frac{W \times t}{1000} \times \tau $$</div>
+
+  <p class="body" data-i18n="w06.act1.where">
+    where <strong>L</strong> is the lifetime of one bulb (h), <strong>P<sub>bulb</sub></strong> is the purchase price (€), <strong>W</strong> is the wattage (W), <strong>τ</strong> is the electricity tariff (€/kWh), and ⌈·⌉ is the ceiling function (round up to whole bulbs).
+  </p>
 
   <table class="power-table no-break">
     <thead>
       <tr>
-        <th data-i18n="w03.act1.colProg">Programme</th>
-        <th data-i18n="w03.act1.colTemp">Water temp</th>
-        <th data-i18n="w03.act1.colEnergy">Energy per cycle (kWh)</th>
-        <th data-i18n="w03.act1.colWater">Water per cycle (l)</th>
+        <th></th>
+        <th data-i18n="w06.act1.colInc">Incandescent</th>
+        <th data-i18n="w06.act1.colHal">Halogen</th>
+        <th data-i18n="w06.act1.colCfl">Compact fluorescent</th>
+        <th data-i18n="w06.act1.colLed">LED</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td data-i18n="w03.act1.rowInt">Intensive (70&nbsp;&deg;C)</td><td>1.8</td><td>20</td><td>90</td></tr>
-      <tr><td data-i18n="w03.act1.rowAuto">Auto</td><td>1.2</td><td>15</td><td>120</td></tr>
-      <tr><td data-i18n="w03.act1.rowEco">Eco (50&nbsp;&deg;C)</td><td>0.85</td><td>11</td><td>210</td></tr>
-      <tr><td data-i18n="w03.act1.rowRinse">Rinse only (no heat)</td><td>0.05</td><td>4</td><td>15</td></tr>
-      <tr><td data-i18n="w03.act1.rowYours">Your machine&rsquo;s eco</td><td></td><td></td><td></td></tr>
+      <tr><td data-i18n="w06.act1.rowLife"><strong>Lifetime</strong></td><td>1,000 h</td><td>3,000 h</td><td>10,000 h</td><td>25,000 h</td></tr>
+      <tr><td data-i18n="w06.act1.rowPrice"><strong>Price per bulb</strong></td><td>€0.50</td><td>€1.50</td><td>€1.50</td><td>€1.33</td></tr>
+      <tr><td data-i18n="w06.act1.rowWatt"><strong>Wattage</strong></td><td>60 W</td><td>43 W</td><td>13 W</td><td>12 W</td></tr>
+      <tr><td data-i18n="w06.act1.rowLumens"><strong>Light output</strong></td><td>≈ 850 lm</td><td>≈ 850 lm</td><td>≈ 850 lm</td><td>≈ 850 lm</td></tr>
     </tbody>
   </table>
 
-  <p class="activity-intro" data-i18n="w03.act1.tariffs"><strong>Electricity:</strong> 0.30 €/kWh &nbsp;·&nbsp; <strong>Water:</strong> 0.003 €/L.</p>
+  <div class="q">
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w06.act1.q1">Derive a simplified version of this formula by assuming continuous bulb replacement (i.e. ignore the ceiling function). Show your derivation.</span></div>
+    <div class="workspace tall"></div>
+  </div>
 
   <div class="r-footer">
     <div class="footer-left">
       <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
       <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
     </div>
-    <div class="pageno"><span data-i18n="ui.page">Page</span> 3 <span data-i18n="ui.of">of</span> 8</div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 3 <span data-i18n="ui.of">of</span> 5</div>
   </div>
 </section>
 
@@ -822,28 +1082,16 @@ ol.video-list li {
   </div>
 
   <div class="q">
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w03.act1.q1">How many times does your household run the dishwasher per year? ____ cycles/year.</span></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w03.act1.q2">Calculate the annual cost for each programme at your usage frequency.</span></div>
-    <div class="write-line tall"></div>
-    <div class="write-line tall"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w03.act1.q3">How much money is saved per year by using Eco instead of Intensive?</span></div>
-    <div class="write-line"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w03.act1.q4">How much water is saved per year (in litres) at your usage frequency?</span></div>
-    <div class="write-line"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w03.act1.q5">Why does the Eco programme take over 3 hours? <em>Hint: think about heating rate and insulation.</em></span></div>
-    <div class="write-line tall"></div>
-    <div class="write-line tall"></div>
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w06.act1.q2">Plot (or sketch) TCO(t) for all four bulb types on the same axes for <em>t</em> between 0 and 25,000 hours. Use τ = €0.30/kWh.</span></div>
+    <div class="plot-area">
+      <span class="y-label" data-i18n="w06.act1.plotY">TCO (€)</span>
+      <span class="x-label" data-i18n="w06.act1.plotX">t (hours)</span>
+    </div>
   </div>
 
-  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 2</h2>
-  <div class="activity-sub" data-i18n="w03.act2.sub">Dishwasher vs. hand-washing</div>
-  <p class="activity-intro" data-i18n="w03.act2.intro">A person hand-washes dishes for 12 minutes with the tap at 8 l/min. The water is heated by an electric boiler (0.05 kWh/l to heat from 10&nbsp;&deg;C to 40&nbsp;&deg;C).</p>
-
   <div class="q">
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w03.act2.q1">Calculate the total water used for hand-washing.</span></div>
-    <div class="write-line"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w03.act2.q2">Calculate the energy required to heat that water (kWh).</span></div>
-    <div class="write-line"></div>
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w06.act1.q3">Calculate the break-even point in hours between (a) incandescent vs. LED and (b) CFL vs. LED. Below which usage does the older technology still &ldquo;win&rdquo; on TCO?</span></div>
+    <div class="workspace tall"></div>
   </div>
 
   <div class="r-footer">
@@ -851,7 +1099,7 @@ ol.video-list li {
       <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
       <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
     </div>
-    <div class="pageno"><span data-i18n="ui.page">Page</span> 4 <span data-i18n="ui.of">of</span> 8</div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 4 <span data-i18n="ui.of">of</span> 5</div>
   </div>
 </section>
 
@@ -868,33 +1116,28 @@ ol.video-list li {
     </div>
   </div>
 
+  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 2</h2>
+  <div class="activity-sub" data-i18n="w06.act2.sub">Sensitivity analysis</div>
+  <p class="activity-intro" data-i18n="w06.act2.intro">Real-world electricity tariffs in the Netherlands have varied between <strong>€0.10/kWh</strong> and <strong>€0.70/kWh</strong> in the last five years.</p>
+
   <div class="q">
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w03.act2.q3">Calculate the total cost for hand-washing (water + electricity).</span></div>
-    <div class="write-line"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w03.act2.q4">Compare to the Eco programme cost from Activity 1. Which is cheaper?</span></div>
-    <div class="write-line tall"></div>
-    <div class="write-line tall"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w03.act2.q5">For what types of washing loads is the intensive programme justified? Give two real examples.</span></div>
-    <div class="write-line tall"></div>
-    <div class="write-line tall"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w03.act2.q6">If the school canteen runs 10 dishwasher cycles per school day (160 days/year) on the intensive programme, calculate the annual energy cost. Then recalculate if they switch to Eco. What is the annual saving?</span></div>
-    <div class="write-line tall"></div>
-    <div class="write-line tall"></div>
-    <div class="write-line tall"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w03.act2.q7">Find an EU energy label for a dishwasher. What is the difference in annual energy (kWh/year) between A and E rating?</span></div>
-    <div class="write-line tall"></div>
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w06.act2.q1">Recompute the LED-vs-incandescent break-even point for τ = €0.10 and τ = €0.70. How sensitive is the conclusion to electricity price?</span></div>
+    <div class="workspace"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w06.act2.q2">A user only uses a particular lamp 30 minutes per day. Over the 25,000-hour LED lifetime, how many calendar years is that? Is the LED still the rational choice here?</span></div>
+    <div class="workspace short"></div>
   </div>
 
   <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 3</h2>
-  <div class="activity-sub" data-i18n="w03.act3.sub">Carbon and water footprint</div>
+  <div class="activity-sub" data-i18n="w06.act3.sub">Lifecycle CO&#8322;</div>
+  <p class="activity-intro" data-i18n="w06.act3.intro">1 kWh of Dutch grid electricity emits approximately <strong>0.27 kg of CO&#8322;</strong> (2024 average; was 0.46 kg in 2018). Manufacturing one LED bulb is estimated to emit <strong>~1.5 kg CO&#8322;</strong>; one incandescent bulb <strong>~0.3 kg</strong>.</p>
 
   <div class="q">
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w03.act3.q1">Calculate the CO&#8322; emissions from 365 intensive cycles (use 0.27 kg CO&#8322;/kWh).</span></div>
-    <div class="write-line tall"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w03.act3.q2">How does switching to Eco reduce the annual carbon footprint in kg CO&#8322;?</span></div>
-    <div class="write-line tall"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w03.act3.q3">Water cost is 0.003 &euro;/l. Recalculate the annual water saving in euros using this tariff. Does it change the economic argument for Eco?</span></div>
-    <div class="write-line tall"></div>
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w06.act3.q1">Calculate the total lifecycle CO&#8322; emissions (manufacturing + use) for 25,000 hours of light, for both LED and incandescent. Use the 2024 grid factor.</span></div>
+    <div class="workspace"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w06.act3.q2">What share of total LED lifecycle emissions comes from manufacturing? What does this imply about the value of replacing working incandescent bulbs versus waiting until they fail?</span></div>
+    <div class="workspace"></div>
   </div>
 
   <div class="r-footer">
@@ -902,153 +1145,7 @@ ol.video-list li {
       <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
       <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
     </div>
-    <div class="pageno"><span data-i18n="ui.page">Page</span> 5 <span data-i18n="ui.of">of</span> 8</div>
-  </div>
-</section>
-
-
-<section class="page" data-page="6">
-
-  <div class="r-header">
-    <div class="logo-green">
-      <img src="../../img/greenlogo.png" alt="GREEN">
-      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
-    </div>
-    <div class="logo-eu">
-      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
-    </div>
-  </div>
-
-  <h2 class="section" data-i18n="w03.peer.title">Peer-to-peer tip</h2>
-
-  <div class="box-tip no-break">
-    <h3 data-i18n="w03.peer.dykTitle">💡 Did you know?</h3>
-    <p data-i18n="w03.peer.dykBody"><strong>Scrape, don&rsquo;t rinse!</strong> Modern dishwashers don&rsquo;t need pre-rinsing.</p>
-  </div>
-
-  <div class="q">
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w03.peer.q1">How does pre-rinsing waste water and energy?</span></div>
-    <div class="write-line tall"></div>
-    <div class="write-line tall"></div>
-    <div class="write-line tall"></div>
-    <div class="write-line tall"></div>
-  </div>
-
-  <h2 class="section" data-i18n="w03.reflection.title">Reflection</h2>
-
-  <p class="body" data-i18n="w03.reflection.prompt">When would hand-washing be more efficient than a dishwasher? Explain in your own words and refer to your calculations from Activity 2.</p>
-
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-
-  <div class="r-footer">
-    <div class="footer-left">
-      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
-      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
-    </div>
-    <div class="pageno"><span data-i18n="ui.page">Page</span> 6 <span data-i18n="ui.of">of</span> 8</div>
-  </div>
-</section>
-
-
-<section class="page" data-page="7">
-
-  <div class="r-header">
-    <div class="logo-green">
-      <img src="../../img/greenlogo.png" alt="GREEN">
-      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
-    </div>
-    <div class="logo-eu">
-      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
-    </div>
-  </div>
-
-  <h2 class="section" data-i18n="w03.ee.title">Additional tasks for electrical engineering students</h2>
-
-  <h2 class="activity-title"><span data-i18n="ui.activity">EE task</span> 1</h2>
-  <div class="activity-sub" data-i18n="w03.ee1.sub">Block diagram of a dishwasher</div>
-  <p class="activity-intro" data-i18n="w03.ee1.intro">Draw a block diagram showing: control board, heating element, circulation pump, drain pump, NTC thermistor, door interlock switch, detergent dispenser and flood protection sensor. Indicate typical power ratings.</p>
-
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-
-  <h2 class="activity-title"><span data-i18n="ui.activity">EE task</span> 2</h2>
-  <div class="activity-sub" data-i18n="w03.ee2.sub">BLDC motors</div>
-  <p class="activity-intro" data-i18n="w03.ee2.intro">Modern dishwashers use BLDC (brushless DC) motors for the circulation pump. List three advantages of BLDC over universal motors. Why are they more expensive?</p>
-
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-
-  <div class="r-footer">
-    <div class="footer-left">
-      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
-      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
-    </div>
-    <div class="pageno"><span data-i18n="ui.page">Page</span> 7 <span data-i18n="ui.of">of</span> 8</div>
-  </div>
-</section>
-
-
-<section class="page" data-page="8">
-
-  <div class="r-header">
-    <div class="logo-green">
-      <img src="../../img/greenlogo.png" alt="GREEN">
-      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
-    </div>
-    <div class="logo-eu">
-      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
-    </div>
-  </div>
-
-  <h2 class="activity-title"><span data-i18n="ui.activity">EE task</span> 3</h2>
-  <div class="activity-sub" data-i18n="w03.ee3.sub">Water temperature regulation</div>
-  <p class="activity-intro" data-i18n="w03.ee3.intro">How is the water temperature regulated in a dishwasher? Explain the control loop.</p>
-
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-
-  <h2 class="activity-title"><span data-i18n="ui.activity">EE task</span> 4</h2>
-  <div class="activity-sub" data-i18n="w03.ee4.sub">Safety devices</div>
-  <p class="activity-intro" data-i18n="w03.ee4.intro">List three safety devices in a dishwasher and briefly explain the role of each.</p>
-
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-
-  <h2 class="activity-title"><span data-i18n="ui.activity">EE task</span> 5</h2>
-  <div class="activity-sub" data-i18n="w03.ee5.sub">NTC thermistor voltage divider</div>
-  <p class="activity-intro" data-i18n="w03.ee5.intro">An NTC thermistor has resistance 10 k&Omega; at 25&nbsp;&deg;C and 2 k&Omega; at 60&nbsp;&deg;C. It is used in a voltage divider with a 5 V supply and a 10 k&Omega; fixed resistor. Calculate the output voltage at 25&nbsp;&deg;C and at 60&nbsp;&deg;C. How does the control board use this signal?</p>
-
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-
-  <div class="r-footer">
-    <div class="footer-left">
-      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
-      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
-    </div>
-    <div class="pageno"><span data-i18n="ui.page">Page</span> 8 <span data-i18n="ui.of">of</span> 8</div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 5 <span data-i18n="ui.of">of</span> 5</div>
   </div>
 </section>
 
