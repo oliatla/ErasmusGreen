@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Worksheet 05 — What is inside a light bulb?</title>
+<title>Worksheet 10 — Energy efficiency of personal care appliances (hair dryers)</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -783,6 +783,91 @@ ol.steps-list li::before {
   color: var(--green-dark);
 }
 
+
+/* =================================================================
+   AUDIT INPUT GRID — paired Week/Month/Year value cells
+   (used for "Week: ___ kWh    Week: ___ EUR" style rows)
+   ================================================================= */
+.audit-grid {
+  display: grid;
+  grid-template-columns: 18mm 24mm 14mm 18mm 24mm 14mm;
+  gap: 2mm 3mm;
+  align-items: baseline;
+  margin: 2.5mm 0 3mm 5mm;
+  font-size: 10.5pt;
+  max-width: 130mm;
+}
+.audit-grid .label { font-weight: 600; }
+.audit-grid .blank-cell {
+  border-bottom: .5pt solid var(--ink);
+  height: 4mm;
+}
+.audit-grid .unit  { color: var(--ink-soft); font-size: 9.5pt; }
+
+/* Inline blank (no border-bottom needed, for inline text like "____ W") */
+.inline-blank {
+  display: inline-block;
+  min-width: 20mm;
+  border-bottom: .5pt solid var(--ink);
+  height: 1em;
+  vertical-align: -1mm;
+  margin: 0 1mm;
+}
+
+/* Section-letter heading (A Lighting & Energy Consumption, B Water Usage, etc.) */
+.section-letter {
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+  font-size: 12.5pt;
+  color: var(--green-dark);
+  margin: 4mm 0 2mm;
+  border-bottom: .5pt solid var(--green-mid);
+  padding-bottom: 1mm;
+}
+.section-letter .letter {
+  display: inline-block;
+  background: var(--green-mid);
+  color: white;
+  padding: 0 2.5mm;
+  margin-right: 2.5mm;
+  border-radius: 2mm;
+  font-weight: 900;
+}
+body.bw-mode .section-letter .letter {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Subtask label (A1, A2, B1, etc.) */
+.subtask-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 11pt;
+  color: var(--green-dark);
+  margin: 3.5mm 0 1.5mm;
+}
+
+/* Pillared multi-bullet list inside Peer-to-peer Did-you-know box */
+ul.dyk-list {
+  list-style: none;
+  margin: 1mm 0 0;
+  padding: 0;
+}
+ul.dyk-list li {
+  position: relative;
+  padding-left: 6mm;
+  margin: 0 0 2.5mm;
+  font-size: 10pt;
+  line-height: 1.5;
+}
+ul.dyk-list li::before {
+  content: "💡";
+  position: absolute;
+  left: 0;
+  font-size: 9pt;
+}
+body.bw-mode ul.dyk-list li::before { content: "●"; color: var(--ink); }
+
 /* ===== PRINT ===== */
 @page { size: A4; margin: 0; }
 @media print {
@@ -833,7 +918,7 @@ ol.steps-list li::before {
 
 
 <!-- ============================================================
-     PAGE 1 — Title, structural table, Introduction, Theory
+     PAGE 1
 ============================================================ -->
 <section class="page" data-page="1">
 
@@ -847,58 +932,36 @@ ol.steps-list li::before {
     </div>
   </div>
 
-  <h1 data-i18n="w05.worksheet">Worksheet 05</h1>
-  <div class="subtitle" data-i18n="w05.title">What is inside a light bulb?</div>
-  <div class="level"><span data-i18n="ui.level">Level:</span> <strong data-i18n="w05.level">BASIC</strong></div>
+  <h1 data-i18n="w10.worksheet">Worksheet 10</h1>
+  <div class="subtitle" data-i18n="w10.title">Energy efficiency of personal care appliances — hair dryers</div>
+  <div class="level"><span data-i18n="ui.level">Level:</span> <strong data-i18n="w10.level">MEDIUM</strong></div>
 
   <table class="struct">
     <tbody>
-      <tr>
-        <th data-i18n="ui.topic">Topic</th>
-        <td colspan="3" data-i18n="w05.topic">What is inside a light bulb?</td>
-      </tr>
-      <tr>
-        <th data-i18n="ui.learningOutcomes">Learning outcomes</th>
-        <td colspan="3">
-          <ul>
-            <li data-i18n="w05.lo1">Recognise the four main types of household light bulbs.</li>
-            <li data-i18n="w05.lo2">Identify the wattage and lifetime of common bulb types.</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <th data-i18n="ui.timeNeeded">Time needed</th>
-        <td colspan="3" data-i18n="w05.time">60 min</td>
-      </tr>
-      <tr>
-        <th data-i18n="ui.resources">Resources needed</th>
-        <td colspan="3" data-i18n="w05.resources">Bulb information table (in this worksheet); access to one or more real bulbs if available.</td>
-      </tr>
+      <tr><th data-i18n="ui.topic">Topic</th>
+          <td colspan="3" data-i18n="w10.topic">Energy efficiency of personal care appliances: hair dryers</td></tr>
+      <tr><th data-i18n="ui.learningOutcomes">Learning outcomes</th>
+          <td colspan="3"><ul>
+            <li><strong data-i18n="w10.lo.tech">Technical knowledge:</strong> <span data-i18n="w10.lo.tech.body">Students can explain how hair dryers and similar personal care appliances consume energy and heat air.</span></li>
+            <li><strong data-i18n="w10.lo.math">Mathematical skills:</strong> <span data-i18n="w10.lo.math.body">Students calculate annual electricity costs and usage costs using realistic scenarios.</span></li>
+            <li><strong data-i18n="w10.lo.env">Environmental awareness:</strong> <span data-i18n="w10.lo.env.body">Students compare energy consumption across different heat and speed settings.</span></li>
+            <li><strong data-i18n="w10.lo.green">Green skills:</strong> <span data-i18n="w10.lo.green.body">Students identify energy-saving habits when using personal care appliances and evaluate their environmental impact.</span></li>
+          </ul></td></tr>
+      <tr><th data-i18n="ui.timeNeeded">Time needed</th><td colspan="3" data-i18n="w10.time">60 min</td></tr>
+      <tr><th data-i18n="ui.resources">Resources needed</th>
+          <td colspan="3" data-i18n="w10.resources">Calculator, electricity tariff (e.g. €0.30/kWh), EU energy label for a hair dryer (from packaging or manufacturer website), stopwatch or timer (phone app).</td></tr>
     </tbody>
   </table>
 
   <h2 class="section" data-i18n="ui.introduction">Introduction</h2>
-
-  <p class="body" data-i18n="w05.intro">
-    Not all light bulbs are the same. Some get hot, some last for years, and some use much less electricity. In this worksheet you will look at four common types of bulbs and learn the basic differences between them.
-  </p>
-
-  <h2 class="section" data-i18n="w05.theory.title">Theory</h2>
-
-  <p class="body" data-i18n="w05.theory.intro1">
-    Every light bulb does the same job: it turns electricity into light. But not all bulbs do that equally well. Some bulbs waste a lot of electricity by also turning it into heat. That is why an old-fashioned bulb feels hot after only a minute, while an LED stays cool.
-  </p>
-
-  <p class="body" data-i18n="w05.theory.intro2">
-    There are four bulb types you will see most often at home and at school. They all use the same electrical socket but they work in completely different ways inside.
-  </p>
+  <p class="body" data-i18n="w10.intro">A hair dryer is one of the most power-hungry appliances in a typical bathroom — most models draw between 1000 and 2400 W, comparable to a small electric heater. Unlike a refrigerator that runs continuously, a hair dryer is used in short bursts, but those bursts add up. Understanding how heat settings, usage time, and frequency affect electricity bills helps you make smarter daily choices. In this worksheet you will explore the energy consumption of hair dryers, compare different usage patterns, and calculate real annual costs.</p>
 
   <div class="r-footer">
     <div class="footer-left">
       <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
       <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
     </div>
-    <div class="pageno"><span data-i18n="ui.page">Page</span> 1 <span data-i18n="ui.of">of</span> 4</div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 1 <span data-i18n="ui.of">of</span> 6</div>
   </div>
 </section>
 
@@ -915,61 +978,38 @@ ol.steps-list li::before {
     </div>
   </div>
 
-  <h3 class="sub-heading" data-i18n="w05.theory.bulbsTitle">The four bulb types</h3>
-
-  <ul class="theory-list">
-    <li><strong data-i18n="w05.theory.inc.label">INCANDESCENT bulbs (the oldest type)</strong> <span data-i18n="w05.theory.inc.body">have a thin metal wire inside. When electricity flows through the wire it gets so hot that it glows white. Most of the energy actually becomes heat, not light. These bulbs are no longer sold in most EU countries.</span></li>
-    <li><strong data-i18n="w05.theory.hal.label">HALOGEN bulbs</strong> <span data-i18n="w05.theory.hal.body">are an improved version of the incandescent bulb. They contain a small amount of halogen gas which makes the wire last a bit longer and burn slightly brighter. Still mostly heat though.</span></li>
-    <li><strong data-i18n="w05.theory.cfl.label">COMPACT FLUORESCENT (CFL) bulbs</strong> <span data-i18n="w05.theory.cfl.body">use a folded glass tube filled with gas. Electricity makes the gas glow. They use much less electricity than incandescent bulbs but contain a tiny amount of mercury, so they need to be recycled carefully.</span></li>
-    <li><strong data-i18n="w05.theory.led.label">LED bulbs (Light Emitting Diode)</strong> <span data-i18n="w05.theory.led.body">use a small electronic component that produces light directly when electricity flows through it. They are the most efficient: they convert almost all the electricity into light, and very little into heat. They also last 25 times longer than an incandescent bulb.</span></li>
-  </ul>
+  <h2 class="section" data-i18n="w10.theory.title">Theory</h2>
 
   <div class="box-tip no-break">
-    <h3 data-i18n="w05.worked.title">Worked example — How do you read the bulb information table?</h3>
-    <ol class="steps-list">
-      <li data-i18n="w05.worked.s1">Look at the row <em>Lifetime</em>. The number tells you how many <strong>hours</strong> the bulb works before it needs to be replaced.</li>
-      <li data-i18n="w05.worked.s2">Example: an LED bulb has a lifetime of 25,000 hours. If you use it 5 hours per day, that is 25,000 ÷ 5 = 5,000 days, which is about <strong>13 years</strong>.</li>
-      <li data-i18n="w05.worked.s3">Look at the row <em>Wattage</em>. This tells you how much <strong>electricity</strong> the bulb uses each second it is on. A higher wattage means more electricity.</li>
-      <li data-i18n="w05.worked.s4">Example: an incandescent bulb of 60 W uses <strong>5 times more electricity</strong> than an LED of 12 W to give the same amount of light.</li>
-    </ol>
+    <h3 data-i18n="w10.theory.dykTitle">💡 Did you know?</h3>
+    <p data-i18n="w10.theory.dykBody">Air-drying uses <strong>0 kWh</strong>. A hair dryer converts almost all its electricity into heat — there is very little mechanical loss.</p>
   </div>
 
-  <h3 class="sub-heading" data-i18n="w05.terms.title">Key terms</h3>
+  <div class="formula-block">$$ \text{Energy (kWh)} = \text{Power (kW)} \times \text{Time (h)} $$</div>
 
-  <table class="terms no-break">
-    <thead>
-      <tr><th data-i18n="w05.terms.colTerm">Term</th><th data-i18n="w05.terms.colDef">Definition</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-i18n="w05.terms.t1term">Bulb</td>
-        <td data-i18n="w05.terms.t1def">A light source that screws or clicks into a lamp.</td>
-      </tr>
-      <tr>
-        <td data-i18n="w05.terms.t2term">Lifetime</td>
-        <td data-i18n="w05.terms.t2def">The number of hours a bulb works before it stops working.</td>
-      </tr>
-      <tr>
-        <td data-i18n="w05.terms.t3term">Wattage (W)</td>
-        <td data-i18n="w05.terms.t3def">How much electricity the bulb uses.</td>
-      </tr>
-      <tr>
-        <td data-i18n="w05.terms.t4term">Lumens (lm)</td>
-        <td data-i18n="w05.terms.t4def">How much light the bulb produces (more lumens = brighter).</td>
-      </tr>
-      <tr>
-        <td data-i18n="w05.terms.t5term">LED</td>
-        <td data-i18n="w05.terms.t5def">Light Emitting Diode — the most efficient bulb type today.</td>
-      </tr>
-    </tbody>
-  </table>
+  <ul class="theory-list">
+    <li><strong data-i18n="w10.theory.hi.label">High heat (2000–2400 W):</strong> <span data-i18n="w10.theory.hi.body">dries hair quickly (5–10 min) but draws high power — good for thick or long hair.</span></li>
+    <li><strong data-i18n="w10.theory.lo.label">Low heat (800–1200 W):</strong> <span data-i18n="w10.theory.lo.body">takes longer (10–18 min) but uses less energy per minute — better for fine or damaged hair.</span></li>
+    <li><strong data-i18n="w10.theory.cool.label">Cool shot (50–100 W):</strong> <span data-i18n="w10.theory.cool.body">uses minimal energy. Sets the hair style and closes the cuticle. Very energy efficient.</span></li>
+    <li><strong data-i18n="w10.theory.ionic.label">Ionic technology:</strong> <span data-i18n="w10.theory.ionic.body">ionic hair dryers break water droplets into smaller particles, reducing drying time by up to 30 %, which saves energy overall.</span></li>
+    <li><strong data-i18n="w10.theory.attach.label">Diffuser vs. concentrator:</strong> <span data-i18n="w10.theory.attach.body">attachments do not change power draw but affect airflow direction and drying time.</span></li>
+    <li><strong data-i18n="w10.theory.eulabel.label">EU Energy Label:</strong> <span data-i18n="w10.theory.eulabel.body">since 2021, personal care appliances with heating elements over 100 W in the EU must display power consumption information. Look on the box or manufacturer&rsquo;s website.</span></li>
+    <li><strong data-i18n="w10.theory.cmp.label">Comparison:</strong> <span data-i18n="w10.theory.cmp.body">a phone charger uses ~5–15 W. Running a 2000 W hair dryer for 10 minutes uses the same energy as charging a phone for more than 20 hours.</span></li>
+  </ul>
+
+  <h3 class="sub-heading" data-i18n="w10.theory.videos">Introductory videos</h3>
+  <ul class="video-list">
+    <li><a href="https://www.youtube.com/watch?v=v_ORbkuiFUY" target="_blank" rel="noopener">How does a hair dryer work? Inside the heat & high-speed airflow engineering</a></li>
+    <li><a href="https://www.youtube.com/watch?v=adUKv3B_fe8" target="_blank" rel="noopener">What&rsquo;s inside a hair dryer? Components & how they work</a></li>
+    <li><a href="https://www.youtube.com/watch?v=gFFvaLzhYew" target="_blank" rel="noopener">What is inside a hair dryer? — Khan Academy</a></li>
+  </ul>
 
   <div class="r-footer">
     <div class="footer-left">
       <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
       <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
     </div>
-    <div class="pageno"><span data-i18n="ui.page">Page</span> 2 <span data-i18n="ui.of">of</span> 4</div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 2 <span data-i18n="ui.of">of</span> 6</div>
   </div>
 </section>
 
@@ -986,48 +1026,44 @@ ol.steps-list li::before {
     </div>
   </div>
 
+  <div class="box-tip no-break">
+    <h3 data-i18n="w10.worked.title">Worked example</h3>
+    <p data-i18n="w10.worked.setup">A person uses a <strong>1800 W</strong> hair dryer for <strong>8 minutes every day</strong>:</p>
+    <ul class="compact-list">
+      <li data-i18n="w10.worked.l1"><strong>Daily energy:</strong> 1.8 kW × (8/60) h = 0.24 kWh</li>
+      <li data-i18n="w10.worked.l2"><strong>Annual energy:</strong> 0.24 × 365 = 87.6 kWh/year</li>
+      <li data-i18n="w10.worked.l3"><strong>Annual cost:</strong> 87.6 × €0.30 = €26.28/year</li>
+      <li data-i18n="w10.worked.l4">If they switch to a 1200 W ionic dryer and reduce drying time to 6 minutes:</li>
+      <li data-i18n="w10.worked.l5"><strong>New daily energy:</strong> 1.2 kW × (6/60) h = 0.12 kWh</li>
+      <li data-i18n="w10.worked.l6"><strong>New annual energy:</strong> 0.12 × 365 = 43.8 kWh/year</li>
+      <li data-i18n="w10.worked.l7"><strong>Annual saving:</strong> (87.6 − 43.8) × €0.30 = €13.14/year</li>
+    </ul>
+  </div>
+
   <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 1</h2>
-  <div class="activity-sub" data-i18n="w05.act1.sub">Recognising the four bulb types</div>
-  <p class="activity-intro" data-i18n="w05.act1.intro">Look at the four bulb types in the table below.</p>
+  <div class="activity-sub" data-i18n="w10.act1.sub">Compare hair dryer settings</div>
 
   <table class="power-table no-break">
     <thead>
-      <tr>
-        <th></th>
-        <th data-i18n="w05.act1.colInc">Incandescent</th>
-        <th data-i18n="w05.act1.colHal">Halogen</th>
-        <th data-i18n="w05.act1.colCfl">Compact fluorescent</th>
-        <th data-i18n="w05.act1.colLed">LED</th>
-      </tr>
+      <tr><th data-i18n="w10.act1.colSet">Setting</th>
+          <th data-i18n="w10.act1.colPower">Power (W)</th>
+          <th data-i18n="w10.act1.colTime">Time (min)</th>
+          <th data-i18n="w10.act1.colUses">Uses/year</th></tr>
     </thead>
     <tbody>
-      <tr>
-        <td data-i18n="w05.act1.rowLife"><strong>Lifetime</strong></td>
-        <td>1,000 h</td><td>3,000 h</td><td>10,000 h</td><td>25,000 h</td>
-      </tr>
-      <tr>
-        <td data-i18n="w05.act1.rowPrice"><strong>Price per bulb</strong></td>
-        <td>€0.50</td><td>€1.50</td><td>€1.50</td><td>€1.33</td>
-      </tr>
-      <tr>
-        <td data-i18n="w05.act1.rowWatt"><strong>Wattage</strong></td>
-        <td>60 W</td><td>43 W</td><td>13 W</td><td>12 W</td>
-      </tr>
+      <tr><td data-i18n="w10.act1.r1">High heat</td><td>2,200</td><td>7</td><td>300</td></tr>
+      <tr><td data-i18n="w10.act1.r2">Low heat</td><td>1,100</td><td>13</td><td>300</td></tr>
+      <tr><td data-i18n="w10.act1.r3">Cool shot only</td><td>80</td><td>3</td><td>300</td></tr>
+      <tr><td data-i18n="w10.act1.r4">Your dryer&rsquo;s eco mode</td><td></td><td></td><td></td></tr>
     </tbody>
   </table>
 
-  <div class="q">
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w05.act1.q1">Which bulb has the longest lifetime?</span></div>
-    <div class="write-line"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w05.act1.q2">Which bulb uses the most electricity (highest wattage)?</span></div>
-    <div class="write-line"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w05.act1.q3">Which bulb uses the least electricity (lowest wattage)?</span></div>
-    <div class="write-line"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w05.act1.q4">Which bulb is the cheapest to buy?</span></div>
-    <div class="write-line"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w05.act1.q5">All four bulbs give about the same amount of light (850 lumens). Which bulb would you choose for a room you use every day? Explain in one sentence why.</span></div>
-    <div class="write-line tall"></div>
-    <div class="write-line tall"></div>
+  <p class="activity-intro" data-i18n="w10.act1.tariff">Electricity tariff: €0.30/kWh.</p>
+
+  <div class="audit-grid" style="grid-template-columns: 70mm 30mm 30mm; max-width: 130mm;">
+    <span class="label" data-i18n="w10.act1.minQ">How many minutes do you use a hair dryer per session?</span>
+    <span class="blank-cell"></span>
+    <span class="unit">min/session</span>
   </div>
 
   <div class="r-footer">
@@ -1035,7 +1071,7 @@ ol.steps-list li::before {
       <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
       <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
     </div>
-    <div class="pageno"><span data-i18n="ui.page">Page</span> 3 <span data-i18n="ui.of">of</span> 4</div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 3 <span data-i18n="ui.of">of</span> 6</div>
   </div>
 </section>
 
@@ -1052,46 +1088,88 @@ ol.steps-list li::before {
     </div>
   </div>
 
-  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 2</h2>
-  <div class="activity-sub" data-i18n="w05.act2.sub">Match the bulb to the description</div>
-  <p class="activity-intro" data-i18n="w05.act2.intro">Write the matching letter (A, B, C or D) on the blank line next to each bulb type.</p>
+  <div class="q">
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w10.act1.q1">Calculate the <strong>annual energy</strong> (kWh) for each setting at the given usage frequency.</span></div>
+    <div class="workspace tall"></div>
 
-  <div class="match-choices no-break">
-    <ol type="A">
-      <li data-i18n="w05.act2.descA">Uses a coiled tube filled with gas; was popular before LEDs.</li>
-      <li data-i18n="w05.act2.descB">The newest technology; very low energy use and long life.</li>
-      <li data-i18n="w05.act2.descC">The oldest technology; a thin wire glows when electricity passes through.</li>
-      <li data-i18n="w05.act2.descD">An improved version of the incandescent; slightly more efficient.</li>
-    </ol>
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w10.act1.q2">Calculate the <strong>annual cost</strong> (€) for each setting.</span></div>
+    <div class="workspace"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w10.act1.q3">How much money is saved per year by using <strong>Low heat</strong> instead of <strong>High heat</strong>?</span></div>
+    <div class="workspace short"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w10.act1.q4">How much CO₂ is saved per year (use 0.27 kg CO₂/kWh)?</span></div>
+    <div class="workspace short"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w10.act1.q5">Why does the <strong>Low heat</strong> setting take longer to dry hair? <em>(Hint: think about the rate of heat transfer and moisture evaporation.)</em></span></div>
+    <div class="write-line tall"></div>
+    <div class="write-line tall"></div>
+    <div class="write-line tall"></div>
   </div>
 
-  <ul class="match-list">
-    <li>
-      <span class="item" data-i18n="w05.act2.itemInc">Incandescent bulb</span>
-      <span class="arrow">→</span>
-      <span><span class="blank"></span></span>
-    </li>
-    <li>
-      <span class="item" data-i18n="w05.act2.itemHal">Halogen bulb</span>
-      <span class="arrow">→</span>
-      <span><span class="blank"></span></span>
-    </li>
-    <li>
-      <span class="item" data-i18n="w05.act2.itemCfl">Compact fluorescent</span>
-      <span class="arrow">→</span>
-      <span><span class="blank"></span></span>
-    </li>
-    <li>
-      <span class="item" data-i18n="w05.act2.itemLed">LED</span>
-      <span class="arrow">→</span>
-      <span><span class="blank"></span></span>
-    </li>
-  </ul>
+  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 2</h2>
+  <div class="activity-sub" data-i18n="w10.act2.sub">Hair dryer vs. air drying</div>
+  <p class="activity-intro" data-i18n="w10.act2.intro">A person air-dries their hair 50 % of the time and uses the dryer (2200 W, 7 min) the other 50 %, out of 300 sessions per year.</p>
 
-  <h3 class="sub-heading" data-i18n="w05.reflection.title">Reflection</h3>
-  <p class="body" data-i18n="w05.reflection.prompt">Look at the bulbs in your home. How many of them are LED? If some are not, which ones would you replace first, and why?</p>
+  <div class="q">
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w10.act2.q1">Calculate total energy with partial air drying.</span></div>
+    <div class="workspace short"></div>
 
-  <div class="write-line tall"></div>
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w10.act2.q2">Calculate total energy if they use the dryer every session, and the cost difference.</span></div>
+    <div class="workspace short"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w10.act2.q3">For what hair types or situations is air drying not practical? Give two examples.</span></div>
+    <div class="write-line tall"></div>
+    <div class="write-line tall"></div>
+  </div>
+
+  <div class="r-footer">
+    <div class="footer-left">
+      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
+      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
+    </div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 4 <span data-i18n="ui.of">of</span> 6</div>
+  </div>
+</section>
+
+
+<section class="page" data-page="5">
+
+  <div class="r-header">
+    <div class="logo-green">
+      <img src="../../img/greenlogo.png" alt="GREEN">
+      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
+    </div>
+    <div class="logo-eu">
+      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
+    </div>
+  </div>
+
+  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 3</h2>
+  <div class="activity-sub" data-i18n="w10.act3.sub">Carbon footprint &amp; salon scenario</div>
+
+  <div class="q">
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w10.act3.q1">A hair salon uses a 2400 W professional dryer for 45 min per client, 8 clients per day, 250 working days per year. Calculate annual energy cost. Then recalculate if they upgrade to a 1600 W ionic dryer reducing time to 35 min. What is the annual saving?</span></div>
+    <div class="workspace tall"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w10.act3.q2">Calculate the CO₂ emissions from 300 sessions using a 2200 W dryer for 7 minutes each (use 0.27 kg CO₂/kWh).</span></div>
+    <div class="workspace short"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w10.act3.q3">A household has two people, each using the dryer 300 times per year. How does using <strong>Low heat</strong> for both people affect the household&rsquo;s annual bill and CO₂ output?</span></div>
+    <div class="workspace"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w10.act3.q4">Find the power rating label on your hair dryer (or manufacturer&rsquo;s website). Compare it to the values in Activity 1. Is your dryer above or below average?</span></div>
+    <div class="workspace short"></div>
+  </div>
+
+  <h2 class="section" data-i18n="w10.peer.title">Peer-to-peer tip</h2>
+  <div class="box-tip no-break">
+    <h3 data-i18n="w10.peer.dykTitle">💡 Did you know?</h3>
+    <p data-i18n="w10.peer.dykBody"><strong>Towel-dry first!</strong> Removing excess water with a towel before using the dryer can cut drying time by 30–50 %, significantly reducing energy use.</p>
+  </div>
+
+  <h2 class="section" data-i18n="w10.reflection.title">Reflection</h2>
+  <p class="body" data-i18n="w10.reflection.prompt">When would air drying be more efficient than using a hair dryer?</p>
   <div class="write-line tall"></div>
   <div class="write-line tall"></div>
   <div class="write-line tall"></div>
@@ -1101,7 +1179,52 @@ ol.steps-list li::before {
       <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
       <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
     </div>
-    <div class="pageno"><span data-i18n="ui.page">Page</span> 4 <span data-i18n="ui.of">of</span> 4</div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 5 <span data-i18n="ui.of">of</span> 6</div>
+  </div>
+</section>
+
+
+<section class="page" data-page="6">
+
+  <div class="r-header">
+    <div class="logo-green">
+      <img src="../../img/greenlogo.png" alt="GREEN">
+      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
+    </div>
+    <div class="logo-eu">
+      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
+    </div>
+  </div>
+
+  <h2 class="section" data-i18n="w10.ee.title">Additional tasks — for electrical engineering students</h2>
+  <p class="activity-intro" data-i18n="w10.ee.intro">These additional questions are aimed at students enrolled in electrical or electronic engineering programmes.</p>
+
+  <div class="q">
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w10.ee.q1">Draw a block diagram of a hair dryer showing heating element (nichrome wire), fan motor, thermal cutout (TCO), cool shot valve, selector switch, rectifier (for ionic models), and power cord. Indicate typical power ratings for each component.</span></div>
+    <div class="workspace tall"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w10.ee.q2">Modern ionic hair dryers include a DC high-voltage generator (~4 kV) to ionise air. Explain how negative ions help reduce drying time and static electricity.</span></div>
+    <div class="write-line tall"></div>
+    <div class="write-line tall"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w10.ee.q3">How is overheating prevented in a hair dryer? Explain the role of the Thermal Cut-Out (TCO) device and NTC thermistor.</span></div>
+    <div class="write-line tall"></div>
+    <div class="write-line tall"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w10.ee.q4">List three safety devices in a hair dryer and explain the purpose of each.</span></div>
+    <div class="write-line tall"></div>
+    <div class="write-line tall"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w10.ee.q5">A nichrome heating coil has a resistance of 20 Ω at 20 °C and a temperature coefficient α = 0.0004 /°C. Calculate its resistance at 350 °C. If connected to a 230 V supply, what is the power dissipated at 350 °C?</span></div>
+    <div class="workspace tall"></div>
+  </div>
+
+  <div class="r-footer">
+    <div class="footer-left">
+      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
+      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
+    </div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 6 <span data-i18n="ui.of">of</span> 6</div>
   </div>
 </section>
 

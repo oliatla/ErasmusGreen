@@ -1,0 +1,112 @@
+{
+  "_README": {
+    "purpose": "ws05 için çeviri referansı.",
+    "language": "Varsayılan dil: tr.",
+    "instructions": "Bu dosyayı {lang}.json olarak kopyalayın ve değerleri çevirin. Anahtarlar (sol taraf) ASLA değişmemelidir — index.html içindeki data-i18n nitelikleriyle eşleşirler."
+  },
+  "ui": {
+    "back": "← Geri",
+    "language": "Dil:",
+    "bwToggle": "S/B görünümü",
+    "print": "🖨 Yazdır",
+    "level": "Seviye:",
+    "topic": "Konu",
+    "learningOutcomes": "Öğrenme kazanımları",
+    "timeNeeded": "Gereken zaman",
+    "resources": "Gereken kaynaklar",
+    "introduction": "Giriş",
+    "projectLine": "Proje No. 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Avrupa Birliği tarafından finanse edilmektedir. Ancak ifade edilen görüş ve düşünceler yalnızca yazar(lar)a aittir ve Avrupa Birliği veya Avrupa Eğitim ve Kültür Yürütme Ajansı'nın (EACEA) görüşlerini yansıtmayabilir. Ne Avrupa Birliği ne de EACEA bunlardan sorumlu tutulamaz.",
+    "page": "Sayfa",
+    "of": "/",
+    "activity": "Öğrenci etkinliği"
+  },
+  "w05": {
+    "worksheet": "Çalışma Yaprağı 05",
+    "title": "Bir ampulün içinde ne vardır?",
+    "level": "TEMEL",
+    "topic": "Bir ampulün içinde ne vardır?",
+    "lo1": "Dört ana ev tipi ampul çeşidini tanımak.",
+    "lo2": "Yaygın ampul türlerinin gücünü (watt) ve ömrünü belirlemek.",
+    "time": "60 dk",
+    "resources": "Ampul bilgi tablosu (bu çalışma yaprağında); eğer mümkünse bir veya daha fazla gerçek ampule erişim.",
+    "intro": "Tüm ampuller aynı değildir. Bazıları ısınır, bazıları yıllarca dayanır ve bazıları çok daha az elektrik kullanır. Bu çalışma yaprağında dört yaygın ampul türüne bakacak ve aralarındaki temel farkları öğreneceksiniz.",
+    "theory": {
+      "title": "Teori",
+      "intro1": "Her ampul aynı işi yapar: elektriği ışığa dönüştürür. Ancak tüm ampuller bunu aynı derecede iyi yapmaz. Bazı ampuller elektriğin büyük bir kısmını ısıya dönüştürerek boşa harcar. Eski model bir ampulün sadece bir dakika sonra sıcak olmasının, LED'in ise soğuk kalmasının nedeni budur.",
+      "intro2": "Evde ve okulda en sık göreceğiniz dört ampul türü vardır. Hepsi aynı elektrik duyunu kullanır ancak içlerinde tamamen farklı şekillerde çalışırlar.",
+      "bulbsTitle": "Dört ampul türü",
+      "inc": {
+        "label": "AKKOR ampuller (en eski tür)",
+        "body": "içinde ince bir metal tel bulunur. Elektrik telden geçtiğinde tel o kadar ısınır ki beyaz renkte parlar. Enerjinin çoğu aslında ışığa değil ısıya dönüşür. Bu ampuller artık çoğu AB ülkesinde satılmamaktadır."
+      },
+      "hal": {
+        "label": "HALOJEN ampuller",
+        "body": "akkor ampulün geliştirilmiş bir versiyonudur. Telin biraz daha uzun süre dayanmasını ve biraz daha parlak yanmasını sağlayan az miktarda halojen gazı içerirler. Ancak yine de çoğunlukla ısı üretirler."
+      },
+      "cfl": {
+        "label": "KOMPAKT FLORASAN (CFL) ampuller",
+        "body": "gazla dolu katlanmış bir cam tüp kullanır. Elektrik, gazın parlamasına neden olur. Akkor ampullerden çok daha az elektrik harcarlar ancak az miktarda cıva içerirler, bu yüzden dikkatlice geri dönüştürülmeleri gerekir."
+      },
+      "led": {
+        "label": "LED ampuller (Işık Yayan Diyot)",
+        "body": "elektrik akımı geçtiğinde doğrudan ışık üreten küçük bir elektronik bileşen kullanır. En verimli olanlardır: elektriğin neredeyse tamamını ışığa ve çok azını ısıya dönüştürürler. Ayrıca bir akkor ampulden 25 kat daha uzun süre dayanırlar."
+      }
+    },
+    "worked": {
+      "title": "Çözümlü Örnek — Ampul bilgi tablosu nasıl okunur?",
+      "s1": "Ömür (Lifetime) satırına bakın. Bu sayı, ampulün değiştirilmesi gerekmeden önce kaç saat çalışacağını gösterir.",
+      "s2": "Örnek: Bir LED ampulün ömrü 25.000 saattir. Eğer onu günde 5 saat kullanırsanız, bu 25.000 ÷ 5 = 5.000 gün eder ki bu da yaklaşık 13 yıldır.",
+      "s3": "Güç (Wattage) satırına bakın. Bu, ampulün açık olduğu her saniye ne kadar elektrik kullandığını gösterir. Daha yüksek watt, daha fazla elektrik tüketimi demektir.",
+      "s4": "Örnek: 60 W'lık bir akkor ampul, aynı miktarda ışık vermek için 12 W'lık bir LED ampulden 5 kat daha fazla elektrik harcar."
+    },
+    "terms": {
+      "title": "Temel terimler",
+      "colTerm": "Terim",
+      "colDef": "Tanım",
+      "t1term": "Ampul",
+      "t1def": "Bir lambaya vidalanan veya takılan ışık kaynağı.",
+      "t2term": "Ömür",
+      "t2def": "Bir ampulün bozulmadan önce çalıştığı saat sayısı.",
+      "t3term": "Güç (W)",
+      "t3def": "Ampulün ne kadar elektrik harcadığı.",
+      "t4term": "Lümen (lm)",
+      "t4def": "Ampulün ne kadar ışık ürettiği (daha fazla lümen = daha parlak).",
+      "t5term": "LED",
+      "t5def": "Işık Yayan Diyot — günümüzdeki en verimli ampul türü."
+    },
+    "act1": {
+      "sub": "Dört ampul türünü tanıma",
+      "intro": "Aşağıdaki tabloda yer alan dört ampul türüne bakın.",
+      "colInc": "Akkor",
+      "colHal": "Halojen",
+      "colCfl": "Kompakt florasan",
+      "colLed": "LED",
+      "rowLife": "Ömür",
+      "rowPrice": "Ampul başına fiyat",
+      "rowWatt": "Güç (Watt)",
+      "q1": "Hangi ampulün ömrü en uzundur?",
+      "q2": "Hangi ampul en çok elektriği kullanır (en yüksek watt)?",
+      "q3": "Hangi ampul en az elektriği kullanır (en düşük watt)?",
+      "q4": "Satın alması en ucuz olan ampul hangisidir?",
+      "q5": "Dört ampul de yaklaşık olarak aynı miktarda ışık (850 lümen) verir. Her gün kullandığınız bir oda için hangi ampulü seçerdiniz? Nedenini tek bir cümleyle açıklayın."
+    },
+    "act2": {
+      "sub": "Ampulü açıklamayla eşleştirin",
+      "intro": "Her ampul türünün yanındaki boş çizgiye uygun harfi (A, B, C veya D) yazın.",
+      "descA": "Gazla dolu kıvrımlı bir tüp kullanır; LED'lerden önce popülerdi.",
+      "descB": "En yeni teknoloji; çok düşük enerji kullanımı ve uzun ömür.",
+      "descC": "En eski teknoloji; elektrik geçtiğinde ince bir tel parlar.",
+      "descD": "Akkor lambanın geliştirilmiş hali; biraz daha verimli.",
+      "itemInc": "Akkor ampul",
+      "itemHal": "Halojen ampul",
+      "itemCfl": "Kompakt florasan",
+      "itemLed": "LED"
+    },
+    "reflection": {
+      "title": "Değerlendirme",
+      "prompt": "Evinizdeki ampullere bakın. Kaç tanesi LED? Eğer bazıları LED değilse ilk önce hangilerini değiştirirdiniz ve neden?"
+    }
+  }
+}
+}

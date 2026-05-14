@@ -879,217 +879,76 @@ body.bw-mode .box-tip h3 {
      Body text (w01.*) is left as-is until JSON files are wired up.
 ============================================================ -->
 <script>
-const TRANSLATIONS = {
-  is: {
-    "ui.language": "Tungumál:",
-    "ui.back": "← Til baka",
-    "ui.print": "🖨 Prenta",
-    "ui.bwToggle": "B/W útlit",
-    "ui.worksheet": "Vinnublað",
-    "ui.levelLabel": "Stig",
-    "ui.basic": "BASIC",
-    "ui.studentName": "Nafn nemanda",
-    "ui.date": "Dagsetning",
-    "ui.topic": "Viðfangsefni",
-    "ui.objectives": "Námsmarkmið",
-    "ui.timeNeeded": "Tími",
-    "ui.resources": "Búnaður",
-    "ui.introduction": "Inngangur",
-    "ui.theory": "Fræðin",
-    "ui.workedExample": "Sýnidæmi",
-    "ui.keyTerms": "Lykilhugtök",
-    "ui.term": "Hugtak",
-    "ui.definition": "Skilgreining",
-    "ui.studentActivity": "Verkefni nemanda",
-    "ui.page": "Síða",
-    "ui.of": "af",
-        "w01.deliv.caption": "Dæmi um gott nemendamyndband",
-    "w01.deliv.scanLabel": "Skannaðu QR-kóðann eða farðu á slóðina til að horfa:",
-  "ui.disclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them."
-  },
-  en: {
-    "ui.language": "Language:",
-    "ui.back": "← Back",
-    "ui.print": "🖨 Print",
-    "ui.bwToggle": "B/W view",
-    "ui.worksheet": "Worksheet",
-    "ui.levelLabel": "Level",
-    "ui.basic": "BASIC",
-    "ui.studentName": "Student name",
-    "ui.date": "Date",
-    "ui.topic": "Topic",
-    "ui.objectives": "Learning outcomes",
-    "ui.timeNeeded": "Time needed",
-    "ui.resources": "Resources",
-    "ui.introduction": "Introduction",
-    "ui.theory": "Theory",
-    "ui.workedExample": "Worked example",
-    "ui.keyTerms": "Key terms",
-    "ui.term": "Term",
-    "ui.definition": "Definition",
-    "ui.studentActivity": "Student activity",
-    "ui.page": "Page",
-    "ui.of": "of",
-        "w01.deliv.caption": "Example of a good student video",
-    "w01.deliv.scanLabel": "Scan the QR code or visit the URL to watch:",
-  "ui.disclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them."
-  },
-  pt: {
-    "ui.language": "Idioma:",
-    "ui.back": "← Voltar",
-    "ui.print": "🖨 Imprimir",
-    "ui.bwToggle": "P/B",
-    "ui.worksheet": "Ficha de trabalho",
-    "ui.levelLabel": "Nível",
-    "ui.basic": "BÁSICO",
-    "ui.studentName": "Nome do aluno",
-    "ui.date": "Data",
-    "ui.topic": "Tema",
-    "ui.objectives": "Objetivos de aprendizagem",
-    "ui.timeNeeded": "Tempo",
-    "ui.resources": "Recursos",
-    "ui.introduction": "Introdução",
-    "ui.theory": "Teoria",
-    "ui.workedExample": "Exemplo resolvido",
-    "ui.keyTerms": "Termos-chave",
-    "ui.term": "Termo",
-    "ui.definition": "Definição",
-    "ui.studentActivity": "Atividade do aluno",
-    "ui.page": "Página",
-    "ui.of": "de",
-        "w01.deliv.caption": "Exemplo de um bom vídeo de aluno",
-    "w01.deliv.scanLabel": "Digitalize o código QR ou visite o URL para ver:",
-  "ui.disclaimer": "Financiado pela União Europeia. Os pontos de vista e as opiniões expressas são, no entanto, exclusivamente do(s) autor(es) e não refletem necessariamente os da União Europeia ou da Agência de Execução Europeia da Educação e da Cultura (EACEA). Nem a União Europeia nem a EACEA podem ser responsabilizadas por eles."
-  },
-  hr: {
-    "ui.language": "Jezik:",
-    "ui.back": "← Natrag",
-    "ui.print": "🖨 Ispis",
-    "ui.bwToggle": "C/B prikaz",
-    "ui.worksheet": "Radni list",
-    "ui.levelLabel": "Razina",
-    "ui.basic": "OSNOVNO",
-    "ui.studentName": "Ime učenika",
-    "ui.date": "Datum",
-    "ui.topic": "Tema",
-    "ui.objectives": "Ishodi učenja",
-    "ui.timeNeeded": "Vrijeme",
-    "ui.resources": "Resursi",
-    "ui.introduction": "Uvod",
-    "ui.theory": "Teorija",
-    "ui.workedExample": "Riješeni primjer",
-    "ui.keyTerms": "Ključni pojmovi",
-    "ui.term": "Pojam",
-    "ui.definition": "Definicija",
-    "ui.studentActivity": "Aktivnost učenika",
-    "ui.page": "Stranica",
-    "ui.of": "od",
-        "w01.deliv.caption": "Primjer dobrog učeničkog videa",
-    "w01.deliv.scanLabel": "Skenirajte QR kod ili posjetite URL za gledanje:",
-  "ui.disclaimer": "Financirano sredstvima Europske unije. Izneseni stavovi i mišljenja samo su stavovi i mišljenja autora i ne moraju nužno odražavati stavove i mišljenja Europske unije ili Europske izvršne agencije za obrazovanje i kulturu (EACEA). Ni Europska unija ni EACEA ne mogu se smatrati odgovornima za njih."
-  },
-  tr: {
-    "ui.language": "Dil:",
-    "ui.back": "← Geri",
-    "ui.print": "🖨 Yazdır",
-    "ui.bwToggle": "S/B görünüm",
-    "ui.worksheet": "Çalışma yaprağı",
-    "ui.levelLabel": "Seviye",
-    "ui.basic": "TEMEL",
-    "ui.studentName": "Öğrenci adı",
-    "ui.date": "Tarih",
-    "ui.topic": "Konu",
-    "ui.objectives": "Öğrenme çıktıları",
-    "ui.timeNeeded": "Süre",
-    "ui.resources": "Kaynaklar",
-    "ui.introduction": "Giriş",
-    "ui.theory": "Teori",
-    "ui.workedExample": "Çözümlü örnek",
-    "ui.keyTerms": "Anahtar kavramlar",
-    "ui.term": "Kavram",
-    "ui.definition": "Tanım",
-    "ui.studentActivity": "Öğrenci etkinliği",
-    "ui.page": "Sayfa",
-    "ui.of": "/",
-        "w01.deliv.caption": "İyi bir öğrenci videosu örneği",
-    "w01.deliv.scanLabel": "Videoyu izlemek için QR kodunu tarayın veya URL'yi ziyaret edin:",
-  "ui.disclaimer": "Avrupa Birliği tarafından finanse edilmiştir. Ancak ifade edilen görüş ve düşünceler yalnızca yazar(lar)a aittir ve Avrupa Birliği veya Avrupa Eğitim ve Kültür Yürütme Ajansı (EACEA) görüşlerini yansıtmak zorunda değildir. Ne Avrupa Birliği ne de EACEA bunlardan sorumlu tutulamaz."
-  },
-  nl: {
-    "ui.language": "Taal:",
-    "ui.back": "← Terug",
-    "ui.print": "🖨 Afdrukken",
-    "ui.bwToggle": "Z/W weergave",
-    "ui.worksheet": "Werkblad",
-    "ui.levelLabel": "Niveau",
-    "ui.basic": "BASIS",
-    "ui.studentName": "Naam leerling",
-    "ui.date": "Datum",
-    "ui.topic": "Onderwerp",
-    "ui.objectives": "Leerdoelen",
-    "ui.timeNeeded": "Tijd",
-    "ui.resources": "Materialen",
-    "ui.introduction": "Inleiding",
-    "ui.theory": "Theorie",
-    "ui.workedExample": "Uitgewerkt voorbeeld",
-    "ui.keyTerms": "Kernbegrippen",
-    "ui.term": "Begrip",
-    "ui.definition": "Definitie",
-    "ui.studentActivity": "Leerlingactiviteit",
-    "ui.page": "Pagina",
-    "ui.of": "van",
-        "w01.deliv.caption": "Voorbeeld van een goede leerlingvideo",
-    "w01.deliv.scanLabel": "Scan de QR-code of bezoek de URL om te kijken:",
-  "ui.disclaimer": "Gefinancierd door de Europese Unie. De geuite standpunten en meningen zijn echter uitsluitend die van de auteur(s) en weerspiegelen niet noodzakelijkerwijs die van de Europese Unie of het Europees Uitvoerend Agentschap onderwijs en cultuur (EACEA). Noch de Europese Unie noch EACEA kan ervoor verantwoordelijk worden gesteld."
+/* ============================================================
+   Worksheet i18n — fetches lang/{lang}.json on flag click,
+   applies nested-path translations to all [data-i18n] elements.
+   The default text in the HTML is the fallback (baseline language).
+============================================================ */
+(function () {
+  const FALLBACK = 'en';
+  const cache = {};
+
+  async function loadLang(lang) {
+    if (cache[lang] !== undefined) return cache[lang];
+    try {
+      const res = await fetch('lang/' + lang + '.json', { cache: 'no-cache' });
+      if (!res.ok) throw new Error('not found');
+      const data = await res.json();
+      cache[lang] = data;
+      return data;
+    } catch (err) {
+      cache[lang] = null;
+      return null;
+    }
   }
-};
 
-function applyLang(lang) {
-  const dict = TRANSLATIONS[lang] || {};
-  document.documentElement.lang = lang;
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
-    if (dict[key] !== undefined) el.textContent = dict[key];
-  });
-  document.querySelectorAll(".flag-btn").forEach(btn => {
-    btn.setAttribute("aria-pressed", btn.getAttribute("data-lang") === lang ? "true" : "false");
-  });
-}
-
-document.querySelectorAll(".flag-btn").forEach(btn => {
-  btn.addEventListener("click", () => applyLang(btn.getAttribute("data-lang")));
-});
-
-/* B/W toggle */
-const bwBtn = document.querySelector(".bw-toggle");
-bwBtn.addEventListener("click", () => {
-  const on = document.body.classList.toggle("bw-mode");
-  bwBtn.setAttribute("aria-pressed", on);
-});
-
-applyLang("is");
-
-/* QR-code rendering for printable video links.
-   Uses qrcode-generator (local file, no CDN). Renders SVG which scales
-   crisply for print and works regardless of when print is triggered. */
-(function renderQR() {
-  if (typeof qrcode === "undefined") {
-    console.warn("QR library not loaded — qrcode SVG will not appear.");
-    return;
+  function getNested(obj, path) {
+    if (!obj) return undefined;
+    return path.split('.').reduce(
+      (acc, key) => (acc && typeof acc === 'object' ? acc[key] : undefined),
+      obj
+    );
   }
-  const youtubeUrl = "https://www.youtube.com/watch?v=t12mrt3JmTE";
-  const container = document.getElementById("qr-w01");
-  if (!container) return;
 
-  const qr = qrcode(0, "M"); // 0 = auto type, M = medium error correction (~15%)
-  qr.addData(youtubeUrl);
-  qr.make();
+  async function applyLang(lang) {
+    let dict = await loadLang(lang);
+    if (!dict && lang !== FALLBACK) dict = await loadLang(FALLBACK);
 
-  container.innerHTML = qr.createSvgTag({
-    cellSize: 4,
-    margin: 2,
-    scalable: true
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const val = getNested(dict, key);
+      if (typeof val === 'string') el.textContent = val;
+      /* if val is missing, leave the HTML text (baseline language) intact */
+    });
+
+    document.querySelectorAll('.flag-btn').forEach(btn => {
+      const isActive = btn.getAttribute('data-lang') === lang;
+      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+
+    try { localStorage.setItem('green-ws-lang', lang); } catch (e) {}
+  }
+
+  /* wire up flag buttons */
+  document.querySelectorAll('.flag-btn').forEach(btn => {
+    btn.addEventListener('click', () => applyLang(btn.getAttribute('data-lang')));
   });
+
+  /* B/W toggle */
+  const bwBtn = document.querySelector('.bw-toggle');
+  if (bwBtn) {
+    bwBtn.addEventListener('click', () => {
+      const on = document.body.classList.toggle('bw-mode');
+      bwBtn.setAttribute('aria-pressed', on);
+    });
+  }
+
+  /* initial language: saved preference, else <html lang>, else fallback */
+  let initial = FALLBACK;
+  try { initial = localStorage.getItem('green-ws-lang') || document.documentElement.lang || FALLBACK; }
+  catch (e) { initial = document.documentElement.lang || FALLBACK; }
+  applyLang(initial);
 })();
 </script>
 

@@ -1,0 +1,156 @@
+{
+  "_README": {
+    "purpose": "Referência de tradução para ws03.",
+    "language": "Idioma: pt.",
+    "instructions": "Copie este ficheiro como {lang}.json e traduza os valores. As chaves (lado esquerdo) NUNCA devem mudar — elas mapeiam para os atributos data-i18n no index.html."
+  },
+  "ui": {
+    "back": "← Voltar",
+    "language": "Idioma:",
+    "bwToggle": "Vista P/B",
+    "print": "🖨 Imprimir",
+    "level": "Nível:",
+    "topic": "Tópico",
+    "learningOutcomes": "Resultados de aprendizagem",
+    "timeNeeded": "Tempo necessário",
+    "resources": "Recursos necessários",
+    "introduction": "Introdução",
+    "projectLine": "Projeto № 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Financiado pela União Europeia. No entanto, os pontos de vista e as opiniões expressas são as do(s) autor(es) e não refletem necessariamente as da União Europeia ou da Agência de Execução Europeia da Educação e da Cultura (EACEA). Nem a União Europeia nem a EACEA podem ser responsabilizadas por eles.",
+    "page": "Página",
+    "of": "de",
+    "activity": "Atividade do aluno"
+  },
+  "w03": {
+    "worksheet": "Ficha de trabalho 03",
+    "title": "Eficiência Energética e Hídrica de Máquinas de Lavar Loiça",
+    "level": "BÁSICO / INTERMÉDIO",
+    "topic": "3.2 Eficiência energética e hídrica de máquinas de lavar loiça",
+    "lo": {
+      "tech": {
+        "body": "Os alunos conseguem explicar como as máquinas de lavar loiça consomem energia (aquecimento da água) e água por ciclo."
+      },
+      "math": {
+        "body": "Os alunos calculam os custos anuais utilizando cenários de utilização realistas."
+      },
+      "env": {
+        "body": "Os alunos comparam o consumo de energia e água entre os programas da máquina de lavar loiça."
+      },
+      "green": {
+        "body": "Os alunos leem etiquetas energéticas, escolhem as definições dos aparelhos, comparam os custos anuais de diferentes programas e avaliam o impacto ambiental."
+      }
+    },
+    "time": "60 min",
+    "resources": "Calculadora, tarifa de eletricidade (ex: 0,30 €/kWh), tarifa de água (ex: 0,002 €/l), etiqueta energética da UE para uma máquina de lavar loiça (de casa ou do site do fabricante).",
+    "intro": "Uma máquina de lavar loiça moderna pode, na verdade, utilizar menos água do que a lavagem manual — mas apenas se for carregada corretamente e executada no programa certo. A escolha entre um programa intensivo a 70 °C e um programa eco pode fazer uma diferença significativa na sua conta de eletricidade e no consumo de água. Nesta ficha de trabalho, irá investigar essas diferenças e decidir quando cada programa faz sentido.",
+    "theory": {
+      "title": "Teoria",
+      "intro": "Uma máquina de lavar loiça utiliza a maior parte da sua energia para aquecer a água. Também utiliza uma pequena quantidade para o ciclo de secagem (elemento de aquecimento).",
+      "formulaTitle": "Fórmula chave para o aquecimento de água",
+      "formulaNote": "Simplificado: ~0,05 kWh por litro por cada 10 °C de aumento de temperatura.",
+      "intensive": {
+        "label": "Programa intensivo (70 °C):",
+        "body": "Utiliza mais água (18–20 l) e mais eletricidade (1,5–2,0 kWh) — destina-se a panelas e loiça muito suja."
+      },
+      "auto": {
+        "label": "Programa automático:",
+        "body": "Os sensores ajustam a temperatura e a duração — conveniente, mas muitas vezes menos eficiente do que o Eco."
+      },
+      "eco": {
+        "label": "Programa Eco (50 °C):",
+        "body": "Ciclo longo (3–4 horas), mas temperatura mais baixa. Típico: 0,8–1,0 kWh, 10–12 l de água."
+      },
+      "hand": {
+        "label": "Comparação com a lavagem manual:",
+        "body": "Uma torneira a correr utiliza 6–12 l de água por minuto. Lavar a loiça durante 10 minutos com a torneira meio aberta = 60–120 l — muito mais do que uma máquina de lavar loiça."
+      },
+      "label": {
+        "label": "Etiqueta ecológica:",
+        "body": "Desde 2021, as máquinas de lavar loiça possuem uma etiqueta energética da UE com classificação de A (melhor) a G. A etiqueta mostra: energia por ciclo (kWh), água por ciclo (l), nível de ruído (dB) e duração do programa."
+      },
+      "half": {
+        "label": "Meia carga:",
+        "body": "Ligar a máquina com meia carga desperdiça energia e água. Uma definição de meia carga poupa normalmente 20–30 % em ambos. Caso contrário, esperar por uma carga completa é mais eficiente."
+      },
+      "videos": "Vídeos sugeridos para uma introdução ao funcionamento das máquinas de lavar loiça e à diferença entre ciclos rápidos e eco:",
+      "video1": "Como Funciona Realmente uma Máquina de Lavar Loiça?",
+      "video2": "A Definição Eco da Máquina de Lavar Loiça Explicada"
+    },
+    "example": {
+      "title": "Exemplo prático",
+      "intro": "Um agregado familiar liga a máquina de lavar loiça 250 vezes por ano.",
+      "intensive": "Programa intensivo:",
+      "eco": "Programa Eco:",
+      "saving": "Poupança por ciclo:",
+      "annual": "Poupança anual:"
+    },
+    "act1": {
+      "sub": "Comparar programas da máquina de lavar loiça",
+      "colProg": "Programa",
+      "colTemp": "Temp. da água",
+      "colEnergy": "Energia por ciclo (kWh)",
+      "colWater": "Água por ciclo (l)",
+      "rowInt": "Intensivo (70 °C)",
+      "rowAuto": "Auto",
+      "rowEco": "Eco (50 °C)",
+      "rowRinse": "Apenas enxaguamento (sem calor)",
+      "rowYours": "O eco da sua máquina",
+      "tariffs": "Eletricidade: 0,30 €/kWh · Água: 0,003 €/L.",
+      "q1": "Quantas vezes o seu agregado familiar liga a máquina de lavar loiça por ano? ____ ciclos/ano.",
+      "q2": "Calcule o custo anual de cada programa com a sua frequência de utilização.",
+      "q3": "Quanto dinheiro se poupa por ano utilizando o Eco em vez do Intensivo?",
+      "q4": "Quanta água se poupa por ano (em litros) com a sua frequência de utilização?",
+      "q5": "Por que razão o programa Eco demora mais de 3 horas? Dica: pense na taxa de aquecimento e no isolamento."
+    },
+    "act2": {
+      "sub": "Máquina de lavar loiça vs. lavagem manual",
+      "intro": "Uma pessoa lava a loiça à mão durante 12 minutos com a torneira a 8 l/min. A água é aquecida por uma caldeira elétrica (0,05 kWh/l para aquecer de 10 °C a 40 °C).",
+      "q1": "Calcule o total de água utilizada para a lavagem manual.",
+      "q2": "Calcule a energia necessária para aquecer essa água (kWh).",
+      "q3": "Calcule o custo total da lavagem manual (água + eletricidade).",
+      "q4": "Compare com o custo do programa Eco da Atividade 1. Qual é mais barato?",
+      "q5": "Para que tipos de cargas de lavagem se justifica o programa intensivo? Dê dois exemplos reais.",
+      "q6": "Se a cantina da escola executar 10 ciclos de máquina de lavar loiça por dia escolar (160 dias/ano) no programa intensivo, calcule o custo anual de energia. Em seguida, recalcule se mudarem para Eco. Qual é a poupança anual?",
+      "q7": "Encontre uma etiqueta energética da UE para uma máquina de lavar loiça. Qual é a diferença na energia anual (kWh/ano) entre as classificações A e E?"
+    },
+    "act3": {
+      "sub": "Pegada de carbono e hídrica",
+      "q1": "Calcule as emissões de CO₂ de 365 ciclos intensivos (utilize 0,27 kg CO₂/kWh).",
+      "q2": "Como é que a mudança para o Eco reduz a pegada de carbono anual em kg de CO₂?",
+      "q3": "O custo da água é de 0,003 €/l. Recalcule a poupança anual de água em euros utilizando esta tarifa. Altera o argumento económico para o Eco?"
+    },
+    "peer": {
+      "title": "Dica de colega para colega",
+      "dykTitle": "💡 Sabia que?",
+      "dykBody": "Raspar, não passar por água! As máquinas de lavar loiça modernas não necessitam de pré-lavagem.",
+      "q1": "Como é que a pré-lavagem desperdiça água e energia?"
+    },
+    "reflection": {
+      "title": "Reflexão",
+      "prompt": "Quando é que a lavagem manual seria mais eficiente do que uma máquina de lavar loiça? Explique pelas suas próprias palavras e faça referência aos seus cálculos da Atividade 2."
+    },
+    "ee": {
+      "title": "Tarefas adicionais para alunos de engenharia eletrotécnica"
+    },
+    "ee1": {
+      "sub": "Diagrama de blocos de uma máquina de lavar loiça",
+      "intro": "Desenhe um diagrama de blocos mostrando: placa de controlo, elemento de aquecimento, bomba de circulação, bomba de drenagem, termístor NTC, interruptor de bloqueio da porta, dispensador de detergente e sensor de proteção contra inundações. Indique as potências típicas."
+    },
+    "ee2": {
+      "sub": "Motores BLDC",
+      "intro": "As máquinas de lavar loiça modernas utilizam motores BLDC (corrente contínua sem escovas) para a bomba de circulação. Liste três vantagens dos motores BLDC em relação aos motores universais. Porque são mais caros?"
+    },
+    "ee3": {
+      "sub": "Regulação da temperatura da água",
+      "intro": "Como é regulada a temperatura da água numa máquina de lavar loiça? Explique o ciclo de controlo."
+    },
+    "ee4": {
+      "sub": "Dispositivos de segurança",
+      "intro": "Liste três dispositivos de segurança numa máquina de lavar loiça e explique brevemente a função de cada um."
+    },
+    "ee5": {
+      "sub": "Divisor de tensão do termístor NTC",
+      "intro": "Um termístor NTC tem uma resistência de 10 kΩ a 25 °C e de 2 kΩ a 60 °C. É utilizado num divisor de tensão com uma fonte de 5 V e um resistor fixo de 10 kΩ. Calcule a tensão de saída a 25 °C e a 60 °C. Como é que a placa de controlo utiliza este sinal?"
+    }
+  }
+}

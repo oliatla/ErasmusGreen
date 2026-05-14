@@ -1,0 +1,96 @@
+{
+  "_README": {
+    "purpose": "Translation reference for ws06.",
+    "language": "Default language: en.",
+    "instructions": "Copy this file as {lang}.json and translate the values. Keys (the left-hand side) must NEVER change — they map to data-i18n attributes in index.html."
+  },
+  "ui": {
+    "back": "← Back",
+    "language": "Language:",
+    "bwToggle": "B/W view",
+    "print": "🖨 Print",
+    "level": "Level:",
+    "topic": "Topic",
+    "learningOutcomes": "Learning outcomes",
+    "timeNeeded": "Time needed",
+    "resources": "Resources needed",
+    "introduction": "Introduction",
+    "projectLine": "Project № 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.",
+    "page": "Page",
+    "of": "of",
+    "activity": "Student activity"
+  },
+  "w06": {
+    "worksheet": "Worksheet 06",
+    "title": "Total Cost of Ownership and Environmental Impact",
+    "level": "ADVANCED",
+    "topic": "Total cost of ownership and environmental impact of light bulbs.",
+    "lo1": "Model the total cost of ownership (TCO) of different bulb types as a function of usage hours.",
+    "lo2": "Perform a sensitivity analysis on electricity tariff and usage intensity.",
+    "lo3": "Quantify lifecycle CO₂ emissions and discuss the embodied carbon of bulb manufacturing.",
+    "time": "120 min",
+    "resources": "Bulb specification table; calculator or spreadsheet software (recommended); access to current Dutch electricity tariff data.",
+    "intro": "When choosing between light bulbs, the cheapest option depends on how long you use them. For a lamp that is on for only a few minutes per day, an LED may never pay back its higher purchase price. For a lamp that burns 12 hours a day, an LED is far cheaper within a year. In this worksheet you will build a Total Cost of Ownership (TCO) model and analyse when each technology is the rational choice.",
+    "prereq": {
+      "label": "What you should already know:",
+      "body": "This worksheet assumes you have completed Worksheet 1B (or are confident with luminous efficacy, kWh calculations, and the simple TCO concept)."
+    },
+    "theory": {
+      "title": "Theory",
+      "intro": "At this level we treat bulb selection as an optimisation problem. The TCO function from Worksheet 1B can be written more rigorously and analysed mathematically.",
+      "formulaIntro": "The continuous form of TCO over a usage period of t hours is:",
+      "formulaWhere": "where L is bulb lifetime (h), Pbulb is the unit purchase price (€), W is the wattage and τ is the electricity tariff (€/kWh). Strictly speaking, you cannot buy 0.7 of a bulb, so the realistic version uses the ceiling function ⌈t/L⌉ for the number of bulbs needed.",
+      "be": {
+        "label": "Break-even analysis:",
+        "body": "comparing two bulb types A and B, the break-even hours t* is the value of t where TCOA(t) = TCOB(t). Below t*, the cheaper-to-buy option wins; above t*, the more efficient option wins. Solving for t* algebraically gives insight into when switching technology actually pays off."
+      },
+      "sens": {
+        "label": "Sensitivity:",
+        "body": "real-world conclusions depend on input assumptions (especially τ, which has varied between €0.10 and €0.70 per kWh in the Netherlands in recent years). A robust analysis tests how the conclusion changes when key inputs change."
+      },
+      "life": {
+        "label": "Lifecycle CO₂:",
+        "body": "the total environmental impact includes both manufacturing emissions (embodied carbon) and emissions from electricity used during the bulb’s lifetime. Using the 2024 Dutch grid factor of 0.27 kg CO₂/kWh, manufacturing typically dominates LED lifecycle emissions whereas electricity use dominates incandescent lifecycle emissions."
+      }
+    },
+    "worked": {
+      "title": "Worked example — break-even between incandescent and LED",
+      "setup": "Find the break-even hours between an incandescent bulb (W = 60, P = €0.50, L = 1,000 h) and an LED (W = 12, P = €1.33, L = 25,000 h) at τ = €0.30/kWh.",
+      "s1": "Use the continuous TCO: TCOinc(t) = (t/1000)·0.50 + (60t/1000)·0.30 = 0.0005·t + 0.018·t = 0.0185·t",
+      "s2": "TCOLED(t) = (t/25000)·1.33 + (12t/1000)·0.30 = 0.0000532·t + 0.0036·t ≈ 0.003653·t",
+      "s3": "Set equal: 0.0185·t = 0.003653·t → this gives 0 = −0.014847·t, so they are equal only at t = 0.",
+      "s4": "Conclusion: with these prices the LED is cheaper from hour 1 onwards (its TCO grows much more slowly). The \"break-even\" question only becomes interesting if the LED’s purchase price is much higher (e.g. €15), in which case there is a real positive break-even point."
+    },
+    "act1": {
+      "sub": "Building a TCO model",
+      "intro": "The total cost of ownership over a period of t hours can be written as:",
+      "where": "where L is the lifetime of one bulb (h), Pbulb is the purchase price (€), W is the wattage (W), τ is the electricity tariff (€/kWh), and ⌈·⌉ is the ceiling function (round up to whole bulbs).",
+      "colInc": "Incandescent",
+      "colHal": "Halogen",
+      "colCfl": "Compact fluorescent",
+      "colLed": "LED",
+      "rowLife": "Lifetime",
+      "rowPrice": "Price per bulb",
+      "rowWatt": "Wattage",
+      "rowLumens": "Light output",
+      "q1": "Derive a simplified version of this formula by assuming continuous bulb replacement (i.e. ignore the ceiling function). Show your derivation.",
+      "q2": "Plot (or sketch) TCO(t) for all four bulb types on the same axes for t between 0 and 25,000 hours. Use τ = €0.30/kWh.",
+      "plotY": "TCO (€)",
+      "plotX": "t (hours)",
+      "q3": "Calculate the break-even point in hours between (a) incandescent vs. LED and (b) CFL vs. LED. Below which usage does the older technology still “win” on TCO?"
+    },
+    "act2": {
+      "sub": "Sensitivity analysis",
+      "intro": "Real-world electricity tariffs in the Netherlands have varied between €0.10/kWh and €0.70/kWh in the last five years.",
+      "q1": "Recompute the LED-vs-incandescent break-even point for τ = €0.10 and τ = €0.70. How sensitive is the conclusion to electricity price?",
+      "q2": "A user only uses a particular lamp 30 minutes per day. Over the 25,000-hour LED lifetime, how many calendar years is that? Is the LED still the rational choice here?"
+    },
+    "act3": {
+      "sub": "Lifecycle CO₂",
+      "intro": "1 kWh of Dutch grid electricity emits approximately 0.27 kg of CO₂ (2024 average; was 0.46 kg in 2018). Manufacturing one LED bulb is estimated to emit ~1.5 kg CO₂; one incandescent bulb ~0.3 kg.",
+      "q1": "Calculate the total lifecycle CO₂ emissions (manufacturing + use) for 25,000 hours of light, for both LED and incandescent. Use the 2024 grid factor.",
+      "q2": "What share of total LED lifecycle emissions comes from manufacturing? What does this imply about the value of replacing working incandescent bulbs versus waiting until they fail?"
+    }
+  }
+}

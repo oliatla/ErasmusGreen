@@ -1,0 +1,111 @@
+{
+  "_README": {
+    "purpose": "Vertaalreferentie voor ws05.",
+    "language": "Standaardtaal: nl.",
+    "instructions": "Kopieer dit bestand als {lang}.json en vertaal de waarden. Sleutels (de linkerkant) mogen NOOIT veranderen — ze zijn gekoppeld aan data-i18n attributen in index.html."
+  },
+  "ui": {
+    "back": "← Terug",
+    "language": "Taal:",
+    "bwToggle": "Z/W weergave",
+    "print": "🖨 Afdrukken",
+    "level": "Niveau:",
+    "topic": "Onderwerp",
+    "learningOutcomes": "Leerdoelen",
+    "timeNeeded": "Benodigde tijd",
+    "resources": "Benodigde middelen",
+    "introduction": "Introductie",
+    "projectLine": "Project nr. 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Gefinancierd door de Europese Unie. De hier geuite opvattingen en meningen komen echter uitsluitend voor rekening van de auteur(s) en weerspiegelen niet noodzakelijkerwijs die van de Europese Unie of het Europees Uitvoerend Agentschap onderwijs en cultuur (EACEA). Noch de Europese Unie, noch het EACEA kan hiervoor aansprakelijk worden gesteld.",
+    "page": "Pagina",
+    "of": "van",
+    "activity": "Studentenactiviteit"
+  },
+  "w05": {
+    "worksheet": "Werkblad 05",
+    "title": "Wat zit er in een lamp?",
+    "level": "BASIS",
+    "topic": "Wat zit er in een lamp?",
+    "lo1": "De vier belangrijkste soorten huishoudelijke lampen herkennen.",
+    "lo2": "Het wattage en de levensduur van veelvoorkomende lamptypes identificeren.",
+    "time": "60 min",
+    "resources": "Informatie over lampen (in dit werkblad); toegang tot een of meer echte lampen indien beschikbaar.",
+    "intro": "Niet alle lampen zijn hetzelfde. Sommige worden heet, sommige gaan jarenlang mee en sommige gebruiken veel minder elektriciteit. In dit werkblad bekijk je vier veelvoorkomende soorten lampen en leer je de basisverschillen daartussen.",
+    "theory": {
+      "title": "Theorie",
+      "intro1": "Elke lamp doet hetzelfde werk: elektriciteit omzetten in licht. Maar niet alle lampen doen dat even goed. Sommige lampen verspillen veel elektriciteit door het ook in warmte om te zetten. Daarom voelt een ouderwetse lamp na slechts een minuut heet aan, terwijl een LED koel blijft.",
+      "intro2": "Er zijn vier soorten lampen die je het vaakst thuis en op school zult zien. Ze gebruiken allemaal dezelfde fitting, maar werken van binnen op compleet verschillende manieren.",
+      "bulbsTitle": "De vier soorten lampen",
+      "inc": {
+        "label": "GLOEILAMPEN (het oudste type)",
+        "body": "hebben een dunne metalen draad van binnen. Wanneer er elektriciteit door de draad stroomt, wordt deze zo heet dat hij wit oplicht. De meeste energie wordt eigenlijk warmte, geen licht. Deze lampen worden in de meeste EU-landen niet meer verkocht."
+      },
+      "hal": {
+        "label": "HALOGEENLAMPEN",
+        "body": "zijn een verbeterde versie van de gloeilamp. Ze bevatten een kleine hoeveelheid halogeengas waardoor de draad iets langer meegaat en iets helderder brandt. Maar produceren nog steeds voornamelijk warmte."
+      },
+      "cfl": {
+        "label": "SPAARLAMPEN (Compact fluorescent - CFL)",
+        "body": "gebruiken een gevouwen glazen buis gevuld met gas. Elektriciteit laat het gas oplichten. Ze gebruiken veel minder stroom dan gloeilampen, maar bevatten een kleine hoeveelheid kwik, dus ze moeten zorgvuldig worden gerecycled."
+      },
+      "led": {
+        "label": "LED-lampen (Light Emitting Diode)",
+        "body": "gebruiken een klein elektronisch onderdeel dat direct licht produceert wanneer er elektriciteit doorheen stroomt. Ze zijn het meest efficiënt: ze zetten bijna alle elektriciteit om in licht en heel weinig in warmte. Ze gaan ook 25 keer langer mee dan een gloeilamp."
+      }
+    },
+    "worked": {
+      "title": "Uitgewerkt voorbeeld — Hoe lees je de lampinformatie tabel?",
+      "s1": "Kijk naar de rij Levensduur. Het getal vertelt je hoeveel uur de lamp werkt voordat hij vervangen moet worden.",
+      "s2": "Voorbeeld: een LED-lamp heeft een levensduur van 25.000 uur. Als je hem 5 uur per dag gebruikt, is dat 25.000 ÷ 5 = 5.000 dagen, wat ongeveer 13 jaar is.",
+      "s3": "Kijk naar de rij Wattage. Dit vertelt je hoeveel elektriciteit de lamp gebruikt per seconde dat hij aan staat. Een hoger wattage betekent meer elektriciteit.",
+      "s4": "Voorbeeld: een gloeilamp van 60 W gebruikt 5 keer meer elektriciteit dan een LED van 12 W om dezelfde hoeveelheid licht te geven."
+    },
+    "terms": {
+      "title": "Belangrijkste termen",
+      "colTerm": "Term",
+      "colDef": "Definitie",
+      "t1term": "Lamp",
+      "t1def": "Een lichtbron die in een armatuur wordt geschroefd of geklikt.",
+      "t2term": "Levensduur",
+      "t2def": "Het aantal uren dat een lamp werkt voordat hij stopt met werken.",
+      "t3term": "Wattage (W)",
+      "t3def": "Hoeveel elektriciteit de lamp verbruikt.",
+      "t4term": "Lumen (lm)",
+      "t4def": "Hoeveel licht de lamp produceert (meer lumen = helderder).",
+      "t5term": "LED",
+      "t5def": "Light Emitting Diode — tegenwoordig het meest efficiënte lamptype."
+    },
+    "act1": {
+      "sub": "De vier lamptypes herkennen",
+      "intro": "Kijk naar de vier lamptypes in de onderstaande tabel.",
+      "colInc": "Gloeilamp",
+      "colHal": "Halogeen",
+      "colCfl": "Spaarlamp",
+      "colLed": "LED",
+      "rowLife": "Levensduur",
+      "rowPrice": "Prijs per lamp",
+      "rowWatt": "Wattage",
+      "q1": "Welke lamp heeft de langste levensduur?",
+      "q2": "Welke lamp verbruikt de meeste elektriciteit (hoogste wattage)?",
+      "q3": "Welke lamp verbruikt de minste elektriciteit (laagste wattage)?",
+      "q4": "Welke lamp is het goedkoopst om te kopen?",
+      "q5": "Alle vier de lampen geven ongeveer dezelfde hoeveelheid licht (850 lumen). Welke lamp zou je kiezen voor een kamer die je elke dag gebruikt? Leg in één zin uit waarom."
+    },
+    "act2": {
+      "sub": "Koppel de lamp aan de beschrijving",
+      "intro": "Schrijf de bijbehorende letter (A, B, C of D) op de lege regel naast elk lamptype.",
+      "descA": "Gebruikt een opgerolde buis gevuld met gas; was populair voor LED's.",
+      "descB": "De nieuwste technologie; zeer laag energieverbruik en lange levensduur.",
+      "descC": "De oudste technologie; een dunne draad gloeit op wanneer er elektriciteit doorheen gaat.",
+      "descD": "Een verbeterde versie van de gloeilamp; iets efficiënter.",
+      "itemInc": "Gloeilamp",
+      "itemHal": "Halogeenlamp",
+      "itemCfl": "Spaarlamp",
+      "itemLed": "LED"
+    },
+    "reflection": {
+      "title": "Reflectie",
+      "prompt": "Kijk naar de lampen in je huis. Hoeveel daarvan zijn LED? Als sommige dat niet zijn, welke zou je dan als eerste vervangen, en waarom?"
+    }
+  }
+}

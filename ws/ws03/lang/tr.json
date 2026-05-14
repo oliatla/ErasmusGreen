@@ -1,0 +1,157 @@
+{
+  "_README": {
+    "purpose": "ws03 için çeviri referansı.",
+    "language": "Dil: tr.",
+    "instructions": "Bu dosyayı {lang}.json olarak kopyalayın ve değerleri çevirin. Anahtarlar (iki noktanın sol tarafı) ASLA değiştirilmemelidir — bunlar index.html'deki data-i18n nitelikleriyle eşleşir."
+  },
+  "ui": {
+    "back": "← Geri",
+    "language": "Dil:",
+    "bwToggle": "S/B görünüm",
+    "print": "🖨 Yazdır",
+    "level": "Seviye:",
+    "topic": "Konu",
+    "learningOutcomes": "Öğrenme kazanımları",
+    "timeNeeded": "Gereken süre",
+    "resources": "Gerekli kaynaklar",
+    "introduction": "Giriş",
+    "projectLine": "Proje № 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Avrupa Birliği tarafından finanse edilmektedir. Ancak ifade edilen görüşler ve düşünceler yalnızca yazar(lar)a aittir ve Avrupa Birliği veya Avrupa Eğitim ve Kültür Yürütme Ajansı'nın (EACEA) görüşlerini yansıtmak zorunda değildir. Bunlardan ne Avrupa Birliği ne de EACEA sorumlu tutulamaz.",
+    "page": "Sayfa",
+    "of": "/",
+    "activity": "Öğrenci etkinliği"
+  },
+  "w03": {
+    "worksheet": "Çalışma Yaprağı 03",
+    "title": "Bulaşık Makinelerinin Enerji ve Su Verimliliği",
+    "level": "TEMEL / ORTA",
+    "topic": "3.2 Bulaşık makinelerinin enerji ve su verimliliği",
+    "lo": {
+      "tech": {
+        "body": "Öğrenciler bulaşık makinelerinin döngü başına nasıl enerji (suyu ısıtarak) ve su tükettiğini açıklayabilir."
+      },
+      "math": {
+        "body": "Öğrenciler gerçekçi kullanım senaryolarını kullanarak yıllık maliyetleri hesaplar."
+      },
+      "env": {
+        "body": "Öğrenciler bulaşık makinesi programları arasındaki enerji ve su tüketimini karşılaştırır."
+      },
+      "green": {
+        "body": "Öğrenciler enerji etiketlerini okur, cihaz ayarlarını seçer, farklı programların yıllık maliyetlerini karşılaştırır ve çevresel etkiyi değerlendirir."
+      }
+    },
+    "time": "60 dk",
+    "resources": "Hesap makinesi, elektrik tarifesi (örn. 0,30 €/kWh), su tarifesi (örn. 0,002 €/l), bir bulaşık makinesi için AB enerji etiketi (evden veya üreticinin web sitesinden).",
+    "intro": "Modern bir bulaşık makinesi, elde yıkamadan daha az su kullanabilir — ancak bu yalnızca doğru şekilde doldurulur ve doğru programda çalıştırılırsa geçerlidir. 70 °C'lik yoğun bir program ile eko program arasındaki seçim, elektrik faturanız ve su kullanımınız üzerinde önemli bir fark yaratabilir. Bu çalışma yaprağında bu farklılıkları inceleyecek ve her programın ne zaman mantıklı olduğuna karar vereceksiniz.",
+    "theory": {
+      "title": "Teori",
+      "intro": "Bulaşık makinesi, enerjisinin çoğunu suyu ısıtmak için kullanır. Ayrıca kurutma döngüsü (ısıtıcı eleman) için de az miktarda enerji kullanır.",
+      "formulaTitle": "Su ısıtması için temel formül",
+      "formulaNote": "Basitleştirilmiş: Her 10 °C sıcaklık artışı için litre başına ~0,05 kWh.",
+      "intensive": {
+        "label": "Yoğun program (70 °C):",
+        "body": "Daha fazla su (18–20 l) ve daha fazla elektrik (1,5–2,0 kWh) kullanır — tencereler ve çok kirli bulaşıklar için tasarlanmıştır."
+      },
+      "auto": {
+        "label": "Otomatik program:",
+        "body": "Sensörler sıcaklığı ve süreyi ayarlar — kullanışlıdır ancak genellikle Eko'dan daha az verimlidir."
+      },
+      "eco": {
+        "label": "Eko program (50 °C):",
+        "body": "Uzun döngü (3–4 saat) ancak daha düşük sıcaklık. Tipik: 0,8–1,0 kWh, 10–12 l su."
+      },
+      "hand": {
+        "label": "Elde yıkama karşılaştırması:",
+        "body": "Akan bir musluk dakikada 6–12 l su kullanır. Musluk yarı açıkken 10 dakika boyunca bulaşık yıkamak = 60–120 l — bir bulaşık makinesinden çok daha fazla."
+      },
+      "label": {
+        "label": "Eko etiket:",
+        "body": "2021'den bu yana, bulaşık makineleri A'dan (en iyi) G'ye kadar değişen derecelere sahip bir AB enerji etiketi taşımaktadır. Etiket şunları gösterir: döngü başına enerji (kWh), döngü başına su (l), gürültü seviyesi (dB) ve program süresi."
+      },
+      "half": {
+        "label": "Yarım yük:",
+        "body": "Makineyi yarım doldurarak çalıştırmak enerji ve su israfına neden olur. Yarım yük ayarı tipik olarak her ikisinde de %20–30 tasarruf sağlar. Aksi takdirde, makinenin tam dolmasını beklemek daha verimlidir."
+      },
+      "videos": "Bulaşık makinelerinin nasıl çalıştığına ve hızlı ile eko döngüler arasındaki farka giriş için önerilen videolar:",
+      "video1": "Bir Bulaşık Makinesi Gerçekte Nasıl Çalışır?",
+      "video2": "Bulaşık Makinesi Eko Ayarı Açıklandı"
+    },
+    "example": {
+      "title": "Çözümlü örnek",
+      "intro": "Bir evde bulaşık makinesi yılda 250 kez çalıştırılıyor.",
+      "intensive": "Yoğun program:",
+      "eco": "Eko program:",
+      "saving": "Döngü başına tasarruf:",
+      "annual": "Yıllık tasarruf:"
+    },
+    "act1": {
+      "sub": "Bulaşık makinesi programlarını karşılaştırın",
+      "colProg": "Program",
+      "colTemp": "Su sıc.",
+      "colEnergy": "Döngü başına enerji (kWh)",
+      "colWater": "Döngü başına su (l)",
+      "rowInt": "Yoğun (70 °C)",
+      "rowAuto": "Otomatik",
+      "rowEco": "Eko (50 °C)",
+      "rowRinse": "Sadece durulama (ısı yok)",
+      "rowYours": "Makinenizin eko ayarı",
+      "tariffs": "Elektrik: 0,30 €/kWh · Su: 0,003 €/L.",
+      "q1": "Evinizde bulaşık makinesi yılda kaç kez çalıştırılıyor? ____ döngü/yıl.",
+      "q2": "Kullanım sıklığınıza göre her program için yıllık maliyeti hesaplayın.",
+      "q3": "Yoğun yerine Eko kullanılarak yılda ne kadar para tasarrufu sağlanır?",
+      "q4": "Kullanım sıklığınızda yılda ne kadar su (litre cinsinden) tasarruf edilir?",
+      "q5": "Eko programı neden 3 saatten fazla sürüyor? İpucu: ısıtma hızı ve yalıtımı düşünün."
+    },
+    "act2": {
+      "sub": "Bulaşık makinesine karşı elde yıkama",
+      "intro": "Bir kişi musluk 8 l/dk akarken 12 dakika boyunca elde bulaşık yıkıyor. Su elektrikli bir boyler ile ısıtılıyor (10 °C'den 40 °C'ye ısıtmak için 0,05 kWh/l).",
+      "q1": "Elde yıkama için kullanılan toplam suyu hesaplayın.",
+      "q2": "Bu suyu ısıtmak için gereken enerjiyi (kWh) hesaplayın.",
+      "q3": "Elde yıkama için toplam maliyeti hesaplayın (su + elektrik).",
+      "q4": "Etkinlik 1'deki Eko programı maliyeti ile karşılaştırın. Hangisi daha ucuz?",
+      "q5": "Hangi tür yıkama yükleri için yoğun program haklı görülebilir? İki gerçek örnek verin.",
+      "q6": "Okul kantini okul günü başına (160 gün/yıl) yoğun programda 10 bulaşık makinesi döngüsü çalıştırıyorsa, yıllık enerji maliyetini hesaplayın. Ardından Eko'ya geçerlerse yeniden hesaplayın. Yıllık tasarruf ne kadardır?",
+      "q7": "Bir bulaşık makinesi için AB enerji etiketi bulun. A ve E dereceleri arasındaki yıllık enerji (kWh/yıl) farkı nedir?"
+    },
+    "act3": {
+      "sub": "Karbon ve su ayak izi",
+      "q1": "365 yoğun döngüden kaynaklanan CO₂ emisyonlarını hesaplayın (0,27 kg CO₂/kWh kullanın).",
+      "q2": "Eko'ya geçmek yıllık karbon ayak izini kg CO₂ cinsinden nasıl azaltır?",
+      "q3": "Su maliyeti 0,003 €/l'dir. Bu tarifeyi kullanarak euro cinsinden yıllık su tasarrufunu yeniden hesaplayın. Eko için ekonomik argümanı değiştiriyor mu?"
+    },
+    "peer": {
+      "title": "Akrandan akrana ipucu",
+      "dykTitle": "💡 Biliyor muydunuz?",
+      "dykBody": "Sıyırın, durulamayın! Modern bulaşık makineleri ön durulama gerektirmez.",
+      "q1": "Ön durulama suyu ve enerjiyi nasıl israf eder?"
+    },
+    "reflection": {
+      "title": "Düşünme",
+      "prompt": "Elde yıkama ne zaman bir bulaşık makinesinden daha verimli olur? Etkinlik 2'deki hesaplamalarınıza atıfta bulunarak kendi kelimelerinizle açıklayın."
+    },
+    "ee": {
+      "title": "Elektrik elektronik öğrencileri için ek görevler"
+    },
+    "ee1": {
+      "sub": "Bulaşık makinesinin blok diyagramı",
+      "intro": "Şunları gösteren bir blok diyagram çizin: kontrol kartı, ısıtıcı eleman, sirkülasyon pompası, tahliye pompası, NTC termistörü, kapı kilidi anahtarı, deterjan dağıtıcısı ve taşma koruma sensörü. Tipik güç değerlerini belirtin."
+    },
+    "ee2": {
+      "sub": "BLDC motorlar",
+      "intro": "Modern bulaşık makineleri, sirkülasyon pompası için BLDC (fırçasız DC) motorlar kullanır. Üniversal motorlara göre BLDC'nin üç avantajını listeleyin. Neden daha pahalıdırlar?"
+    },
+    "ee3": {
+      "sub": "Su sıcaklığı düzenlemesi",
+      "intro": "Bulaşık makinesinde su sıcaklığı nasıl düzenlenir? Kontrol döngüsünü açıklayın."
+    },
+    "ee4": {
+      "sub": "Güvenlik cihazları",
+      "intro": "Bir bulaşık makinesindeki üç güvenlik cihazını listeleyin ve her birinin rolünü kısaca açıklayın."
+    },
+    "ee5": {
+      "sub": "NTC termistör gerilim bölücü",
+      "intro": "Bir NTC termistörünün 25 °C'de direnci 10 kΩ ve 60 °C'de direnci 2 kΩ'dur. 5 V beslemeli ve 10 kΩ sabit dirençli bir gerilim bölücüde kullanılır. 25 °C ve 60 °C'deki çıkış gerilimini hesaplayın. Kontrol kartı bu sinyali nasıl kullanır?"
+    }
+  }
+}
+}

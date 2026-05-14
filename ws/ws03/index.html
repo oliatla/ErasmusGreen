@@ -620,8 +620,8 @@ ol.video-list li {
      TOOLBAR
 ============================================================ -->
 <div class="toolbar">
-  <a href="../../index.html" class="back-btn" data-i18n="ui.back">← Til baka</a>
-  <span class="label" data-i18n="ui.language">Tungumál:</span>
+  <a href="../../index.html" class="back-btn" data-i18n="ui.back">← Back</a>
+  <span class="label" data-i18n="ui.language">Language:</span>
   <div class="flags" role="group" aria-label="Tungumál">
     <button class="flag-btn" data-lang="is" aria-pressed="false" title="Íslenska"><img src="../../img/flags/is.svg" alt="is"></button>
     <button class="flag-btn" data-lang="en" aria-pressed="true" title="English"><img src="../../img/flags/en.svg" alt="en"></button>
@@ -633,8 +633,8 @@ ol.video-list li {
 
   <div class="spacer"></div>
 
-  <button class="bw-toggle" aria-pressed="false" data-i18n="ui.bwToggle">B/W útlit</button>
-  <button class="print-btn" onclick="window.print()" data-i18n="ui.print">🖨 Prenta</button>
+  <button class="bw-toggle" aria-pressed="false" data-i18n="ui.bwToggle">B/W view</button>
+  <button class="print-btn" onclick="window.print()" data-i18n="ui.print">🖨 Print</button>
 </div>
 
 
@@ -1053,37 +1053,77 @@ ol.video-list li {
 </section>
 
 <script>
-/* Translation dictionary — will be loaded from lang/{lang}.json once i18n is wired up.
-   For now the HTML displays English; data-i18n attributes mark which keys map to
-   which text, ready for translators. */
-const TRANSLATIONS = {
-  en: {} // English is the hard-coded baseline — no overrides needed
-};
+/* ============================================================
+   Worksheet i18n — fetches lang/{lang}.json on flag click,
+   applies nested-path translations to all [data-i18n] elements.
+   The default text in the HTML is the fallback (baseline language).
+============================================================ */
+(function () {
+  const FALLBACK = 'en';
+  const cache = {};
 
-function applyLang(lang) {
-  const dict = TRANSLATIONS[lang] || {};
-  document.documentElement.lang = lang;
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
-    if (dict[key] !== undefined) el.textContent = dict[key];
+  async function loadLang(lang) {
+    if (cache[lang] !== undefined) return cache[lang];
+    try {
+      const res = await fetch('lang/' + lang + '.json', { cache: 'no-cache' });
+      if (!res.ok) throw new Error('not found');
+      const data = await res.json();
+      cache[lang] = data;
+      return data;
+    } catch (err) {
+      cache[lang] = null;
+      return null;
+    }
+  }
+
+  function getNested(obj, path) {
+    if (!obj) return undefined;
+    return path.split('.').reduce(
+      (acc, key) => (acc && typeof acc === 'object' ? acc[key] : undefined),
+      obj
+    );
+  }
+
+  async function applyLang(lang) {
+    let dict = await loadLang(lang);
+    if (!dict && lang !== FALLBACK) dict = await loadLang(FALLBACK);
+
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const val = getNested(dict, key);
+      if (typeof val === 'string') el.textContent = val;
+      /* if val is missing, leave the HTML text (baseline language) intact */
+    });
+
+    document.querySelectorAll('.flag-btn').forEach(btn => {
+      const isActive = btn.getAttribute('data-lang') === lang;
+      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+
+    try { localStorage.setItem('green-ws-lang', lang); } catch (e) {}
+  }
+
+  /* wire up flag buttons */
+  document.querySelectorAll('.flag-btn').forEach(btn => {
+    btn.addEventListener('click', () => applyLang(btn.getAttribute('data-lang')));
   });
-  document.querySelectorAll(".flag-btn").forEach(btn => {
-    btn.setAttribute("aria-pressed", btn.getAttribute("data-lang") === lang ? "true" : "false");
-  });
-}
 
-document.querySelectorAll(".flag-btn").forEach(btn => {
-  btn.addEventListener("click", () => applyLang(btn.getAttribute("data-lang")));
-});
+  /* B/W toggle */
+  const bwBtn = document.querySelector('.bw-toggle');
+  if (bwBtn) {
+    bwBtn.addEventListener('click', () => {
+      const on = document.body.classList.toggle('bw-mode');
+      bwBtn.setAttribute('aria-pressed', on);
+    });
+  }
 
-/* B/W toggle */
-const bwBtn = document.querySelector(".bw-toggle");
-bwBtn.addEventListener("click", () => {
-  const on = document.body.classList.toggle("bw-mode");
-  bwBtn.setAttribute("aria-pressed", on);
-});
-
-applyLang("en");
+  /* initial language: saved preference, else <html lang>, else fallback */
+  let initial = FALLBACK;
+  try { initial = localStorage.getItem('green-ws-lang') || document.documentElement.lang || FALLBACK; }
+  catch (e) { initial = document.documentElement.lang || FALLBACK; }
+  applyLang(initial);
+})();
 </script>
 
 </body>

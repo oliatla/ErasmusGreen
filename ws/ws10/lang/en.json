@@ -1,0 +1,142 @@
+{
+  "_README": {
+    "purpose": "Translation reference for ws10.",
+    "language": "Default language: en.",
+    "instructions": "Copy this file as {lang}.json and translate the values. Keys (the left-hand side) must NEVER change — they map to data-i18n attributes in index.html."
+  },
+  "ui": {
+    "back": "← Back",
+    "language": "Language:",
+    "bwToggle": "B/W view",
+    "print": "🖨 Print",
+    "level": "Level:",
+    "topic": "Topic",
+    "learningOutcomes": "Learning outcomes",
+    "timeNeeded": "Time needed",
+    "resources": "Resources needed",
+    "introduction": "Introduction",
+    "projectLine": "Project № 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.",
+    "page": "Page",
+    "of": "of",
+    "activity": "Student activity"
+  },
+  "w10": {
+    "worksheet": "Worksheet 10",
+    "title": "Energy efficiency of personal care appliances — hair dryers",
+    "level": "MEDIUM",
+    "topic": "Energy efficiency of personal care appliances: hair dryers",
+    "lo": {
+      "tech": {
+        "body": "Students can explain how hair dryers and similar personal care appliances consume energy and heat air."
+      },
+      "math": {
+        "body": "Students calculate annual electricity costs and usage costs using realistic scenarios."
+      },
+      "env": {
+        "body": "Students compare energy consumption across different heat and speed settings."
+      },
+      "green": {
+        "body": "Students identify energy-saving habits when using personal care appliances and evaluate their environmental impact."
+      }
+    },
+    "time": "60 min",
+    "resources": "Calculator, electricity tariff (e.g. €0.30/kWh), EU energy label for a hair dryer (from packaging or manufacturer website), stopwatch or timer (phone app).",
+    "intro": "A hair dryer is one of the most power-hungry appliances in a typical bathroom — most models draw between 1000 and 2400 W, comparable to a small electric heater. Unlike a refrigerator that runs continuously, a hair dryer is used in short bursts, but those bursts add up. Understanding how heat settings, usage time, and frequency affect electricity bills helps you make smarter daily choices. In this worksheet you will explore the energy consumption of hair dryers, compare different usage patterns, and calculate real annual costs.",
+    "theory": {
+      "title": "Theory",
+      "dykTitle": "💡 Did you know?",
+      "dykBody": "Air-drying uses 0 kWh. A hair dryer converts almost all its electricity into heat — there is very little mechanical loss.",
+      "hi": {
+        "label": "High heat (2000–2400 W):",
+        "body": "dries hair quickly (5–10 min) but draws high power — good for thick or long hair."
+      },
+      "lo": {
+        "label": "Low heat (800–1200 W):",
+        "body": "takes longer (10–18 min) but uses less energy per minute — better for fine or damaged hair."
+      },
+      "cool": {
+        "label": "Cool shot (50–100 W):",
+        "body": "uses minimal energy. Sets the hair style and closes the cuticle. Very energy efficient."
+      },
+      "ionic": {
+        "label": "Ionic technology:",
+        "body": "ionic hair dryers break water droplets into smaller particles, reducing drying time by up to 30 %, which saves energy overall."
+      },
+      "attach": {
+        "label": "Diffuser vs. concentrator:",
+        "body": "attachments do not change power draw but affect airflow direction and drying time."
+      },
+      "eulabel": {
+        "label": "EU Energy Label:",
+        "body": "since 2021, personal care appliances with heating elements over 100 W in the EU must display power consumption information. Look on the box or manufacturer’s website."
+      },
+      "cmp": {
+        "label": "Comparison:",
+        "body": "a phone charger uses ~5–15 W. Running a 2000 W hair dryer for 10 minutes uses the same energy as charging a phone for more than 20 hours."
+      },
+      "videos": "Introductory videos"
+    },
+    "worked": {
+      "title": "Worked example",
+      "setup": "A person uses a 1800 W hair dryer for 8 minutes every day:",
+      "l1": "Daily energy: 1.8 kW × (8/60) h = 0.24 kWh",
+      "l2": "Annual energy: 0.24 × 365 = 87.6 kWh/year",
+      "l3": "Annual cost: 87.6 × €0.30 = €26.28/year",
+      "l4": "If they switch to a 1200 W ionic dryer and reduce drying time to 6 minutes:",
+      "l5": "New daily energy: 1.2 kW × (6/60) h = 0.12 kWh",
+      "l6": "New annual energy: 0.12 × 365 = 43.8 kWh/year",
+      "l7": "Annual saving: (87.6 − 43.8) × €0.30 = €13.14/year"
+    },
+    "act1": {
+      "sub": "Compare hair dryer settings",
+      "colSet": "Setting",
+      "colPower": "Power (W)",
+      "colTime": "Time (min)",
+      "colUses": "Uses/year",
+      "r1": "High heat",
+      "r2": "Low heat",
+      "r3": "Cool shot only",
+      "r4": "Your dryer’s eco mode",
+      "tariff": "Electricity tariff: €0.30/kWh.",
+      "minQ": "How many minutes do you use a hair dryer per session?",
+      "q1": "Calculate the annual energy (kWh) for each setting at the given usage frequency.",
+      "q2": "Calculate the annual cost (€) for each setting.",
+      "q3": "How much money is saved per year by using Low heat instead of High heat?",
+      "q4": "How much CO₂ is saved per year (use 0.27 kg CO₂/kWh)?",
+      "q5": "Why does the Low heat setting take longer to dry hair? (Hint: think about the rate of heat transfer and moisture evaporation.)"
+    },
+    "act2": {
+      "sub": "Hair dryer vs. air drying",
+      "intro": "A person air-dries their hair 50 % of the time and uses the dryer (2200 W, 7 min) the other 50 %, out of 300 sessions per year.",
+      "q1": "Calculate total energy with partial air drying.",
+      "q2": "Calculate total energy if they use the dryer every session, and the cost difference.",
+      "q3": "For what hair types or situations is air drying not practical? Give two examples."
+    },
+    "act3": {
+      "sub": "Carbon footprint & salon scenario",
+      "q1": "A hair salon uses a 2400 W professional dryer for 45 min per client, 8 clients per day, 250 working days per year. Calculate annual energy cost. Then recalculate if they upgrade to a 1600 W ionic dryer reducing time to 35 min. What is the annual saving?",
+      "q2": "Calculate the CO₂ emissions from 300 sessions using a 2200 W dryer for 7 minutes each (use 0.27 kg CO₂/kWh).",
+      "q3": "A household has two people, each using the dryer 300 times per year. How does using Low heat for both people affect the household’s annual bill and CO₂ output?",
+      "q4": "Find the power rating label on your hair dryer (or manufacturer’s website). Compare it to the values in Activity 1. Is your dryer above or below average?"
+    },
+    "peer": {
+      "title": "Peer-to-peer tip",
+      "dykTitle": "💡 Did you know?",
+      "dykBody": "Towel-dry first! Removing excess water with a towel before using the dryer can cut drying time by 30–50 %, significantly reducing energy use."
+    },
+    "reflection": {
+      "title": "Reflection",
+      "prompt": "When would air drying be more efficient than using a hair dryer?"
+    },
+    "ee": {
+      "title": "Additional tasks — for electrical engineering students",
+      "intro": "These additional questions are aimed at students enrolled in electrical or electronic engineering programmes.",
+      "q1": "Draw a block diagram of a hair dryer showing heating element (nichrome wire), fan motor, thermal cutout (TCO), cool shot valve, selector switch, rectifier (for ionic models), and power cord. Indicate typical power ratings for each component.",
+      "q2": "Modern ionic hair dryers include a DC high-voltage generator (~4 kV) to ionise air. Explain how negative ions help reduce drying time and static electricity.",
+      "q3": "How is overheating prevented in a hair dryer? Explain the role of the Thermal Cut-Out (TCO) device and NTC thermistor.",
+      "q4": "List three safety devices in a hair dryer and explain the purpose of each.",
+      "q5": "A nichrome heating coil has a resistance of 20 Ω at 20 °C and a temperature coefficient α = 0.0004 /°C. Calculate its resistance at 350 °C. If connected to a 230 V supply, what is the power dissipated at 350 °C?"
+    }
+  }
+}

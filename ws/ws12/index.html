@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Worksheet 05 — What is inside a light bulb?</title>
+<title>Worksheet 12 — Floor care: traditional vacuum vs. robot vacuum</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -783,6 +783,91 @@ ol.steps-list li::before {
   color: var(--green-dark);
 }
 
+
+/* =================================================================
+   AUDIT INPUT GRID — paired Week/Month/Year value cells
+   (used for "Week: ___ kWh    Week: ___ EUR" style rows)
+   ================================================================= */
+.audit-grid {
+  display: grid;
+  grid-template-columns: 18mm 24mm 14mm 18mm 24mm 14mm;
+  gap: 2mm 3mm;
+  align-items: baseline;
+  margin: 2.5mm 0 3mm 5mm;
+  font-size: 10.5pt;
+  max-width: 130mm;
+}
+.audit-grid .label { font-weight: 600; }
+.audit-grid .blank-cell {
+  border-bottom: .5pt solid var(--ink);
+  height: 4mm;
+}
+.audit-grid .unit  { color: var(--ink-soft); font-size: 9.5pt; }
+
+/* Inline blank (no border-bottom needed, for inline text like "____ W") */
+.inline-blank {
+  display: inline-block;
+  min-width: 20mm;
+  border-bottom: .5pt solid var(--ink);
+  height: 1em;
+  vertical-align: -1mm;
+  margin: 0 1mm;
+}
+
+/* Section-letter heading (A Lighting & Energy Consumption, B Water Usage, etc.) */
+.section-letter {
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+  font-size: 12.5pt;
+  color: var(--green-dark);
+  margin: 4mm 0 2mm;
+  border-bottom: .5pt solid var(--green-mid);
+  padding-bottom: 1mm;
+}
+.section-letter .letter {
+  display: inline-block;
+  background: var(--green-mid);
+  color: white;
+  padding: 0 2.5mm;
+  margin-right: 2.5mm;
+  border-radius: 2mm;
+  font-weight: 900;
+}
+body.bw-mode .section-letter .letter {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Subtask label (A1, A2, B1, etc.) */
+.subtask-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 11pt;
+  color: var(--green-dark);
+  margin: 3.5mm 0 1.5mm;
+}
+
+/* Pillared multi-bullet list inside Peer-to-peer Did-you-know box */
+ul.dyk-list {
+  list-style: none;
+  margin: 1mm 0 0;
+  padding: 0;
+}
+ul.dyk-list li {
+  position: relative;
+  padding-left: 6mm;
+  margin: 0 0 2.5mm;
+  font-size: 10pt;
+  line-height: 1.5;
+}
+ul.dyk-list li::before {
+  content: "💡";
+  position: absolute;
+  left: 0;
+  font-size: 9pt;
+}
+body.bw-mode ul.dyk-list li::before { content: "●"; color: var(--ink); }
+
 /* ===== PRINT ===== */
 @page { size: A4; margin: 0; }
 @media print {
@@ -833,7 +918,7 @@ ol.steps-list li::before {
 
 
 <!-- ============================================================
-     PAGE 1 — Title, structural table, Introduction, Theory
+     PAGE 1
 ============================================================ -->
 <section class="page" data-page="1">
 
@@ -847,58 +932,36 @@ ol.steps-list li::before {
     </div>
   </div>
 
-  <h1 data-i18n="w05.worksheet">Worksheet 05</h1>
-  <div class="subtitle" data-i18n="w05.title">What is inside a light bulb?</div>
-  <div class="level"><span data-i18n="ui.level">Level:</span> <strong data-i18n="w05.level">BASIC</strong></div>
+  <h1 data-i18n="w12.worksheet">Worksheet 12</h1>
+  <div class="subtitle" data-i18n="w12.title">Floor care — traditional vacuum vs. robot vacuum</div>
+  <div class="level"><span data-i18n="ui.level">Level:</span> <strong data-i18n="w12.level">ADVANCED</strong></div>
 
   <table class="struct">
     <tbody>
-      <tr>
-        <th data-i18n="ui.topic">Topic</th>
-        <td colspan="3" data-i18n="w05.topic">What is inside a light bulb?</td>
-      </tr>
-      <tr>
-        <th data-i18n="ui.learningOutcomes">Learning outcomes</th>
-        <td colspan="3">
-          <ul>
-            <li data-i18n="w05.lo1">Recognise the four main types of household light bulbs.</li>
-            <li data-i18n="w05.lo2">Identify the wattage and lifetime of common bulb types.</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <th data-i18n="ui.timeNeeded">Time needed</th>
-        <td colspan="3" data-i18n="w05.time">60 min</td>
-      </tr>
-      <tr>
-        <th data-i18n="ui.resources">Resources needed</th>
-        <td colspan="3" data-i18n="w05.resources">Bulb information table (in this worksheet); access to one or more real bulbs if available.</td>
-      </tr>
+      <tr><th data-i18n="ui.topic">Topic</th>
+          <td colspan="3" data-i18n="w12.topic">Floor care — traditional vacuum vs. robot vacuum</td></tr>
+      <tr><th data-i18n="ui.learningOutcomes">Learning outcomes</th>
+          <td colspan="3"><ul>
+            <li><strong data-i18n="w12.lo.tech">Technical knowledge:</strong> <span data-i18n="w12.lo.tech.body">Students compare energy consumption, cleaning effectiveness, and convenience of different vacuum types.</span></li>
+            <li><strong data-i18n="w12.lo.math">Mathematical skills:</strong> <span data-i18n="w12.lo.math.body">Students calculate annual energy costs and lifecycle costs including purchase price and replacement parts.</span></li>
+            <li><strong data-i18n="w12.lo.env">Environmental awareness:</strong> <span data-i18n="w12.lo.env.body">Students understand that &ldquo;convenience&rdquo; can increase energy use if devices run unnecessarily.</span></li>
+            <li><strong data-i18n="w12.lo.green">Green skills:</strong> <span data-i18n="w12.lo.green.body">Students evaluate the trade-offs between cleaning performance and energy use.</span></li>
+          </ul></td></tr>
+      <tr><th data-i18n="ui.timeNeeded">Time needed</th><td colspan="3" data-i18n="w12.time">60 min</td></tr>
+      <tr><th data-i18n="ui.resources">Resources needed</th>
+          <td colspan="3" data-i18n="w12.resources">Calculator, electricity tariff (e.g. €0.30/kWh), product specifications from manufacturer websites or appliance labels.</td></tr>
     </tbody>
   </table>
 
   <h2 class="section" data-i18n="ui.introduction">Introduction</h2>
-
-  <p class="body" data-i18n="w05.intro">
-    Not all light bulbs are the same. Some get hot, some last for years, and some use much less electricity. In this worksheet you will look at four common types of bulbs and learn the basic differences between them.
-  </p>
-
-  <h2 class="section" data-i18n="w05.theory.title">Theory</h2>
-
-  <p class="body" data-i18n="w05.theory.intro1">
-    Every light bulb does the same job: it turns electricity into light. But not all bulbs do that equally well. Some bulbs waste a lot of electricity by also turning it into heat. That is why an old-fashioned bulb feels hot after only a minute, while an LED stays cool.
-  </p>
-
-  <p class="body" data-i18n="w05.theory.intro2">
-    There are four bulb types you will see most often at home and at school. They all use the same electrical socket but they work in completely different ways inside.
-  </p>
+  <p class="body" data-i18n="w12.intro">Keeping floors clean is a daily or weekly household task. The choice of vacuum cleaner has changed dramatically — where once only corded upright or cylinder machines existed, robotic vacuums now navigate rooms autonomously. But which option uses more energy? The answer depends not only on the motor power but also on how often and how long the device runs. In this worksheet you will calculate and compare the true energy cost of floor care.</p>
 
   <div class="r-footer">
     <div class="footer-left">
       <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
       <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
     </div>
-    <div class="pageno"><span data-i18n="ui.page">Page</span> 1 <span data-i18n="ui.of">of</span> 4</div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 1 <span data-i18n="ui.of">of</span> 7</div>
   </div>
 </section>
 
@@ -915,61 +978,36 @@ ol.steps-list li::before {
     </div>
   </div>
 
-  <h3 class="sub-heading" data-i18n="w05.theory.bulbsTitle">The four bulb types</h3>
+  <h2 class="section" data-i18n="w12.theory.title">Theory</h2>
 
   <ul class="theory-list">
-    <li><strong data-i18n="w05.theory.inc.label">INCANDESCENT bulbs (the oldest type)</strong> <span data-i18n="w05.theory.inc.body">have a thin metal wire inside. When electricity flows through the wire it gets so hot that it glows white. Most of the energy actually becomes heat, not light. These bulbs are no longer sold in most EU countries.</span></li>
-    <li><strong data-i18n="w05.theory.hal.label">HALOGEN bulbs</strong> <span data-i18n="w05.theory.hal.body">are an improved version of the incandescent bulb. They contain a small amount of halogen gas which makes the wire last a bit longer and burn slightly brighter. Still mostly heat though.</span></li>
-    <li><strong data-i18n="w05.theory.cfl.label">COMPACT FLUORESCENT (CFL) bulbs</strong> <span data-i18n="w05.theory.cfl.body">use a folded glass tube filled with gas. Electricity makes the gas glow. They use much less electricity than incandescent bulbs but contain a tiny amount of mercury, so they need to be recycled carefully.</span></li>
-    <li><strong data-i18n="w05.theory.led.label">LED bulbs (Light Emitting Diode)</strong> <span data-i18n="w05.theory.led.body">use a small electronic component that produces light directly when electricity flows through it. They are the most efficient: they convert almost all the electricity into light, and very little into heat. They also last 25 times longer than an incandescent bulb.</span></li>
+    <li><strong data-i18n="w12.theory.trad.label">Traditional vacuum cleaners:</strong> <span data-i18n="w12.theory.trad.body">use a motor of typically 700–2400 W for corded models. Since 2014, EU Regulation (EU) No 666/2013 has capped rated power at <strong>900 W</strong>. Higher wattage does not necessarily mean better suction — filter condition and nozzle design matter more. A typical cleaning session lasts 30–60 minutes.</span></li>
+    <li><strong data-i18n="w12.theory.robot.label">Robotic vacuums:</strong> <span data-i18n="w12.theory.robot.body">use a much smaller motor, typically 20–100 W, but run for longer sessions (60–150 minutes) and often run <em>daily</em> rather than weekly. They also draw power when docked for charging (typically 3–25 W standby). Some models run at night.</span></li>
+    <li><strong data-i18n="w12.theory.freq.label">Cleaning frequency</strong> <span data-i18n="w12.theory.freq.body">matters enormously for energy totals. A traditional vacuum used once a week uses far less energy per year than a robotic vacuum running every day, even if its power is lower.</span></li>
   </ul>
 
-  <div class="box-tip no-break">
-    <h3 data-i18n="w05.worked.title">Worked example — How do you read the bulb information table?</h3>
-    <ol class="steps-list">
-      <li data-i18n="w05.worked.s1">Look at the row <em>Lifetime</em>. The number tells you how many <strong>hours</strong> the bulb works before it needs to be replaced.</li>
-      <li data-i18n="w05.worked.s2">Example: an LED bulb has a lifetime of 25,000 hours. If you use it 5 hours per day, that is 25,000 ÷ 5 = 5,000 days, which is about <strong>13 years</strong>.</li>
-      <li data-i18n="w05.worked.s3">Look at the row <em>Wattage</em>. This tells you how much <strong>electricity</strong> the bulb uses each second it is on. A higher wattage means more electricity.</li>
-      <li data-i18n="w05.worked.s4">Example: an incandescent bulb of 60 W uses <strong>5 times more electricity</strong> than an LED of 12 W to give the same amount of light.</li>
-    </ol>
-  </div>
+  <h3 class="sub-heading" data-i18n="w12.theory.label">EU energy labels for vacuum cleaners show:</h3>
+  <ul class="compact-list">
+    <li data-i18n="w12.theory.label1">rated power (W),</li>
+    <li data-i18n="w12.theory.label2">annual energy use (kWh, based on 50 cleaning cycles per year),</li>
+    <li data-i18n="w12.theory.label3">dust re-emission class,</li>
+    <li data-i18n="w12.theory.label4">noise level (dB),</li>
+    <li data-i18n="w12.theory.label5">cleaning performance on carpet and hard floors.</li>
+  </ul>
 
-  <h3 class="sub-heading" data-i18n="w05.terms.title">Key terms</h3>
-
-  <table class="terms no-break">
-    <thead>
-      <tr><th data-i18n="w05.terms.colTerm">Term</th><th data-i18n="w05.terms.colDef">Definition</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-i18n="w05.terms.t1term">Bulb</td>
-        <td data-i18n="w05.terms.t1def">A light source that screws or clicks into a lamp.</td>
-      </tr>
-      <tr>
-        <td data-i18n="w05.terms.t2term">Lifetime</td>
-        <td data-i18n="w05.terms.t2def">The number of hours a bulb works before it stops working.</td>
-      </tr>
-      <tr>
-        <td data-i18n="w05.terms.t3term">Wattage (W)</td>
-        <td data-i18n="w05.terms.t3def">How much electricity the bulb uses.</td>
-      </tr>
-      <tr>
-        <td data-i18n="w05.terms.t4term">Lumens (lm)</td>
-        <td data-i18n="w05.terms.t4def">How much light the bulb produces (more lumens = brighter).</td>
-      </tr>
-      <tr>
-        <td data-i18n="w05.terms.t5term">LED</td>
-        <td data-i18n="w05.terms.t5def">Light Emitting Diode — the most efficient bulb type today.</td>
-      </tr>
-    </tbody>
-  </table>
+  <h3 class="sub-heading" data-i18n="w12.theory.videos">Introductory videos</h3>
+  <ul class="video-list">
+    <li><a href="https://www.youtube.com/results?search_query=how+vacuum+cleaners+work" target="_blank" rel="noopener">How vacuum cleaners work</a></li>
+    <li><a href="https://www.youtube.com/results?search_query=how+robotic+vacuums+work" target="_blank" rel="noopener">How robotic vacuums work</a></li>
+    <li><a href="https://www.youtube.com/results?search_query=best+vacuum+cleaner+home+2026" target="_blank" rel="noopener">Best vacuum cleaner for home 2026</a></li>
+  </ul>
 
   <div class="r-footer">
     <div class="footer-left">
       <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
       <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
     </div>
-    <div class="pageno"><span data-i18n="ui.page">Page</span> 2 <span data-i18n="ui.of">of</span> 4</div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 2 <span data-i18n="ui.of">of</span> 7</div>
   </div>
 </section>
 
@@ -986,56 +1024,46 @@ ol.steps-list li::before {
     </div>
   </div>
 
+  <div class="box-tip no-break">
+    <h3 data-i18n="w12.worked.title">Worked example</h3>
+    <p data-i18n="w12.worked.tradTitle"><strong>Traditional vacuum:</strong> 900 W, 45 min per session, once a week = 52 sessions/year.</p>
+    <ul class="compact-list">
+      <li data-i18n="w12.worked.tradL1"><strong>Annual energy:</strong> 0.9 kW × 0.75 h × 52 = 35.1 kWh</li>
+    </ul>
+    <p data-i18n="w12.worked.robotTitle"><strong>Robotic vacuum:</strong> 35 W, runs 90 min/day, 7 days/week = 365 sessions/year. Standby: 8 W for 22.5 h/day.</p>
+    <ul class="compact-list">
+      <li data-i18n="w12.worked.robotL1"><strong>Run energy:</strong> 0.035 kW × 1.5 h × 365 = 19.2 kWh</li>
+      <li data-i18n="w12.worked.robotL2"><strong>Standby energy:</strong> 0.008 kW × 22.5 h × 365 = 65.7 kWh</li>
+      <li data-i18n="w12.worked.robotL3"><strong>Robotic total:</strong> 84.9 kWh — much more than the traditional vacuum!</li>
+    </ul>
+  </div>
+
   <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 1</h2>
-  <div class="activity-sub" data-i18n="w05.act1.sub">Recognising the four bulb types</div>
-  <p class="activity-intro" data-i18n="w05.act1.intro">Look at the four bulb types in the table below.</p>
+  <div class="activity-sub" data-i18n="w12.act1.sub">Data collection and comparison</div>
+  <p class="activity-intro" data-i18n="w12.act1.intro">Fill in values from appliance labels or manufacturer websites, or use the defaults provided.</p>
 
   <table class="power-table no-break">
     <thead>
-      <tr>
-        <th></th>
-        <th data-i18n="w05.act1.colInc">Incandescent</th>
-        <th data-i18n="w05.act1.colHal">Halogen</th>
-        <th data-i18n="w05.act1.colCfl">Compact fluorescent</th>
-        <th data-i18n="w05.act1.colLed">LED</th>
-      </tr>
+      <tr><th data-i18n="w12.act1.colApp">Appliance</th>
+          <th data-i18n="w12.act1.colPower">Motor power (W)</th>
+          <th data-i18n="w12.act1.colTime">Session length (min)</th>
+          <th data-i18n="w12.act1.colFreq">Sessions/week</th>
+          <th data-i18n="w12.act1.colStd">Standby (W)</th></tr>
     </thead>
     <tbody>
-      <tr>
-        <td data-i18n="w05.act1.rowLife"><strong>Lifetime</strong></td>
-        <td>1,000 h</td><td>3,000 h</td><td>10,000 h</td><td>25,000 h</td>
-      </tr>
-      <tr>
-        <td data-i18n="w05.act1.rowPrice"><strong>Price per bulb</strong></td>
-        <td>€0.50</td><td>€1.50</td><td>€1.50</td><td>€1.33</td>
-      </tr>
-      <tr>
-        <td data-i18n="w05.act1.rowWatt"><strong>Wattage</strong></td>
-        <td>60 W</td><td>43 W</td><td>13 W</td><td>12 W</td>
-      </tr>
+      <tr><td data-i18n="w12.act1.r1">Corded cylinder vacuum</td><td>900</td><td>45</td><td>1</td><td>0</td></tr>
+      <tr><td data-i18n="w12.act1.r2">Cordless stick vacuum</td><td>180</td><td>30</td><td>2</td><td>15 (charging)</td></tr>
+      <tr><td data-i18n="w12.act1.r3">Robotic vacuum (daily)</td><td>35</td><td>90</td><td>7</td><td>8 (docked, 22.5 h/day)</td></tr>
+      <tr><td data-i18n="w12.act1.r4">Your appliance</td><td></td><td></td><td></td><td></td></tr>
     </tbody>
   </table>
-
-  <div class="q">
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w05.act1.q1">Which bulb has the longest lifetime?</span></div>
-    <div class="write-line"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w05.act1.q2">Which bulb uses the most electricity (highest wattage)?</span></div>
-    <div class="write-line"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w05.act1.q3">Which bulb uses the least electricity (lowest wattage)?</span></div>
-    <div class="write-line"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w05.act1.q4">Which bulb is the cheapest to buy?</span></div>
-    <div class="write-line"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w05.act1.q5">All four bulbs give about the same amount of light (850 lumens). Which bulb would you choose for a room you use every day? Explain in one sentence why.</span></div>
-    <div class="write-line tall"></div>
-    <div class="write-line tall"></div>
-  </div>
 
   <div class="r-footer">
     <div class="footer-left">
       <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
       <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
     </div>
-    <div class="pageno"><span data-i18n="ui.page">Page</span> 3 <span data-i18n="ui.of">of</span> 4</div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 3 <span data-i18n="ui.of">of</span> 7</div>
   </div>
 </section>
 
@@ -1052,56 +1080,200 @@ ol.steps-list li::before {
     </div>
   </div>
 
-  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 2</h2>
-  <div class="activity-sub" data-i18n="w05.act2.sub">Match the bulb to the description</div>
-  <p class="activity-intro" data-i18n="w05.act2.intro">Write the matching letter (A, B, C or D) on the blank line next to each bulb type.</p>
+  <div class="q">
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w12.act1.q1">For each appliance, calculate the annual energy use in kWh (including standby energy for the robotic vacuum).</span></div>
+    <div class="workspace tall"></div>
 
-  <div class="match-choices no-break">
-    <ol type="A">
-      <li data-i18n="w05.act2.descA">Uses a coiled tube filled with gas; was popular before LEDs.</li>
-      <li data-i18n="w05.act2.descB">The newest technology; very low energy use and long life.</li>
-      <li data-i18n="w05.act2.descC">The oldest technology; a thin wire glows when electricity passes through.</li>
-      <li data-i18n="w05.act2.descD">An improved version of the incandescent; slightly more efficient.</li>
-    </ol>
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w12.act1.q2">Calculate the annual electricity cost (€) for each at €0.30/kWh. Which is most expensive to run?</span></div>
+    <div class="workspace"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w12.act1.q3">If the robotic vacuum ran only 4 days per week instead of 7, how much would the annual energy use change?</span></div>
+    <div class="workspace short"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w12.act1.q4">What type of battery is typically used (Li-ion, NiMH)? How many charge cycles before replacement? Calculate the annual cost of battery replacement.</span></div>
+    <div class="workspace"></div>
   </div>
 
-  <ul class="match-list">
-    <li>
-      <span class="item" data-i18n="w05.act2.itemInc">Incandescent bulb</span>
-      <span class="arrow">→</span>
-      <span><span class="blank"></span></span>
-    </li>
-    <li>
-      <span class="item" data-i18n="w05.act2.itemHal">Halogen bulb</span>
-      <span class="arrow">→</span>
-      <span><span class="blank"></span></span>
-    </li>
-    <li>
-      <span class="item" data-i18n="w05.act2.itemCfl">Compact fluorescent</span>
-      <span class="arrow">→</span>
-      <span><span class="blank"></span></span>
-    </li>
-    <li>
-      <span class="item" data-i18n="w05.act2.itemLed">LED</span>
-      <span class="arrow">→</span>
-      <span><span class="blank"></span></span>
-    </li>
-  </ul>
+  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 2</h2>
+  <div class="activity-sub" data-i18n="w12.act2.sub">Standby and vampire power</div>
+  <p class="activity-intro" data-i18n="w12.act2.intro"><strong>&ldquo;Vampire power&rdquo;</strong> or <strong>&ldquo;phantom load&rdquo;</strong> is electricity consumed by devices when not in active use — charging on a dock, waiting in standby, or displaying a status light.</p>
 
-  <h3 class="sub-heading" data-i18n="w05.reflection.title">Reflection</h3>
-  <p class="body" data-i18n="w05.reflection.prompt">Look at the bulbs in your home. How many of them are LED? If some are not, which ones would you replace first, and why?</p>
+  <div class="q">
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w12.act2.q1">Calculate the annual standby energy of the robotic vacuum (8 W × 22.5 h/day × 365 days). What percentage of its total annual energy is this?</span></div>
+    <div class="workspace"></div>
 
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w12.act2.q2">A smart power strip could cut standby to zero. How much money per year would this save? Is it worth paying €15 for the strip?</span></div>
+    <div class="workspace"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w12.act2.q3">Research: find two other household devices with significant standby consumption. Estimate their annual standby energy.</span></div>
+    <div class="write-line tall"></div>
+    <div class="write-line tall"></div>
+  </div>
 
   <div class="r-footer">
     <div class="footer-left">
       <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
       <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
     </div>
-    <div class="pageno"><span data-i18n="ui.page">Page</span> 4 <span data-i18n="ui.of">of</span> 4</div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 4 <span data-i18n="ui.of">of</span> 7</div>
+  </div>
+</section>
+
+
+<section class="page" data-page="5">
+
+  <div class="r-header">
+    <div class="logo-green">
+      <img src="../../img/greenlogo.png" alt="GREEN">
+      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
+    </div>
+    <div class="logo-eu">
+      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
+    </div>
+  </div>
+
+  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 3</h2>
+  <div class="activity-sub" data-i18n="w12.act3.sub">Lifecycle cost including purchase price</div>
+
+  <table class="power-table no-break">
+    <thead>
+      <tr><th data-i18n="w12.act3.colType">Vacuum type</th>
+          <th data-i18n="w12.act3.colPrice">Purchase price (€)</th>
+          <th data-i18n="w12.act3.colLife">Lifetime (years)</th>
+          <th data-i18n="w12.act3.colEnergy">Annual energy cost (€)</th>
+          <th data-i18n="w12.act3.colParts">Replacement parts (€/year)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td data-i18n="w12.act3.r1">Traditional</td><td>150</td><td>8</td><td></td><td></td></tr>
+      <tr><td data-i18n="w12.act3.r2">Robot</td><td>400</td><td>5</td><td></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <div class="q">
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w12.act3.q1">Calculate the 10-year total cost for each vacuum (purchase + energy + parts). Assume you buy a second robot after 5 years.</span></div>
+    <div class="workspace"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w12.act3.q2">Which is cheaper over 10 years?</span></div>
+    <div class="workspace short"></div>
+  </div>
+
+  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 4</h2>
+  <div class="activity-sub" data-i18n="w12.act4.sub">The carbon price of &ldquo;convenience&rdquo;</div>
+  <p class="activity-intro" data-i18n="w12.act4.intro">Traditional vacuum (900 W, 45 min weekly) vs. robot vacuum (35 W, 90 min daily + standby).</p>
+
+  <div class="q">
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w12.act4.q1">Calculate annual CO₂ emissions for both (0.27 kg CO₂/kWh). How many times more CO₂ does the robot vacuum emit?</span></div>
+    <div class="workspace"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w12.act4.q2">If the robot runs only 4 days instead of 7 per week, what is the annual saving in kg CO₂?</span></div>
+    <div class="workspace short"></div>
+  </div>
+
+  <div class="r-footer">
+    <div class="footer-left">
+      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
+      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
+    </div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 5 <span data-i18n="ui.of">of</span> 7</div>
+  </div>
+</section>
+
+
+<section class="page" data-page="6">
+
+  <div class="r-header">
+    <div class="logo-green">
+      <img src="../../img/greenlogo.png" alt="GREEN">
+      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
+    </div>
+    <div class="logo-eu">
+      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
+    </div>
+  </div>
+
+  <h2 class="section" data-i18n="w12.peer.title">Peer-to-peer tip</h2>
+  <div class="box-tip no-break">
+    <h3 data-i18n="w12.peer.dykTitle">💡 Did you know?</h3>
+    <p data-i18n="w12.peer.dykBody"><strong>Empty the robot&rsquo;s bin regularly</strong> — a full bin reduces suction and makes the robot run longer.</p>
+  </div>
+
+  <p class="body" data-i18n="w12.peer.q">How does that affect energy use?</p>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+
+  <h2 class="section" data-i18n="w12.reflection.title">Reflection</h2>
+
+  <div class="q">
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w12.refl.q1">Consider a student living in a small flat who cleans once a week. Which vacuum type would you recommend and why? Use energy and practical arguments (noise, convenience, purchase cost).</span></div>
+    <div class="write-line tall"></div>
+    <div class="write-line tall"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w12.refl.q2">Does a robot vacuum encourage people to clean more often? If a home was previously vacuumed once a week but the robot runs daily, does that increase or decrease total energy use? Justify.</span></div>
+    <div class="write-line tall"></div>
+    <div class="write-line tall"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w12.refl.q3">Would you recommend a robot vacuum for a small apartment (40 m²) or a large house (150 m²)? Explain using energy and cost arguments.</span></div>
+    <div class="write-line tall"></div>
+    <div class="write-line tall"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w12.refl.q4">How would installing photovoltaic panels on the school roof affect this carbon footprint calculation?</span></div>
+    <div class="write-line tall"></div>
+    <div class="write-line tall"></div>
+  </div>
+
+  <div class="r-footer">
+    <div class="footer-left">
+      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
+      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
+    </div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 6 <span data-i18n="ui.of">of</span> 7</div>
+  </div>
+</section>
+
+
+<section class="page" data-page="7">
+
+  <div class="r-header">
+    <div class="logo-green">
+      <img src="../../img/greenlogo.png" alt="GREEN">
+      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
+    </div>
+    <div class="logo-eu">
+      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
+    </div>
+  </div>
+
+  <h2 class="section" data-i18n="w12.ee.title">Additional tasks — for electrical engineering students</h2>
+  <p class="activity-intro" data-i18n="w12.ee.intro">These additional questions are aimed at students enrolled in electrical or electronic engineering programmes.</p>
+
+  <div class="q">
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w12.ee.q1">Draw a block diagram of a traditional vacuum cleaner (major components); indicate typical power ratings of each component.</span></div>
+    <div class="workspace tall"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w12.ee.q2">Why does a vacuum cleaner have a low power factor (cos φ ≈ 0.7–0.8)? How does this affect the electricity bill?</span></div>
+    <div class="write-line tall"></div>
+    <div class="write-line tall"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w12.ee.q3">If a vacuum draws 900 W at 230 V with cos φ = 0.75, calculate the current (I = P/(V × cos φ)).</span></div>
+    <div class="workspace"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w12.ee.q4">A vacuum cleaner has 900 W electrical input but only 150 W of suction power (air watts). Calculate the efficiency. Where does the rest of the energy go?</span></div>
+    <div class="workspace"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w12.ee.q5">Draw a block diagram of a robot vacuum (major components); indicate typical power ratings.</span></div>
+    <div class="workspace tall"></div>
+
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w12.ee.q6">What type of motor does a robot vacuum use (brushed DC, BLDC) and why? Discuss BLDC advantages (efficiency, noise, lifetime) and disadvantages (cost, control electronics).</span></div>
+    <div class="write-line tall"></div>
+    <div class="write-line tall"></div>
+  </div>
+
+  <div class="r-footer">
+    <div class="footer-left">
+      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
+      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
+    </div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 7 <span data-i18n="ui.of">of</span> 7</div>
   </div>
 </section>
 

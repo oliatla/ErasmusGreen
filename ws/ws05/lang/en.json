@@ -1,135 +1,111 @@
 {
   "_README": {
-    "purpose": "Translations for worksheet 05 (What is inside a light bulb?).",
-    "language": "English — reference file. Original content authored by the Dutch partner.",
-    "instructions": "All other languages copy this file and translate the values. Keys (left of the colon) must never change. See translator-guide.html for full instructions."
+    "purpose": "Translation reference for ws05.",
+    "language": "Default language: en.",
+    "instructions": "Copy this file as {lang}.json and translate the values. Keys (the left-hand side) must NEVER change — they map to data-i18n attributes in index.html."
   },
-
-  "meta": {
-    "_comment": "Header block of the worksheet.",
-    "worksheet": "Worksheet 05",
-    "title":     "What is inside a light bulb?",
-    "level":     "BASIC",
-    "topic":     "What is inside a light bulb?"
-  },
-
-  "learningOutcomes": {
-    "_comment": "Two bullet points in the structural table.",
-    "lo1": "Recognise the four main types of household light bulbs.",
-    "lo2": "Identify the wattage and lifetime of common bulb types."
-  },
-
-  "structural": {
-    "_comment": "Other rows of the structural table.",
-    "time":      "60 min",
-    "resources": "Bulb information table (in this worksheet); access to one or more real bulbs if available."
-  },
-
-  "introduction": {
-    "_comment": "Short introductory paragraph after the structural table.",
-    "p1": "Not all light bulbs are the same. Some get hot, some last for years, and some use much less electricity. In this worksheet you will look at four common types of bulbs and learn the basic differences between them."
-  },
-
-  "theory": {
-    "_comment": "Theory section, including a general introduction and one paragraph per bulb type.",
-    "title":     "Theory",
-    "intro1":    "Every light bulb does the same job: it turns electricity into light. But not all bulbs do that equally well. Some bulbs waste a lot of electricity by also turning it into heat. That is why an old-fashioned bulb feels hot after only a minute, while an LED stays cool.",
-    "intro2":    "There are four bulb types you will see most often at home and at school. They all use the same electrical socket but they work in completely different ways inside.",
-    "bulbsTitle":"The four bulb types",
-
-    "inc_label": "INCANDESCENT bulbs (the oldest type)",
-    "inc_body":  "have a thin metal wire inside. When electricity flows through the wire it gets so hot that it glows white. Most of the energy actually becomes heat, not light. These bulbs are no longer sold in most EU countries.",
-    "hal_label": "HALOGEN bulbs",
-    "hal_body":  "are an improved version of the incandescent bulb. They contain a small amount of halogen gas which makes the wire last a bit longer and burn slightly brighter. Still mostly heat though.",
-    "cfl_label": "COMPACT FLUORESCENT (CFL) bulbs",
-    "cfl_body":  "use a folded glass tube filled with gas. Electricity makes the gas glow. They use much less electricity than incandescent bulbs but contain a tiny amount of mercury, so they need to be recycled carefully.",
-    "led_label": "LED bulbs (Light Emitting Diode)",
-    "led_body":  "use a small electronic component that produces light directly when electricity flows through it. They are the most efficient: they convert almost all the electricity into light, and very little into heat. They also last 25 times longer than an incandescent bulb."
-  },
-
-  "workedExample": {
-    "_comment": "Four-step example of how to read the bulb information table on page 3.",
-    "title": "Worked example — How do you read the bulb information table?",
-    "s1":    "Look at the row Lifetime. The number tells you how many hours the bulb works before it needs to be replaced.",
-    "s2":    "Example: an LED bulb has a lifetime of 25,000 hours. If you use it 5 hours per day, that is 25,000 ÷ 5 = 5,000 days, which is about 13 years.",
-    "s3":    "Look at the row Wattage. This tells you how much electricity the bulb uses each second it is on. A higher wattage means more electricity.",
-    "s4":    "Example: an incandescent bulb of 60 W uses 5 times more electricity than an LED of 12 W to give the same amount of light."
-  },
-
-  "keyTerms": {
-    "_comment": "Glossary table — five definitions students should know.",
-    "title":   "Key terms",
-    "colTerm": "Term",
-    "colDef":  "Definition",
-
-    "t1term":  "Bulb",
-    "t1def":   "A light source that screws or clicks into a lamp.",
-    "t2term":  "Lifetime",
-    "t2def":   "The number of hours a bulb works before it stops working.",
-    "t3term":  "Wattage (W)",
-    "t3def":   "How much electricity the bulb uses.",
-    "t4term":  "Lumens (lm)",
-    "t4def":   "How much light the bulb produces (more lumens = brighter).",
-    "t5term":  "LED",
-    "t5def":   "Light Emitting Diode — the most efficient bulb type today."
-  },
-
-  "activities": {
-    "_comment": "Two student activities: a comparison table with questions, and a matching exercise.",
-
-    "a1": {
-      "_comment": "Activity 1 — table with four bulb types in columns, followed by five questions. Numbers in the table are fixed (lifetime, price, wattage), only the labels translate.",
-      "sub":      "Recognising the four bulb types",
-      "intro":    "Look at the four bulb types in the table below.",
-      "colInc":   "Incandescent",
-      "colHal":   "Halogen",
-      "colCfl":   "Compact fluorescent",
-      "colLed":   "LED",
-      "rowLife":  "Lifetime",
-      "rowPrice": "Price per bulb",
-      "rowWatt":  "Wattage",
-      "q1":       "Which bulb has the longest lifetime?",
-      "q2":       "Which bulb uses the most electricity (highest wattage)?",
-      "q3":       "Which bulb uses the least electricity (lowest wattage)?",
-      "q4":       "Which bulb is the cheapest to buy?",
-      "q5":       "All four bulbs give about the same amount of light (850 lumens). Which bulb would you choose for a room you use every day? Explain in one sentence why."
-    },
-
-    "a2": {
-      "_comment": "Activity 2 — matching exercise. Four bulb names map to four descriptions (A–D).",
-      "sub":      "Match the bulb to the description",
-      "intro":    "Write the matching letter (A, B, C or D) on the blank line next to each bulb type.",
-      "descA":    "Uses a coiled tube filled with gas; was popular before LEDs.",
-      "descB":    "The newest technology; very low energy use and long life.",
-      "descC":    "The oldest technology; a thin wire glows when electricity passes through.",
-      "descD":    "An improved version of the incandescent; slightly more efficient.",
-      "itemInc":  "Incandescent bulb",
-      "itemHal":  "Halogen bulb",
-      "itemCfl":  "Compact fluorescent",
-      "itemLed":  "LED"
-    }
-  },
-
-  "reflection": {
-    "_comment": "Open-ended question at the very end of the worksheet.",
-    "title":  "Reflection",
-    "prompt": "Look at the bulbs in your home. How many of them are LED? If some are not, which ones would you replace first, and why?"
-  },
-
   "ui": {
-    "_comment": "Generic interface labels reused across worksheets.",
-    "level":            "Level:",
-    "topic":            "Topic",
+    "back": "← Back",
+    "language": "Language:",
+    "bwToggle": "B/W view",
+    "print": "🖨 Print",
+    "level": "Level:",
+    "topic": "Topic",
     "learningOutcomes": "Learning outcomes",
-    "timeNeeded":       "Time needed",
-    "resources":        "Resources needed",
-    "introduction":     "Introduction",
-    "activity":         "Student activity",
-    "page":             "Page",
-    "of":               "of",
-    "print":            "🖨 Print",
-    "bwToggle":         "B/W view",
-    "projectLine":      "Project № 2025-1-HR01-KA220-VET-000353056",
-    "disclaimer":       "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them."
+    "timeNeeded": "Time needed",
+    "resources": "Resources needed",
+    "introduction": "Introduction",
+    "projectLine": "Project № 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.",
+    "page": "Page",
+    "of": "of",
+    "activity": "Student activity"
+  },
+  "w05": {
+    "worksheet": "Worksheet 05",
+    "title": "What is inside a light bulb?",
+    "level": "BASIC",
+    "topic": "What is inside a light bulb?",
+    "lo1": "Recognise the four main types of household light bulbs.",
+    "lo2": "Identify the wattage and lifetime of common bulb types.",
+    "time": "60 min",
+    "resources": "Bulb information table (in this worksheet); access to one or more real bulbs if available.",
+    "intro": "Not all light bulbs are the same. Some get hot, some last for years, and some use much less electricity. In this worksheet you will look at four common types of bulbs and learn the basic differences between them.",
+    "theory": {
+      "title": "Theory",
+      "intro1": "Every light bulb does the same job: it turns electricity into light. But not all bulbs do that equally well. Some bulbs waste a lot of electricity by also turning it into heat. That is why an old-fashioned bulb feels hot after only a minute, while an LED stays cool.",
+      "intro2": "There are four bulb types you will see most often at home and at school. They all use the same electrical socket but they work in completely different ways inside.",
+      "bulbsTitle": "The four bulb types",
+      "inc": {
+        "label": "INCANDESCENT bulbs (the oldest type)",
+        "body": "have a thin metal wire inside. When electricity flows through the wire it gets so hot that it glows white. Most of the energy actually becomes heat, not light. These bulbs are no longer sold in most EU countries."
+      },
+      "hal": {
+        "label": "HALOGEN bulbs",
+        "body": "are an improved version of the incandescent bulb. They contain a small amount of halogen gas which makes the wire last a bit longer and burn slightly brighter. Still mostly heat though."
+      },
+      "cfl": {
+        "label": "COMPACT FLUORESCENT (CFL) bulbs",
+        "body": "use a folded glass tube filled with gas. Electricity makes the gas glow. They use much less electricity than incandescent bulbs but contain a tiny amount of mercury, so they need to be recycled carefully."
+      },
+      "led": {
+        "label": "LED bulbs (Light Emitting Diode)",
+        "body": "use a small electronic component that produces light directly when electricity flows through it. They are the most efficient: they convert almost all the electricity into light, and very little into heat. They also last 25 times longer than an incandescent bulb."
+      }
+    },
+    "worked": {
+      "title": "Worked example — How do you read the bulb information table?",
+      "s1": "Look at the row Lifetime. The number tells you how many hours the bulb works before it needs to be replaced.",
+      "s2": "Example: an LED bulb has a lifetime of 25,000 hours. If you use it 5 hours per day, that is 25,000 ÷ 5 = 5,000 days, which is about 13 years.",
+      "s3": "Look at the row Wattage. This tells you how much electricity the bulb uses each second it is on. A higher wattage means more electricity.",
+      "s4": "Example: an incandescent bulb of 60 W uses 5 times more electricity than an LED of 12 W to give the same amount of light."
+    },
+    "terms": {
+      "title": "Key terms",
+      "colTerm": "Term",
+      "colDef": "Definition",
+      "t1term": "Bulb",
+      "t1def": "A light source that screws or clicks into a lamp.",
+      "t2term": "Lifetime",
+      "t2def": "The number of hours a bulb works before it stops working.",
+      "t3term": "Wattage (W)",
+      "t3def": "How much electricity the bulb uses.",
+      "t4term": "Lumens (lm)",
+      "t4def": "How much light the bulb produces (more lumens = brighter).",
+      "t5term": "LED",
+      "t5def": "Light Emitting Diode — the most efficient bulb type today."
+    },
+    "act1": {
+      "sub": "Recognising the four bulb types",
+      "intro": "Look at the four bulb types in the table below.",
+      "colInc": "Incandescent",
+      "colHal": "Halogen",
+      "colCfl": "Compact fluorescent",
+      "colLed": "LED",
+      "rowLife": "Lifetime",
+      "rowPrice": "Price per bulb",
+      "rowWatt": "Wattage",
+      "q1": "Which bulb has the longest lifetime?",
+      "q2": "Which bulb uses the most electricity (highest wattage)?",
+      "q3": "Which bulb uses the least electricity (lowest wattage)?",
+      "q4": "Which bulb is the cheapest to buy?",
+      "q5": "All four bulbs give about the same amount of light (850 lumens). Which bulb would you choose for a room you use every day? Explain in one sentence why."
+    },
+    "act2": {
+      "sub": "Match the bulb to the description",
+      "intro": "Write the matching letter (A, B, C or D) on the blank line next to each bulb type.",
+      "descA": "Uses a coiled tube filled with gas; was popular before LEDs.",
+      "descB": "The newest technology; very low energy use and long life.",
+      "descC": "The oldest technology; a thin wire glows when electricity passes through.",
+      "descD": "An improved version of the incandescent; slightly more efficient.",
+      "itemInc": "Incandescent bulb",
+      "itemHal": "Halogen bulb",
+      "itemCfl": "Compact fluorescent",
+      "itemLed": "LED"
+    },
+    "reflection": {
+      "title": "Reflection",
+      "prompt": "Look at the bulbs in your home. How many of them are LED? If some are not, which ones would you replace first, and why?"
+    }
   }
 }

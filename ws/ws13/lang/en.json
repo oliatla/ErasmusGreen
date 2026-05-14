@@ -1,0 +1,234 @@
+{
+  "_README": {
+    "purpose": "Translation reference for ws13.",
+    "language": "Default language: en.",
+    "instructions": "Copy this file as {lang}.json and translate the values. Keys (the left-hand side) must NEVER change — they map to data-i18n attributes in index.html."
+  },
+  "ui": {
+    "back": "← Back",
+    "language": "Language:",
+    "bwToggle": "B/W view",
+    "print": "🖨 Print",
+    "level": "Level:",
+    "topic": "Topic",
+    "learningOutcomes": "Learning outcomes",
+    "timeNeeded": "Time needed",
+    "resources": "Resources needed",
+    "projectLine": "Project № 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.",
+    "page": "Page",
+    "of": "of"
+  },
+  "w13": {
+    "worksheet": "Worksheet 13",
+    "title": "Electrical kitchen appliances & conservation of energy (1)",
+    "level": "BASIC",
+    "topic": "Energy use of kettle, toaster and microwave oven; conservation of energy in kitchen appliances.",
+    "lo1": "Explain the Law of Conservation of Energy in kitchen appliances.",
+    "lo2": "Use the formulae P = V × I, E = P × t, and P = V × I × cos φ.",
+    "lo3": "Calculate energy consumption and cost for kettles, toasters and microwaves.",
+    "lo4": "Identify the power factor of resistive vs. non-resistive loads.",
+    "time": "45 min",
+    "resources": "Calculator and electricity tariff (e.g. €0.30/kWh).",
+    "theory": {
+      "title": "Theory — Conservation of Energy & Electricity",
+      "intro": "The Law of Conservation of Energy states that energy cannot be created or destroyed, only transformed from one form to another.",
+      "kitchenLabel": "In kitchen appliances:",
+      "conv1": "Electrical → Heat (kettle, toaster, coffee maker)",
+      "conv2": "Electrical → Electromagnetic → Heat (microwave)",
+      "conv3": "Electrical → Mechanical (blender)",
+      "conv4": "Electrical → Light (LED lamps)",
+      "conceptsLabel": "Basic electrical concepts",
+      "c1l": "Power (P):",
+      "c1b": "watt (W)",
+      "c2l": "Energy (E):",
+      "c2b": "kilowatt-hour (kWh)",
+      "c3l": "Voltage (V):",
+      "c3b": "volt (V)",
+      "c4l": "Current (I):",
+      "c4b": "ampere (A)",
+      "acLabel": "Power in AC circuits",
+      "acIntro": "In AC circuits voltage and current may not be in phase, therefore:",
+      "acNote": "The power factor (cos φ) indicates efficiency: cos φ = 1 → purely resistive (kettle, toaster); cos φ < 1 → losses exist (motors, electronics)."
+    },
+    "kettle": {
+      "name": "1 — Kettle",
+      "imgLabel": "image:kettle",
+      "howTitle": "How it works",
+      "howBody": "A kettle converts electrical energy into heat using the Joule effect. Current flows through a resistor, the resistance produces heat, and water reaches 100 °C and boils.",
+      "physTitle": "Physical explanation",
+      "phys1": "Water has high specific heat — needs more energy",
+      "phys2": "Heat transfer is direct (conduction)",
+      "phys3": "Closed system — high efficiency",
+      "structTitle": "Structure",
+      "struct1": "Heating element (resistor)",
+      "struct2": "Water container",
+      "struct3": "Thermostat",
+      "struct4": "Steam sensor",
+      "ctrlTitle": "Controls",
+      "ctrl1": "On / Off switch",
+      "ctrl2": "Automatic shut-off",
+      "calcTitle": "Energy consumption — worked example",
+      "calcBody": "Power = 2 kW. Time = 5 min. Using E = P × t: E = 2 × (5/60) ≈ 0.166 kWh. At €0.30/kWh that is ≈ €0.05."
+    },
+    "toaster": {
+      "name": "2 — Toaster",
+      "imgLabel": "image:toaster",
+      "howTitle": "How it works",
+      "howBody": "A toaster produces heat using the Joule effect. Heat transfers to the bread by conduction, convection and radiation.",
+      "physTitle": "Physical explanation",
+      "phys1": "Water in the bread evaporates",
+      "phys2": "The surface browns (Maillard reaction)",
+      "structTitle": "Structure",
+      "struct1": "Heating wires",
+      "struct2": "Metal plates",
+      "struct3": "Thermostat",
+      "struct4": "Insulation",
+      "ctrlTitle": "Controls",
+      "ctrl1": "On / Off switch",
+      "ctrl2": "Heat-level control",
+      "ctrl3": "Timer",
+      "calcTitle": "Energy consumption — worked example",
+      "calcBody": "Power = 1 kW. Time = 10 min. Using E = P × t: E = 1 × (10/60) ≈ 0.166 kWh. At €0.30/kWh that is ≈ €0.05."
+    },
+    "micro": {
+      "name": "3 — Microwave Oven",
+      "imgLabel": "image:microwave oven",
+      "howTitle": "How it works",
+      "howBody": "A microwave oven uses electromagnetic waves. The magnetron generates waves that make water molecules vibrate; friction between molecules produces heat. This is called dielectric heating.",
+      "physTitle": "Physical explanation",
+      "phys1": "Heating starts inside the food",
+      "phys2": "Water content is important",
+      "phys3": "Faster than traditional heating",
+      "phys4": "No metal objects may be placed inside — metal reflects microwaves",
+      "structTitle": "Structure",
+      "struct1": "Magnetron",
+      "struct2": "Turntable",
+      "struct3": "Metal interior",
+      "struct4": "Cooling fan",
+      "ctrlTitle": "Controls",
+      "ctrl1": "Power level",
+      "ctrl2": "Timer",
+      "ctrl3": "Start / Stop",
+      "ctrl4": "Defrost",
+      "ctrl5": "Auto programs",
+      "calcTitle": "Energy consumption — worked example",
+      "calcBody": "Power = 1.2 kW. Time = 10 min. Using E = P × t: E = 1.2 × (10/60) ≈ 0.20 kWh. At €0.30/kWh that is ≈ €0.06."
+    },
+    "quiz": {
+      "title": "Quiz — multiple choice (15 questions)",
+      "intro": "Choose the correct answer for each question. Q1–5: kettle. Q6–10: toaster. Q11–15: microwave.",
+      "q1": {
+        "q": "What principle does a kettle use?",
+        "a": "A) Magnetic field",
+        "b": "B) Joule effect",
+        "c": "C) Pressure",
+        "d": "D) Light"
+      },
+      "q2": {
+        "q": "2000 W equals:",
+        "a": "A) 0.2 kW",
+        "b": "B) 2 kW",
+        "c": "C) 20 kW",
+        "d": "D) 200 kW"
+      },
+      "q3": {
+        "q": "The energy formula is:",
+        "a": "A) E = V / I",
+        "b": "B) E = P × t",
+        "c": "C) E = I²R",
+        "d": "D) E = mgh"
+      },
+      "q4": {
+        "q": "Energy conversion in a kettle:",
+        "a": "A) Electrical → Heat",
+        "b": "B) Heat → Electrical",
+        "c": "C) Mechanical → Heat",
+        "d": "D) Light → Heat"
+      },
+      "q5": {
+        "q": "Why is cos φ ≈ 1?",
+        "a": "A) It has a motor",
+        "b": "B) It is resistive",
+        "c": "C) It emits light",
+        "d": "D) It makes sound"
+      },
+      "q6": {
+        "q": "What type of energy does a toaster produce?",
+        "a": "A) Sound",
+        "b": "B) Heat",
+        "c": "C) Light",
+        "d": "D) Pressure"
+      },
+      "q7": {
+        "q": "Function of the heating resistor:",
+        "a": "A) Cooling",
+        "b": "B) Heating",
+        "c": "C) Cutting",
+        "d": "D) Carrying"
+      },
+      "q8": {
+        "q": "What does the thermostat do?",
+        "a": "A) Increases power",
+        "b": "B) Controls temperature",
+        "c": "C) Increases current",
+        "d": "D) Decreases voltage"
+      },
+      "q9": {
+        "q": "Which is NOT a mode of heat transfer?",
+        "a": "A) Conduction",
+        "b": "B) Convection",
+        "c": "C) Radiation",
+        "d": "D) Reflection"
+      },
+      "q10": {
+        "q": "cos φ in a toaster is approximately:",
+        "a": "A) 0",
+        "b": "B) 0.5",
+        "c": "C) 1",
+        "d": "D) 2"
+      },
+      "q11": {
+        "q": "How does a microwave heat food?",
+        "a": "A) Fire",
+        "b": "B) Molecular vibration",
+        "c": "C) Pressure",
+        "d": "D) Light"
+      },
+      "q12": {
+        "q": "Energy type used:",
+        "a": "A) Mechanical",
+        "b": "B) Electromagnetic",
+        "c": "C) Chemical",
+        "d": "D) Potential"
+      },
+      "q13": {
+        "q": "1.2 kW equals:",
+        "a": "A) 120 W",
+        "b": "B) 1,200 W",
+        "c": "C) 12 W",
+        "d": "D) 12,000 W"
+      },
+      "q14": {
+        "q": "cos φ in a microwave is:",
+        "a": "A) 0",
+        "b": "B) 1",
+        "c": "C) Less than 1",
+        "d": "D) 2"
+      },
+      "q15": {
+        "q": "Why no metal inside the microwave?",
+        "a": "A) It doesn't heat",
+        "b": "B) Reflects waves",
+        "c": "C) Melts",
+        "d": "D) Cools"
+      }
+    },
+    "answers": {
+      "title": "Answer key",
+      "kettle": "Kettle (Q 1–5):",
+      "toaster": "Toaster (Q 6–10):",
+      "micro": "Microwave (Q 11–15):"
+    }
+  }
+}

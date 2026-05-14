@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Worksheet 05 — What is inside a light bulb?</title>
+<title>Worksheet 04 — Electrical Kitchen Appliances</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -711,77 +711,28 @@ body.bw-mode .answer-key {
 
 
 /* =================================================================
-   MATCHING EXERCISE — bulb to description
+   IMAGE PLACEHOLDER — for appliance photos pending from the partner
    ================================================================= */
-ul.match-list {
-  list-style: none;
-  margin: 3mm 0;
-  padding: 0;
+.appliance-figure {
+  float: right;
+  width: 50mm;
+  height: 42mm;
+  border: 1pt dashed var(--ink-mute);
+  background: var(--bg-subtle);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1mm 0 3mm 5mm;
+  border-radius: 1.5mm;
+  break-inside: avoid;
 }
-ul.match-list li {
-  display: grid;
-  grid-template-columns: 38mm 12mm 1fr;
-  gap: 0 3mm;
-  align-items: baseline;
-  padding: 2.5mm 0;
-  border-bottom: .25pt dashed var(--line);
-  font-size: 10.5pt;
-}
-ul.match-list li:last-child { border-bottom: none; }
-ul.match-list .item   { font-weight: 700; }
-ul.match-list .arrow  { color: var(--ink-mute); text-align: center; }
-ul.match-list .blank  {
-  display: inline-block;
-  min-width: 10mm;
-  border-bottom: .5pt solid var(--ink);
-  text-align: center;
-  margin-right: 2mm;
-}
-ul.match-list .desc { line-height: 1.45; }
-ul.match-list .desc strong { color: var(--green-dark); }
+.appliance-figure .x  { font-size: 30pt; color: var(--ink-mute); font-weight: 200; line-height: .9; }
+.appliance-figure .lbl{ font-size: 8.5pt; color: var(--ink-soft); font-style: italic; margin-top: 3mm; text-align: center; padding: 0 2mm; }
+body.bw-mode .appliance-figure { background: var(--bw-bg); border-color: var(--bw-line); }
 
-/* Description choices block — listed before / above the items */
-.match-choices {
-  margin: 3mm 0 4mm;
-  padding: 3mm 4mm;
-  background: var(--green-tint-2);
-  border-left: 3pt solid var(--green-mid);
-  border-radius: 1mm;
-}
-.match-choices ol {
-  margin: 0;
-  padding-left: 5mm;
-  font-size: 10.5pt;
-  line-height: 1.55;
-}
-.match-choices ol li { margin-bottom: 1mm; }
-body.bw-mode .match-choices { background: var(--bw-bg); border-left-color: var(--bw-line); }
-
-/* =================================================================
-   WORKED-EXAMPLE STEPS — numbered list inside the green box
-   ================================================================= */
-ol.steps-list {
-  list-style: none;
-  counter-reset: step;
-  margin: 1mm 0 1mm;
-  padding: 0;
-}
-ol.steps-list li {
-  counter-increment: step;
-  position: relative;
-  padding-left: 13mm;
-  margin: 1.5mm 0;
-  font-size: 10.5pt;
-  line-height: 1.5;
-}
-ol.steps-list li::before {
-  content: "Step " counter(step) ":";
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-weight: 700;
-  color: var(--green-dark);
-}
+/* clear floats after each appliance section */
+.appliance-section { overflow: hidden; margin-bottom: 4mm; }
 
 /* ===== PRINT ===== */
 @page { size: A4; margin: 0; }
@@ -833,7 +784,7 @@ ol.steps-list li::before {
 
 
 <!-- ============================================================
-     PAGE 1 — Title, structural table, Introduction, Theory
+     PAGE 1
 ============================================================ -->
 <section class="page" data-page="1">
 
@@ -847,58 +798,61 @@ ol.steps-list li::before {
     </div>
   </div>
 
-  <h1 data-i18n="w05.worksheet">Worksheet 05</h1>
-  <div class="subtitle" data-i18n="w05.title">What is inside a light bulb?</div>
-  <div class="level"><span data-i18n="ui.level">Level:</span> <strong data-i18n="w05.level">BASIC</strong></div>
+  <h1 data-i18n="w13.worksheet">Worksheet 13</h1>
+  <div class="subtitle" data-i18n="w13.title">Electrical kitchen appliances & conservation of energy (1)</div>
+  <div class="level"><span data-i18n="ui.level">Level:</span> <strong data-i18n="w13.level">BASIC</strong></div>
 
   <table class="struct">
     <tbody>
-      <tr>
-        <th data-i18n="ui.topic">Topic</th>
-        <td colspan="3" data-i18n="w05.topic">What is inside a light bulb?</td>
-      </tr>
-      <tr>
-        <th data-i18n="ui.learningOutcomes">Learning outcomes</th>
-        <td colspan="3">
-          <ul>
-            <li data-i18n="w05.lo1">Recognise the four main types of household light bulbs.</li>
-            <li data-i18n="w05.lo2">Identify the wattage and lifetime of common bulb types.</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <th data-i18n="ui.timeNeeded">Time needed</th>
-        <td colspan="3" data-i18n="w05.time">60 min</td>
-      </tr>
-      <tr>
-        <th data-i18n="ui.resources">Resources needed</th>
-        <td colspan="3" data-i18n="w05.resources">Bulb information table (in this worksheet); access to one or more real bulbs if available.</td>
-      </tr>
+      <tr><th data-i18n="ui.topic">Topic</th>
+          <td colspan="3" data-i18n="w13.topic">Energy use of kettle, toaster and microwave oven; conservation of energy in kitchen appliances.</td></tr>
+      <tr><th data-i18n="ui.learningOutcomes">Learning outcomes</th>
+          <td colspan="3"><ul>
+            <li data-i18n="w13.lo1">Explain the Law of Conservation of Energy in kitchen appliances.</li>
+            <li data-i18n="w13.lo2">Use the formulae P = V × I, E = P × t, and P = V × I × cos φ.</li>
+            <li data-i18n="w13.lo3">Calculate energy consumption and cost for kettles, toasters and microwaves.</li>
+            <li data-i18n="w13.lo4">Identify the power factor of resistive vs. non-resistive loads.</li>
+          </ul></td></tr>
+      <tr><th data-i18n="ui.timeNeeded">Time needed</th><td colspan="3" data-i18n="w13.time">45 min</td></tr>
+      <tr><th data-i18n="ui.resources">Resources needed</th>
+          <td colspan="3" data-i18n="w13.resources">Calculator and electricity tariff (e.g. €0.30/kWh).</td></tr>
     </tbody>
   </table>
 
-  <h2 class="section" data-i18n="ui.introduction">Introduction</h2>
+  <h2 class="section" data-i18n="w13.theory.title">Theory — Conservation of Energy & Electricity</h2>
 
-  <p class="body" data-i18n="w05.intro">
-    Not all light bulbs are the same. Some get hot, some last for years, and some use much less electricity. In this worksheet you will look at four common types of bulbs and learn the basic differences between them.
-  </p>
+  <p class="body" data-i18n="w13.theory.intro">The <strong>Law of Conservation of Energy</strong> states that energy cannot be created or destroyed, only transformed from one form to another.</p>
 
-  <h2 class="section" data-i18n="w05.theory.title">Theory</h2>
+  <h3 class="sub-heading" data-i18n="w13.theory.kitchenLabel">In kitchen appliances:</h3>
+  <ul class="compact-list">
+    <li data-i18n="w13.theory.conv1">Electrical → Heat (kettle, toaster, coffee maker)</li>
+    <li data-i18n="w13.theory.conv2">Electrical → Electromagnetic → Heat (microwave)</li>
+    <li data-i18n="w13.theory.conv3">Electrical → Mechanical (blender)</li>
+    <li data-i18n="w13.theory.conv4">Electrical → Light (LED lamps)</li>
+  </ul>
 
-  <p class="body" data-i18n="w05.theory.intro1">
-    Every light bulb does the same job: it turns electricity into light. But not all bulbs do that equally well. Some bulbs waste a lot of electricity by also turning it into heat. That is why an old-fashioned bulb feels hot after only a minute, while an LED stays cool.
-  </p>
+  <h3 class="sub-heading" data-i18n="w13.theory.conceptsLabel">Basic electrical concepts</h3>
+  <ul class="compact-list">
+    <li><strong data-i18n="w13.theory.c1l">Power (P):</strong> <span data-i18n="w13.theory.c1b">watt (W)</span></li>
+    <li><strong data-i18n="w13.theory.c2l">Energy (E):</strong> <span data-i18n="w13.theory.c2b">kilowatt-hour (kWh)</span></li>
+    <li><strong data-i18n="w13.theory.c3l">Voltage (V):</strong> <span data-i18n="w13.theory.c3b">volt (V)</span></li>
+    <li><strong data-i18n="w13.theory.c4l">Current (I):</strong> <span data-i18n="w13.theory.c4b">ampere (A)</span></li>
+  </ul>
 
-  <p class="body" data-i18n="w05.theory.intro2">
-    There are four bulb types you will see most often at home and at school. They all use the same electrical socket but they work in completely different ways inside.
-  </p>
+  <div class="formula-block">$$ P = V \times I \qquad E = P \times t $$</div>
+
+  <h3 class="sub-heading" data-i18n="w13.theory.acLabel">Power in AC circuits</h3>
+  <p class="body" data-i18n="w13.theory.acIntro">In AC circuits voltage and current may not be in phase, therefore:</p>
+  <div class="formula-block">$$ P = V \times I \times \cos \varphi $$</div>
+  <p class="body" data-i18n="w13.theory.acNote">The <strong>power factor (cos φ)</strong> indicates efficiency: cos φ = 1 → purely resistive (kettle, toaster); cos φ &lt; 1 → losses exist (motors, electronics).</p>
+
 
   <div class="r-footer">
     <div class="footer-left">
       <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
       <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
     </div>
-    <div class="pageno"><span data-i18n="ui.page">Page</span> 1 <span data-i18n="ui.of">of</span> 4</div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 1 <span data-i18n="ui.of">of</span> 6</div>
   </div>
 </section>
 
@@ -915,61 +869,48 @@ ol.steps-list li::before {
     </div>
   </div>
 
-  <h3 class="sub-heading" data-i18n="w05.theory.bulbsTitle">The four bulb types</h3>
+  <h2 class="section appliance-title"><span data-i18n="w13.kettle.name">1 — Kettle</span></h2>
 
-  <ul class="theory-list">
-    <li><strong data-i18n="w05.theory.inc.label">INCANDESCENT bulbs (the oldest type)</strong> <span data-i18n="w05.theory.inc.body">have a thin metal wire inside. When electricity flows through the wire it gets so hot that it glows white. Most of the energy actually becomes heat, not light. These bulbs are no longer sold in most EU countries.</span></li>
-    <li><strong data-i18n="w05.theory.hal.label">HALOGEN bulbs</strong> <span data-i18n="w05.theory.hal.body">are an improved version of the incandescent bulb. They contain a small amount of halogen gas which makes the wire last a bit longer and burn slightly brighter. Still mostly heat though.</span></li>
-    <li><strong data-i18n="w05.theory.cfl.label">COMPACT FLUORESCENT (CFL) bulbs</strong> <span data-i18n="w05.theory.cfl.body">use a folded glass tube filled with gas. Electricity makes the gas glow. They use much less electricity than incandescent bulbs but contain a tiny amount of mercury, so they need to be recycled carefully.</span></li>
-    <li><strong data-i18n="w05.theory.led.label">LED bulbs (Light Emitting Diode)</strong> <span data-i18n="w05.theory.led.body">use a small electronic component that produces light directly when electricity flows through it. They are the most efficient: they convert almost all the electricity into light, and very little into heat. They also last 25 times longer than an incandescent bulb.</span></li>
-  </ul>
+  <div class="appliance-section">
+    <div class="appliance-figure">
+      <span class="x">×</span>
+      <span class="lbl" data-i18n="w13.kettle.imgLabel">image:<br>kettle</span>
+    </div>
 
-  <div class="box-tip no-break">
-    <h3 data-i18n="w05.worked.title">Worked example — How do you read the bulb information table?</h3>
-    <ol class="steps-list">
-      <li data-i18n="w05.worked.s1">Look at the row <em>Lifetime</em>. The number tells you how many <strong>hours</strong> the bulb works before it needs to be replaced.</li>
-      <li data-i18n="w05.worked.s2">Example: an LED bulb has a lifetime of 25,000 hours. If you use it 5 hours per day, that is 25,000 ÷ 5 = 5,000 days, which is about <strong>13 years</strong>.</li>
-      <li data-i18n="w05.worked.s3">Look at the row <em>Wattage</em>. This tells you how much <strong>electricity</strong> the bulb uses each second it is on. A higher wattage means more electricity.</li>
-      <li data-i18n="w05.worked.s4">Example: an incandescent bulb of 60 W uses <strong>5 times more electricity</strong> than an LED of 12 W to give the same amount of light.</li>
-    </ol>
+    <h3 class="sub-heading" data-i18n="w13.kettle.howTitle">How it works</h3>
+    <p class="body" data-i18n="w13.kettle.howBody">A kettle converts electrical energy into heat using the <strong>Joule effect</strong>. Current flows through a resistor, the resistance produces heat, and water reaches 100 °C and boils.</p>
+
+    <h3 class="sub-heading" data-i18n="w13.kettle.physTitle">Physical explanation</h3>
+    <ul class="compact-list">
+      <li data-i18n="w13.kettle.phys1">Water has high specific heat — needs more energy</li>
+      <li data-i18n="w13.kettle.phys2">Heat transfer is direct (conduction)</li>
+      <li data-i18n="w13.kettle.phys3">Closed system — high efficiency</li>
+    </ul>
+
+    <h3 class="sub-heading" data-i18n="w13.kettle.structTitle">Structure</h3>
+    <ul class="compact-list">
+      <li data-i18n="w13.kettle.struct1">Heating element (resistor)</li>
+      <li data-i18n="w13.kettle.struct2">Water container</li>
+      <li data-i18n="w13.kettle.struct3">Thermostat</li>
+      <li data-i18n="w13.kettle.struct4">Steam sensor</li>
+    </ul>
+
+    <h3 class="sub-heading" data-i18n="w13.kettle.ctrlTitle">Controls</h3>
+    <ul class="compact-list">
+      <li data-i18n="w13.kettle.ctrl1">On / Off switch</li>
+      <li data-i18n="w13.kettle.ctrl2">Automatic shut-off</li>
+    </ul>
   </div>
 
-  <h3 class="sub-heading" data-i18n="w05.terms.title">Key terms</h3>
-
-  <table class="terms no-break">
-    <thead>
-      <tr><th data-i18n="w05.terms.colTerm">Term</th><th data-i18n="w05.terms.colDef">Definition</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-i18n="w05.terms.t1term">Bulb</td>
-        <td data-i18n="w05.terms.t1def">A light source that screws or clicks into a lamp.</td>
-      </tr>
-      <tr>
-        <td data-i18n="w05.terms.t2term">Lifetime</td>
-        <td data-i18n="w05.terms.t2def">The number of hours a bulb works before it stops working.</td>
-      </tr>
-      <tr>
-        <td data-i18n="w05.terms.t3term">Wattage (W)</td>
-        <td data-i18n="w05.terms.t3def">How much electricity the bulb uses.</td>
-      </tr>
-      <tr>
-        <td data-i18n="w05.terms.t4term">Lumens (lm)</td>
-        <td data-i18n="w05.terms.t4def">How much light the bulb produces (more lumens = brighter).</td>
-      </tr>
-      <tr>
-        <td data-i18n="w05.terms.t5term">LED</td>
-        <td data-i18n="w05.terms.t5def">Light Emitting Diode — the most efficient bulb type today.</td>
-      </tr>
-    </tbody>
-  </table>
+  <h3 class="sub-heading" data-i18n="w13.kettle.calcTitle">Energy consumption — worked example</h3>
+  <p class="body" data-i18n="w13.kettle.calcBody">Power = <strong>2 kW</strong>. Time = <strong>5 min</strong>. Using <em>E = P × t</em>: E = 2 × (5/60) ≈ <strong>0.166 kWh</strong>. At €0.30/kWh that is ≈ <strong>€0.05</strong>.</p>
 
   <div class="r-footer">
     <div class="footer-left">
       <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
       <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
     </div>
-    <div class="pageno"><span data-i18n="ui.page">Page</span> 2 <span data-i18n="ui.of">of</span> 4</div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 2 <span data-i18n="ui.of">of</span> 6</div>
   </div>
 </section>
 
@@ -986,56 +927,48 @@ ol.steps-list li::before {
     </div>
   </div>
 
-  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 1</h2>
-  <div class="activity-sub" data-i18n="w05.act1.sub">Recognising the four bulb types</div>
-  <p class="activity-intro" data-i18n="w05.act1.intro">Look at the four bulb types in the table below.</p>
+  <h2 class="section appliance-title"><span data-i18n="w13.toaster.name">2 — Toaster</span></h2>
 
-  <table class="power-table no-break">
-    <thead>
-      <tr>
-        <th></th>
-        <th data-i18n="w05.act1.colInc">Incandescent</th>
-        <th data-i18n="w05.act1.colHal">Halogen</th>
-        <th data-i18n="w05.act1.colCfl">Compact fluorescent</th>
-        <th data-i18n="w05.act1.colLed">LED</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td data-i18n="w05.act1.rowLife"><strong>Lifetime</strong></td>
-        <td>1,000 h</td><td>3,000 h</td><td>10,000 h</td><td>25,000 h</td>
-      </tr>
-      <tr>
-        <td data-i18n="w05.act1.rowPrice"><strong>Price per bulb</strong></td>
-        <td>€0.50</td><td>€1.50</td><td>€1.50</td><td>€1.33</td>
-      </tr>
-      <tr>
-        <td data-i18n="w05.act1.rowWatt"><strong>Wattage</strong></td>
-        <td>60 W</td><td>43 W</td><td>13 W</td><td>12 W</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="appliance-section">
+    <div class="appliance-figure">
+      <span class="x">×</span>
+      <span class="lbl" data-i18n="w13.toaster.imgLabel">image:<br>toaster</span>
+    </div>
 
-  <div class="q">
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w05.act1.q1">Which bulb has the longest lifetime?</span></div>
-    <div class="write-line"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w05.act1.q2">Which bulb uses the most electricity (highest wattage)?</span></div>
-    <div class="write-line"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w05.act1.q3">Which bulb uses the least electricity (lowest wattage)?</span></div>
-    <div class="write-line"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w05.act1.q4">Which bulb is the cheapest to buy?</span></div>
-    <div class="write-line"></div>
-    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w05.act1.q5">All four bulbs give about the same amount of light (850 lumens). Which bulb would you choose for a room you use every day? Explain in one sentence why.</span></div>
-    <div class="write-line tall"></div>
-    <div class="write-line tall"></div>
+    <h3 class="sub-heading" data-i18n="w13.toaster.howTitle">How it works</h3>
+    <p class="body" data-i18n="w13.toaster.howBody">A toaster produces heat using the <strong>Joule effect</strong>. Heat transfers to the bread by <em>conduction, convection</em> and <em>radiation</em>.</p>
+
+    <h3 class="sub-heading" data-i18n="w13.toaster.physTitle">Physical explanation</h3>
+    <ul class="compact-list">
+      <li data-i18n="w13.toaster.phys1">Water in the bread evaporates</li>
+      <li data-i18n="w13.toaster.phys2">The surface browns (Maillard reaction)</li>
+    </ul>
+
+    <h3 class="sub-heading" data-i18n="w13.toaster.structTitle">Structure</h3>
+    <ul class="compact-list">
+      <li data-i18n="w13.toaster.struct1">Heating wires</li>
+      <li data-i18n="w13.toaster.struct2">Metal plates</li>
+      <li data-i18n="w13.toaster.struct3">Thermostat</li>
+      <li data-i18n="w13.toaster.struct4">Insulation</li>
+    </ul>
+
+    <h3 class="sub-heading" data-i18n="w13.toaster.ctrlTitle">Controls</h3>
+    <ul class="compact-list">
+      <li data-i18n="w13.toaster.ctrl1">On / Off switch</li>
+      <li data-i18n="w13.toaster.ctrl2">Heat-level control</li>
+      <li data-i18n="w13.toaster.ctrl3">Timer</li>
+    </ul>
   </div>
+
+  <h3 class="sub-heading" data-i18n="w13.toaster.calcTitle">Energy consumption — worked example</h3>
+  <p class="body" data-i18n="w13.toaster.calcBody">Power = <strong>1 kW</strong>. Time = <strong>10 min</strong>. Using <em>E = P × t</em>: E = 1 × (10/60) ≈ <strong>0.166 kWh</strong>. At €0.30/kWh that is ≈ <strong>€0.05</strong>.</p>
 
   <div class="r-footer">
     <div class="footer-left">
       <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
       <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
     </div>
-    <div class="pageno"><span data-i18n="ui.page">Page</span> 3 <span data-i18n="ui.of">of</span> 4</div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 3 <span data-i18n="ui.of">of</span> 6</div>
   </div>
 </section>
 
@@ -1052,56 +985,268 @@ ol.steps-list li::before {
     </div>
   </div>
 
-  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 2</h2>
-  <div class="activity-sub" data-i18n="w05.act2.sub">Match the bulb to the description</div>
-  <p class="activity-intro" data-i18n="w05.act2.intro">Write the matching letter (A, B, C or D) on the blank line next to each bulb type.</p>
+  <h2 class="section appliance-title"><span data-i18n="w13.micro.name">3 — Microwave Oven</span></h2>
 
-  <div class="match-choices no-break">
-    <ol type="A">
-      <li data-i18n="w05.act2.descA">Uses a coiled tube filled with gas; was popular before LEDs.</li>
-      <li data-i18n="w05.act2.descB">The newest technology; very low energy use and long life.</li>
-      <li data-i18n="w05.act2.descC">The oldest technology; a thin wire glows when electricity passes through.</li>
-      <li data-i18n="w05.act2.descD">An improved version of the incandescent; slightly more efficient.</li>
-    </ol>
+  <div class="appliance-section">
+    <div class="appliance-figure">
+      <span class="x">×</span>
+      <span class="lbl" data-i18n="w13.micro.imgLabel">image:<br>microwave oven</span>
+    </div>
+
+    <h3 class="sub-heading" data-i18n="w13.micro.howTitle">How it works</h3>
+    <p class="body" data-i18n="w13.micro.howBody">A microwave oven uses <strong>electromagnetic waves</strong>. The magnetron generates waves that make water molecules vibrate; friction between molecules produces heat. This is called <em>dielectric heating</em>.</p>
+
+    <h3 class="sub-heading" data-i18n="w13.micro.physTitle">Physical explanation</h3>
+    <ul class="compact-list">
+      <li data-i18n="w13.micro.phys1">Heating starts inside the food</li>
+      <li data-i18n="w13.micro.phys2">Water content is important</li>
+      <li data-i18n="w13.micro.phys3">Faster than traditional heating</li>
+      <li data-i18n="w13.micro.phys4">No metal objects may be placed inside — metal reflects microwaves</li>
+    </ul>
+
+    <h3 class="sub-heading" data-i18n="w13.micro.structTitle">Structure</h3>
+    <ul class="compact-list">
+      <li data-i18n="w13.micro.struct1">Magnetron</li>
+      <li data-i18n="w13.micro.struct2">Turntable</li>
+      <li data-i18n="w13.micro.struct3">Metal interior</li>
+      <li data-i18n="w13.micro.struct4">Cooling fan</li>
+    </ul>
+
+    <h3 class="sub-heading" data-i18n="w13.micro.ctrlTitle">Controls</h3>
+    <ul class="compact-list">
+      <li data-i18n="w13.micro.ctrl1">Power level</li>
+      <li data-i18n="w13.micro.ctrl2">Timer</li>
+      <li data-i18n="w13.micro.ctrl3">Start / Stop</li>
+      <li data-i18n="w13.micro.ctrl4">Defrost</li>
+      <li data-i18n="w13.micro.ctrl5">Auto programs</li>
+    </ul>
   </div>
 
-  <ul class="match-list">
-    <li>
-      <span class="item" data-i18n="w05.act2.itemInc">Incandescent bulb</span>
-      <span class="arrow">→</span>
-      <span><span class="blank"></span></span>
-    </li>
-    <li>
-      <span class="item" data-i18n="w05.act2.itemHal">Halogen bulb</span>
-      <span class="arrow">→</span>
-      <span><span class="blank"></span></span>
-    </li>
-    <li>
-      <span class="item" data-i18n="w05.act2.itemCfl">Compact fluorescent</span>
-      <span class="arrow">→</span>
-      <span><span class="blank"></span></span>
-    </li>
-    <li>
-      <span class="item" data-i18n="w05.act2.itemLed">LED</span>
-      <span class="arrow">→</span>
-      <span><span class="blank"></span></span>
-    </li>
-  </ul>
-
-  <h3 class="sub-heading" data-i18n="w05.reflection.title">Reflection</h3>
-  <p class="body" data-i18n="w05.reflection.prompt">Look at the bulbs in your home. How many of them are LED? If some are not, which ones would you replace first, and why?</p>
-
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
-  <div class="write-line tall"></div>
+  <h3 class="sub-heading" data-i18n="w13.micro.calcTitle">Energy consumption — worked example</h3>
+  <p class="body" data-i18n="w13.micro.calcBody">Power = <strong>1.2 kW</strong>. Time = <strong>10 min</strong>. Using <em>E = P × t</em>: E = 1.2 × (10/60) ≈ <strong>0.20 kWh</strong>. At €0.30/kWh that is ≈ <strong>€0.06</strong>.</p>
 
   <div class="r-footer">
     <div class="footer-left">
       <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
       <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
     </div>
-    <div class="pageno"><span data-i18n="ui.page">Page</span> 4 <span data-i18n="ui.of">of</span> 4</div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 4 <span data-i18n="ui.of">of</span> 6</div>
+  </div>
+</section>
+
+
+<section class="page" data-page="5">
+
+  <div class="r-header">
+    <div class="logo-green">
+      <img src="../../img/greenlogo.png" alt="GREEN">
+      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
+    </div>
+    <div class="logo-eu">
+      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
+    </div>
+  </div>
+
+  <h2 class="section" data-i18n="w13.quiz.title">Quiz — multiple choice (15 questions)</h2>
+  <p class="activity-intro" data-i18n="w13.quiz.intro">Choose the correct answer for each question. Q1–5: kettle. Q6–10: toaster. Q11–15: microwave.</p>
+
+  <div class="quiz-block">
+    <div class="quiz-q">
+      <div class="q-text"><strong>1.</strong> <span data-i18n="w13.quiz.q1.q">What principle does a kettle use?</span></div>
+      <div class="q-opts">
+        <span data-i18n="w13.quiz.q1.a">A) Magnetic field</span>
+        <span data-i18n="w13.quiz.q1.b">B) Joule effect</span>
+        <span data-i18n="w13.quiz.q1.c">C) Pressure</span>
+        <span data-i18n="w13.quiz.q1.d">D) Light</span>
+      </div>
+    </div>
+    <div class="quiz-q">
+      <div class="q-text"><strong>2.</strong> <span data-i18n="w13.quiz.q2.q">2000 W equals:</span></div>
+      <div class="q-opts">
+        <span data-i18n="w13.quiz.q2.a">A) 0.2 kW</span>
+        <span data-i18n="w13.quiz.q2.b">B) 2 kW</span>
+        <span data-i18n="w13.quiz.q2.c">C) 20 kW</span>
+        <span data-i18n="w13.quiz.q2.d">D) 200 kW</span>
+      </div>
+    </div>
+    <div class="quiz-q">
+      <div class="q-text"><strong>3.</strong> <span data-i18n="w13.quiz.q3.q">The energy formula is:</span></div>
+      <div class="q-opts">
+        <span data-i18n="w13.quiz.q3.a">A) E = V / I</span>
+        <span data-i18n="w13.quiz.q3.b">B) E = P × t</span>
+        <span data-i18n="w13.quiz.q3.c">C) E = I²R</span>
+        <span data-i18n="w13.quiz.q3.d">D) E = mgh</span>
+      </div>
+    </div>
+    <div class="quiz-q">
+      <div class="q-text"><strong>4.</strong> <span data-i18n="w13.quiz.q4.q">Energy conversion in a kettle:</span></div>
+      <div class="q-opts">
+        <span data-i18n="w13.quiz.q4.a">A) Electrical → Heat</span>
+        <span data-i18n="w13.quiz.q4.b">B) Heat → Electrical</span>
+        <span data-i18n="w13.quiz.q4.c">C) Mechanical → Heat</span>
+        <span data-i18n="w13.quiz.q4.d">D) Light → Heat</span>
+      </div>
+    </div>
+    <div class="quiz-q">
+      <div class="q-text"><strong>5.</strong> <span data-i18n="w13.quiz.q5.q">Why is cos φ ≈ 1?</span></div>
+      <div class="q-opts">
+        <span data-i18n="w13.quiz.q5.a">A) It has a motor</span>
+        <span data-i18n="w13.quiz.q5.b">B) It is resistive</span>
+        <span data-i18n="w13.quiz.q5.c">C) It emits light</span>
+        <span data-i18n="w13.quiz.q5.d">D) It makes sound</span>
+      </div>
+    </div>
+    <div class="quiz-q">
+      <div class="q-text"><strong>6.</strong> <span data-i18n="w13.quiz.q6.q">What type of energy does a toaster produce?</span></div>
+      <div class="q-opts">
+        <span data-i18n="w13.quiz.q6.a">A) Sound</span>
+        <span data-i18n="w13.quiz.q6.b">B) Heat</span>
+        <span data-i18n="w13.quiz.q6.c">C) Light</span>
+        <span data-i18n="w13.quiz.q6.d">D) Pressure</span>
+      </div>
+    </div>
+    <div class="quiz-q">
+      <div class="q-text"><strong>7.</strong> <span data-i18n="w13.quiz.q7.q">Function of the heating resistor:</span></div>
+      <div class="q-opts">
+        <span data-i18n="w13.quiz.q7.a">A) Cooling</span>
+        <span data-i18n="w13.quiz.q7.b">B) Heating</span>
+        <span data-i18n="w13.quiz.q7.c">C) Cutting</span>
+        <span data-i18n="w13.quiz.q7.d">D) Carrying</span>
+      </div>
+    </div>
+    <div class="quiz-q">
+      <div class="q-text"><strong>8.</strong> <span data-i18n="w13.quiz.q8.q">What does the thermostat do?</span></div>
+      <div class="q-opts">
+        <span data-i18n="w13.quiz.q8.a">A) Increases power</span>
+        <span data-i18n="w13.quiz.q8.b">B) Controls temperature</span>
+        <span data-i18n="w13.quiz.q8.c">C) Increases current</span>
+        <span data-i18n="w13.quiz.q8.d">D) Decreases voltage</span>
+      </div>
+    </div>
+    <div class="quiz-q">
+      <div class="q-text"><strong>9.</strong> <span data-i18n="w13.quiz.q9.q">Which is NOT a mode of heat transfer?</span></div>
+      <div class="q-opts">
+        <span data-i18n="w13.quiz.q9.a">A) Conduction</span>
+        <span data-i18n="w13.quiz.q9.b">B) Convection</span>
+        <span data-i18n="w13.quiz.q9.c">C) Radiation</span>
+        <span data-i18n="w13.quiz.q9.d">D) Reflection</span>
+      </div>
+    </div>
+    <div class="quiz-q">
+      <div class="q-text"><strong>10.</strong> <span data-i18n="w13.quiz.q10.q">cos φ in a toaster is approximately:</span></div>
+      <div class="q-opts">
+        <span data-i18n="w13.quiz.q10.a">A) 0</span>
+        <span data-i18n="w13.quiz.q10.b">B) 0.5</span>
+        <span data-i18n="w13.quiz.q10.c">C) 1</span>
+        <span data-i18n="w13.quiz.q10.d">D) 2</span>
+      </div>
+    </div>
+    <div class="quiz-q">
+      <div class="q-text"><strong>11.</strong> <span data-i18n="w13.quiz.q11.q">How does a microwave heat food?</span></div>
+      <div class="q-opts">
+        <span data-i18n="w13.quiz.q11.a">A) Fire</span>
+        <span data-i18n="w13.quiz.q11.b">B) Molecular vibration</span>
+        <span data-i18n="w13.quiz.q11.c">C) Pressure</span>
+        <span data-i18n="w13.quiz.q11.d">D) Light</span>
+      </div>
+    </div>
+    <div class="quiz-q">
+      <div class="q-text"><strong>12.</strong> <span data-i18n="w13.quiz.q12.q">Energy type used:</span></div>
+      <div class="q-opts">
+        <span data-i18n="w13.quiz.q12.a">A) Mechanical</span>
+        <span data-i18n="w13.quiz.q12.b">B) Electromagnetic</span>
+        <span data-i18n="w13.quiz.q12.c">C) Chemical</span>
+        <span data-i18n="w13.quiz.q12.d">D) Potential</span>
+      </div>
+    </div>
+    <div class="quiz-q">
+      <div class="q-text"><strong>13.</strong> <span data-i18n="w13.quiz.q13.q">1.2 kW equals:</span></div>
+      <div class="q-opts">
+        <span data-i18n="w13.quiz.q13.a">A) 120 W</span>
+        <span data-i18n="w13.quiz.q13.b">B) 1,200 W</span>
+        <span data-i18n="w13.quiz.q13.c">C) 12 W</span>
+        <span data-i18n="w13.quiz.q13.d">D) 12,000 W</span>
+      </div>
+    </div>
+    <div class="quiz-q">
+      <div class="q-text"><strong>14.</strong> <span data-i18n="w13.quiz.q14.q">cos φ in a microwave is:</span></div>
+      <div class="q-opts">
+        <span data-i18n="w13.quiz.q14.a">A) 0</span>
+        <span data-i18n="w13.quiz.q14.b">B) 1</span>
+        <span data-i18n="w13.quiz.q14.c">C) Less than 1</span>
+        <span data-i18n="w13.quiz.q14.d">D) 2</span>
+      </div>
+    </div>
+    <div class="quiz-q">
+      <div class="q-text"><strong>15.</strong> <span data-i18n="w13.quiz.q15.q">Why no metal inside the microwave?</span></div>
+      <div class="q-opts">
+        <span data-i18n="w13.quiz.q15.a">A) It doesn't heat</span>
+        <span data-i18n="w13.quiz.q15.b">B) Reflects waves</span>
+        <span data-i18n="w13.quiz.q15.c">C) Melts</span>
+        <span data-i18n="w13.quiz.q15.d">D) Cools</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="r-footer">
+    <div class="footer-left">
+      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
+      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
+    </div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 5 <span data-i18n="ui.of">of</span> 6</div>
+  </div>
+</section>
+
+
+<section class="page" data-page="6">
+
+  <div class="r-header">
+    <div class="logo-green">
+      <img src="../../img/greenlogo.png" alt="GREEN">
+      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
+    </div>
+    <div class="logo-eu">
+      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
+    </div>
+  </div>
+
+  <h2 class="section" data-i18n="w13.answers.title">Answer key</h2>
+
+  <div class="answer-key">
+    <h3 data-i18n="w13.answers.kettle">Kettle (Q 1–5):</h3>
+    <ul class="compact-list">
+      <li>1 — B (Joule effect)</li>
+      <li>2 — B (2 kW)</li>
+      <li>3 — B (E = P × t)</li>
+      <li>4 — A (Electrical → Heat)</li>
+      <li>5 — B (resistive)</li>
+    </ul>
+
+    <h3 data-i18n="w13.answers.toaster">Toaster (Q 6–10):</h3>
+    <ul class="compact-list">
+      <li>6 — B (Heat)</li>
+      <li>7 — B (Heating)</li>
+      <li>8 — B (Controls temperature)</li>
+      <li>9 — D (Reflection)</li>
+      <li>10 — C (≈ 1)</li>
+    </ul>
+
+    <h3 data-i18n="w13.answers.micro">Microwave (Q 11–15):</h3>
+    <ul class="compact-list">
+      <li>11 — B (Molecular vibration)</li>
+      <li>12 — B (Electromagnetic)</li>
+      <li>13 — B (1,200 W)</li>
+      <li>14 — C (Less than 1)</li>
+      <li>15 — B (Reflects waves)</li>
+    </ul>
+  </div>
+
+  <div class="r-footer">
+    <div class="footer-left">
+      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
+      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
+    </div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 6 <span data-i18n="ui.of">of</span> 6</div>
   </div>
 </section>
 

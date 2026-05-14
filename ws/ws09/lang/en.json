@@ -1,0 +1,103 @@
+{
+  "_README": {
+    "purpose": "Translation reference for ws09.",
+    "language": "Default language: en.",
+    "instructions": "Copy this file as {lang}.json and translate the values. Keys (the left-hand side) must NEVER change — they map to data-i18n attributes in index.html."
+  },
+  "ui": {
+    "back": "← Back",
+    "language": "Language:",
+    "bwToggle": "B/W view",
+    "print": "🖨 Print",
+    "level": "Level:",
+    "topic": "Topic",
+    "learningOutcomes": "Learning outcomes",
+    "timeNeeded": "Time needed",
+    "resources": "Resources needed",
+    "introduction": "Introduction",
+    "projectLine": "Project № 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.",
+    "page": "Page",
+    "of": "of"
+  },
+  "w09": {
+    "worksheet": "Worksheet 09",
+    "title": "Renewable Energy — Solar Potential of our School",
+    "level": "ADVANCED",
+    "topic": "Renewable Energy — Solar Potential of our School",
+    "lo": {
+      "tech": {
+        "body": "Students learn about solar PV systems, orientation, and how geographic location affects energy yield."
+      },
+      "math": {
+        "body": "Students calculate potential energy production (kWh) based on surface area (m²) and solar irradiance."
+      },
+      "env": {
+        "body": "Students understand the role of renewables in reducing carbon footprints and the seasonal nature of energy in the North."
+      },
+      "green": {
+        "body": "Critical thinking regarding the feasibility and ROI (Return on Investment) of green technology."
+      }
+    },
+    "time": "60–90 min",
+    "resources": "Internet access, Google Maps (for roof area), PVGIS Tool or Renewables.ninja, and a calculator.",
+    "intro": "To become more sustainable, schools can look beyond saving energy and start producing their own. By utilising unused roof space for solar panels (photovoltaics), we can reduce our reliance on the grid. This audit uses satellite data to estimate how much “green” energy our roof can generate.",
+    "tasks": {
+      "title": "Activities and tasks for students"
+    },
+    "A": {
+      "title": "Site Analysis & Surface Area",
+      "locate": {
+        "label": "Locate the school:",
+        "body": "use Google Maps (Satellite view) to find the school roof."
+      },
+      "estimate": {
+        "label": "Estimate area:",
+        "body": "measure a suitable section of the roof (e.g. south-facing)."
+      },
+      "roofArea": "Estimated roof area:",
+      "eff": {
+        "label": "Solar panel efficiency:",
+        "body": "assume 1 m² of solar panels produces roughly 200 W (0.2 kW) in peak conditions."
+      },
+      "systemSize": "Potential system size:"
+    },
+    "A1": {
+      "title": "Solar production calculation",
+      "intro": "Use the PVGIS Tool to estimate yearly energy production for your roof:",
+      "step1": "Enter your location.",
+      "step2": "Enter your “Installed peak PV power” (from the calculation above).",
+      "yearly": "Total yearly production:",
+      "monthlyTitle": "Monthly breakdown",
+      "most": "Month with most energy:",
+      "least": "Month with least energy:"
+    },
+    "A2": {
+      "title": "Financial value",
+      "intro": "Multiply the yearly kWh by the current electricity price:",
+      "annual": "Annual energy value:"
+    },
+    "A3": {
+      "title": "Comparison & context — how far could we drive?",
+      "intro": "This solar system could power electric-car charging. If an EV uses 20 kWh per 100 km, how many kilometres could we drive on one year of solar production?",
+      "distance": "Distance per year:"
+    },
+    "A4": {
+      "title": "Proposed improvements & action plan",
+      "intro": "Think like an energy consultant. If production is very low in winter, what should the school do?",
+      "s1label": "Technical suggestion:",
+      "s1hint": "(e.g. battery storage to save summer energy for winter, or tracking panels)",
+      "s2label": "Policy suggestion:",
+      "s2hint": "(e.g. selling excess summer energy back to the grid to pay for winter heating)"
+    },
+    "peer": {
+      "title": "Peer-to-peer tip",
+      "dykTitle": "💡 Did you know?",
+      "dykBody": "Solar panels work more efficiently in cold temperatures. If there is sun and no snow covering them, a cold climate is actually a plus for panel efficiency!"
+    },
+    "reflection": {
+      "title": "Reflection",
+      "prompt": "Compare the energy production of the summer months vs. the winter months. How does this seasonality affect the school’s “green” goals, and does it change your mind about the importance of saving energy during the darkest months?"
+    }
+  }
+}

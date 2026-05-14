@@ -1,0 +1,91 @@
+{
+  "_README": {
+    "purpose": "Translation reference for ws08.",
+    "language": "Default language: en.",
+    "instructions": "Copy this file as {lang}.json and translate the values. Keys (the left-hand side) must NEVER change — they map to data-i18n attributes in index.html."
+  },
+  "ui": {
+    "back": "← Back",
+    "language": "Language:",
+    "bwToggle": "B/W view",
+    "print": "🖨 Print",
+    "level": "Level:",
+    "topic": "Topic",
+    "learningOutcomes": "Learning outcomes",
+    "timeNeeded": "Time needed",
+    "resources": "Resources needed",
+    "introduction": "Introduction",
+    "projectLine": "Project № 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.",
+    "page": "Page",
+    "of": "of"
+  },
+  "w08": {
+    "worksheet": "Worksheet 08",
+    "title": "Energy Efficiency in the School Computer Lab",
+    "level": "BASIC",
+    "topic": "Energy Efficiency in the School Computer Lab",
+    "lo": {
+      "tech": {
+        "body": "Students learn about energy consumption of ICT equipment and methods to regulate it."
+      },
+      "math": {
+        "body": "Students calculate consumption based on different variables (units, days, standby vs. active)."
+      },
+      "env": {
+        "body": "Students gain knowledge about how their digital habits impact electricity use and the climate."
+      },
+      "green": {
+        "body": "Critical thinking regarding small changes in daily habits, such as turning off monitors."
+      }
+    },
+    "time": "45–60 min",
+    "resources": "Internet, calculator and electricity tariff (price per kWh).",
+    "intro": "Our school’s computer lab is a hub of activity, but it is also a major consumer of electricity. By examining the wattage of computers, monitors, and peripherals, we can see the impact of leaving equipment on or in standby mode. This audit helps us find better ways to manage our digital resources.",
+    "tasks": {
+      "title": "Activities and tasks for students"
+    },
+    "A": {
+      "title": "Equipment Inventory & Power Specs",
+      "intro": "Examine the equipment in the lab. Find the label (usually on the back or power brick) or search online for the average wattage (W).",
+      "itemPc": "Desktop/Laptop:",
+      "itemMon": "Monitor:",
+      "itemOther": "Printer / Other:",
+      "total": "Total Watts per Station:"
+    },
+    "A1": {
+      "title": "Calculate energy usage and costs (active use)",
+      "intro": "Assume there are 20 computers in the lab (adjust to your school). Calculate kWh and price for 6 hours of active use per day."
+    },
+    "A2": {
+      "title": "The “standby” challenge",
+      "intro": "Research shows that a PC in “Standby” or “Sleep” mode still uses energy (e.g. 2–5 W). If all computers are left on standby for 18 hours a day (overnight) and all weekend:",
+      "weekly": "Weekly waste:",
+      "comparison": "Comparison: if we shut down every computer completely at the end of the day, how much does the school save in a year?",
+      "annual": "Annual savings:"
+    },
+    "A3": {
+      "title": "Energy savings in context",
+      "intro": "Example: the energy saved by turning off the lab for one weekend is equivalent to charging a smartphone times."
+    },
+    "A4": {
+      "title": "Proposed improvements & action plan",
+      "intro": "Based on your findings, suggest three concrete ways the school can reduce energy waste in the computer lab. Consider both technical solutions and behavioural changes.",
+      "s1label": "Technical suggestion:",
+      "s1hint": "(e.g. smart power strips, auto-sleep settings)",
+      "s2label": "Behavioural suggestion:",
+      "s2hint": "(e.g. “last person out” checklist, awareness posters)",
+      "s3label": "Policy suggestion:",
+      "s3hint": "(e.g. a rule that all monitors must be turned off at 4 PM)"
+    },
+    "peer": {
+      "title": "Peer-to-peer tip",
+      "dykTitle": "💡 Did you know?",
+      "dykBody": "Many devices use “Vampire Power” even when they look like they are off. Using a power strip with an on/off switch can cut this off entirely."
+    },
+    "reflection": {
+      "title": "Reflection",
+      "prompt": "Briefly explain how a small change — like turning off the monitor during lunch break or at the end of the day — impacts the school’s carbon footprint and budget."
+    }
+  }
+}

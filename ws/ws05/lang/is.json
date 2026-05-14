@@ -1,135 +1,111 @@
 {
   "_README": {
-    "purpose": "Þýðingar fyrir verkefnablað 05 (Hvað er inni í ljósaperu?).",
-    "language": "Íslenska — þýdd skrá. Upprunalegt efni var samið af hollenska samstarfsaðilanum.",
-    "instructions": "Önnur tungumál afrita þessa skrá og þýða gildin. Lyklar (vinstra megin við tvípunkt) mega aldrei breytast. Sjá translator-guide.html fyrir ítarlegar leiðbeiningar."
+    "purpose": "Þýðingarviðmið fyrir ws05.",
+    "language": "Sjálfgefið tungumál: is.",
+    "instructions": "Afritaðu þessa skrá sem {lang}.json og þýddu gildin. Lyklarnir (vinstra megin) mega ALDREI breytast — þeir tengjast data-i18n eigindum í index.html."
   },
-
-  "meta": {
-    "_comment": "Haus verkefnablaðsins.",
-    "worksheet": "Verkefnablað 05",
-    "title":     "Hvað er inni í ljósaperu?",
-    "level":     "GRUNNSTIG",
-    "topic":     "Hvað er inni í ljósaperu?"
-  },
-
-  "learningOutcomes": {
-    "_comment": "Tvö atriði í skipulagstöflu.",
-    "lo1": "Þekkja helstu fjórar gerðir ljósapera fyrir heimili.",
-    "lo2": "Bera kennsl á rafafl (vött) og endingartíma algengra gerða ljósapera."
-  },
-
-  "structural": {
-    "_comment": "Aðrar raðir í skipulagstöflunni.",
-    "time":      "60 mín",
-    "resources": "Upplýsingatafla um ljósaperur (í þessu verkefnablaði); aðgangur að einni eða fleiri alvöru ljósaperum ef hægt er."
-  },
-
-  "introduction": {
-    "_comment": "Stuttur inngangur á eftir skipulagstöflunni.",
-    "p1": "Ekki eru allar ljósaperur eins. Sumar hitna, sumar endast í mörg ár, og sumar nota mun minna rafmagn. Í þessu verkefnablaði muntu skoða fjórar algengar gerðir pera og læra um helsta muninn á þeim."
-  },
-
-  "theory": {
-    "_comment": "Fræðihluti, þar á meðal almennur inngangur og ein málsgrein fyrir hverja gerð peru.",
-    "title":     "Fræði",
-    "intro1":    "Sérhver ljósapera gerir sama gagn: hún breytir rafmagni í ljós. En ekki gera allar perur það jafn vel. Sumar perur sóa miklu rafmagni með því að breyta því líka í hita. Þess vegna verður gamaldags ljósapera heit eftir aðeins eina mínútu, á meðan LED-pera helst svöl.",
-    "intro2":    "Það eru fjórar gerðir af perum sem þú munt oftast sjá heima og í skólanum. Þær nota allar sama perustæði en virka á gjörólíkan hátt að innan.",
-    "bulbsTitle":"Fjórar gerðir ljósapera",
-
-    "inc_label": "GLÓÐARPERUR (elsta gerðin)",
-    "inc_body":  "eru með þunnan málmvír að innan. Þegar rafmagn rennur í gegnum vírinn verður hann svo heitur að hann glóir hvítur. Mestur hluti orkunnar verður í raun að hita, en ekki ljósi. Þessar perur eru ekki lengur seldar í flestum löndum Evrópusambandsins.",
-    "hal_label": "HALÓGENPERUR",
-    "hal_body":  "eru endurbætt útgáfa af glóðarperunni. Þær innihalda smávegis af halógengasi sem gerir það að verkum að vírinn endist aðeins lengur og lýsir aðeins skærar. Samt sem áður aðallega hiti.",
-    "cfl_label": "SPARTÚBUR (Compact Fluorescent - CFL)",
-    "cfl_body":  "nota brotið glerrör sem er fyllt með gasi. Rafmagn fær gasið til að glóa. Þær nota mun minna rafmagn en glóðarperur en innihalda lítið magn af kvikasilfri, svo það þarf að endurvinna þær á varfærinn hátt.",
-    "led_label": "LED-perur (Ljóstvistur)",
-    "led_body":  "nota lítinn rafeindaíhlut sem framleiðir ljós beint þegar rafmagn rennur í gegnum hann. Þær eru nýtnastar: þær breyta nánast öllu rafmagni í ljós, og mjög litlu í hita. Þær endast líka 25 sinnum lengur en hefðbundin glóðarpera."
-  },
-
-  "workedExample": {
-    "_comment": "Fjögurra skrefa sýnidæmi um hvernig á að lesa upplýsingatöflu um ljósaperur á blaðsíðu 3.",
-    "title": "Sýnidæmi — Hvernig lest þú upplýsingatöflu um ljósaperur?",
-    "s1":    "Skoðaðu röðina Endingartími. Talan segir þér hversu margar klukkustundir peran virkar áður en skipta þarf um hana.",
-    "s2":    "Dæmi: LED-pera hefur 25.000 klukkustunda endingartíma. Ef þú notar hana í 5 klukkustundir á dag, þá er það 25.000 ÷ 5 = 5.000 dagar, sem eru um 13 ár.",
-    "s3":    "Skoðaðu röðina Rafafl. Þetta segir þér hversu mikið rafmagn peran notar hverja sekúndu sem kveikt er á henni. Hærra rafafl þýðir meira rafmagn.",
-    "s4":    "Dæmi: 60 W glóðarpera notar 5 sinnum meira rafmagn en 12 W LED-pera til að gefa jafn mikið ljós."
-  },
-
-  "keyTerms": {
-    "_comment": "Orðasafn — fimm skilgreiningar sem nemendur ættu að þekkja.",
-    "title":   "Lykilhugtök",
-    "colTerm": "Hugtak",
-    "colDef":  "Skilgreining",
-
-    "t1term":  "Pera",
-    "t1def":   "Ljósgjafi sem er skrúfaður eða smelltur í lampa.",
-    "t2term":  "Endingartími",
-    "t2def":   "Fjöldi klukkustunda sem pera virkar áður en hún hættir að lýsa.",
-    "t3term":  "Rafafl (W)",
-    "t3def":   "Hversu mikið rafmagn peran notar.",
-    "t4term":  "Lúmen (lm)",
-    "t4def":   "Hversu mikið ljós peran framleiðir (fleiri lúmen = skærara ljós).",
-    "t5term":  "LED",
-    "t5def":   "Ljóstvistur (Light Emitting Diode) — nýtnasta gerð ljósapera í dag."
-  },
-
-  "activities": {
-    "_comment": "Tvö nemendaverkefni: samanburðartafla með spurningum, og pörunarverkefni.",
-
-    "a1": {
-      "_comment": "Verkefni 1 — tafla með fjórum gerðum pera í dálkum, ásamt fimm spurningum. Tölur í töflunni eru fastar, aðeins textinn er þýddur.",
-      "sub":      "Að þekkja fjórar gerðir ljósapera",
-      "intro":    "Skoðaðu þessar fjórar gerðir af perum í töflunni hér að neðan.",
-      "colInc":   "Glóðarpera",
-      "colHal":   "Halógenpera",
-      "colCfl":   "Spartúba",
-      "colLed":   "LED-pera",
-      "rowLife":  "Endingartími",
-      "rowPrice": "Verð á peru",
-      "rowWatt":  "Rafafl",
-      "q1":       "Hvaða pera hefur lengstan endingartíma?",
-      "q2":       "Hvaða pera notar mest rafmagn (hæsta rafafl)?",
-      "q3":       "Hvaða pera notar minnst rafmagn (lægsta rafafl)?",
-      "q4":       "Hvaða peru er ódýrast að kaupa?",
-      "q5":       "Allar fjórar perurnar gefa um það bil jafn mikið ljós (850 lúmen). Hvaða peru myndir þú velja fyrir herbergi sem þú notar daglega? Útskýrðu í einni setningu hvers vegna."
-    },
-
-    "a2": {
-      "_comment": "Verkefni 2 — pörunarverkefni. Fjórum nöfnum á perum á að para við fjórar lýsingar (A–D).",
-      "sub":      "Paraðu peruna við lýsinguna",
-      "intro":    "Skrifaðu samsvarandi staf (A, B, C eða D) á auðu línuna við hlið hverrar gerðar af peru.",
-      "descA":    "Notar spírallaga rör fyllt með gasi; var vinsæl fyrir komu LED-pera.",
-      "descB":    "Nýjasta tæknin; mjög lítil orkunotkun og langur endingartími.",
-      "descC":    "Elsta tæknin; þunnur vír glóir þegar rafmagn fer í gegnum hann.",
-      "descD":    "Endurbætt útgáfa af glóðarperunni; aðeins nýtnari.",
-      "itemInc":  "Glóðarpera",
-      "itemHal":  "Halógenpera",
-      "itemCfl":  "Spartúba (CFL)",
-      "itemLed":  "LED-pera"
-    }
-  },
-
-  "reflection": {
-    "_comment": "Opin spurning í lok verkefnablaðsins.",
-    "title":  "Hugleiðing",
-    "prompt": "Skoðaðu perurnar á heimili þínu. Hversu margar þeirra eru LED-perur? Ef sumar eru það ekki, hverjum myndir þú skipta út fyrst, og hvers vegna?"
-  },
-
   "ui": {
-    "_comment": "Almennur viðmótstexti sem er endurnýttur yfir mörg verkefnablöð.",
-    "level":            "Stig:",
-    "topic":            "Viðfangsefni",
+    "back": "← Til baka",
+    "language": "Tungumál:",
+    "bwToggle": "Svarthvítt",
+    "print": "🖨 Prenta",
+    "level": "Stig:",
+    "topic": "Viðfangsefni",
     "learningOutcomes": "Hæfniviðmið",
-    "timeNeeded":       "Tími sem þarf",
-    "resources":        "Gögn og búnaður",
-    "introduction":     "Inngangur",
-    "activity":         "Nemendaverkefni",
-    "page":             "Síða",
-    "of":               "af",
-    "print":            "🖨 Prenta",
-    "bwToggle":         "Svart/Hvítt sýn",
-    "projectLine":      "Verkefni № 2025-1-HR01-KA220-VET-000353056",
-    "disclaimer":       "Styrkt af Evrópusambandinu. Skoðanir og viðhorf sem koma fram eru þó eingöngu höfundar/höfunda og endurspegla ekki endilega skoðanir Evrópusambandsins eða Framkvæmdastofnunar Evrópusambandsins um menntun og menningu (EACEA). Hvorki Evrópusambandið né EACEA bera ábyrgð á þeim."
+    "timeNeeded": "Tími",
+    "resources": "Gögn og búnaður",
+    "introduction": "Inngangur",
+    "projectLine": "Verkefni nr. 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Fjármagnað af Evrópusambandinu. Skoðanir og viðhorf sem fram koma eru þó eingöngu höfundar/höfunda og endurspegla ekki endilega skoðanir Evrópusambandsins eða framkvæmdastjórnar Evrópusambandsins um mennta- og menningarmál (EACEA). Hvorki Evrópusambandið né EACEA bera ábyrgð á þeim.",
+    "page": "Síða",
+    "of": "af",
+    "activity": "Verkefni nemenda"
+  },
+  "w05": {
+    "worksheet": "Vinnublað 05",
+    "title": "Hvað er inni í ljósaperu?",
+    "level": "GRUNNSTIG",
+    "topic": "Hvað er inni í ljósaperu?",
+    "lo1": "Bera kennsl á helstu fjórar gerðir ljósapera fyrir heimili.",
+    "lo2": "Þekkja rafafl og líftíma algengra gerða af ljósaperum.",
+    "time": "60 mín",
+    "resources": "Upplýsingatafla um ljósaperur (á þessu vinnublaði); aðgangur að einni eða fleiri raunverulegum perum ef hægt er.",
+    "intro": "Ekki eru allar ljósaperur eins. Sumar verða mjög heitar, aðrar endast í mörg ár og sumar nota mun minna rafmagn. Á þessu vinnublaði muntu skoða fjórar algengar gerðir ljósapera og læra um helsta muninn á þeim.",
+    "theory": {
+      "title": "Fræðilegt efni",
+      "intro1": "Hver ljósapera gerir sama gagn: hún breytir rafmagni í ljós. En þær gera það mismunandi vel. Sumar perur sóa miklu rafmagni með því að breyta því líka í hita. Þess vegna verður gamaldags pera mjög heit eftir aðeins eina mínútu, á meðan LED pera helst köld.",
+      "intro2": "Það eru fjórar gerðir af ljósaperum sem þú sérð oftast heima eða í skólanum. Þær nota allar sömu innstunguna en virka á allt annan hátt að innan.",
+      "bulbsTitle": "Gerðirnar fjórar",
+      "inc": {
+        "label": "GLÓPERUR (elsta gerðin)",
+        "body": "eru með þunnan málmvír inni í sér. Þegar rafmagn fer í gegnum vírinn verður hann svo heitur að hann glóir hvítur. Mestur hluti orkunnar verður í raun að hita, ekki ljósi. Þessar perur eru ekki lengur seldar í flestum ESB löndum."
+      },
+      "hal": {
+        "label": "HALÓGENPERUR",
+        "body": "eru endurbætt útgáfa af glóperunni. Þær innihalda lítið magn af halógengasi sem lætur vírinn endast aðeins lengur og skína aðeins skærar. Samt sem áður verður mest af orkunni að hita."
+      },
+      "cfl": {
+        "label": "SPARPERUR (Compact fluorescent / CFL)",
+        "body": "nota samanbrotið glerrör fyllt með gasi. Rafmagn fær gasið til að glóa. Þær nota mun minna rafmagn en glóperur en innihalda smávegis af kvikasilfri, svo það þarf að endurvinna þær varlega."
+      },
+      "led": {
+        "label": "LED PERUR (Ljóstvistur)",
+        "body": "nota lítinn rafeindaíhlut sem framleiðir ljós beint þegar rafmagn fer í gegnum hann. Þær eru skilvirkastar: þær breyta næstum öllu rafmagni í ljós, og mjög litlu í hita. Þær endast líka 25 sinnum lengur en glóperur."
+      }
+    },
+    "worked": {
+      "title": "Sýnidæmi — Hvernig lest þú töfluna um upplýsingar á ljósaperum?",
+      "s1": "Skoðaðu línuna Líftími. Talan segir þér hversu margar klukkustundir peran virkar áður en það þarf að skipta um hana.",
+      "s2": "Dæmi: LED pera hefur líftíma upp á 25.000 klukkustundir. Ef þú notar hana í 5 klukkustundir á dag, þá er það 25.000 ÷ 5 = 5.000 dagar, sem eru um 13 ár.",
+      "s3": "Skoðaðu línuna Rafafl (Vött/W). Þetta segir þér hversu miklu rafmagni peran eyðir hverja sekúndu sem kveikt er á henni. Hærra rafafl þýðir meira rafmagn.",
+      "s4": "Dæmi: 60 W glópera notar 5 sinnum meira rafmagn en 12 W LED pera til að gefa jafn mikið ljós."
+    },
+    "terms": {
+      "title": "Lykilhugtök",
+      "colTerm": "Hugtak",
+      "colDef": "Skilgreining",
+      "t1term": "Ljósapera",
+      "t1def": "Ljósgjafi sem er skrúfaður eða smelltur í lampa.",
+      "t2term": "Líftími",
+      "t2def": "Fjöldi klukkustunda sem pera virkar áður en hún hættir að lýsa.",
+      "t3term": "Rafafl (W)",
+      "t3def": "Hversu mikið rafmagn peran notar.",
+      "t4term": "Lúmen (lm)",
+      "t4def": "Hversu mikið ljós peran gefur frá sér (fleiri lúmen = bjartara).",
+      "t5term": "LED",
+      "t5def": "Ljóstvistur (Light Emitting Diode) — skilvirkasta gerð ljósapera í dag."
+    },
+    "act1": {
+      "sub": "Að þekkja gerðirnar fjórar",
+      "intro": "Skoðaðu gerðirnar fjórar af ljósaperum í töflunni hér að neðan.",
+      "colInc": "Glópera",
+      "colHal": "Halógenpera",
+      "colCfl": "Sparpera (CFL)",
+      "colLed": "LED",
+      "rowLife": "Líftími",
+      "rowPrice": "Verð á peru",
+      "rowWatt": "Rafafl (W)",
+      "q1": "Hvaða pera hefur lengstan líftíma?",
+      "q2": "Hvaða pera notar mest rafmagn (hæsta rafaflið)?",
+      "q3": "Hvaða pera notar minnst rafmagn (lægsta rafaflið)?",
+      "q4": "Hvaða pera er ódýrust í innkaupum?",
+      "q5": "Allar perurnar fjórar gefa um það bil jafn mikið ljós (850 lúmen). Hvaða peru myndir þú velja fyrir herbergi sem þú notar á hverjum degi? Útskýrðu í einni setningu af hverju."
+    },
+    "act2": {
+      "sub": "Paraðu saman peru og lýsingu",
+      "intro": "Skrifaðu réttan bókstaf (A, B, C eða D) á línuna við hliðina á hverri gerð ljósaperu.",
+      "descA": "Notar snúið rör fyllt með gasi; var vinsæl áður en LED kom til sögunnar.",
+      "descB": "Nýjasta tæknin; mjög lítil orkunotkun og langur líftími.",
+      "descC": "Elsta tæknin; þunnur vír sem glóir þegar rafmagn fer í gegn.",
+      "descD": "Endurbætt útgáfa af glóperunni; aðeins skilvirkari.",
+      "itemInc": "Glópera",
+      "itemHal": "Halógenpera",
+      "itemCfl": "Sparpera (CFL)",
+      "itemLed": "LED"
+    },
+    "reflection": {
+      "title": "Ígrundun",
+      "prompt": "Skoðaðu ljósaperurnar heima hjá þér. Hversu margar af þeim eru LED? Ef einhverjar eru það ekki, hverjum myndir þú skipta út fyrst, og hvers vegna?"
+    }
   }
 }

@@ -1,0 +1,136 @@
+{
+  "_README": {
+    "purpose": "Translation reference for ws11.",
+    "language": "Default language: en.",
+    "instructions": "Copy this file as {lang}.json and translate the values. Keys (the left-hand side) must NEVER change — they map to data-i18n attributes in index.html."
+  },
+  "ui": {
+    "back": "← Back",
+    "language": "Language:",
+    "bwToggle": "B/W view",
+    "print": "🖨 Print",
+    "level": "Level:",
+    "topic": "Topic",
+    "learningOutcomes": "Learning outcomes",
+    "timeNeeded": "Time needed",
+    "resources": "Resources needed",
+    "introduction": "Introduction",
+    "projectLine": "Project № 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.",
+    "page": "Page",
+    "of": "of",
+    "activity": "Student activity"
+  },
+  "w11": {
+    "worksheet": "Worksheet 11",
+    "title": "Cleaning & household maintenance — washing machines and dryers",
+    "level": "MEDIUM",
+    "topic": "Washing machines and dryers",
+    "lo": {
+      "tech": {
+        "body": "Students learn how washing machines and dryers work, consume energy/water, and the difference between vented and condenser dryers."
+      },
+      "math": {
+        "body": "Students calculate the cost savings of using eco/wash programmes and compare dryer types."
+      },
+      "env": {
+        "body": "Students understand how laundry habits affect carbon footprint and water scarcity."
+      },
+      "green": {
+        "body": "Students evaluate trade-offs between convenience, cost, and environmental impact, and compare standard vs. eco settings and vented vs. condenser dryers."
+      }
+    },
+    "time": "90 min",
+    "resources": "Calculator, electricity tariff (e.g. €0.30/kWh), water tariff (e.g. €0.002/L), appliance datasheets.",
+    "intro": "The average European household does 3–5 wash loads per week. In this worksheet you will investigate how much energy and water a washing machine uses on different programmes, compare types of tumble dryer, and calculate what you could save by choosing eco settings.",
+    "theory": {
+      "title": "Theory",
+      "intro1": "A washing machine is one of the biggest water and electricity users in a home. Most of the energy goes into heating water — not spinning the drum. Modern washing machines include eco modes that use less water and lower temperatures, though they often take longer to run.",
+      "intro2": "Heating water to 40 °C or 60 °C uses far more energy than running the motor. An Eco programme at 20–30 °C uses up to 60 % less energy but runs longer. The trade-off: longer cycle time but lower cost and less fabric damage.",
+      "dryers": "Clothes dryers",
+      "dryersBody": "Clothes dryers are even more energy-intensive. Understanding the difference between vented and condenser dryers — and when to avoid using a dryer at all — can save money and reduce emissions.",
+      "vented": {
+        "label": "Vented dryer:",
+        "body": "pulls in room air, heats it, blows humid air out through a hose (must be vented outside). High energy use (typical: 2.5–3.5 kWh per load)."
+      },
+      "cond": {
+        "label": "Condenser dryer:",
+        "body": "no vent needed. Moisture is collected in a tank. Slightly more efficient (2.0–3.0 kWh per load) but slower."
+      },
+      "heatpump": {
+        "label": "Heat-pump dryer:",
+        "body": "most efficient (1.0–1.5 kWh per load) — uses a refrigerant cycle like a fridge. More expensive to buy but cheaper to run."
+      },
+      "water": "Water use: washing machines typically use 40–90 litres per cycle, depending on drum size and programme. Eco programmes tend to use less water because they spin more slowly and re-use rinse water more efficiently.",
+      "formulaTitle": "Key formula for water heating",
+      "formulaNote": "Simplified: ~0.05 kWh per litre per 10 °C temperature rise."
+    },
+    "worked": {
+      "title": "Worked example",
+      "setup": "A cotton 60 °C programme uses 1.8 kWh and 60 L per wash. The eco 40 °C programme uses 0.9 kWh and 45 L. The household does 4 washes per week.",
+      "l1": "Annual energy difference: (1.8 − 0.9) × 4 × 52 = 187.2 kWh",
+      "l2": "Annual cost saving at €0.30/kWh: 187.2 × 0.30 = €56.16/year",
+      "l3": "Annual water saving: (60 − 45) × 4 × 52 = 3,120 L"
+    },
+    "act1": {
+      "sub": "Washing machine — cold vs. hot",
+      "intro": "An average 4-person household washes 220 loads per year.",
+      "colProg": "Programme",
+      "colTemp": "Water temp",
+      "colEnergy": "Energy per cycle (kWh)",
+      "colWater": "Water per cycle (L)",
+      "r1": "Cotton 60 °C",
+      "r2": "Eco 40 °C",
+      "r3": "Cold 20 °C",
+      "tariffs": "Electricity tariff: €0.30/kWh — Water tariff: €0.002/L",
+      "videos": "Introductory videos",
+      "q1": "Calculate the annual electricity cost for each programme.",
+      "q2": "Calculate the annual water cost for each programme.",
+      "q3": "What is the total annual saving switching from Cotton 60 °C to Eco 40 °C?",
+      "q4": "How many kg of CO₂ are saved per year (use 0.27 kg CO₂/kWh)?",
+      "q5": "Find an EU energy label for a washing machine online (rating A to G). What is the difference in kWh/year between an A-rated and a D-rated machine?"
+    },
+    "act2": {
+      "videoTitle": "Introductory videos — dryers",
+      "sub": "Dryer comparison",
+      "intro": "A household dries 180 loads of laundry per year.",
+      "colType": "Dryer type",
+      "colEnergy": "Energy per load (kWh)",
+      "colPrice": "Purchase price (€)",
+      "colLife": "Lifetime (years)",
+      "r1": "Vented",
+      "r2": "Condenser",
+      "r3": "Heat pump",
+      "tariff": "Electricity: €0.30/kWh.",
+      "q1": "Calculate the annual running cost for each dryer type.",
+      "q2": "Calculate the 10-year total cost (purchase + running) for each.",
+      "q3": "Which dryer is cheapest overall after 10 years?",
+      "q4": "If the CO₂ emission factor is 0.27 kg CO₂/kWh: (a) annual CO₂ emissions for each dryer type at 180 cycles/year, (b) kg CO₂ saved by heat pump vs. vented, (c) how many trees absorb that amount (~22 kg CO₂/tree/year)?"
+    },
+    "peer": {
+      "title": "Peer-to-peer tip",
+      "dykTitle": "💡 Did you know?",
+      "dykBody": "A clothesline or drying rack uses 0 kWh.",
+      "q": "If the household air-dries 50 % of loads instead of using a vented dryer, how much money do they save per year?"
+    },
+    "reflection": {
+      "title": "Reflection"
+    },
+    "refl": {
+      "q1": "Why do Eco programmes take longer? Is that a problem in practice?",
+      "q2": "When would a condenser dryer be preferred over a heat-pump dryer despite higher running costs? (Think about space, installation, upfront budget.)",
+      "q3": "If every household in a city of 100,000 switched to an eco washing programme (saving 93.6 kWh/year), how many kWh would be saved city-wide? Convert to MWh and GWh."
+    },
+    "ee": {
+      "title": "Additional tasks — for electrical engineering students",
+      "intro": "These additional questions are aimed at students enrolled in electrical or electronic engineering programmes.",
+      "q1": "Draw a block diagram of a washing machine (heater, motor, pump, control board, sensors); indicate typical power ratings of each component.",
+      "q2": "What type of motor is used in modern washing machines (universal motor, BLDC)? What are the advantages of BLDC?",
+      "q3": "Are household washing machines connected to single-phase or three-phase power? Explain why.",
+      "q4": "What protection must a washing machine have (thermal, overcurrent, leak protection)?",
+      "q5": "Explain how an NTC thermistor regulates water temperature in a washing machine.",
+      "q6": "A washing machine motor has a power factor of 0.75. Calculate the apparent power (VA) for a 500 W motor. Why does this matter for the electricity grid?",
+      "q7": "Draw a block diagram of a dryer of the type you choose (heater, motor, pump, control board, sensors); indicate typical power ratings of each component."
+    }
+  }
+}

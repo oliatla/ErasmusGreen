@@ -1,0 +1,110 @@
+{
+  "_README": {
+    "purpose": "Translation reference for ws07.",
+    "language": "Default language: en.",
+    "instructions": "Copy this file as {lang}.json and translate the values. Keys (the left-hand side) must NEVER change — they map to data-i18n attributes in index.html."
+  },
+  "ui": {
+    "back": "← Back",
+    "language": "Language:",
+    "bwToggle": "B/W view",
+    "print": "🖨 Print",
+    "level": "Level:",
+    "topic": "Topic",
+    "learningOutcomes": "Learning outcomes",
+    "timeNeeded": "Time needed",
+    "resources": "Resources needed",
+    "introduction": "Introduction",
+    "projectLine": "Project № 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.",
+    "page": "Page",
+    "of": "of"
+  },
+  "w07": {
+    "worksheet": "Worksheet 07",
+    "title": "School Restroom Audit",
+    "level": "BASIC",
+    "topic": "School Restroom Audit",
+    "lo": {
+      "tech": {
+        "body": "Students learn about methods to manage and regulate the use of electricity and water. They learn to calculate consumption based on different variables and different time periods, regarding both kWh and litres."
+      },
+      "math": {
+        "body": "Students learn to calculate consumption based on different variables and different time periods, regarding both kWh and litres."
+      },
+      "env": {
+        "body": "Students will gain knowledge about the extent to which their own behaviour impacts electricity and water consumption, and consequently broader climate-change impacts, by comparing usage to everyday activities."
+      },
+      "green": {
+        "body": "Critical thinking and how small changes in daily life and habits can have a positive impact on the environment."
+      }
+    },
+    "time": "45–60 min",
+    "resources": "Internet, calculator and electricity tariff (price per kWh).",
+    "intro": "It is important to understand how much energy and water our school uses every day. This project looks at our restroom facilities to see where we can save resources. Even small changes — like using more efficient lighting or dual-flush toilets — can make a big difference for the environment and save the school money. This audit helps us see the impact of our habits and find better ways to manage our resources.",
+    "tasks": {
+      "title": "Activities and tasks for students"
+    },
+    "A": {
+      "title": "Lighting & Energy Consumption",
+      "b1": "Examine how lighting is controlled in the restroom.",
+      "b2": "Check the wattage of the bathroom lights:"
+    },
+    "A1": {
+      "title": "Calculate energy usage and costs based on kWh price",
+      "b1": "Calculate kWh and price for 9 hours per day (light on during all school hours).",
+      "b2": "Calculate kWh and price for a week, a month and a school year."
+    },
+    "A2": {
+      "title": "Motion-controlled lighting saves about 75 %",
+      "intro": "If motion-controlled light would save 75 % of kWh usage, calculate the kWh and price saving for a week, a month and a school year."
+    },
+    "A3": {
+      "title": "Energy savings in context",
+      "intro": "Put the energy savings in context with other factors. Example: how many times could you charge your phone with the energy saved?"
+    },
+    "B": {
+      "title": "Water Usage Analysis",
+      "b1": "Examine if the toilet has a “Dual Flush” system: half-flush (3 L) and full flush (6 L).",
+      "b2": "Assume 25 students use a particular restroom and each uses it twice a day."
+    },
+    "B1": {
+      "title": "All students use the full flush"
+    },
+    "B2": {
+      "title": "All students use the half-flush"
+    },
+    "B3": {
+      "title": "50/50 mixture of half and full flush"
+    },
+    "B4": {
+      "title": "Water savings in context",
+      "intro": "Put the water savings in context with other factors. Example: how many 0.5 L water bottles is that? How much rainfall on a small roof?"
+    },
+    "peer": {
+      "title": "Peer-to-peer tip",
+      "dykTitle": "Did you know?",
+      "t1label": "The power of the half-flush:",
+      "t1body": "by using the small button (half-flush) instead of the large one whenever possible, you save up to 3 litres of clean water in a single flush.",
+      "t2label": "Phantom lighting:",
+      "t2body": "if restroom lights stay on all school day while no one is there, we are wasting energy that could have charged your phone hundreds of times.",
+      "t3label": "Reporting leaks:",
+      "t3body": "a small leak in a toilet that goes unfixed for a week can waste more water than you drink in an entire year. If you hear water running constantly, tell a teacher or janitor!",
+      "t4label": "Motion sensors:",
+      "t4body": "motion-controlled lights aren’t just high-tech — they can reduce restroom lighting energy use by up to 75 % by ensuring lights are never on in an empty room."
+    },
+    "reflection": {
+      "title": "Reflection"
+    },
+    "refl": {
+      "q1label": "Behavioural impact:",
+      "q1body": "briefly explain how your own daily habits in the restroom (such as choosing the right flush or turning off lights) impact the school’s total water and energy consumption when multiplied by hundreds of students.",
+      "q2label": "Critical thinking:",
+      "q2body": "if the school could only make one upgrade — either installing motion sensors for lights, or dual-flush systems for all toilets — which do you think would have a greater positive impact on the environment, based on your calculations?",
+      "q3label": "Personal responsibility:",
+      "q3body": "has this audit changed how you view school resources? Why is it important to pay attention to these small details in our everyday lives?",
+      "q4label": "Broader context:",
+      "q4body": "how do you think the climate-change impact would change if every school in the country optimised their water and electricity use in restrooms?"
+    }
+  }
+}

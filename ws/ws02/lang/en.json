@@ -1,125 +1,89 @@
 {
   "_README": {
-    "purpose": "Translations for worksheet 02 (Standby vs. OFF — Hidden Energy Consumption).",
-    "language": "English — reference file. Original content authored by the Portuguese partner.",
-    "instructions": "All other languages copy this file and translate the values. Keys (left of the colon) must never change. See translator-guide.html for full instructions."
+    "purpose": "Translation reference for ws02.",
+    "language": "Default language: en.",
+    "instructions": "Copy this file as {lang}.json and translate the values. Keys (the left-hand side) must NEVER change — they map to data-i18n attributes in index.html."
   },
-
-  "meta": {
-    "_comment": "The header block of the worksheet.",
+  "ui": {
+    "back": "← Back",
+    "language": "Language:",
+    "bwToggle": "B/W view",
+    "print": "🖨 Print",
+    "level": "Level:",
+    "topic": "Topic",
+    "learningOutcomes": "Learning outcomes",
+    "timeNeeded": "Time needed",
+    "resources": "Resources needed",
+    "introduction": "Introduction",
+    "projectLine": "Project № 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.",
+    "page": "Page",
+    "of": "of",
+    "activity": "Student activity",
+    "year": "year",
+    "perKwh": "€ / kWh (or local currency)",
+    "perYear": "€ / year",
+    "currency": "€"
+  },
+  "w02": {
     "worksheet": "Worksheet 02",
-    "title":     "Standby vs. OFF — Hidden Energy Consumption",
-    "level":     "BASIC",
-    "topic":     "01: Efficient Use of Energy — Entertainment & Electronics"
-  },
-
-  "objectives": {
-    "_comment": "Learning outcomes — three bullet points in the structural table.",
-    "o1": "Identify standby (\"vampire\") energy consumption.",
-    "o2": "Compare power usage in different device states.",
-    "o3": "Calculate annual energy waste and its cost."
-  },
-
-  "structural": {
-    "_comment": "Other rows of the structural table.",
-    "time":      "45–60 min",
-    "resources": "TV / console / monitor specifications (or internet), calculator, power meter (optional)."
-  },
-
-  "introduction": {
-    "_comment": "Introductory text after the structural table.",
-    "p1": "Many electronic devices continue to consume energy even when they are \"turned off\" — as long as they remain plugged in. This is called standby power, or more colourfully, vampire energy. A small LED, a clock display, or a wireless receiver waiting for a remote signal all draw a few watts continuously.",
-    "p2": "Individually it seems trivial. Across a household — TVs, game consoles, monitors, chargers, microwaves — it adds up to a noticeable share of the electricity bill, and to wasted carbon emissions. In this worksheet you will quantify exactly how much is wasted and what it costs."
-  },
-
-  "formula": {
-    "_comment": "Annual energy formula box. The math itself is hard-coded in KaTeX; only the labels translate.",
-    "header": "Annual energy formula",
-    "intro":  "The formula below converts continuous power draw into yearly energy use. For standby, assume the device sits in standby for 20 hours per day.",
-    "varE":   "annual energy (kWh)",
-    "varP":   "device power (W)",
-    "varH":   "hours per day in that state"
-  },
-
-  "activities": {
-    "_comment": "Five student tasks. Each has a sub-heading and an intro line; some have prompt lines and table headers.",
-
-    "a1": {
-      "_comment": "Task 1 — Identify three devices at home.",
-      "sub":   "Identify three devices at home",
-      "intro": "List three devices in your home that go into standby (a small LED stays on when you press \"off\").",
-      "q1":    "TV — make and model:",
-      "q2":    "Game console — make and model:",
-      "q3":    "Monitor — make and model:"
+    "title": "Standby vs. OFF — Hidden Energy Consumption",
+    "level": "BASIC",
+    "topic": "01: Efficient Use of Energy — Entertainment & Electronics",
+    "obj1": "Identify standby (“vampire”) energy consumption.",
+    "obj2": "Compare power usage in different device states.",
+    "obj3": "Calculate annual energy waste and its cost.",
+    "time": "45–60 min",
+    "resources": "TV / console / monitor specifications (or internet), calculator, power meter (optional).",
+    "intro1": "Many electronic devices continue to consume energy even when they are “turned off” — as long as they remain plugged in. This is called standby power, or more colourfully, vampire energy. A small LED, a clock display, or a wireless receiver waiting for a remote signal all draw a few watts continuously.",
+    "intro2": "Individually it seems trivial. Across a household — TVs, game consoles, monitors, chargers, microwaves — it adds up to a noticeable share of the electricity bill, and to wasted carbon emissions. In this worksheet you will quantify exactly how much is wasted and what it costs.",
+    "formulaHeader": "Annual energy formula",
+    "formulaIntro": "The formula below converts continuous power draw into yearly energy use. For standby, assume the device sits in standby for 20 hours per day.",
+    "varE": "annual energy (kWh)",
+    "varP": "device power (W)",
+    "varH": "hours per day in that state",
+    "act1": {
+      "sub": "Identify three devices at home",
+      "intro": "List three devices in your home that go into standby (a small LED stays on when you press “off”).",
+      "q1": "TV — make and model:",
+      "q2": "Game console — make and model:",
+      "q3": "Monitor — make and model:"
     },
-
-    "a2": {
-      "_comment": "Task 2 — Power comparison table. Column headers and three pre-filled device rows.",
-      "sub":        "Compare power usage",
-      "intro":      "Look up each device's power in three states. Use the user manual, the back label, an online datasheet, or a power meter if you have one.",
-      "colDevice":  "Device",
-      "colOn":      "ON (W)",
+    "act2": {
+      "sub": "Compare power usage",
+      "intro": "Look up each device’s power in three states. Use the user manual, the back-label, an online datasheet, or a power meter if you have one.",
+      "colDevice": "Device",
+      "colOn": "ON (W)",
       "colStandby": "Standby (W)",
-      "colOff":     "OFF / Unplugged (W)",
-      "rowTv":      "TV",
+      "colOff": "OFF / Unplugged (W)",
+      "rowTv": "TV",
       "rowConsole": "Console",
       "rowMonitor": "Monitor"
     },
-
-    "a3": {
-      "_comment": "Task 3 — Annual consumption calculation. Two lines with blank fields.",
-      "sub":   "Annual consumption calculation",
+    "act3": {
+      "sub": "Annual consumption calculation",
       "intro": "Take the TV from your table. Use the formula to calculate its yearly standby energy.",
-      "l1":    "TV standby power =",
-      "l2":    "Annual energy ="
+      "l1": "TV standby power =",
+      "l2": "Annual energy ="
     },
-
-    "a4": {
-      "_comment": "Task 4 — Cost calculation. Two lines with blank fields.",
-      "sub":   "Cost calculation",
+    "act4": {
+      "sub": "Cost calculation",
       "intro": "Find your local electricity price per kWh and calculate the yearly cost of that TV standby.",
-      "l1":    "Electricity price =",
-      "l2":    "Annual cost ="
+      "l1": "Electricity price =",
+      "l2": "Annual cost ="
     },
-
-    "a5": {
-      "_comment": "Task 5 — Real-world scenario. Single estimation line.",
-      "sub":   "Real-world scenario",
+    "act5": {
+      "sub": "Real-world scenario",
       "intro": "Imagine a typical home with 10 devices sitting in standby. Estimate the total annual cost (you may assume an average standby of 5 W per device).",
-      "l1":    "Total annual cost ≈"
+      "l1": "Total annual cost ≈"
+    },
+    "didYouKnow": {
+      "title": "💡 Did you know?",
+      "body": "Turning off devices at the wall socket — instead of leaving them on standby — can save up to 10 % of household electricity. A switched power strip lets you cut several devices at once with a single flick."
+    },
+    "reflection": {
+      "title": "Reflection",
+      "prompt": "Explain in your own words why standby energy is sometimes called “invisible consumption”, and how it affects the energy use of your own home."
     }
-  },
-
-  "didYouKnow": {
-    "_comment": "Green tip-box near the end of the worksheet.",
-    "title": "💡 Did you know?",
-    "body":  "Turning off devices at the wall socket — instead of leaving them on standby — can save up to 10 % of household electricity. A switched power strip lets you cut several devices at once with a single flick."
-  },
-
-  "reflection": {
-    "_comment": "Open-ended writing prompt at the bottom of the worksheet.",
-    "title":  "Reflection",
-    "prompt": "Explain in your own words why standby energy is sometimes called \"invisible consumption\", and how it affects the energy use of your own home."
-  },
-
-  "ui": {
-    "_comment": "Generic interface labels reused across worksheets — same in many sheets.",
-    "level":            "Level:",
-    "topic":            "Topic",
-    "learningOutcomes": "Learning outcomes",
-    "timeNeeded":       "Time needed",
-    "resources":        "Resources needed",
-    "introduction":     "Introduction",
-    "activity":         "Student activity",
-    "year":             "year",
-    "perKwh":           "€ / kWh (or local currency)",
-    "perYear":          "€ / year",
-    "currency":         "€",
-    "page":             "Page",
-    "of":               "of",
-    "print":            "🖨 Print",
-    "bwToggle":         "B/W view",
-    "projectLine":      "Project № 2025-1-HR01-KA220-VET-000353056",
-    "disclaimer":       "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them."
   }
 }

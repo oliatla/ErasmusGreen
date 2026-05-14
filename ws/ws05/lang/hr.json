@@ -1,0 +1,111 @@
+{
+  "_README": {
+    "purpose": "Referenca za prijevod za ws05.",
+    "language": "Zadani jezik: hr.",
+    "instructions": "Kopirajte ovu datoteku kao {lang}.json i prevedite vrijednosti. Ključevi (lijeva strana) NIKADA se ne smiju mijenjati — oni se mapiraju na data-i18n atribute u index.html."
+  },
+  "ui": {
+    "back": "← Natrag",
+    "language": "Jezik:",
+    "bwToggle": "C/B prikaz",
+    "print": "🖨 Ispis",
+    "level": "Razina:",
+    "topic": "Tema",
+    "learningOutcomes": "Ishodi učenja",
+    "timeNeeded": "Potrebno vrijeme",
+    "resources": "Potrebni resursi",
+    "introduction": "Uvod",
+    "projectLine": "Projekt br. 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Financira Europska unija. Izneseni stavovi i mišljenja su, međutim, samo autorova i ne odražavaju nužno stavove Europske unije ili Europske izvršne agencije za obrazovanje i kulturu (EACEA). Ni Europska unija ni EACEA ne mogu se smatrati odgovornima za njih.",
+    "page": "Stranica",
+    "of": "od",
+    "activity": "Aktivnost učenika"
+  },
+  "w05": {
+    "worksheet": "Radni list 05",
+    "title": "Što se nalazi unutar žarulje?",
+    "level": "OSNOVNO",
+    "topic": "Što se nalazi unutar žarulje?",
+    "lo1": "Prepoznati četiri glavne vrste žarulja za kućanstvo.",
+    "lo2": "Prepoznati snagu (vatu) i vijek trajanja uobičajenih vrsta žarulja.",
+    "time": "60 min",
+    "resources": "Tablica s podacima o žaruljama (u ovom radnom listu); pristup jednoj ili više pravih žarulja ako su dostupne.",
+    "intro": "Nisu sve žarulje iste. Neke postaju vruće, neke traju godinama, a neke troše znatno manje električne energije. U ovom radnom listu proučit ćete četiri uobičajene vrste žarulja i naučiti osnovne razlike među njima.",
+    "theory": {
+      "title": "Teorija",
+      "intro1": "Svaka žarulja radi isti posao: pretvara električnu energiju u svjetlost. Ali ne rade sve žarulje to jednako dobro. Neke žarulje rasipaju mnogo električne energije pretvarajući je u toplinu. Zato je staromodna žarulja vruća već nakon jedne minute, dok LED žarulja ostaje hladna.",
+      "intro2": "Postoje četiri vrste žarulja koje ćete najčešće vidjeti kod kuće i u školi. Sve koriste isto grlo, ali iznutra rade na potpuno različite načine.",
+      "bulbsTitle": "Četiri vrste žarulja",
+      "inc": {
+        "label": "INKANDESCENTNE žarulje / Žarulje sa žarnom niti (najstarija vrsta)",
+        "body": "imaju tanku metalnu žicu unutra. Kada struja teče kroz žicu, ona se toliko zagrije da svijetli bijelo. Većina energije zapravo postaje toplina, a ne svjetlost. Ove se žarulje više ne prodaju u većini zemalja EU."
+      },
+      "hal": {
+        "label": "HALOGENE žarulje",
+        "body": "su poboljšana verzija žarulja sa žarnom niti. Sadrže malu količinu halogenog plina koji omogućuje da žica traje malo duže i svijetli nešto jače. No, i dalje uglavnom proizvode toplinu."
+      },
+      "cfl": {
+        "label": "KOMPAKTNE FLUORESCENTNE (CFL) žarulje / Štedne žarulje",
+        "body": "koriste savinutu staklenu cijev punjenu plinom. Struja tjera plin da svijetli. Troše mnogo manje struje od žarulja sa žarnom niti, ali sadrže sićušnu količinu žive, pa ih je potrebno pažljivo reciklirati."
+      },
+      "led": {
+        "label": "LED žarulje (Svjetleća dioda)",
+        "body": "koriste malu elektroničku komponentu koja izravno proizvodi svjetlost kada struja teče kroz nju. One su najučinkovitije: pretvaraju gotovo svu električnu energiju u svjetlost, a vrlo malo u toplinu. Također traju 25 puta dulje od žarulja sa žarnom niti."
+      }
+    },
+    "worked": {
+      "title": "Riješeni primjer — Kako čitati tablicu s informacijama o žaruljama?",
+      "s1": "Pogledajte redak Vijek trajanja. Broj vam govori koliko sati žarulja radi prije nego što ju je potrebno zamijeniti.",
+      "s2": "Primjer: LED žarulja ima vijek trajanja od 25.000 sati. Ako je koristite 5 sati dnevno, to je 25.000 ÷ 5 = 5.000 dana, što je oko 13 godina.",
+      "s3": "Pogledajte redak Snaga (W). To vam govori koliko električne energije žarulja troši svake sekunde dok je uključena. Veća snaga znači više električne energije.",
+      "s4": "Primjer: žarulja sa žarnom niti od 60 W koristi 5 puta više struje od LED žarulje od 12 W kako bi dala istu količinu svjetlosti."
+    },
+    "terms": {
+      "title": "Ključni pojmovi",
+      "colTerm": "Pojam",
+      "colDef": "Definicija",
+      "t1term": "Žarulja",
+      "t1def": "Izvor svjetlosti koji se uvija ili utiskuje u svjetiljku.",
+      "t2term": "Vijek trajanja",
+      "t2def": "Broj sati koliko žarulja radi prije nego što prestane raditi.",
+      "t3term": "Snaga (W)",
+      "t3def": "Koliko električne energije žarulja koristi.",
+      "t4term": "Lumeni (lm)",
+      "t4def": "Koliko svjetlosti žarulja proizvodi (više lumena = svjetlije).",
+      "t5term": "LED",
+      "t5def": "Svjetleća dioda (Light Emitting Diode) — danas najučinkovitija vrsta žarulje."
+    },
+    "act1": {
+      "sub": "Prepoznavanje četiri vrste žarulja",
+      "intro": "Pogledajte četiri vrste žarulja u tablici ispod.",
+      "colInc": "Žarulja sa žarnom niti",
+      "colHal": "Halogena žarulja",
+      "colCfl": "Kompaktna fluorescentna (Štedna)",
+      "colLed": "LED",
+      "rowLife": "Vijek trajanja",
+      "rowPrice": "Cijena po žarulji",
+      "rowWatt": "Snaga (W)",
+      "q1": "Koja žarulja ima najduži vijek trajanja?",
+      "q2": "Koja žarulja troši najviše struje (najveća snaga)?",
+      "q3": "Koja žarulja troši najmanje struje (najmanja snaga)?",
+      "q4": "Koja je žarulja najjeftinija za kupnju?",
+      "q5": "Sve četiri žarulje daju otprilike istu količinu svjetla (850 lumena). Koju biste žarulju odabrali za sobu koju koristite svaki dan? Objasnite u jednoj rečenici zašto."
+    },
+    "act2": {
+      "sub": "Povežite žarulju s opisom",
+      "intro": "Napišite odgovarajuće slovo (A, B, C ili D) na praznu liniju pored svake vrste žarulje.",
+      "descA": "Koristi spiralnu cijev punjenu plinom; bila je popularna prije LED-ica.",
+      "descB": "Najnovija tehnologija; vrlo niska potrošnja energije i dug vijek trajanja.",
+      "descC": "Najstarija tehnologija; tanka žica svijetli kada kroz nju prolazi struja.",
+      "descD": "Poboljšana verzija žarulje sa žarnom niti; malo učinkovitija.",
+      "itemInc": "Žarulja sa žarnom niti",
+      "itemHal": "Halogena žarulja",
+      "itemCfl": "Kompaktna fluorescentna",
+      "itemLed": "LED"
+    },
+    "reflection": {
+      "title": "Osvrt",
+      "prompt": "Pogledajte žarulje u svom domu. Koliko ih je LED? Ako neke nisu, koje biste prve zamijenili i zašto?"
+    }
+  }
+}

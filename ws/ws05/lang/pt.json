@@ -1,135 +1,111 @@
 {
   "_README": {
-    "purpose": "Traduções para a ficha de trabalho 05 (O que há dentro de uma lâmpada?).",
-    "language": "Português — arquivo traduzido. Conteúdo original da autoria do parceiro holandês.",
-    "instructions": "Todos os outros idiomas copiam este arquivo e traduzem os valores. As chaves (à esquerda dos dois pontos) nunca devem ser alteradas. Consulte translator-guide.html para obter instruções completas."
+    "purpose": "Referência de tradução para ws05.",
+    "language": "Idioma padrão: pt.",
+    "instructions": "Copie este ficheiro como {lang}.json e traduza os valores. As chaves (do lado esquerdo) NUNCA devem ser alteradas — elas mapeiam para atributos data-i18n no index.html."
   },
-
-  "meta": {
-    "_comment": "Bloco de cabeçalho da ficha de trabalho.",
-    "worksheet": "Ficha de trabalho 05",
-    "title":     "O que há dentro de uma lâmpada?",
-    "level":     "BÁSICO",
-    "topic":     "O que há dentro de uma lâmpada?"
-  },
-
-  "learningOutcomes": {
-    "_comment": "Dois pontos na tabela estrutural.",
-    "lo1": "Reconhecer os quatro principais tipos de lâmpadas domésticas.",
-    "lo2": "Identificar a potência e a vida útil dos tipos comuns de lâmpadas."
-  },
-
-  "structural": {
-    "_comment": "Outras linhas da tabela estrutural.",
-    "time":      "60 min",
-    "resources": "Tabela de informações sobre lâmpadas (nesta ficha de trabalho); acesso a uma ou mais lâmpadas reais, se disponível."
-  },
-
-  "introduction": {
-    "_comment": "Breve parágrafo introdutório após a tabela estrutural.",
-    "p1": "Nem todas as lâmpadas são iguais. Algumas aquecem, outras duram anos e outras usam muito menos eletricidade. Nesta ficha de trabalho, você examinará quatro tipos comuns de lâmpadas e aprenderá as diferenças básicas entre elas."
-  },
-
-  "theory": {
-    "_comment": "Secção teórica, incluindo uma introdução geral e um parágrafo por tipo de lâmpada.",
-    "title":     "Teoria",
-    "intro1":    "Todas as lâmpadas fazem o mesmo trabalho: transformam eletricidade em luz. Mas nem todas as lâmpadas fazem isso igualmente bem. Algumas lâmpadas desperdiçam muita eletricidade ao transformá-la também em calor. É por isso que uma lâmpada antiquada fica quente após apenas um minuto, enquanto uma LED permanece fria.",
-    "intro2":    "Existem quatro tipos de lâmpadas que você verá com mais frequência em casa e na escola. Todas elas usam o mesmo casquilho elétrico, mas funcionam de maneiras completamente diferentes no interior.",
-    "bulbsTitle":"Os quatro tipos de lâmpadas",
-
-    "inc_label": "Lâmpadas INCANDESCENTES (o tipo mais antigo)",
-    "inc_body":  "têm um fio de metal fino no interior. Quando a eletricidade flui através do fio, ele fica tão quente que brilha em branco. A maior parte da energia, na verdade, torna-se calor e não luz. Estas lâmpadas já não são vendidas na maioria dos países da UE.",
-    "hal_label": "Lâmpadas de HALOGÉNEO",
-    "hal_body":  "são uma versão melhorada da lâmpada incandescente. Contêm uma pequena quantidade de gás halogéneo que faz com que o fio dure um pouco mais e brilhe um pouco mais. No entanto, continua a ser maioritariamente calor.",
-    "cfl_label": "Lâmpadas FLUORESCENTES COMPACTAS (CFL)",
-    "cfl_body":  "usam um tubo de vidro dobrado e cheio de gás. A eletricidade faz o gás brilhar. Usam muito menos eletricidade do que as lâmpadas incandescentes, mas contêm uma pequena quantidade de mercúrio, por isso precisam de ser recicladas com cuidado.",
-    "led_label": "Lâmpadas LED (Díodo Emissor de Luz)",
-    "led_body":  "usam um pequeno componente eletrónico que produz luz diretamente quando a eletricidade flui através dele. São as mais eficientes: convertem quase toda a eletricidade em luz e muito pouca em calor. Também duram 25 vezes mais do que uma lâmpada incandescente."
-  },
-
-  "workedExample": {
-    "_comment": "Exemplo de quatro passos sobre como ler a tabela de informações sobre lâmpadas na página 3.",
-    "title": "Exemplo prático — Como se lê a tabela de informações sobre lâmpadas?",
-    "s1":    "Observe a linha Vida útil. O número indica quantas horas a lâmpada funciona antes de precisar de ser substituída.",
-    "s2":    "Exemplo: uma lâmpada LED tem uma vida útil de 25.000 horas. Se a usar 5 horas por dia, são 25.000 ÷ 5 = 5.000 dias, o que corresponde a cerca de 13 anos.",
-    "s3":    "Observe a linha Potência (Watt). Isto diz-lhe quanta eletricidade a lâmpada usa a cada segundo que está ligada. Uma potência maior significa mais eletricidade.",
-    "s4":    "Exemplo: uma lâmpada incandescente de 60 W usa 5 vezes mais eletricidade do que uma LED de 12 W para dar a mesma quantidade de luz."
-  },
-
-  "keyTerms": {
-    "_comment": "Tabela de glossário — cinco definições que os alunos devem conhecer.",
-    "title":   "Termos-chave",
-    "colTerm": "Termo",
-    "colDef":  "Definição",
-
-    "t1term":  "Lâmpada",
-    "t1def":   "Uma fonte de luz que se enrosca ou encaixa num candeeiro.",
-    "t2term":  "Vida útil",
-    "t2def":   "O número de horas que uma lâmpada funciona antes de deixar de funcionar.",
-    "t3term":  "Potência (W)",
-    "t3def":   "Quanta eletricidade a lâmpada consome.",
-    "t4term":  "Lúmenes (lm)",
-    "t4def":   "Quanta luz a lâmpada produz (mais lúmenes = mais brilhante).",
-    "t5term":  "LED",
-    "t5def":   "Díodo Emissor de Luz — o tipo de lâmpada mais eficiente na atualidade."
-  },
-
-  "activities": {
-    "_comment": "Duas atividades para alunos: uma tabela de comparação com perguntas e um exercício de correspondência.",
-
-    "a1": {
-      "_comment": "Atividade 1 — tabela com quatro tipos de lâmpadas em colunas, seguida de cinco perguntas. Os números na tabela são fixos (vida útil, preço, potência), apenas os rótulos são traduzidos.",
-      "sub":      "Reconhecer os quatro tipos de lâmpadas",
-      "intro":    "Observe os quatro tipos de lâmpadas na tabela abaixo.",
-      "colInc":   "Incandescente",
-      "colHal":   "Halogéneo",
-      "colCfl":   "Fluorescente compacta",
-      "colLed":   "LED",
-      "rowLife":  "Vida útil",
-      "rowPrice": "Preço por lâmpada",
-      "rowWatt":  "Potência",
-      "q1":       "Qual lâmpada tem a vida útil mais longa?",
-      "q2":       "Qual lâmpada usa mais eletricidade (maior potência)?",
-      "q3":       "Qual lâmpada usa menos eletricidade (menor potência)?",
-      "q4":       "Qual lâmpada é a mais barata de comprar?",
-      "q5":       "Todas as quatro lâmpadas dão aproximadamente a mesma quantidade de luz (850 lúmenes). Que lâmpada escolheria para uma divisão que usa todos os dias? Explique numa frase o porquê."
-    },
-
-    "a2": {
-      "_comment": "Atividade 2 — exercício de correspondência. Quatro nomes de lâmpadas correspondem a quatro descrições (A–D).",
-      "sub":      "Faça a correspondência entre a lâmpada e a descrição",
-      "intro":    "Escreva a letra correspondente (A, B, C ou D) na linha em branco ao lado de cada tipo de lâmpada.",
-      "descA":    "Usa um tubo em espiral cheio de gás; era popular antes dos LEDs.",
-      "descB":    "A tecnologia mais recente; uso de energia muito baixo e longa vida útil.",
-      "descC":    "A tecnologia mais antiga; um fio fino brilha quando a eletricidade passa.",
-      "descD":    "Uma versão melhorada da incandescente; ligeiramente mais eficiente.",
-      "itemInc":  "Lâmpada incandescente",
-      "itemHal":  "Lâmpada de halogéneo",
-      "itemCfl":  "Fluorescente compacta (CFL)",
-      "itemLed":  "LED"
-    }
-  },
-
-  "reflection": {
-    "_comment": "Pergunta de resposta aberta no final da ficha de trabalho.",
-    "title":  "Reflexão",
-    "prompt": "Observe as lâmpadas na sua casa. Quantas delas são LED? Se algumas não forem, quais substituiria primeiro e porquê?"
-  },
-
   "ui": {
-    "_comment": "Rótulos de interface genéricos reutilizados em várias fichas de trabalho.",
-    "level":            "Nível:",
-    "topic":            "Tópico",
+    "back": "← Voltar",
+    "language": "Idioma:",
+    "bwToggle": "Vista P/B",
+    "print": "🖨 Imprimir",
+    "level": "Nível:",
+    "topic": "Tópico",
     "learningOutcomes": "Resultados de aprendizagem",
-    "timeNeeded":       "Tempo necessário",
-    "resources":        "Recursos necessários",
-    "introduction":     "Introdução",
-    "activity":         "Atividade do aluno",
-    "page":             "Página",
-    "of":               "de",
-    "print":            "🖨 Imprimir",
-    "bwToggle":         "Vista P/B",
-    "projectLine":      "Projeto № 2025-1-HR01-KA220-VET-000353056",
-    "disclaimer":       "Financiado pela União Europeia. No entanto, os pontos de vista e as opiniões expressas são as do(s) autor(es) e não refletem necessariamente as da União Europeia ou da Agência de Execução Europeia da Educação e da Cultura (EACEA). Nem a União Europeia nem a EACEA podem ser responsabilizadas por eles."
+    "timeNeeded": "Tempo necessário",
+    "resources": "Recursos necessários",
+    "introduction": "Introdução",
+    "projectLine": "Projeto № 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Financiado pela União Europeia. Os pontos de vista e as opiniões expressas são as do(s) autor(es) e não refletem necessariamente a posição da União Europeia ou da Agência de Execução Europeia da Educação e da Cultura (EACEA). Nem a União Europeia nem a EACEA podem ser responsabilizadas por essas opiniões.",
+    "page": "Página",
+    "of": "de",
+    "activity": "Atividade do aluno"
+  },
+  "w05": {
+    "worksheet": "Ficha de trabalho 05",
+    "title": "O que há dentro de uma lâmpada?",
+    "level": "BÁSICO",
+    "topic": "O que há dentro de uma lâmpada?",
+    "lo1": "Reconhecer os quatro principais tipos de lâmpadas domésticas.",
+    "lo2": "Identificar a potência e o tempo de vida útil dos tipos comuns de lâmpadas.",
+    "time": "60 min",
+    "resources": "Tabela de informações sobre lâmpadas (nesta ficha de trabalho); acesso a uma ou mais lâmpadas reais, se possível.",
+    "intro": "Nem todas as lâmpadas são iguais. Algumas ficam quentes, outras duram anos e algumas usam muito menos eletricidade. Nesta ficha de trabalho, vais observar quatro tipos comuns de lâmpadas e aprender as diferenças básicas entre elas.",
+    "theory": {
+      "title": "Teoria",
+      "intro1": "Todas as lâmpadas fazem o mesmo trabalho: transformam eletricidade em luz. Mas nem todas o fazem igualmente bem. Algumas lâmpadas desperdiçam muita eletricidade ao transformá-la também em calor. É por isso que uma lâmpada antiga fica quente após apenas um minuto, enquanto uma LED permanece fria.",
+      "intro2": "Existem quatro tipos de lâmpadas que verás com mais frequência em casa e na escola. Todas usam o mesmo casquilho elétrico, mas funcionam de maneiras completamente diferentes no interior.",
+      "bulbsTitle": "Os quatro tipos de lâmpadas",
+      "inc": {
+        "label": "Lâmpadas INCANDESCENTES (o tipo mais antigo)",
+        "body": "têm um fio de metal fino no interior. Quando a eletricidade passa pelo fio, ele fica tão quente que brilha em branco. A maior parte da energia transforma-se em calor, e não em luz. Estas lâmpadas já não são vendidas na maioria dos países da UE."
+      },
+      "hal": {
+        "label": "Lâmpadas de HALOGÉNEO",
+        "body": "são uma versão melhorada da lâmpada incandescente. Contêm uma pequena quantidade de gás halogéneo que faz com que o fio dure um pouco mais e brilhe um pouco mais. No entanto, ainda produzem maioritariamente calor."
+      },
+      "cfl": {
+        "label": "Lâmpadas FLUORESCENTES COMPACTAS (CFL)",
+        "body": "usam um tubo de vidro dobrado cheio de gás. A eletricidade faz o gás brilhar. Usam muito menos eletricidade do que as lâmpadas incandescentes, mas contêm uma pequena quantidade de mercúrio, por isso precisam de ser recicladas com cuidado."
+      },
+      "led": {
+        "label": "Lâmpadas LED (Díodo Emissor de Luz)",
+        "body": "usam um pequeno componente eletrónico que produz luz diretamente quando a eletricidade passa por ele. São as mais eficientes: convertem quase toda a eletricidade em luz e muito pouca em calor. Também duram 25 vezes mais do que uma lâmpada incandescente."
+      }
+    },
+    "worked": {
+      "title": "Exemplo resolvido — Como lês a tabela de informações das lâmpadas?",
+      "s1": "Olha para a linha Tempo de vida. O número indica quantas horas a lâmpada funciona antes de precisar de ser substituída.",
+      "s2": "Exemplo: uma lâmpada LED tem uma vida útil de 25.000 horas. Se a usares 5 horas por dia, são 25.000 ÷ 5 = 5.000 dias, o que dá cerca de 13 anos.",
+      "s3": "Olha para a linha Potência (Wattage). Isto indica quanta eletricidade a lâmpada usa a cada segundo que está ligada. Uma potência mais alta significa mais eletricidade.",
+      "s4": "Exemplo: uma lâmpada incandescente de 60 W usa 5 vezes mais eletricidade do que uma LED de 12 W para dar a mesma quantidade de luz."
+    },
+    "terms": {
+      "title": "Termos-chave",
+      "colTerm": "Termo",
+      "colDef": "Definição",
+      "t1term": "Lâmpada",
+      "t1def": "Uma fonte de luz que se enrosca ou encaixa num candeeiro.",
+      "t2term": "Tempo de vida",
+      "t2def": "O número de horas que uma lâmpada funciona antes de deixar de dar luz.",
+      "t3term": "Potência (W)",
+      "t3def": "Quanta eletricidade a lâmpada consome.",
+      "t4term": "Lúmenes (lm)",
+      "t4def": "Quanta luz a lâmpada produz (mais lúmenes = mais brilhante).",
+      "t5term": "LED",
+      "t5def": "Díodo Emissor de Luz — o tipo de lâmpada mais eficiente da atualidade."
+    },
+    "act1": {
+      "sub": "Reconhecer os quatro tipos de lâmpadas",
+      "intro": "Observa os quatro tipos de lâmpadas na tabela abaixo.",
+      "colInc": "Incandescente",
+      "colHal": "Halogéneo",
+      "colCfl": "Fluorescente compacta",
+      "colLed": "LED",
+      "rowLife": "Tempo de vida",
+      "rowPrice": "Preço por lâmpada",
+      "rowWatt": "Potência",
+      "q1": "Qual lâmpada tem o maior tempo de vida?",
+      "q2": "Qual lâmpada usa mais eletricidade (maior potência)?",
+      "q3": "Qual lâmpada usa menos eletricidade (menor potência)?",
+      "q4": "Qual lâmpada é a mais barata de comprar?",
+      "q5": "Todas as quatro lâmpadas dão aproximadamente a mesma quantidade de luz (850 lúmenes). Qual lâmpada escolherias para um quarto que usas todos os dias? Explica em uma frase porquê."
+    },
+    "act2": {
+      "sub": "Associa a lâmpada à descrição",
+      "intro": "Escreve a letra correspondente (A, B, C ou D) na linha em branco ao lado de cada tipo de lâmpada.",
+      "descA": "Usa um tubo enrolado cheio de gás; era popular antes dos LEDs.",
+      "descB": "A tecnologia mais recente; uso de energia muito baixo e longa vida útil.",
+      "descC": "A tecnologia mais antiga; um fio fino brilha quando a eletricidade passa.",
+      "descD": "Uma versão melhorada da incandescente; ligeiramente mais eficiente.",
+      "itemInc": "Lâmpada incandescente",
+      "itemHal": "Lâmpada de halogéneo",
+      "itemCfl": "Fluorescente compacta",
+      "itemLed": "LED"
+    },
+    "reflection": {
+      "title": "Reflexão",
+      "prompt": "Olha para as lâmpadas na tua casa. Quantas delas são LED? Se algumas não forem, quais substituirias primeiro e porquê?"
+    }
   }
 }

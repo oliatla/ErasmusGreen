@@ -1,0 +1,76 @@
+{
+  "_README": {
+    "purpose": "Translation reference for ws15.",
+    "language": "Default language: en.",
+    "instructions": "Copy this file as {lang}.json and translate the values. Keys (the left-hand side) must NEVER change — they map to data-i18n attributes in index.html."
+  },
+  "ui": {
+    "back": "← Back",
+    "language": "Language:",
+    "bwToggle": "B/W view",
+    "print": "🖨 Print",
+    "level": "Level:",
+    "topic": "Topic",
+    "learningOutcomes": "Learning outcomes",
+    "timeNeeded": "Time needed",
+    "resources": "Resources needed",
+    "introduction": "Introduction",
+    "projectLine": "Project № 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.",
+    "page": "Page",
+    "of": "of"
+  },
+  "w15": {
+    "worksheet": "Worksheet 15",
+    "title": "Efficient use of energy — Entertainment & Electronics: Desktop vs. Laptop",
+    "level": "BASIC",
+    "topic": "Computing — desktop vs. laptop energy use",
+    "lo1": "Compare energy usage of computing devices.",
+    "lo2": "Analyse efficiency vs. performance.",
+    "lo3": "Calculate operating costs over a year.",
+    "time": "45–60 min",
+    "res1": "Device specifications (from manufacturer label or website)",
+    "res2": "Calculator",
+    "intro": "Computers are essential for entertainment, learning and work, but their energy consumption varies greatly between desktops and laptops. In this worksheet you will look up the power rating of two devices, calculate their annual energy use and cost, and compare what a school could save by switching from desktops to laptops.",
+    "tasksTitle": "Activities and tasks for students",
+    "t1": {
+      "title": "Task 1 — Power comparison",
+      "intro": "Look up the power rating of a typical desktop PC and a typical laptop from a manufacturer datasheet, and fill in the table below.",
+      "col1": "Device",
+      "col2": "Power (W)",
+      "r1": "Desktop PC",
+      "r2": "Laptop"
+    },
+    "t2": {
+      "title": "Task 2 — Daily usage",
+      "intro": "Assume 6 hours of use per day. Calculate the yearly running hours.",
+      "unit": "hours/year"
+    },
+    "t3": {
+      "title": "Task 3 — Energy consumption",
+      "intro": "Use (Power × Hours) ÷ 1000 to convert to kWh/year for each device.",
+      "desktop": "Desktop:",
+      "laptop": "Laptop:"
+    },
+    "t4": {
+      "title": "Task 4 — Cost comparison",
+      "price": "Electricity price:",
+      "dt": "Desktop cost:",
+      "lp": "Laptop cost:",
+      "diff": "Difference:"
+    },
+    "t5": {
+      "title": "Task 5 — School scenario",
+      "intro": "A school replaces 20 desktops with laptops.",
+      "savings": "Total savings per year ="
+    },
+    "dyk": {
+      "title": "Did you know?",
+      "body": "Laptops typically use 60–80 % less energy than desktop computers. They’re designed to run from a battery, so every component — CPU, screen, drives — is engineered for low-power operation. Even when plugged in, that efficiency stays with you."
+    },
+    "reflection": {
+      "title": "Reflection",
+      "q": "When is a desktop still the better choice despite higher energy use? Think about gaming, video editing, scientific computing, server roles, repair-friendliness, and total lifetime."
+    }
+  }
+}

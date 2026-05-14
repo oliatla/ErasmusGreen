@@ -1,0 +1,156 @@
+{
+  "_README": {
+    "purpose": "Vertalingsreferentie voor ws03.",
+    "language": "Taal: nl.",
+    "instructions": "Kopieer dit bestand als {lang}.json en vertaal de waarden. Sleutels (links van de dubbele punt) mogen NOOIT veranderen — ze zijn gekoppeld aan data-i18n attributen in index.html."
+  },
+  "ui": {
+    "back": "← Terug",
+    "language": "Taal:",
+    "bwToggle": "Z/W-weergave",
+    "print": "🖨 Afdrukken",
+    "level": "Niveau:",
+    "topic": "Onderwerp",
+    "learningOutcomes": "Leerdoelen",
+    "timeNeeded": "Benodigde tijd",
+    "resources": "Benodigde materialen",
+    "introduction": "Inleiding",
+    "projectLine": "Project № 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Gefinancierd door de Europese Unie. De standpunten en meningen die worden uitgedrukt, zijn echter uitsluitend die van de auteur(s) en weerspiegelen niet noodzakelijkerwijs die van de Europese Unie of het Europees Uitvoerend Agentschap onderwijs en cultuur (EACEA). Noch de Europese Unie, noch het EACEA kan hiervoor verantwoordelijk worden gehouden.",
+    "page": "Pagina",
+    "of": "van",
+    "activity": "Leerlingactiviteit"
+  },
+  "w03": {
+    "worksheet": "Werkblad 03",
+    "title": "Energie- en waterefficiëntie van vaatwassers",
+    "level": "BASIS / GEMIDDELD",
+    "topic": "3.2 Energie- en waterefficiëntie van vaatwassers",
+    "lo": {
+      "tech": {
+        "body": "Leerlingen kunnen uitleggen hoe vaatwassers energie (water verwarmen) en water per cyclus verbruiken."
+      },
+      "math": {
+        "body": "Leerlingen berekenen jaarlijkse kosten op basis van realistische gebruiksscenario's."
+      },
+      "env": {
+        "body": "Leerlingen vergelijken het energie- en waterverbruik van verschillende vaatwasprogramma's."
+      },
+      "green": {
+        "body": "Leerlingen lezen energielabels, kiezen apparaatinstellingen, vergelijken jaarlijkse kosten van verschillende programma's en evalueren de milieu-impact."
+      }
+    },
+    "time": "60 min",
+    "resources": "Rekenmachine, elektriciteitstarief (bijv. 0,30 €/kWh), watertarief (bijv. 0,002 €/l), EU-energielabel voor een vaatwasser (van thuis of de website van de fabrikant).",
+    "intro": "Een moderne vaatwasser kan daadwerkelijk minder water verbruiken dan handmatig afwassen — maar alleen als hij correct is ingeladen en op het juiste programma draait. De keuze tussen een intensief programma van 70 °C en een ecoprogramma kan een aanzienlijk verschil maken voor uw elektriciteitsrekening en waterverbruik. In dit werkblad onderzoekt u deze verschillen en bepaalt u wanneer welk programma zinvol is.",
+    "theory": {
+      "title": "Theorie",
+      "intro": "Een vaatwasser gebruikt de meeste energie om water te verwarmen. Hij gebruikt ook een kleine hoeveelheid voor het droogproces (verwarmingselement).",
+      "formulaTitle": "Belangrijke formule voor waterverwarming",
+      "formulaNote": "Vereenvoudigd: ~0,05 kWh per liter per 10 °C temperatuurstijging.",
+      "intensive": {
+        "label": "Intensief programma (70 °C):",
+        "body": "Gebruikt meer water (18–20 l) en meer elektriciteit (1,5–2,0 kWh) — bedoeld voor potten en zwaar bevuilde vaat."
+      },
+      "auto": {
+        "label": "Auto-programma:",
+        "body": "Sensoren passen de temperatuur en duur aan — handig, maar vaak minder efficiënt dan Eco."
+      },
+      "eco": {
+        "label": "Eco-programma (50 °C):",
+        "body": "Lange cyclus (3–4 uur) maar een lagere temperatuur. Typisch: 0,8–1,0 kWh, 10–12 l water."
+      },
+      "hand": {
+        "label": "Vergelijking met handmatig afwassen:",
+        "body": "Een lopende kraan verbruikt 6–12 l water per minuut. 10 minuten afwassen met de kraan half open = 60–120 l — veel meer dan een vaatwasser."
+      },
+      "label": {
+        "label": "Ecolabel:",
+        "body": "Sinds 2021 hebben vaatwassers een EU-energielabel van A (beste) tot G. Het label toont: energie per cyclus (kWh), water per cyclus (l), geluidsniveau (dB) en programmaduur."
+      },
+      "half": {
+        "label": "Halve belading:",
+        "body": "Een halfvolle machine laten draaien verspilt energie en water. Een instelling voor een halve belading bespaart meestal 20–30 % op beide. Anders is wachten op een volle machine efficiënter."
+      },
+      "videos": "Voorgestelde video's voor een introductie over hoe vaatwassers werken en het verschil tussen snelle en eco-cycli:",
+      "video1": "Hoe werkt een vaatwasser eigenlijk?",
+      "video2": "Uitleg over de Eco-instelling van een vaatwasser"
+    },
+    "example": {
+      "title": "Uitgewerkt voorbeeld",
+      "intro": "Een huishouden zet de vaatwasser 250 keer per jaar aan.",
+      "intensive": "Intensief programma:",
+      "eco": "Eco-programma:",
+      "saving": "Besparing per cyclus:",
+      "annual": "Jaarlijkse besparing:"
+    },
+    "act1": {
+      "sub": "Vaatwasprogramma's vergelijken",
+      "colProg": "Programma",
+      "colTemp": "Watertemperatuur",
+      "colEnergy": "Energie per cyclus (kWh)",
+      "colWater": "Water per cyclus (l)",
+      "rowInt": "Intensief (70 °C)",
+      "rowAuto": "Auto",
+      "rowEco": "Eco (50 °C)",
+      "rowRinse": "Alleen spoelen (geen warmte)",
+      "rowYours": "Eco van uw machine",
+      "tariffs": "Elektriciteit: 0,30 €/kWh · Water: 0,003 €/L.",
+      "q1": "Hoe vaak zet uw huishouden de vaatwasser per jaar aan? ____ cycli/jaar.",
+      "q2": "Bereken de jaarlijkse kosten voor elk programma bij uw gebruiksfrequentie.",
+      "q3": "Hoeveel geld wordt er per jaar bespaard door Eco te gebruiken in plaats van Intensief?",
+      "q4": "Hoeveel water wordt er per jaar bespaard (in liters) bij uw gebruiksfrequentie?",
+      "q5": "Waarom duurt het Eco-programma meer dan 3 uur? Hint: denk aan verwarmingssnelheid en isolatie."
+    },
+    "act2": {
+      "sub": "Vaatwasser vs. handmatig afwassen",
+      "intro": "Iemand wast 12 minuten lang de vaat af met de hand met een kraan op 8 l/min. Het water wordt verwarmd door een elektrische boiler (0,05 kWh/l om op te warmen van 10 °C naar 40 °C).",
+      "q1": "Bereken de totale hoeveelheid water die is gebruikt voor het handmatig afwassen.",
+      "q2": "Bereken de benodigde energie om dat water te verwarmen (kWh).",
+      "q3": "Bereken de totale kosten voor handmatig afwassen (water + elektriciteit).",
+      "q4": "Vergelijk dit met de kosten van het Eco-programma uit Activiteit 1. Wat is goedkoper?",
+      "q5": "Voor welke soorten vaat is het intensieve programma gerechtvaardigd? Geef twee echte voorbeelden.",
+      "q6": "Als de schoolkantine op een schooldag (160 dagen/jaar) 10 vaatwascycli draait op het intensieve programma, bereken dan de jaarlijkse energiekosten. Herbereken dit als ze overstappen op Eco. Wat is de jaarlijkse besparing?",
+      "q7": "Zoek een EU-energielabel voor een vaatwasser. Wat is het verschil in jaarlijkse energie (kWh/jaar) tussen beoordeling A en E?"
+    },
+    "act3": {
+      "sub": "Koolstof- en watervoetafdruk",
+      "q1": "Bereken de CO₂-uitstoot van 365 intensieve cycli (gebruik 0,27 kg CO₂/kWh).",
+      "q2": "Hoe verlaagt overschakelen op Eco de jaarlijkse koolstofvoetafdruk in kg CO₂?",
+      "q3": "De waterkosten bedragen 0,003 €/l. Herbereken de jaarlijkse waterbesparing in euro's met dit tarief. Verandert dit het economische argument voor Eco?"
+    },
+    "peer": {
+      "title": "Tip van een medeleerling",
+      "dykTitle": "💡 Wist je dat?",
+      "dykBody": "Schraap af, niet afspoelen! Bij moderne vaatwassers is voorspoelen niet nodig.",
+      "q1": "Hoe verspilt voorspoelen water en energie?"
+    },
+    "reflection": {
+      "title": "Reflectie",
+      "prompt": "Wanneer zou handmatig afwassen efficiënter zijn dan een vaatwasser? Leg dit uit in je eigen woorden en verwijs naar je berekeningen in Activiteit 2."
+    },
+    "ee": {
+      "title": "Extra taken voor leerlingen elektrotechniek"
+    },
+    "ee1": {
+      "sub": "Blokschema van een vaatwasser",
+      "intro": "Teken een blokschema met: bedieningspaneel, verwarmingselement, circulatiepomp, afvoerpomp, NTC-thermistor, deurschakelaar, wasmiddeldoseerder en overstromingssensor. Geef de typische vermogens aan."
+    },
+    "ee2": {
+      "sub": "BLDC-motoren",
+      "intro": "Moderne vaatwassers gebruiken BLDC-motoren (borstelloze gelijkstroommotoren) voor de circulatiepomp. Noem drie voordelen van BLDC ten opzichte van universele motoren. Waarom zijn ze duurder?"
+    },
+    "ee3": {
+      "sub": "Regeling van de watertemperatuur",
+      "intro": "Hoe wordt de watertemperatuur in een vaatwasser geregeld? Leg de regelkring uit."
+    },
+    "ee4": {
+      "sub": "Veiligheidsvoorzieningen",
+      "intro": "Noem drie veiligheidsvoorzieningen in een vaatwasser en leg kort de functie van elke voorziening uit."
+    },
+    "ee5": {
+      "sub": "Spanningsdeler met NTC-thermistor",
+      "intro": "Een NTC-thermistor heeft een weerstand van 10 kΩ bij 25 °C en 2 kΩ bij 60 °C. Hij wordt gebruikt in een spanningsdeler met een 5 V-voeding en een vaste weerstand van 10 kΩ. Bereken de uitgangsspanning bij 25 °C en bij 60 °C. Hoe gebruikt het bedieningspaneel dit signaal?"
+    }
+  }
+}

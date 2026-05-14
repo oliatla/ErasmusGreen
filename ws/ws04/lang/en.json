@@ -1,263 +1,269 @@
 {
   "_README": {
-    "purpose": "Translations for worksheet 04 (Electrical Kitchen Appliances & Conservation of Energy).",
-    "language": "English — reference file. Original content authored by the Turkish partner.",
-    "instructions": "All other languages copy this file and translate the values. Keys (left of the colon) must never change. See translator-guide.html for full instructions."
+    "purpose": "Translation reference for ws04.",
+    "language": "Default language: en.",
+    "instructions": "Copy this file as {lang}.json and translate the values. Keys (the left-hand side) must NEVER change — they map to data-i18n attributes in index.html."
   },
-
-  "meta": {
-    "_comment": "Header block of the worksheet.",
+  "ui": {
+    "back": "← Back",
+    "language": "Language:",
+    "bwToggle": "B/W view",
+    "print": "🖨 Print",
+    "level": "Level:",
+    "topic": "Topic",
+    "learningOutcomes": "Learning outcomes",
+    "timeNeeded": "Time needed",
+    "resources": "Resources needed",
+    "projectLine": "Project № 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.",
+    "page": "Page",
+    "of": "of"
+  },
+  "w04": {
     "worksheet": "Worksheet 04",
-    "title":     "Electrical Kitchen Appliances & Conservation of Energy",
-    "level":     "BASIC",
-    "topic":     "Conservation of energy in electrical kitchen appliances — oven, refrigerator and dishwasher."
-  },
-
-  "learningOutcomes": {
-    "_comment": "Four bullet points in the structural table.",
+    "title": "Electrical Kitchen Appliances & Conservation of Energy",
+    "level": "BASIC",
+    "topic": "Conservation of energy in electrical kitchen appliances — oven, refrigerator and dishwasher.",
     "lo1": "State the Law of Conservation of Energy and identify the dominant energy transformation in each appliance.",
     "lo2": "Use the formulas P = V × I and E = P × t to calculate power and energy.",
     "lo3": "Distinguish resistive loads (cos φ = 1) from motor/compressor loads (cos φ < 1).",
-    "lo4": "Calculate the cost of running an appliance for a given time at a given electricity tariff."
-  },
-
-  "structural": {
-    "_comment": "Other rows of the structural table.",
-    "time":      "60 min",
-    "resources": "Calculator, electricity tariff (e.g. 0.30 €/kWh), appliance nameplate data (or manufacturer website)."
-  },
-
-  "electricalTheory": {
-    "_comment": "Page 1 — three sub-sections: Conservation of Energy, Basic Electrical Concepts and Power in AC Circuits.",
-    "sectionHeader": "Conservation of Energy & Electricity",
-
-    "consTitle": "Conservation of Energy",
-    "consBody":  "The Law of Conservation of Energy states that energy cannot be created or destroyed, only transformed. In kitchen appliances:",
-    "consB1":    "Electrical → Heat (oven, dishwasher)",
-    "consB2":    "Electrical → Mechanical → Cooling (refrigerator)",
-
-    "basicTitle": "Basic Electrical Concepts",
-    "basicB1":    "Power (P): Watt (W)",
-    "basicB2":    "Energy (E): kilowatt-hour (kWh)",
-    "basicB3":    "Voltage (V): Volt",
-    "basicB4":    "Current (I): Ampere",
-
-    "acTitle": "Power in AC Circuits",
-    "acB1":    "cos φ = 1 → resistive loads (oven heater)",
-    "acB2":    "cos φ < 1 → motors and compressors (refrigerator, dishwasher)"
-  },
-
-  "oven": {
-    "_comment": "Section 1 of the appliances — the electric oven (pages 2–3).",
-    "title": "1 — Electric Oven",
-
-    "howTitle":  "How It Works",
-    "howBody":   "An electric oven converts electrical energy into heat using heating elements.",
-    "howB1":     "Electric current flows through resistors.",
-    "howB2":     "Heat is generated (Joule effect).",
-    "howB3":     "Heat cooks food evenly.",
-
-    "physTitle": "Physical Explanation",
-    "physB1":    "Heat transfer: conduction + convection + radiation.",
-    "physB2":    "High temperature (up to 250 °C).",
-    "physB3":    "Closed insulated system.",
-
-    "structTitle": "Structure",
-    "structB1":    "Heating elements",
-    "structB2":    "Fan (in some ovens)",
-    "structB3":    "Thermostat",
-    "structB4":    "Insulation",
-
-    "ctrlTitle": "Controls",
-    "ctrlB1":    "Temperature control",
-    "ctrlB2":    "Timer",
-    "ctrlB3":    "Cooking modes",
-
-    "energyTitle":   "Energy Consumption",
-    "energyB1":      "Power: 2.5 kW",
-    "energyB2":      "1 hour → 2.5 kWh",
-    "energyFormula": "The electricity consumption is calculated with:",
-    "energyVarE":    "energy consumption (kWh)",
-    "energyVarP":    "power (kW)",
-    "energyVarT":    "time (hours)",
-
-    "calcTitle":  "Worked example — 2.5 kW oven for 1 hour",
-    "calcIntro":  "If electricity costs 0.30 €/kWh:",
-    "resultTitle":"📊 Result",
-    "resultBody": "A 2.5 kW oven running for 1 hour costs approximately 0.75 € (75 euro cents) in electricity."
-  },
-
-  "ovenTest": {
-    "_comment": "Quiz questions 1–5. The 'a/b/c/d' fields are the four options in order; the correct one is marked in the Answer Key.",
-    "title": "Oven test",
-
-    "q1text": "What effect produces heat in the oven?",
-    "q1a":    "Magnetic",
-    "q1b":    "Joule effect",
-    "q1c":    "Light",
-    "q1d":    "Pressure",
-
-    "q2text": "Main energy conversion in an oven:",
-    "q2a":    "Mechanical → Heat",
-    "q2b":    "Electrical → Heat",
-    "q2c":    "Heat → Electrical",
-    "q2d":    "Chemical → Heat",
-
-    "q3text": "Oven temperature can reach:",
-    "q3a":    "50 °C",
-    "q3b":    "100 °C",
-    "q3c":    "250 °C",
-    "q3d":    "500 °C",
-
-    "q4text": "Energy formula:",
-
-    "q5text": "cos φ in a heating element is:"
-  },
-
-  "fridge": {
-    "_comment": "Section 2 — the refrigerator (page 4).",
-    "title": "2 — Refrigerator",
-
-    "howTitle":  "How It Works",
-    "howBody":   "A refrigerator removes heat from inside and releases it outside.",
-    "howB1":     "A compressor circulates refrigerant.",
-    "howB2":     "Heat is absorbed inside the cabinet.",
-    "howB3":     "Heat is released outside (through the back coils).",
-
-    "physTitle": "Physical Explanation",
-    "physB1":    "Uses a thermodynamic cycle.",
-    "physB2":    "Phase change (liquid ↔ gas).",
-    "physB3":    "Continuous operation.",
-
-    "structTitle": "Structure",
-    "structB1":    "Compressor",
-    "structB2":    "Condenser",
-    "structB3":    "Evaporator",
-    "structB4":    "Expansion valve",
-
-    "energyTitle": "Energy Consumption",
-    "energyB1":    "Power: 0.2 kW",
-    "energyB2":    "24 hours → 4.8 kWh (running continuously)"
-  },
-
-  "fridgeTest": {
-    "_comment": "Quiz questions 6–10.",
-    "title": "Refrigerator test",
-
-    "q6text": "The main function of a refrigerator is to:",
-    "q6a":    "Produce heat",
-    "q6b":    "Remove heat",
-    "q6c":    "Produce light",
-    "q6d":    "Increase pressure",
-
-    "q7text": "Key component of a refrigerator:",
-    "q7a":    "Resistor",
-    "q7b":    "Compressor",
-    "q7c":    "Lamp",
-    "q7d":    "Switch",
-
-    "q8text": "Energy conversion:",
-    "q8a":    "Electrical → Cooling",
-    "q8b":    "Heat → Electrical",
-    "q8c":    "Mechanical → Light",
-    "q8d":    "Chemical → Heat",
-
-    "q9text": "cos φ of a refrigerator compressor is:",
-    "q9c":    "Less than 1",
-    "q9d":    "Greater than 2",
-
-    "q10text": "A refrigerator works:",
-    "q10a":    "Once",
-    "q10b":    "Continuously",
-    "q10c":    "Only at night",
-    "q10d":    "Manually"
-  },
-
-  "dish": {
-    "_comment": "Section 3 — the dishwasher (page 5).",
-    "title": "3 — Dishwasher",
-
-    "howTitle":  "How It Works",
-    "howBody":   "A dishwasher cleans dishes using hot water and mechanical action.",
-    "howB1":     "Water is heated.",
-    "howB2":     "A pump sprays the water.",
-    "howB3":     "Detergent removes dirt.",
-
-    "physTitle": "Physical Explanation",
-    "physB1":    "Heat improves the cleaning action.",
-    "physB2":    "Water pressure removes food residue.",
-    "physB3":    "A combination of thermal + mechanical energy.",
-
-    "structTitle": "Structure",
-    "structB1":    "Heating element",
-    "structB2":    "Pump motor",
-    "structB3":    "Spray arms",
-    "structB4":    "Filters",
-
-    "ctrlTitle": "Controls",
-    "ctrlB1":    "Program selection",
-    "ctrlB2":    "Timer",
-    "ctrlB3":    "Temperature control",
-
-    "energyTitle": "Energy Consumption",
-    "energyB1":    "Power: 1.5 kW",
-    "energyB2":    "1 hour → 1.5 kWh",
-
-    "calcTitle":  "Worked example — 1.5 kW dishwasher for 1 hour",
-    "calcIntro":  "If electricity costs 0.30 €/kWh:",
-    "resultTitle":"📊 Result",
-    "resultBody": "A 1.5 kW dishwasher running for 1 hour costs approximately 0.45 € (45 euro cents) in electricity."
-  },
-
-  "dishTest": {
-    "_comment": "Quiz questions 11–15.",
-    "title": "Dishwasher test",
-
-    "q11text": "What heats the water in a dishwasher?",
-    "q11a":    "Motor",
-    "q11b":    "Heating element",
-    "q11c":    "Fan",
-    "q11d":    "Pipe",
-
-    "q12text": "What moves the water around inside?",
-    "q12a":    "Compressor",
-    "q12b":    "Pump",
-    "q12c":    "Sensor",
-    "q12d":    "Valve",
-
-    "q13text": "Energy conversion:",
-    "q13a":    "Electrical → Heat + Mechanical",
-    "q13b":    "Heat → Electrical",
-    "q13c":    "Light → Heat",
-    "q13d":    "Chemical → Light",
-
-    "q14text": "cos φ of a dishwasher (motor + heater) is:",
-    "q14b":    "Less than 1",
-
-    "q15text": "A dishwasher uses:",
-    "q15a":    "Only heat",
-    "q15b":    "Only motion",
-    "q15c":    "Heat and motion",
-    "q15d":    "Only light"
-  },
-
-  "answerKey": {
-    "_comment": "Final answer key at the bottom of page 6. Lines are fixed (they reference the question numbers), so only the heading translates.",
-    "title": "Answer key"
-  },
-
-  "ui": {
-    "_comment": "Generic interface labels reused across worksheets.",
-    "level":            "Level:",
-    "topic":            "Topic",
-    "learningOutcomes": "Learning outcomes",
-    "timeNeeded":       "Time needed",
-    "resources":        "Resources needed",
-    "page":             "Page",
-    "of":               "of",
-    "print":            "🖨 Print",
-    "bwToggle":         "B/W view",
-    "projectLine":      "Project № 2025-1-HR01-KA220-VET-000353056",
-    "disclaimer":       "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them."
+    "lo4": "Calculate the cost of running an appliance for a given time at a given electricity tariff.",
+    "time": "60 min",
+    "resources": "Calculator, electricity tariff (e.g. 0.30 €/kWh), appliance nameplate data (or manufacturer website).",
+    "energySection": "Conservation of Energy & Electricity",
+    "cons": {
+      "title": "Conservation of Energy",
+      "body": "The Law of Conservation of Energy states that energy cannot be created or destroyed, only transformed. In kitchen appliances:",
+      "b1": "Electrical → Heat (oven, dishwasher)",
+      "b2": "Electrical → Mechanical → Cooling (refrigerator)"
+    },
+    "basic": {
+      "title": "Basic Electrical Concepts",
+      "b1": "Power (P): Watt (W)",
+      "b2": "Energy (E): kilowatt-hour (kWh)",
+      "b3": "Voltage (V): Volt",
+      "b4": "Current (I): Ampere"
+    },
+    "ac": {
+      "title": "Power in AC Circuits",
+      "b1": "cos φ = 1 → resistive loads (oven heater)",
+      "b2": "cos φ < 1 → motors and compressors (refrigerator, dishwasher)"
+    },
+    "oven": {
+      "title": "1 — Electric Oven",
+      "how": {
+        "title": "How It Works",
+        "body": "An electric oven converts electrical energy into heat using heating elements.",
+        "b1": "Electric current flows through resistors.",
+        "b2": "Heat is generated (Joule effect).",
+        "b3": "Heat cooks food evenly."
+      },
+      "phys": {
+        "title": "Physical Explanation",
+        "b1": "Heat transfer: conduction + convection + radiation.",
+        "b2": "High temperature (up to 250 °C).",
+        "b3": "Closed insulated system."
+      },
+      "struct": {
+        "title": "Structure",
+        "b1": "Heating elements",
+        "b2": "Fan (in some ovens)",
+        "b3": "Thermostat",
+        "b4": "Insulation"
+      },
+      "ctrl": {
+        "title": "Controls",
+        "b1": "Temperature control",
+        "b2": "Timer",
+        "b3": "Cooking modes"
+      },
+      "energy": {
+        "title": "Energy Consumption",
+        "b1": "Power: 2.5 kW",
+        "b2": "1 hour → 2.5 kWh",
+        "formula": "The electricity consumption is calculated with:",
+        "varE": "energy consumption (kWh)",
+        "varP": "power (kW)",
+        "varT": "time (hours)"
+      },
+      "calc": {
+        "title": "Worked example — 2.5 kW oven for 1 hour",
+        "intro": "If electricity costs 0.30 €/kWh:",
+        "resultTitle": "📊 Result",
+        "resultBody": "A 2.5 kW oven running for 1 hour costs approximately 0.75 € (75 euro cents) in electricity."
+      },
+      "test": {
+        "title": "Oven test"
+      },
+      "q1": {
+        "text": "What effect produces heat in the oven?",
+        "a": "Magnetic",
+        "b": "Joule effect",
+        "c": "Light",
+        "d": "Pressure"
+      },
+      "q2": {
+        "text": "Main energy conversion in an oven:",
+        "a": "Mechanical → Heat",
+        "b": "Electrical → Heat",
+        "c": "Heat → Electrical",
+        "d": "Chemical → Heat"
+      },
+      "q3": {
+        "text": "Oven temperature can reach:",
+        "a": "50 °C",
+        "b": "100 °C",
+        "c": "250 °C",
+        "d": "500 °C"
+      },
+      "q4": {
+        "text": "Energy formula:"
+      },
+      "q5": {
+        "text": "cos φ in a heating element is:"
+      }
+    },
+    "fridge": {
+      "title": "2 — Refrigerator",
+      "how": {
+        "title": "How It Works",
+        "body": "A refrigerator removes heat from inside and releases it outside.",
+        "b1": "A compressor circulates refrigerant.",
+        "b2": "Heat is absorbed inside the cabinet.",
+        "b3": "Heat is released outside (through the back coils)."
+      },
+      "phys": {
+        "title": "Physical Explanation",
+        "b1": "Uses a thermodynamic cycle.",
+        "b2": "Phase change (liquid ↔ gas).",
+        "b3": "Continuous operation."
+      },
+      "struct": {
+        "title": "Structure",
+        "b1": "Compressor",
+        "b2": "Condenser",
+        "b3": "Evaporator",
+        "b4": "Expansion valve"
+      },
+      "energy": {
+        "title": "Energy Consumption",
+        "b1": "Power: 0.2 kW",
+        "b2": "24 hours → 4.8 kWh (running continuously)"
+      },
+      "test": {
+        "title": "Refrigerator test"
+      },
+      "q6": {
+        "text": "The main function of a refrigerator is to:",
+        "a": "Produce heat",
+        "b": "Remove heat",
+        "c": "Produce light",
+        "d": "Increase pressure"
+      },
+      "q7": {
+        "text": "Key component of a refrigerator:",
+        "a": "Resistor",
+        "b": "Compressor",
+        "c": "Lamp",
+        "d": "Switch"
+      },
+      "q8": {
+        "text": "Energy conversion:",
+        "a": "Electrical → Cooling",
+        "b": "Heat → Electrical",
+        "c": "Mechanical → Light",
+        "d": "Chemical → Heat"
+      },
+      "q9": {
+        "text": "cos φ of a refrigerator compressor is:",
+        "c": "Less than 1",
+        "d": "Greater than 2"
+      },
+      "q10": {
+        "text": "A refrigerator works:",
+        "a": "Once",
+        "b": "Continuously",
+        "c": "Only at night",
+        "d": "Manually"
+      }
+    },
+    "dish": {
+      "title": "3 — Dishwasher",
+      "how": {
+        "title": "How It Works",
+        "body": "A dishwasher cleans dishes using hot water and mechanical action.",
+        "b1": "Water is heated.",
+        "b2": "A pump sprays the water.",
+        "b3": "Detergent removes dirt."
+      },
+      "phys": {
+        "title": "Physical Explanation",
+        "b1": "Heat improves the cleaning action.",
+        "b2": "Water pressure removes food residue.",
+        "b3": "A combination of thermal + mechanical energy."
+      },
+      "struct": {
+        "title": "Structure",
+        "b1": "Heating element",
+        "b2": "Pump motor",
+        "b3": "Spray arms",
+        "b4": "Filters"
+      },
+      "ctrl": {
+        "title": "Controls",
+        "b1": "Program selection",
+        "b2": "Timer",
+        "b3": "Temperature control"
+      },
+      "energy": {
+        "title": "Energy Consumption",
+        "b1": "Power: 1.5 kW",
+        "b2": "1 hour → 1.5 kWh"
+      },
+      "calc": {
+        "title": "Worked example — 1.5 kW dishwasher for 1 hour",
+        "intro": "If electricity costs 0.30 €/kWh:",
+        "resultTitle": "📊 Result",
+        "resultBody": "A 1.5 kW dishwasher running for 1 hour costs approximately 0.45 € (45 euro cents) in electricity."
+      },
+      "test": {
+        "title": "Dishwasher test"
+      },
+      "q11": {
+        "text": "What heats the water in a dishwasher?",
+        "a": "Motor",
+        "b": "Heating element",
+        "c": "Fan",
+        "d": "Pipe"
+      },
+      "q12": {
+        "text": "What moves the water around inside?",
+        "a": "Compressor",
+        "b": "Pump",
+        "c": "Sensor",
+        "d": "Valve"
+      },
+      "q13": {
+        "text": "Energy conversion:",
+        "a": "Electrical → Heat + Mechanical",
+        "b": "Heat → Electrical",
+        "c": "Light → Heat",
+        "d": "Chemical → Light"
+      },
+      "q14": {
+        "text": "cos φ of a dishwasher (motor + heater) is:",
+        "b": "Less than 1"
+      },
+      "q15": {
+        "text": "A dishwasher uses:",
+        "a": "Only heat",
+        "b": "Only motion",
+        "c": "Heat and motion",
+        "d": "Only light"
+      }
+    },
+    "answerKey": {
+      "title": "Answer key"
+    }
   }
 }

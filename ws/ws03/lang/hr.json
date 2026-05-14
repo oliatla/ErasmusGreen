@@ -1,0 +1,156 @@
+{
+  "_README": {
+    "purpose": "Referentni prijevod za ws03.",
+    "language": "Jezik: hr.",
+    "instructions": "Kopirajte ovu datoteku kao {lang}.json i prevedite vrijednosti. Ključevi (lijeva strana) NIKADA se ne smiju mijenjati — oni mapiraju data-i18n atribute u index.html."
+  },
+  "ui": {
+    "back": "← Natrag",
+    "language": "Jezik:",
+    "bwToggle": "C/B prikaz",
+    "print": "🖨 Ispis",
+    "level": "Razina:",
+    "topic": "Tema",
+    "learningOutcomes": "Ishodi učenja",
+    "timeNeeded": "Potrebno vrijeme",
+    "resources": "Potrebni resursi",
+    "introduction": "Uvod",
+    "projectLine": "Projekt № 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Financira Europska unija. Ipak, izraženi stavovi i mišljenja isključivo su stavovi i mišljenja autora i ne odražavaju nužno stavove i mišljenja Europske unije ili Europske izvršne agencije za obrazovanje i kulturu (EACEA). Ni Europska unija ni EACEA ne mogu se smatrati odgovornima za njih.",
+    "page": "Stranica",
+    "of": "od",
+    "activity": "Aktivnost za učenike"
+  },
+  "w03": {
+    "worksheet": "Radni list 03",
+    "title": "Energetska i vodna učinkovitost perilica posuđa",
+    "level": "OSNOVNO / SREDNJE",
+    "topic": "3.2 Energetska i vodna učinkovitost perilica posuđa",
+    "lo": {
+      "tech": {
+        "body": "Učenici mogu objasniti kako perilice posuđa troše energiju (grijanje vode) i vodu po ciklusu."
+      },
+      "math": {
+        "body": "Učenici računaju godišnje troškove koristeći realistične scenarije uporabe."
+      },
+      "env": {
+        "body": "Učenici uspoređuju potrošnju energije i vode po programima pranja."
+      },
+      "green": {
+        "body": "Učenici čitaju energetske naljepnice, biraju postavke uređaja, uspoređuju godišnje troškove različitih programa i procjenjuju utjecaj na okoliš."
+      }
+    },
+    "time": "60 min",
+    "resources": "Kalkulator, tarifa za struju (npr. 0,30 €/kWh), tarifa za vodu (npr. 0,002 €/l), EU energetska naljepnica za perilicu posuđa (od kuće ili s web-stranice proizvođača).",
+    "intro": "Moderna perilica posuđa može zapravo koristiti manje vode od ručnog pranja — ali samo ako je ispravno napunjena i pokrenuta na pravom programu. Odabir između intenzivnog programa na 70 °C i eko programa može napraviti značajnu razliku na vašem računu za struju i potrošnji vode. U ovom radnom listu istražit ćete te razlike i odlučiti kada koji program ima smisla.",
+    "theory": {
+      "title": "Teorija",
+      "intro": "Perilica posuđa koristi većinu svoje energije za zagrijavanje vode. Također koristi malu količinu za ciklus sušenja (grijač).",
+      "formulaTitle": "Ključna formula za zagrijavanje vode",
+      "formulaNote": "Pojednostavljeno: ~0,05 kWh po litri za porast temperature od 10 °C.",
+      "intensive": {
+        "label": "Intenzivni program (70 °C):",
+        "body": "Koristi više vode (18–20 l) i više električne energije (1,5–2,0 kWh) — namijenjeno za lonce i jako zaprljano posuđe."
+      },
+      "auto": {
+        "label": "Auto program:",
+        "body": "Senzori prilagođavaju temperaturu i trajanje — praktično, ali često manje učinkovito od Eko programa."
+      },
+      "eco": {
+        "label": "Eko program (50 °C):",
+        "body": "Dugi ciklus (3–4 sata), ali niža temperatura. Tipično: 0,8–1,0 kWh, 10–12 l vode."
+      },
+      "hand": {
+        "label": "Usporedba s ručnim pranjem:",
+        "body": "Tekuća slavina koristi 6–12 l vode u minuti. Pranje posuđa 10 minuta s napola otvorenom slavinom = 60–120 l — znatno više od perilice posuđa."
+      },
+      "label": {
+        "label": "Eko naljepnica:",
+        "body": "Od 2021. godine perilice posuđa nose EU energetsku naljepnicu s ocjenom od A (najbolje) do G. Naljepnica prikazuje: energiju po ciklusu (kWh), vodu po ciklusu (l), razinu buke (dB) i trajanje programa."
+      },
+      "half": {
+        "label": "Pola punjenja:",
+        "body": "Pokretanje poluprazne mašine rasipa energiju i vodu. Postavka pola punjenja obično štedi 20–30 % na oboje. Inače, čekanje na potpuno punjenje je učinkovitije."
+      },
+      "videos": "Predloženi videozapisi za uvod u rad perilica posuđa i razliku između brzih i eko ciklusa:",
+      "video1": "Kako zapravo radi perilica posuđa?",
+      "video2": "Objašnjenje eko postavke perilice posuđa"
+    },
+    "example": {
+      "title": "Riješeni primjer",
+      "intro": "Kućanstvo koristi perilicu posuđa 250 puta godišnje.",
+      "intensive": "Intenzivni program:",
+      "eco": "Eko program:",
+      "saving": "Ušteda po ciklusu:",
+      "annual": "Godišnja ušteda:"
+    },
+    "act1": {
+      "sub": "Usporedba programa perilice posuđa",
+      "colProg": "Program",
+      "colTemp": "Temp. vode",
+      "colEnergy": "Energija po ciklusu (kWh)",
+      "colWater": "Voda po ciklusu (l)",
+      "rowInt": "Intenzivni (70 °C)",
+      "rowAuto": "Auto",
+      "rowEco": "Eko (50 °C)",
+      "rowRinse": "Samo ispiranje (bez grijanja)",
+      "rowYours": "Eko program vašeg uređaja",
+      "tariffs": "Struja: 0,30 €/kWh · Voda: 0,003 €/L.",
+      "q1": "Koliko puta vaše kućanstvo koristi perilicu posuđa godišnje? ____ ciklusa/godišnje.",
+      "q2": "Izračunajte godišnji trošak za svaki program pri vašoj učestalosti korištenja.",
+      "q3": "Koliko se novca uštedi godišnje korištenjem Eko programa umjesto Intenzivnog?",
+      "q4": "Koliko se vode uštedi godišnje (u litrama) pri vašoj učestalosti korištenja?",
+      "q5": "Zašto Eko program traje više od 3 sata? Savjet: razmislite o brzini zagrijavanja i izolaciji."
+    },
+    "act2": {
+      "sub": "Perilica posuđa naspram ručnog pranja",
+      "intro": "Osoba ručno pere posuđe 12 minuta uz protok slavine od 8 l/min. Voda se grije električnim bojlerom (0,05 kWh/l za zagrijavanje s 10 °C na 40 °C).",
+      "q1": "Izračunajte ukupnu količinu vode potrošene za ručno pranje.",
+      "q2": "Izračunajte energiju potrebnu za zagrijavanje te vode (kWh).",
+      "q3": "Izračunajte ukupni trošak ručnog pranja (voda + struja).",
+      "q4": "Usporedite to s troškom Eko programa iz Aktivnosti 1. Što je jeftinije?",
+      "q5": "Za koje se vrste punjenja opravdava intenzivni program? Navedite dva stvarna primjera.",
+      "q6": "Ako školska kantina pokreće 10 ciklusa perilice posuđa po školskom danu (160 dana/godišnje) na intenzivnom programu, izračunajte godišnji trošak energije. Zatim ponovno izračunajte ako prijeđu na Eko. Kolika je godišnja ušteda?",
+      "q7": "Pronađite EU energetsku naljepnicu za perilicu posuđa. Kolika je razlika u godišnjoj potrošnji energije (kWh/godina) između ocjene A i E?"
+    },
+    "act3": {
+      "sub": "Ugljični i vodeni otisak",
+      "q1": "Izračunajte emisije CO₂ za 365 intenzivnih ciklusa (koristite 0,27 kg CO₂/kWh).",
+      "q2": "Kako prijelaz na Eko smanjuje godišnji ugljični otisak u kg CO₂?",
+      "q3": "Cijena vode je 0,003 €/l. Ponovno izračunajte godišnju uštedu vode u eurima koristeći ovu tarifu. Mijenja li to ekonomski argument za Eko program?"
+    },
+    "peer": {
+      "title": "Savjet od vršnjaka",
+      "dykTitle": "💡 Jeste li znali?",
+      "dykBody": "Sastružite, nemojte ispirati! Moderne perilice posuđa ne zahtijevaju pred-ispiranje.",
+      "q1": "Kako pred-ispiranje rasipa vodu i energiju?"
+    },
+    "reflection": {
+      "title": "Razmišljanje",
+      "prompt": "Kada bi ručno pranje bilo učinkovitije od perilice posuđa? Objasnite svojim riječima i pozovite se na svoje izračune iz Aktivnosti 2."
+    },
+    "ee": {
+      "title": "Dodatni zadaci za učenike elektrotehnike"
+    },
+    "ee1": {
+      "sub": "Blok dijagram perilice posuđa",
+      "intro": "Nacrtajte blok dijagram koji prikazuje: upravljačku ploču, grijač, cirkulacijsku pumpu, odvodnu pumpu, NTC termistor, prekidač za bravu na vratima, dozator deterdženta i senzor zaštite od poplave. Navedite tipične nazivne snage."
+    },
+    "ee2": {
+      "sub": "BLDC motori",
+      "intro": "Moderne perilice posuđa koriste BLDC (beskontaktne istosmjerne) motore za cirkulacijsku pumpu. Navedite tri prednosti BLDC motora nad univerzalnim motorima. Zašto su skuplji?"
+    },
+    "ee3": {
+      "sub": "Regulacija temperature vode",
+      "intro": "Kako se regulira temperatura vode u perilici posuđa? Objasnite upravljačku petlju."
+    },
+    "ee4": {
+      "sub": "Sigurnosni uređaji",
+      "intro": "Navedite tri sigurnosna uređaja u perilici posuđa i ukratko objasnite ulogu svakog od njih."
+    },
+    "ee5": {
+      "sub": "Djelitelj napona s NTC termistorom",
+      "intro": "NTC termistor ima otpor od 10 kΩ pri 25 °C i 2 kΩ pri 60 °C. Koristi se u djelitelju napona s napajanjem od 5 V i fiksnim otpornikom od 10 kΩ. Izračunajte izlazni napon pri 25 °C i pri 60 °C. Kako upravljačka ploča koristi taj signal?"
+    }
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "_README": {
+    "purpose": "Þýðingarviðmið fyrir ws03.",
+    "language": "Tungumál: is.",
+    "instructions": "Afritaðu þessa skrá sem {lang}.json og þýddu gildin. Lyklar (vinstra megin við tvípunkt) mega ALDREI breytast — þeir tengjast data-i18n eigindum í index.html."
+  },
+  "ui": {
+    "back": "← Til baka",
+    "language": "Tungumál:",
+    "bwToggle": "Svart/Hvítt sýn",
+    "print": "🖨 Prenta",
+    "level": "Stig:",
+    "topic": "Viðfangsefni",
+    "learningOutcomes": "Hæfniviðmið",
+    "timeNeeded": "Tími sem þarf",
+    "resources": "Gögn og búnaður",
+    "introduction": "Inngangur",
+    "projectLine": "Verkefni № 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Styrkt af Evrópusambandinu. Skoðanir og viðhorf sem koma fram eru þó eingöngu höfundar/höfunda og endurspegla ekki endilega skoðanir Evrópusambandsins eða Framkvæmdastofnunar Evrópusambandsins um menntun og menningu (EACEA). Hvorki Evrópusambandið né EACEA bera ábyrgð á þeim.",
+    "page": "Síða",
+    "of": "af",
+    "activity": "Nemendaverkefni"
+  },
+  "w03": {
+    "worksheet": "Verkefnablað 03",
+    "title": "Orku- og vatnsnýtni uppþvottavéla",
+    "level": "GRUNNSTIG / MIÐSTIG",
+    "topic": "3.2 Orku- og vatnsnýtni uppþvottavéla",
+    "lo": {
+      "tech": {
+        "body": "Nemendur geta útskýrt hvernig uppþvottavélar nota orku (við að hita vatn) og vatn í hverjum þvotti."
+      },
+      "math": {
+        "body": "Nemendur reikna út árlegan kostnað með því að nota raunhæfar sviðsmyndir af notkun."
+      },
+      "env": {
+        "body": "Nemendur bera saman orku- og vatnsnotkun mismunandi þvottakerfa í uppþvottavélum."
+      },
+      "green": {
+        "body": "Nemendur lesa orkumerkingar, velja stillingar á heimilistækjum, bera saman árlegan kostnað mismunandi kerfa og meta umhverfisáhrif."
+      }
+    },
+    "time": "60 mín",
+    "resources": "Reiknivél, raforkuverð (t.d. 0,30 €/kWh), vatnsverð (t.d. 0,002 €/l), ESB orkumerking fyrir uppþvottavél (að heiman eða af vefsíðu framleiðanda).",
+    "intro": "Nútíma uppþvottavél getur í raun notað minna vatn en uppþvottur í höndunum — en aðeins ef henni er raðað rétt og hún stillt á rétt kerfi. Valið á milli 70 °C kraftkerfis og umhverfiskerfis (Eco) getur haft veruleg áhrif á rafmagnsreikninginn þinn og vatnsnotkun. Á þessu verkefnablaði munt þú skoða þennan mun og meta hvenær ástæða er til að nota hvert kerfi fyrir sig.",
+    "theory": {
+      "title": "Fræði",
+      "intro": "Uppþvottavél notar megnið af orkunni í að hita vatn. Hún notar einnig litla orku við þurrkun (hitagjafi).",
+      "formulaTitle": "Grunnformúla fyrir vatnshitun",
+      "formulaNote": "Einfölduð: ~0,05 kWh á hvern lítra til að hækka hitastig um 10 °C.",
+      "intensive": {
+        "label": "Kraftkerfi (70 °C):",
+        "body": "Notar meira vatn (18–20 l) og meira rafmagn (1,5–2,0 kWh) — ætlað fyrir potta og mjög skítugt leirtau."
+      },
+      "auto": {
+        "label": "Sjálfvirkt kerfi:",
+        "body": "Skynjarar stilla hitastig og lengd þvotts — þægilegt en oft minna nýtið en Eco-kerfi."
+      },
+      "eco": {
+        "label": "Umhverfiskerfi / Eco (50 °C):",
+        "body": "Langur þvottatími (3–4 klukkustundir) en lægra hitastig. Dæmigert: 0,8–1,0 kWh, 10–12 l af vatni."
+      },
+      "hand": {
+        "label": "Samanburður við uppþvott í höndunum:",
+        "body": "Skrúfað frá krana notar um 6–12 l af vatni á mínútu. Uppþvottur í 10 mínútur með kranann hálfopinn = 60–120 l — mun meira en uppþvottavél notar."
+      },
+      "label": {
+        "label": "Orkumerking:",
+        "body": "Frá árinu 2021 bera uppþvottavélar ESB orkumerkingu frá A (best) til G. Merkingin sýnir: orkunotkun í hverjum þvotti (kWh), vatnsnotkun í hverjum þvotti (l), hljóðstig (dB) og lengd þvottakerfis."
+      },
+      "half": {
+        "label": "Hálf vél:",
+        "body": "Að setja hálfa vél í gang sóar orku og vatni. Stilling fyrir hálfa vél sparar venjulega um 20–30 % í hvoru tveggja. Annars er mun nýtnara að bíða eftir að vélin verði full."
+      },
+      "videos": "Tillögur að myndböndum um hvernig uppþvottavélar virka og muninn á flýtikerfum og umhverfiskerfum:",
+      "video1": "Hvernig virkar uppþvottavél í raun?",
+      "video2": "Eco stilling uppþvottavéla útskýrð"
+    },
+    "example": {
+      "title": "Sýnidæmi",
+      "intro": "Heimili notar uppþvottavélina 250 sinnum á ári.",
+      "intensive": "Kraftkerfi:",
+      "eco": "Umhverfiskerfi (Eco):",
+      "saving": "Sparnaður í hverjum þvotti:",
+      "annual": "Árlegur sparnaður:"
+    },
+    "act1": {
+      "sub": "Samanburður á þvottakerfum",
+      "colProg": "Kerfi",
+      "colTemp": "Hitastig vatns",
+      "colEnergy": "Orka í hverjum þvotti (kWh)",
+      "colWater": "Vatn í hverjum þvotti (l)",
+      "rowInt": "Kraftkerfi (70 °C)",
+      "rowAuto": "Sjálfvirkt (Auto)",
+      "rowEco": "Umhverfiskerfi (50 °C)",
+      "rowRinse": "Aðeins skolun (engin hitun)",
+      "rowYours": "Eco-kerfi þinnar vélar",
+      "tariffs": "Rafmagn: 0,30 €/kWh · Vatn: 0,003 €/L.",
+      "q1": "Hversu oft setur þitt heimili uppþvottavélina af stað á ári? ____ skipti/ári.",
+      "q2": "Reiknaðu út árlegan kostnað hvers kerfis miðað við ykkar notkun.",
+      "q3": "Hversu mikill peningur sparast á ári með því að nota Eco í stað Kraftkerfis?",
+      "q4": "Hversu mikið vatn sparast á ári (í lítrum) miðað við ykkar notkun?",
+      "q5": "Hvers vegna tekur Eco kerfið yfir 3 klukkustundir? Vísbending: hugsaðu um upphitunarhraða og einangrun."
+    },
+    "act2": {
+      "sub": "Uppþvottavél gegn uppþvotti í höndunum",
+      "intro": "Einstaklingur vaskar upp í höndunum í 12 mínútur með kranann stilltan á 8 l/mín. Vatnið er hitað með rafmagnshitara (0,05 kWh/l til að hita úr 10 °C í 40 °C).",
+      "q1": "Reiknaðu heildarvatnsnotkun við að vaska upp í höndunum.",
+      "q2": "Reiknaðu þá orku sem þarf til að hita þetta vatn (kWh).",
+      "q3": "Reiknaðu heildarkostnað við uppþvottinn (vatn + rafmagn).",
+      "q4": "Berðu saman við kostnað Eco kerfisins úr Verkefni 1. Hvort er ódýrara?",
+      "q5": "Fyrir hvers konar uppþvott er réttlætanlegt að nota kraftkerfið? Nefndu tvö raunveruleg dæmi.",
+      "q6": "Ef mötuneyti skólans keyrir 10 þvotta í uppþvottavél á dag (160 dagar/ári) á kraftkerfi, reiknaðu árlegan orkukostnað. Endurreiknaðu svo kostnaðinn ef þau skipta yfir í Eco. Hver er árlegur sparnaður?",
+      "q7": "Finndu ESB orkumerkingu fyrir uppþvottavél. Hver er munurinn á árlegri orkunotkun (kWh/ári) á vél í flokki A og flokki E?"
+    },
+    "act3": {
+      "sub": "Kolefnis- og vatnsfótspor",
+      "q1": "Reiknaðu CO₂ losun fyrir 365 þvotta á kraftkerfi (notaðu 0,27 kg CO₂/kWh).",
+      "q2": "Hvernig dregur það úr árlegu kolefnisfótspori í kg af CO₂ að skipta yfir í Eco?",
+      "q3": "Vatnskostnaður er 0,003 €/l. Endurreiknaðu árlegan vatnssparnað í evrum með því að nota þessa gjaldskrá. Breytir þetta efnahagslegu rökin fyrir notkun Eco-kerfisins?"
+    },
+    "peer": {
+      "title": "Ábending frá jafningja",
+      "dykTitle": "💡 Vissir þú?",
+      "dykBody": "Skafa, ekki skola! Nútíma uppþvottavélar þurfa ekki að leirtauið sé forskolað.",
+      "q1": "Hvernig sóar forskolun vatni og orku?"
+    },
+    "reflection": {
+      "title": "Hugleiðing",
+      "prompt": "Hvenær væri nýtnara að vaska upp í höndunum en að nota uppþvottavél? Útskýrðu með eigin orðum og vísaðu í útreikninga þína úr Verkefni 2."
+    },
+    "ee": {
+      "title": "Viðbótarverkefni fyrir nemendur í rafvirkjun / rafmagnsfræði"
+    },
+    "ee1": {
+      "sub": "Bálkarit af uppþvottavél",
+      "intro": "Teiknaðu bálkarit sem sýnir: stjórnborð, hitaelement, dælu sem dreifir vatninu, niðurfallsdælu, NTC hitaskynjara, öryggisrofa á hurð, sápuhólf og flóðskynjara. Tilgreindu dæmigerð aflgildi."
+    },
+    "ee2": {
+      "sub": "BLDC mótorar",
+      "intro": "Nútíma uppþvottavélar nota BLDC (burstalausa DC) mótora í vatnsdælur sínar. Nefndu þrjá kosti BLDC mótora yfir hefðbundna mótora. Hvers vegna eru þeir dýrari?"
+    },
+    "ee3": {
+      "sub": "Hitastýring vatns",
+      "intro": "Hvernig er hitastigi vatns stjórnað í uppþvottavél? Útskýrðu stjórnlykkjuna (control loop)."
+    },
+    "ee4": {
+      "sub": "Öryggisbúnaður",
+      "intro": "Nefndu þrjá öryggisbúnaði í uppþvottavél og útskýrðu stuttlega hlutverk hvers og eins."
+    },
+    "ee5": {
+      "sub": "NTC hitaskynjari í spennudeili",
+      "intro": "NTC hitaskynjari er með mótstöðu upp á 10 kΩ við 25 °C og 2 kΩ við 60 °C. Hann er notaður í spennudeili með 5 V rafspennu og 10 kΩ fastri mótstöðu. Reiknaðu útgangsspennuna við 25 °C og 60 °C. Hvernig notar stjórnborðið þetta merki?"
+    }
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "_README": {
+    "purpose": "Translation reference for ws14.",
+    "language": "Default language: en.",
+    "instructions": "Copy this file as {lang}.json and translate the values. Keys (the left-hand side) must NEVER change — they map to data-i18n attributes in index.html."
+  },
+  "ui": {
+    "back": "← Back",
+    "language": "Language:",
+    "bwToggle": "B/W view",
+    "print": "🖨 Print",
+    "level": "Level:",
+    "topic": "Topic",
+    "learningOutcomes": "Learning outcomes",
+    "timeNeeded": "Time needed",
+    "resources": "Resources needed",
+    "projectLine": "Project № 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.",
+    "page": "Page",
+    "of": "of"
+  },
+  "w14": {
+    "worksheet": "Worksheet 14",
+    "title": "Electrical kitchen appliances & lighting (3)",
+    "level": "BASIC",
+    "topic": "Energy use of blender, coffee maker and LED lamps; comparing motor, heating and lighting loads.",
+    "lo1": "Identify the energy conversion in motor, heating and lighting loads.",
+    "lo2": "Calculate energy consumption and cost for blender, coffee maker and LED lamps.",
+    "lo3": "Compare the energy efficiency of different lamp wattages.",
+    "lo4": "Distinguish power factor for resistive, motor and electronic loads.",
+    "time": "45 min",
+    "resources": "Calculator and electricity tariff (e.g. €0.30/kWh).",
+    "theory": {
+      "title": "Theory — Conservation of Energy & Electricity",
+      "intro": "The Law of Conservation of Energy states that energy cannot be created or destroyed, only transformed from one form to another.",
+      "kitchenLabel": "In kitchen appliances:",
+      "conv1": "Electrical → Heat (kettle, toaster, coffee maker)",
+      "conv2": "Electrical → Electromagnetic → Heat (microwave)",
+      "conv3": "Electrical → Mechanical (blender)",
+      "conv4": "Electrical → Light (LED lamps)",
+      "conceptsLabel": "Basic electrical concepts",
+      "c1l": "Power (P):",
+      "c1b": "watt (W)",
+      "c2l": "Energy (E):",
+      "c2b": "kilowatt-hour (kWh)",
+      "c3l": "Voltage (V):",
+      "c3b": "volt (V)",
+      "c4l": "Current (I):",
+      "c4b": "ampere (A)",
+      "acLabel": "Power in AC circuits",
+      "acIntro": "In AC circuits voltage and current may not be in phase, therefore:",
+      "acNote": "The power factor (cos φ) indicates efficiency: cos φ = 1 → purely resistive (kettle, toaster); cos φ < 1 → losses exist (motors, electronics)."
+    },
+    "blender": {
+      "name": "1 — Blender",
+      "imgLabel": "image:blender",
+      "howTitle": "How it works",
+      "howBody": "A blender uses an electric motor to rotate the blades. Electrical energy is converted into mechanical energy; the motor rotates the blades and the food is mixed.",
+      "physTitle": "Physical explanation",
+      "phys1": "Electrical → Mechanical energy",
+      "phys2": "Motor rotates the blades at high speed",
+      "phys3": "Food is cut and mixed by blade motion",
+      "structTitle": "Structure",
+      "struct1": "AC or DC motor",
+      "struct2": "Blades",
+      "struct3": "Container",
+      "struct4": "Speed control switch",
+      "ctrlTitle": "Controls",
+      "ctrl1": "On / Off switch",
+      "ctrl2": "Speed selector",
+      "ctrl3": "Pulse function",
+      "calcTitle": "Energy consumption — worked example",
+      "calcBody": "Power = 0.5 kW. Time = 5 min. Using E = P × t: E = 0.5 × (5/60) ≈ 0.04 kWh. At €0.30/kWh that is ≈ €0.01."
+    },
+    "coffee": {
+      "name": "2 — Coffee Maker",
+      "imgLabel": "image:coffee maker",
+      "howTitle": "How it works",
+      "howBody": "A coffee maker heats water and brews coffee. Electrical energy is converted directly into heat; the heated water flows through the coffee grounds and produces coffee.",
+      "physTitle": "Physical explanation",
+      "phys1": "Electrical → Heat",
+      "phys2": "Water is heated and flows through ground coffee",
+      "phys3": "Coffee is produced by extraction",
+      "structTitle": "Structure",
+      "struct1": "Heating element",
+      "struct2": "Water reservoir",
+      "struct3": "Filter holder",
+      "struct4": "Carafe",
+      "ctrlTitle": "Controls",
+      "ctrl1": "On / Off switch",
+      "ctrl2": "Power indicator",
+      "ctrl3": "Auto shut-off",
+      "calcTitle": "Energy consumption — worked example",
+      "calcBody": "Power = 1 kW. Time = 10 min. Using E = P × t: E = 1 × (10/60) ≈ 0.166 kWh. At €0.30/kWh that is ≈ €0.05."
+    },
+    "led": {
+      "name": "3 — LED Lamps",
+      "imgLabel": "image:LED bulb",
+      "howTitle": "How it works",
+      "howBody": "LED (Light Emitting Diode) lamps convert electrical energy into light very efficiently. Most of the input energy becomes visible light, with very little waste heat.",
+      "physTitle": "Physical explanation",
+      "phys1": "Very low energy consumption",
+      "phys2": "High luminous efficacy (lm/W)",
+      "phys3": "Long lifetime (typ. 25,000 h)",
+      "phys4": "Small power factor cos φ < 1 due to driver electronics",
+      "structTitle": "Structure",
+      "struct1": "LED semiconductor chip",
+      "struct2": "Driver electronics (AC → DC)",
+      "struct3": "Heatsink",
+      "struct4": "Lens / diffuser",
+      "ctrlTitle": "Controls",
+      "ctrl1": "On / Off switch",
+      "ctrl2": "Dimmer (if compatible)",
+      "ctrl3": "Optional smart control",
+      "calcTitle": "Energy consumption — worked example",
+      "calcBody": "Power = 0.005 kW. Time = 60 min. Using E = P × t: E = 0.005 × (60/60) ≈ 0.005 kWh. At €0.30/kWh that is ≈ €0.0015.",
+      "compareTitle": "Energy comparison — 5 W vs. 10 W LED",
+      "compare1": "5 W LED running 1 hour → 0.005 kWh ≈ €0.0015",
+      "compare2": "10 W LED running 1 hour → 0.010 kWh ≈ €0.0030"
+    },
+    "quiz": {
+      "title": "Quiz — multiple choice (15 questions)",
+      "intro": "Choose the correct answer for each question. Q1–5: blender. Q6–10: coffee maker. Q11–15: LED lamps.",
+      "q1": {
+        "q": "Main energy output:",
+        "a": "A) Heat",
+        "b": "B) Mechanical",
+        "c": "C) Light",
+        "d": "D) Sound"
+      },
+      "q2": {
+        "q": "Main component:",
+        "a": "A) Heater",
+        "b": "B) Motor",
+        "c": "C) Lamp",
+        "d": "D) Pipe"
+      },
+      "q3": {
+        "q": "Energy conversion:",
+        "a": "A) Electrical → Mechanical",
+        "b": "B) Heat → Light",
+        "c": "C) Mechanical → Heat",
+        "d": "D) Light → Heat"
+      },
+      "q4": {
+        "q": "cos φ value:",
+        "a": "A) 1",
+        "b": "B) Less than 1",
+        "c": "C) 0",
+        "d": "D) 2"
+      },
+      "q5": {
+        "q": "Formula for power:",
+        "a": "A) P = V·I",
+        "b": "B) P = E / t",
+        "c": "C) V = I·R",
+        "d": "D) E = mgh"
+      },
+      "q6": {
+        "q": "Main process:",
+        "a": "A) Cooling",
+        "b": "B) Heating",
+        "c": "C) Lighting",
+        "d": "D) Freezing"
+      },
+      "q7": {
+        "q": "Energy conversion:",
+        "a": "A) Electrical → Heat",
+        "b": "B) Heat → Light",
+        "c": "C) Light → Heat",
+        "d": "D) Motion → Heat"
+      },
+      "q8": {
+        "q": "Water is heated by:",
+        "a": "A) Motor",
+        "b": "B) Heating element",
+        "c": "C) Fan",
+        "d": "D) Pump"
+      },
+      "q9": {
+        "q": "cos φ value:",
+        "a": "A) 1",
+        "b": "B) Less than 1",
+        "c": "C) 0",
+        "d": "D) 2"
+      },
+      "q10": {
+        "q": "Energy formula:",
+        "a": "A) E = P·t",
+        "b": "B) V = I·R",
+        "c": "C) P = V·I",
+        "d": "D) E = mgh"
+      },
+      "q11": {
+        "q": "Main output:",
+        "a": "A) Heat",
+        "b": "B) Light",
+        "c": "C) Sound",
+        "d": "D) Motion"
+      },
+      "q12": {
+        "q": "Energy conversion:",
+        "a": "A) Electrical → Light",
+        "b": "B) Heat → Light",
+        "c": "C) Light → Heat",
+        "d": "D) Motion → Light"
+      },
+      "q13": {
+        "q": "LED stands for:",
+        "a": "A) Light Emitting Diode",
+        "b": "B) Lamp Energy Device",
+        "c": "C) Low Energy Device",
+        "d": "D) None"
+      },
+      "q14": {
+        "q": "Which uses more energy?",
+        "a": "A) 5 W",
+        "b": "B) 10 W",
+        "c": "C) Same",
+        "d": "D) None"
+      },
+      "q15": {
+        "q": "Main advantage of LED:",
+        "a": "A) Efficiency",
+        "b": "B) Heat",
+        "c": "C) Noise",
+        "d": "D) Size"
+      }
+    },
+    "answers": {
+      "title": "Answer key",
+      "blender": "Blender (Q 1–5):",
+      "coffee": "Coffee maker (Q 6–10):",
+      "led": "LED lamps (Q 11–15):"
+    }
+  }
+}

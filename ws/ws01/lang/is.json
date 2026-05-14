@@ -1,154 +1,17 @@
 {
   "_README": {
-    "verkefni": "Vinnublað 1A — Hversu hratt renna kranarnir?",
-    "tungumal": "Íslenska (is)",
-    "leidbeiningar": "Sjá lang/README.md áður en byrjað er. Þú breytir aðeins gildum innan gæsalappa — ekki lyklum og ekki athugasemdum sem byrja á undirstryki (_).",
-    "verkefnisnumer": "2025-1-HR01-KA220-VET-000353056"
+    "purpose": "Translation reference for ws01.",
+    "language": "Default language: is.",
+    "instructions": "Copy this file as {lang}.json and translate the values. Keys (the left-hand side) must NEVER change — they map to data-i18n attributes in index.html."
   },
-
-  "meta": {
-    "_comment": "Grunnupplýsingar sem birtast efst á blaðinu (titill, viðfangsefni, tími, búnaður).",
-    "title": "Hversu hratt renna kranarnir?",
-    "level": "BASIC",
-    "topic": "Sjálfvirkir vatnskranar — að mæla rennsli og meta sparnað",
-    "timeNeeded": "60 mín",
-    "resources": "Mæliílát (500 ml eða 1 L), sími með stopparklukku, þetta vinnublað."
-  },
-
-  "objectives": {
-    "_comment": "Námsmarkmið — birtast sem bulletlist í töflunni efst á síðu 1.",
-    "items": [
-      "Nemendur geta mælt rennsli vatnskrana í L/mín með einfaldri tilraun.",
-      "Nemendur geta notað formúlu til að reikna rennsli út frá magni og tíma.",
-      "Nemendur geta borið saman hefðbundna krana og sjálfvirka skynjarakrana."
-    ]
-  },
-
-  "introduction": {
-    "_comment": "Inngangur — paragraph eftir töflunni á síðu 1.",
-    "text": "Hefur þú einhvern tímann opnað krana á salerni í skólanum og vatn rennur sjálfkrafa, aðeins meðan þú heldur höndunum undir? Þetta eru dæmi um sjálfvirka skynjarakrana sem spara vatn. Í þessu vinnublaði ætlar þú að mæla raunverulegt rennsli krana í skólanum og reikna út hversu miklu vatni mætti spara ef öllum krönum væri skipt út fyrir sjálfvirka."
-  },
-
-  "theory": {
-    "_comment": "Fræðin — fræðilegur kafli sem útskýrir hugtök og formúluna.",
-    "paragraph1": "Rennsli mælir hversu mikið vatn rennur úr krana á tilteknum tíma. Algeng eining er lítrar á mínútu (L/mín). Til að finna rennslið fyllir þú þekkt rúmmál (t.d. 500 ml dall) og tekur tímann sem það tekur.",
-    "paragraph2": "Tvær algengar gerðir krana eru notaðar í skólum:",
-    "tapTypes": [
-      "Hefðbundinn krani — opnast handvirkt og rennur óslitið þar til lokað er.",
-      "Sjálfvirkur skynjarakrani — opnast aðeins þegar hendur eru undir."
-    ],
-    "image": {
-      "_comment": "Mynd birtist í Fræðin-kaflanum. 'src' er fast — sama mynd fyrir öll tungumál. 'alt' og 'caption' þýðast. 'position' getur verið 'left' (texti flýtur hægra megin), 'right' (texti flýtur vinstra megin) eða 'center' (mynd ein á sinni línu, 100% breidd).",
-      "src": "img/comparison.svg",
-      "alt": "Samanburður á hefðbundnum og sjálfvirkum krana",
-      "caption": "Mynd 1: Hefðbundinn krani vs. sjálfvirkur skynjarakrani.",
-      "position": "left"
-    }
-  },
-
-  "formula": {
-    "_comment": "Formúla — sjálfa formúlan (Q = V/t × 60) er eins á öllum tungumálum. Hér þýðist bara inngangur og útskýringar á breytum.",
-    "intro": "Þú reiknar rennslið með þessari formúlu:",
-    "variables": {
-      "Q": "rennsli (L/mín)",
-      "V": "magn (L)",
-      "t": "tími (sek)"
-    },
-    "image": {
-      "_comment": "Mynd af mæliferli — birtist við hliðina á formúlunni.",
-      "src": "img/tap.svg",
-      "alt": "Krani opnaður og dallur fyrir neðan til að safna vatni",
-      "caption": "Mynd 2: Mældu rennslið með 500 ml dalli.",
-      "position": "right"
-    }
-  },
-
-  "workedExample": {
-    "_comment": "Sýnidæmi — birtist í grænum kassa á síðu 2.",
-    "scenario": "Dæmi: 500 ml dallur fyllist á 6 sekúndum.",
-    "steps": [
-      "Skref 1: Breyta í lítra → 500 ml = 0,5 L.",
-      "Skref 2: Setja í formúluna → 0,5 ÷ 6 × 60 = 5,0 L/mín.",
-      "Skref 3: Krani sem hefur 5 L/mín og er opinn í 30 sek skilar 5 × 30 ÷ 60 = 2,5 lítrum á hvert handþvott.",
-      "Skref 4: Sjálfvirkur krani sem opnar í 12 sek skilar 1,0 L. Sparnaður: 1,5 L á hvert þvott."
-    ]
-  },
-
-  "keyTerms": {
-    "_comment": "Lykilhugtök — tafla á síðu 2.",
-    "items": [
-      {
-        "term": "Rennsli",
-        "definition": "Magn vatns sem rennur úr krana á tilteknum tíma. Mælt í L/mín."
-      },
-      {
-        "term": "Sjálfvirkur skynjari",
-        "definition": "Lítill rafeindabúnaður á krana sem nemur þegar hendur fara undir og opnar vatnið."
-      },
-      {
-        "term": "Meðalrennsli",
-        "definition": "Meðaltal margra mælinga á sama krana, til að jafna út lítil frávik."
-      },
-      {
-        "term": "Sparnaður",
-        "definition": "Mismunur á vatnsnotkun gamla og nýja kerfisins, oftast reiknað á ári."
-      }
-    ]
-  },
-
-  "activities": [
-    {
-      "_comment": "Verkefni nemanda 1 — mælingar í skólanum, með skriflínum.",
-      "title": "Mældu rennsli krana í skólanum",
-      "intro": "Veldu þrjú salerni í skólanum. Mældu rennslið á hverjum krana með því að fylla mæliílátið og taka tímann. Endurtaktu mælinguna að minnsta kosti tvisvar á hvern krana og skráðu meðaltalið.",
-      "questions": [
-        "Krani 1 — staðsetning og meðalrennsli (L/mín):",
-        "Krani 2 — staðsetning og meðalrennsli (L/mín):",
-        "Krani 3 — staðsetning og meðalrennsli (L/mín):",
-        "Hvert er meðalrennsli allra þriggja krananna?"
-      ]
-    },
-    {
-      "_comment": "Verkefni nemanda 2 — útreikningar á ársparnaði.",
-      "title": "Reiknaðu vatnssparnað",
-      "intro": "Ímyndaðu þér að 200 nemendur þvoi sér um hendurnar þrisvar á dag í skólanum. Gefið er að gamli krani sé opinn í 30 sek á hvert þvott og sá nýi opinn í 12 sek. Skólaárið er 180 dagar.",
-      "image": {
-        "_comment": "Mynd birtist ofan við spurningarnar. 'position: center' þýðir að myndin tekur fulla breidd (100%) og texti er ofan og neðan, ekki við hliðina.",
-        "src": "img/bathroom.svg",
-        "alt": "Salernið í skólanum með tveimur vöskum",
-        "caption": "Mynd 3: 200 nemendur sem þvo sér 3× á dag = 600 handþvottir daglega.",
-        "position": "center"
-      },
-      "questions": [
-        "Hversu mörg lítrar fara í eitt handþvott með gamla krananum?",
-        "Hversu mörg lítrar fara í eitt handþvott með sjálfvirka krananum?",
-        "Hversu mörgum lítrum mætti spara á einu skólaári?"
-      ]
-    }
-  ],
-
-  "deliverable": {
-    "_comment": "Lokafurð — myndband sem nemendur skila. Á skjá birtist YouTube-embed; í prenti birtist QR-kóði sem nemendur geta skannað með síma.",
-    "title": "Skilamyndband",
-    "subtitle": "Lokafurð verkefnisins",
-    "intro": "Til að ljúka verkefninu skiluð þið stuttu myndbandi (1–3 mín) sem sýnir mælingarferlið ykkar og niðurstöður.",
-    "requirements": [
-      "Sýnið hvernig þið mældust krana (helst frá nokkrum sjónarhornum).",
-      "Lesið upp lykiltölurnar — meðalrennsli og sparnað í lítrum á ári.",
-      "Takið afstöðu í lok myndbandsins: er fjárfesting í sjálfvirkum krönum þess virði?"
-    ],
-    "exampleVideo": {
-      "_comment": "Dæmi um nemendamyndband. youtubeId má skipta út fyrir betra myndband ef finnst. Aðrir lyklar þýðast.",
-      "youtubeId": "t12mrt3JmTE",
-      "caption": "Dæmi um gott nemendamyndband",
-      "scanLabel": "Skannaðu QR-kóðann eða farðu á slóðina til að horfa:"
-    }
-  },
-
   "ui": {
-    "_comment": "Algengir textar sem birtast á öllum vinnublöðum — síðunúmer, fyrirvari o.s.frv.",
+    "back": "← Til baka",
+    "language": "Tungumál:",
+    "bwToggle": "B/W útlit",
+    "print": "🖨 Prenta",
     "worksheet": "Vinnublað",
     "levelLabel": "Stig",
+    "basic": "BASIC",
     "studentName": "Nafn nemanda",
     "date": "Dagsetning",
     "topic": "Viðfangsefni",
@@ -157,17 +20,73 @@
     "resources": "Búnaður",
     "introduction": "Inngangur",
     "theory": "Fræðin",
+    "disclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.",
+    "page": "Síða",
+    "of": "af",
     "workedExample": "Sýnidæmi",
     "keyTerms": "Lykilhugtök",
     "term": "Hugtak",
     "definition": "Skilgreining",
-    "studentActivity": "Verkefni nemanda",
-    "page": "Síða",
-    "of": "af",
-    "back": "← Til baka",
-    "print": "🖨 Prenta",
-    "bwToggle": "B/W útlit",
-    "language": "Tungumál:",
-    "disclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them."
+    "studentActivity": "Verkefni nemanda"
+  },
+  "w01": {
+    "title": "Hversu hratt renna kranarnir?",
+    "topic": "Sjálfvirkir vatnskranar — að mæla rennsli og meta sparnað",
+    "obj1": "Nemendur geta mælt rennsli vatnskrana í L/mín með einfaldri tilraun.",
+    "obj2": "Nemendur geta notað formúlu til að reikna rennsli út frá magni og tíma.",
+    "obj3": "Nemendur geta borið saman hefðbundna krana og sjálfvirka skynjarakrana.",
+    "time": "60 mín",
+    "resources": "Mæliílát (500 ml eða 1 L), sími með stopparklukku, þetta vinnublað.",
+    "intro": "Hefur þú einhvern tímann opnað krana á salerni í skólanum og vatn rennur sjálfkrafa, aðeins meðan þú heldur höndunum undir? Þetta eru dæmi um sjálfvirka skynjarakrana sem spara vatn. Í þessu vinnublaði ætlar þú að mæla raunverulegt rennsli krana í skólanum og reikna út hversu miklu vatni mætti spara ef öllum krönum væri skipt út fyrir sjálfvirka.",
+    "theory1": "Rennsli mælir hversu mikið vatn rennur úr krana á tilteknum tíma. Algeng eining er lítrar á mínútu (L/mín). Til að finna rennslið fyllir þú þekkt rúmmál (t.d. 500 ml dall) og tekur tímann sem það tekur.",
+    "theory2": "Tvær algengar gerðir krana eru notaðar í skólum:",
+    "tap1": "Hefðbundinn krani — opnast handvirkt og rennur óslitið þar til lokað er.",
+    "tap2": "Sjálfvirkur skynjarakrani — opnast aðeins þegar hendur eru undir.",
+    "formulaIntro": "Þú reiknar rennslið með þessari formúlu:",
+    "varQ": "rennsli (L/mín)",
+    "varV": "magn (L)",
+    "varT": "tími (sek)",
+    "ex": {
+      "scenario": "Dæmi: 500 ml dallur fyllist á 6 sekúndum.",
+      "s1": "Skref 1: Breyta í lítra → 500 ml = 0,5 L.",
+      "s2": "Skref 2: Setja í formúluna → 0,5 ÷ 6 × 60 = 5,0 L/mín.",
+      "s3": "Skref 3: Krani sem hefur 5 L/mín og er opinn í 30 sek skilar 5 × 30 ÷ 60 = 2,5 lítrum á hvert handþvott.",
+      "s4": "Skref 4: Sjálfvirkur krani sem opnar í 12 sek skilar 1,0 L. Sparnaður: 1,5 L á hvert þvott."
+    },
+    "kt": {
+      "flow": "Rennsli",
+      "flowDef": "Magn vatns sem rennur úr krana á tilteknum tíma. Mælt í L/mín.",
+      "sensor": "Sjálfvirkur skynjari",
+      "sensorDef": "Lítil rafeindabúnaður á krana sem nemur þegar hendur fara undir og opnar vatnið.",
+      "avg": "Meðalrennsli",
+      "avgDef": "Meðaltal margra mælinga á sama krana, til að jafna út lítil frávik.",
+      "saving": "Sparnaður",
+      "savingDef": "Mismunur á vatnsnotkun gamla og nýja kerfisins, oftast reiknað á ári."
+    },
+    "act1": {
+      "sub": "Mældu rennsli krana í skólanum",
+      "intro": "Veldu þrjú salerni í skólanum. Mældu rennslið á hverjum krana með því að fylla mæliílátið og taka tímann. Endurtaktu mælinguna að minnsta kosti tvisvar á hvern krana og skráðu meðaltalið.",
+      "q1": "Krani 1 — staðsetning og meðalrennsli (L/mín):",
+      "q2": "Krani 2 — staðsetning og meðalrennsli (L/mín):",
+      "q3": "Krani 3 — staðsetning og meðalrennsli (L/mín):",
+      "q4": "Hvert er meðalrennsli allra þriggja krananna?"
+    },
+    "act2": {
+      "sub": "Reiknaðu vatnssparnað",
+      "intro": "Ímyndaðu þér að 200 nemendur þvoi sér um hendurnar þrisvar á dag í skólanum. Gefið er að gamli krani sé opinn í 30 sek á hvert þvott og sá nýi opinn í 12 sek. Skólaárið er 180 dagar.",
+      "q1": "Hversu mörg lítrar fara í eitt handþvott með gamla krananum?",
+      "q2": "Hversu mörg lítrar fara í eitt handþvott með sjálfvirka krananum?",
+      "q3": "Hversu mörgum lítrum mætti spara á einu skólaári?"
+    },
+    "deliv": {
+      "title": "Skilamyndband",
+      "subtitle": "Lokafurð verkefnisins",
+      "intro": "Til að ljúka verkefninu skiluð þið stuttu myndbandi (1–3 mín) sem sýnir mælingarferlið ykkar og niðurstöður.",
+      "req1": "Sýnið hvernig þið mældust krana (helst frá nokkrum sjónarhornum).",
+      "req2": "Lesið upp lykiltölurnar — meðalrennsli og sparnað í lítrum á ári.",
+      "req3": "Takið afstöðu í lok myndbandsins: er fjárfesting í sjálfvirkum krönum þess virði?",
+      "caption": "Dæmi um gott nemendamyndband",
+      "scanLabel": "Skannaðu QR-kóðann eða farðu á slóðina til að horfa:"
+    }
   }
 }
