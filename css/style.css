@@ -155,6 +155,7 @@ a { color: inherit; text-decoration: none; }
   height: 15px;
   display: block;
   border-radius: 2px;
+  object-fit: cover;
 }
 
 /* ===== HEADER / HERO ===== */
@@ -353,10 +354,12 @@ a { color: inherit; text-decoration: none; }
   flex-shrink: 0;
   box-shadow: 0 0 0 .5px rgba(0,0,0,.1);
 }
-.flag-icon svg {
+.flag-icon svg,
+.flag-icon img {
   width: 100%;
   height: 100%;
   display: block;
+  object-fit: cover;
 }
 .ws-status {
   font-weight: 600;

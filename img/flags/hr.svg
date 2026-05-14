@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 36" role="img" aria-label="Croatia">
+  <!-- Three horizontal stripes: red top, white middle, blue bottom -->
+  <rect width="60" height="12" fill="#ff0000"/>
+  <rect y="12" width="60" height="12" fill="#fff"/>
+  <rect y="24" width="60" height="12" fill="#171796"/>
+
+  <!-- Coat of arms (šahovnica) — 5×5 red/white checkerboard, shield shape -->
+  <g transform="translate(23, 8)">
+    <!-- Outer shield outline -->
+    <path d="M0 0 L14 0 L14 11 L7 14 L0 11 Z" fill="#fff" stroke="#171796" stroke-width=".6"/>
+
+    <!-- Crown band on top: 5 small squares alternating red/white/red/white/red -->
+    <g>
+      <rect x="0"    y="-1.8" width="2.8" height="1.8" fill="#ff0000" stroke="#171796" stroke-width=".25"/>
+      <rect x="2.8"  y="-1.8" width="2.8" height="1.8" fill="#fff"    stroke="#171796" stroke-width=".25"/>
+      <rect x="5.6"  y="-1.8" width="2.8" height="1.8" fill="#ff0000" stroke="#171796" stroke-width=".25"/>
+      <rect x="8.4"  y="-1.8" width="2.8" height="1.8" fill="#fff"    stroke="#171796" stroke-width=".25"/>
+      <rect x="11.2" y="-1.8" width="2.8" height="1.8" fill="#ff0000" stroke="#171796" stroke-width=".25"/>
+    </g>
+
+    <!-- 5x5 red squares inside shield — clipped to the shield shape -->
+    <clipPath id="hr-shield"><path d="M0 0 L14 0 L14 11 L7 14 L0 11 Z"/></clipPath>
+    <g fill="#ff0000" clip-path="url(#hr-shield)">
+      <!-- Row 0 (top-left starts red) -->
+      <rect x="0"    y="0"    width="2.8" height="2.8"/>
+      <rect x="5.6"  y="0"    width="2.8" height="2.8"/>
+      <rect x="11.2" y="0"    width="2.8" height="2.8"/>
+      <!-- Row 1 -->
+      <rect x="2.8"  y="2.8"  width="2.8" height="2.8"/>
+      <rect x="8.4"  y="2.8"  width="2.8" height="2.8"/>
+      <!-- Row 2 -->
+      <rect x="0"    y="5.6"  width="2.8" height="2.8"/>
+      <rect x="5.6"  y="5.6"  width="2.8" height="2.8"/>
+      <rect x="11.2" y="5.6"  width="2.8" height="2.8"/>
+      <!-- Row 3 -->
+      <rect x="2.8"  y="8.4"  width="2.8" height="2.8"/>
+      <rect x="8.4"  y="8.4"  width="2.8" height="2.8"/>
+      <!-- Row 4 (clipped by shield point) -->
+      <rect x="0"    y="11.2" width="2.8" height="2.8"/>
+      <rect x="5.6"  y="11.2" width="2.8" height="2.8"/>
+      <rect x="11.2" y="11.2" width="2.8" height="2.8"/>
+    </g>
+  </g>
+</svg>

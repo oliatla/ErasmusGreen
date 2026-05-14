@@ -102,41 +102,13 @@ const i18n = (function() {
     return current;
   }
 
-  /* ============ FLAG SVGs ============
-     Tiny inline flag library so the site works offline. */
+  /* ============ FLAG IMAGES ============
+     Loads SVG flags from /img/flags/{code}.svg.
+     Replace any of those files with a more polished version
+     (e.g. from Wikimedia Commons) without touching this code. */
   function flagSVG(code) {
-    const flags = {
-      is: '<svg viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg">' +
-          '<rect width="25" height="18" fill="#02529c"/>' +
-          '<rect x="7" width="3" height="18" fill="#fff"/>' +
-          '<rect y="7.5" width="25" height="3" fill="#fff"/>' +
-          '<rect x="8" width="1.5" height="18" fill="#dc1e35"/>' +
-          '<rect y="8.25" width="25" height="1.5" fill="#dc1e35"/></svg>',
-      en: '<svg viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg">' +
-          '<rect width="25" height="18" fill="#012169"/>' +
-          '<path d="M0 0 L25 18 M25 0 L0 18" stroke="#fff" stroke-width="2"/>' +
-          '<path d="M0 0 L25 18 M25 0 L0 18" stroke="#c8102e" stroke-width="1"/>' +
-          '<path d="M12.5 0 V18 M0 9 H25" stroke="#fff" stroke-width="3"/>' +
-          '<path d="M12.5 0 V18 M0 9 H25" stroke="#c8102e" stroke-width="1.8"/></svg>',
-      pt: '<svg viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg">' +
-          '<rect width="10" height="18" fill="#046a38"/>' +
-          '<rect x="10" width="15" height="18" fill="#da291c"/>' +
-          '<circle cx="10" cy="9" r="3.2" fill="#fee100" stroke="#fff" stroke-width=".4"/></svg>',
-      hr: '<svg viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg">' +
-          '<rect width="25" height="6" fill="#171796"/>' +
-          '<rect y="6" width="25" height="6" fill="#fff"/>' +
-          '<rect y="12" width="25" height="6" fill="#ff0000"/></svg>',
-      tr: '<svg viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg">' +
-          '<rect width="25" height="18" fill="#e30a17"/>' +
-          '<circle cx="9" cy="9" r="4" fill="#fff"/>' +
-          '<circle cx="10" cy="9" r="3.2" fill="#e30a17"/>' +
-          '<polygon points="13,9 16.8,7.8 14.5,11.1 14.5,6.9 16.8,10.2" fill="#fff"/></svg>',
-      nl: '<svg viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg">' +
-          '<rect width="25" height="6" fill="#ae1c28"/>' +
-          '<rect y="6" width="25" height="6" fill="#fff"/>' +
-          '<rect y="12" width="25" height="6" fill="#21468b"/></svg>'
-    };
-    return flags[code] || '';
+    const root = document.querySelector('[data-flag-root]')?.dataset.flagRoot || 'img/flags/';
+    return `<img src="${root}${code}.svg" alt="${code}" loading="lazy">`;
   }
 
   /* Render country flags into any [data-flag] element on the page.

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 36" role="img" aria-label="Portugal">
+  <!-- Green left 2/5 -->
+  <rect width="24" height="36" fill="#046a38"/>
+  <!-- Red right 3/5 -->
+  <rect x="24" width="36" height="36" fill="#da291c"/>
+
+  <!-- Coat of arms placeholder centered on the green/red boundary at x=24 -->
+  <g transform="translate(24, 18)">
+    <!-- Outer armillary sphere ring -->
+    <circle r="7.5" fill="none" stroke="#fee100" stroke-width="1.2"/>
+    <!-- Horizontal band -->
+    <ellipse rx="7.5" ry="2.5" fill="none" stroke="#fee100" stroke-width=".8"/>
+    <!-- Vertical band -->
+    <ellipse rx="2.5" ry="7.5" fill="none" stroke="#fee100" stroke-width=".8"/>
+    <!-- Inner shield -->
+    <rect x="-2.5" y="-3.5" width="5" height="6.5" fill="#fff" stroke="#000" stroke-width=".4"/>
+    <!-- Small blue dots in shield (placeholder for the 5 small shields) -->
+    <circle cx="0" cy="-1" r=".5" fill="#003399"/>
+    <circle cx="-1.2" cy=".5" r=".5" fill="#003399"/>
+    <circle cx="1.2" cy=".5" r=".5" fill="#003399"/>
+    <circle cx="0" cy="2" r=".5" fill="#003399"/>
+  </g>
+</svg>

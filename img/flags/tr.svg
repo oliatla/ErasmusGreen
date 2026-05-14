@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 36" role="img" aria-label="Türkiye">
+  <rect width="60" height="36" fill="#e30a17"/>
+  <!-- Crescent: white circle with a smaller red circle offset to the right -->
+  <circle cx="22" cy="18" r="8" fill="#fff"/>
+  <circle cx="24.5" cy="18" r="6.4" fill="#e30a17"/>
+  <!-- Five-pointed star -->
+  <polygon points="34,18 38.5,16.5 35.7,20.4 35.7,15.6 38.5,19.5"
+           fill="#fff"/>
+  <!-- Better star using polygon (manually plotted 5-pointed) -->
+  <polygon points="33.5,18 36.2,17.1 37.85,19.4 37.85,16.6 36.2,18.9"
+           fill="#fff" opacity="0"/>
+  <g transform="translate(35.5 18) scale(.32)" fill="#fff">
+    <polygon points="0,-10 2.94,-4.05 9.51,-3.09 4.76,1.55 5.88,8.09 0,5 -5.88,8.09 -4.76,1.55 -9.51,-3.09 -2.94,-4.05"/>
+  </g>
+</svg>
