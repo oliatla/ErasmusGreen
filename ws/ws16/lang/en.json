@@ -1,0 +1,93 @@
+{
+  "_README": {
+    "purpose": "Translation reference for ws16.",
+    "language": "Default language: en.",
+    "instructions": "Copy this file as {lang}.json and translate the values. Keys (the left-hand side) must NEVER change — they map to data-i18n attributes in index.html."
+  },
+  "ui": {
+    "back": "← Back",
+    "language": "Language:",
+    "bwToggle": "B/W view",
+    "print": "🖨 Print",
+    "level": "Level:",
+    "topic": "Topic",
+    "learningOutcomes": "Learning outcomes",
+    "timeNeeded": "Time needed",
+    "resources": "Resources needed",
+    "introduction": "Introduction",
+    "projectLine": "Project № 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.",
+    "page": "Page",
+    "of": "of",
+    "activity": "Student activity"
+  },
+  "w16": {
+    "worksheet": "Worksheet 16",
+    "title": "Sensors that switch lights for you",
+    "level": "BASIC",
+    "topic": "Sensors that switch lights for you",
+    "lo1": "Students will explain what a motion sensor and a daylight sensor do.",
+    "lo2": "Students will recognise places where each type of sensor is useful.",
+    "time": "60 min",
+    "resources": "This worksheet.",
+    "intro": "Have you ever walked into a school toilet and the lights came on automatically? Or noticed that lamps along the road only switch on when it gets dark? Those are examples of \"smart\" lighting — lights with sensors that switch themselves on and off. In this worksheet you will learn the basics.",
+    "theory": {
+      "title": "Theory",
+      "smart": "A SMART light is a light that has a small electronic brain and at least one sensor. The brain decides when to switch the light on or off based on what the sensor measures. So you don't need to flip a switch any more.",
+      "twoSensors": "The two most common sensors used in lighting are:",
+      "motion": {
+        "label": "A MOTION SENSOR",
+        "body": " detects movement. As soon as somebody walks in, it tells the light to turn on. After a few minutes of no movement, it tells the light to turn off again. (The few-minute delay is so the light does not switch off if you sit still for a moment.)"
+      },
+      "daylight": {
+        "label": "A DAYLIGHT SENSOR",
+        "body": " measures how much daylight is in the room. When the sun goes down or it gets cloudy, it tells the light to turn on. When daylight is enough, it tells the light to turn off."
+      },
+      "different": "Both sensors save energy in DIFFERENT WAYS. A motion sensor saves energy in rooms that are sometimes used and sometimes empty (toilets, corridors, storerooms). A daylight sensor saves energy in rooms with windows where the lights are sometimes on while the sun is shining (offices, classrooms with big windows, shop displays).",
+      "together": "Sometimes you use BOTH sensors together. For example: a hallway with a window. The light should only turn on if (1) somebody is walking in AND (2) it is dark enough that they need the light."
+    },
+    "worked": {
+      "title": "Worked example",
+      "scenario": "A storage room is currently lit for 8 hours per day, even though it is only entered briefly twice a day for about 5 minutes each.",
+      "s1": "Step 1: Without sensor: lights on 8 hours per day.",
+      "s2": "Step 2: With motion sensor: lights on roughly 2 × 5 min = 10 min per day ≈ 0.17 hours per day.",
+      "s3": "Step 3: Energy reduction: from 8 h to 0.17 h is about 98 % less energy used in this room.",
+      "s4": "Step 4: This is why storerooms are usually the BEST place to install a motion sensor — they are empty most of the time."
+    },
+    "terms": {
+      "title": "Key terms",
+      "colTerm": "Term",
+      "colDef": "Definition",
+      "t1term": "Sensor",
+      "t1def": "A small device that measures something (movement, light, temperature…).",
+      "t2term": "Motion sensor",
+      "t2def": "A sensor that detects whether somebody is moving nearby.",
+      "t3term": "Daylight sensor",
+      "t3def": "A sensor that measures how bright it is in the room.",
+      "t4term": "Time-out",
+      "t4def": "The delay before a motion sensor switches the light off after the last movement."
+    },
+    "act1": {
+      "sub": "Two kinds of sensors",
+      "intro": "There are two very common sensors used in lighting:",
+      "motionLabel": "A MOTION sensor",
+      "motionBody": " detects movement. The light turns on when somebody walks in, and turns off after a few minutes of no movement.",
+      "daylightLabel": "A DAYLIGHT sensor",
+      "daylightBody": " measures how bright it is outside. The light switches on when it gets dark, and off again when it gets light.",
+      "prompt": "For each location, write down which sensor would be most useful (motion, daylight, or both):",
+      "loc1": "School toilet",
+      "loc2": "Bicycle shed at school",
+      "loc3": "Classroom that is used all day",
+      "loc4": "Street lamp",
+      "loc5": "School corridor (used between lessons)",
+      "loc6": "Garden path at home"
+    },
+    "act2": {
+      "sub": "Why sensors save energy",
+      "intro": "Think about a school toilet that has lights on for 10 hours every school day, even though it is only actually used for 2 hours in total per day.",
+      "q1": "How many hours per day are the lights \"on\" but not needed?",
+      "q2": "If a motion sensor is installed, the lights are only on when someone is there. Roughly how many hours per day will the lights now be on?",
+      "q3": "By approximately what percentage does the energy use of the toilet lighting decrease?"
+    }
+  }
+}

@@ -1,0 +1,1253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Worksheet 18 — Designing a building-wide automation strategy</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- KaTeX for math formulas -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"
+  onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
+
+<style>
+:root {
+  --green-dark:   #1d6437;
+  --green-mid:    #2e7d4f;
+  --green-tint:   #cfe3bd;
+  --green-tint-2: #e6f1da;
+  --ink:          #1a1a1a;
+  --ink-soft:     #444;
+  --ink-mute:     #666;
+  --line:         #b8b8b8;
+  --line-soft:    #d8d8d8;
+  --paper:        #ffffff;
+  --bw-bg:        #f0f0f0;
+  --bw-line:      #888;
+
+  --page-w: 210mm;
+  --page-h: 297mm;
+  --margin-x: 15mm;
+  --margin-top: 28mm;     /* extra room: logo + project number */
+  --margin-bottom: 26mm;  /* extra room: project line + disclaimer + page no */
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0; padding: 0;
+  font-family: "Open Sans", "Lato", system-ui, sans-serif;
+  font-size: 11pt;
+  line-height: 1.5;
+  color: var(--ink);
+  background: #e8e8e8;
+}
+
+/* ===== TOOLBAR ===== */
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line-soft);
+  padding: 10px 16px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.toolbar .label {
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--ink-mute);
+  font-weight: 700;
+}
+.flags { display: flex; gap: 4px; }
+.flag-btn {
+  border: 2px solid transparent;
+  background: none;
+  padding: 3px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: transform .08s ease, border-color .12s ease;
+}
+.flag-btn:hover { transform: translateY(-1px); }
+.flag-btn[aria-pressed="true"] {
+  border-color: var(--green-dark);
+  background: var(--green-tint-2);
+}
+.flag-btn svg,
+.flag-btn img {
+  width: 28px; height: 20px;
+  display: block;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+  object-fit: cover;
+}
+.toolbar .spacer { flex: 1; }
+
+.bw-toggle, .print-btn {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border: 1.5px solid var(--green-dark);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--green-dark);
+  cursor: pointer;
+}
+.back-btn {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink-soft);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.back-btn:hover {
+  border-color: var(--green-dark);
+  color: var(--green-dark);
+}
+.bw-toggle[aria-pressed="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+.print-btn {
+  background: var(--green-dark);
+  color: #fff;
+}
+.print-btn:hover { background: var(--green-mid); }
+
+/* ===== PAGE ===== */
+.page {
+  width: var(--page-w);
+  min-height: var(--page-h);
+  background: var(--paper);
+  margin: 18px auto;
+  padding: var(--margin-top) var(--margin-x) var(--margin-bottom);
+  position: relative;
+  box-shadow: 0 4px 18px rgba(0,0,0,.12);
+  overflow: hidden;
+}
+
+/* ===== HEADER ===== */
+.r-header {
+  position: absolute;
+  top: 8mm;
+  left: var(--margin-x);
+  right: var(--margin-x);
+  height: 18mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.logo-green {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1mm;
+}
+.logo-green img {
+  height: 13mm;
+  width: auto;
+  display: block;
+}
+.logo-green .proj-no {
+  font-family: "Open Sans", sans-serif;
+  font-size: 6.5pt;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: .01em;
+  color: var(--ink);
+  text-align: left;
+}
+.logo-eu img {
+  height: 12mm;
+  width: auto;
+  display: block;
+}
+
+/* ===== FOOTER ===== */
+.r-footer {
+  position: absolute;
+  bottom: 8mm;
+  left: var(--margin-x);
+  right: var(--margin-x);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6mm;
+  align-items: end;
+  padding-top: 2.5mm;
+  border-top: .5pt solid var(--line);
+}
+.r-footer .footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1mm;
+}
+.r-footer .proj-line {
+  font-family: "Open Sans", sans-serif;
+  font-size: 7pt;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: .01em;
+}
+.r-footer .disclaimer {
+  font-family: "Open Sans", sans-serif;
+  font-size: 6.6pt;
+  line-height: 1.35;
+  color: var(--ink-soft);
+}
+.r-footer .pageno {
+  font-family: "Open Sans", sans-serif;
+  font-size: 9pt;
+  font-weight: 700;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1.title {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 34pt;
+  line-height: 1.05;
+  margin: 0 0 2mm;
+  letter-spacing: -.01em;
+}
+.subtitle {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 17pt;
+  margin: 0 0 1mm;
+}
+.level {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 11pt;
+  margin: 0 0 6mm;
+}
+h2.section {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 22pt;
+  margin: 6mm 0 3mm;
+  line-height: 1.1;
+}
+p.body { margin: 0 0 3mm; }
+ul.bullets { padding-left: 6mm; margin: 0 0 3mm; }
+ul.bullets li { margin: 0 0 1.5mm; }
+
+/* ===== TABLES ===== */
+table.struct, table.terms {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 7mm;
+  font-size: 10.5pt;
+}
+table.struct th, table.struct td,
+table.terms th, table.terms td {
+  border: 1pt solid var(--line);
+  padding: 2.4mm 3mm;
+  vertical-align: middle;
+  text-align: left;
+}
+table.struct th, table.terms th {
+  background: var(--green-tint);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+table.struct th { width: 38mm; white-space: nowrap; }
+table.struct ul { margin: 0; padding-left: 5mm; }
+table.struct ul li { margin: 0 0 .5mm; }
+table.terms td:first-child { font-weight: 700; width: 45mm; vertical-align: top; }
+table.terms td { vertical-align: top; }
+
+/* ===== WORKED EXAMPLE ===== */
+.box-tip {
+  background: var(--green-tint);
+  border: 1pt solid var(--green-mid);
+  border-radius: 1.5mm;
+  padding: 4mm 5mm;
+  margin: 4mm 0 5mm;
+}
+.box-tip h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 12pt;
+  margin: 0 0 2mm;
+}
+.box-tip p { margin: 0 0 1.5mm; font-size: 10.5pt; }
+.box-tip p:last-child { margin-bottom: 0; }
+
+/* ===== FORMULA BOX ===== */
+.formula-block {
+  margin: 3mm 0 4mm;
+  text-align: center;
+}
+.formula-block .katex-display {
+  margin: 0;
+}
+.formula-vars {
+  margin: 2mm auto 5mm;
+  font-size: 10pt;
+  color: var(--ink-soft);
+  text-align: center;
+}
+.formula-vars span { margin: 0 5mm; white-space: nowrap; }
+.formula-vars strong { color: var(--ink); }
+
+/* ===== STUDENT ACTIVITY ===== */
+.activity-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 22pt;
+  margin: 6mm 0 1mm;
+  line-height: 1.1;
+}
+.activity-sub {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 13pt;
+  margin: 0 0 3mm;
+}
+.activity p { margin: 0 0 2.5mm; }
+.write-line {
+  height: 9mm;
+  border-bottom: .75pt solid var(--ink-soft);
+  margin: 1mm 0 5mm;
+}
+.write-line.tall { height: 14mm; }
+.q { margin: 2mm 0 0; }
+.q .bullet-row { display: flex; gap: 2mm; align-items: flex-start; }
+.q .dot { font-size: 14pt; line-height: 1; padding-top: 1pt; }
+.q .label { flex: 1; }
+
+.no-break { break-inside: avoid; page-break-inside: avoid; }
+
+/* =================================================================
+   MEDIA FIGURE — images inline with text
+   Designed for phone-shot portrait photos (3:4 aspect).
+
+   Hard ceilings so worksheets across 12+ projects look consistent:
+   - left/right:  max-height 75mm,  max-width 60% (~108mm on A4)
+   - center:      max-height 95mm,  max-width 100% (~180mm on A4)
+
+   Container width is NOT fixed — it shrinks to fit the actual image
+   so a tall portrait photo doesn't leave dead space beside it.
+   ================================================================= */
+.media-figure {
+  margin: 3mm 0 4mm;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.media-figure figcaption {
+  font-size: 9pt;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-top: 1.5mm;
+  text-align: center;
+  line-height: 1.35;
+}
+
+/* LEFT / RIGHT — float so text wraps around */
+.media-figure.left,
+.media-figure.right {
+  max-width: 60%;
+  /* No fixed width — shrinks to the image so captions sit under photo */
+}
+.media-figure.left  { float: left;  margin: 0 4mm 1mm 0; }
+.media-figure.right { float: right; margin: 0 0 1mm 4mm; }
+
+.media-figure.left img,
+.media-figure.right img,
+.media-figure.left svg,
+.media-figure.right svg {
+  display: block;
+  max-height: 75mm;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 1.5mm;
+}
+
+/* CENTER — image alone on its own row, horizontally centered */
+.media-figure.center {
+  text-align: center;
+  margin: 4mm 0 5mm;
+  clear: both;
+}
+.media-figure.center img,
+.media-figure.center svg {
+  display: inline-block;
+  max-height: 95mm;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 1.5mm;
+}
+
+/* Block-level elements that must never wrap next to a floated figure */
+h2.section,
+.activity-title,
+.box-tip,
+table.struct,
+table.terms,
+.formula-block,
+.video-block,
+.r-footer {
+  clear: both;
+}
+
+/* =================================================================
+   VIDEO / QR — embed on screen, QR + URL on print
+   ================================================================= */
+.video-block {
+  margin: 4mm 0 6mm;
+}
+
+.video-embed {
+  /* Visible on screen */
+  position: relative;
+  width: 100%;
+  max-width: 140mm;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  border: 1pt solid var(--line);
+  border-radius: 1.5mm;
+  overflow: hidden;
+  background: #000;
+}
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.video-caption {
+  text-align: center;
+  font-size: 9.5pt;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-top: 2mm;
+}
+
+/* QR block — only in print */
+.video-print {
+  display: none;
+  margin: 4mm auto;
+  text-align: center;
+}
+.video-print .qr-code {
+  display: inline-block;
+  width: 32mm;
+  height: 32mm;
+  margin: 0 auto 2mm;
+}
+.video-print .qr-code svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.video-print .qr-label {
+  font-size: 10pt;
+  font-weight: 600;
+  margin-bottom: 1mm;
+}
+.video-print .qr-url {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 9pt;
+  color: var(--ink);
+  word-break: break-all;
+}
+
+/* =================================================================
+   B/W MODE — toggled by .bw-mode class on <body>
+   Removes green fills so the page prints well on greyscale printers.
+   Applies both on screen (so you can preview) and in print.
+   ================================================================= */
+body.bw-mode table.struct th,
+body.bw-mode table.terms th {
+  background: var(--bw-bg);
+}
+body.bw-mode .box-tip {
+  background: #fff;
+  border: 1pt solid var(--bw-line);
+}
+body.bw-mode .box-tip h3 {
+  border-bottom: .5pt solid var(--bw-line);
+  padding-bottom: 1mm;
+}
+
+
+/* =================================================================
+   POWER COMPARISON TABLE — 4 columns, blank cells for students
+   ================================================================= */
+table.power-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 3mm 0 4mm;
+  font-size: 10pt;
+}
+table.power-table th,
+table.power-table td {
+  border: .5pt solid var(--line);
+  padding: 2mm 3mm;
+  text-align: left;
+}
+table.power-table th {
+  background: var(--green-tint);
+  font-weight: 700;
+  color: var(--green-dark);
+}
+table.power-table tbody td:first-child {
+  font-weight: 700;
+  width: 28mm;
+}
+table.power-table tbody td:not(:first-child) {
+  height: 9mm;
+}
+body.bw-mode table.power-table th {
+  background: var(--bw-bg);
+  color: var(--ink);
+}
+
+/* =================================================================
+   IN-LINE CALCULATION LINES — blank fields students fill in
+   ================================================================= */
+.calc-line {
+  margin: 2.5mm 0;
+  font-size: 11pt;
+  line-height: 1.8;
+}
+.blank {
+  display: inline-block;
+  border-bottom: .5pt solid var(--ink-mute);
+  min-width: 18mm;
+  height: 4mm;
+  vertical-align: bottom;
+  margin: 0 1mm -.5mm;
+}
+.blank.wide  { min-width: 28mm; }
+.blank.short { min-width: 12mm; }
+
+/* Activity intro line beneath sub-heading */
+.activity-intro {
+  margin: 1mm 0 2mm;
+  font-size: 10.5pt;
+  color: var(--ink-soft);
+}
+
+
+/* theory list — bullet points in Theory section */
+ul.theory-list {
+  list-style: none;
+  margin: 3mm 0 4mm;
+  padding: 0;
+}
+ul.theory-list li {
+  position: relative;
+  padding-left: 6mm;
+  margin: 0 0 2.5mm;
+  font-size: 10.5pt;
+  line-height: 1.55;
+}
+ul.theory-list li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: var(--green-mid);
+  font-size: 8pt;
+}
+
+/* numbered list for video suggestions */
+ol.video-list {
+  margin: 2mm 0 3mm 7mm;
+  padding: 0;
+  font-size: 10.5pt;
+}
+ol.video-list li {
+  margin: 0 0 1mm;
+}
+
+
+/* =================================================================
+   QUIZ — multiple-choice questions with A) B) C) D) options
+   ================================================================= */
+.quiz-q {
+  margin: 2mm 0 3.5mm;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.quiz-q .q-text {
+  font-size: 10.5pt;
+  margin: 0 0 1.5mm;
+  line-height: 1.4;
+}
+.quiz-q ol.q-opts {
+  list-style: none;
+  counter-reset: alpha;
+  margin: 0 0 0 4mm;
+  padding: 0;
+  font-size: 10pt;
+  column-count: 2;
+  column-gap: 8mm;
+}
+.quiz-q ol.q-opts li {
+  counter-increment: alpha;
+  margin: 0 0 .8mm;
+  padding-left: 8mm;
+  position: relative;
+  break-inside: avoid;
+}
+.quiz-q ol.q-opts li::before {
+  content: "○ " counter(alpha, upper-alpha) ")";
+  position: absolute;
+  left: 0;
+  font-weight: 600;
+  color: var(--ink-mute);
+  letter-spacing: .3mm;
+}
+.quiz-section-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 13pt;
+  color: var(--green-dark);
+  margin: 4mm 0 2mm;
+  text-transform: uppercase;
+  letter-spacing: .5mm;
+  border-bottom: 1pt solid var(--green-mid);
+  padding-bottom: 1mm;
+}
+
+/* Appliance section heading (1- ELECTRIC OVEN, 2-REFRIGERATOR, etc.) */
+.appliance-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 15pt;
+  color: var(--green-dark);
+  margin: 5mm 0 3mm;
+  letter-spacing: .3mm;
+}
+
+/* Sub-headers within an appliance (How It Works, Structure, etc.) */
+.sub-heading {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 11.5pt;
+  color: var(--green-mid);
+  margin: 3mm 0 1.5mm;
+}
+
+/* Compact bullet list */
+ul.compact-list {
+  list-style: none;
+  margin: 1mm 0 2.5mm;
+  padding: 0;
+}
+ul.compact-list li {
+  position: relative;
+  padding-left: 5mm;
+  margin: 0 0 1mm;
+  font-size: 10.5pt;
+  line-height: 1.45;
+}
+ul.compact-list li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: var(--green-mid);
+  font-size: 7pt;
+  top: 1pt;
+}
+
+/* Answer key — green box style */
+.answer-key {
+  margin: 4mm 0;
+  padding: 3mm 4mm;
+  background: var(--green-tint-2);
+  border-left: 3pt solid var(--green-mid);
+  border-radius: 1mm;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.answer-key h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 11pt;
+  margin: 0 0 1.5mm;
+  color: var(--green-dark);
+  letter-spacing: .3mm;
+  text-transform: uppercase;
+}
+.answer-key p {
+  margin: 0 0 .5mm;
+  font-size: 10pt;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+}
+body.bw-mode .answer-key {
+  background: var(--bw-bg);
+  border-left-color: var(--bw-line);
+}
+
+
+/* =================================================================
+   MATCHING EXERCISE — bulb to description
+   ================================================================= */
+ul.match-list {
+  list-style: none;
+  margin: 3mm 0;
+  padding: 0;
+}
+ul.match-list li {
+  display: grid;
+  grid-template-columns: 38mm 12mm 1fr;
+  gap: 0 3mm;
+  align-items: baseline;
+  padding: 2.5mm 0;
+  border-bottom: .25pt dashed var(--line);
+  font-size: 10.5pt;
+}
+ul.match-list li:last-child { border-bottom: none; }
+ul.match-list .item   { font-weight: 700; }
+ul.match-list .arrow  { color: var(--ink-mute); text-align: center; }
+ul.match-list .blank  {
+  display: inline-block;
+  min-width: 10mm;
+  border-bottom: .5pt solid var(--ink);
+  text-align: center;
+  margin-right: 2mm;
+}
+ul.match-list .desc { line-height: 1.45; }
+ul.match-list .desc strong { color: var(--green-dark); }
+
+/* Description choices block — listed before / above the items */
+.match-choices {
+  margin: 3mm 0 4mm;
+  padding: 3mm 4mm;
+  background: var(--green-tint-2);
+  border-left: 3pt solid var(--green-mid);
+  border-radius: 1mm;
+}
+.match-choices ol {
+  margin: 0;
+  padding-left: 5mm;
+  font-size: 10.5pt;
+  line-height: 1.55;
+}
+.match-choices ol li { margin-bottom: 1mm; }
+body.bw-mode .match-choices { background: var(--bw-bg); border-left-color: var(--bw-line); }
+
+/* =================================================================
+   WORKED-EXAMPLE STEPS — numbered list inside the green box
+   ================================================================= */
+ol.steps-list {
+  list-style: none;
+  counter-reset: step;
+  margin: 1mm 0 1mm;
+  padding: 0;
+}
+ol.steps-list li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 13mm;
+  margin: 1.5mm 0;
+  font-size: 10.5pt;
+  line-height: 1.5;
+}
+ol.steps-list li::before {
+  content: "Step " counter(step) ":";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+/* ===== PRINT ===== */
+@page { size: A4; margin: 0; }
+@media print {
+  html, body { background: white; margin: 0; padding: 0; }
+  .toolbar { display: none !important; }
+  .page {
+    width: var(--page-w);
+    min-height: var(--page-h);
+    height: var(--page-h);
+    margin: 0;
+    box-shadow: none;
+    page-break-after: always;
+    break-after: page;
+  }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  /* Swap video embed for QR-code in print */
+  .video-embed { display: none !important; }
+  .video-print { display: block !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     TOOLBAR
+============================================================ -->
+<div class="toolbar">
+  <a href="../../index.html" class="back-btn" data-i18n="ui.back">← Back</a>
+  <span class="label" data-i18n="ui.language">Language:</span>
+  <div class="flags" role="group" aria-label="Tungumál">
+    <button class="flag-btn" data-lang="is" aria-pressed="false" title="Íslenska"><img src="../../img/flags/is.svg" alt="is"></button>
+    <button class="flag-btn" data-lang="en" aria-pressed="true" title="English"><img src="../../img/flags/en.svg" alt="en"></button>
+    <button class="flag-btn" data-lang="pt" aria-pressed="false" title="Português"><img src="../../img/flags/pt.svg" alt="pt"></button>
+    <button class="flag-btn" data-lang="hr" aria-pressed="false" title="Hrvatski"><img src="../../img/flags/hr.svg" alt="hr"></button>
+    <button class="flag-btn" data-lang="tr" aria-pressed="false" title="Türkçe"><img src="../../img/flags/tr.svg" alt="tr"></button>
+    <button class="flag-btn" data-lang="nl" aria-pressed="false" title="Nederlands"><img src="../../img/flags/nl.svg" alt="nl"></button>
+  </div>
+
+  <div class="spacer"></div>
+
+  <button class="bw-toggle" aria-pressed="false" data-i18n="ui.bwToggle">B/W view</button>
+  <button class="print-btn" onclick="window.print()" data-i18n="ui.print">🖨 Print</button>
+</div>
+
+
+
+
+<!-- ============================================================
+     PAGE 1 — Title, structural table, Introduction, Theory
+============================================================ -->
+<section class="page" data-page="1">
+
+  <div class="r-header">
+    <div class="logo-green">
+      <img src="../../img/greenlogo.png" alt="GREEN">
+      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
+    </div>
+    <div class="logo-eu">
+      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
+    </div>
+  </div>
+
+  <h1 data-i18n="w18.worksheet">Worksheet 18</h1>
+  <div class="subtitle" data-i18n="w18.title">Designing a building-wide automation strategy</div>
+  <div class="level"><span data-i18n="ui.level">Level:</span> <strong data-i18n="w18.level">ADVANCED</strong></div>
+
+  <table class="struct">
+    <tbody>
+      <tr>
+        <th data-i18n="ui.topic">Topic</th>
+        <td colspan="3" data-i18n="w18.topic">Designing a building-wide automation strategy</td>
+      </tr>
+      <tr>
+        <th data-i18n="ui.learningOutcomes">Learning outcomes</th>
+        <td colspan="3">
+          <ul>
+            <li data-i18n="w18.lo1">Students will design a multi-zone smart lighting strategy for a school building.</li>
+            <li data-i18n="w18.lo2">Students will critically evaluate the data and privacy implications of presence-based automation.</li>
+            <li data-i18n="w18.lo3">Students will integrate smart lighting with other building systems (HVAC, scheduling).</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <th data-i18n="ui.timeNeeded">Time needed</th>
+        <td colspan="3" data-i18n="w18.time">150 min</td>
+      </tr>
+      <tr>
+        <th data-i18n="ui.resources">Resources needed</th>
+        <td colspan="3" data-i18n="w18.resources">Calculator or spreadsheet; school floor plan (request from facility manager); access to one or more smart-lighting product datasheets (optional).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="section" data-i18n="ui.introduction">Introduction</h2>
+
+  <p class="body" data-i18n="w18.intro">
+    Modern school buildings increasingly use centrally-managed smart lighting: every fixture is addressable, sensors are networked, and lighting integrates with the school's HVAC and timetable systems. This worksheet asks you to design — on paper — a smart lighting strategy for one floor of your school. You will also confront the harder questions: is it worth the complexity? What about privacy and data?
+  </p>
+
+  <div class="box-tip">
+    <p class="body"><strong data-i18n="w18.prereq.label">What you should already know:</strong>
+      <em data-i18n="w18.prereq.body"> This worksheet assumes you have completed Worksheets 16 and 17 (or are confident with sensor types, occupancy reasoning and basic payback calculations). For the optional WP3 extension, basic familiarity with microcontrollers (Arduino, ESP32) is helpful.</em></p>
+  </div>
+
+  <h2 class="section" data-i18n="w18.theory.title">Theory</h2>
+
+  <p class="body" data-i18n="w18.theory.networked">
+    Modern smart-lighting systems are NETWORKED. Every fixture is individually addressable, sensors share data with multiple devices, and the system integrates with other building systems (HVAC, scheduling, security). This unlocks much larger savings than stand-alone sensors but introduces new design and ethical questions.
+  </p>
+
+  <p class="body" data-i18n="w18.theory.zoning">
+    <strong>ZONING</strong> is the design step where you divide a building into "lighting zones" — areas that should switch together. Zones are usually drawn around how spaces are USED, not where the wiring already runs. A good zoning plan considers occupancy patterns, daylight availability, control logic and emergency lighting requirements.
+  </p>
+
+    <div class="r-footer">
+    <div class="footer-left">
+      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
+      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
+    </div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 1 <span data-i18n="ui.of">of</span> 6</div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PAGE 2 — Theory continued + Worked example
+============================================================ -->
+<section class="page" data-page="2">
+
+    <div class="r-header">
+    <div class="logo-green">
+      <img src="../../img/greenlogo.png" alt="GREEN">
+      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
+    </div>
+    <div class="logo-eu">
+      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
+    </div>
+  </div>
+
+  <p class="body" data-i18n="w18.theory.integration">
+    <strong>INTEGRATION</strong> with the school timetable, HVAC and security systems multiplies the value of the sensor data. A presence sensor used by lighting AND ventilation reduces hardware cost. Linking lighting control to the timetable means classrooms default to OFF when no class is scheduled, capturing waste that simple motion sensors miss (e.g. an empty room with someone walking through). The risk: a single faulty sensor or scheduling error can cascade across systems.
+  </p>
+
+  <p class="body" data-i18n="w18.theory.privacy">
+    <strong>DATA AND PRIVACY:</strong> every networked sensor generates data. A motion sensor that knows when each room is occupied, combined with the timetable, can identify which students were in which room at which time. Under the GDPR (and increasingly under the EU AI Act for behaviour-monitoring systems), this is potentially personal data with all the obligations that follow: lawful basis, minimisation, retention limits, transparency. Energy savings do not exempt a school from data protection law.
+  </p>
+
+  <p class="body" data-i18n="w18.theory.maturity">
+    <strong>DEPLOYMENT MATURITY:</strong> not all rooms benefit equally. The ROI of smart lighting drops sharply when occupancy ratio is high (regular classrooms used 6+ hours per day). Smart-lighting investment should target the rooms with the highest waste first.
+  </p>
+
+  <div class="box-tip no-break">
+    <h3 data-i18n="w18.worked.title">Worked example — Zoning a classroom with south-facing windows</h3>
+    <p class="body" data-i18n="w18.worked.scenario">
+      Design a zoning sketch for a single classroom with windows on the south side.
+    </p>
+    <ol class="steps-list">
+      <li data-i18n="w18.worked.s1"><strong>Zone 1:</strong> row of fixtures NEAREST the windows. Sensor: daylight (with manual override). Logic: dim to maintain 300 lux at desk level. On sunny days these fixtures may be at 20 % power; on dark winter mornings 100 %.</li>
+      <li data-i18n="w18.worked.s2"><strong>Zone 2:</strong> row of fixtures FURTHEST from the windows. Sensor: motion + timetable. Logic: ON during scheduled lessons; motion-controlled outside scheduled hours; OFF otherwise.</li>
+      <li data-i18n="w18.worked.s3"><strong>Zone 3:</strong> front-of-room fixture above the whiteboard. Sensor: separate switch (teacher control). Logic: always available, never automatic.</li>
+      <li data-i18n="w18.worked.s4"><strong>Estimated saving</strong> vs. all-on baseline: 35–45 % depending on weather and room use.</li>
+    </ol>
+  </div>
+
+    <div class="r-footer">
+    <div class="footer-left">
+      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
+      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
+    </div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 2 <span data-i18n="ui.of">of</span> 6</div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PAGE 3 — Key terms + Activity 1 (Zoning)
+============================================================ -->
+<section class="page" data-page="3">
+
+    <div class="r-header">
+    <div class="logo-green">
+      <img src="../../img/greenlogo.png" alt="GREEN">
+      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
+    </div>
+    <div class="logo-eu">
+      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
+    </div>
+  </div>
+
+  <h3 class="sub-heading" data-i18n="w18.terms.title">Key terms</h3>
+
+  <table class="terms no-break">
+    <thead>
+      <tr><th data-i18n="w18.terms.colTerm">Term</th><th data-i18n="w18.terms.colDef">Definition</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-i18n="w18.terms.t1term">Zoning</td>
+        <td data-i18n="w18.terms.t1def">Dividing a building into "lighting zones" — areas that switch together based on use.</td>
+      </tr>
+      <tr>
+        <td data-i18n="w18.terms.t2term">Addressable fixture</td>
+        <td data-i18n="w18.terms.t2def">A light fitting that can be controlled individually over a network (DALI, Zigbee, KNX…).</td>
+      </tr>
+      <tr>
+        <td data-i18n="w18.terms.t3term">Integration</td>
+        <td data-i18n="w18.terms.t3def">Letting the lighting system exchange data with HVAC, timetable, security or other building systems.</td>
+      </tr>
+      <tr>
+        <td data-i18n="w18.terms.t4term">Personal data (GDPR)</td>
+        <td data-i18n="w18.terms.t4def">Any information relating to an identified or identifiable person. Sensor data combined with a timetable can become personal data.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 1</h2>
+  <div class="activity-sub" data-i18n="w18.act1.sub">Zoning the floor</div>
+  <p class="activity-intro" data-i18n="w18.act1.intro">
+    Get (or sketch) a plan of one floor of your school. Divide it into "lighting zones" — areas that should switch together.
+  </p>
+
+  <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w18.act1.q1">List your zones. For each, describe: typical use pattern, recommended sensor type (motion, daylight, both, none) and recommended control logic (e.g. "always on during school hours; off otherwise", "motion sensor with 5-min time-out", "daylight dimming + motion override").</span></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+
+  <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w18.act1.q2">Estimate the annual energy use of each zone before and after implementing your strategy. Use realistic LED wattages and your actual school day length.</span></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+
+    <div class="r-footer">
+    <div class="footer-left">
+      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
+      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
+    </div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 3 <span data-i18n="ui.of">of</span> 6</div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PAGE 4 — Activity 2 (Integration)
+============================================================ -->
+<section class="page" data-page="4">
+
+    <div class="r-header">
+    <div class="logo-green">
+      <img src="../../img/greenlogo.png" alt="GREEN">
+      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
+    </div>
+    <div class="logo-eu">
+      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
+    </div>
+  </div>
+
+  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 2</h2>
+  <div class="activity-sub" data-i18n="w18.act2.sub">Integration with other systems</div>
+  <p class="activity-intro" data-i18n="w18.act2.intro">
+    Smart lighting can communicate with other building systems.
+  </p>
+
+  <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w18.act2.q1">Describe one integration with the school's TIMETABLE system. (Example: "Empty classrooms at 14:30 still have lights even though no class is scheduled. Integration with the timetable means lights default to off in unscheduled rooms.") Estimate the additional saving.</span></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+
+  <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w18.act2.q2">Describe one integration with the school's HVAC system. (Example: presence detection used by both lighting and ventilation, reducing duplicated sensor cost.)</span></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+
+  <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w18.act2.q3">What is the risk of these integrations? (Example: a single faulty sensor switching off both lights AND ventilation in a classroom full of students.)</span></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+
+    <div class="r-footer">
+    <div class="footer-left">
+      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
+      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
+    </div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 4 <span data-i18n="ui.of">of</span> 6</div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PAGE 5 — Activity 3 (Privacy, data and ethics)
+============================================================ -->
+<section class="page" data-page="5">
+
+    <div class="r-header">
+    <div class="logo-green">
+      <img src="../../img/greenlogo.png" alt="GREEN">
+      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
+    </div>
+    <div class="logo-eu">
+      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
+    </div>
+  </div>
+
+  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 3</h2>
+  <div class="activity-sub" data-i18n="w18.act3.sub">Privacy, data and ethics</div>
+  <p class="activity-intro" data-i18n="w18.act3.intro">
+    A networked sensor that detects motion is also generating data: it knows when each room is occupied and for how long. Under the EU AI Act and the GDPR, this can become personal data if it can be linked to individuals.
+  </p>
+
+  <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w18.act3.q1">Identify three pieces of information that motion-sensor data could leak about students or staff if combined with timetables.</span></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+
+  <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w18.act3.q2">Propose three concrete safeguards (technical or organisational) to limit privacy risk while still allowing energy savings.</span></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+
+  <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w18.act3.q3">Critically reflect: is the energy saving worth the privacy trade-off? When is it, and when is it not?</span></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+
+    <div class="r-footer">
+    <div class="footer-left">
+      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
+      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
+    </div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 5 <span data-i18n="ui.of">of</span> 6</div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PAGE 6 — Activity 4 (OPTIONAL WP3 extension)
+============================================================ -->
+<section class="page" data-page="6">
+
+    <div class="r-header">
+    <div class="logo-green">
+      <img src="../../img/greenlogo.png" alt="GREEN">
+      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
+    </div>
+    <div class="logo-eu">
+      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
+    </div>
+  </div>
+
+  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 4 <span class="optional" data-i18n="w18.act4.optional">(OPTIONAL)</span></h2>
+  <div class="activity-sub" data-i18n="w18.act4.sub">Extension — link to GREEN project Work Package 3 (vertical garden)</div>
+  <p class="activity-intro" data-i18n="w18.act4.intro">
+    The GREEN project's vertical garden uses microcontrollers (e.g. Arduino, ESP32) to monitor and control irrigation and grow-lighting. The same principles apply to school lighting automation. If you have access to a microcontroller, sensors and a programmable LED fixture:
+  </p>
+
+  <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w18.act4.q1">Sketch the wiring (block diagram) of a system with: a PIR motion sensor, an LDR daylight sensor, a microcontroller and a relay or PWM-controlled LED. Which pins / inputs / outputs are needed?</span></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+
+  <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w18.act4.q2">Write pseudocode for the control logic: light is OFF unless (motion is detected AND ambient light is below threshold).</span></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+
+  <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w18.act4.q3">What additional sensors would extend this into a "smart classroom" system? (CO₂, temperature, humidity…)</span></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+
+    <div class="r-footer">
+    <div class="footer-left">
+      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
+      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
+    </div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 6 <span data-i18n="ui.of">of</span> 6</div>
+  </div>
+
+</section>
+
+
+<script>
+/* ============================================================
+   Worksheet i18n — fetches lang/{lang}.json on flag click,
+   applies nested-path translations to all [data-i18n] elements.
+   The default text in the HTML is the fallback (baseline language).
+============================================================ */
+(function () {
+  const FALLBACK = 'en';
+  const cache = {};
+
+  async function loadLang(lang) {
+    if (cache[lang] !== undefined) return cache[lang];
+    try {
+      const res = await fetch('lang/' + lang + '.json', { cache: 'no-cache' });
+      if (!res.ok) throw new Error('not found');
+      const data = await res.json();
+      cache[lang] = data;
+      return data;
+    } catch (err) {
+      cache[lang] = null;
+      return null;
+    }
+  }
+
+  function getNested(obj, path) {
+    if (!obj) return undefined;
+    return path.split('.').reduce(
+      (acc, key) => (acc && typeof acc === 'object' ? acc[key] : undefined),
+      obj
+    );
+  }
+
+  async function applyLang(lang) {
+    let dict = await loadLang(lang);
+    if (!dict && lang !== FALLBACK) dict = await loadLang(FALLBACK);
+
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const val = getNested(dict, key);
+      if (typeof val === 'string') el.textContent = val;
+      /* if val is missing, leave the HTML text (baseline language) intact */
+    });
+
+    document.querySelectorAll('.flag-btn').forEach(btn => {
+      const isActive = btn.getAttribute('data-lang') === lang;
+      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+
+    try { localStorage.setItem('green-ws-lang', lang); } catch (e) {}
+  }
+
+  /* wire up flag buttons */
+  document.querySelectorAll('.flag-btn').forEach(btn => {
+    btn.addEventListener('click', () => applyLang(btn.getAttribute('data-lang')));
+  });
+
+  /* B/W toggle */
+  const bwBtn = document.querySelector('.bw-toggle');
+  if (bwBtn) {
+    bwBtn.addEventListener('click', () => {
+      const on = document.body.classList.toggle('bw-mode');
+      bwBtn.setAttribute('aria-pressed', on);
+    });
+  }
+
+  /* initial language: saved preference, else <html lang>, else fallback */
+  let initial = FALLBACK;
+  try { initial = localStorage.getItem('green-ws-lang') || document.documentElement.lang || FALLBACK; }
+  catch (e) { initial = document.documentElement.lang || FALLBACK; }
+  applyLang(initial);
+})();
+</script>
+
+</body>
+</html>

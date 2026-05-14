@@ -1,0 +1,1165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Worksheet 16 — Sensors that switch lights for you</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- KaTeX for math formulas -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"
+  onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
+
+<style>
+:root {
+  --green-dark:   #1d6437;
+  --green-mid:    #2e7d4f;
+  --green-tint:   #cfe3bd;
+  --green-tint-2: #e6f1da;
+  --ink:          #1a1a1a;
+  --ink-soft:     #444;
+  --ink-mute:     #666;
+  --line:         #b8b8b8;
+  --line-soft:    #d8d8d8;
+  --paper:        #ffffff;
+  --bw-bg:        #f0f0f0;
+  --bw-line:      #888;
+
+  --page-w: 210mm;
+  --page-h: 297mm;
+  --margin-x: 15mm;
+  --margin-top: 28mm;     /* extra room: logo + project number */
+  --margin-bottom: 26mm;  /* extra room: project line + disclaimer + page no */
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0; padding: 0;
+  font-family: "Open Sans", "Lato", system-ui, sans-serif;
+  font-size: 11pt;
+  line-height: 1.5;
+  color: var(--ink);
+  background: #e8e8e8;
+}
+
+/* ===== TOOLBAR ===== */
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line-soft);
+  padding: 10px 16px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.toolbar .label {
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--ink-mute);
+  font-weight: 700;
+}
+.flags { display: flex; gap: 4px; }
+.flag-btn {
+  border: 2px solid transparent;
+  background: none;
+  padding: 3px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: transform .08s ease, border-color .12s ease;
+}
+.flag-btn:hover { transform: translateY(-1px); }
+.flag-btn[aria-pressed="true"] {
+  border-color: var(--green-dark);
+  background: var(--green-tint-2);
+}
+.flag-btn svg,
+.flag-btn img {
+  width: 28px; height: 20px;
+  display: block;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+  object-fit: cover;
+}
+.toolbar .spacer { flex: 1; }
+
+.bw-toggle, .print-btn {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border: 1.5px solid var(--green-dark);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--green-dark);
+  cursor: pointer;
+}
+.back-btn {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink-soft);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.back-btn:hover {
+  border-color: var(--green-dark);
+  color: var(--green-dark);
+}
+.bw-toggle[aria-pressed="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+.print-btn {
+  background: var(--green-dark);
+  color: #fff;
+}
+.print-btn:hover { background: var(--green-mid); }
+
+/* ===== PAGE ===== */
+.page {
+  width: var(--page-w);
+  min-height: var(--page-h);
+  background: var(--paper);
+  margin: 18px auto;
+  padding: var(--margin-top) var(--margin-x) var(--margin-bottom);
+  position: relative;
+  box-shadow: 0 4px 18px rgba(0,0,0,.12);
+  overflow: hidden;
+}
+
+/* ===== HEADER ===== */
+.r-header {
+  position: absolute;
+  top: 8mm;
+  left: var(--margin-x);
+  right: var(--margin-x);
+  height: 18mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.logo-green {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1mm;
+}
+.logo-green img {
+  height: 13mm;
+  width: auto;
+  display: block;
+}
+.logo-green .proj-no {
+  font-family: "Open Sans", sans-serif;
+  font-size: 6.5pt;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: .01em;
+  color: var(--ink);
+  text-align: left;
+}
+.logo-eu img {
+  height: 12mm;
+  width: auto;
+  display: block;
+}
+
+/* ===== FOOTER ===== */
+.r-footer {
+  position: absolute;
+  bottom: 8mm;
+  left: var(--margin-x);
+  right: var(--margin-x);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6mm;
+  align-items: end;
+  padding-top: 2.5mm;
+  border-top: .5pt solid var(--line);
+}
+.r-footer .footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1mm;
+}
+.r-footer .proj-line {
+  font-family: "Open Sans", sans-serif;
+  font-size: 7pt;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: .01em;
+}
+.r-footer .disclaimer {
+  font-family: "Open Sans", sans-serif;
+  font-size: 6.6pt;
+  line-height: 1.35;
+  color: var(--ink-soft);
+}
+.r-footer .pageno {
+  font-family: "Open Sans", sans-serif;
+  font-size: 9pt;
+  font-weight: 700;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1.title {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 34pt;
+  line-height: 1.05;
+  margin: 0 0 2mm;
+  letter-spacing: -.01em;
+}
+.subtitle {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 17pt;
+  margin: 0 0 1mm;
+}
+.level {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 11pt;
+  margin: 0 0 6mm;
+}
+h2.section {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 22pt;
+  margin: 6mm 0 3mm;
+  line-height: 1.1;
+}
+p.body { margin: 0 0 3mm; }
+ul.bullets { padding-left: 6mm; margin: 0 0 3mm; }
+ul.bullets li { margin: 0 0 1.5mm; }
+
+/* ===== TABLES ===== */
+table.struct, table.terms {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 7mm;
+  font-size: 10.5pt;
+}
+table.struct th, table.struct td,
+table.terms th, table.terms td {
+  border: 1pt solid var(--line);
+  padding: 2.4mm 3mm;
+  vertical-align: middle;
+  text-align: left;
+}
+table.struct th, table.terms th {
+  background: var(--green-tint);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+table.struct th { width: 38mm; white-space: nowrap; }
+table.struct ul { margin: 0; padding-left: 5mm; }
+table.struct ul li { margin: 0 0 .5mm; }
+table.terms td:first-child { font-weight: 700; width: 45mm; vertical-align: top; }
+table.terms td { vertical-align: top; }
+
+/* ===== WORKED EXAMPLE ===== */
+.box-tip {
+  background: var(--green-tint);
+  border: 1pt solid var(--green-mid);
+  border-radius: 1.5mm;
+  padding: 4mm 5mm;
+  margin: 4mm 0 5mm;
+}
+.box-tip h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 12pt;
+  margin: 0 0 2mm;
+}
+.box-tip p { margin: 0 0 1.5mm; font-size: 10.5pt; }
+.box-tip p:last-child { margin-bottom: 0; }
+
+/* ===== FORMULA BOX ===== */
+.formula-block {
+  margin: 3mm 0 4mm;
+  text-align: center;
+}
+.formula-block .katex-display {
+  margin: 0;
+}
+.formula-vars {
+  margin: 2mm auto 5mm;
+  font-size: 10pt;
+  color: var(--ink-soft);
+  text-align: center;
+}
+.formula-vars span { margin: 0 5mm; white-space: nowrap; }
+.formula-vars strong { color: var(--ink); }
+
+/* ===== STUDENT ACTIVITY ===== */
+.activity-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 22pt;
+  margin: 6mm 0 1mm;
+  line-height: 1.1;
+}
+.activity-sub {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 13pt;
+  margin: 0 0 3mm;
+}
+.activity p { margin: 0 0 2.5mm; }
+.write-line {
+  height: 9mm;
+  border-bottom: .75pt solid var(--ink-soft);
+  margin: 1mm 0 5mm;
+}
+.write-line.tall { height: 14mm; }
+.q { margin: 2mm 0 0; }
+.q .bullet-row { display: flex; gap: 2mm; align-items: flex-start; }
+.q .dot { font-size: 14pt; line-height: 1; padding-top: 1pt; }
+.q .label { flex: 1; }
+
+.no-break { break-inside: avoid; page-break-inside: avoid; }
+
+/* =================================================================
+   MEDIA FIGURE — images inline with text
+   Designed for phone-shot portrait photos (3:4 aspect).
+
+   Hard ceilings so worksheets across 12+ projects look consistent:
+   - left/right:  max-height 75mm,  max-width 60% (~108mm on A4)
+   - center:      max-height 95mm,  max-width 100% (~180mm on A4)
+
+   Container width is NOT fixed — it shrinks to fit the actual image
+   so a tall portrait photo doesn't leave dead space beside it.
+   ================================================================= */
+.media-figure {
+  margin: 3mm 0 4mm;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.media-figure figcaption {
+  font-size: 9pt;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-top: 1.5mm;
+  text-align: center;
+  line-height: 1.35;
+}
+
+/* LEFT / RIGHT — float so text wraps around */
+.media-figure.left,
+.media-figure.right {
+  max-width: 60%;
+  /* No fixed width — shrinks to the image so captions sit under photo */
+}
+.media-figure.left  { float: left;  margin: 0 4mm 1mm 0; }
+.media-figure.right { float: right; margin: 0 0 1mm 4mm; }
+
+.media-figure.left img,
+.media-figure.right img,
+.media-figure.left svg,
+.media-figure.right svg {
+  display: block;
+  max-height: 75mm;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 1.5mm;
+}
+
+/* CENTER — image alone on its own row, horizontally centered */
+.media-figure.center {
+  text-align: center;
+  margin: 4mm 0 5mm;
+  clear: both;
+}
+.media-figure.center img,
+.media-figure.center svg {
+  display: inline-block;
+  max-height: 95mm;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 1.5mm;
+}
+
+/* Block-level elements that must never wrap next to a floated figure */
+h2.section,
+.activity-title,
+.box-tip,
+table.struct,
+table.terms,
+.formula-block,
+.video-block,
+.r-footer {
+  clear: both;
+}
+
+/* =================================================================
+   VIDEO / QR — embed on screen, QR + URL on print
+   ================================================================= */
+.video-block {
+  margin: 4mm 0 6mm;
+}
+
+.video-embed {
+  /* Visible on screen */
+  position: relative;
+  width: 100%;
+  max-width: 140mm;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  border: 1pt solid var(--line);
+  border-radius: 1.5mm;
+  overflow: hidden;
+  background: #000;
+}
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.video-caption {
+  text-align: center;
+  font-size: 9.5pt;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-top: 2mm;
+}
+
+/* QR block — only in print */
+.video-print {
+  display: none;
+  margin: 4mm auto;
+  text-align: center;
+}
+.video-print .qr-code {
+  display: inline-block;
+  width: 32mm;
+  height: 32mm;
+  margin: 0 auto 2mm;
+}
+.video-print .qr-code svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.video-print .qr-label {
+  font-size: 10pt;
+  font-weight: 600;
+  margin-bottom: 1mm;
+}
+.video-print .qr-url {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 9pt;
+  color: var(--ink);
+  word-break: break-all;
+}
+
+/* =================================================================
+   B/W MODE — toggled by .bw-mode class on <body>
+   Removes green fills so the page prints well on greyscale printers.
+   Applies both on screen (so you can preview) and in print.
+   ================================================================= */
+body.bw-mode table.struct th,
+body.bw-mode table.terms th {
+  background: var(--bw-bg);
+}
+body.bw-mode .box-tip {
+  background: #fff;
+  border: 1pt solid var(--bw-line);
+}
+body.bw-mode .box-tip h3 {
+  border-bottom: .5pt solid var(--bw-line);
+  padding-bottom: 1mm;
+}
+
+
+/* =================================================================
+   POWER COMPARISON TABLE — 4 columns, blank cells for students
+   ================================================================= */
+table.power-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 3mm 0 4mm;
+  font-size: 10pt;
+}
+table.power-table th,
+table.power-table td {
+  border: .5pt solid var(--line);
+  padding: 2mm 3mm;
+  text-align: left;
+}
+table.power-table th {
+  background: var(--green-tint);
+  font-weight: 700;
+  color: var(--green-dark);
+}
+table.power-table tbody td:first-child {
+  font-weight: 700;
+  width: 28mm;
+}
+table.power-table tbody td:not(:first-child) {
+  height: 9mm;
+}
+body.bw-mode table.power-table th {
+  background: var(--bw-bg);
+  color: var(--ink);
+}
+
+/* =================================================================
+   IN-LINE CALCULATION LINES — blank fields students fill in
+   ================================================================= */
+.calc-line {
+  margin: 2.5mm 0;
+  font-size: 11pt;
+  line-height: 1.8;
+}
+.blank {
+  display: inline-block;
+  border-bottom: .5pt solid var(--ink-mute);
+  min-width: 18mm;
+  height: 4mm;
+  vertical-align: bottom;
+  margin: 0 1mm -.5mm;
+}
+.blank.wide  { min-width: 28mm; }
+.blank.short { min-width: 12mm; }
+
+/* Activity intro line beneath sub-heading */
+.activity-intro {
+  margin: 1mm 0 2mm;
+  font-size: 10.5pt;
+  color: var(--ink-soft);
+}
+
+
+/* theory list — bullet points in Theory section */
+ul.theory-list {
+  list-style: none;
+  margin: 3mm 0 4mm;
+  padding: 0;
+}
+ul.theory-list li {
+  position: relative;
+  padding-left: 6mm;
+  margin: 0 0 2.5mm;
+  font-size: 10.5pt;
+  line-height: 1.55;
+}
+ul.theory-list li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: var(--green-mid);
+  font-size: 8pt;
+}
+
+/* numbered list for video suggestions */
+ol.video-list {
+  margin: 2mm 0 3mm 7mm;
+  padding: 0;
+  font-size: 10.5pt;
+}
+ol.video-list li {
+  margin: 0 0 1mm;
+}
+
+
+/* =================================================================
+   QUIZ — multiple-choice questions with A) B) C) D) options
+   ================================================================= */
+.quiz-q {
+  margin: 2mm 0 3.5mm;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.quiz-q .q-text {
+  font-size: 10.5pt;
+  margin: 0 0 1.5mm;
+  line-height: 1.4;
+}
+.quiz-q ol.q-opts {
+  list-style: none;
+  counter-reset: alpha;
+  margin: 0 0 0 4mm;
+  padding: 0;
+  font-size: 10pt;
+  column-count: 2;
+  column-gap: 8mm;
+}
+.quiz-q ol.q-opts li {
+  counter-increment: alpha;
+  margin: 0 0 .8mm;
+  padding-left: 8mm;
+  position: relative;
+  break-inside: avoid;
+}
+.quiz-q ol.q-opts li::before {
+  content: "○ " counter(alpha, upper-alpha) ")";
+  position: absolute;
+  left: 0;
+  font-weight: 600;
+  color: var(--ink-mute);
+  letter-spacing: .3mm;
+}
+.quiz-section-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 13pt;
+  color: var(--green-dark);
+  margin: 4mm 0 2mm;
+  text-transform: uppercase;
+  letter-spacing: .5mm;
+  border-bottom: 1pt solid var(--green-mid);
+  padding-bottom: 1mm;
+}
+
+/* Appliance section heading (1- ELECTRIC OVEN, 2-REFRIGERATOR, etc.) */
+.appliance-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 15pt;
+  color: var(--green-dark);
+  margin: 5mm 0 3mm;
+  letter-spacing: .3mm;
+}
+
+/* Sub-headers within an appliance (How It Works, Structure, etc.) */
+.sub-heading {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 11.5pt;
+  color: var(--green-mid);
+  margin: 3mm 0 1.5mm;
+}
+
+/* Compact bullet list */
+ul.compact-list {
+  list-style: none;
+  margin: 1mm 0 2.5mm;
+  padding: 0;
+}
+ul.compact-list li {
+  position: relative;
+  padding-left: 5mm;
+  margin: 0 0 1mm;
+  font-size: 10.5pt;
+  line-height: 1.45;
+}
+ul.compact-list li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: var(--green-mid);
+  font-size: 7pt;
+  top: 1pt;
+}
+
+/* Answer key — green box style */
+.answer-key {
+  margin: 4mm 0;
+  padding: 3mm 4mm;
+  background: var(--green-tint-2);
+  border-left: 3pt solid var(--green-mid);
+  border-radius: 1mm;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.answer-key h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 11pt;
+  margin: 0 0 1.5mm;
+  color: var(--green-dark);
+  letter-spacing: .3mm;
+  text-transform: uppercase;
+}
+.answer-key p {
+  margin: 0 0 .5mm;
+  font-size: 10pt;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+}
+body.bw-mode .answer-key {
+  background: var(--bw-bg);
+  border-left-color: var(--bw-line);
+}
+
+
+/* =================================================================
+   MATCHING EXERCISE — bulb to description
+   ================================================================= */
+ul.match-list {
+  list-style: none;
+  margin: 3mm 0;
+  padding: 0;
+}
+ul.match-list li {
+  display: grid;
+  grid-template-columns: 38mm 12mm 1fr;
+  gap: 0 3mm;
+  align-items: baseline;
+  padding: 2.5mm 0;
+  border-bottom: .25pt dashed var(--line);
+  font-size: 10.5pt;
+}
+ul.match-list li:last-child { border-bottom: none; }
+ul.match-list .item   { font-weight: 700; }
+ul.match-list .arrow  { color: var(--ink-mute); text-align: center; }
+ul.match-list .blank  {
+  display: inline-block;
+  min-width: 10mm;
+  border-bottom: .5pt solid var(--ink);
+  text-align: center;
+  margin-right: 2mm;
+}
+ul.match-list .desc { line-height: 1.45; }
+ul.match-list .desc strong { color: var(--green-dark); }
+
+/* Description choices block — listed before / above the items */
+.match-choices {
+  margin: 3mm 0 4mm;
+  padding: 3mm 4mm;
+  background: var(--green-tint-2);
+  border-left: 3pt solid var(--green-mid);
+  border-radius: 1mm;
+}
+.match-choices ol {
+  margin: 0;
+  padding-left: 5mm;
+  font-size: 10.5pt;
+  line-height: 1.55;
+}
+.match-choices ol li { margin-bottom: 1mm; }
+body.bw-mode .match-choices { background: var(--bw-bg); border-left-color: var(--bw-line); }
+
+/* =================================================================
+   WORKED-EXAMPLE STEPS — numbered list inside the green box
+   ================================================================= */
+ol.steps-list {
+  list-style: none;
+  counter-reset: step;
+  margin: 1mm 0 1mm;
+  padding: 0;
+}
+ol.steps-list li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 13mm;
+  margin: 1.5mm 0;
+  font-size: 10.5pt;
+  line-height: 1.5;
+}
+ol.steps-list li::before {
+  content: "Step " counter(step) ":";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+/* ===== PRINT ===== */
+@page { size: A4; margin: 0; }
+@media print {
+  html, body { background: white; margin: 0; padding: 0; }
+  .toolbar { display: none !important; }
+  .page {
+    width: var(--page-w);
+    min-height: var(--page-h);
+    height: var(--page-h);
+    margin: 0;
+    box-shadow: none;
+    page-break-after: always;
+    break-after: page;
+  }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  /* Swap video embed for QR-code in print */
+  .video-embed { display: none !important; }
+  .video-print { display: block !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     TOOLBAR
+============================================================ -->
+<div class="toolbar">
+  <a href="../../index.html" class="back-btn" data-i18n="ui.back">← Back</a>
+  <span class="label" data-i18n="ui.language">Language:</span>
+  <div class="flags" role="group" aria-label="Tungumál">
+    <button class="flag-btn" data-lang="is" aria-pressed="false" title="Íslenska"><img src="../../img/flags/is.svg" alt="is"></button>
+    <button class="flag-btn" data-lang="en" aria-pressed="true" title="English"><img src="../../img/flags/en.svg" alt="en"></button>
+    <button class="flag-btn" data-lang="pt" aria-pressed="false" title="Português"><img src="../../img/flags/pt.svg" alt="pt"></button>
+    <button class="flag-btn" data-lang="hr" aria-pressed="false" title="Hrvatski"><img src="../../img/flags/hr.svg" alt="hr"></button>
+    <button class="flag-btn" data-lang="tr" aria-pressed="false" title="Türkçe"><img src="../../img/flags/tr.svg" alt="tr"></button>
+    <button class="flag-btn" data-lang="nl" aria-pressed="false" title="Nederlands"><img src="../../img/flags/nl.svg" alt="nl"></button>
+  </div>
+
+  <div class="spacer"></div>
+
+  <button class="bw-toggle" aria-pressed="false" data-i18n="ui.bwToggle">B/W view</button>
+  <button class="print-btn" onclick="window.print()" data-i18n="ui.print">🖨 Print</button>
+</div>
+
+
+
+
+<!-- ============================================================
+     PAGE 1 — Title, structural table, Introduction, Theory
+============================================================ -->
+<section class="page" data-page="1">
+
+  <div class="r-header">
+    <div class="logo-green">
+      <img src="../../img/greenlogo.png" alt="GREEN">
+      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
+    </div>
+    <div class="logo-eu">
+      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
+    </div>
+  </div>
+
+  <h1 data-i18n="w16.worksheet">Worksheet 16</h1>
+  <div class="subtitle" data-i18n="w16.title">Sensors that switch lights for you</div>
+  <div class="level"><span data-i18n="ui.level">Level:</span> <strong data-i18n="w16.level">BASIC</strong></div>
+
+  <table class="struct">
+    <tbody>
+      <tr>
+        <th data-i18n="ui.topic">Topic</th>
+        <td colspan="3" data-i18n="w16.topic">Sensors that switch lights for you</td>
+      </tr>
+      <tr>
+        <th data-i18n="ui.learningOutcomes">Learning outcomes</th>
+        <td colspan="3">
+          <ul>
+            <li data-i18n="w16.lo1">Students will explain what a motion sensor and a daylight sensor do.</li>
+            <li data-i18n="w16.lo2">Students will recognise places where each type of sensor is useful.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <th data-i18n="ui.timeNeeded">Time needed</th>
+        <td colspan="3" data-i18n="w16.time">60 min</td>
+      </tr>
+      <tr>
+        <th data-i18n="ui.resources">Resources needed</th>
+        <td colspan="3" data-i18n="w16.resources">This worksheet.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="section" data-i18n="ui.introduction">Introduction</h2>
+
+  <p class="body" data-i18n="w16.intro">
+    Have you ever walked into a school toilet and the lights came on automatically? Or noticed that lamps along the road only switch on when it gets dark? Those are examples of "smart" lighting — lights with sensors that switch themselves on and off. In this worksheet you will learn the basics.
+  </p>
+
+  <h2 class="section" data-i18n="w16.theory.title">Theory</h2>
+
+  <p class="body" data-i18n="w16.theory.smart">
+    A SMART light is a light that has a small electronic brain and at least one sensor. The brain decides when to switch the light on or off based on what the sensor measures. So you don't need to flip a switch any more.
+  </p>
+
+  <p class="body" data-i18n="w16.theory.twoSensors">
+    The two most common sensors used in lighting are:
+  </p>
+
+    <div class="r-footer">
+    <div class="footer-left">
+      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
+      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
+    </div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 1 <span data-i18n="ui.of">of</span> 4</div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PAGE 2 — Sensor details, worked example, key terms
+============================================================ -->
+<section class="page" data-page="2">
+
+    <div class="r-header">
+    <div class="logo-green">
+      <img src="../../img/greenlogo.png" alt="GREEN">
+      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
+    </div>
+    <div class="logo-eu">
+      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
+    </div>
+  </div>
+
+  <ul class="bullet-list">
+    <li><strong data-i18n="w16.theory.motion.label">A MOTION SENSOR</strong>
+        <span data-i18n="w16.theory.motion.body"> detects movement. As soon as somebody walks in, it tells the light to turn on. After a few minutes of no movement, it tells the light to turn off again. (The few-minute delay is so the light does not switch off if you sit still for a moment.)</span></li>
+    <li><strong data-i18n="w16.theory.daylight.label">A DAYLIGHT SENSOR</strong>
+        <span data-i18n="w16.theory.daylight.body"> measures how much daylight is in the room. When the sun goes down or it gets cloudy, it tells the light to turn on. When daylight is enough, it tells the light to turn off.</span></li>
+  </ul>
+
+  <p class="body" data-i18n="w16.theory.different">
+    Both sensors save energy in DIFFERENT WAYS. A motion sensor saves energy in rooms that are sometimes used and sometimes empty (toilets, corridors, storerooms). A daylight sensor saves energy in rooms with windows where the lights are sometimes on while the sun is shining (offices, classrooms with big windows, shop displays).
+  </p>
+
+  <p class="body" data-i18n="w16.theory.together">
+    Sometimes you use BOTH sensors together. For example: a hallway with a window. The light should only turn on if (1) somebody is walking in AND (2) it is dark enough that they need the light.
+  </p>
+
+  <div class="box-tip no-break">
+    <h3 data-i18n="w16.worked.title">Worked example</h3>
+    <p class="body" data-i18n="w16.worked.scenario">
+      A storage room is currently lit for 8 hours per day, even though it is only entered briefly twice a day for about 5 minutes each.
+    </p>
+    <ol class="steps-list">
+      <li data-i18n="w16.worked.s1"><strong>Step 1:</strong> Without sensor: lights on 8 hours per day.</li>
+      <li data-i18n="w16.worked.s2"><strong>Step 2:</strong> With motion sensor: lights on roughly 2 × 5 min = 10 min per day ≈ 0.17 hours per day.</li>
+      <li data-i18n="w16.worked.s3"><strong>Step 3:</strong> Energy reduction: from 8 h to 0.17 h is about 98 % less energy used in this room.</li>
+      <li data-i18n="w16.worked.s4"><strong>Step 4:</strong> This is why storerooms are usually the BEST place to install a motion sensor — they are empty most of the time.</li>
+    </ol>
+  </div>
+
+  <h3 class="sub-heading" data-i18n="w16.terms.title">Key terms</h3>
+
+  <table class="terms no-break">
+    <thead>
+      <tr><th data-i18n="w16.terms.colTerm">Term</th><th data-i18n="w16.terms.colDef">Definition</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-i18n="w16.terms.t1term">Sensor</td>
+        <td data-i18n="w16.terms.t1def">A small device that measures something (movement, light, temperature…).</td>
+      </tr>
+      <tr>
+        <td data-i18n="w16.terms.t2term">Motion sensor</td>
+        <td data-i18n="w16.terms.t2def">A sensor that detects whether somebody is moving nearby.</td>
+      </tr>
+      <tr>
+        <td data-i18n="w16.terms.t3term">Daylight sensor</td>
+        <td data-i18n="w16.terms.t3def">A sensor that measures how bright it is in the room.</td>
+      </tr>
+      <tr>
+        <td data-i18n="w16.terms.t4term">Time-out</td>
+        <td data-i18n="w16.terms.t4def">The delay before a motion sensor switches the light off after the last movement.</td>
+      </tr>
+    </tbody>
+  </table>
+
+    <div class="r-footer">
+    <div class="footer-left">
+      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
+      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
+    </div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 2 <span data-i18n="ui.of">of</span> 4</div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PAGE 3 — Student activity 1: Two kinds of sensors
+============================================================ -->
+<section class="page" data-page="3">
+
+    <div class="r-header">
+    <div class="logo-green">
+      <img src="../../img/greenlogo.png" alt="GREEN">
+      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
+    </div>
+    <div class="logo-eu">
+      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
+    </div>
+  </div>
+
+  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 1</h2>
+  <div class="activity-sub" data-i18n="w16.act1.sub">Two kinds of sensors</div>
+  <p class="activity-intro" data-i18n="w16.act1.intro">There are two very common sensors used in lighting:</p>
+
+  <ul class="bullet-list">
+    <li><strong data-i18n="w16.act1.motionLabel">A MOTION sensor</strong>
+        <span data-i18n="w16.act1.motionBody"> detects movement. The light turns on when somebody walks in, and turns off after a few minutes of no movement.</span></li>
+    <li><strong data-i18n="w16.act1.daylightLabel">A DAYLIGHT sensor</strong>
+        <span data-i18n="w16.act1.daylightBody"> measures how bright it is outside. The light switches on when it gets dark, and off again when it gets light.</span></li>
+  </ul>
+
+  <p class="body" data-i18n="w16.act1.prompt">
+    For each location, write down which sensor would be most useful (motion, daylight, or both):
+  </p>
+
+  <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w16.act1.loc1">School toilet</span></div>
+  <div class="write-line"></div>
+
+  <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w16.act1.loc2">Bicycle shed at school</span></div>
+  <div class="write-line"></div>
+
+  <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w16.act1.loc3">Classroom that is used all day</span></div>
+  <div class="write-line"></div>
+
+  <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w16.act1.loc4">Street lamp</span></div>
+  <div class="write-line"></div>
+
+  <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w16.act1.loc5">School corridor (used between lessons)</span></div>
+  <div class="write-line"></div>
+
+  <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w16.act1.loc6">Garden path at home</span></div>
+  <div class="write-line"></div>
+
+    <div class="r-footer">
+    <div class="footer-left">
+      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
+      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
+    </div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 3 <span data-i18n="ui.of">of</span> 4</div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PAGE 4 — Student activity 2: Why sensors save energy
+============================================================ -->
+<section class="page" data-page="4">
+
+    <div class="r-header">
+    <div class="logo-green">
+      <img src="../../img/greenlogo.png" alt="GREEN">
+      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
+    </div>
+    <div class="logo-eu">
+      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
+    </div>
+  </div>
+
+  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 2</h2>
+  <div class="activity-sub" data-i18n="w16.act2.sub">Why sensors save energy</div>
+
+  <p class="activity-intro" data-i18n="w16.act2.intro">
+    Think about a school toilet that has lights on for 10 hours every school day, even though it is only actually used for 2 hours in total per day.
+  </p>
+
+  <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w16.act2.q1">How many hours per day are the lights "on" but not needed?</span></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+
+  <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w16.act2.q2">If a motion sensor is installed, the lights are only on when someone is there. Roughly how many hours per day will the lights now be on?</span></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+
+  <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w16.act2.q3">By approximately what percentage does the energy use of the toilet lighting decrease?</span></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+
+    <div class="r-footer">
+    <div class="footer-left">
+      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
+      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
+    </div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 4 <span data-i18n="ui.of">of</span> 4</div>
+  </div>
+
+</section>
+
+
+<script>
+/* ============================================================
+   Worksheet i18n — fetches lang/{lang}.json on flag click,
+   applies nested-path translations to all [data-i18n] elements.
+   The default text in the HTML is the fallback (baseline language).
+============================================================ */
+(function () {
+  const FALLBACK = 'en';
+  const cache = {};
+
+  async function loadLang(lang) {
+    if (cache[lang] !== undefined) return cache[lang];
+    try {
+      const res = await fetch('lang/' + lang + '.json', { cache: 'no-cache' });
+      if (!res.ok) throw new Error('not found');
+      const data = await res.json();
+      cache[lang] = data;
+      return data;
+    } catch (err) {
+      cache[lang] = null;
+      return null;
+    }
+  }
+
+  function getNested(obj, path) {
+    if (!obj) return undefined;
+    return path.split('.').reduce(
+      (acc, key) => (acc && typeof acc === 'object' ? acc[key] : undefined),
+      obj
+    );
+  }
+
+  async function applyLang(lang) {
+    let dict = await loadLang(lang);
+    if (!dict && lang !== FALLBACK) dict = await loadLang(FALLBACK);
+
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const val = getNested(dict, key);
+      if (typeof val === 'string') el.textContent = val;
+      /* if val is missing, leave the HTML text (baseline language) intact */
+    });
+
+    document.querySelectorAll('.flag-btn').forEach(btn => {
+      const isActive = btn.getAttribute('data-lang') === lang;
+      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+
+    try { localStorage.setItem('green-ws-lang', lang); } catch (e) {}
+  }
+
+  /* wire up flag buttons */
+  document.querySelectorAll('.flag-btn').forEach(btn => {
+    btn.addEventListener('click', () => applyLang(btn.getAttribute('data-lang')));
+  });
+
+  /* B/W toggle */
+  const bwBtn = document.querySelector('.bw-toggle');
+  if (bwBtn) {
+    bwBtn.addEventListener('click', () => {
+      const on = document.body.classList.toggle('bw-mode');
+      bwBtn.setAttribute('aria-pressed', on);
+    });
+  }
+
+  /* initial language: saved preference, else <html lang>, else fallback */
+  let initial = FALLBACK;
+  try { initial = localStorage.getItem('green-ws-lang') || document.documentElement.lang || FALLBACK; }
+  catch (e) { initial = document.documentElement.lang || FALLBACK; }
+  applyLang(initial);
+})();
+</script>
+
+</body>
+</html>

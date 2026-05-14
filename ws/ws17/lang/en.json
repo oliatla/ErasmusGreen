@@ -1,0 +1,100 @@
+{
+  "_README": {
+    "purpose": "Translation reference for ws17.",
+    "language": "Default language: en.",
+    "instructions": "Copy this file as {lang}.json and translate the values. Keys (the left-hand side) must NEVER change — they map to data-i18n attributes in index.html."
+  },
+  "ui": {
+    "back": "← Back",
+    "language": "Language:",
+    "bwToggle": "B/W view",
+    "print": "🖨 Print",
+    "level": "Level:",
+    "topic": "Topic",
+    "learningOutcomes": "Learning outcomes",
+    "timeNeeded": "Time needed",
+    "resources": "Resources needed",
+    "introduction": "Introduction",
+    "projectLine": "Project № 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.",
+    "page": "Page",
+    "of": "of",
+    "activity": "Student activity"
+  },
+  "w17": {
+    "worksheet": "Worksheet 17",
+    "title": "Sensors, dimming and energy savings",
+    "level": "MEDIUM",
+    "topic": "Sensors, dimming and energy savings",
+    "lo1": "Students will quantify energy savings achievable with motion sensors and daylight dimming.",
+    "lo2": "Students will compare smart lighting payback periods across different room types.",
+    "lo3": "Students will recognise the limitations of smart lighting.",
+    "time": "90 min",
+    "resources": "Calculator; this worksheet.",
+    "intro": "Smart lighting can be very effective in some spaces and almost useless in others. The key is matching the technology to how the room is actually used. In this worksheet you will calculate the energy savings of smart lighting in three different spaces.",
+    "prereq": {
+      "label": "What you should already know:",
+      "body": " You should already know what motion sensors and daylight sensors do (see Worksheet 16), and be confident calculating annual kWh and cost with Energy = Power × time."
+    },
+    "theory": {
+      "title": "Theory",
+      "intro": "Smart lighting saves energy by reducing \"lights on\" hours when the room is empty (motion sensors) or when there is enough daylight (daylight dimming). The QUANTITATIVE saving depends entirely on how the room is used.",
+      "occupancy": "MOTION SENSORS work best in spaces with LOW occupancy ratio. The occupancy ratio is the share of \"lights on\" hours that are actually needed. A storage room with 4 hours of lighting but only 0.5 hours of occupancy has a ratio of 12.5 % — meaning 87.5 % potential saving. A classroom with 8 hours of lighting and 6 hours of occupancy has a ratio of 75 % — only 25 % potential saving.",
+      "timeout": "TIME-OUT DELAY: motion sensors don't immediately switch off when the last movement stops. There is a delay (typically 3–15 minutes) so that the light doesn't flicker off if you sit still. This means real motion-sensor savings are slightly less than the theoretical maximum. A common rule of thumb: real \"lights on\" time ≈ 1.2 × occupied time.",
+      "dimming": "DAYLIGHT DIMMING: a light fixture with a daylight sensor doesn't necessarily switch off completely — it dims to maintain a target lux level. On average over a school year, a daylight-dimmed fixture in a classroom uses around 30 % less energy than the same fixture without dimming, depending on window size and orientation.",
+      "payback": "PAYBACK: a motion sensor costs €30–€60 installed. A daylight dimmer costs €100–€150 installed. Whether either pays back depends on the room's annual lighting energy use."
+    },
+    "worked": {
+      "title": "Worked example — School toilet",
+      "scenario": "A school toilet has 6 LED tubes of 18 W. Lights are currently on 10 h/day for 190 school days. Toilet is occupied about 2 h/day. A €40 motion sensor is installed.",
+      "s1": "Step 1: Current annual kWh: (6 × 18 / 1000) × 10 × 190 = 205.2 kWh.",
+      "s2": "Step 2: With sensor: lights on ≈ 1.2 × 2 = 2.4 h/day. Annual kWh = (6 × 18 / 1000) × 2.4 × 190 = 49.2 kWh.",
+      "s3": "Step 3: Saving: 205.2 − 49.2 = 156 kWh/year.",
+      "s4": "Step 4: At €0.25/kWh: €39 saved per year.",
+      "s5": "Step 5: Simple payback: 40 / 39 ≈ 1.0 year. Investment is highly attractive."
+    },
+    "terms": {
+      "title": "Key terms",
+      "colTerm": "Term",
+      "colDef": "Definition",
+      "t1term": "Occupancy ratio",
+      "t1def": "Share of \"lights on\" hours that are actually needed (occupied).",
+      "t2term": "Time-out delay",
+      "t2def": "Delay before a motion sensor switches off after the last detected movement (typically 3–15 min).",
+      "t3term": "Daylight dimming",
+      "t3def": "Automatically reducing a fixture's power based on available daylight to maintain a target lux level.",
+      "t4term": "Simple payback",
+      "t4def": "Installation cost divided by annual saving — how many years until the investment \"pays for itself\"."
+    },
+    "act1": {
+      "sub": "Motion sensors in three spaces",
+      "intro": "For each of the three spaces below, the table gives the current \"lights on\" hours per day and an estimate of the actual occupied hours. With a motion sensor, the lights are on roughly 1.2× the occupied hours (the extra 0.2 covers the time-out delay before the light switches off). Use 190 school days/year and €0.25/kWh.",
+      "colSpace": "Space",
+      "colHours": "Lights on (h/day)",
+      "colOcc": "Occupied (h/day)",
+      "colFix": "Fixtures",
+      "row1space": "School toilet",
+      "row1fix": "12 LED tubes × 18 W",
+      "row2space": "Storage room",
+      "row2fix": "4 LED bulbs × 10 W",
+      "row3space": "Active classroom",
+      "row3fix": "8 LED panels × 35 W",
+      "q1": "Calculate the current annual kWh for each space.",
+      "q2": "Calculate the post-sensor annual kWh for each space.",
+      "q3": "What is the annual energy saving (in kWh and in €) for each space?"
+    },
+    "act2": {
+      "sub": "Payback period",
+      "intro": "A motion sensor costs €40 installed.",
+      "q1": "Calculate the simple payback period (in years) for installing a sensor in each of the three spaces.",
+      "q2": "In which space is the investment most attractive? In which space is it questionable? Explain."
+    },
+    "act3": {
+      "sub": "Daylight dimming",
+      "intro": "A classroom has a row of LED panels near the windows that are often unnecessarily bright on sunny days. A daylight-sensing dimmer can reduce their power output by 30 % on average over a school year.",
+      "q1": "If the row of window-side panels currently uses 800 kWh/year, what is the saving with the dimmer?",
+      "q2": "The dimming module costs €120 to install. What is the payback period at €0.25/kWh?",
+      "q3": "Name two situations where the dimmer might NOT save anything (think about how the room is used)."
+    }
+  }
+}

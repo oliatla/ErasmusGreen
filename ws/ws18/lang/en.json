@@ -1,0 +1,97 @@
+{
+  "_README": {
+    "purpose": "Translation reference for ws18.",
+    "language": "Default language: en.",
+    "instructions": "Copy this file as {lang}.json and translate the values. Keys (the left-hand side) must NEVER change — they map to data-i18n attributes in index.html."
+  },
+  "ui": {
+    "back": "← Back",
+    "language": "Language:",
+    "bwToggle": "B/W view",
+    "print": "🖨 Print",
+    "level": "Level:",
+    "topic": "Topic",
+    "learningOutcomes": "Learning outcomes",
+    "timeNeeded": "Time needed",
+    "resources": "Resources needed",
+    "introduction": "Introduction",
+    "projectLine": "Project № 2025-1-HR01-KA220-VET-000353056",
+    "disclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.",
+    "page": "Page",
+    "of": "of",
+    "activity": "Student activity"
+  },
+  "w18": {
+    "worksheet": "Worksheet 18",
+    "title": "Designing a building-wide automation strategy",
+    "level": "ADVANCED",
+    "topic": "Designing a building-wide automation strategy",
+    "lo1": "Students will design a multi-zone smart lighting strategy for a school building.",
+    "lo2": "Students will critically evaluate the data and privacy implications of presence-based automation.",
+    "lo3": "Students will integrate smart lighting with other building systems (HVAC, scheduling).",
+    "time": "150 min",
+    "resources": "Calculator or spreadsheet; school floor plan (request from facility manager); access to one or more smart-lighting product datasheets (optional).",
+    "intro": "Modern school buildings increasingly use centrally-managed smart lighting: every fixture is addressable, sensors are networked, and lighting integrates with the school's HVAC and timetable systems. This worksheet asks you to design — on paper — a smart lighting strategy for one floor of your school. You will also confront the harder questions: is it worth the complexity? What about privacy and data?",
+    "prereq": {
+      "label": "What you should already know:",
+      "body": " This worksheet assumes you have completed Worksheets 16 and 17 (or are confident with sensor types, occupancy reasoning and basic payback calculations). For the optional WP3 extension, basic familiarity with microcontrollers (Arduino, ESP32) is helpful."
+    },
+    "theory": {
+      "title": "Theory",
+      "networked": "Modern smart-lighting systems are NETWORKED. Every fixture is individually addressable, sensors share data with multiple devices, and the system integrates with other building systems (HVAC, scheduling, security). This unlocks much larger savings than stand-alone sensors but introduces new design and ethical questions.",
+      "zoning": "ZONING is the design step where you divide a building into \"lighting zones\" — areas that should switch together. Zones are usually drawn around how spaces are USED, not where the wiring already runs. A good zoning plan considers occupancy patterns, daylight availability, control logic and emergency lighting requirements.",
+      "integration": "INTEGRATION with the school timetable, HVAC and security systems multiplies the value of the sensor data. A presence sensor used by lighting AND ventilation reduces hardware cost. Linking lighting control to the timetable means classrooms default to OFF when no class is scheduled, capturing waste that simple motion sensors miss (e.g. an empty room with someone walking through). The risk: a single faulty sensor or scheduling error can cascade across systems.",
+      "privacy": "DATA AND PRIVACY: every networked sensor generates data. A motion sensor that knows when each room is occupied, combined with the timetable, can identify which students were in which room at which time. Under the GDPR (and increasingly under the EU AI Act for behaviour-monitoring systems), this is potentially personal data with all the obligations that follow: lawful basis, minimisation, retention limits, transparency. Energy savings do not exempt a school from data protection law.",
+      "maturity": "DEPLOYMENT MATURITY: not all rooms benefit equally. The ROI of smart lighting drops sharply when occupancy ratio is high (regular classrooms used 6+ hours per day). Smart-lighting investment should target the rooms with the highest waste first."
+    },
+    "worked": {
+      "title": "Worked example — Zoning a classroom with south-facing windows",
+      "scenario": "Design a zoning sketch for a single classroom with windows on the south side.",
+      "s1": "Zone 1: row of fixtures NEAREST the windows. Sensor: daylight (with manual override). Logic: dim to maintain 300 lux at desk level. On sunny days these fixtures may be at 20 % power; on dark winter mornings 100 %.",
+      "s2": "Zone 2: row of fixtures FURTHEST from the windows. Sensor: motion + timetable. Logic: ON during scheduled lessons; motion-controlled outside scheduled hours; OFF otherwise.",
+      "s3": "Zone 3: front-of-room fixture above the whiteboard. Sensor: separate switch (teacher control). Logic: always available, never automatic.",
+      "s4": "Estimated saving vs. all-on baseline: 35–45 % depending on weather and room use."
+    },
+    "terms": {
+      "title": "Key terms",
+      "colTerm": "Term",
+      "colDef": "Definition",
+      "t1term": "Zoning",
+      "t1def": "Dividing a building into \"lighting zones\" — areas that switch together based on use.",
+      "t2term": "Addressable fixture",
+      "t2def": "A light fitting that can be controlled individually over a network (DALI, Zigbee, KNX…).",
+      "t3term": "Integration",
+      "t3def": "Letting the lighting system exchange data with HVAC, timetable, security or other building systems.",
+      "t4term": "Personal data (GDPR)",
+      "t4def": "Any information relating to an identified or identifiable person. Sensor data combined with a timetable can become personal data."
+    },
+    "act1": {
+      "sub": "Zoning the floor",
+      "intro": "Get (or sketch) a plan of one floor of your school. Divide it into \"lighting zones\" — areas that should switch together.",
+      "q1": "List your zones. For each, describe: typical use pattern, recommended sensor type (motion, daylight, both, none) and recommended control logic (e.g. \"always on during school hours; off otherwise\", \"motion sensor with 5-min time-out\", \"daylight dimming + motion override\").",
+      "q2": "Estimate the annual energy use of each zone before and after implementing your strategy. Use realistic LED wattages and your actual school day length."
+    },
+    "act2": {
+      "sub": "Integration with other systems",
+      "intro": "Smart lighting can communicate with other building systems.",
+      "q1": "Describe one integration with the school's TIMETABLE system. (Example: \"Empty classrooms at 14:30 still have lights even though no class is scheduled. Integration with the timetable means lights default to off in unscheduled rooms.\") Estimate the additional saving.",
+      "q2": "Describe one integration with the school's HVAC system. (Example: presence detection used by both lighting and ventilation, reducing duplicated sensor cost.)",
+      "q3": "What is the risk of these integrations? (Example: a single faulty sensor switching off both lights AND ventilation in a classroom full of students.)"
+    },
+    "act3": {
+      "sub": "Privacy, data and ethics",
+      "intro": "A networked sensor that detects motion is also generating data: it knows when each room is occupied and for how long. Under the EU AI Act and the GDPR, this can become personal data if it can be linked to individuals.",
+      "q1": "Identify three pieces of information that motion-sensor data could leak about students or staff if combined with timetables.",
+      "q2": "Propose three concrete safeguards (technical or organisational) to limit privacy risk while still allowing energy savings.",
+      "q3": "Critically reflect: is the energy saving worth the privacy trade-off? When is it, and when is it not?"
+    },
+    "act4": {
+      "optional": "(OPTIONAL)",
+      "sub": "Extension — link to GREEN project Work Package 3 (vertical garden)",
+      "intro": "The GREEN project's vertical garden uses microcontrollers (e.g. Arduino, ESP32) to monitor and control irrigation and grow-lighting. The same principles apply to school lighting automation. If you have access to a microcontroller, sensors and a programmable LED fixture:",
+      "q1": "Sketch the wiring (block diagram) of a system with: a PIR motion sensor, an LDR daylight sensor, a microcontroller and a relay or PWM-controlled LED. Which pins / inputs / outputs are needed?",
+      "q2": "Write pseudocode for the control logic: light is OFF unless (motion is detected AND ambient light is below threshold).",
+      "q3": "What additional sensors would extend this into a \"smart classroom\" system? (CO₂, temperature, humidity…)"
+    }
+  }
+}
