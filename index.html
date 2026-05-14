@@ -4,16 +4,41 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GREEN Erasmus+ — Worksheets</title>
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="apple-touch-icon" href="img/favicon.svg">
+<meta name="theme-color" content="#059669">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <div class="top-bar">
-  <div id="lang-switcher"></div>
-  <a href="translator-guide.html" class="icon-btn" data-i18n-attr="title:ui.infoTip">
-    <span data-i18n="ui.info">About</span>
+
+  <a href="#" class="brand-mark" aria-label="GREEN — home">
+    <img src="img/greenlogo.png" alt="" class="brand-logo">
+    <span class="brand-text">
+      <strong>GREEN</strong>
+      <span class="brand-sub">Erasmus+ KA220-VET</span>
+    </span>
   </a>
-  <button class="theme-toggle" id="theme-btn" onclick="theme.toggle()" aria-label="Toggle theme">🌙</button>
+
+  <div class="top-bar-actions">
+    <div id="lang-switcher"></div>
+    <a href="https://github.com/oliatla/ErasmusGreen"
+       class="icon-btn"
+       target="_blank"
+       rel="noopener"
+       title="View source on GitHub"
+       aria-label="GitHub">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.06c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .3.21.67.79.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
+      </svg>
+    </a>
+    <a href="translator-guide.html" class="icon-btn" data-i18n-attr="title:ui.infoTip">
+      <span data-i18n="ui.info">About</span>
+    </a>
+    <button class="theme-toggle" id="theme-btn" onclick="theme.toggle()" aria-label="Toggle theme">🌙</button>
+  </div>
+
 </div>
 
 <header class="page-header">
@@ -244,7 +269,36 @@
 
 </main>
 
-<footer class="page-footer" data-i18n="footer">GREEN Erasmus+ · KA220-VET · 2025-1-HR01-KA220-VET-000353056</footer>
+<footer class="page-footer">
+
+  <div class="footer-grid">
+    <div class="footer-eu">
+      <img src="img/eufounded.png" alt="Co-funded by the European Union" class="eu-logo">
+      <p class="eu-disclaimer">
+        Funded by the European Union. Views and opinions expressed are however those of the
+        author(s) only and do not necessarily reflect those of the European Union or the
+        European Education and Culture Executive Agency (EACEA). Neither the European Union
+        nor EACEA can be held responsible for them.
+      </p>
+    </div>
+
+    <div class="footer-meta">
+      <div class="footer-project">
+        <strong>GREEN Erasmus+ · KA220-VET</strong><br>
+        Project № 2025-1-HR01-KA220-VET-000353056
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/oliatla/ErasmusGreen" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" style="vertical-align: -2px; margin-right: 4px;">
+            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.06c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .3.21.67.79.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
+          </svg>Source on GitHub</a>
+        <span class="dot-sep">·</span>
+        <a href="translator-guide.html">Translator guide</a>
+      </div>
+    </div>
+  </div>
+
+</footer>
 
 <!-- ===== SCRIPTS ===== -->
 <script src="js/theme.js"></script>
