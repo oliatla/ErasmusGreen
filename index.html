@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" data-lang-root="lang/">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GREEN Erasmus+ — Worksheets</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="top-bar">
+  <div id="lang-switcher"></div>
+  <a href="translator-guide.html" class="icon-btn" data-i18n-attr="title:ui.infoTip">
+    <span data-i18n="ui.info">About</span>
+  </a>
+  <button class="theme-toggle" id="theme-btn" onclick="theme.toggle()" aria-label="Toggle theme">🌙</button>
+</div>
+
+<header class="page-header">
+  <div class="header-inner hero">
+    <span class="badge" data-i18n="header.badge">GREEN Erasmus+ · KA220-VET · WP2</span>
+    <h1 data-i18n="header.title">Energy & Water Worksheets</h1>
+    <p data-i18n="header.lede">Interactive teaching materials on efficient use of energy and water — created by five European vocational schools.</p>
+  </div>
+</header>
+
+<main class="main">
+
+  <!-- ===== Topic filter ===== -->
+  <div class="topic-nav">
+    <button class="topic-btn active" data-topic="all"           onclick="filterTopic(this)" data-i18n="topicFilter.all">All topics</button>
+    <button class="topic-btn"        data-topic="entertainment" onclick="filterTopic(this)" data-i18n="topicFilter.entertainment">🎮 Entertainment</button>
+    <button class="topic-btn"        data-topic="kitchen"       onclick="filterTopic(this)" data-i18n="topicFilter.kitchen">🍳 Kitchen</button>
+    <button class="topic-btn"        data-topic="cleaning"      onclick="filterTopic(this)" data-i18n="topicFilter.cleaning">🧹 Cleaning</button>
+    <button class="topic-btn"        data-topic="lighting"      onclick="filterTopic(this)" data-i18n="topicFilter.lighting">💡 Lighting</button>
+    <button class="topic-btn"        data-topic="school"        onclick="filterTopic(this)" data-i18n="topicFilter.school">🏫 School Environment</button>
+  </div>
+
+  <!-- ===== BASIC ===== -->
+  <section class="level-section">
+    <div class="level-header">
+      <span class="level-badge basic" data-i18n="levels.basic.label">Basic</span>
+      <h2 data-i18n="levels.basic.title">Observe & Measure</h2>
+    </div>
+    <p class="level-desc" data-i18n="levels.basic.desc">Hands-on data collection. Students walk through a building, observe, measure, and record. Minimal calculations, focus on understanding what uses energy and water.</p>
+
+    <div class="ws-grid">
+
+      <a class="ws-card ready" data-topic="school" href="ws/ws01/">
+        <div class="ws-topic"   data-i18n="worksheets.w01.topic">🏫 School Environment</div>
+        <h3                     data-i18n="worksheets.w01.title">💧 Water — Tap Flow Measurement</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w01.desc">Measure actual tap flow rates in school bathrooms. Compare with automatic sensor taps and calculate water savings.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="is"></span> <span data-i18n="countries.is">Iceland</span></span>
+          <span class="ws-status live" data-i18n="status.ready">● Ready</span>
+        </div>
+      </a>
+
+      <a class="ws-card ready" data-topic="entertainment" href="ws/ws02/">
+        <div class="ws-topic"   data-i18n="worksheets.w02.topic">🎮 Entertainment & Electronics</div>
+        <h3                     data-i18n="worksheets.w02.title">📺 Standby vs. OFF</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w02.desc">Measure standby power of TVs, consoles and monitors. Calculate the yearly cost of leaving devices plugged in.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="pt"></span> <span data-i18n="countries.pt">Portugal</span></span>
+          <span class="ws-status live" data-i18n="status.ready">● Ready</span>
+        </div>
+      </a>
+
+      <a class="ws-card ready" data-topic="cleaning" href="ws/ws03/">
+        <div class="ws-topic"   data-i18n="worksheets.w03.topic">🧹 Cleaning & Household</div>
+        <h3                     data-i18n="worksheets.w03.title">🍽 Dishwasher Efficiency</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w03.desc">Compare intensive, auto and eco programmes. Calculate annual energy, water and carbon impact of running a dishwasher.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="hr"></span> <span data-i18n="countries.hr">Croatia</span></span>
+          <span class="ws-status live" data-i18n="status.ready">● Ready</span>
+        </div>
+      </a>
+
+      <a class="ws-card ready" data-topic="kitchen" href="ws/ws04/">
+        <div class="ws-topic"   data-i18n="worksheets.w04.topic">🍳 The Kitchen</div>
+        <h3                     data-i18n="worksheets.w04.title">🔌 Kitchen Appliances</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w04.desc">Conservation of energy in ovens, refrigerators and dishwashers. Includes formulas, worked examples and a 15-question quiz.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="tr"></span> <span data-i18n="countries.tr">Türkiye</span></span>
+          <span class="ws-status live" data-i18n="status.ready">● Ready</span>
+        </div>
+      </a>
+
+      <div class="ws-card placeholder" data-topic="cleaning">
+        <div class="ws-topic"   data-i18n="worksheets.w05.topic">🧹 Cleaning & Household</div>
+        <h3                     data-i18n="worksheets.w05.title">🧺 Eco Settings Experiment</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w05.desc">Compare water and energy use of normal vs. eco wash cycle on a washing machine. Record and compare.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="hr"></span> <span data-i18n="countries.hr">Croatia</span></span>
+          <span class="ws-status coming" data-i18n="status.coming">○ Coming soon</span>
+        </div>
+      </div>
+
+      <div class="ws-card placeholder" data-topic="lighting">
+        <div class="ws-topic"   data-i18n="worksheets.w06.topic">💡 Lighting</div>
+        <h3                     data-i18n="worksheets.w06.title">💡 Bulb Comparison Lab</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w06.desc">Compare incandescent, CFL, and LED bulbs side by side. Measure light output, heat, and power consumption.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="nl"></span> <span data-i18n="countries.nl">Netherlands</span></span>
+          <span class="ws-status coming" data-i18n="status.coming">○ Coming soon</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== MEDIUM ===== -->
+  <section class="level-section">
+    <div class="level-header">
+      <span class="level-badge medium" data-i18n="levels.medium.label">Medium</span>
+      <h2 data-i18n="levels.medium.title">Calculate & Compare</h2>
+    </div>
+    <p class="level-desc" data-i18n="levels.medium.desc">Apply formulas to real data. Students use measurements to calculate costs, savings, and payback periods. Combine data from multiple sources.</p>
+
+    <div class="ws-grid">
+
+      <div class="ws-card placeholder" data-topic="school">
+        <div class="ws-topic"   data-i18n="worksheets.w07.topic">🏫 School Environment</div>
+        <h3                     data-i18n="worksheets.w07.title">🖥 Computer Lab Energy Audit</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w07.desc">Measure power draw of computers, monitors, and projectors. Calculate daily and yearly cost for a full lab.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="is"></span> <span data-i18n="countries.is">Iceland</span></span>
+          <span class="ws-status coming" data-i18n="status.coming">○ Coming soon</span>
+        </div>
+      </div>
+
+      <div class="ws-card placeholder" data-topic="entertainment">
+        <div class="ws-topic"   data-i18n="worksheets.w08.topic">🎮 Entertainment & Electronics</div>
+        <h3                     data-i18n="worksheets.w08.title">📊 Energy Rating Comparison</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w08.desc">Compare energy classes (A–G) for TVs and monitors. Calculate the real cost difference over 5 years.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="pt"></span> <span data-i18n="countries.pt">Portugal</span></span>
+          <span class="ws-status coming" data-i18n="status.coming">○ Coming soon</span>
+        </div>
+      </div>
+
+      <div class="ws-card placeholder" data-topic="kitchen">
+        <div class="ws-topic"   data-i18n="worksheets.w09.topic">🍳 The Kitchen</div>
+        <h3                     data-i18n="worksheets.w09.title">🍞 Oven vs. Air Fryer Showdown</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w09.desc">Compare energy used to cook the same meal in a traditional oven vs. air fryer vs. microwave.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="tr"></span> <span data-i18n="countries.tr">Türkiye</span></span>
+          <span class="ws-status coming" data-i18n="status.coming">○ Coming soon</span>
+        </div>
+      </div>
+
+      <div class="ws-card placeholder" data-topic="cleaning">
+        <div class="ws-topic"   data-i18n="worksheets.w10.topic">🧹 Cleaning & Household</div>
+        <h3                     data-i18n="worksheets.w10.title">🌡 Dryer Energy Calculator</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w10.desc">Calculate yearly cost of using a tumble dryer vs. air-drying. Factor in weather and frequency.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="hr"></span> <span data-i18n="countries.hr">Croatia</span></span>
+          <span class="ws-status coming" data-i18n="status.coming">○ Coming soon</span>
+        </div>
+      </div>
+
+      <div class="ws-card placeholder" data-topic="lighting">
+        <div class="ws-topic"   data-i18n="worksheets.w11.topic">💡 Lighting</div>
+        <h3                     data-i18n="worksheets.w11.title">💰 The Cost of Neglect</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w11.desc">Calculate the actual yearly cost of leaving lights on unnecessarily in different rooms of a school or home.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="nl"></span> <span data-i18n="countries.nl">Netherlands</span></span>
+          <span class="ws-status coming" data-i18n="status.coming">○ Coming soon</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== ADVANCED ===== -->
+  <section class="level-section">
+    <div class="level-header">
+      <span class="level-badge advanced" data-i18n="levels.advanced.label">Advanced</span>
+      <h2 data-i18n="levels.advanced.title">Analyze & Recommend</h2>
+    </div>
+    <p class="level-desc" data-i18n="levels.advanced.desc">Synthesize findings into recommendations. Students analyze trade-offs, create cost-benefit analyses, and produce reports or videos with actionable proposals.</p>
+
+    <div class="ws-grid">
+
+      <div class="ws-card placeholder" data-topic="school">
+        <div class="ws-topic"   data-i18n="worksheets.w12.topic">🏫 School Environment</div>
+        <h3                     data-i18n="worksheets.w12.title">☀️ Solar Panel Calculator</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w12.desc">Use PVGIS data to calculate solar panel output for your school. Compare with grid electricity cost and calculate ROI.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="is"></span> <span data-i18n="countries.is">Iceland</span></span>
+          <span class="ws-status coming" data-i18n="status.coming">○ Coming soon</span>
+        </div>
+      </div>
+
+      <div class="ws-card placeholder" data-topic="entertainment">
+        <div class="ws-topic"   data-i18n="worksheets.w13.topic">🎮 Entertainment & Electronics</div>
+        <h3                     data-i18n="worksheets.w13.title">🏠 Smart Home Energy Plan</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w13.desc">Design an energy-saving plan for a household. Prioritize upgrades by payback period and total savings.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="pt"></span> <span data-i18n="countries.pt">Portugal</span></span>
+          <span class="ws-status coming" data-i18n="status.coming">○ Coming soon</span>
+        </div>
+      </div>
+
+      <div class="ws-card placeholder" data-topic="kitchen">
+        <div class="ws-topic"   data-i18n="worksheets.w14.topic">🍳 The Kitchen</div>
+        <h3                     data-i18n="worksheets.w14.title">♨️ Water Heating Analysis</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w14.desc">Compare the efficiency of different water heating methods (kettle, boiler, heat pump). Calculate theoretical vs. actual energy input.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="tr"></span> <span data-i18n="countries.tr">Türkiye</span></span>
+          <span class="ws-status coming" data-i18n="status.coming">○ Coming soon</span>
+        </div>
+      </div>
+
+      <div class="ws-card placeholder" data-topic="cleaning">
+        <div class="ws-topic"   data-i18n="worksheets.w15.topic">🧹 Cleaning & Household</div>
+        <h3                     data-i18n="worksheets.w15.title">🤖 Robot vs. Human: Total Cost</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w15.desc">Analyze the full energy lifecycle of a robotic vacuum vs. traditional cleaning. Include manufacturing, use, and disposal.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="hr"></span> <span data-i18n="countries.hr">Croatia</span></span>
+          <span class="ws-status coming" data-i18n="status.coming">○ Coming soon</span>
+        </div>
+      </div>
+
+      <div class="ws-card placeholder" data-topic="lighting">
+        <div class="ws-topic"   data-i18n="worksheets.w16.topic">💡 Lighting</div>
+        <h3                     data-i18n="worksheets.w16.title">🧠 Smart Lighting Proposal</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w16.desc">Design a smart lighting system for a school. Include sensors, timers, and dimming. Create a cost-benefit report.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="nl"></span> <span data-i18n="countries.nl">Netherlands</span></span>
+          <span class="ws-status coming" data-i18n="status.coming">○ Coming soon</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTNOTE ===== -->
+  <div class="footnote">
+    <h3 data-i18n="footnote.title">📌 About these worksheets</h3>
+    <p data-i18n="footnote.p1">These worksheets are part of GREEN Erasmus+ (KA220-VET), Work Package 2: Creation of teaching materials on efficient use of energy and water. Five partner schools each lead one topic area, creating materials in all partner languages.</p>
+    <p data-i18n="footnote.p2">Difficulty levels are designed so teachers can choose appropriate worksheets for their students — from hands-on observation (Basic) through calculation exercises (Medium) to full analysis and recommendation projects (Advanced).</p>
+  </div>
+
+</main>
+
+<footer class="page-footer" data-i18n="footer">GREEN Erasmus+ · KA220-VET · 2025-1-HR01-KA220-VET-000353056</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="js/theme.js"></script>
+<script src="js/i18n.js"></script>
+<script>
+  theme.init();
+  i18n.buildSwitcher(document.getElementById('lang-switcher'));
+  i18n.renderFlags();
+  i18n.init();
+
+  function filterTopic(btn) {
+    const topic = btn.dataset.topic;
+    document.querySelectorAll('.topic-btn').forEach(b => b.classList.toggle('active', b === btn));
+    document.querySelectorAll('.ws-card').forEach(card => {
+      card.style.display = (topic === 'all' || card.dataset.topic === topic) ? '' : 'none';
+    });
+  }
+</script>
+
+</body>
+</html>

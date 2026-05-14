@@ -1,0 +1,912 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Worksheet 02 — Standby vs. OFF</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- KaTeX for math formulas -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"
+  onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
+
+<style>
+:root {
+  --green-dark:   #1d6437;
+  --green-mid:    #2e7d4f;
+  --green-tint:   #cfe3bd;
+  --green-tint-2: #e6f1da;
+  --ink:          #1a1a1a;
+  --ink-soft:     #444;
+  --ink-mute:     #666;
+  --line:         #b8b8b8;
+  --line-soft:    #d8d8d8;
+  --paper:        #ffffff;
+  --bw-bg:        #f0f0f0;
+  --bw-line:      #888;
+
+  --page-w: 210mm;
+  --page-h: 297mm;
+  --margin-x: 15mm;
+  --margin-top: 28mm;     /* extra room: logo + project number */
+  --margin-bottom: 26mm;  /* extra room: project line + disclaimer + page no */
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0; padding: 0;
+  font-family: "Open Sans", "Lato", system-ui, sans-serif;
+  font-size: 11pt;
+  line-height: 1.5;
+  color: var(--ink);
+  background: #e8e8e8;
+}
+
+/* ===== TOOLBAR ===== */
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line-soft);
+  padding: 10px 16px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.toolbar .label {
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--ink-mute);
+  font-weight: 700;
+}
+.flags { display: flex; gap: 4px; }
+.flag-btn {
+  border: 2px solid transparent;
+  background: none;
+  padding: 3px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: transform .08s ease, border-color .12s ease;
+}
+.flag-btn:hover { transform: translateY(-1px); }
+.flag-btn[aria-pressed="true"] {
+  border-color: var(--green-dark);
+  background: var(--green-tint-2);
+}
+.flag-btn svg {
+  width: 28px; height: 20px;
+  display: block;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+}
+.toolbar .spacer { flex: 1; }
+
+.bw-toggle, .print-btn {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border: 1.5px solid var(--green-dark);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--green-dark);
+  cursor: pointer;
+}
+.back-btn {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink-soft);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.back-btn:hover {
+  border-color: var(--green-dark);
+  color: var(--green-dark);
+}
+.bw-toggle[aria-pressed="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+.print-btn {
+  background: var(--green-dark);
+  color: #fff;
+}
+.print-btn:hover { background: var(--green-mid); }
+
+/* ===== PAGE ===== */
+.page {
+  width: var(--page-w);
+  min-height: var(--page-h);
+  background: var(--paper);
+  margin: 18px auto;
+  padding: var(--margin-top) var(--margin-x) var(--margin-bottom);
+  position: relative;
+  box-shadow: 0 4px 18px rgba(0,0,0,.12);
+  overflow: hidden;
+}
+
+/* ===== HEADER ===== */
+.r-header {
+  position: absolute;
+  top: 8mm;
+  left: var(--margin-x);
+  right: var(--margin-x);
+  height: 18mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.logo-green {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1mm;
+}
+.logo-green img {
+  height: 13mm;
+  width: auto;
+  display: block;
+}
+.logo-green .proj-no {
+  font-family: "Open Sans", sans-serif;
+  font-size: 6.5pt;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: .01em;
+  color: var(--ink);
+  text-align: left;
+}
+.logo-eu img {
+  height: 12mm;
+  width: auto;
+  display: block;
+}
+
+/* ===== FOOTER ===== */
+.r-footer {
+  position: absolute;
+  bottom: 8mm;
+  left: var(--margin-x);
+  right: var(--margin-x);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6mm;
+  align-items: end;
+  padding-top: 2.5mm;
+  border-top: .5pt solid var(--line);
+}
+.r-footer .footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1mm;
+}
+.r-footer .proj-line {
+  font-family: "Open Sans", sans-serif;
+  font-size: 7pt;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: .01em;
+}
+.r-footer .disclaimer {
+  font-family: "Open Sans", sans-serif;
+  font-size: 6.6pt;
+  line-height: 1.35;
+  color: var(--ink-soft);
+}
+.r-footer .pageno {
+  font-family: "Open Sans", sans-serif;
+  font-size: 9pt;
+  font-weight: 700;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1.title {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 34pt;
+  line-height: 1.05;
+  margin: 0 0 2mm;
+  letter-spacing: -.01em;
+}
+.subtitle {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 17pt;
+  margin: 0 0 1mm;
+}
+.level {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 11pt;
+  margin: 0 0 6mm;
+}
+h2.section {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 22pt;
+  margin: 6mm 0 3mm;
+  line-height: 1.1;
+}
+p.body { margin: 0 0 3mm; }
+ul.bullets { padding-left: 6mm; margin: 0 0 3mm; }
+ul.bullets li { margin: 0 0 1.5mm; }
+
+/* ===== TABLES ===== */
+table.struct, table.terms {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 7mm;
+  font-size: 10.5pt;
+}
+table.struct th, table.struct td,
+table.terms th, table.terms td {
+  border: 1pt solid var(--line);
+  padding: 2.4mm 3mm;
+  vertical-align: middle;
+  text-align: left;
+}
+table.struct th, table.terms th {
+  background: var(--green-tint);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+table.struct th { width: 38mm; white-space: nowrap; }
+table.struct ul { margin: 0; padding-left: 5mm; }
+table.struct ul li { margin: 0 0 .5mm; }
+table.terms td:first-child { font-weight: 700; width: 45mm; vertical-align: top; }
+table.terms td { vertical-align: top; }
+
+/* ===== WORKED EXAMPLE ===== */
+.box-tip {
+  background: var(--green-tint);
+  border: 1pt solid var(--green-mid);
+  border-radius: 1.5mm;
+  padding: 4mm 5mm;
+  margin: 4mm 0 5mm;
+}
+.box-tip h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 12pt;
+  margin: 0 0 2mm;
+}
+.box-tip p { margin: 0 0 1.5mm; font-size: 10.5pt; }
+.box-tip p:last-child { margin-bottom: 0; }
+
+/* ===== FORMULA BOX ===== */
+.formula-block {
+  margin: 3mm 0 4mm;
+  text-align: center;
+}
+.formula-block .katex-display {
+  margin: 0;
+}
+.formula-vars {
+  margin: 2mm auto 5mm;
+  font-size: 10pt;
+  color: var(--ink-soft);
+  text-align: center;
+}
+.formula-vars span { margin: 0 5mm; white-space: nowrap; }
+.formula-vars strong { color: var(--ink); }
+
+/* ===== STUDENT ACTIVITY ===== */
+.activity-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 22pt;
+  margin: 6mm 0 1mm;
+  line-height: 1.1;
+}
+.activity-sub {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 13pt;
+  margin: 0 0 3mm;
+}
+.activity p { margin: 0 0 2.5mm; }
+.write-line {
+  height: 9mm;
+  border-bottom: .75pt solid var(--ink-soft);
+  margin: 1mm 0 5mm;
+}
+.write-line.tall { height: 14mm; }
+.q { margin: 2mm 0 0; }
+.q .bullet-row { display: flex; gap: 2mm; align-items: flex-start; }
+.q .dot { font-size: 14pt; line-height: 1; padding-top: 1pt; }
+.q .label { flex: 1; }
+
+.no-break { break-inside: avoid; page-break-inside: avoid; }
+
+/* =================================================================
+   MEDIA FIGURE — images inline with text
+   Designed for phone-shot portrait photos (3:4 aspect).
+
+   Hard ceilings so worksheets across 12+ projects look consistent:
+   - left/right:  max-height 75mm,  max-width 60% (~108mm on A4)
+   - center:      max-height 95mm,  max-width 100% (~180mm on A4)
+
+   Container width is NOT fixed — it shrinks to fit the actual image
+   so a tall portrait photo doesn't leave dead space beside it.
+   ================================================================= */
+.media-figure {
+  margin: 3mm 0 4mm;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.media-figure figcaption {
+  font-size: 9pt;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-top: 1.5mm;
+  text-align: center;
+  line-height: 1.35;
+}
+
+/* LEFT / RIGHT — float so text wraps around */
+.media-figure.left,
+.media-figure.right {
+  max-width: 60%;
+  /* No fixed width — shrinks to the image so captions sit under photo */
+}
+.media-figure.left  { float: left;  margin: 0 4mm 1mm 0; }
+.media-figure.right { float: right; margin: 0 0 1mm 4mm; }
+
+.media-figure.left img,
+.media-figure.right img,
+.media-figure.left svg,
+.media-figure.right svg {
+  display: block;
+  max-height: 75mm;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 1.5mm;
+}
+
+/* CENTER — image alone on its own row, horizontally centered */
+.media-figure.center {
+  text-align: center;
+  margin: 4mm 0 5mm;
+  clear: both;
+}
+.media-figure.center img,
+.media-figure.center svg {
+  display: inline-block;
+  max-height: 95mm;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 1.5mm;
+}
+
+/* Block-level elements that must never wrap next to a floated figure */
+h2.section,
+.activity-title,
+.box-tip,
+table.struct,
+table.terms,
+.formula-block,
+.video-block,
+.r-footer {
+  clear: both;
+}
+
+/* =================================================================
+   VIDEO / QR — embed on screen, QR + URL on print
+   ================================================================= */
+.video-block {
+  margin: 4mm 0 6mm;
+}
+
+.video-embed {
+  /* Visible on screen */
+  position: relative;
+  width: 100%;
+  max-width: 140mm;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  border: 1pt solid var(--line);
+  border-radius: 1.5mm;
+  overflow: hidden;
+  background: #000;
+}
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.video-caption {
+  text-align: center;
+  font-size: 9.5pt;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-top: 2mm;
+}
+
+/* QR block — only in print */
+.video-print {
+  display: none;
+  margin: 4mm auto;
+  text-align: center;
+}
+.video-print .qr-code {
+  display: inline-block;
+  width: 32mm;
+  height: 32mm;
+  margin: 0 auto 2mm;
+}
+.video-print .qr-code svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.video-print .qr-label {
+  font-size: 10pt;
+  font-weight: 600;
+  margin-bottom: 1mm;
+}
+.video-print .qr-url {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 9pt;
+  color: var(--ink);
+  word-break: break-all;
+}
+
+/* =================================================================
+   B/W MODE — toggled by .bw-mode class on <body>
+   Removes green fills so the page prints well on greyscale printers.
+   Applies both on screen (so you can preview) and in print.
+   ================================================================= */
+body.bw-mode table.struct th,
+body.bw-mode table.terms th {
+  background: var(--bw-bg);
+}
+body.bw-mode .box-tip {
+  background: #fff;
+  border: 1pt solid var(--bw-line);
+}
+body.bw-mode .box-tip h3 {
+  border-bottom: .5pt solid var(--bw-line);
+  padding-bottom: 1mm;
+}
+
+
+/* =================================================================
+   POWER COMPARISON TABLE — 4 columns, blank cells for students
+   ================================================================= */
+table.power-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 3mm 0 4mm;
+  font-size: 10pt;
+}
+table.power-table th,
+table.power-table td {
+  border: .5pt solid var(--line);
+  padding: 2mm 3mm;
+  text-align: left;
+}
+table.power-table th {
+  background: var(--green-tint);
+  font-weight: 700;
+  color: var(--green-dark);
+}
+table.power-table tbody td:first-child {
+  font-weight: 700;
+  width: 28mm;
+}
+table.power-table tbody td:not(:first-child) {
+  height: 9mm;
+}
+body.bw-mode table.power-table th {
+  background: var(--bw-bg);
+  color: var(--ink);
+}
+
+/* =================================================================
+   IN-LINE CALCULATION LINES — blank fields students fill in
+   ================================================================= */
+.calc-line {
+  margin: 2.5mm 0;
+  font-size: 11pt;
+  line-height: 1.8;
+}
+.blank {
+  display: inline-block;
+  border-bottom: .5pt solid var(--ink-mute);
+  min-width: 18mm;
+  height: 4mm;
+  vertical-align: bottom;
+  margin: 0 1mm -.5mm;
+}
+.blank.wide  { min-width: 28mm; }
+.blank.short { min-width: 12mm; }
+
+/* Activity intro line beneath sub-heading */
+.activity-intro {
+  margin: 1mm 0 2mm;
+  font-size: 10.5pt;
+  color: var(--ink-soft);
+}
+
+/* ===== PRINT ===== */
+@page { size: A4; margin: 0; }
+@media print {
+  html, body { background: white; margin: 0; padding: 0; }
+  .toolbar { display: none !important; }
+  .page {
+    width: var(--page-w);
+    min-height: var(--page-h);
+    height: var(--page-h);
+    margin: 0;
+    box-shadow: none;
+    page-break-after: always;
+    break-after: page;
+  }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  /* Swap video embed for QR-code in print */
+  .video-embed { display: none !important; }
+  .video-print { display: block !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     TOOLBAR
+============================================================ -->
+<div class="toolbar">
+  <a href="../../index.html" class="back-btn" data-i18n="ui.back">← Til baka</a>
+  <span class="label" data-i18n="ui.language">Tungumál:</span>
+  <div class="flags" role="group" aria-label="Tungumál">
+    <button class="flag-btn" data-lang="is" aria-pressed="false" title="Íslenska">
+      <svg viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg">
+        <rect width="25" height="18" fill="#02529c"/>
+        <rect x="7" width="3" height="18" fill="#fff"/>
+        <rect y="7.5" width="25" height="3" fill="#fff"/>
+        <rect x="8" width="1.5" height="18" fill="#dc1e35"/>
+        <rect y="8.25" width="25" height="1.5" fill="#dc1e35"/>
+      </svg>
+    </button>
+    <button class="flag-btn" data-lang="en" aria-pressed="true" title="English">
+      <svg viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg">
+        <rect width="25" height="18" fill="#012169"/>
+        <path d="M0 0 L25 18 M25 0 L0 18" stroke="#fff" stroke-width="2"/>
+        <path d="M0 0 L25 18 M25 0 L0 18" stroke="#c8102e" stroke-width="1"/>
+        <path d="M12.5 0 V18 M0 9 H25" stroke="#fff" stroke-width="3"/>
+        <path d="M12.5 0 V18 M0 9 H25" stroke="#c8102e" stroke-width="1.8"/>
+      </svg>
+    </button>
+    <button class="flag-btn" data-lang="pt" aria-pressed="false" title="Português">
+      <svg viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg">
+        <rect width="10" height="18" fill="#046a38"/>
+        <rect x="10" width="15" height="18" fill="#da291c"/>
+        <circle cx="10" cy="9" r="3.2" fill="#fee100" stroke="#fff" stroke-width=".4"/>
+      </svg>
+    </button>
+    <button class="flag-btn" data-lang="hr" aria-pressed="false" title="Hrvatski">
+      <svg viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg">
+        <rect width="25" height="6" fill="#171796"/>
+        <rect y="6" width="25" height="6" fill="#fff"/>
+        <rect y="12" width="25" height="6" fill="#ff0000"/>
+      </svg>
+    </button>
+    <button class="flag-btn" data-lang="tr" aria-pressed="false" title="Türkçe">
+      <svg viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg">
+        <rect width="25" height="18" fill="#e30a17"/>
+        <circle cx="9" cy="9" r="4" fill="#fff"/>
+        <circle cx="10" cy="9" r="3.2" fill="#e30a17"/>
+        <polygon points="13,9 16.8,7.8 14.5,11.1 14.5,6.9 16.8,10.2" fill="#fff"/>
+      </svg>
+    </button>
+    <button class="flag-btn" data-lang="nl" aria-pressed="false" title="Nederlands">
+      <svg viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg">
+        <rect width="25" height="6" fill="#ae1c28"/>
+        <rect y="6" width="25" height="6" fill="#fff"/>
+        <rect y="12" width="25" height="6" fill="#21468b"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="spacer"></div>
+
+  <button class="bw-toggle" aria-pressed="false" data-i18n="ui.bwToggle">B/W útlit</button>
+  <button class="print-btn" onclick="window.print()" data-i18n="ui.print">🖨 Prenta</button>
+</div>
+
+
+<!-- ============================================================
+     PAGE 1 — Title, structural table, Introduction
+============================================================ -->
+<section class="page" data-page="1">
+
+  <div class="r-header">
+    <div class="logo-green">
+      <img src="../../img/greenlogo.png" alt="GREEN">
+      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
+    </div>
+    <div class="logo-eu">
+      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
+    </div>
+  </div>
+
+  <h1 data-i18n="w02.worksheet">Worksheet 02</h1>
+  <div class="subtitle" data-i18n="w02.title">Standby vs. OFF — Hidden Energy Consumption</div>
+  <div class="level"><span data-i18n="ui.level">Level:</span> <strong data-i18n="w02.level">BASIC</strong></div>
+
+  <table class="struct">
+    <tbody>
+      <tr>
+        <th data-i18n="ui.topic">Topic</th>
+        <td colspan="3" data-i18n="w02.topic">01: Efficient Use of Energy — Entertainment &amp; Electronics</td>
+      </tr>
+      <tr>
+        <th data-i18n="ui.learningOutcomes">Learning outcomes</th>
+        <td colspan="3">
+          <ul>
+            <li data-i18n="w02.obj1">Identify standby (&ldquo;vampire&rdquo;) energy consumption.</li>
+            <li data-i18n="w02.obj2">Compare power usage in different device states.</li>
+            <li data-i18n="w02.obj3">Calculate annual energy waste and its cost.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <th data-i18n="ui.timeNeeded">Time needed</th>
+        <td colspan="3" data-i18n="w02.time">45–60 min</td>
+      </tr>
+      <tr>
+        <th data-i18n="ui.resources">Resources needed</th>
+        <td colspan="3" data-i18n="w02.resources">TV / console / monitor specifications (or internet), calculator, power meter (optional).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="section" data-i18n="ui.introduction">Introduction</h2>
+
+  <p class="body" data-i18n="w02.intro1">
+    Many electronic devices continue to consume energy even when they are
+    &ldquo;turned off&rdquo; — as long as they remain plugged in. This is called
+    <strong>standby power</strong>, or more colourfully, <em>vampire energy</em>.
+    A small LED, a clock display, or a wireless receiver waiting for a remote
+    signal all draw a few watts continuously.
+  </p>
+
+  <p class="body" data-i18n="w02.intro2">
+    Individually it seems trivial. Across a household — TVs, game consoles,
+    monitors, chargers, microwaves — it adds up to a noticeable share of the
+    electricity bill, and to wasted carbon emissions. In this worksheet you
+    will quantify exactly how much is wasted and what it costs.
+  </p>
+
+  <div class="r-footer">
+    <div class="footer-left">
+      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
+      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
+    </div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 1 <span data-i18n="ui.of">of</span> 3</div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PAGE 2 — Formula + Tasks 1 & 2 & 3
+============================================================ -->
+<section class="page" data-page="2">
+
+  <div class="r-header">
+    <div class="logo-green">
+      <img src="../../img/greenlogo.png" alt="GREEN">
+      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
+    </div>
+    <div class="logo-eu">
+      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
+    </div>
+  </div>
+
+  <h2 class="section" data-i18n="w02.formulaHeader">Annual energy formula</h2>
+
+  <p class="body" data-i18n="w02.formulaIntro">
+    The formula below converts continuous power draw into yearly energy use.
+    For standby, assume the device sits in standby for <strong>20 hours per day</strong>.
+  </p>
+
+  <div class="formula-block">
+    $$ E_{\,\text{kWh}} = \dfrac{P_{\,\text{W}} \times h \times 365}{1000} $$
+  </div>
+
+  <div class="formula-vars">
+    <span><strong>E</strong> = <span data-i18n="w02.varE">annual energy (kWh)</span></span>
+    <span><strong>P</strong> = <span data-i18n="w02.varP">device power (W)</span></span>
+    <span><strong>h</strong> = <span data-i18n="w02.varH">hours per day in that state</span></span>
+  </div>
+
+  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 1</h2>
+  <div class="activity-sub" data-i18n="w02.act1.sub">Identify three devices at home</div>
+  <p class="activity-intro" data-i18n="w02.act1.intro">List three devices in your home that go into standby (a small LED stays on when you press &ldquo;off&rdquo;).</p>
+
+  <div class="q">
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w02.act1.q1">TV — make and model:</span></div>
+    <div class="write-line"></div>
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w02.act1.q2">Game console — make and model:</span></div>
+    <div class="write-line"></div>
+    <div class="bullet-row"><span class="dot">●</span><span class="label" data-i18n="w02.act1.q3">Monitor — make and model:</span></div>
+    <div class="write-line"></div>
+  </div>
+
+  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 2</h2>
+  <div class="activity-sub" data-i18n="w02.act2.sub">Compare power usage</div>
+  <p class="activity-intro" data-i18n="w02.act2.intro">Look up each device&rsquo;s power in three states. Use the user manual, the back-label, an online datasheet, or a power meter if you have one.</p>
+
+  <table class="power-table no-break">
+    <thead>
+      <tr>
+        <th data-i18n="w02.act2.colDevice">Device</th>
+        <th data-i18n="w02.act2.colOn">ON (W)</th>
+        <th data-i18n="w02.act2.colStandby">Standby (W)</th>
+        <th data-i18n="w02.act2.colOff">OFF / Unplugged (W)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td data-i18n="w02.act2.rowTv">TV</td><td></td><td></td><td></td></tr>
+      <tr><td data-i18n="w02.act2.rowConsole">Console</td><td></td><td></td><td></td></tr>
+      <tr><td data-i18n="w02.act2.rowMonitor">Monitor</td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <div class="r-footer">
+    <div class="footer-left">
+      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
+      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
+    </div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 2 <span data-i18n="ui.of">of</span> 3</div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PAGE 3 — Tasks 3-5 + Did you know? + Reflection
+============================================================ -->
+<section class="page" data-page="3">
+
+  <div class="r-header">
+    <div class="logo-green">
+      <img src="../../img/greenlogo.png" alt="GREEN">
+      <div class="proj-no">2025-1-HR01-KA220-VET-<br>000353056</div>
+    </div>
+    <div class="logo-eu">
+      <img src="../../img/eufounded.png" alt="Co-funded by the European Union">
+    </div>
+  </div>
+
+  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 3</h2>
+  <div class="activity-sub" data-i18n="w02.act3.sub">Annual consumption calculation</div>
+  <p class="activity-intro" data-i18n="w02.act3.intro">Take the TV from your table. Use the formula to calculate its yearly standby energy.</p>
+
+  <div class="calc-line">
+    <span data-i18n="w02.act3.l1">TV standby power =</span>
+    <span class="blank short"></span> W
+  </div>
+  <div class="calc-line">
+    <span data-i18n="w02.act3.l2">Annual energy =</span>
+    <span class="blank short"></span> × 20 × 365 ÷ 1000 =
+    <span class="blank"></span> kWh / <span data-i18n="ui.year">year</span>
+  </div>
+
+  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 4</h2>
+  <div class="activity-sub" data-i18n="w02.act4.sub">Cost calculation</div>
+  <p class="activity-intro" data-i18n="w02.act4.intro">Find your local electricity price per kWh and calculate the yearly cost of that TV standby.</p>
+
+  <div class="calc-line">
+    <span data-i18n="w02.act4.l1">Electricity price =</span>
+    <span class="blank short"></span>
+    <span data-i18n="ui.perKwh">€ / kWh (or local currency)</span>
+  </div>
+  <div class="calc-line">
+    <span data-i18n="w02.act4.l2">Annual cost =</span>
+    <span class="blank short"></span> ×
+    <span class="blank short"></span> =
+    <span class="blank"></span>
+    <span data-i18n="ui.perYear">€ / year</span>
+  </div>
+
+  <h2 class="activity-title"><span data-i18n="ui.activity">Student activity</span> 5</h2>
+  <div class="activity-sub" data-i18n="w02.act5.sub">Real-world scenario</div>
+  <p class="activity-intro" data-i18n="w02.act5.intro">Imagine a typical home with <strong>10 devices</strong> sitting in standby. Estimate the total annual cost (you may assume an average standby of 5 W per device).</p>
+
+  <div class="calc-line">
+    <span data-i18n="w02.act5.l1">Total annual cost ≈</span>
+    <span class="blank wide"></span>
+    <span data-i18n="ui.currency">€</span>
+  </div>
+
+  <div class="box-tip no-break">
+    <h3 data-i18n="w02.didYouKnow.title">💡 Did you know?</h3>
+    <p data-i18n="w02.didYouKnow.body">Turning off devices at the wall socket — instead of leaving them on standby — can save up to <strong>10 % of household electricity</strong>. A switched power strip lets you cut several devices at once with a single flick.</p>
+  </div>
+
+  <h2 class="section" data-i18n="w02.reflection.title">Reflection</h2>
+  <p class="body" data-i18n="w02.reflection.prompt">Explain in your own words why standby energy is sometimes called <em>&ldquo;invisible consumption&rdquo;</em>, and how it affects the energy use of your own home.</p>
+
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+  <div class="write-line tall"></div>
+
+  <div class="r-footer">
+    <div class="footer-left">
+      <div class="proj-line" data-i18n="ui.projectLine">Project № 2025-1-HR01-KA220-VET-000353056</div>
+      <div class="disclaimer" data-i18n="ui.disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</div>
+    </div>
+    <div class="pageno"><span data-i18n="ui.page">Page</span> 3 <span data-i18n="ui.of">of</span> 3</div>
+  </div>
+</section>
+
+
+
+<script>
+/* Translation dictionary — will be loaded from lang/{lang}.json once i18n is wired up.
+   For now the HTML displays English; data-i18n attributes mark which keys map to
+   which text, ready for translators. */
+const TRANSLATIONS = {
+  en: {} // English is the hard-coded baseline — no overrides needed
+};
+
+function applyLang(lang) {
+  const dict = TRANSLATIONS[lang] || {};
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (dict[key] !== undefined) el.textContent = dict[key];
+  });
+  document.querySelectorAll(".flag-btn").forEach(btn => {
+    btn.setAttribute("aria-pressed", btn.getAttribute("data-lang") === lang ? "true" : "false");
+  });
+}
+
+document.querySelectorAll(".flag-btn").forEach(btn => {
+  btn.addEventListener("click", () => applyLang(btn.getAttribute("data-lang")));
+});
+
+/* B/W toggle */
+const bwBtn = document.querySelector(".bw-toggle");
+bwBtn.addEventListener("click", () => {
+  const on = document.body.classList.toggle("bw-mode");
+  bwBtn.setAttribute("aria-pressed", on);
+});
+
+applyLang("en");
+</script>
+
+</body>
+</html>

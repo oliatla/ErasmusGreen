@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GREEN Worksheets — Translator Guide</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --green-dark:   #1d6437;
+  --green-mid:    #2e7d4f;
+  --green-tint:   #cfe3bd;
+  --green-tint-2: #e6f1da;
+  --paper:        #ffffff;
+  --bg:           #f6f7f3;
+  --ink:          #1a1a1a;
+  --ink-soft:     #444;
+  --ink-mute:     #7a8581;
+  --line:         #d8d8d8;
+  --line-soft:    #ebebeb;
+  --code-bg:      #f4f6f1;
+  --code-key:     #2e7d4f;
+  --code-str:     #b8410f;
+  --code-comment: #888;
+  --accent:       #b8410f;
+  --warning:      #c08b00;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0; padding: 0;
+  font-family: "Open Sans", "Lato", system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+/* ===== TOP BAR ===== */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+  padding: 12px 28px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.topbar .brand {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--green-dark);
+  letter-spacing: -.01em;
+}
+.topbar .brand .sub {
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--ink-mute);
+  letter-spacing: 0;
+  margin-left: 6px;
+}
+.topbar .spacer { flex: 1; }
+.lang-switch {
+  display: flex;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px;
+  gap: 2px;
+}
+.lang-switch button {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+.lang-switch button[aria-pressed="true"] {
+  background: var(--green-dark);
+  color: #fff;
+}
+
+/* ===== HERO ===== */
+.hero {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 28px 16px;
+}
+.hero .eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  margin-bottom: 12px;
+}
+.hero h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 1.1;
+  margin: 0 0 12px;
+  color: var(--green-dark);
+  letter-spacing: -.02em;
+}
+.hero p.lede {
+  font-size: 17px;
+  color: var(--ink-soft);
+  margin: 0 0 16px;
+  max-width: 60ch;
+}
+
+/* ===== CONTENT ===== */
+main {
+  max-width: 880px;
+  margin: 0 auto 80px;
+  padding: 0 28px;
+}
+section {
+  margin: 36px 0;
+  padding: 28px;
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  border-radius: 14px;
+}
+section h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0 0 6px;
+  color: var(--green-dark);
+  letter-spacing: -.01em;
+}
+section .lead {
+  font-size: 15px;
+  color: var(--ink-soft);
+  margin: 0 0 22px;
+}
+section h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  margin: 26px 0 10px;
+  color: var(--ink);
+}
+section p { margin: 0 0 12px; }
+
+/* ===== JSON CODE BLOCKS ===== */
+.code {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 13px;
+  background: var(--code-bg);
+  border: 1px solid var(--line-soft);
+  border-radius: 8px;
+  padding: 16px 18px;
+  overflow-x: auto;
+  margin: 14px 0;
+  line-height: 1.6;
+  white-space: pre;
+}
+.code .k  { color: var(--code-key); font-weight: 600; }
+.code .s  { color: var(--code-str); }
+.code .c  { color: var(--code-comment); font-style: italic; }
+.code .p  { color: var(--ink-mute); }
+.code .a  { background: #fff4d6; padding: 1px 4px; border-radius: 3px; }
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 14px 0 8px;
+}
+.split .code { margin: 0; }
+.split .preview {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 13px;
+  line-height: 1.5;
+  position: relative;
+  overflow: hidden;
+}
+.preview .ph {
+  background: var(--green-tint);
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--green-dark);
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.preview h4 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 4px 0 8px;
+  color: var(--ink);
+}
+.preview p { margin: 0; color: var(--ink-soft); font-size: 13px; }
+
+@media (max-width: 720px) {
+  .split { grid-template-columns: 1fr; }
+}
+
+.rules {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+  font-size: 14px;
+}
+.rules th, .rules td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--line-soft);
+  text-align: left;
+}
+.rules th {
+  font-weight: 700;
+  background: var(--code-bg);
+  color: var(--ink);
+}
+.rules td code {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  background: var(--code-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+.rules td.do  { color: var(--green-mid); font-weight: 600; }
+.rules td.dont { color: var(--accent); font-weight: 600; }
+
+.tree {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 13px;
+  background: var(--code-bg);
+  border: 1px solid var(--line-soft);
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin: 14px 0;
+  line-height: 1.8;
+  white-space: pre;
+  overflow-x: auto;
+}
+.tree .folder { color: var(--green-dark); font-weight: 700; }
+.tree .file   { color: var(--ink-soft); }
+.tree .note   { color: var(--ink-mute); font-style: italic; }
+.tree .new    { background: var(--green-tint-2); padding: 1px 5px; border-radius: 3px; }
+
+.img-demo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 16px 0;
+}
+.img-demo .card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+}
+.img-demo .card .label {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--green-dark);
+  margin: 0 0 8px;
+  letter-spacing: .02em;
+}
+.img-demo .card svg.layout {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px dashed var(--line);
+  border-radius: 4px;
+}
+.img-demo .card .size {
+  font-size: 11px;
+  color: var(--ink-mute);
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  margin-top: 8px;
+}
+
+@media (max-width: 720px) {
+  .img-demo { grid-template-columns: 1fr; }
+}
+
+.callout {
+  margin: 16px 0;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.55;
+  border-left: 4px solid;
+}
+.callout.tip {
+  background: var(--green-tint-2);
+  border-color: var(--green-mid);
+}
+.callout.warn {
+  background: #fff7e6;
+  border-color: var(--warning);
+}
+.callout strong { color: var(--ink); }
+
+.steps {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin: 14px 0;
+}
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding: 10px 0 10px 44px;
+  border-bottom: 1px dashed var(--line-soft);
+}
+.steps li:last-child { border-bottom: 0; }
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0; top: 8px;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: var(--green-dark);
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 28px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--ink-mute);
+}
+footer code {
+  background: var(--code-bg);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* ===== LANGUAGE-AWARE TEXT ===== */
+.t-en, .t-is { display: none; }
+html[lang="is"] .t-is { display: inline; }
+html[lang="en"] .t-en { display: inline; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">GREEN <span class="sub"><span class="t-is">Þýðendaleiðbeiningar</span><span class="t-en">Translator Guide</span></span></div>
+  <div class="spacer"></div>
+  <div class="lang-switch" role="group" aria-label="Tungumál / Language">
+    <button data-lang="is" aria-pressed="false">Íslenska</button>
+    <button data-lang="en" aria-pressed="true">English</button>
+  </div>
+</div>
+
+
+<header class="hero">
+  <div class="eyebrow">GREEN Erasmus+ · KA220-VET</div>
+  <h1>
+    <span class="t-is">Að þýða vinnublöð</span>
+    <span class="t-en">Translating worksheets</span>
+  </h1>
+  <p class="lede">
+    <span class="t-is">Þú þarft enga forritunarkunnáttu. Opnaðu JSON-skrá í Notepad eða VS Code, skiptu textanum út fyrir þýðingu og vistaðu. Þetta er allt.</span>
+    <span class="t-en">No coding required. Open a JSON file in Notepad or VS Code, replace the text with your translation, and save. That's all.</span>
+  </p>
+</header>
+
+
+<main>
+
+<section>
+  <h2>
+    <span class="t-is">Um verkefnið</span>
+    <span class="t-en">About this project</span>
+  </h2>
+  <p class="lead">
+    <span class="t-is">Smíðað í sameiningu af fimm starfsmenntaskólum í Evrópu — Íslandi, Portúgal, Króatíu, Tyrklandi og Hollandi — sem hluti af GREEN Erasmus+ KA220-VET verkefninu.</span>
+    <span class="t-en">Built together by five vocational schools across Europe — Iceland, Portugal, Croatia, Türkiye and the Netherlands — as part of the GREEN Erasmus+ KA220-VET programme.</span>
+  </p>
+  <p>
+    <span class="t-is">Verkefnið fjallar um vatns- og orkusparnað í skólum og á heimilum. Hvert vinnublað er prenthæft, fáanlegt á sex tungumálum og inniheldur dæmi um góð skil sem nemendur geta horft á.</span>
+    <span class="t-en">The project covers water and energy saving in schools and homes. Each worksheet is printable, available in six languages, and includes example submissions students can watch.</span>
+  </p>
+  <p>
+    <span class="t-is">Hvert land leiðir eitt þema (skólaumhverfi, eldhús, ræstingar, lýsing, afþreying & rafeindabúnaður) en allir aðilar leggja efni og þýðingar í sameiginlega sjóð. Samvinnan við Claude (Anthropic) hjálpaði okkur að byggja vefumhverfið.</span>
+    <span class="t-en">Each country leads one topic area (school environment, kitchen, cleaning, lighting, entertainment & electronics) while every partner contributes content and translations to a shared pool. We built the web environment in collaboration with Claude (Anthropic).</span>
+  </p>
+  <div class="callout tip">
+    <strong>📋 <span class="t-is">Verkefnisnúmer:</span><span class="t-en">Project number:</span></strong>
+    <code>2025-1-HR01-KA220-VET-000353056</code>
+  </div>
+</section>
+
+
+<section>
+  <h2>
+    <span class="t-is">1. Hvernig JSON-skrá lítur út</span>
+    <span class="t-en">1. What a JSON file looks like</span>
+  </h2>
+  <p class="lead">
+    <span class="t-is">Hver lykill stendur fyrir einn texta sem birtist á blaðinu. Þú breytir aðeins gildum hægra megin.</span>
+    <span class="t-en">Each key represents one piece of text on the worksheet. You only edit the values on the right.</span>
+  </p>
+
+  <div class="split">
+<div class="code"><span class="p">{</span>
+  <span class="k">"meta"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="k">"_comment"</span><span class="p">:</span> <span class="c">"<span class="t-is">Birtist efst á blaðinu</span><span class="t-en">Appears at the top of the page</span>"</span><span class="p">,</span>
+    <span class="k">"title"</span><span class="p">:</span> <span class="s">"<span class="a"><span class="t-is">Hversu hratt renna kranarnir?</span><span class="t-en">How fast do the taps run?</span></span>"</span><span class="p">,</span>
+    <span class="k">"level"</span><span class="p">:</span> <span class="s">"<span class="a">BASIC</span>"</span><span class="p">,</span>
+    <span class="k">"topic"</span><span class="p">:</span> <span class="s">"<span class="a"><span class="t-is">Sjálfvirkir vatnskranar</span><span class="t-en">Automatic water taps</span></span>"</span>
+  <span class="p">}</span>
+<span class="p">}</span></div>
+    <div class="preview">
+      <span class="ph"><span class="t-is">Hvernig það lítur út</span><span class="t-en">How it renders</span></span>
+      <h4><span class="t-is">Hversu hratt renna kranarnir?</span><span class="t-en">How fast do the taps run?</span></h4>
+      <p><em><span class="t-is">Stig: BASIC</span><span class="t-en">Level: BASIC</span></em></p>
+      <p style="margin-top:8px"><strong><span class="t-is">Viðfangsefni:</span><span class="t-en">Topic:</span></strong> <span class="t-is">Sjálfvirkir vatnskranar</span><span class="t-en">Automatic water taps</span></p>
+    </div>
+  </div>
+
+  <h3>
+    <span class="t-is">Reglurnar</span>
+    <span class="t-en">The rules</span>
+  </h3>
+  <table class="rules">
+    <thead>
+      <tr>
+        <th><span class="t-is">Hvað er þetta</span><span class="t-en">What it is</span></th>
+        <th><span class="t-is">Dæmi</span><span class="t-en">Example</span></th>
+        <th><span class="t-is">Breyta?</span><span class="t-en">Edit it?</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="t-is">Lykill (vinstra megin)</span><span class="t-en">Key (left side)</span></td>
+        <td><code>"title":</code></td>
+        <td class="dont"><span class="t-is">Nei</span><span class="t-en">No</span></td>
+      </tr>
+      <tr>
+        <td><span class="t-is">Gildi (innan gæsalappa)</span><span class="t-en">Value (in quotes)</span></td>
+        <td><code>"Hversu hratt..."</code></td>
+        <td class="do"><span class="t-is">Já — þýddu</span><span class="t-en">Yes — translate</span></td>
+      </tr>
+      <tr>
+        <td><span class="t-is">Athugasemd</span><span class="t-en">Comment</span></td>
+        <td><code>"_comment":</code></td>
+        <td class="dont"><span class="t-is">Nei — bara fyrir þig</span><span class="t-en">No — for you to read</span></td>
+      </tr>
+      <tr>
+        <td><span class="t-is">Slóðir á myndir</span><span class="t-en">Image paths</span></td>
+        <td><code>"src": "img/tap.svg"</code></td>
+        <td class="dont"><span class="t-is">Nei</span><span class="t-en">No</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout warn">
+    <strong>⚠ <span class="t-is">Mikilvægt:</span><span class="t-en">Important:</span></strong>
+    <span class="t-is"> Aldrei eyða kommum, gæsalöppum eða krullaslaufum. Ef eitthvað brotnar, opnaðu </span>
+    <span class="t-en"> Never remove commas, quotes or curly brackets. If something breaks, open </span>
+    <code>jsonlint.com</code>
+    <span class="t-is"> og límdu skránna inn — það segir þér hvar villan er.</span>
+    <span class="t-en"> and paste the file — it will tell you where the error is.</span>
+  </div>
+</section>
+
+
+<section>
+  <h2>
+    <span class="t-is">2. Myndir í texta</span>
+    <span class="t-en">2. Images inline with text</span>
+  </h2>
+  <p class="lead">
+    <span class="t-is">Þú getur sett mynd í þrjár stöður. Stærðin er stjórnuð sjálfkrafa svo öll blöð líta eins út.</span>
+    <span class="t-en">Images can sit in three positions. Size is automatic so all worksheets stay visually consistent.</span>
+  </p>
+
+  <div class="img-demo">
+    <div class="card">
+      <div class="label">position: "left"</div>
+      <svg class="layout" viewBox="0 0 100 75">
+        <rect width="100" height="75" fill="#fff"/>
+        <rect x="6" y="10" width="38" height="50" fill="#cfe3bd" stroke="#2e7d4f" stroke-width="1"/>
+        <text x="25" y="38" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#1d6437" font-weight="700">mynd</text>
+        <line x1="48" y1="14" x2="94" y2="14" stroke="#999" stroke-width=".6"/>
+        <line x1="48" y1="20" x2="94" y2="20" stroke="#999" stroke-width=".6"/>
+        <line x1="48" y1="26" x2="92" y2="26" stroke="#999" stroke-width=".6"/>
+        <line x1="48" y1="32" x2="94" y2="32" stroke="#999" stroke-width=".6"/>
+        <line x1="48" y1="38" x2="88" y2="38" stroke="#999" stroke-width=".6"/>
+        <line x1="6" y1="65" x2="94" y2="65" stroke="#999" stroke-width=".6"/>
+        <line x1="6" y1="70" x2="80" y2="70" stroke="#999" stroke-width=".6"/>
+      </svg>
+      <div class="size">max 75mm × 108mm</div>
+    </div>
+
+    <div class="card">
+      <div class="label">position: "center"</div>
+      <svg class="layout" viewBox="0 0 100 75">
+        <rect width="100" height="75" fill="#fff"/>
+        <line x1="6" y1="8" x2="94" y2="8" stroke="#999" stroke-width=".6"/>
+        <line x1="6" y1="14" x2="92" y2="14" stroke="#999" stroke-width=".6"/>
+        <rect x="18" y="22" width="64" height="32" fill="#cfe3bd" stroke="#2e7d4f" stroke-width="1"/>
+        <text x="50" y="42" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#1d6437" font-weight="700">mynd</text>
+        <line x1="6" y1="62" x2="94" y2="62" stroke="#999" stroke-width=".6"/>
+        <line x1="6" y1="68" x2="86" y2="68" stroke="#999" stroke-width=".6"/>
+      </svg>
+      <div class="size">max 95mm × 180mm</div>
+    </div>
+
+    <div class="card">
+      <div class="label">position: "right"</div>
+      <svg class="layout" viewBox="0 0 100 75">
+        <rect width="100" height="75" fill="#fff"/>
+        <rect x="56" y="10" width="38" height="50" fill="#cfe3bd" stroke="#2e7d4f" stroke-width="1"/>
+        <text x="75" y="38" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#1d6437" font-weight="700">mynd</text>
+        <line x1="6" y1="14" x2="52" y2="14" stroke="#999" stroke-width=".6"/>
+        <line x1="6" y1="20" x2="52" y2="20" stroke="#999" stroke-width=".6"/>
+        <line x1="6" y1="26" x2="50" y2="26" stroke="#999" stroke-width=".6"/>
+        <line x1="6" y1="32" x2="52" y2="32" stroke="#999" stroke-width=".6"/>
+        <line x1="6" y1="38" x2="46" y2="38" stroke="#999" stroke-width=".6"/>
+        <line x1="6" y1="65" x2="94" y2="65" stroke="#999" stroke-width=".6"/>
+        <line x1="6" y1="70" x2="80" y2="70" stroke="#999" stroke-width=".6"/>
+      </svg>
+      <div class="size">max 75mm × 108mm</div>
+    </div>
+  </div>
+
+  <h3>
+    <span class="t-is">JSON-blokk fyrir mynd</span>
+    <span class="t-en">JSON block for an image</span>
+  </h3>
+<div class="code"><span class="k">"image"</span><span class="p">:</span> <span class="p">{</span>
+  <span class="k">"_comment"</span><span class="p">:</span> <span class="c">"<span class="t-is">Mynd birtist í Fræðin-kaflanum.</span><span class="t-en">Image appears in the Theory section.</span>"</span><span class="p">,</span>
+  <span class="k">"src"</span><span class="p">:</span>      <span class="s">"img/comparison.svg"</span><span class="p">,</span>
+  <span class="k">"alt"</span><span class="p">:</span>      <span class="s">"<span class="a"><span class="t-is">Samanburður á tveimur kranagerðum</span><span class="t-en">Comparison of two tap types</span></span>"</span><span class="p">,</span>
+  <span class="k">"caption"</span><span class="p">:</span>  <span class="s">"<span class="a"><span class="t-is">Mynd 1: Hefðbundinn vs. sjálfvirkur</span><span class="t-en">Fig. 1: Traditional vs. automatic</span></span>"</span><span class="p">,</span>
+  <span class="k">"position"</span><span class="p">:</span> <span class="s">"left"</span>
+<span class="p">}</span></div>
+
+  <div class="callout tip">
+    <strong>💡 <span class="t-is">Tipp:</span><span class="t-en">Tip:</span></strong>
+    <span class="t-is"> Ef engin mynd er á þessum stað, slepptu </span>
+    <span class="t-en"> If there's no image at this spot, just leave out the </span>
+    <code>image</code>
+    <span class="t-is"> lyklinum alveg — ekki skilja eftir tóma blokk.</span>
+    <span class="t-en"> key entirely — don't leave an empty block.</span>
+  </div>
+</section>
+
+
+<section>
+  <h2>
+    <span class="t-is">3. Hvar skrárnar lifa</span>
+    <span class="t-en">3. Where the files live</span>
+  </h2>
+  <p class="lead">
+    <span class="t-is">Allt fylgir sömu skipulagsreglu. Sama nálgun fyrir öll 12+ vinnublöð.</span>
+    <span class="t-en">Everything follows the same convention. Same approach for all 12+ worksheets.</span>
+  </p>
+
+<div class="tree"><span class="folder">green-worksheets/</span>
+├── <span class="file">index.html</span>            <span class="note">// landing</span>
+├── <span class="file">README.md</span>             <span class="note">// <span class="t-is">fyrir GitHub</span><span class="t-en">for GitHub</span></span>
+├── <span class="file">translator-guide.html</span> <span class="note">// <span class="t-is">þessi skrá</span><span class="t-en">this file</span></span>
+├── <span class="folder">img/</span>                <span class="note">// <span class="t-is">global, fyrir öll blöð</span><span class="t-en">global, for all sheets</span></span>
+│   ├── <span class="file">greenlogo.png</span>
+│   └── <span class="file">eufounded.png</span>
+├── <span class="folder">js/</span>
+│   └── <span class="file">qrcode.js</span>
+└── <span class="folder">ws/</span>                 <span class="note">// <span class="t-is">öll vinnublöð</span><span class="t-en">all worksheets</span></span>
+    ├── <span class="folder">ws01/</span>            <span class="note">// <span class="t-is">vinnublað 1</span><span class="t-en">worksheet 1</span></span>
+    │   ├── <span class="file">index.html</span>
+    │   ├── <span class="folder">img/</span>         <span class="note">// <span class="t-is">myndir fyrir þetta blað</span><span class="t-en">images for this sheet</span></span>
+    │   │   ├── <span class="file">comparison.svg</span>
+    │   │   ├── <span class="file">tap.svg</span>
+    │   │   └── <span class="file">bathroom.svg</span>
+    │   └── <span class="folder">lang/</span>        <span class="note">// <span class="t-is">þýðingar fyrir þetta blað</span><span class="t-en">translations for this sheet</span></span>
+    │       ├── <span class="file">is.json</span>    <span class="note">// Íslenska</span>
+    │       ├── <span class="file">en.json</span>    <span class="note">// English</span>
+    │       ├── <span class="file">pt.json</span>    <span class="note">// Português</span>
+    │       ├── <span class="file">hr.json</span>    <span class="note">// Hrvatski</span>
+    │       ├── <span class="file">tr.json</span>    <span class="note">// Türkçe</span>
+    │       └── <span class="file">nl.json</span>    <span class="note">// Nederlands</span>
+    ├── <span class="folder">ws02/</span> <span class="new"><span class="t-is">+ næsta blað</span><span class="t-en">+ next sheet</span></span>
+    └── <span class="folder">ws03/</span> <span class="new">...</span></div>
+</section>
+
+
+<section>
+  <h2>
+    <span class="t-is">4. Bæta við nýju tungumáli</span>
+    <span class="t-en">4. Add a new language</span>
+  </h2>
+  <p class="lead">
+    <span class="t-is">Þrjú skref. Það er allt.</span>
+    <span class="t-en">Three steps. That's all.</span>
+  </p>
+
+  <ol class="steps">
+    <li>
+      <strong><span class="t-is">Afritaðu</span><span class="t-en">Copy</span></strong>
+      <code>is.json</code>
+      <span class="t-is"> og endurnefndu með tveggja-stafa kóða (t.d. </span>
+      <span class="t-en"> and rename it with the two-letter code (e.g. </span>
+      <code>de.json</code>
+      <span class="t-is"> fyrir þýsku, </span>
+      <span class="t-en"> for German, </span>
+      <code>fr.json</code>
+      <span class="t-is"> fyrir frönsku).</span>
+      <span class="t-en"> for French).</span>
+    </li>
+    <li>
+      <strong><span class="t-is">Þýddu</span><span class="t-en">Translate</span></strong>
+      <span class="t-is"> öll gildi (textinn innan gæsalappa, hægra megin við tvípunktinn). Lyklarnir vinstra megin haldast óbreyttir.</span>
+      <span class="t-en"> all values (text in quotes, right of the colon). Keys on the left stay unchanged.</span>
+    </li>
+    <li>
+      <strong><span class="t-is">Vistaðu</span><span class="t-en">Save</span></strong>
+      <span class="t-is"> í </span>
+      <span class="t-en"> into the </span>
+      <code>lang/w01/</code>
+      <span class="t-is"> möppuna og sendu skránna til verkefnisstjórans. Engin önnur skref.</span>
+      <span class="t-en"> folder and send the file to the project lead. No other steps.</span>
+    </li>
+  </ol>
+
+  <div class="callout tip">
+    <strong>✓ <span class="t-is">Athugaðu áður en þú sendir:</span><span class="t-en">Before sending, check:</span></strong>
+    <span class="t-is"> Opnaðu </span><span class="t-en"> Open </span>
+    <code>jsonlint.com</code>
+    <span class="t-is">, límdu inn skránna og smelltu „Validate JSON". Ef það kemur grænt „Valid JSON" — þú ert búinn.</span>
+    <span class="t-en">, paste the file, click "Validate JSON". If you see a green "Valid JSON" — you're done.</span>
+  </div>
+</section>
+
+
+<section>
+  <h2>
+    <span class="t-is">5. Tákn og formatting</span>
+    <span class="t-en">5. Symbols &amp; formatting</span>
+  </h2>
+
+  <table class="rules">
+    <thead>
+      <tr>
+        <th><span class="t-is">Hvað</span><span class="t-en">What</span></th>
+        <th><span class="t-is">Hvernig</span><span class="t-en">How</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="t-is">Línuskil</span><span class="t-en">Line break</span></td>
+        <td><code>\n</code> <span class="t-is">— eins og að ýta á Enter</span><span class="t-en">— like pressing Enter</span></td>
+      </tr>
+      <tr>
+        <td><span class="t-is">Margfeldi</span><span class="t-en">Multiplication</span></td>
+        <td><code>×</code> <span class="t-is">(ekki bókstafurinn x)</span><span class="t-en">(not the letter x)</span></td>
+      </tr>
+      <tr>
+        <td><span class="t-is">Deiling</span><span class="t-en">Division</span></td>
+        <td><code>÷</code></td>
+      </tr>
+      <tr>
+        <td><span class="t-is">Ör til hægri</span><span class="t-en">Right arrow</span></td>
+        <td><code>→</code></td>
+      </tr>
+      <tr>
+        <td><span class="t-is">Tugskil</span><span class="t-en">Decimal separator</span></td>
+        <td><code>,</code> <span class="t-is">í IS/PT/HR/NL · </span><span class="t-en">in IS/PT/HR/NL · </span><code>.</code> <span class="t-is">í EN</span><span class="t-en">in EN</span></td>
+      </tr>
+      <tr>
+        <td><span class="t-is">Gráður</span><span class="t-en">Degrees</span></td>
+        <td><code>°</code> <span class="t-is">(t.d. 20 °C)</span><span class="t-en">(e.g. 20 °C)</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout warn">
+    <strong>✗ <span class="t-is">Aldrei nota HTML merki</span><span class="t-en">Never use HTML tags</span></strong>
+    <span class="t-is"> eins og </span><span class="t-en"> like </span>
+    <code>&lt;b&gt;</code>, <code>&lt;br&gt;</code>, <code>&lt;p&gt;</code>
+    <span class="t-is"> — kerfið formaterar textann sjálfkrafa. Skrifaðu bara venjulegan texta.</span>
+    <span class="t-en"> — the system handles formatting automatically. Write plain text only.</span>
+  </div>
+</section>
+
+
+<section>
+  <h2>
+    <span class="t-is">6. YouTube myndband</span>
+    <span class="t-en">6. YouTube video</span>
+  </h2>
+  <p class="lead">
+    <span class="t-is">Eitt myndband per vinnublað, alltaf neðst sem „Lokafurð". Sýnir nemendum dæmi um góð skil áður en þeir byrja á sínu eigin.</span>
+    <span class="t-en">One video per worksheet, always at the bottom as the "Deliverable". Shows students an example of good submission before they begin their own.</span>
+  </p>
+
+  <h3>
+    <span class="t-is">Tvær sjónir á sama hluta</span>
+    <span class="t-en">Two views of the same block</span>
+  </h3>
+  <p>
+    <span class="t-is">Á skjá sjá nemendur myndbandið beint í blaðinu — geta horft á það án þess að fara annað. Í prentinu birtist QR-kóði sem þeir skanna með síma. Sömu gögn, tvær framsetningar — kerfið skiptir um sjálfkrafa.</span>
+    <span class="t-en">On screen, students see the video embedded directly — they can watch without leaving the page. In print, a QR code appears that they scan with their phone. Same data, two presentations — the system swaps automatically.</span>
+  </p>
+
+  <div class="img-demo" style="grid-template-columns: 1fr 1fr">
+    <div class="card">
+      <div class="label"><span class="t-is">Á skjá</span><span class="t-en">On screen</span></div>
+      <svg class="layout" viewBox="0 0 100 60">
+        <rect width="100" height="60" fill="#fff"/>
+        <rect x="20" y="8" width="60" height="34" fill="#1a1a1a" rx="2"/>
+        <polygon points="44,18 44,32 56,25" fill="#fff"/>
+        <line x1="20" y1="48" x2="80" y2="48" stroke="#999" stroke-width=".6"/>
+        <text x="50" y="56" text-anchor="middle" font-family="sans-serif" font-size="4" fill="#999" font-style="italic">caption</text>
+      </svg>
+      <div class="size"><span class="t-is">YouTube spilari</span><span class="t-en">YouTube player</span></div>
+    </div>
+
+    <div class="card">
+      <div class="label"><span class="t-is">Í prenti</span><span class="t-en">In print</span></div>
+      <svg class="layout" viewBox="0 0 100 60">
+        <rect width="100" height="60" fill="#fff"/>
+        <!-- mock QR grid -->
+        <g fill="#1a1a1a">
+          <rect x="34" y="10" width="3" height="3"/><rect x="38" y="10" width="3" height="3"/><rect x="46" y="10" width="3" height="3"/><rect x="54" y="10" width="3" height="3"/><rect x="58" y="10" width="3" height="3"/><rect x="62" y="10" width="3" height="3"/>
+          <rect x="34" y="14" width="3" height="3"/><rect x="42" y="14" width="3" height="3"/><rect x="50" y="14" width="3" height="3"/><rect x="62" y="14" width="3" height="3"/>
+          <rect x="34" y="18" width="3" height="3"/><rect x="46" y="18" width="3" height="3"/><rect x="54" y="18" width="3" height="3"/><rect x="58" y="18" width="3" height="3"/>
+          <rect x="38" y="22" width="3" height="3"/><rect x="42" y="22" width="3" height="3"/><rect x="50" y="22" width="3" height="3"/><rect x="54" y="22" width="3" height="3"/><rect x="62" y="22" width="3" height="3"/>
+          <rect x="34" y="26" width="3" height="3"/><rect x="46" y="26" width="3" height="3"/><rect x="58" y="26" width="3" height="3"/>
+          <rect x="38" y="30" width="3" height="3"/><rect x="42" y="30" width="3" height="3"/><rect x="50" y="30" width="3" height="3"/><rect x="54" y="30" width="3" height="3"/><rect x="62" y="30" width="3" height="3"/>
+          <rect x="34" y="34" width="3" height="3"/><rect x="42" y="34" width="3" height="3"/><rect x="46" y="34" width="3" height="3"/><rect x="58" y="34" width="3" height="3"/>
+        </g>
+        <line x1="20" y1="44" x2="80" y2="44" stroke="#999" stroke-width=".6"/>
+        <text x="50" y="52" text-anchor="middle" font-family="monospace" font-size="3" fill="#666">youtube.com/watch?v=...</text>
+      </svg>
+      <div class="size"><span class="t-is">QR-kóði + slóð</span><span class="t-en">QR code + URL</span></div>
+    </div>
+  </div>
+
+  <h3>
+    <span class="t-is">JSON-blokk</span>
+    <span class="t-en">JSON block</span>
+  </h3>
+<div class="code"><span class="k">"deliverable"</span><span class="p">:</span> <span class="p">{</span>
+  <span class="k">"_comment"</span><span class="p">:</span> <span class="c">"<span class="t-is">Lokafurð — það sem nemendur skila.</span><span class="t-en">Deliverable — what students submit.</span>"</span><span class="p">,</span>
+  <span class="k">"title"</span><span class="p">:</span>    <span class="s">"<span class="a"><span class="t-is">Skilamyndband</span><span class="t-en">Video submission</span></span>"</span><span class="p">,</span>
+  <span class="k">"subtitle"</span><span class="p">:</span> <span class="s">"<span class="a"><span class="t-is">Lokafurð verkefnisins</span><span class="t-en">Final output of the task</span></span>"</span><span class="p">,</span>
+  <span class="k">"intro"</span><span class="p">:</span>    <span class="s">"<span class="a"><span class="t-is">Skilið stuttu myndbandi (1–3 mín)...</span><span class="t-en">Submit a short video (1–3 min)...</span></span>"</span><span class="p">,</span>
+
+  <span class="k">"exampleVideo"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="k">"_comment"</span><span class="p">:</span> <span class="c">"<span class="t-is">Dæmi um góð skil. Birtist sem embed á skjá, QR í prenti.</span><span class="t-en">Example of good submission. Shows as embed on screen, QR in print.</span>"</span><span class="p">,</span>
+    <span class="k">"youtubeId"</span><span class="p">:</span> <span class="s">"t12mrt3JmTE"</span><span class="p">,</span>            <span class="c">// <span class="t-is">EKKI breyta nema skipt um myndband</span><span class="t-en">DO NOT change unless swapping the video</span></span>
+    <span class="k">"caption"</span><span class="p">:</span>   <span class="s">"<span class="a"><span class="t-is">Dæmi um gott nemendamyndband</span><span class="t-en">Example of a good student video</span></span>"</span><span class="p">,</span>  <span class="c">// <span class="t-is">þýðist</span><span class="t-en">translate this</span></span>
+    <span class="k">"scanLabel"</span><span class="p">:</span> <span class="s">"<span class="a"><span class="t-is">Skannaðu QR-kóðann til að horfa:</span><span class="t-en">Scan the QR code to watch:</span></span>"</span>    <span class="c">// <span class="t-is">þýðist</span><span class="t-en">translate this</span></span>
+  <span class="p">}</span>
+<span class="p">}</span></div>
+
+  <h3>
+    <span class="t-is">Hvar finn ég youtubeId?</span>
+    <span class="t-en">Where do I find the youtubeId?</span>
+  </h3>
+  <p>
+    <span class="t-is">Það er bitinn á eftir </span>
+    <span class="t-en">It's the bit after </span>
+    <code>watch?v=</code>
+    <span class="t-is"> í YouTube-slóðinni:</span>
+    <span class="t-en"> in the YouTube URL:</span>
+  </p>
+<div class="code">https://www.youtube.com/watch?v=<span class="a">t12mrt3JmTE</span>
+                                  ↑
+                          <span class="t-is">þetta er youtubeId</span><span class="t-en">this is the youtubeId</span></div>
+
+  <div class="callout tip">
+    <strong>💡 <span class="t-is">Tipp:</span><span class="t-en">Tip:</span></strong>
+    <span class="t-is"> Eitt myndband er nóg fyrir hverja skrá. Það birtist alltaf neðst á síðasta blaðinu sem „Lokafurð". Ef þú vilt ekkert myndband, slepptu bara </span>
+    <span class="t-en"> One video per file is enough. It always appears at the bottom of the last page as the "Deliverable". If you don't want a video, just leave out the </span>
+    <code>exampleVideo</code>
+    <span class="t-is"> blokkinni.</span>
+    <span class="t-en"> block.</span>
+  </div>
+
+  <div class="callout warn">
+    <strong>⚠ <span class="t-is">Athugaðu:</span><span class="t-en">Note:</span></strong>
+    <span class="t-is"> Veljið myndband sem er birt sem „Public" eða „Unlisted" — ekki „Private". Annars getur embedinu ekki spilað.</span>
+    <span class="t-en"> Choose a video that is set to "Public" or "Unlisted" — not "Private". Otherwise the embed won't play.</span>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  GREEN Erasmus+ Worksheets · Project <code>2025-1-HR01-KA220-VET-000353056</code>
+</footer>
+
+
+<script>
+const buttons = document.querySelectorAll(".lang-switch button");
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const lang = btn.getAttribute("data-lang");
+    document.documentElement.lang = lang;
+    buttons.forEach(b => b.setAttribute("aria-pressed", b === btn));
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+{
+  "_README": {
+    "purpose": "Translations for the landing page (index.html).",
+    "language": "English — reference file",
+    "instructions": "All other languages copy this file and translate the values. Keys (left of the colon) and identifiers (like worksheet codes 'w01') must never change. See translator-guide.html for full instructions."
+  },
+
+  "header": {
+    "_comment": "Top of the page — the big title block.",
+    "badge":  "GREEN Erasmus+ · KA220-VET · WP2",
+    "title":  "Energy & Water Worksheets",
+    "lede":   "Interactive teaching materials on efficient use of energy and water — created by five European vocational schools."
+  },
+
+  "ui": {
+    "_comment": "Small bits of interface text used across the page.",
+    "info":    "About",
+    "infoTip": "About this project"
+  },
+
+  "topicFilter": {
+    "_comment": "Buttons at the top of the worksheet grid. Emoji is part of the label — keep it.",
+    "all":           "All topics",
+    "entertainment": "🎮 Entertainment",
+    "kitchen":       "🍳 Kitchen",
+    "cleaning":      "🧹 Cleaning",
+    "lighting":      "💡 Lighting",
+    "school":        "🏫 School Environment"
+  },
+
+  "levels": {
+    "_comment": "Three difficulty levels. Each has a short title and a longer description.",
+    "basic": {
+      "label": "Basic",
+      "title": "Observe & Measure",
+      "desc":  "Hands-on data collection. Students walk through a building, observe, measure, and record. Minimal calculations, focus on understanding what uses energy and water."
+    },
+    "medium": {
+      "label": "Medium",
+      "title": "Calculate & Compare",
+      "desc":  "Apply formulas to real data. Students use measurements to calculate costs, savings, and payback periods. Combine data from multiple sources."
+    },
+    "advanced": {
+      "label": "Advanced",
+      "title": "Analyze & Recommend",
+      "desc":  "Synthesize findings into recommendations. Students analyze trade-offs, create cost-benefit analyses, and produce reports or videos with actionable proposals."
+    }
+  },
+
+  "status": {
+    "_comment": "Card footer status text.",
+    "ready":  "● Ready",
+    "coming": "○ Coming soon"
+  },
+
+  "countries": {
+    "_comment": "Country names that appear on each worksheet card.",
+    "is": "Iceland",
+    "pt": "Portugal",
+    "tr": "Türkiye",
+    "hr": "Croatia",
+    "nl": "Netherlands"
+  },
+
+  "worksheets": {
+    "_comment": "Every card on the landing page. Keys (w01, w02 ...) never change. Topic, title and description translate.",
+
+    "w01": {
+      "topic": "🏫 School Environment",
+      "title": "💧 Water — Tap Flow Measurement",
+      "desc":  "Measure actual tap flow rates in school bathrooms. Compare with automatic sensor taps and calculate water savings."
+    },
+    "w02": {
+      "topic": "🎮 Entertainment & Electronics",
+      "title": "📺 Standby vs. OFF",
+      "desc":  "Measure standby power of TVs, consoles and monitors. Calculate the yearly cost of leaving devices plugged in."
+    },
+    "w03": {
+      "topic": "🧹 Cleaning & Household",
+      "title": "🍽 Dishwasher Efficiency",
+      "desc":  "Compare intensive, auto and eco programmes. Calculate annual energy, water and carbon impact of running a dishwasher."
+    },
+    "w04": {
+      "topic": "🍳 The Kitchen",
+      "title": "🔌 Kitchen Appliance Inventory",
+      "desc":  "List all kitchen appliances, read their power ratings, and rank them by energy consumption."
+    },
+    "w05": {
+      "topic": "🧹 Cleaning & Household",
+      "title": "🧺 Eco Settings Experiment",
+      "desc":  "Compare water and energy use of normal vs. eco wash cycle on a washing machine. Record and compare."
+    },
+    "w06": {
+      "topic": "💡 Lighting",
+      "title": "💡 Bulb Comparison Lab",
+      "desc":  "Compare incandescent, CFL, and LED bulbs side by side. Measure light output, heat, and power consumption."
+    },
+
+    "w07": {
+      "topic": "🏫 School Environment",
+      "title": "🖥 Computer Lab Energy Audit",
+      "desc":  "Measure power draw of computers, monitors, and projectors. Calculate daily and yearly cost for a full lab."
+    },
+    "w08": {
+      "topic": "🎮 Entertainment & Electronics",
+      "title": "📊 Energy Rating Comparison",
+      "desc":  "Compare energy classes (A–G) for TVs and monitors. Calculate the real cost difference over 5 years."
+    },
+    "w09": {
+      "topic": "🍳 The Kitchen",
+      "title": "🍞 Oven vs. Air Fryer Showdown",
+      "desc":  "Compare energy used to cook the same meal in a traditional oven vs. air fryer vs. microwave."
+    },
+    "w10": {
+      "topic": "🧹 Cleaning & Household",
+      "title": "🌡 Dryer Energy Calculator",
+      "desc":  "Calculate yearly cost of using a tumble dryer vs. air-drying. Factor in weather and frequency."
+    },
+    "w11": {
+      "topic": "💡 Lighting",
+      "title": "💰 The Cost of Neglect",
+      "desc":  "Calculate the actual yearly cost of leaving lights on unnecessarily in different rooms of a school or home."
+    },
+
+    "w12": {
+      "topic": "🏫 School Environment",
+      "title": "☀️ Solar Panel Calculator",
+      "desc":  "Use PVGIS data to calculate solar panel output for your school. Compare with grid electricity cost and calculate ROI."
+    },
+    "w13": {
+      "topic": "🎮 Entertainment & Electronics",
+      "title": "🏠 Smart Home Energy Plan",
+      "desc":  "Design an energy-saving plan for a household. Prioritize upgrades by payback period and total savings."
+    },
+    "w14": {
+      "topic": "🍳 The Kitchen",
+      "title": "♨️ Water Heating Analysis",
+      "desc":  "Compare the efficiency of different water heating methods (kettle, boiler, heat pump). Calculate theoretical vs. actual energy input."
+    },
+    "w15": {
+      "topic": "🧹 Cleaning & Household",
+      "title": "🤖 Robot vs. Human: Total Cost",
+      "desc":  "Analyze the full energy lifecycle of a robotic vacuum vs. traditional cleaning. Include manufacturing, use, and disposal."
+    },
+    "w16": {
+      "topic": "💡 Lighting",
+      "title": "🧠 Smart Lighting Proposal",
+      "desc":  "Design a smart lighting system for a school. Include sensors, timers, and dimming. Create a cost-benefit report."
+    }
+  },
+
+  "footnote": {
+    "_comment": "Box at the bottom of the page, before the footer.",
+    "title": "📌 About these worksheets",
+    "p1":    "These worksheets are part of GREEN Erasmus+ (KA220-VET), Work Package 2: Creation of teaching materials on efficient use of energy and water. Five partner schools each lead one topic area, creating materials in all partner languages.",
+    "p2":    "Difficulty levels are designed so teachers can choose appropriate worksheets for their students — from hands-on observation (Basic) through calculation exercises (Medium) to full analysis and recommendation projects (Advanced)."
+  },
+
+  "footer": "GREEN Erasmus+ · KA220-VET · 2025-1-HR01-KA220-VET-000353056"
+}

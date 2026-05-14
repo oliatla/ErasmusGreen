@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" role="img" aria-label="Samanburður á hefðbundnum og sjálfvirkum krana">
+  <rect width="300" height="400" fill="#fdf4e3"/>
+  <rect x="6" y="6" width="288" height="388" fill="none" stroke="#a16207" stroke-width="2" stroke-dasharray="6 4"/>
+
+  <!-- old tap (top) -->
+  <text x="150" y="32" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#1a1a1a">Hefðbundinn</text>
+  <rect x="60" y="60" width="180" height="120" fill="#f5f0e6" stroke="#444" stroke-width="1"/>
+
+  <!-- old tap drawing -->
+  <rect x="138" y="70" width="24" height="28" fill="#9ca3af" rx="2"/>
+  <rect x="125" y="92" width="50" height="10" fill="#6b7280" rx="2"/>
+  <rect x="146" y="102" width="8" height="20" fill="#6b7280"/>
+  <!-- water (continuous) -->
+  <rect x="148" y="122" width="4" height="50" fill="#3b82f6"/>
+  <text x="200" y="155" font-family="sans-serif" font-size="10" fill="#dc2626" font-weight="700">stöðugt</text>
+
+  <!-- divider -->
+  <line x1="40" y1="200" x2="260" y2="200" stroke="#a16207" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <!-- new tap (bottom) -->
+  <text x="150" y="225" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#1a1a1a">Sjálfvirkur</text>
+  <rect x="60" y="245" width="180" height="120" fill="#f5f0e6" stroke="#444" stroke-width="1"/>
+
+  <rect x="138" y="255" width="24" height="28" fill="#9ca3af" rx="2"/>
+  <rect x="125" y="277" width="50" height="10" fill="#6b7280" rx="2"/>
+  <rect x="146" y="287" width="8" height="20" fill="#6b7280"/>
+  <!-- sensor eye -->
+  <circle cx="170" cy="293" r="3" fill="#dc2626"/>
+  <!-- intermittent water (dashed) -->
+  <line x1="150" y1="307" x2="150" y2="355" stroke="#3b82f6" stroke-width="4" stroke-dasharray="6 4"/>
+  <text x="200" y="335" font-family="sans-serif" font-size="10" fill="#059669" font-weight="700">aðeins</text>
+  <text x="200" y="348" font-family="sans-serif" font-size="10" fill="#059669" font-weight="700">þegar þörf</text>
+
+  <text x="150" y="385" text-anchor="middle" font-family="sans-serif" font-size="12" font-style="italic" fill="#a16207">[ Mynd: tvær gerðir krana ]</text>
+</svg>

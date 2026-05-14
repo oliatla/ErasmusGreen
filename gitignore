@@ -1,0 +1,71 @@
+# ────────────────────────────────────────────────────────────────
+# OS-generated files
+# ────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ────────────────────────────────────────────────────────────────
+# Editor / IDE
+# ────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+.project
+.classpath
+.history/
+
+# ────────────────────────────────────────────────────────────────
+# Logs and temporary files
+# ────────────────────────────────────────────────────────────────
+*.log
+*.tmp
+*.bak
+*.orig
+.cache/
+.tmp/
+
+# ────────────────────────────────────────────────────────────────
+# Local environment / secrets (in case any are added later)
+# ────────────────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ────────────────────────────────────────────────────────────────
+# Optional: Node.js — uncomment if you add npm tooling later
+# ────────────────────────────────────────────────────────────────
+# node_modules/
+# npm-debug.log*
+# yarn-debug.log*
+# yarn-error.log*
+# package-lock.json
+# dist/
+# build/
+
+# ────────────────────────────────────────────────────────────────
+# Netlify local development
+# ────────────────────────────────────────────────────────────────
+.netlify/
+
+# ────────────────────────────────────────────────────────────────
+# Generated / exported files (PDFs are usually printed on demand)
+# ────────────────────────────────────────────────────────────────
+*.pdf-export
+print-output/

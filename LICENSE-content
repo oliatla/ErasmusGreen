@@ -1,0 +1,90 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+═══════════════════════════════════════════════════════════════════════════
+
+Copyright © 2025–2026 The GREEN Partnership and its contributing partner
+institutions (Croatia, Iceland, Netherlands, Portugal, Türkiye).
+
+  GREEN Erasmus+ KA220-VET Project № 2025-1-HR01-KA220-VET-000353056
+
+═══════════════════════════════════════════════════════════════════════════
+
+This licence applies to the EDUCATIONAL CONTENT of this repository,
+including but not limited to:
+
+  • All worksheets in /ws/                 (HTML rendered for print + screen)
+  • All translation files under lang/      (JSON content files)
+  • All worksheet text in any language
+  • Worksheet-specific illustrations under /ws/*/img/
+  • The GREEN logo and graphic assets under /img/         (* see note below)
+
+The SOURCE CODE that powers the website (HTML structure, CSS, JavaScript,
+build scripts, SVG flag/icon library code) is licensed separately under the
+MIT License. See the companion file `LICENSE`.
+
+* NOTE on logos: the GREEN project logo and the "Co-funded by the European
+  Union" logo are used here under their respective brand-identity policies.
+  Third parties redistributing this work must replace these with their own
+  attribution and may not imply endorsement by the European Union.
+
+═══════════════════════════════════════════════════════════════════════════
+
+YOU ARE FREE TO:
+
+  Share — copy and redistribute the material in any medium or format
+          for any purpose, even commercially.
+
+  Adapt — remix, transform, and build upon the material
+          for any purpose, even commercially.
+
+The licensor cannot revoke these freedoms as long as you follow the
+licence terms below.
+
+═══════════════════════════════════════════════════════════════════════════
+
+UNDER THE FOLLOWING TERMS:
+
+  Attribution — You must give appropriate credit, provide a link to
+                the licence, and indicate if changes were made. You may do
+                so in any reasonable manner, but not in any way that
+                suggests the licensor endorses you or your use.
+
+  No additional restrictions — You may not apply legal terms or
+                technological measures that legally restrict others from
+                doing anything the licence permits.
+
+═══════════════════════════════════════════════════════════════════════════
+
+NOTICES:
+
+  You do not have to comply with the licence for elements of the material
+  in the public domain or where your use is permitted by an applicable
+  exception or limitation.
+
+  No warranties are given. The licence may not give you all of the
+  permissions necessary for your intended use. For example, other rights
+  such as publicity, privacy, or moral rights may limit how you use the
+  material.
+
+═══════════════════════════════════════════════════════════════════════════
+
+SUGGESTED ATTRIBUTION
+
+When reusing or adapting this material, please credit:
+
+  "Energy & Water Worksheets" by The GREEN Partnership,
+  Erasmus+ KA220-VET project № 2025-1-HR01-KA220-VET-000353056.
+  Licensed under CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+
+═══════════════════════════════════════════════════════════════════════════
+
+This document is a human-readable summary of (and not a substitute for) the
+licence. The full legal code is available at:
+
+  https://creativecommons.org/licenses/by/4.0/legalcode
+
+═══════════════════════════════════════════════════════════════════════════
+
+Funded by the European Union. Views and opinions expressed are however those
+of the author(s) only and do not necessarily reflect those of the European
+Union or the European Education and Culture Executive Agency (EACEA).
+Neither the European Union nor EACEA can be held responsible for them.

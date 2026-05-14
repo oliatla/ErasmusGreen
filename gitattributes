@@ -1,0 +1,49 @@
+# ────────────────────────────────────────────────────────────────
+# Normalize line endings
+# Repo stores LF; on checkout, Windows users still get LF too —
+# this avoids endless "everyone keeps committing line-ending changes"
+# problems when a team works across macOS / Linux / Windows.
+# ────────────────────────────────────────────────────────────────
+* text=auto eol=lf
+
+# Explicit text files
+*.html      text eol=lf
+*.css       text eol=lf
+*.js        text eol=lf
+*.json      text eol=lf
+*.md        text eol=lf
+*.svg       text eol=lf
+*.txt       text eol=lf
+
+# ────────────────────────────────────────────────────────────────
+# Binary files (never normalize, never diff as text)
+# ────────────────────────────────────────────────────────────────
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.webp      binary
+*.pdf       binary
+*.woff      binary
+*.woff2     binary
+*.ttf       binary
+*.otf       binary
+*.eot       binary
+*.ico       binary
+*.mp4       binary
+*.webm      binary
+
+# ────────────────────────────────────────────────────────────────
+# GitHub language statistics
+# Without this, the JSON translation files (which can outweigh the
+# actual code) will make the repo appear to be "84 % JSON". The lines
+# below hide translations and flag SVGs from the language bar so
+# JavaScript / HTML / CSS show their true share.
+# ────────────────────────────────────────────────────────────────
+lang/*.json         linguist-detectable=false
+ws/*/lang/*.json    linguist-detectable=false
+img/flags/*.svg     linguist-detectable=false
+
+# Mark translation directories as documentation rather than source
+lang/**             linguist-documentation
+ws/*/lang/**        linguist-documentation
