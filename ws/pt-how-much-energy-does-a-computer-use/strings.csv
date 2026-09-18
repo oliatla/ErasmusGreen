@@ -1,0 +1,61 @@
+key,where,en
+t83ff084b,Title,How much energy does a computer use?
+t7993ae70,Info › Topic,Computing – Desktop vs Laptop Energy Use
+t0e11a771,Info › Learning outcomes,Compare energy usage of computing devices
+tfe1d1345,Info › Learning outcomes,Analyze efficiency vs performance
+t24c33fb2,Info › Learning outcomes,Calculate operating costs
+t403231e3,Info › Time needed,45 – 60 min
+t6dee91ef,Info › Resources,Device specifications
+t57219b6d,Info › Resources,Calculator
+t65803a19,Medium › subheading,Introduction
+t506ff6b2,Medium,"Computers are an essential part of modern life. They are used for studying, gaming, communication and entertainment. However, different types of computers consume very different amounts of energy."
+tf778037a,Medium,Understanding these differences helps users make more sustainable choices while balancing performance and energy efficiency.
+t9e950428,Medium › subheading,Theory
+tb992b4bb,Medium,"Desktop computers generally use more electricity because they contain larger processors, dedicated graphics cards and external monitors. Laptops are designed to maximise battery life, making them more energy efficient."
+ted426f69,Medium,"A typical desktop computer may consume between 150 and 300 watts during operation, while a laptop may use between 20 and 60 watts."
+tac775541,Medium,"Although desktops often offer greater performance, laptops can provide significant energy savings over time."
+t1908e453,Medium › box,Worked example
+tf680775a,Medium › Worked example,Desktop computer:
+t9f8e1db0,Medium › Worked example,200 W
+t2d50fe55,Medium › Worked example,Laptop:
+t4820fd75,Medium › Worked example,50 W
+t95b27365,Medium › Worked example,Daily use:
+t27b1b222,Medium › Worked example,6 hours
+te5f44404,Medium › Worked example,Annual energy:
+t0984794b,Medium › Worked example,Desktop:
+tc56f1680,Medium › Worked example,200 × 2190 ÷ 1000 = 438 kWh/year
+t27640345,Medium › Worked example,50 × 2190 ÷ 1000 = 109.5 kWh/year
+t72650d88,Medium › Worked example,Difference:
+t9307cc6d,Medium › Worked example,328.5 kWh/year
+t3f6f910b,Medium › Worked example,This represents a substantial reduction in energy use and environmental impact.
+t1cb43d37,Medium › subheading,Key terms
+t22fa6af7,Medium › table r0c1,Term
+t0d4aaec0,Medium › table r0c2,Definition
+t9cd8ce64,Medium › table r1c1,Desktop Computer
+t9a9990de,Medium › table r1c2,A computer designed for use in one location
+t8864914d,Medium › table r2c1,Laptop
+t7cc07acf,Medium › table r2c2,Portable computer with rechargeable battery
+t6f567ccd,Medium › table r3c1,Power Consumption
+td88703a4,Medium › table r3c2,Amount of electricity used
+t0f420e78,Medium › table r4c1,Efficiency
+tfac8ee9a,Medium › table r4c2,Lower energy use for the same task
+tf5d24780,Medium › table r5c1,Sustainability
+t2d71b3de,Medium › table r5c2,Using resources responsibly
+t829c18b3,Medium › Task 1 › title,Power Comparison
+tbdcbb413,Medium › Task 1 › table r0c1,Device
+tcc9354d6,Medium › Task 1 › table r0c2,Power (W)
+tb0831f88,Medium › Task 1 › table r1c1,Desktop PC
+t5238c405,Medium › Task 2 › title,Daily Usage
+t34b3cbdb,Medium › Task 2,Assume 6 hours/day
+t4017a2e6,Medium › Task 2,Yearly hours:
+t385505ea,Medium › Task 2,______ × 365 = ______ hours
+t0f47418a,Medium › Task 3 › title,Energy Consumption
+tc3db7b53,Medium › Task 3,______ × ______ /1000 = ______ kWh/year
+tab2d66b9,Medium › Task 4 › title,Cost Comparison
+tc5fc655e,Medium › Task 4,Electricity price: ______ €/kWh
+tf475fedc,Medium › Task 4,Desktop cost: ______ €
+te222167a,Medium › Task 4,Laptop cost: ______ €
+t2fe2c276,Medium › Task 4,Difference: ______ €
+tbb09864f,Medium › Task 5 › title,Scenario
+tb60e6c77,Medium › Task 5,A school replaces 20 desktops with laptops.
+t022330a1,Medium › Task 5,Total savings/year = ______ €

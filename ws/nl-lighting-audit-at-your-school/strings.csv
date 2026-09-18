@@ -1,0 +1,115 @@
+key,where,en
+t3795202e,Title,Lighting audit at your school
+t11113e2c,Info › Topic › basic,Counting the lights
+t264d4c3c,Info › Topic › medium,Quantifying energy and cost
+t2dfecd9b,Info › Topic › advanced,Designing a retrofit business case
+t8114e013,Info › Learning outcomes › basic,Students will perform a simple count of lighting fixtures in a defined school area.
+tf16d6cf0,Info › Learning outcomes › basic,Students will identify the type of bulb in use.
+t8cd506e1,Info › Learning outcomes › medium,Students will conduct a lighting audit and convert observations into kWh and €.
+t9d02fcad,Info › Learning outcomes › medium,Students will identify and prioritise improvement opportunities.
+ta055647b,Info › Learning outcomes › advanced,Students will conduct a comprehensive lighting audit of a school building.
+t8e39ff04,Info › Learning outcomes › advanced,"Students will build a financial business case for a lighting retrofit, including payback period and net present value (NPV)."
+t5ac28a15,Info › Learning outcomes › advanced,"Students will evaluate non-financial criteria such as light quality, occupant well-being and embodied emissions."
+t2ee4e9dc,Info › Time needed,60 min – 105 - 150 (incl. walkaround)
+t5a999f92,Info › Resources › basic,Clipboard or notebook; pen; this worksheet; (optional) a parent or teacher to ask about bulb wattages.
+t34fb7ee5,Info › Resources › medium,Clipboard; calculator; current school electricity tariff (ask the building manager or use €0.25/kWh as a default for institutional contracts); audit table (provided in this worksheet).
+t1b58121a,Info › Resources › advanced,Calculator or spreadsheet; lux meter (optional - many smartphones have a lux app); access to school building plans (request from facility manager); current school electricity contract details.
+t65803a19,Basic › subheading,Introduction
+te3ebb94b,Basic,"A 'lighting audit' is a count of all the lights in a building, what kind they are, and how often they are on. In this worksheet you will do a small audit of one part of your school - for example one classroom, one corridor, or one toilet area."
+t9e950428,Basic › subheading,Theory
+tee84821b,Basic,"An ENERGY AUDIT is a systematic look at where energy is being used. A LIGHTING AUDIT is the same thing but only for lights. The point of an audit is not to make detailed calculations - that comes later. The point is to FIND OUT what is actually there: how many lights, what kind, when they are on."
+t91a98ebb,Basic,Doing an audit is simple but it requires you to be careful and systematic. You walk through one area with a clipboard and write down what you see. You don't just look at the lights - you also pay attention to whether the room is being used or not.
+t624b814a,Basic,"The most important question in a lighting audit is: 'Are these lights on while no-one is using the room?' That is wasted energy. Common places where this happens at school: toilets, corridors during lessons, storage rooms, sports halls between lessons, and offices outside school hours."
+t1908e453,Basic › box,Worked example
+t2a68b4e1,Basic › Worked example,*Imagine you are auditing your school library.*
+t60a58ea9,Basic › Worked example,"**Step 1:** Walk in. Look up at the ceiling. You count: 6 light fixtures, each containing 2 fluorescent tubes. So 12 bulbs in total."
+t9c7d0965,Basic › Worked example,**Step 2:** Ask the librarian (or your teacher): how many hours are the lights on? Answer: from 08:00 to 16:00 = 8 hours per school day.
+t5155176d,Basic › Worked example,"**Step 3:** Spend 5 minutes observing. You notice: the corner near the window is empty AND has the lights on, even though daylight is bright there."
+t7c88acbb,Basic › Worked example,**Step 4:** Recommendation: switch off the row of lights closest to the window when daylight is enough.
+t1cb43d37,Basic › subheading,Key terms
+t22fa6af7,Basic › table r0c1,Term
+t0d4aaec0,Basic › table r0c2,Definition
+t9d973548,Basic › table r1c1,Audit
+t3a841b0f,Basic › table r1c2,A systematic check to record what is actually there.
+t8ce048d2,Basic › table r2c1,Fixture
+ta9801527,Basic › table r2c2,The lamp installation in a wall or ceiling. One fixture can hold one or several bulbs.
+t20330135,Basic › table r3c1,Wasted lighting
+tc40e9267,Basic › table r3c2,Light that is on while nobody is using the room or while daylight is enough.
+tf8176212,Basic › Task 1 › title,Choose your area and count
+tade18af5,Basic › Task 1,"With your teacher, choose ONE area of the school. Walk through it and count the lights."
+t8c66746f,Basic › Task 1 › Q,Which area did you audit?
+tb253117f,Basic › Task 1 › Q,How many light fixtures are in this area? (A 'fixture' is one lamp - it can hold one or more bulbs.)
+t12e81c41,Basic › Task 1 › Q,How many individual bulbs in total?
+t11cd7f7e,Basic › Task 1 › Q,"What kind of bulbs are they? (LED tubes, fluorescent tubes, regular bulbs, halogen spots…)"
+t0c9c95ff,Basic › Task 2 › title,How long are the lights on?
+t3118b285,Basic › Task 2,Estimate when the lights in your area are on.
+t08465c4c,Basic › Task 2 › Q,Roughly how many hours per school day are the lights on in this area?
+t76ac9582,Basic › Task 2 › Q,"Is this area used in the evening or weekends? If yes, how long?"
+t0c4cd9f3,Basic › Task 2 › Q,"Are there ANY lights in this area that you noticed are on when nobody is using the room? If yes, how many?"
+t5360fb03,Basic › Task 2 › Q,"In one or two sentences, write one suggestion to reduce 'wasted' lighting in this area."
+t8c16c0bf,Medium,"After this worksheet, you will be able to give your school three concrete recommendations to reduce lighting energy. You will use measurements and calculations - not opinions - to support those recommendations."
+t765ba86a,Medium › box,What you should already know
+t7c1ecbfc,Medium › What you should already…,"*You should already understand how to perform a basic walk-through audit (see Worksheet 3A), and be confident with energy calculations Energy = Power × time and Cost = Energy × tariff.*"
+tb506e4d4,Medium,"At this level the audit becomes QUANTITATIVE. You don't just observe - you measure and calculate. The output of your audit is a table of numbers: kWh per area, € per area, and (most importantly) the ESTIMATED WASTED hours per area."
+t657d2004,Medium,WASTED HOURS = total 'lights on' hours minus actual 'occupied' hours. This is your improvement potential. A toilet that is lit for 10 hours per school day but only occupied for 2 hours per day has 8 wasted hours - 80% of its lighting energy is wasted.
+t5f944578,Medium,"RECOMMENDATIONS should be SPECIFIC, MEASURABLE and FINANCIALLY JUSTIFIED. 'Use less light' is not a recommendation. 'Install a motion sensor in toilet block A, saving an estimated 320 kWh and €80 per year' is a recommendation. The facility manager can decide on the basis of that number whether the investment is worth it."
+t4f64009d,Medium,"PRIORITISATION: when you have several recommendations, rank them by annual €-saving, not by how easy they are. Easy fixes are nice but they are usually small. The big wins are often spaces with long 'lights on' but short 'occupied' hours."
+t1925bbf4,Medium › Worked example,*Audit of a school corridor.*
+t0aa224b2,Medium › Worked example,**Step 1:** Observe: 8 LED tubes of 24 W each = 192 W total. Lights on 10 hours per school day. School year ≈ 190 days.
+t3f740906,Medium › Worked example,**Step 2:** Annual energy: (192/1000) × 10 × 190 = 364.8 kWh
+te1f5d0c7,Medium › Worked example,**Step 3:** Annual cost at €0.25/kWh: €91.20
+t8826a4a5,Medium › Worked example,"**Step 4:** Estimate occupied time: corridor is busy for ~10 minutes between lessons, ~6 times per day = ~1 hour real use"
+t7e08724b,Medium › Worked example,**Step 5:** Wasted hours: 10 - 1 = 9 hours per day (90% of usage)
+tbe86bc1a,Medium › Worked example,**Step 6:** Recommendation: motion sensor (€60 installed). Estimated saving: 90% of 364.8 = 328 kWh = €82/year. Payback = 60 / 82 ≈ 0.7 years.
+tb7956f90,Medium › table r1c1,Wasted hours
+t257bd2d4,Medium › table r1c2,Hours that lights are on while the space is not in use.
+t94048abd,Medium › table r2c1,Improvement potential
+t2d723268,Medium › table r2c2,The maximum energy you could save (= wasted hours × wattage).
+tb9f79c53,Medium › table r3c1,Payback period
+t0977594d,Medium › table r3c2,How long it takes for the savings to pay back the investment.
+t067d2c00,Medium › Task 1 › title,Audit table - record
+td50edd17,Medium › Task 1,"Walk through three areas in your school (e.g. one classroom, one corridor, one toilet/changing room). For each area record:"
+t0f7d8cfe,Medium › Task 1 › bullet 1,Area | Number of bulbs | Wattage per bulb (W) | Hours on per school day | School days per year (~190)
+tfecd2c9f,Medium › Task 1 › Q,Calculate annual kWh per area: kWh = (bulbs × W ÷ 1000) × hours/day × days/year
+t3a3f109a,Medium › Task 1 › Q,Total kWh for all three areas?
+t35044331,Medium › Task 1 › Q,Total annual cost at €0.25/kWh?
+t83a5219a,Medium › Task 2 › title,Where is the waste?
+tee662918,Medium › Task 2,Look back at your three areas with a critical eye.
+t51682281,Medium › Task 2 › Q,Which area uses the most energy per day? Was that what you expected before doing the audit?
+t6bb12b18,Medium › Task 2 › Q,"Estimate, for each area, how many of the daily 'on hours' the room was actually OCCUPIED by people. The difference is wasted lighting."
+t0e16fc7a,Medium › Task 2 › Q,"If the school could eliminate just half of the wasted hours, what would the annual saving in € be?"
+t06755cf3,Medium › Task 3 › title,Three recommendations
+tb5cae21d,Medium › Task 3,"Based on your audit, write three short recommendations to the school's facility manager. Each recommendation should: (1) name the area, (2) describe the change, (3) estimate the annual saving."
+t28725661,Medium › Task 3 › Q,Recommendation 1:
+ta66acdf6,Medium › Task 3 › Q,Recommendation 2:
+ta86d0fb3,Medium › Task 3 › Q,Recommendation 3:
+t4fa60c6f,Advanced,"Schools across Europe are replacing fluorescent and halogen lighting with LED systems. The investment is real (often €30-€80 per fixture for a full LED replacement), and the savings depend strongly on usage. In this worksheet you will design a retrofit business case for your school, using the same tools that an energy consultant would use."
+t6e0bd275,Advanced › What you should already…,*This worksheet assumes you have completed Worksheet 3B (or are confident with quantitative auditing and basic payback calculations).*
+te5c27968,Advanced,"A BUSINESS CASE is a formal document that argues why an investment should (or should not) be made. It includes: (1) the current situation, (2) the proposed change, (3) the financial analysis, (4) the non-financial considerations, (5) a recommendation."
+t9f245155,Advanced,"SIMPLE PAYBACK is investment ÷ annual saving. It is intuitive but it ignores the time value of money - €100 saved in 10 years is worth less than €100 saved next year, because money in the future could otherwise have been invested."
+tefa4cbd9,Advanced,"NET PRESENT VALUE (NPV) corrects for this. With a discount rate r and annual saving S over n years, the NPV is:"
+t77a231f2,Advanced,NPV = Σ_{t=1..n} S/(1+r)^t − Investment
+t7a1b172c,Advanced,If NPV > 0 the project creates value. A typical school discount rate in the EU is 3-5%.
+tf4c420a0,Advanced,"EMBODIED CARBON: every new product carries a carbon debt from its manufacturing. For an LED fixture, this is roughly 20 kg CO₂-equivalent. Replacing a still-working fluorescent fixture means you 'pay' that embodied carbon up front, and only break even on lifecycle emissions after several years of operational savings."
+t43d735e3,Advanced,"LIGHT QUALITY: lighting is not only about kWh. The EN 12464-1 standard recommends minimum lux levels for different spaces (300 lux for classrooms, 500 lux for sports halls). Under-lit spaces affect concentration and safety. Over-lit spaces waste energy AND can cause discomfort. A good retrofit improves both efficiency and quality."
+te6ce5eb5,Advanced › Worked example,"*Calculate the 10-year NPV of a €5,000 LED retrofit that saves €1,000 per year, with discount rate r=4%.*"
+tcca07f85,Advanced › Worked example,**Step 1:** NPV = Σ_{t=1..10} 1000/(1.04)^t − 5000
+t789f37b2,Advanced › Worked example,**Step 2:** Calculate each term: t=1: 961.5; t=2: 924.6; t=3: 889.0; ...; t=10: 675.6
+t15cde13a,Advanced › Worked example,"**Step 3:** Sum of discounted savings ≈ €8,111"
+t5226c539,Advanced › Worked example,"**Step 4:** NPV = 8,111 − 5,000 = €3,111. Project is financially attractive."
+t75222692,Advanced › Worked example,"**Step 5:** Compare to simple payback: 5000/1000 = 5 years. NPV gives more nuance: even after 10 years the discounted savings are €3,111 above investment."
+tbbb4e8e8,Advanced › Task 1 › title,Comprehensive audit
+t5483ba30,Advanced › Task 1,"Audit at least five categories of spaces: classrooms, corridors, toilets, gym/sports hall, offices. Use the audit table below."
+t892a0e38,Advanced › Task 1 › Q,Build a table with: Space type | # fixtures | bulbs per fixture | W per bulb | total W per space | average occupied hours/day | average 'lights on' hours/day | days/year. Compute annual kWh per space type.
+tbf40fcac,Advanced › Task 1 › Q,Compute total annual kWh and annual € cost (use the school's actual tariff if available; otherwise €0.25/kWh).
+t30ebf0cf,Advanced › Task 1 › Q,Compute the gap between 'lights on' hours and 'occupied' hours. This is your maximum behavioural saving.
+t65670857,Advanced › Task 2 › title,LED retrofit business case
+t2acfda60,Advanced › Task 2,"Assume an LED retrofit costs €50 per fixture (labour included). LED fixtures use about 40% of the wattage of equivalent fluorescent fixtures, and last 50,000 hours."
+t4db9d049,Advanced › Task 2 › Q,Compute the new annual kWh after retrofit (assume same 'lights on' hours).
+tb6c127f0,Advanced › Task 2 › Q,Compute the annual € saving and the simple payback period (investment ÷ annual saving).
+taeacaf27,Advanced › Task 2 › Q,Compute the 10-year NPV using a discount rate of 4% per year. NPV = Σ (saving_year_t / (1+r)^t) − investment. Is the project financially attractive?
+tdd2a64ca,Advanced › Task 3 › title,Beyond money
+t8ceecfcc,Advanced › Task 3,Financial savings are not the only consideration in a retrofit decision.
+te92a6c73,Advanced › Task 3 › Q,"Use a lux meter (or smartphone app) to measure light levels in 3 different spaces. Compare to the EN 12464-1 recommended values: classrooms 300 lux, corridors 100 lux, sports halls 300-500 lux. Are any spaces under- or over-lit?"
+te4a446bb,Advanced › Task 3 › Q,"Embodied carbon: each new LED fixture has ~20 kg CO₂-equivalent of manufacturing emissions. If you retrofit 200 fixtures, that is 4,000 kg CO₂. How many years of operational savings (vs. fluorescent) does it take to 'pay back' that embodied carbon? Use 0.27 kg CO₂/kWh."
+t3996db1b,Advanced › Task 3 › Q,"Write a one-paragraph executive summary recommending whether or not your school should retrofit, integrating financial AND non-financial arguments."

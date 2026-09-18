@@ -1,0 +1,120 @@
+key,where,en
+t86b096a6,Title,Smart lighting
+t587eb6f9,Subtitle,"Sensors, dimming and building automation"
+t74ae2ebd,Info › Topic,💡 Lighting
+ta378cf78,Info › Learning outcomes › basic,Students can explain what a motion sensor and a daylight sensor do and recognise where each type is useful.
+t8c209443,Info › Learning outcomes › medium,Students can calculate the energy savings and the payback period of motion sensors and daylight dimming.
+td2eda347,Info › Learning outcomes › advanced,Students can design a multi-zone smart lighting strategy and critically evaluate its data and privacy implications.
+t5431687b,Info › Time needed › basic,60 min
+t98b9f7b8,Info › Time needed › medium,90 min
+t57fa25a5,Info › Time needed › advanced,150 min
+te8ca149e,Info › Resources needed,Calculator or spreadsheet. For the Advanced level: a floor plan of one floor of your school (ask the facility manager).
+t65803a19,Introduction › heading,Introduction
+tc33d00fa,Introduction,Have you ever walked into a school toilet and the lights came on by themselves? Or noticed that street lamps only switch on when it gets dark? Those are examples of **smart lighting** — lights with sensors that switch themselves on and off.
+t11d598e2,Introduction,"Smart lighting can save a lot of energy in some rooms and almost nothing in others. The key is to match the technology to how the room is actually used. This worksheet has tasks at three levels — Basic, Medium and Advanced. Your teacher will tell you which level to work on."
+t9e950428,Theory › heading,Theory
+t5062fea7,Theory,"A **smart light** has a small electronic ""brain"" and at least one sensor. The brain decides when to switch the light on or off based on what the sensor measures."
+td71ac39c,Theory › bullet 1,**Motion sensor** — detects movement. The light turns on when somebody walks in and turns off again after a few minutes without movement.
+td2d14a0a,Theory › bullet 2,**Daylight sensor** — measures how bright it is. The light turns on (or brightens) when it gets dark and turns off (or dims) when there is enough daylight.
+tf45c77be,Theory,"The two sensors save energy in different ways. A motion sensor saves energy in rooms that are sometimes used and sometimes empty (toilets, corridors, storerooms). A daylight sensor saves energy in rooms with windows, where the lights are often on while the sun is shining."
+t07ad51cf,Theory,"**Occupancy ratio** is the share of ""lights on"" hours that are actually needed. A storeroom that is lit for 4 hours but used for only 0.5 hours has an occupancy ratio of 12.5 % — so up to 87.5 % of the energy could be saved. A classroom that is lit for 8 hours and used for 6 hours has a ratio of 75 % — only 25 % can be saved."
+t42eadb06,Theory,"**Time-out delay:** a motion sensor waits 3–15 minutes after the last movement before it switches off, so the light does not go out when you sit still. Rule of thumb: real ""lights on"" time ≈ 1.2 × occupied time."
+t5d237bb5,Theory,Energy use and payback are calculated like this:
+t3c1c4cbb,Theory › formula text,Payback (years)
+t8f4adeee,Theory › formula text,installation cost
+t94af71fc,Theory › formula text,annual saving
+t30f92ba5,Theory,A motion sensor costs €30–€60 installed. A daylight dimmer costs €100–€150 installed.
+t8cb4a60c,Theory › video,"How PIR motion sensors work (element14, The Learning Circuit)"
+tbfe785b2,Theory › box,Worked example — school toilet
+t7129f7ad,Theory › Worked example — school…,"A school toilet has 6 LED tubes of 18 W. The lights are on 10 h/day for 190 school days, but the toilet is only used about 2 h/day. A €40 motion sensor is installed. Electricity costs €0.25/kWh."
+tf09f5012,Theory › Worked example — school…,Step 1: Energy now: (6 × 18 W ÷ 1000) × 10 h × 190 days = 205.2 kWh/year.
+tf0f88f82,Theory › Worked example — school…,Step 2: With the sensor the lights are on ≈ 1.2 × 2 = 2.4 h/day: (6 × 18 ÷ 1000) × 2.4 × 190 = 49.2 kWh/year.
+t2b4fb56a,Theory › Worked example — school…,Step 3: Saving: 205.2 − 49.2 = 156 kWh/year × €0.25 = €39 per year.
+t2f5082ba,Theory › Worked example — school…,Step 4: Payback: €40 ÷ €39 per year ≈ 1 year. A very good investment.
+t1cb43d37,Key terms › heading,Key terms
+t22fa6af7,Key terms › table r0c1,Term
+t0d4aaec0,Key terms › table r0c2,Definition
+tc9c9b09b,Key terms › table r1c1,Sensor
+tcd541b9b,Key terms › table r1c2,"A small device that measures something (movement, light, temperature…)."
+t5c11addb,Key terms › table r2c1,Motion sensor
+tef15c807,Key terms › table r2c2,A sensor that detects whether somebody is moving nearby.
+tc0b7d4db,Key terms › table r3c1,Daylight sensor
+t0e876f54,Key terms › table r3c2,A sensor that measures how bright it is in the room.
+te78c00d6,Key terms › table r4c1,Time-out delay
+t9d624ac7,Key terms › table r4c2,The delay before a motion sensor switches the light off after the last movement (typically 3–15 min).
+t181987b1,Key terms › table r5c1,Occupancy ratio
+t419d3b40,Key terms › table r5c2,"The share of ""lights on"" hours that are actually needed."
+t3c58f25c,Key terms › table r6c1,Daylight dimming
+tce27c47b,Key terms › table r6c2,"Automatically reducing a light's power when there is enough daylight, to keep a target light level."
+t88a2345e,Key terms › table r7c1,Simple payback
+t8178000f,Key terms › table r7c2,Installation cost divided by annual saving — how many years until the investment pays for itself.
+t181a8d50,Key terms › table r8c1,Zoning
+tbf315235,Key terms › table r8c2,"Dividing a building into lighting zones — areas that switch together, based on how they are used."
+tc3f8e013,Basic › heading,Observe and recognise
+t98d1f65c,Basic › Task 1 › title,Which sensor where?
+t1e8ae4eb,Basic › Task 1,"For each place, write which sensor would be most useful: motion, daylight or both. Explain your choice in a few words."
+t9ad2489c,Basic › Task 1 › table r0c1,Place
+t50b30e1e,Basic › Task 1 › table r0c2,"Motion, daylight or both?"
+t50d99212,Basic › Task 1 › table r0c3,Why?
+tf74e9512,Basic › Task 1 › table r1c1,School toilet
+t516d8f6f,Basic › Task 1 › table r2c1,Bicycle shed at school
+t5a52f031,Basic › Task 1 › table r3c1,Classroom that is used all day
+t29dc5944,Basic › Task 1 › table r4c1,Street lamp
+td5c570dc,Basic › Task 1 › table r5c1,School corridor (used between lessons)
+t0fa85033,Basic › Task 1 › table r6c1,Garden path at home
+t539675e9,Basic › Task 2 › title,Why sensors save energy
+te7fd6f76,Basic › Task 2,"A school toilet has its lights on for 10 hours every school day, but it is only used for 2 hours in total per day."
+t346d9f81,Basic › Task 2 › Q1,How many hours per day are the lights on but not needed?
+t2529457d,Basic › Task 2 › Q2,With a motion sensor the lights are only on when someone is there. Roughly how many hours per day will the lights be on now?
+tbb60f7e1,Basic › Task 2 › Q3,By roughly what percentage does the energy use of the toilet lighting go down?
+tac194bc1,Medium › heading,Calculate and compare
+td92d6e6e,Medium › Task 1 › title,Motion sensors in three spaces
+t32382521,Medium › Task 1,Use 190 school days per year and €0.25/kWh. With a motion sensor the lights are on about 1.2 × the occupied hours.
+tc1c43225,Medium › Task 1 › table r0c1,Space
+t66125573,Medium › Task 1 › table r0c2,Fixtures
+tf16cdbb1,Medium › Task 1 › table r0c3,Lights on (h/day)
+tfe19df15,Medium › Task 1 › table r0c4,Occupied (h/day)
+t16cad1cb,Medium › Task 1 › table r1c2,12 LED tubes × 18 W
+tf40d8d81,Medium › Task 1 › table r2c1,Storage room
+tf6057cf1,Medium › Task 1 › table r2c2,4 LED bulbs × 10 W
+t24705540,Medium › Task 1 › table r3c1,Active classroom
+t556fd961,Medium › Task 1 › table r3c2,8 LED panels × 35 W
+t49a5946a,Medium › Task 1 › Q1,Calculate the current annual energy use (kWh) for each space.
+tf772c3da,Medium › Task 1 › Q2,Calculate the annual energy use (kWh) for each space after a motion sensor is installed.
+tfe56c9cb,Medium › Task 1 › Q3,"What is the annual saving, in kWh and in €, for each space?"
+tb9f79c53,Medium › Task 2 › title,Payback period
+t6ea6aab2,Medium › Task 2,A motion sensor costs €40 installed.
+t000d75dd,Medium › Task 2 › Q1,Calculate the simple payback period (in years) for each of the three spaces.
+tca5678d9,Medium › Task 2 › Q2,In which space is the investment most attractive? In which space is it questionable? Explain.
+t52ebccde,Medium › Task 3,A classroom has a row of LED panels near the windows that are often too bright on sunny days. A daylight dimmer can reduce their power by 30 % on average over a school year.
+tc4422c44,Medium › Task 3 › Q1,The window row uses 800 kWh/year today. How many kWh per year does the dimmer save?
+t38546eea,Medium › Task 3 › Q2,The dimmer costs €120 to install. What is the payback period at €0.25/kWh?
+t97d85108,Medium › Task 3 › Q3,Name two situations where the dimmer might NOT save anything. Think about how the room is used.
+t44ed1771,Advanced › heading,Analyse and recommend
+te1b7a840,Advanced,"Modern school buildings often use **networked** smart lighting: every light can be controlled on its own, sensors share data, and the lighting works together with ventilation (HVAC) and the school timetable. This makes bigger savings possible — but it also raises new questions about complexity, privacy and data."
+t144a79ad,Advanced › box,Worked example — zoning a classroom with windows on one side
+tb88095f5,Advanced › Worked example — zoning… › image caption,Top view of a classroom. The windows are at the bottom and the whiteboard is on the left.
+tb378bc3c,Advanced › Worked example — zoning…,"Zone 1: the row of lights nearest the windows. Sensor: daylight, with manual override. Logic: dim to keep 300 lux on the desks. On sunny days these lights may run at 20 % power; on dark winter mornings at 100 %."
+t31cddcf6,Advanced › Worked example — zoning…,"Zone 2: the row of lights furthest from the windows. Sensor: motion + timetable. Logic: on during scheduled lessons, motion-controlled outside lesson times, off otherwise."
+t5615fd48,Advanced › Worked example — zoning…,"Zone 3: the light above the whiteboard. Separate switch for the teacher. Logic: always available, never automatic."
+t935552a7,Advanced › Worked example — zoning…,"Estimated saving compared with ""everything on"": 35–45 %, depending on the weather and how the room is used."
+tf2169ea1,Advanced › Task 1 › title,Zoning the floor
+t5dec4d1d,Advanced › Task 1,Get (or sketch) a plan of one floor of your school. Divide it into lighting zones — areas that should switch together.
+t299f5905,Advanced › Task 1 › Q1,"List your zones. For each zone, describe the typical use, the sensor you recommend (motion, daylight, both or none) and the control logic (for example ""motion sensor with a 5-minute time-out"")."
+t2552f19e,Advanced › Task 1 › Q2,Estimate the annual energy use of each zone before and after your plan. Use realistic LED wattages and the real length of your school day.
+t26c4167f,Advanced › Task 2 › title,Integration with other systems
+t5555c9fe,Advanced › Task 2 › Q1,Describe one way to connect the lighting to the school **timetable**. Example: lights stay off in classrooms where no lesson is scheduled. Estimate the extra saving.
+t2dcc358a,Advanced › Task 2 › Q2,Describe one way to connect the lighting to the **ventilation (HVAC)**. Example: one presence sensor controls both the lights and the ventilation.
+t851d89bd,Advanced › Task 2 › Q3,What are the risks of connecting these systems? Example: one faulty sensor switches off both the lights and the ventilation in a full classroom.
+teb1c2d52,Advanced › Task 3 › title,"Privacy, data and ethics"
+te30cb945,Advanced › Task 3,"A networked motion sensor also produces data: it knows when each room is used and for how long. Combined with the timetable, this can become **personal data** under the GDPR."
+t9cd60ebe,Advanced › Task 3 › Q1,Name three things that motion-sensor data could reveal about students or staff if it is combined with the timetable.
+t00a33b1a,Advanced › Task 3 › Q2,Propose three concrete safeguards (technical or organisational) that limit the privacy risk but still allow energy savings.
+t65e80965,Advanced › Task 3 › Q3,"Is the energy saving worth the privacy trade-off? When is it, and when is it not?"
+tcd9818c9,Advanced › Task 4 › title,Extension (optional) — build it with a microcontroller
+t2d0e2147,Advanced › Task 4,"The GREEN vertical garden (Work Package 3) uses microcontrollers such as Arduino or ESP32. The same ideas work for lighting. If you have a microcontroller, a PIR motion sensor, an LDR light sensor and an LED with a relay or PWM control:"
+t272b27af,Advanced › Task 4 › Q1,Draw a block diagram of the system. Which inputs and outputs do you need?
+t3507855e,Advanced › Task 4 › Q2,Write pseudocode for the logic: the light is OFF unless motion is detected AND the room is darker than a threshold.
+t02668379,Advanced › Task 4 › Q3,"Which extra sensors (CO₂, temperature, humidity…) would turn this into a ""smart classroom""?"
+t971574c4,Reflection › heading,Reflection
+t5b16631a,Reflection › Q1,Which room in your school would you equip with smart lighting first? Use what you learned at your level to explain your choice.

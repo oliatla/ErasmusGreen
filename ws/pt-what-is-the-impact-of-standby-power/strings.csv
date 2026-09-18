@@ -1,0 +1,66 @@
+key,where,en
+t14d3a753,Title,What is the impact of standby power consumption?
+tda792d5e,Info › Topic,Standby vs. OFF – Hidden Energy Consumption
+t2271cb37,Info › Learning outcomes,Identify standby (“vampire”) energy consumption
+ta0562440,Info › Learning outcomes,Compare power usage in different device states
+t9376ee40,Info › Learning outcomes,Calculate annual energy waste
+t403231e3,Info › Time needed,45 – 60 min
+t5429deaf,Info › Resources,TV / console / monitor specifications (or internet)
+t57219b6d,Info › Resources,Calculator
+tfcd94bbe,Info › Resources,Power meter (optional)
+t65803a19,Basic › subheading,Introduction
+tee49af97,Basic,"Many entertainment devices such as televisions, game consoles, speakers and streaming boxes continue to use electricity even when they appear to be switched off. This hidden electricity consumption is called standby power or vampire energy. Although the amount of energy used by one device is small, millions of devices operating in standby mode every day result in a significant waste of energy and unnecessary greenhouse gas emissions."
+t3d894789,Basic,Understanding standby consumption helps us become more responsible energy users and supports environmental sustainability.
+t9e950428,Basic › subheading,Theory
+tf13fffa9,Basic,"Electronic devices often remain partially active when switched off. They may continue to power clocks, remote-control receivers, internet connections or software updates."
+t985bc83f,Basic,"Standby power usually ranges from less than 1 watt to several watts depending on the device. While this seems insignificant, a device consuming only 2 watts continuously throughout the year uses:"
+t0e13c885,Basic,2 W × 24 h × 365 days ÷ 1000 = 17.5 kWh/year
+tcfa15c5d,Basic,"When several devices in a home consume standby power, the total annual energy use can become substantial."
+t660246c9,Basic,Reducing standby consumption is one of the easiest ways to save electricity without affecting comfort or entertainment.
+t1908e453,Basic › box,Worked example
+t3dbe53e2,Basic › Worked example,*A television consumes 3 W in standby mode.*
+tcececfb5,Basic › Worked example,*Annual energy consumption:*
+t97db76ad,Basic › Worked example,*3 × 20 × 365 ÷ 1000 = 21.9 kWh/year*
+t9694f74c,Basic › Worked example,*If electricity costs €0.20/kWh:*
+t2635bd68,Basic › Worked example,*21.9 × 0.20 = €4.38/year*
+t55dfb3df,Basic › Worked example,"*Although the cost seems small, ten similar devices could waste over €40 each year.*"
+t1cb43d37,Basic › subheading,Key terms
+t22fa6af7,Basic › table r0c1,Term
+t0d4aaec0,Basic › table r0c2,Definition
+tdef6de4b,Basic › table r1c1,Standby Power
+tfb28bbc3,Basic › table r1c2,Electricity consumed when a device is not actively being used
+tc2e0ecc3,Basic › table r2c1,Vampire Energy
+t7744f298,Basic › table r2c2,Another name for standby power
+t216ae37d,Basic › table r3c1,Watt (W)
+td05b3128,Basic › table r3c2,Unit used to measure electrical power
+t18ed160c,Basic › table r4c1,Kilowatt-hour (kWh)
+tad12321c,Basic › table r4c2,Unit used to measure energy consumption
+t35408136,Basic › table r5c1,Energy Efficiency
+t21b1a0ca,Basic › table r5c2,Using less energy to achieve the same result
+tf3db1b3a,Basic › Task 1 › title,Identify Devices
+t06d4c814,Basic › Task 1,"Specify the brand, model, and power consumption of the devices you have at home:"
+tbdcbb413,Basic › Task 1 › table r0c1,Device
+t6d1c7e96,Basic › Task 1 › table r0c2,Brand
+t8285e8fa,Basic › Task 1 › table r0c3,Model
+t2af5720f,Basic › Task 1 › table r1c1,TV
+t5edb76ca,Basic › Task 1 › table r2c1,Console
+te60c8ab9,Basic › Task 1 › table r3c1,Monitor
+tc75e1e27,Basic › Task 1 › table r4c1,Other:______
+t829c18b3,Basic › Task 2 › title,Power Comparison
+t6dbd41c6,Basic › Task 2,Fill in the table:
+tbe816fcc,Basic › Task 2 › table r0c2,ON (W)
+t9bcdbb4e,Basic › Task 2 › table r0c3,Standby (W)
+tdd82a664,Basic › Task 2 › table r0c4,OFF/Unplugged (W)
+t9aa32760,Basic › Task 3 › title,Annual Consumption Calculation
+tdf316da7,Basic › Task 3,Assume standby = 20 hours/day
+tb986bf85,Basic › Task 3,**Formula:**
+td4df9864,Basic › Task 3,Annual energy (kWh) = Power (W) × hours × 365 / 1000
+tb887aaa1,Basic › Task 3,Example:
+t52d6b2ac,Basic › Task 3,TV standby = ______ W
+t41d9f9f4,Basic › Task 3,Annual energy = ______ × 20 × 365 / 1000 = ______ kWh/year
+tfbb2c791,Basic › Task 4 › title,Cost Calculation
+t52967bee,Basic › Task 4,Electricity cost: ______ €/kWh
+t0b389d6a,Basic › Task 4,Annual cost = ______ × ______ = ______ €/year
+tb6c6a2de,Basic › Task 5 › title,Real-World Scenario
+tb022d65a,Basic › Task 5,Imagine a house with 10 devices in standby.
+t0c959a34,Basic › Task 5,Total annual cost = ______ €

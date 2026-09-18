@@ -1,0 +1,631 @@
+{
+  "schema": 1,
+  "id": "tr-dishwashers-energy-and-water-efficiency",
+  "source": {
+    "type": "docx",
+    "file": "New Worksheets septemeber 2026/Tyrkland/Kitchen_Appliance_Worksheet_4_Dishwashers.docx",
+    "modified": "2026-09-17T11:55:37.000Z",
+    "readAt": "2026-09-18T23:06:24.212Z"
+  },
+  "country": "tr",
+  "code": "4",
+  "title": "t1fad402b",
+  "subtitle": null,
+  "levels": [
+    "basic",
+    "medium",
+    "advanced"
+  ],
+  "meta": {
+    "topic": [
+      {
+        "level": "basic",
+        "text": "t1c1fd4cb"
+      },
+      {
+        "level": "medium",
+        "text": "tfff772cf"
+      },
+      {
+        "level": "advanced",
+        "text": "t65c50ac7"
+      }
+    ],
+    "outcomes": [
+      {
+        "level": "basic",
+        "text": "t98ae82a4"
+      },
+      {
+        "level": "medium",
+        "text": "t2ce67207"
+      },
+      {
+        "level": "advanced",
+        "text": "tbe22484a"
+      }
+    ],
+    "time": [
+      {
+        "level": "basic",
+        "text": "t5431687b"
+      },
+      {
+        "level": "medium",
+        "text": "t98b9f7b8"
+      },
+      {
+        "level": "advanced",
+        "text": "tfa15a37e"
+      }
+    ],
+    "resources": [
+      {
+        "level": "basic",
+        "text": "t8c9de4f5"
+      },
+      {
+        "level": "medium",
+        "text": "t72d86a8c"
+      },
+      {
+        "level": "advanced",
+        "text": "ted116165"
+      }
+    ],
+    "extra": []
+  },
+  "sections": [
+    {
+      "kind": "level",
+      "level": "basic",
+      "title": "t1c1fd4cb",
+      "blocks": [
+        {
+          "t": "h",
+          "text": "t65803a19"
+        },
+        {
+          "t": "p",
+          "text": "t29bd4fcc"
+        },
+        {
+          "t": "h",
+          "text": "t9e950428"
+        },
+        {
+          "t": "p",
+          "text": "t3f492fc1"
+        },
+        {
+          "t": "p",
+          "text": "ta3e8bbc5"
+        },
+        {
+          "t": "ul",
+          "items": [
+            "t7810d79d",
+            "ta3c53879",
+            "t246bf9b9",
+            "t54e40f10"
+          ]
+        },
+        {
+          "t": "p",
+          "text": "t08379eaa"
+        },
+        {
+          "t": "box",
+          "title": "t1908e453",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t771672a9"
+            },
+            {
+              "t": "p",
+              "text": "t0ef125dd"
+            },
+            {
+              "t": "p",
+              "text": "t6199c8b2"
+            },
+            {
+              "t": "p",
+              "text": "t1821aaf3"
+            },
+            {
+              "t": "p",
+              "text": "t97b8f411"
+            }
+          ]
+        },
+        {
+          "t": "h",
+          "text": "t1cb43d37"
+        },
+        {
+          "t": "table",
+          "head": [
+            "t22fa6af7",
+            "t0d4aaec0"
+          ],
+          "rows": [
+            [
+              "tea1c9f6c",
+              "tc189a40d"
+            ],
+            [
+              "t087b004a",
+              "t12e55c15"
+            ],
+            [
+              "t79d1d1a7",
+              "t3312c5a6"
+            ],
+            [
+              "t4a6b0717",
+              "t6a6f310f"
+            ],
+            [
+              "tad0680c4",
+              "t7e08be3e"
+            ]
+          ]
+        },
+        {
+          "t": "task",
+          "title": "td1138a56",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t01c70662"
+            },
+            {
+              "t": "table",
+              "head": [
+                "t30718235",
+                "tefd604d5",
+                "td4c7492d",
+                "tf0185069",
+                "t073cddbf"
+              ],
+              "rows": [
+                [
+                  "te677c402",
+                  "t78518e29",
+                  "t616b8439",
+                  {
+                    "n": "0.85"
+                  },
+                  {
+                    "n": "11"
+                  }
+                ],
+                [
+                  "t58de2772",
+                  "t4bcf3e20",
+                  "t91ca2047",
+                  {
+                    "n": "1.20"
+                  },
+                  {
+                    "n": "14"
+                  }
+                ],
+                [
+                  "t63b99008",
+                  "t36410603",
+                  "t747b6fe8",
+                  {
+                    "n": "1.80"
+                  },
+                  {
+                    "n": "20"
+                  }
+                ],
+                [
+                  "t9cf5355c",
+                  "t032ec00c",
+                  "t746e811a",
+                  {
+                    "n": "0.90"
+                  },
+                  {
+                    "n": "15"
+                  }
+                ]
+              ]
+            },
+            {
+              "t": "q",
+              "text": "t4bd269e6",
+              "lines": 2
+            },
+            {
+              "t": "q",
+              "text": "t9dae1487",
+              "lines": 2
+            },
+            {
+              "t": "q",
+              "text": "t288f14be",
+              "lines": 2
+            },
+            {
+              "t": "q",
+              "text": "t59f9d765",
+              "lines": 2
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "tb0f7abcb",
+          "blocks": [
+            {
+              "t": "q",
+              "text": "tb8743dce",
+              "lines": 2
+            },
+            {
+              "t": "q",
+              "text": "t58d90523",
+              "lines": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "level",
+      "level": "medium",
+      "title": "tc8d30ad8",
+      "blocks": [
+        {
+          "t": "h",
+          "text": "t65803a19"
+        },
+        {
+          "t": "p",
+          "text": "t3cdbafcf"
+        },
+        {
+          "t": "box",
+          "title": null,
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t90ac9346"
+            }
+          ]
+        },
+        {
+          "t": "h",
+          "text": "t9e950428"
+        },
+        {
+          "t": "p",
+          "text": "tf11037b2"
+        },
+        {
+          "t": "p",
+          "text": "tc0f77a90"
+        },
+        {
+          "t": "p",
+          "text": "t5b806e7b"
+        },
+        {
+          "t": "p",
+          "text": "te0d12f98"
+        },
+        {
+          "t": "box",
+          "title": "t1908e453",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "tf896a00f"
+            },
+            {
+              "t": "p",
+              "text": "t2eb21ce5"
+            },
+            {
+              "t": "p",
+              "text": "t9d628bdd"
+            },
+            {
+              "t": "p",
+              "text": "t379ab5bc"
+            },
+            {
+              "t": "p",
+              "text": "tea49aeb9"
+            }
+          ]
+        },
+        {
+          "t": "h",
+          "text": "t1cb43d37"
+        },
+        {
+          "t": "table",
+          "head": [
+            "t22fa6af7",
+            "t0d4aaec0"
+          ],
+          "rows": [
+            [
+              "t9debc37f",
+              "te27a2f00"
+            ],
+            [
+              "tb681b2de",
+              "t201b0d5e"
+            ],
+            [
+              "t5b622cbf",
+              "t37efb599"
+            ],
+            [
+              "t1f90b4fb",
+              "t08bd9492"
+            ]
+          ]
+        },
+        {
+          "t": "task",
+          "title": "teb5f0659",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t56c13808"
+            },
+            {
+              "t": "table",
+              "head": [
+                "t30718235",
+                "t2923f5dc",
+                "t554f03ff",
+                "t913983d4",
+                "t55b3de56",
+                "t62aaad65",
+                "te0f7f98b"
+              ],
+              "rows": [
+                [
+                  "te677c402",
+                  {
+                    "n": "0.85"
+                  },
+                  {
+                    "n": "11"
+                  },
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "t58de2772",
+                  {
+                    "n": "1.20"
+                  },
+                  {
+                    "n": "14"
+                  },
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "t63b99008",
+                  {
+                    "n": "1.80"
+                  },
+                  {
+                    "n": "20"
+                  },
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "t9cf5355c",
+                  {
+                    "n": "0.90"
+                  },
+                  {
+                    "n": "15"
+                  },
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ]
+            },
+            {
+              "t": "q",
+              "text": "tdc28700b",
+              "lines": 2
+            },
+            {
+              "t": "q",
+              "text": "t82174788",
+              "lines": 2
+            },
+            {
+              "t": "q",
+              "text": "tef907642",
+              "lines": 2
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "t95437a96",
+          "blocks": [
+            {
+              "t": "q",
+              "text": "te0affa9d",
+              "lines": 2
+            },
+            {
+              "t": "q",
+              "text": "t9363fa07",
+              "lines": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "level",
+      "level": "advanced",
+      "title": "t65c50ac7",
+      "blocks": [
+        {
+          "t": "h",
+          "text": "t65803a19"
+        },
+        {
+          "t": "p",
+          "text": "tc51b2d1a"
+        },
+        {
+          "t": "box",
+          "title": null,
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t3385bcad"
+            }
+          ]
+        },
+        {
+          "t": "h",
+          "text": "t9e950428"
+        },
+        {
+          "t": "p",
+          "text": "t99966da2"
+        },
+        {
+          "t": "p",
+          "text": "t0d0f0e0c"
+        },
+        {
+          "t": "box",
+          "title": "t1908e453",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t2b69f0d2"
+            },
+            {
+              "t": "p",
+              "text": "tc1f3f736"
+            },
+            {
+              "t": "p",
+              "text": "t8e87928d"
+            },
+            {
+              "t": "p",
+              "text": "t9c425bed"
+            },
+            {
+              "t": "p",
+              "text": "tb712df43"
+            },
+            {
+              "t": "p",
+              "text": "tc7c11b66"
+            },
+            {
+              "t": "p",
+              "text": "tb0745403"
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "t9bb44fdd",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t7ab95b09"
+            },
+            {
+              "t": "table",
+              "head": [
+                "tbb09864f",
+                "ta29ceccb",
+                "t645001b2",
+                "tb9117880",
+                "t367e673c"
+              ],
+              "rows": [
+                [
+                  "tafc3a0b5",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "tc6f1f70f",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "tc9e99a69",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "tc4a44def",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              ]
+            },
+            {
+              "t": "q",
+              "text": "td0478655",
+              "lines": 2
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "t897a6d75",
+          "blocks": [
+            {
+              "t": "q",
+              "text": "td14f89d4",
+              "lines": 2
+            },
+            {
+              "t": "q",
+              "text": "t26e940a1",
+              "lines": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "_warnings": []
+}

@@ -1,0 +1,506 @@
+{
+  "schema": 1,
+  "id": "is-renewable-energy-solar-potential-of-our",
+  "source": {
+    "type": "docx",
+    "file": "New Worksheets septemeber 2026/Ísland/Solar_Potential_Audit_Worksheet BASIC_MEDIUM_ADVANCED.docx",
+    "modified": "2026-09-07T19:29:43.000Z",
+    "readAt": "2026-09-18T23:06:24.669Z"
+  },
+  "country": "is",
+  "code": null,
+  "title": "t9873afdd",
+  "subtitle": "tfa646bd7",
+  "levels": [
+    "basic",
+    "medium",
+    "advanced"
+  ],
+  "meta": {
+    "topic": "ta86ea83d",
+    "outcomes": [
+      {
+        "level": null,
+        "text": "tfbbcb4e0"
+      },
+      {
+        "level": null,
+        "text": "t5ead10fb"
+      },
+      {
+        "level": null,
+        "text": "t05b46774"
+      },
+      {
+        "level": null,
+        "text": "t6a642a18"
+      }
+    ],
+    "time": [
+      {
+        "level": null,
+        "text": "tac45e1cc"
+      }
+    ],
+    "resources": "t5385859e",
+    "extra": []
+  },
+  "sections": [
+    {
+      "kind": "common",
+      "title": "t991d74eb",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "tb287fd0e"
+        },
+        {
+          "t": "p",
+          "text": "t17ee0a78"
+        }
+      ]
+    },
+    {
+      "kind": "common",
+      "title": "t137db20f",
+      "blocks": [
+        {
+          "t": "ul",
+          "items": [
+            "t5f21a8f9",
+            "t9819bd2f",
+            "t315f3415",
+            "t058c3546"
+          ]
+        },
+        {
+          "t": "p",
+          "text": "tccfa2dd3"
+        },
+        {
+          "t": "ul",
+          "items": [
+            "t66d25c79",
+            "t334d8e3f"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "common",
+      "title": "t83dafe8d",
+      "blocks": [
+        {
+          "t": "p",
+          "text": "td866da97"
+        },
+        {
+          "t": "table",
+          "head": [
+            "t0d1216d1",
+            "tbe03c311",
+            "tc23719b3",
+            "t494e90c0"
+          ],
+          "rows": [
+            [
+              "t89956fc3",
+              "t79543faa",
+              "tce981bcf",
+              "t2954eb71"
+            ],
+            [
+              "t99e9e5f8",
+              "ta69e8bff",
+              "tae0796d2",
+              "ta7e339b8"
+            ],
+            [
+              "t877a12d2",
+              "tcc63d75b",
+              "t26a5ce16",
+              "t06757f7c"
+            ],
+            [
+              "tf38be120",
+              "t287c71c6",
+              "t268827b9",
+              "tf7bb20b3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "level",
+      "level": "basic",
+      "title": null,
+      "blocks": [
+        {
+          "t": "box",
+          "title": "t2bfd0783",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t02e6f566"
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "t3b551439",
+          "blocks": [
+            {
+              "t": "q",
+              "text": "tcedfc79d",
+              "lines": 1
+            },
+            {
+              "t": "q",
+              "text": "td32703b3",
+              "lines": 1
+            },
+            {
+              "t": "q",
+              "text": "t46e6fb58",
+              "lines": 1
+            },
+            {
+              "t": "q",
+              "text": "t5b281aa8",
+              "lines": 1
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "tcbb63c0e",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "te6435b1d"
+            },
+            {
+              "t": "q",
+              "text": "t50317a56",
+              "lines": 0,
+              "options": [
+                "t290a76f9"
+              ]
+            },
+            {
+              "t": "q",
+              "text": "tb75c76b6",
+              "lines": 0,
+              "options": [
+                "t157447ea"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "level",
+      "level": "medium",
+      "title": "tc1c2fa8c",
+      "blocks": [
+        {
+          "t": "box",
+          "title": "t2bfd0783",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t0d4c0878"
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "t187cf962",
+          "blocks": [
+            {
+              "t": "q",
+              "text": "t2d5540e4",
+              "lines": 2
+            },
+            {
+              "t": "q",
+              "text": "tad0c3984",
+              "lines": 0,
+              "items": [
+                "t5a32d027"
+              ]
+            },
+            {
+              "t": "q",
+              "text": "t3f6d86ed",
+              "lines": 2
+            },
+            {
+              "t": "q",
+              "text": "t76edcccd",
+              "lines": 2
+            },
+            {
+              "t": "p",
+              "text": "td77dee39"
+            },
+            {
+              "t": "p",
+              "text": "te582cf68"
+            },
+            {
+              "t": "p",
+              "text": "tbec8fa6f"
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "ta4fcd77d",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t2ada00d9"
+            },
+            {
+              "t": "p",
+              "text": "t0c5fcff4"
+            },
+            {
+              "t": "q",
+              "text": "tac22c952",
+              "lines": 0
+            },
+            {
+              "t": "q",
+              "text": "tbe13189c",
+              "lines": 0
+            },
+            {
+              "t": "q",
+              "text": "tca5562fd",
+              "lines": 0
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "t521b21b2",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t4a5d7875"
+            },
+            {
+              "t": "q",
+              "text": "t80c33b47",
+              "lines": 2
+            },
+            {
+              "t": "p",
+              "text": "tcedc12bc"
+            },
+            {
+              "t": "p",
+              "text": "t67ff4057"
+            },
+            {
+              "t": "q",
+              "text": "td16f2f54",
+              "lines": 2
+            },
+            {
+              "t": "p",
+              "text": "t56120a38"
+            },
+            {
+              "t": "p",
+              "text": "ta82472a9"
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "tfb2a7903",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t07ebdcad"
+            },
+            {
+              "t": "p",
+              "text": "t63988a48"
+            },
+            {
+              "t": "lines",
+              "n": 1
+            },
+            {
+              "t": "p",
+              "text": "t01c679d9"
+            },
+            {
+              "t": "q",
+              "text": "t5210531b",
+              "lines": 0
+            },
+            {
+              "t": "q",
+              "text": "tbabe193b",
+              "lines": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "level",
+      "level": "advanced",
+      "title": "t98acb374",
+      "blocks": [
+        {
+          "t": "box",
+          "title": "t2bfd0783",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t65a4050f"
+            }
+          ]
+        },
+        {
+          "t": "h",
+          "text": "t65520b0c"
+        },
+        {
+          "t": "p",
+          "text": "t13d5564f"
+        },
+        {
+          "t": "h",
+          "text": "t60c63fa9"
+        },
+        {
+          "t": "p",
+          "text": "t1262e464"
+        },
+        {
+          "t": "task",
+          "title": "t430e8a6d",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t47e8d538"
+            },
+            {
+              "t": "ul",
+              "items": [
+                "t90311bfb",
+                "tc16199dc",
+                "t141c13e1",
+                "t19b00eef"
+              ]
+            },
+            {
+              "t": "q",
+              "text": "t17d5f8c1",
+              "lines": 2
+            },
+            {
+              "t": "p",
+              "text": "t77509166"
+            },
+            {
+              "t": "p",
+              "text": "t16ef06e0"
+            },
+            {
+              "t": "q",
+              "text": "t83dc3b73",
+              "lines": 2
+            },
+            {
+              "t": "p",
+              "text": "tffc58a54"
+            },
+            {
+              "t": "p",
+              "text": "t36dcc364"
+            },
+            {
+              "t": "p",
+              "text": "t350db72f"
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "tef68dd73",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "tc44e3913"
+            },
+            {
+              "t": "q",
+              "text": "t2cbe50ee",
+              "lines": 2
+            },
+            {
+              "t": "p",
+              "text": "t67ff4057"
+            },
+            {
+              "t": "q",
+              "text": "t0d5712d7",
+              "lines": 2
+            },
+            {
+              "t": "p",
+              "text": "te9a736f9"
+            },
+            {
+              "t": "q",
+              "text": "t7a7764d7",
+              "lines": 2
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "t96044d79",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "ta7edb46e"
+            },
+            {
+              "t": "ul",
+              "items": [
+                "t9de2644c",
+                "tda75a9f4"
+              ]
+            },
+            {
+              "t": "q",
+              "text": "t5376f824",
+              "lines": 0,
+              "items": [
+                "t29a23770",
+                "tf3e1972f"
+              ]
+            },
+            {
+              "t": "q",
+              "text": "te2323227",
+              "lines": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "_warnings": []
+}

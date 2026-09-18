@@ -1,0 +1,11 @@
+# Google Drive for desktop puts links to Google Docs/Sheets/Slides in the
+# synced folders. They are not real files: git cannot read them
+# ("read error while indexing"). The documents themselves live in Drive.
+*.gdoc
+*.gsheet
+*.gslides
+*.gform
+*.gdraw
+*.gsite
+*.gmap
+*.gjam

@@ -1,0 +1,71 @@
+key,where,en
+tf7ace628,Title,I understand the energy classes?
+tcc8d8de8,Info › Topic,Energy Ratings – Understanding Energy Classes
+t99f91207,Info › Learning outcomes,Interpret EU energy labels (A–G)
+te8c043e7,Info › Learning outcomes,Compare device efficiency
+t6ee82d80,Info › Learning outcomes,Calculate energy consumption and cost
+t403231e3,Info › Time needed,45 – 60 min
+td6ddd281,Info › Resources,Device energy label (monitor/TV)
+t57219b6d,Info › Resources,Calculator
+t65803a19,Medium › subheading,Introduction
+t5ca37a4c,Medium,"When buying a television, monitor or other electronic device, consumers often focus on price and features. However, energy efficiency is equally important. Energy labels help consumers compare products and choose devices that use less electricity while providing the same service."
+t85dc2e89,Medium,Choosing efficient products reduces electricity bills and contributes to protecting the environment.
+t9e950428,Medium › subheading,Theory
+t814c5558,Medium,The European Union uses a standard energy label system ranging from Class A (most efficient) to Class G (least efficient).
+tce57d712,Medium,"The label also provides information about annual energy consumption. Efficient devices require less electricity to perform the same task, reducing both operating costs and carbon emissions."
+t2e35ace8,Medium,"A more efficient television may cost slightly more when purchased, but it often saves money throughout its lifetime through lower electricity consumption."
+ta05c2111,Medium › box,Did you know?
+t9e11aa5d,Medium › Did you know?,Even an 'A' rated monitor can waste energy if the brightness is at 100% all the time. Lowering brightness to a comfortable 60% can **reduce** power consumption by nearly **20%** without hurting your eyes!
+t1908e453,Medium › Did you know? › box,Worked example
+t10f11e82,Medium › Did you know? › Worked example,*Television A:*
+t01686a95,Medium › Did you know? › Worked example,*50 kWh/1000 hours*
+t1c3c52fe,Medium › Did you know? › Worked example,*Television E:*
+t713965a1,Medium › Did you know? › Worked example,*100 kWh/1000 hours*
+te3794025,Medium › Did you know? › Worked example,*If both are used 5 hours per day:*
+t75be9145,Medium › Did you know? › Worked example,*Annual hours:*
+t13aa4179,Medium › Did you know? › Worked example,*5 × 365 = 1825 hours*
+t608a0578,Medium › Did you know? › Worked example,*TV A:*
+tafa5b861,Medium › Did you know? › Worked example,*50 × 1825 ÷ 1000 = 91.25 kWh/year*
+tb516c5ac,Medium › Did you know? › Worked example,*TV E:*
+tbeb8c3e8,Medium › Did you know? › Worked example,*100 × 1825 ÷ 1000 = 182.5 kWh/year*
+t504e3905,Medium › Did you know? › Worked example,*The less efficient television uses twice as much energy.*
+t1cb43d37,Medium › subheading,Key terms
+t22fa6af7,Medium › table r0c1,Term
+t0d4aaec0,Medium › table r0c2,Definition
+tf2a0e1b7,Medium › table r1c1,Energy Label
+ta8df1819,Medium › table r1c2,EU system for comparing product efficiency
+t9cd1ab31,Medium › table r2c1,Energy Class
+t0d62a09d,Medium › table r2c2,Rating from A to G
+t0f420e78,Medium › table r3c1,Efficiency
+t2aca1e53,Medium › table r3c2,Producing the same result with less energy
+t84713ed4,Medium › table r4c1,Consumption
+ta32df8af,Medium › table r4c2,Amount of energy used
+t97046717,Medium › table r5c1,Carbon Footprint
+te162a882,Medium › table r5c2,Greenhouse gases produced by human activities
+te4d510e9,Medium › Task 1 › title,Label Analysis
+t814f9077,Medium › Task 1,Fill in:
+tbea37f7d,Medium › Task 1,Energy class: ______
+tbaf3ee54,Medium › Task 1,Energy consumption: ______ kWh/1000h
+t85df5b47,Medium › Task 1,Technology: ______
+te1c1f201,Medium › Task 2 › title,Usage Calculation
+t3a401db6,Medium › Task 2,Daily use = 5 hours
+t4017a2e6,Medium › Task 2,Yearly hours:
+t6864312d,Medium › Task 2,TYH = 5 × 365 = ______ hours
+t76157951,Medium › Task 2,Yearly energy:
+t454b03c1,Medium › Task 2,YEC = ______ /1000 × ______ = ______ kWh
+tab2d66b9,Medium › Task 3 › title,Cost Comparison
+td2c78dc5,Medium › Task 3,Electricity price (Portugal): ______ €/kWh
+t9712485f,Medium › Task 3,Annual cost:
+t6d7bb22a,Medium › Task 3,TAC = ______ × ______ = ______ €
+td31eb275,Medium › Task 4 › title,Compare Two Devices
+tbdcbb413,Medium › Task 4 › table r0c1,Device
+t50f97d9f,Medium › Task 4 › table r0c2,Class
+t75e5befb,Medium › Task 4 › table r0c3,kWh/year
+t2262cb2c,Medium › Task 4 › table r0c4,Cost/year
+t9ad84ce7,Medium › Task 4 › table r1c1,A-rated
+t009b761b,Medium › Task 4 › table r2c1,E-rated
+t4df4b17c,Medium › Task 4,Savings per year: ______ €
+t502d4fe7,Medium › Task 5 › title,Environmental Impact
+t2c7f7597,Medium › Task 5,CO₂ factor ≈ 0.4 kg/kWh
+t10a5654f,Medium › Task 5,CO₂ emissions:
+t9ac03efd,Medium › Task 5,______ × 0.4 = ______ kg CO₂/year

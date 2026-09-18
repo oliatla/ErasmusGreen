@@ -1,0 +1,148 @@
+key,where,en
+tce2599f3,Title,Energy consumption of light bulbs
+t5752538b,Info › Topic › basic,How much does a light bulb cost to use?
+t54278fb2,Info › Topic › medium,Calculating cost and CO₂ at home and at school
+tca319b6e,Info › Topic › advanced,Real-world energy modelling and dynamic tariffs
+t044f9c22,Info › Learning outcomes › basic,Students will calculate the energy used by a light bulb over a fixed period.
+t5324fc20,Info › Learning outcomes › basic,Students will convert this energy use into a cost in euros.
+t9be67060,Info › Learning outcomes › medium,Students will calculate the energy consumption and cost of different bulb types over time.
+tdec8ac85,Info › Learning outcomes › medium,Students will scale up household calculations to a school setting and account for labour costs.
+ta0d4968a,Info › Learning outcomes › medium,Students will quantify the CO₂ emissions associated with lighting energy use.
+tcd4569d7,Info › Learning outcomes › advanced,Students will model household lighting energy use with realistic usage profiles.
+t9fdd19ed,Info › Learning outcomes › advanced,Students will incorporate dynamic (hourly) electricity tariffs into cost calculations.
+td9dc9c86,Info › Learning outcomes › advanced,Students will evaluate the impact of behavioural changes versus technology changes.
+t5431687b,Info › Time needed › basic,60 min
+t98b9f7b8,Info › Time needed › medium,90 min
+tfa15a37e,Info › Time needed › advanced,120 min
+t7dd61aeb,Info › Resources › basic,"Calculator; current household electricity tariff (your teacher will give you a value, e.g. €0.30/kWh)."
+tae67b190,Info › Resources › medium,Bulb specification table (in this worksheet); calculator; current Dutch electricity tariff (use €0.30/kWh as default).
+t15bf820d,Info › Resources › advanced,"Calculator or spreadsheet software; access to a sample dynamic tariff dataset (provided by teacher or downloaded from a Dutch dynamic-tariff supplier such as ANWB Energie, Tibber, or EnergyZero); usage diary template."
+t65803a19,Basic › subheading,Introduction
+tf00725f3,Basic,"Every time you switch on a light, you use electricity. Electricity costs money. In this worksheet, you will learn how to calculate how much an electric light costs for one evening, one week, or one year."
+t9e950428,Basic › subheading,Theory
+t859aea81,Basic,"When you switch on a light bulb, electricity flows through it and the bulb does work. The amount of electricity used depends on TWO things:"
+t554727d8,Basic,"(1) how powerful the bulb is (its wattage, W)"
+t1b32e8a0,Basic,"(2) how LONG the bulb is on (in hours, h)."
+t5de6f609,Basic,The amount of energy used is calculated with the formula:
+t81a9b070,Basic,Energy (kWh) = Power (kW) × time (h)
+ta4988a62,Basic,"Notice that the formula uses kilowatts (kW), not watts (W). To convert: divide watts by 1000."
+t1822427a,Basic,Example: 60 W = 60 / 1000 = 0.060 kW
+t2d019142,Basic,"Once you know how many kWh you used, you can calculate the cost. Your electricity company charges a price PER kWh, called the tariff. In the Netherlands a typical home tariff is around €0.30 per kWh."
+t31ada136,Basic,Cost (€) = Energy (kWh) × Tariff (€/kWh)
+t1908e453,Basic › box,Worked example
+tea79d2d5,Basic › Worked example,"*How much does it cost to run a 60 W incandescent bulb for 4 hours, at €0.30/kWh?*"
+t84c6e96d,Basic › Worked example,**Step 1:** Convert wattage to kW: 60 W = 0.060 kW
+t428ec2ed,Basic › Worked example,**Step 2:** Calculate energy: 0.060 kW × 4 h = 0.24 kWh
+t8b37cd96,Basic › Worked example,**Step 3:** Calculate cost: 0.24 kWh × €0.30/kWh = €0.072
+t0719ee96,Basic › Worked example,**Step 4:** So 4 hours of running this bulb costs about 7 cents.
+t1cb43d37,Basic › subheading,Key terms
+t22fa6af7,Basic › table r0c1,Term
+t0d4aaec0,Basic › table r0c2,Definition
+tcc9354d6,Basic › table r1c1,Power (W)
+t374ccdad,Basic › table r1c2,How much electricity a device uses per second. Measured in watts.
+t7a3d5187,Basic › table r2c1,kW
+t56e12b44,Basic › table r2c2,Kilowatt. 1 kW = 1000 W.
+t5d87fb3d,Basic › table r3c1,kWh
+t0529cc88,Basic › table r3c2,Kilowatt-hour. 1 kWh of energy is what 1 kW uses in 1 hour.
+tf1e831f7,Basic › table r4c1,Tariff
+t2d17fcbd,Basic › table r4c2,"The price you pay per kWh of electricity, in €/kWh."
+t17278db5,Basic › table r5c1,Energy
+tdc5f01b4,Basic › table r5c2,The total amount of electricity used (= power × time).
+t802c8523,Basic › Task 1 › title,Calculating energy use - one bulb
+tf3c48bf0,Basic › Task 1,An LED bulb uses 12 watts (W) of electricity. Energy use over time is calculated using:
+tf3a3843f,Basic › Task 1,Note: 12 W = 0.012 kW (divide watts by 1000 to get kilowatts).
+t4a67e488,Basic › Task 1 › Q,"If the LED bulb is on for 5 hours, how many kWh does it use?"
+t28f0106d,Basic › Task 1 › Q,"If the LED bulb is on for 30 days, 5 hours per day, how many kWh in total?"
+t1c8db1a8,Basic › Task 1 › Q,Electricity costs €0.30 per kWh. What is the cost of running the LED bulb for those 30 days?
+td05a6974,Basic › Task 1 › Q,"What is the cost for one whole year (365 days, 5 hours per day)?"
+t44c981e3,Basic › Task 2 › title,Comparing bulbs
+t9d26b503,Basic › Task 2,Now compare the LED (12 W) with an old incandescent bulb (60 W). Both give the same amount of light.
+taf71653f,Basic › Task 2 › Q,How many kWh does the incandescent bulb use in one year (365 days × 5 hours)?
+t33d47a3c,Basic › Task 2 › Q,"What is the cost of running the incandescent bulb for one year, at €0.30/kWh?"
+t9524854f,Basic › Task 2 › Q,How much money do you save in one year by using the LED instead of the incandescent bulb?
+t26bbe995,Medium,"Although LED lights have made a huge difference compared to old incandescent bulbs, a lot of energy is still consumed by leaving lights on for no reason. In this worksheet you will calculate how much energy and money could be saved by switching technology AND by switching off lights when leaving the room. You will also see what happens when those small per-bulb amounts are multiplied across a whole school."
+t765ba86a,Medium › box,What you should already know
+t89ea80d8,Medium › What you should already…,*You should already know the formula Energy (kWh) = Power (kW) × time (h) and how to convert watts to kilowatts (see Worksheet 2A if needed).*
+tc79bbcef,Medium,"In this worksheet you will combine the energy formula from worksheet 2A with two new ideas: scaling up to a whole school, and understanding that LABOUR is also a real cost."
+t297d2a40,Medium,"SCALING: a single light bulb costs a few cents per evening. But a school has hundreds of light fixtures. When you multiply small costs by hundreds of bulbs and thousands of hours, the totals can become surprisingly large. Always be explicit about the assumptions you make: how many bulbs, how many hours per day, how many days per year."
+tf85d85a9,Medium,"LABOUR COST: changing a light bulb takes time. For a few minutes of human work this is negligible at home, but in a school sports hall with high ceilings the labour cost can be much larger than the cost of the bulb itself. A maintenance worker often costs the school €30-€50 per hour. So a bulb that needs to be replaced 25 times during the lifetime of one LED is not just 25× the bulb cost - it is also 25× the labour."
+t78a81b5e,Medium,CO₂ EMISSIONS: every kWh you save also avoids some CO₂. The Dutch electricity grid in 2024 had an average emission factor of about 0.27 kg CO₂ per kWh. This is decreasing every year as more renewable energy is added.
+ta2b6a7d8,Medium › Worked example,"*A school uses 40 incandescent bulbs (60 W each) for 6 hours per day, 190 school days per year. What is the annual energy use and cost?*"
+t62da1474,Medium › Worked example,**Step 1:** Total power: 40 × 60 W = 2400 W = 2.4 kW
+te6811414,Medium › Worked example,**Step 2:** Hours per year: 6 × 190 = 1140 h
+t3e1cb92f,Medium › Worked example,**Step 3:** Annual energy: 2.4 kW × 1140 h = 2736 kWh
+t079c53e1,Medium › Worked example,**Step 4:** Annual cost at €0.30/kWh: 2736 × 0.30 = €820.80
+tdc12d575,Medium › Worked example,**Step 5:** Annual CO₂: 2736 × 0.27 = 738.7 kg ≈ 0.74 tonnes
+td0d75d62,Medium › table r1c1,Scaling
+t0c69c3df,Medium › table r1c2,Multiplying single-unit numbers by quantity to find the total impact.
+tc53a057f,Medium › table r2c1,Labour cost
+t61c1ca2d,Medium › table r2c2,The cost of human time spent on a task (e.g. €40/hour for a technician).
+t6afb527d,Medium › table r3c1,Emission factor
+tc22b89b9,Medium › table r3c2,kg CO₂ per kWh of electricity used. About 0.27 in NL in 2024.
+t6cb2113a,Medium › Task 1 › title,Energy consumption of different bulbs
+t516cd506,Medium › Task 1,All four bulb types in the table provide about 850 lumens of light. Use the formula:
+t494528bd,Medium › Task 1 › table r0c2,Incandescent bulb
+t4ac8cffb,Medium › Task 1 › table r0c3,Halogen
+t45849a04,Medium › Task 1 › table r0c4,Compact fluorescent
+t373f0e69,Medium › Task 1 › table r0c5,Light emitting diode (LED)
+tf32d5a0e,Medium › Task 1 › table r1c1,Lifetime
+t1d4c66d8,Medium › Task 1 › table r1c2,"1,000 h"
+t487dead6,Medium › Task 1 › table r1c3,"3,000 h"
+td2a21f00,Medium › Task 1 › table r1c4,"10,000 h"
+ta85f77b4,Medium › Task 1 › table r1c5,"25,000 h"
+tc6b6e53c,Medium › Task 1 › table r2c1,Price per bulb
+ta51994d8,Medium › Task 1 › table r2c2,€0.50
+t49289e6d,Medium › Task 1 › table r2c3,€1.50
+tbe23466e,Medium › Task 1 › table r2c5,€1.33
+t696e7c1c,Medium › Task 1 › table r3c1,Wattage
+t137c20e2,Medium › Task 1 › table r3c2,60 W
+t5ec1bd65,Medium › Task 1 › table r3c3,43 W
+tb7853410,Medium › Task 1 › table r3c4,13 W
+t5a9e518b,Medium › Task 1 › table r3c5,12 W
+tf759e90c,Medium › Task 1 › table r4c1,Light output
+t17695133,Medium › Task 1 › table r4c2,≈850 lm
+t6bd7f0e8,Medium › Task 1 › Q,"Calculate the total energy used over 25,000 hours by each bulb type. Note: 1 W = 0.001 kW."
+tb9cf0e69,Medium › Task 1 › Q,"Calculate the cost of running each bulb for 25,000 hours at €0.30/kWh."
+tbb605d74,Medium › Task 1 › Q,"How many bulbs of each type would you need to buy to reach 25,000 hours of light? Calculate the total purchase cost."
+t6061b448,Medium › Task 1 › Q,"Add purchase cost and electricity cost. Which bulb type has the lowest total cost over 25,000 hours?"
+t4f6149dc,Medium › Task 1 › Q,"Calculate the CO₂ emissions for each bulb type over 25,000 hours, using a Dutch grid factor of 0.27 kg CO₂/kWh."
+tb47dbec1,Medium › Task 2 › title,The cost of neglect: how to save energy at school
+t0be5103e,Medium › Task 2,Imagine that someone forgets to switch off the lights in your classroom every evening. Lights stay on for an extra 12 hours each weekday and 48 hours each weekend (so an average of about 16 extra hours per day across the week).
+t5b983702,Medium › Task 2 › Q,Estimate the number of LED lamps in your classroom and the wattage of each. Write your assumptions clearly.
+t0032fc8d,Medium › Task 2 › Q,"Calculate how many extra kWh per year would be wasted if lights were left on those extra 16 hours per day, every day of the year."
+tb99b1dfb,Medium › Task 2 › Q,Calculate the extra annual cost at €0.30/kWh.
+ta6c07aaa,Medium › Task 2 › Q,Now multiply this by the total number of classrooms in your school. What is the school-wide annual cost of forgetting to switch off lights?
+t66946baa,Medium › Task 3 › title,The labour factor
+te3d21ddb,Medium › Task 3,"Imagine you are responsible for the lighting of a school sports hall. There are 40 high-bay light fixtures. Replacing one bulb requires a technician with a lift; the school's facility manager estimates this takes 30 minutes of work per bulb at €40/hour (so €20 in labour per replacement, on top of the bulb price)."
+t0d7c8f30,Medium › Task 3 › Q,"If the sports hall used INCANDESCENT bulbs of 60 W: how many bulb replacements would be needed over 25,000 hours per fixture (lifetime = 1,000 h)? What is the total labour cost for the 40 fixtures?"
+t8e66e563,Medium › Task 3 › Q,If the sports hall used LEDs of 12 W: how many bulb replacements per fixture? What is the labour cost?
+t2deb0815,Medium › Task 3 › bullet 1,"Now calculate the energy cost difference between the two options over 25,000 hours (use €0.30/kWh)."
+tdfe91d75,Medium › Task 3 › Q,"Compare the labour cost difference and the energy cost difference. Which one is larger? In a high-ceiling sports hall, would your conclusion change if the labour rate were halved (e.g. own school staff at €20/hour instead of an external technician)? Discuss."
+t4532e02c,Advanced,"In a real household, lights are not on for a fixed number of hours every day. The kitchen is bright in the morning and evening; the bedroom is used at night; the bathroom briefly several times per day. Electricity prices on a dynamic contract also change every hour - sometimes negative when there is a surplus of solar or wind power. In this worksheet you will build a more realistic model of household lighting cost."
+t36ed3a19,Advanced › What you should already…,"*This worksheet assumes you have completed Worksheets 2A and 2B, or are confident with energy calculations, scaling, and the concept of cost = energy × tariff.*"
+t8de051c1,Advanced,"In a real household, lights are not on for a fixed number of hours every day. The kitchen is bright in the morning and the evening; the bedroom is used at night; the bathroom briefly several times per day. Building a realistic energy model requires HOURLY USAGE PROFILES rather than averages."
+t5fa0188d,Advanced,"DYNAMIC TARIFFS: traditional energy contracts charge a flat €/kWh price regardless of when you use electricity. Dynamic contracts (offered in the Netherlands by suppliers such as ANWB Energie, Tibber and EnergyZero) update the tariff every hour based on the wholesale electricity market. Prices are typically lowest at night and during midday solar peaks, and highest in the morning (07-09) and evening (17-21) demand peaks. Sometimes prices even go negative when there is too much wind or solar production."
+t94b57e25,Advanced,BEHAVIOUR vs TECHNOLOGY: there are two fundamentally different ways to reduce energy use - change your behaviour (use less) or change your technology (use more efficiently). They are not always equivalent. A behavioural change requires constant effort and can fail when habits slip. A technological change is permanent but requires upfront investment.
+t906807d1,Advanced › Worked example,"*An LED bulb (12 W) is on from 18:00 to 22:00 every day. Compare the daily cost on (a) a flat tariff of €0.30/kWh and (b) a dynamic tariff where 18:00-21:00 = €0.50/kWh, 21:00-22:00 = €0.25/kWh.*"
+t16c97284,Advanced › Worked example,**Step 1:** Daily energy: 0.012 kW × 4 h = 0.048 kWh
+tc15a6b39,Advanced › Worked example,**Step 2:** (a) Flat tariff: 0.048 × 0.30 = €0.0144 per day
+te3c92066,Advanced › Worked example,**Step 3:** (b) Dynamic: split the energy by hourly band:
+t21bd5ad9,Advanced › Worked example,**Step 4:** 18:00-21:00 (3 h): 0.012 × 3 = 0.036 kWh × €0.50 = €0.018
+t064b5579,Advanced › Worked example,**Step 5:** 21:00-22:00 (1 h): 0.012 × 1 = 0.012 kWh × €0.25 = €0.003
+t87eec773,Advanced › Worked example,**Step 6:** Total: €0.021 per day. The dynamic tariff is ~46% more expensive here because the lamp is on during the peak.
+t365e0ff9,Advanced › Worked example,"**Step 7:** Insight: lighting is a small load - tariff differences matter much more for big loads (heat pump, EV charging, dishwasher)."
+t5cf27bf4,Advanced › Task 1 › title,Household usage profile
+t628734d4,Advanced › Task 1,"Sketch (or fill in a table for) a 24-hour usage profile of three different rooms in a house: kitchen, living room, bedroom. For each room, estimate per hour whether the light is typically on (1) or off (0)."
+t7f939d5d,Advanced › Task 1 › Q,Construct your hourly profiles. Total: how many bulb-hours per day does each room consume?
+tcecf4e5d,Advanced › Task 1 › bullet 1,"Assume: kitchen has 4 LEDs of 9 W, living room has 6 LEDs of 7 W, bedroom has 2 LEDs of 5 W. Compute the daily kWh for each room and the total daily kWh."
+t358e4941,Advanced › Task 1 › Q,What is the annual kWh and annual cost at a flat tariff of €0.30/kWh?
+td0a5a35d,Advanced › Task 2 › title,Dynamic tariffs
+tf00b4c53,Advanced › Task 2,"On a dynamic energy contract, the tariff varies per hour. A simplified pattern for the Netherlands: night (00:00-06:00) ≈ €0.10/kWh, morning peak (07:00-09:00) ≈ €0.45/kWh, midday solar dip (11:00-15:00) ≈ €0.05/kWh, evening peak (17:00-21:00) ≈ €0.50/kWh, other hours ≈ €0.25/kWh."
+t7c0b0438,Advanced › Task 2 › Q,"Recompute the annual cost using your usage profile from Activity 1, but now with the dynamic tariff above. How does it compare to the flat tariff?"
+t87c2d856,Advanced › Task 2 › Q,Identify two hours of the day where shifting lighting use would save the most money. How much could a household save per year by avoiding lights during those hours?
+tf17d3bc7,Advanced › Task 2 › Q,Critically reflect: is shifting lighting use realistic? What other appliances would benefit much more from dynamic tariffs?
+t72839813,Advanced › Task 3 › title,Behaviour vs. technology
+te6d66581,Advanced › Task 3,Two different households both want to halve their lighting energy use.
+t35e86458,Advanced › Task 3 › Q,Household A keeps incandescent bulbs (60 W) but is more disciplined: switches off lights in unused rooms. They reduce 'on time' from 5 hours/day to 2.5 hours/day. New annual kWh per bulb?
+t9f5d9fc0,Advanced › Task 3 › Q,Household B keeps the same 5 hours/day but replaces all bulbs with LEDs (12 W). New annual kWh per bulb?
+tb8876d06,Advanced › Task 3 › Q,Both halve their energy roughly. Which approach is more robust? Argue using a scenario where a guest visits and the lights stay on longer than usual.

@@ -1,0 +1,129 @@
+key,where,en
+t1fad402b,Title,Dishwashers: energy and water efficiency
+t1c1fd4cb,Info › Topic › basic,How does a dishwasher use energy and water?
+tfff772cf,Info › Topic › medium,"Comparing programmes, calculating cost and water savings"
+t65c50ac7,Info › Topic › advanced,"Lifecycle analysis, water-energy nexus and policy"
+t98ae82a4,Info › Learning outcomes › basic,"Students will understand how a dishwasher uses energy and water, identify different programme types, and compare hand-washing with machine-washing."
+t2ce67207,Info › Learning outcomes › medium,"Students will calculate energy and water consumption per cycle, compare programme efficiencies, and evaluate cost savings."
+tbe22484a,Info › Learning outcomes › advanced,"Students will model annual consumption profiles, analyse the water-energy nexus, compare national impacts, and develop evidence-based recommendations."
+t5431687b,Info › Time needed › basic,60 min
+t98b9f7b8,Info › Time needed › medium,90 min
+tfa15a37e,Info › Time needed › advanced,120 min
+t8c9de4f5,Info › Resources › basic,Dishwasher programme data table (in this worksheet); access to a dishwasher at home or school.
+t72d86a8c,Info › Resources › medium,Calculator; electricity and water tariffs.
+ted116165,Info › Resources › advanced,Spreadsheet software; EU energy label data; CO₂ emission factors.
+t65803a19,Basic › subheading,Introduction
+t29bd4fcc,Basic,"A dishwasher cleans dishes using hot water sprayed at high pressure. It uses electricity mainly to heat the water, and also to pump water and dry the dishes. Understanding how different programmes work helps us choose the most efficient option for each load."
+t9e950428,Basic › subheading,Theory
+t3f492fc1,Basic,"A modern dishwasher uses most of its energy to HEAT WATER. The heating element typically draws 1,500–2,000 W. The pump motor uses only about 50–100 W."
+ta3e8bbc5,Basic,Different programmes heat water to different temperatures:
+t7810d79d,Basic › bullet 1,"Eco programme (50 °C): Uses less energy and water, but takes longer (3–4 hours). Most efficient overall."
+ta3c53879,Basic › bullet 2,"Normal programme (60 °C): Standard cycle, about 2 hours."
+t246bf9b9,Basic › bullet 3,Intensive programme (70 °C): For heavily soiled pots and pans. Uses the most energy and water.
+t54e40f10,Basic › bullet 4,"Quick programme (45–60 °C): Shorter cycle, but may use more water per dish because it cleans less thoroughly."
+t08379eaa,Basic,A full dishwasher load typically uses LESS water than washing the same dishes by hand. Hand-washing uses 40–60 litres of water; a modern dishwasher eco cycle uses only 10–12 litres.
+t1908e453,Basic › box,Worked example
+t771672a9,Basic › Worked example,**A dishwasher eco programme uses 0.85 kWh and 11 litres of water per cycle.**
+t0ef125dd,Basic › Worked example,**Hand-washing the same dishes uses approximately 50 litres of hot water.**
+t6199c8b2,Basic › Worked example,**Heating 50 litres from 15 °C to 55 °C requires:**
+t1821aaf3,Basic › Worked example,"**Energy = 4.186 × 50 × 40 ÷ 3,600 ÷ 1,000 ≈ 2.3 kWh**"
+t97b8f411,Basic › Worked example,**The dishwasher uses 0.85 kWh – about 63% less energy than hand-washing!**
+t1cb43d37,Basic › subheading,Key terms
+t22fa6af7,Basic › table r0c1,Term
+t0d4aaec0,Basic › table r0c2,Definition
+tea1c9f6c,Basic › table r1c1,Eco programme
+tc189a40d,Basic › table r1c2,"A dishwasher cycle that uses lower temperature and less water, optimised for energy efficiency."
+t087b004a,Basic › table r2c1,Intensive programme
+t12e55c15,Basic › table r2c2,"A high-temperature cycle for heavily soiled items, using more energy and water."
+t79d1d1a7,Basic › table r3c1,Water consumption
+t3312c5a6,Basic › table r3c2,"The total litres of water used per cycle, shown on the EU energy label."
+t4a6b0717,Basic › table r4c1,Energy label
+t6a6f310f,Basic › table r4c2,"The EU rating (A to G) showing annual energy use, water consumption, noise level, and capacity."
+tad0680c4,Basic › table r5c1,Load factor
+t7e08be3e,Basic › table r5c2,How full the dishwasher is. Running half-empty loads wastes energy per dish.
+td1138a56,Basic › Task 1 › title,Understanding dishwasher programmes
+t01c70662,Basic › Task 1,Look at the table below showing typical dishwasher programme data.
+t30718235,Basic › Task 1 › table r0c1,Programme
+tefd604d5,Basic › Task 1 › table r0c2,Temperature
+td4c7492d,Basic › Task 1 › table r0c3,Duration
+tf0185069,Basic › Task 1 › table r0c4,Energy per cycle (kWh)
+t073cddbf,Basic › Task 1 › table r0c5,Water per cycle (litres)
+te677c402,Basic › Task 1 › table r1c1,Eco
+t78518e29,Basic › Task 1 › table r1c2,50 °C
+t616b8439,Basic › Task 1 › table r1c3,3 h 30 min
+t58de2772,Basic › Task 1 › table r2c1,Normal
+t4bcf3e20,Basic › Task 1 › table r2c2,60 °C
+t91ca2047,Basic › Task 1 › table r2c3,2 h 00 min
+t63b99008,Basic › Task 1 › table r3c1,Intensive
+t36410603,Basic › Task 1 › table r3c2,70 °C
+t747b6fe8,Basic › Task 1 › table r3c3,2 h 30 min
+t9cf5355c,Basic › Task 1 › table r4c1,Quick
+t032ec00c,Basic › Task 1 › table r4c2,55 °C
+t746e811a,Basic › Task 1 › table r4c3,0 h 45 min
+t4bd269e6,Basic › Task 1 › Q,Which programme uses the least energy? Which uses the least water? Are they the same programme?
+t9dae1487,Basic › Task 1 › Q,The intensive programme uses more than twice the energy of the eco programme. Why? Think about what happens when water is heated to a higher temperature.
+t288f14be,Basic › Task 1 › Q,The quick programme takes only 45 minutes but uses more water than the eco programme. Why might a shorter cycle use more water?
+t59f9d765,Basic › Task 1 › Q,"A student runs the dishwasher after every meal, often half-empty. What advice would you give them?"
+tb0f7abcb,Basic › Task 2 › title,Dishwasher vs. hand-washing
+tb8743dce,Basic › Task 2 › Q,"Hand-washing typically uses 50 litres of water and about 2.3 kWh of energy to heat the water. Compare this with the eco programme (11 litres, 0.85 kWh). How much water and energy does the dishwasher save per load?"
+t58d90523,Basic › Task 2 › Q,Under what circumstances might hand-washing be more efficient than using a dishwasher? (Hint: think about small amounts of dishes.)
+tc8d30ad8,Medium › heading,Comparing programmes: cost and water savings
+t3cdbafcf,Medium,"At this level you will calculate the exact cost of each dishwasher programme, compare water and energy consumption over a week and a year, and evaluate the financial and environmental benefits of choosing the right programme."
+t90ac9346,Medium,"**What you should already know: You should understand how a dishwasher uses energy and water, recognise different programme types (eco, normal, intensive, quick), and know that the eco programme is generally the most efficient.**"
+tf11037b2,Medium,The total cost of running a dishwasher depends on both electricity and water:
+tc0f77a90,Medium,Total cost per cycle = (Energy × Electricity tariff) + (Water × Water tariff)
+t5b806e7b,Medium,Electricity tariff: approximately €0.30/kWh
+te0d12f98,Medium,"Water tariff: approximately €4.00 per 1,000 litres (€0.004/litre)"
+tf896a00f,Medium › Worked example,**Eco programme: 0.85 kWh + 11 litres**
+t2eb21ce5,Medium › Worked example,**Electricity cost: 0.85 × 0.30 = €0.255**
+t9d628bdd,Medium › Worked example,**Water cost: 11 × 0.004 = €0.044**
+t379ab5bc,Medium › Worked example,**Total: €0.299 per cycle**
+tea49aeb9,Medium › Worked example,**If used 5 times per week: €0.299 × 5 × 52 = €77.74/year**
+t9debc37f,Medium › table r1c1,Combined cost
+te27a2f00,Medium › table r1c2,The total of electricity cost plus water cost per cycle.
+tb681b2de,Medium › table r2c1,Water tariff
+t201b0d5e,Medium › table r2c2,"The price per litre of water, including supply and wastewater treatment."
+t5b622cbf,Medium › table r3c1,Load capacity
+t37efb599,Medium › table r3c2,The number of place settings a dishwasher can hold (typically 12–14 for standard models).
+t1f90b4fb,Medium › table r4c1,Programme selection
+t08bd9492,Medium › table r4c2,"Choosing the right cycle based on soil level, load size, and efficiency goals."
+teb5f0659,Medium › Task 1 › title,Cost comparison of programmes
+t56c13808,Medium › Task 1,"Calculate the total cost (electricity + water) for each programme. Assume electricity = €0.30/kWh, water = €0.004/litre."
+t2923f5dc,Medium › Task 1 › table r0c2,Energy (kWh)
+t554f03ff,Medium › Task 1 › table r0c3,Water (L)
+t913983d4,Medium › Task 1 › table r0c4,Electricity cost (€)
+t55b3de56,Medium › Task 1 › table r0c5,Water cost (€)
+t62aaad65,Medium › Task 1 › table r0c6,Total cost (€)
+te0f7f98b,Medium › Task 1 › table r0c7,Annual cost (5×/week)
+tdc28700b,Medium › Task 1 › Q,Complete the table. Which programme has the lowest cost per cycle? Which has the highest?
+t82174788,Medium › Task 1 › Q,A family currently uses the normal programme 5 times per week. How much would they save per year by switching to the eco programme?
+tef907642,Medium › Task 1 › Q,Is the quick programme a good choice for saving money? Compare its cost with the eco programme and explain.
+t95437a96,Medium › Task 2 › title,Annual water consumption
+te0affa9d,Medium › Task 2 › Q,A family runs the dishwasher 5 times per week using the normal programme. Calculate the annual water consumption in litres. Compare this with hand-washing the same number of loads at 50 litres per load.
+t9363fa07,Medium › Task 2 › Q,"If the family switches to eco for 4 out of 5 weekly loads (using normal for heavily soiled loads), what is the new annual water consumption? How many litres are saved?"
+tc51b2d1a,Advanced,"At the advanced level, you will analyse the full environmental impact of dishwasher use, including the water-energy nexus (the energy needed to treat and deliver water), compare national impacts, and develop policy recommendations for reducing dishwasher-related resource consumption."
+t3385bcad,Advanced,"**What you should already know: You should be able to calculate per-cycle and annual costs for different programmes, compare water and energy consumption, and understand the economic benefits of programme selection.**"
+t99966da2,Advanced,"THE WATER-ENERGY NEXUS: Water treatment and delivery also consume energy. Treating and delivering 1,000 litres of tap water requires approximately 0.5 kWh. Treating 1,000 litres of wastewater requires an additional 0.7 kWh. So the true energy cost of water use includes this hidden energy."
+t0d0f0e0c,Advanced,"EU REGULATIONS: Since 2019, dishwashers sold in the EU must not exceed certain energy and water limits. The current regulations push manufacturers toward longer, cooler eco cycles that are more efficient overall despite taking more time."
+t2b69f0d2,Advanced › Worked example,**The eco cycle uses 11 litres. Hidden energy in water:**
+tc1f3f736,Advanced › Worked example,"**Water supply: 11 × 0.5/1,000 = 0.0055 kWh**"
+t8e87928d,Advanced › Worked example,"**Wastewater: 11 × 0.7/1,000 = 0.0077 kWh**"
+t9c425bed,Advanced › Worked example,**Total hidden energy: 0.0132 kWh**
+tb712df43,Advanced › Worked example,**This adds 1.6% to the direct energy consumption of 0.85 kWh.**
+tc7c11b66,Advanced › Worked example,**For the intensive cycle (20 litres):**
+tb0745403,Advanced › Worked example,**Hidden energy: 0.024 kWh (1.3% of 1.80 kWh)**
+t9bb44fdd,Advanced › Task 1 › title,Complete environmental impact model
+t7ab95b09,Advanced › Task 1,"Build a full annual model for a family running 5 cycles per week. Compare three scenarios: all eco, all normal, and a realistic mix (3 eco + 1 normal + 1 intensive per week)."
+tbb09864f,Advanced › Task 1 › table r0c1,Scenario
+ta29ceccb,Advanced › Task 1 › table r0c2,Annual energy (kWh)
+t645001b2,Advanced › Task 1 › table r0c3,Annual water (L)
+tb9117880,Advanced › Task 1 › table r0c4,Annual cost (€)
+t367e673c,Advanced › Task 1 › table r0c5,Annual CO₂ – Turkey (kg)
+tafc3a0b5,Advanced › Task 1 › table r1c1,All eco
+tc6f1f70f,Advanced › Task 1 › table r2c1,All normal
+tc9e99a69,Advanced › Task 1 › table r3c1,Realistic mix
+tc4a44def,Advanced › Task 1 › table r4c1,All intensive
+td0478655,Advanced › Task 1 › Q,Complete the table (use Turkey emission factor: 0.44 kgCO₂/kWh). What is the CO₂ saving of using all-eco versus all-intensive?
+t897a6d75,Advanced › Task 2 › title,National scale analysis
+td14f89d4,Advanced › Task 2 › Q,"Approximately 60% of Turkish households (15 million) have a dishwasher. If every household switched from ""all normal"" to ""all eco"" programme, calculate the national annual savings in energy (GWh), water (million litres), cost (million €), and CO₂ (thousand tonnes)."
+t26e940a1,Advanced › Task 2 › Q,"Write a 100–150 word policy recommendation for reducing dishwasher energy and water consumption at the national level. Consider: public awareness campaigns, mandatory eco-default settings, EU energy label improvements, and financial incentives. Support your argument with data from your calculations."

@@ -1,0 +1,118 @@
+key,where,en
+td2b96531,Title,School Restroom Audit
+tfa646bd7,Subtitle,"Comprehensive Multilevel Assignment Framework: BASIC, MEDIUM & ADVANCED Levels"
+taced2c21,Info › Topic,**School Restroom Audit**
+t2d5a77ab,Info › Topic,Water Conservation & Electrical Efficiency Engineering
+t4d9d68a6,Info › Learning outcomes,"**Technical knowledge:** Students learn about methods to manage and regulate the use of electricity and water. They learn to calculate consumption based on different variables and different time periods, regarding both kWh and liters."
+t603a14bc,Info › Learning outcomes,"**Mathematical skills:** Students learn to calculate consumption based on different variables and different time periods, regarding both kWh and liters."""
+t43145261,Info › Learning outcomes,"**Environmental awareness:** Students will gain knowledge about the extent to which their own behavior impacts electricity and water consumption, and consequently, broader climate change impacts by comparing usage to everyday activities"
+t00560bc1,Info › Learning outcomes,**Green skills for VET:** Critical thinking and how small changes in daily life and habits can have a positive impact on the environment.
+tce9e775d,Info › Time needed,45 - 120 minutes
+t4bcebdb8,Info › Resources,"Internet, calculator and price for kwh, (*Watt × hour) / 1000 = kWh*"
+t991d74eb,Introduction & Theoreti… › heading,Introduction & Theoretical Background
+t21640783,Introduction & Theoreti…,"Institutional resource management requires evaluating utility use in shared school spaces. Restrooms are major consumer centers for water and electricity. In typical school restrooms, lights are left on all day regardless of occupancy, creating 'phantom' utility drains. Similarly, older plumbing infrastructures flush significant volumes of treated water down the drain when less would do."
+t6f523a4f,Introduction & Theoreti…,"By optimizing hardware layouts—such as switching traditional fixtures to automation sensors or utilizing dual-flush mechanical flush valves—schools can significantly lower electricity bills, cut water extraction demands, and lower wastewater treatment load profiles."
+t4662115e,Core Concepts & Audit B… › heading,Core Concepts & Audit Benchmarks
+tefd00fd5,Core Concepts & Audit B… › bullet 1,**Dual-Flush Toilet Systems:** – Mechanical plumbing valves designed to offer two distinct volumetric flush options: a small button for liquid waste (typically 3 Liters) and a large button for solid waste (typically 6 Liters).
+t6e5fc8bf,Core Concepts & Audit B… › bullet 2,"**Motion-Controlled Automation:** – Integrated infrastructure switches that use infrared or ultrasonic waves to track movement, cutting electrical runtimes by up to 75% by keeping lights off in empty spaces."
+t7870774e,Core Concepts & Audit B… › bullet 3,"**Resource Leaks / Phantom Loads:** – The hidden utility waste that occurs when appliances, lights, or leaking pipes draw resources constantly without providing productive output."
+t1e7652a3,Standard Restroom Techn… › heading,Standard Restroom Technical Reference Table
+t3fab56fc,Standard Restroom Techn…,The variables below represent baseline standards for planning modern institutional facilities:
+t0b1b8c0b,Standard Restroom Techn… › table r0c1,Restroom Fixture Type
+ta2eccf79,Standard Restroom Techn… › table r0c2,Standard Legacy Configuration
+taa3d5b4d,Standard Restroom Techn… › table r0c3,Modern Eco Configuration
+tfe8f4565,Standard Restroom Techn… › table r0c4,Aggregated Savings Metric
+t83423713,Standard Restroom Techn… › table r1c1,Lighting Systems
+t252be93a,Standard Restroom Techn… › table r1c2,Manual Switch On (Always active)
+t7930997d,Standard Restroom Techn… › table r1c3,Infrared Motion Automation
+t6f0658b0,Standard Restroom Techn… › table r1c4,75% Electricity reduction
+t58bb927a,Standard Restroom Techn… › table r2c1,Standard Toilets
+t34e09c76,Standard Restroom Techn… › table r2c2,Single-Flush Valve (6.0 Liters)
+tba29b35e,Standard Restroom Techn… › table r2c3,Dual-Flush Mechanism (3.0L / 6.0L)
+t93959495,Standard Restroom Techn… › table r2c4,Up to 3.0 Liters saved per half-flush
+t67708f9d,Standard Restroom Techn… › table r3c1,Hand Washing Taps
+taf4a7f1d,Standard Restroom Techn… › table r3c2,Manual Turning Tap (6.0 L/min)
+te4c5caa4,Standard Restroom Techn… › table r3c3,Aerated Push-Button/Sensor (2.5 L/min)
+t1021cae8,Standard Restroom Techn… › table r3c4,Over 55% Water reduction
+ta06fbdc8,Standard Restroom Techn… › table r4c1,Defective Fixtures
+t625db5d7,Standard Restroom Techn… › table r4c2,Unfixed Small Running Leak
+t7f7ebccd,Standard Restroom Techn… › table r4c3,Proactive Maintenance Check
+t2537058b,Standard Restroom Techn… › table r4c4,"Saves up to 15,000 Liters / year / valve"
+t2bfd0783,Basic › box,Target Learning Outcomes
+t41a3a00a,Basic › Target Learning Outcomes,"*Identify basic electrical and plumbing parts, extract resource metrics from standard baseline tables, and link personal hygiene choices with environmental impacts.*"
+t1f68930c,Basic › Task 1 › title,Standard Benchmarking Data Scan
+t297b4be1,Basic › Task 1 › Q,Look at the Standard Restroom Technical Reference table. What exact percentage of restroom lighting energy can be saved by installing an Infrared Motion Automation sensor?
+t22a2b405,Basic › Task 1 › Q,How many liters of clean water are flushed down the drain during a standard 'half-flush' using a modern dual-flush toilet system?
+t516eb6ed,Basic › Task 1 › Q,True or False: Leaving a small running toilet leak un-repaired for a single week wastes less water than a student drinks across a whole calendar year.
+t8b016335,Basic › Task 1 › Q,What physical action can a student take if they hear a restroom toilet running constantly to stop structural water waste?
+t2754eba0,Basic › Task 2 › title,Restroom Action Mapping
+ta8dd1aa4,Basic › Task 2,Circle or bold the best answer matching standard sustainability habits:
+t85a9d191,Basic › Task 2 › Q,**Utilizing the small button (half-flush) rather than the large button whenever appropriate saves how** much water per flush?
+t47ccf169,Basic › Task 2 › Q option,0.5 Liters
+t3a63391f,Basic › Task 2 › Q option,3.0 Liters
+tbddba671,Basic › Task 2 › Q option,10.0 Liters
+t17b375f0,Basic › Task 2 › Q,**Leaving restroom light arrays operating for 9 full hours while the rooms stay entirely empty creates:**
+t734f26c8,Basic › Task 2 › Q option,Phantom Lighting Waste
+t1d568e3c,Basic › Task 2 › Q option,Efficient Circuit Balancing
+tf1e6472a,Basic › Task 2 › Q option,Renewable Multi-loading
+t31648c9e,Medium › heading,The School Restroom Audit
+t7a18c3fb,Medium › Target Learning Outcomes,"*Measure real-world restroom fixture variables, compute kilowatt-hours (kWh) and liquid fluid runtimes, evaluate financial expenditures, and frame a resource comparison plan.*"
+tf97af4b9,Medium › Task 1 › title,On-Site Fixture Inventory
+t810b72eb,Medium › Task 1,Walk through a designated school restroom. Document the on-site electrical parameters and mechanical plumbing setups below:
+td1cfbfa4,Medium › Task 1 › Q,Total Combined Wattage of Restroom Light Bulbs: ______________ Watts
+t4bab3368,Medium › Task 1 › Q,Presence of Dual-Flush Infrastructure Buttons: [ ] Yes [ ] No
+t35303934,Medium › Task 2 › title,Electrical Runtime & Automation Analytics
+tb9e40eac,Medium › Task 2,Scenario Parameters: Restroom lighting operates continuously for 9 hours per school day. Assume a local commercial utility tariff of €0.30 per kWh.
+t22983b3d,Medium › Task 2 › Q,**Base Configuration (No Sensors):** Calculate energy metrics assuming lights are active all day:
+t44e96a78,Medium › Task 2 › Q item,**• 1 Week (5 school days):** Weekly Energy: _______________ kWh | Weekly Cost: _______________ EUR
+t4a38e31b,Medium › Task 2 › Q item,**• 1 Month (20 school days):** Monthly Energy: _______________ kWh | Monthly Cost: _______________ EUR
+t85fb561f,Medium › Task 2 › Q item,**• 1 School Year (180 days):** Annual Energy: _______________ kWh | Annual Cost: _______________ EUR
+t94226a9b,Medium › Task 2 › Q,"**Automated Configuration (Motion Sensors):** Compute the metrics if motion sensors are installed, saving 75% of energy use:"
+t8fac496a,Medium › Task 2 › Q,**Utility Optimization Context:** The energy saved by switching to automated motion sensor lighting over one school year is equal to charging a standard smartphone approximately ____________ times.
+t2cf8100c,Medium › Task 3 › title,Quantitative Volumetric Fluid Analysis
+t4589c1fb,Medium › Task 3,Scenario Parameters: A shared school restroom is utilized regularly by exactly 25 students. Each student triggers a toilet flush exactly 2 times per school day. (Total = 50 flushes per day).
+t11531217,Medium › Task 3,Calculate the cumulative volumetric water output (in Liters) for a week (5 days) and a month (20 days) under different usage choices:
+t9d6060e5,Medium › Task 3 › Q,**Paradigm A:** Every single student uses the Full Flush mechanism (6 Liters per flush) every time:
+t76a2ba21,Medium › Task 3 › Q item,Weekly Output: _________________ Liters | • Monthly Output: _________________ Liters
+tda0ba235,Medium › Task 3 › Q,**Paradigm B:** Every single student uses the Half Flush mechanism (3 Liters per flush) every time:
+tecc42ac8,Medium › Task 3 › Q,**Paradigm C:** Balanced Real-World Mix (50% full flush flushes and 50% half flush flushes):
+t5f564ab6,Medium › Task 3 › Q,**Resource Conservation Context:** The volume of clean drinking water saved in a single month by shifting from Paradigm A (all full flushes) to Paradigm B (all half flushes) is equal to exactly _________________ standard 0.5-Liter plastic water bottles.
+t38486a1e,Medium › Task 4 › title,Strategic Procurement & Reflection
+t19a30e70,Medium › Task 4 › Q,**Critical Evaluation:** If the school administration allocates budget to execute only one upgrade—either automated motion lighting sensors or mechanical dual-flush valves—which investment achieves the highest ecological return? Justify using your calculations:
+tdf3dcb8c,Medium › Task 4 › Q,**Personal Responsibility:** Explain how your daily restroom habits alter the school's total resource footprint when multiplied across hundreds of students:
+t0651c537,Advanced › heading,RESOURCE LOGISTICS & RISK ANALYSIS
+t479954b6,Advanced › Target Learning Outcomes,"*Model multi-variable fluid and electrical systems, analyze Net Present Value (NPV) payback math on infrastructure investments, and track national macro-grid carbon saves.*"
+tfe567371,Advanced › subheading,Mathematical Fluid-Power Optimization Modeling
+tbd4a031c,Advanced,Facility engineers model the combined monthly utility overhead ($Cost_{total}$) of restroom complexes using multi-variable equations tracking independent resource behaviors:
+t5c4bd00e,Advanced,"**Cost_total = [ ( P_light × t_light ) / 1,000 × τ ] + [ N_flushes × ( f_full × V_full + f_half × V_half ) × C_water ]**"
+t6f82ddd8,Advanced,Where: P_light = lighting load (Watts); t_light = monthly active runtime (Hours); τ = electricity tariff (€/kWh); N_flushes = total flushes per month; f = frequency share of each flush type (f_full + f_half = 1.0); V = volume per flush (Liters); and C_water = commercial water/wastewater utility volumetric rate (€/Liter).
+tff9dc46d,Advanced › Task 1 › title,System Cost Optimization Modeling
+t8a4f7457,Advanced › Task 1,**System Input Specifications:** A high-traffic school restroom block features these baseline metrics:
+t488851de,Advanced › Task 1 › bullet 1,"P_light = 400 Watts | t_light = 200 hours per month (unregulated, baseline)"
+td47df8f0,Advanced › Task 1 › bullet 2,"N_flushes = 4,000 flushes per month"
+t05a275da,Advanced › Task 1 › bullet 3,Baseline single-flush state: f_full = 1.0 | V_full = 6.0 Liters (V_half = 0)
+t42f90473,Advanced › Task 1 › bullet 4,Financial Unit Rates: Electricity Tariff (τ) = €0.35 / kWh | Water Cost (C_water) = €0.004 / Liter
+t6f7bb1a4,Advanced › Task 1 › Q,**Calculate the exact total monthly operational cost of this restroom block under baseline configurations:**
+t23375ed2,Advanced › Task 1 › Q item,Monthly Baseline Lighting Cost = _________________ €
+t8b31c78d,Advanced › Task 1 › Q item,Monthly Baseline Water Cost = _________________ €
+t2698a1ba,Advanced › Task 1 › Q item,Combined Baseline Overhead Cost = _________________ €
+tf69f56a5,Advanced › Task 1 › Q,"**Engineered State Optimization:** Technicians install motion sensors (reducing active runtime t_light by 75%) and dual-flush infrastructure (shifting usage habits to f_half = 0.70 and f_full = 0.30, with V_half = 3.0L and V_full = 6.0L)."
+t7fc3b8cb,Advanced › Task 1,Recalculate the optimized monthly resource cost metrics:
+te075e374,Advanced › Task 1 › Q,Optimized Monthly Lighting Cost = _________________ €
+td4a2c087,Advanced › Task 1 › Q,Optimized Monthly Water Cost = _________________ €
+t28362d69,Advanced › Task 1 › Q,Combined Optimized Monthly Cost = _________________ €
+t53921426,Advanced › Task 1 › Q,**Determine the absolute net financial savings generated per month:** €_________________
+t2b7966cb,Advanced › Task 2 › title,Capital Budgeting & Net Payback Engineering
+t100d1a37,Advanced › Task 2 › Q,"**Capital Expenditure (CapEx) Evaluation:** Upgrading this restroom block requires buying automation sensors and dual-flush commercial valves, costing a total upfront capital investment of exactly €850.00."
+tcd6e25ea,Advanced › Task 2 › Q,"Using the monthly cost savings from Activity 3.1, calculate the exact payback timeline in active school months:"
+t36dcc364,Advanced › Task 2,Calculation Workplace:
+t94f85a35,Advanced › Task 2,Answer: Investment Payback Period = _________________ active months
+tea9206f0,Advanced › Task 2 › Q,"**Infrastructure Risk Analysis:** If a leaking toilet valve goes undetected, creating a constant structural bypass leak of 0.25 Liters per minute all day and night (24/7), calculate how many liters of water are wasted over a 30-day month. Determine the financial cost of this leak, and evaluate how it changes the payback period of your eco-upgrades:"
+tb6fa59ac,Advanced › Task 2 › Q item,Monthly Volumetric Fluid Leak Waste = _________________ Liters
+t48bff0b8,Advanced › Task 2 › Q item,Monthly Cost of Leak (at €0.004/L) = _________________ €
+t51492fca,Advanced › Task 2 › Q item,Systems Risk Evaluation Impact:
+tc4b89031,Advanced › Task 3 › title,National Macro-Scale Scaling & Policy Synthesis
+tb06ebdc6,Advanced › Task 3 › Q,**Regional Grid Scaling:** Assume there are exactly 500 equivalent schools across the country. If every school optimizes its restrooms to match the monthly resource savings calculated in Activity 3.1:
+t9c79464a,Advanced › Task 3 › Q item,Calculate the combined national water savings over a 10-month academic school year: _________________ Liters
+t37624286,Advanced › Task 3 › Q item,Calculate the total national electrical energy saved over a 10-month school year: _________________ kWh
+tfcc7a82c,Advanced › Task 3 › Q,"**Comprehensive Policy Synthesis:** Write a short advisory report for the Ministry of Education detailing the broader benefits of national facility optimization. Connect your arguments to carbon footprints, regional municipal water infrastructure strain, and shifting vocational student technical skills toward sustainability jobs:"

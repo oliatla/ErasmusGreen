@@ -112,6 +112,34 @@ That's it. No build, no bundler, no dependencies.
 
 ---
 
+## New format (September 2026): worksheets written in Google Docs
+
+Worksheets with **Basic, Medium and Advanced** tasks are written in Google Docs
+and converted automatically, so nobody edits HTML or JSON by hand:
+
+```
+Google Doc ──► tools/reader.mjs ──► ws/<slug>/content.json + lang/en.json + img/
+                                 └─► translations: lang/<is|pt|hr|tr|nl>.json
+ws/<slug>/index.html + js/worksheet.js render it as A4 pages: automatic page
+breaks, level filter, six languages, B/W, QR codes for videos in print.
+```
+
+- **The partners' Word documents** in `New Worksheets septemeber 2026/<country>/`
+  are read with `node tools/reader.mjs folder` (unchanged documents are
+  skipped); the result is listed in `ws/new-format.html`.
+- **Example:** `ws/smart-lighting/` (ws16–ws18 merged into one worksheet, in six languages).
+- **What the reader understands, and the full procedure:** `.claude/skills/lesa/SKILL.md`
+  (in Claude Code, type `/lesa`).
+- **Commands:** `node tools/reader.mjs folder | docx | doc | sheet-csv | from-sheet | check`
+  (usage in the file header). Needs Node 18+, no packages.
+- **Interface texts** (toolbar, footer, level names) for all languages:
+  `lang/worksheet-ui.json`.
+- Translations can be reviewed in a Google Sheet (one column per language);
+  a teacher sets the `_reviewed` row to TRUE and the "machine translation"
+  notice disappears from that language.
+
+---
+
 ## Tech stack
 
 - **HTML / CSS / vanilla JavaScript** — no frameworks

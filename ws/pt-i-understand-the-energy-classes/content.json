@@ -1,0 +1,303 @@
+{
+  "schema": 1,
+  "id": "pt-i-understand-the-energy-classes",
+  "source": {
+    "type": "docx",
+    "file": "New Worksheets septemeber 2026/Portúgal/PT_Worksheet_2.docx",
+    "modified": "2026-09-07T19:29:49.000Z",
+    "readAt": "2026-09-18T23:06:23.292Z"
+  },
+  "country": "pt",
+  "code": "2B",
+  "title": "tf7ace628",
+  "subtitle": null,
+  "levels": [
+    "medium"
+  ],
+  "meta": {
+    "topic": "tcc8d8de8",
+    "outcomes": [
+      {
+        "level": null,
+        "text": "t99f91207"
+      },
+      {
+        "level": null,
+        "text": "te8c043e7"
+      },
+      {
+        "level": null,
+        "text": "t6ee82d80"
+      }
+    ],
+    "time": [
+      {
+        "level": null,
+        "text": "t403231e3"
+      }
+    ],
+    "resources": [
+      {
+        "level": null,
+        "text": "td6ddd281"
+      },
+      {
+        "level": null,
+        "text": "t57219b6d"
+      }
+    ],
+    "extra": []
+  },
+  "sections": [
+    {
+      "kind": "level",
+      "level": "medium",
+      "title": null,
+      "blocks": [
+        {
+          "t": "h",
+          "text": "t65803a19"
+        },
+        {
+          "t": "p",
+          "text": "t5ca37a4c"
+        },
+        {
+          "t": "p",
+          "text": "t85dc2e89"
+        },
+        {
+          "t": "h",
+          "text": "t9e950428"
+        },
+        {
+          "t": "p",
+          "text": "t814c5558"
+        },
+        {
+          "t": "p",
+          "text": "tce57d712"
+        },
+        {
+          "t": "p",
+          "text": "t2e35ace8"
+        },
+        {
+          "t": "box",
+          "title": "ta05c2111",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t9e11aa5d"
+            },
+            {
+              "t": "box",
+              "title": "t1908e453",
+              "blocks": [
+                {
+                  "t": "p",
+                  "text": "t10f11e82"
+                },
+                {
+                  "t": "p",
+                  "text": "t01686a95"
+                },
+                {
+                  "t": "p",
+                  "text": "t1c3c52fe"
+                },
+                {
+                  "t": "p",
+                  "text": "t713965a1"
+                },
+                {
+                  "t": "p",
+                  "text": "te3794025"
+                },
+                {
+                  "t": "p",
+                  "text": "t75be9145"
+                },
+                {
+                  "t": "p",
+                  "text": "t13aa4179"
+                },
+                {
+                  "t": "p",
+                  "text": "t608a0578"
+                },
+                {
+                  "t": "p",
+                  "text": "tafa5b861"
+                },
+                {
+                  "t": "p",
+                  "text": "tb516c5ac"
+                },
+                {
+                  "t": "p",
+                  "text": "tbeb8c3e8"
+                },
+                {
+                  "t": "p",
+                  "text": "t504e3905"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "t": "h",
+          "text": "t1cb43d37"
+        },
+        {
+          "t": "table",
+          "head": [
+            "t22fa6af7",
+            "t0d4aaec0"
+          ],
+          "rows": [
+            [
+              "tf2a0e1b7",
+              "ta8df1819"
+            ],
+            [
+              "t9cd1ab31",
+              "t0d62a09d"
+            ],
+            [
+              "t0f420e78",
+              "t2aca1e53"
+            ],
+            [
+              "t84713ed4",
+              "ta32df8af"
+            ],
+            [
+              "t97046717",
+              "te162a882"
+            ]
+          ]
+        },
+        {
+          "t": "task",
+          "title": "te4d510e9",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t814f9077"
+            },
+            {
+              "t": "p",
+              "text": "tbea37f7d"
+            },
+            {
+              "t": "p",
+              "text": "tbaf3ee54"
+            },
+            {
+              "t": "p",
+              "text": "t85df5b47"
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "te1c1f201",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t3a401db6"
+            },
+            {
+              "t": "p",
+              "text": "t4017a2e6"
+            },
+            {
+              "t": "p",
+              "text": "t6864312d"
+            },
+            {
+              "t": "p",
+              "text": "t76157951"
+            },
+            {
+              "t": "p",
+              "text": "t454b03c1"
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "tab2d66b9",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "td2c78dc5"
+            },
+            {
+              "t": "p",
+              "text": "t9712485f"
+            },
+            {
+              "t": "p",
+              "text": "t6d7bb22a"
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "td31eb275",
+          "blocks": [
+            {
+              "t": "table",
+              "head": [
+                "tbdcbb413",
+                "t50f97d9f",
+                "t75e5befb",
+                "t2262cb2c"
+              ],
+              "rows": [
+                [
+                  "t9ad84ce7",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "t009b761b",
+                  "",
+                  "",
+                  ""
+                ]
+              ]
+            },
+            {
+              "t": "p",
+              "text": "t4df4b17c"
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "t502d4fe7",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t2c7f7597"
+            },
+            {
+              "t": "p",
+              "text": "t10a5654f"
+            },
+            {
+              "t": "p",
+              "text": "t9ac03efd"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "_warnings": []
+}

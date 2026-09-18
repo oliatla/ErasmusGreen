@@ -1,0 +1,312 @@
+{
+  "schema": 1,
+  "id": "pt-what-is-the-impact-of-standby-power",
+  "source": {
+    "type": "docx",
+    "file": "New Worksheets septemeber 2026/Portúgal/PT_Worksheet_1.docx",
+    "modified": "2026-09-07T19:29:47.000Z",
+    "readAt": "2026-09-18T23:06:23.069Z"
+  },
+  "country": "pt",
+  "code": "1A",
+  "title": "t14d3a753",
+  "subtitle": null,
+  "levels": [
+    "basic"
+  ],
+  "meta": {
+    "topic": "tda792d5e",
+    "outcomes": [
+      {
+        "level": null,
+        "text": "t2271cb37"
+      },
+      {
+        "level": null,
+        "text": "ta0562440"
+      },
+      {
+        "level": null,
+        "text": "t9376ee40"
+      }
+    ],
+    "time": [
+      {
+        "level": null,
+        "text": "t403231e3"
+      }
+    ],
+    "resources": [
+      {
+        "level": null,
+        "text": "t5429deaf"
+      },
+      {
+        "level": null,
+        "text": "t57219b6d"
+      },
+      {
+        "level": null,
+        "text": "tfcd94bbe"
+      }
+    ],
+    "extra": []
+  },
+  "sections": [
+    {
+      "kind": "level",
+      "level": "basic",
+      "title": null,
+      "blocks": [
+        {
+          "t": "h",
+          "text": "t65803a19"
+        },
+        {
+          "t": "p",
+          "text": "tee49af97"
+        },
+        {
+          "t": "p",
+          "text": "t3d894789"
+        },
+        {
+          "t": "h",
+          "text": "t9e950428"
+        },
+        {
+          "t": "p",
+          "text": "tf13fffa9"
+        },
+        {
+          "t": "p",
+          "text": "t985bc83f"
+        },
+        {
+          "t": "p",
+          "text": "t0e13c885"
+        },
+        {
+          "t": "p",
+          "text": "tcfa15c5d"
+        },
+        {
+          "t": "p",
+          "text": "t660246c9"
+        },
+        {
+          "t": "box",
+          "title": "t1908e453",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t3dbe53e2"
+            },
+            {
+              "t": "p",
+              "text": "tcececfb5"
+            },
+            {
+              "t": "p",
+              "text": "t97db76ad"
+            },
+            {
+              "t": "p",
+              "text": "t9694f74c"
+            },
+            {
+              "t": "p",
+              "text": "t2635bd68"
+            },
+            {
+              "t": "p",
+              "text": "t55dfb3df"
+            }
+          ]
+        },
+        {
+          "t": "h",
+          "text": "t1cb43d37"
+        },
+        {
+          "t": "table",
+          "head": [
+            "t22fa6af7",
+            "t0d4aaec0"
+          ],
+          "rows": [
+            [
+              "tdef6de4b",
+              "tfb28bbc3"
+            ],
+            [
+              "tc2e0ecc3",
+              "t7744f298"
+            ],
+            [
+              "t216ae37d",
+              "td05b3128"
+            ],
+            [
+              "t18ed160c",
+              "tad12321c"
+            ],
+            [
+              "t35408136",
+              "t21b1a0ca"
+            ]
+          ]
+        },
+        {
+          "t": "task",
+          "title": "tf3db1b3a",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t06d4c814"
+            },
+            {
+              "t": "table",
+              "head": [
+                "tbdcbb413",
+                "t6d1c7e96",
+                "t8285e8fa",
+                "tdef6de4b"
+              ],
+              "rows": [
+                [
+                  "t2af5720f",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "t5edb76ca",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "te60c8ab9",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "tc75e1e27",
+                  "",
+                  "",
+                  ""
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "t829c18b3",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t6dbd41c6"
+            },
+            {
+              "t": "table",
+              "head": [
+                "tbdcbb413",
+                "tbe816fcc",
+                "t9bcdbb4e",
+                "tdd82a664"
+              ],
+              "rows": [
+                [
+                  "t2af5720f",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "t5edb76ca",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "te60c8ab9",
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  "tc75e1e27",
+                  "",
+                  "",
+                  ""
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "t9aa32760",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "tdf316da7"
+            },
+            {
+              "t": "p",
+              "text": "tb986bf85"
+            },
+            {
+              "t": "p",
+              "text": "td4df9864"
+            },
+            {
+              "t": "p",
+              "text": "tb887aaa1"
+            },
+            {
+              "t": "p",
+              "text": "t52d6b2ac"
+            },
+            {
+              "t": "p",
+              "text": "t41d9f9f4"
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "tfbb2c791",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t52967bee"
+            },
+            {
+              "t": "p",
+              "text": "t0b389d6a"
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "tb6c6a2de",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "tb022d65a"
+            },
+            {
+              "t": "p",
+              "text": "t0c959a34"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "_warnings": []
+}

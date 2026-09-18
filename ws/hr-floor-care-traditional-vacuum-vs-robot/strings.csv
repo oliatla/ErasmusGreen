@@ -1,0 +1,89 @@
+key,where,en
+t8a6df6c1,Title,Floor care – traditional vacuum vs. robot vacuum
+t8d2e2631,Info › Topic,**Floor care – traditional vacuum vs. robot vacuum**
+t25f14e87,Info › Learning outcomes,"**Technical knowledge:** Students compare energy consumption, cleaning effectiveness, and convenience of different vacuum types."
+tf688ffb9,Info › Learning outcomes,**Mathematical skills:** Students calculate annual energy costs and lifecycle costs including purchase price and replacement parts.
+t60749985,Info › Learning outcomes,"**Environmental awareness:** students understand that ""convenience"" can increase energy use if devices run unnecessarily."
+teb6520fc,Info › Learning outcomes,**Green skills:** Students evaluate the trade-offs between cleaning performance and energy use
+t5431687b,Info › Time needed,60 min
+ta8bf39a0,Info › Resources,"Calculator, electricity tariff (e.g., 0.30 €/kWh), product specifications from manufacturer websites or appliance labels."
+t65803a19,Basic › subheading,Introduction
+t41d71caa,Basic › bullet 1,"Keeping floors clean is a daily or weekly household task. The choice of vacuum cleaner has changed dramatically – where once only corded upright or cylinder machines existed, robotic vacuums now navigate rooms autonomously. But which option uses more energy? The answer depends not only on the motor power but also on how often and how long the device runs. In this worksheet you will calculate and compare the true energy cost of floor care."
+t9e950428,Basic › subheading,Theory
+tac6fef09,Basic › bullet 1,"**Traditional vacuum cleaners** use a motor of typically **700–2,400 W** for corded models. Since 2014., **EU regulation (EU) No 666/2013**regulations have capped the rated power of vacuum cleaners to **900 W.** Higher power (wattage) does not necessarily mean better suction – filter condition and nozzle design matter more. A typical cleaning session lasts **30–60 minutes**."
+t50981a3e,Basic › bullet 2,"**Robotic vacuums** use a much smaller motor, typically **20–100 W** but run for longer sessions (**60–150 minutes**) and often run daily rather than weekly. They also draw power when docked for charging (typically **3–25 W standby**). Some models run at night when the user is sleeping."
+t74c48901,Basic › bullet 3,"**Cleaning frequency** matters enormously for energy totals. A traditional vacuum used once a week uses far less energy per year than a robotic vacuum running every day, even if its power is lower."
+tc30fd6e4,Basic › bullet 4,**EU energy labels** for vacuum cleaners show:
+te5bbdba4,Basic › bullet 5,"rated power (W),"
+t518809d1,Basic › bullet 6,"annual energy use (kWh, based on 50 cleaning cycles per year),"
+t35aae82a,Basic › bullet 7,dust re-emission
+t65ac9d29,Basic › bullet 8,"class,"
+tb3a020e8,Basic › bullet 9,"noise level (dB),"
+t9a3c70a4,Basic › bullet 10,and cleaning performance on carpet and hard floors.
+t638a3da2,Basic › bullet 11,Read and watch videos to get an intro about how vacuum cleaners work and what is the difference between them:
+tc80cd894,Basic › item 1,**How Vacuum Cleaners Work**
+tce9d405e,Basic › item 1,**How Robotic Vacuums Work**
+te9442df0,Basic › video,Best Vacuum Cleaner For Home 2026
+t1908e453,Basic › box,Worked example
+t33676e16,Basic › Worked example › bullet 1,"**Traditional vacuum:** 900 W, used for 45 min per session, once a week = 52 sessions/year."
+tf2843138,Basic › Worked example › bullet 2,**Annual energy:** 0.9 kW × 0.75 h × 52 = 35.1 kWh
+t494043d1,Basic › Worked example › bullet 3,"**Robotic vacuum:** 35 W, runs 90 min/day, 7 days/week = 365 sessions/year. Standby: 8 W for 22.5 h/day."
+tbae595cb,Basic › Worked example › bullet 4,**Run energy:** 0.035 kW × 1.5 h × 365 = 19.2 kWh
+t90b8f696,Basic › Worked example › bullet 5,**Standby energy:** 0.008 kW × 22.5 h × 365 = 65.7 kWh (standby power varies; check your specific model).
+tde6b3949,Basic › Worked example › bullet 6,**Robotic total:** 84.9 kWh — much more than the traditional vacuum!
+taf22eadb,Basic › Task 1 › title,Data collection and comparison
+t3016a7f6,Basic › Task 1 › Q,"Use the table below. Fill in values from appliance labels or manufacturer websites, or use the defaults provided."
+t3bef6ea4,Basic › Task 1 › table r0c1,Appliance
+tb048662b,Basic › Task 1 › table r0c2,Motor power (W)
+t0dff66ca,Basic › Task 1 › table r0c3,Session length (min)
+t87f4f001,Basic › Task 1 › table r0c4,Sessions per week
+t1be3f3d7,Basic › Task 1 › table r0c5,Standby power (W)
+tdd0c2265,Basic › Task 1 › table r1c1,Corded cylinder vacuum
+t2f81de07,Basic › Task 1 › table r2c1,Cordless stick vacuum
+t4d9e2faf,Basic › Task 1 › table r2c5,15 (charging)
+t4e907b6b,Basic › Task 1 › table r3c1,Robotic vacuum (daily schedule)
+tf7920d58,Basic › Task 1 › table r3c5,"8 (docked, 22.5 h/day)"
+t19a9b059,Basic › Task 1 › table r4c1,Your appliance
+tb726d764,Basic › Task 1 › Q,"For each appliance, calculate the annual energy use in kWh (including standby energy for the robotic vacuum)"
+t44787d35,Basic › Task 1 › Q,Calculate the annual electricity cost (€) for each at 0.30 €/kWh. Which is most expensive to run?
+t8d2194d3,Basic › Task 1 › Q,"If the robotic vacuum ran only 4 days per week instead of 7, how much would the annual energy use change?"
+t3b346ae9,Basic › Task 1 › Q,"What type of battery is typically used (Li-ion, NiMH)? How many charge cycles before replacement? Calculate the cost per year of battery replacement."
+t2ee4e59c,Basic › Task 2 › title,Standby and vampire power
+t6090cd30,Basic › Task 2 › bullet 1,"'Vampire power' or 'phantom load' is electricity consumed by devices when not in active use – charging on a dock, waiting in standby, or displaying a status light."
+t3015e2d0,Basic › Task 2 › Q,Calculate the annual standby energy of the robotic vacuum in kWh (8 W × 22.5 h/day × 365 days). What percentage of its total annual energy is this?
+t8aec6cb9,Basic › Task 2 › Q,A smart power strip could cut standby to zero. How much money per year would this save? Is it worth paying 15 € for the strip?
+t3d641d00,Basic › Task 2 › Q,**Research:** find two other household devices with significant standby consumption. Estimate their annual standby energy.
+t46c7dd77,Basic › Task 3 › title,Lifecycle cost including purchase price
+tc43f8695,Basic › Task 3 › Q,**Research**: find information and fill in the table.
+t996a15a6,Basic › Task 3 › table r0c1,Vacuum type
+td4510c88,Basic › Task 3 › table r0c2,Purchase price (€)
+tadf57ad3,Basic › Task 3 › table r0c3,Lifetime (years)
+t4a2cd95c,Basic › Task 3 › table r0c4,Annual energy cost (€)
+t18ea339c,Basic › Task 3 › table r0c5,Replacement parts (€/year)
+tfc942662,Basic › Task 3 › table r1c1,Traditional
+t73d1357f,Basic › Task 3 › table r2c1,Robot
+tc72bde99,Basic › Task 3 › Q,Calculate 10-year total cost for each vacuum (purchase + energy + parts). Assume you buy a second robot after 5 years.
+t0e6563cc,Basic › Task 3 › Q,Which is cheaper over 10 years?
+tc6859b78,Basic › Task 4 › title,"The Carbon price of ""convenience"""
+tf95b715c,Basic › Task 4,"Traditional vacuum (900 W, 45 min weekly) vs. robot vacuum (35 W, 90 min daily + standby)."
+t8f396457,Basic › Task 4 › Q,Calculate annual CO₂ emissions for both (0.27 kg CO₂/kWh).
+te9115502,Basic › Task 4 › Q,How many times more CO₂ does the robot vacuum emit?
+tcf3415cc,Basic › Task 4 › Q,"If the robot runs only 4 days instead of 7 days per week, what is the annual saving in kg CO₂?"
+tfd7585e1,Basic › box,Peer-to-peer tip
+ta05c2111,Basic › Task 4 › Peer-to-peer tip › box,Did you know?
+tdc9e2cd0,Basic › Task 4 › Peer-to-peer tip › Did you know?,Empty the robot's bin regularly – a full bin reduces suction and makes the robot run longer.
+t443dc56a,Basic › Task 4 › Peer-to-peer tip › Q,How does towel-dryiog save energy and time?
+t7d364c58,Basic › Task 4 › Peer-to-peer tip › Q,How does that affect energy use?
+t971574c4,Basic › subheading,Reflection
+tef665f3e,Basic › Q,"Consider a student living in a small flat who cleans once a week. Which vacuum type would you recommend and why? Use energy and practical arguments (noise, convenience, cost to buy)."
+t8dbda40a,Basic › Q,"Does a robot vacuum encourage people to clean more often? If a home was previously vacuumed once a week but the robot runs daily, does that increase or decrease total energy use? Justify."
+tdd1ca63d,Basic › Q,Would you recommend a robot vacuum for a small apartment (40 m²) or a large house (150 m²)? Explain using energy and cost arguments.
+tb9256bf7,Basic › Q,How would installing photovoltaic panels on the school roof affect this carbon footprint calculation?
+tdc65667e,Basic › subheading,Additional tasks for electrical engineering students
+t2c1a6d02,Basic › Q,"Draw a block diagram of traditional vacuum cleaner (major components), indicate typical power ratings of each component."
+t78e454ce,Basic › Q,Why does a vacuum cleaner have a low power factor (cos φ ≈ 0.7-0.8)? How does this affect the electricity bill?
+t7fa37c92,Basic › Q,"If a vacuum draws 900 W at 230 V with cos φ = 0.75, calculate the current (I = P/(V×cos φ))"
+t75cb10be,Basic › Q,A vacuum cleaner has 900 W electrical input but only 150 W of suction power (air watts). Calculate the efficiency. Where does the rest of the energy go?
+t21ee7e2a,Basic › Q,"Draw a block diagram of a robot vacuum (major components), indicate typical power ratings of each component."
+t837fb50d,Basic › Q,"What type of motor does a robot vacuum use (brushed DC, BLDC) and why?"
+t01d3f583,Basic › bullet 1,"(BLDC advantages: efficiency, noise, lifetime. Disadvantages: cost, control of electronics)."

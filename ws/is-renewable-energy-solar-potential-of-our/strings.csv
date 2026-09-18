@@ -1,0 +1,120 @@
+key,where,en
+t9873afdd,Title,Renewable Energy – Solar Potential of our School
+tfa646bd7,Subtitle,"Comprehensive Multilevel Assignment Framework: BASIC, MEDIUM & ADVANCED Levels"
+ta86ea83d,Info › Topic,**Renewable Energy – Solar Potential of our School**
+tfbbcb4e0,Info › Learning outcomes,"**Technical knowledge:** Students learn about solar PV systems, orientation, and how geographic location affects energy yield."
+t5ead10fb,Info › Learning outcomes,**Mathematical skills:** Students calculate potential energy production (kWh) based on surface area (m²) and solar irradiance.
+t05b46774,Info › Learning outcomes,**Environmental awareness:** Students understand the role of renewables in reducing carbon footprints and the seasonal nature of energy in the North.
+t6a642a18,Info › Learning outcomes,**Green skills:** Critical thinking regarding the feasibility and ROI (Return on Investment) of green technology.
+tac45e1cc,Info › Time needed,60 - 120 minutes
+t5385859e,Info › Resources,"Internet access, Google Maps (for roof area), [PVGIS Tool](https://re.jrc.ec.europa.eu/pvg_tools/en/) or [Renewables.ninja,](https://www.renewables.ninja/) and a calculator."
+t991d74eb,Introduction & Theoreti… › heading,Introduction & Theoretical Background
+tb287fd0e,Introduction & Theoreti…,"To build a sustainable future, educational institutions are shifting focus from simply reducing electricity use to actively generating their own clean energy. By turning unused roof infrastructure into local micro-power plants using solar photovoltaic (PV) technology, schools can drastically reduce their dependence on central utility grids."
+t17ee0a78,Introduction & Theoreti…,"However, solar production is highly dynamic. The energy yield of a solar array depends on several geographic, environmental, and physical variables: roof orientation, tilt angles, panel surface area, hardware conversion efficiency, and solar irradiance. In northern latitudes, solar energy features extreme seasonal swings—producing massive surpluses in the summer but dropping drastically during long, dark winter months. Curiously, cold weather actually enhances panel performance, as semiconductor cells transfer electrical charges more efficiently at lower temperatures, provided they are not blocked by snow."
+t137db20f,Core Concepts & Enginee… › heading,Core Concepts & Engineering Variables
+t5f21a8f9,Core Concepts & Enginee… › bullet 1,**Solar Photovoltaic (PV) Panels:** – Devices containing semiconductor materials (usually silicon) that convert sunlight directly into DC electrical energy via the photovoltaic effect.
+t9819bd2f,Core Concepts & Enginee… › bullet 2,**Kilowatt-Peak (kWp):** – The maximum rated electrical power output of a PV system under standard testing conditions (STC). Measured in Kilowatt-peak (kWp).
+t315f3415,Core Concepts & Enginee… › bullet 3,**Solar Irradiance:** – The amount of solar power striking a specific surface area over time. Usually expressed as Kilowatt-hours per square meter per year (kWh/m²/year).
+t058c3546,Core Concepts & Enginee… › bullet 4,"**Orientation & Azimuth:** – The physical alignment of solar panels relative to the compass. In the Northern Hemisphere, true South-facing roofs receive the maximum daily solar exposure."
+tccfa2dd3,Core Concepts & Enginee…,"To calculate potential solar yield, engineers use these foundational steps:"
+t66d25c79,Core Concepts & Enginee… › bullet 1,Potential System Size (kWp) = Roof Surface Area (m²) × Panel Peak Output per m² (kW/m²)
+t334d8e3f,Core Concepts & Enginee… › bullet 2,Annual Energy Value (€) = Total Yearly Production (kWh) × Local Electricity Price (€/kWh)
+t83dafe8d,Standard Solar Panel Te… › heading,Standard Solar Panel Technical Reference Table
+td866da97,Standard Solar Panel Te…,The properties below represent standard baselines for planning modern commercial/institutional roof-mounted solar installations:
+t0d1216d1,Standard Solar Panel Te… › table r0c1,Solar Technology Variant
+tbe03c311,Standard Solar Panel Te… › table r0c2,Average Module Efficiency
+tc23719b3,Standard Solar Panel Te… › table r0c3,Peak Power per m²
+t494e90c0,Standard Solar Panel Te… › table r0c4,Key Structural Characteristic
+t89956fc3,Standard Solar Panel Te… › table r1c1,Monocrystalline Silicon
+t79543faa,Standard Solar Panel Te… › table r1c2,20.0 %
+tce981bcf,Standard Solar Panel Te… › table r1c3,0.20 kW / m²
+t2954eb71,Standard Solar Panel Te… › table r1c4,Highest efficiency; operates best in cold climates.
+t99e9e5f8,Standard Solar Panel Te… › table r2c1,Polycrystalline Silicon
+ta69e8bff,Standard Solar Panel Te… › table r2c2,16.0 %
+tae0796d2,Standard Solar Panel Te… › table r2c3,0.16 kW / m²
+ta7e339b8,Standard Solar Panel Te… › table r2c4,Lower production per m²; cheaper upfront manufacturing costs.
+t877a12d2,Standard Solar Panel Te… › table r3c1,Thin-Film PV Panels
+tcc63d75b,Standard Solar Panel Te… › table r3c2,12.0 %
+t26a5ce16,Standard Solar Panel Te… › table r3c3,0.12 kW / m²
+t06757f7c,Standard Solar Panel Te… › table r3c4,Flexible and lightweight; significantly lower layout efficiency.
+tf38be120,Standard Solar Panel Te… › table r4c1,Bifacial Solar Modules
+t287c71c6,Standard Solar Panel Te… › table r4c2,22.0 % (Combined)
+t268827b9,Standard Solar Panel Te… › table r4c3,0.22 kW / m²
+tf7bb20b3,Standard Solar Panel Te… › table r4c4,Captures reflected light from both sides; excellent on light or snowy ground.
+t2bfd0783,Basic › box,Target Learning Outcomes
+t02e6f566,Basic › Target Learning Outcomes,"*Extract baseline solar panel specifications from technical tables, read structural components, and recognize fundamental solar conditions.*"
+t3b551439,Basic › Task 1 › title,Core Parameter Identification
+tcedfc79d,Basic › Task 1 › Q,Look closely at the Solar Technical Reference table. Which specific panel variant delivers the highest operational power output per square meter?
+td32703b3,Basic › Task 1 › Q,"If you lay down exactly 1 square meter of Monocrystalline Silicon solar panel under standard peak sunlight, how much electrical power (in kW) will it generate?"
+t46e6fb58,Basic › Task 1 › Q,"True or False: Solar panels lose all efficiency when the ambient air temperature drops below freezing, making them useless in cold climates."
+t5b281aa8,Basic › Task 1 › Q,Why does a South-facing roof section provide a better layout position for solar energy arrays in the Northern Hemisphere compared to a North-facing roof section?
+tcbb63c0e,Basic › Task 2 › title,General Solar Concepts Match
+te6435b1d,Basic › Task 2,Select or circle the correct multiple-choice response based on environmental science principles:
+t50317a56,Basic › Task 2 › Q,"If an active snowstorm completely covers your school's solar panel array under a thick layer of snow, the system's power generation will:"
+t290a76f9,Basic › Task 2 › Q option,Increase due to reflections [ B ] Drop close to zero [ C ] Stay exactly the same
+tb75c76b6,Basic › Task 2 › Q,The abbreviation 'kWp' stands for:
+t157447ea,Basic › Task 2 › Q option,Kilowatt-peak [ B ] Kilowatt-pressure [ C ] Kinetic-wattage-potential
+tc1c2fa8c,Medium › heading,The Solar Potential Audit
+t0d4c0878,Medium › Target Learning Outcomes,"*Measure real-world roof geometry using satellite maps, configure systemic power ratings, fetch cloud database metrics via PVGIS, and model financial returns.*"
+t187cf962,Medium › Task 1 › title,School Site Geometry Analysis
+t2d5540e4,Medium › Task 1 › Q,"Open Google Maps (activate Satellite View) and locate your school campus. Identify a clean, unshaded section of the roof layout (such as a flat zone or a South-facing sloped roof)."
+tad0c3984,Medium › Task 1 › Q,Use the map's built-in right-click 'Measure distance' tool to map the boundaries and calculate the active area:
+t5a32d027,Medium › Task 1 › Q item,Measured Roof Surface Area (A): _________________ m²
+t3f6d86ed,Medium › Task 1 › Q,Technical Configuration Baseline: Assume standard Monocrystalline panels where 1 m² produces exactly 0.20 kW of power under peak conditions.
+t76edcccd,Medium › Task 1 › Q,Calculate your school's Potential System Size in Kilowatt-peak (kWp):
+td77dee39,Medium › Task 1,Formula: System Size (kWp) = Measured Area (m²) × 0.20 kW/m²
+te582cf68,Medium › Task 1,Calculation: ____________________________________________________________________
+tbec8fa6f,Medium › Task 1,Answer: Potential System Size = _________________ kWp
+ta4fcd77d,Medium › Task 2 › title,Solar Generation Modeling & PVGIS Interface
+t2ada00d9,Medium › Task 2,"Instructions: Navigate to the official PVGIS Tool (or an approved alternative database like Renewables.ninja). Input your school's latitude/longitude coordinates, specify your calculated 'Installed Peak PV Power' value from above, select crystalline silicon technology, and execute the simulation."
+t0c5fcff4,Medium › Task 2,Extract the resulting database values below:
+tac22c952,Medium › Task 2 › Q,**Annual Energy Production:** Total Solar Energy Produced over a full year: _________________ kWh
+tbe13189c,Medium › Task 2 › Q,**Peak Production Month:** Month with maximum production: _________________ | Monthly Output: _________________ kWh
+tca5562fd,Medium › Task 2 › Q,**Lowest Production Month:** Month with minimum production: _________________ | Monthly Output: _________________ kWh
+t521b21b2,Medium › Task 3 › title,Financial Valuation & Electric Mobility Translation
+t4a5d7875,Medium › Task 3,Scenario Assumptions: The local commercial electricity tariff charged to the school is €0.30 per kWh. A standard electric vehicle (EV) consumes 20 kWh of electricity for every 100 kilometers traveled.
+t80c33b47,Medium › Task 3 › Q,Calculate the gross annual financial value generated by this solar array:
+tcedc12bc,Medium › Task 3,Formula: Annual Value (€) = Total Yearly Production (kWh) × €0.30 / kWh
+t67ff4057,Medium › Task 3,Calculation: __________________________________________________ | Answer: _________________ € / Year
+td16f2f54,Medium › Task 3 › Q,Determine how many kilometers an electric school bus or EV could travel using one year of your solar production:
+t56120a38,Medium › Task 3,Formula: Total Range (km) = (Total Yearly Production (kWh) / 20 kWh) × 100 km
+ta82472a9,Medium › Task 3,Calculation: __________________________________________________ | Answer: _________________ km
+tfb2a7903,Medium › Task 4 › title,Strategic Consultant Feedback & Seasonality Evaluation
+t07ebdcad,Medium › Task 4,"Reflection: Compare the production of your peak summer month to your lowest winter month. How does this extreme seasonality impact the school's 'Green' carbon neutrality goals, and does it change your perspective on the importance of aggressive energy conservation during the dark winter?"
+t63988a48,Medium › Task 4,Student Evaluation Workplace:
+t01c679d9,Medium › Task 4,"Action Plan: As an energy consultant, recommend two concrete actions for the school to handle low winter production:"
+t5210531b,Medium › Task 4 › Q,"**1. Technical Suggestion** (e.g., localized energy storage systems, tracking mounts, panel cleaning strategies): __________________________________________________________________________________"
+tbabe193b,Medium › Task 4 › Q,"**2. Policy/Grid Suggestion** (e.g., net-metering contracts, seasonal tariff agreements with the grid operator): __________________________________________________________________________________"
+t98acb374,Advanced › heading,ENGINEERING & SUSTAINABILITY LOGISTICS
+t65a4050f,Advanced › Target Learning Outcomes,"*Formulate systemic solar yield equations, evaluate Net Present Value (NPV) financial returns, analyze capacity factors, and assess microgrid balance during peak seasonal swings.*"
+t65520b0c,Advanced › subheading,Advanced PV Engineering Formulation
+t13d5564f,Advanced,"To analyze solar investments over time, solar engineers do not rely on rough estimates. They evaluate actual solar irradiance data mapped against specific system degradation profiles. The net energy yield generated by a PV system over its operational life is modeled by:"
+t60c63fa9,Advanced › subheading,E_lifetime = ∑ [ A × η_module × I_annual × (1 - d)^n × PR ]
+t1262e464,Advanced,"Where: A = total panel area (m²); η = module conversion efficiency; I = annual solar irradiance (kWh/m²/year); d = annual panel degradation rate; n = operational year index; and PR = Performance Ratio (accounting for inverter losses, wiring friction, and thermal drops)."
+t430e8a6d,Advanced › Task 1 › title,Mathematical Modeling & Lifetime Yield Auditing
+t47e8d538,Advanced › Task 1,System Parameters: Consider a proposed high-capacity school solar installation with these exact specifications:
+t90311bfb,Advanced › Task 1 › bullet 1,Planned Array Layout Area (A) = 600 m²
+tc16199dc,Advanced › Task 1 › bullet 2,"Premium Module Efficiency (η_module) = 21% (0.21) | Irradiance index (I_annual) = 1,100 kWh/m²/year"
+t141c13e1,Advanced › Task 1 › bullet 3,Fixed System Performance Ratio (PR) = 0.82
+t19b00eef,Advanced › Task 1 › bullet 4,Linear Annual Degradation Rate (d) = 0.5% (0.005) per year
+t17d5f8c1,Advanced › Task 1 › Q,Compute the absolute un-degraded energy generation (Year 1) from this system in Kilowatt-hours (kWh):
+t77509166,Advanced › Task 1,Calculation Setup: _________________________________________________________________________________________________
+t16ef06e0,Advanced › Task 1,Answer: Year 1 Energy Yield = _________________ kWh
+t83dc3b73,Advanced › Task 1 › Q,"Calculate the expected energy generation in Year 20, accounting for the cumulative 20 years of module degradation:"
+tffc58a54,Advanced › Task 1,Formula Guide: E_year20 = E_year1 × (1 - 0.005)²⁰
+t36dcc364,Advanced › Task 1,Calculation Workplace:
+t350db72f,Advanced › Task 1,Answer: Year 20 Energy Yield = _________________ kWh
+tef68dd73,Advanced › Task 2 › title,Financial Capital Budgeting & ROI Break-Even Analysis
+tc44e3913,Advanced › Task 2,"Financial Parameters: The total capital expenditure (CapEx) to purchase and install this 126 kWp system is exactly €110,000. Assume the school saves money at a constant rate of €0.30 per kWh generated, and ignore module degradation for this quick estimation step."
+t2cbe50ee,Advanced › Task 2 › Q,Calculate the gross financial savings generated by the system each year:
+t0d5712d7,Advanced › Task 2 › Q,Calculate the simple financial payback period (break-even point in years) for this investment:
+te9a736f9,Advanced › Task 2,Calculation: __________________________________________________ | Answer: _________________ Years
+t7a7764d7,Advanced › Task 2 › Q,"Infrastructure Investment Analysis: If commercial PV systems drop in production performance by 20% over 25 years, while utility power tariffs are projected to rise by 4% annually due to inflation, explain how these matching variables alter the true long-term Return on Investment (ROI) and payback models:"
+t96044d79,Advanced › Task 3 › title,Microgrid Storage & Seasonal Seasonality Auditing
+ta7edb46e,Advanced › Task 3,"Extreme Northern Swing Challenge: A school located in Akureyri, Iceland experiences steep solar variance:"
+t9de2644c,Advanced › Task 3 › bullet 1,"Total June Production = 18,500 kWh | Total December Production = 150 kWh"
+tda75a9f4,Advanced › Task 3 › bullet 2,"The school building requires a steady baseline energy intake of exactly 8,000 kWh per month all year long."
+t5376f824,Advanced › Task 3 › Q,Evaluate the structural limits of this setup: Calculate the massive energy surplus in June and the energy deficit in December relative to the school's baseline requirement:
+t29a23770,Advanced › Task 3 › Q item,June Balance (Surplus) = _________________ kWh
+tf3e1972f,Advanced › Task 3 › Q item,December Balance (Deficit) = _________________ kWh
+te2323227,Advanced › Task 3 › Q,"Advanced Technical Synthesis: Based on these extreme balances, critique the feasibility of building an entirely self-sufficient 'Off-Grid' solar system for this school using battery storage alone. Address the physical limits of carrying a June surplus over to December, battery self-discharge risks, and why intermediate net-metering grid links or hybrid wind/geothermal solutions remain critical:"

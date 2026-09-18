@@ -1,0 +1,146 @@
+key,where,en
+t505e1840,Title,Small kitchen appliances
+te81bdba9,Info › Topic › basic,Hidden energy users in the kitchen
+tfb987fb8,Info › Topic › medium,Calculating the real cost of small appliances
+tff667585,Info › Topic › advanced,"Standby power, phantom loads and smart solutions"
+tfb9c81ce,Info › Learning outcomes › basic,"Students will identify small kitchen appliances (kettle, toaster, coffee machine), understand their power ratings, and recognise the concept of standby power."
+t008aeaaf,Info › Learning outcomes › medium,"Students will calculate consumption and cost for daily use patterns, compare appliances, and evaluate the impact of standby power."
+t0a136684,Info › Learning outcomes › advanced,"Students will model total small-appliance energy profiles, analyse phantom loads, evaluate smart plug solutions, and propose household efficiency strategies."
+t5431687b,Info › Time needed › basic,60 min
+t98b9f7b8,Info › Time needed › medium,90 min
+tfa15a37e,Info › Time needed › advanced,120 min
+tf49322ae,Info › Resources › basic,Appliance data table (in this worksheet); observation of appliances at home.
+tcd609345,Info › Resources › medium,Calculator; electricity tariff; standby power measurements or estimates.
+t65c36566,Info › Resources › advanced,Spreadsheet software; smart plug specifications; CO₂ emission factors.
+t65803a19,Basic › subheading,Introduction
+t4e9d2b2b,Basic,"Besides the refrigerator and oven, kitchens contain many smaller electrical appliances: kettles, toasters, coffee machines, blenders, and more. Individually, each one uses relatively little energy. But used together, several times a day, they can add up to a surprising amount."
+t2c8cd097,Basic,"An often-overlooked issue is STANDBY POWER – the electricity consumed by appliances that are plugged in but not actively in use. A coffee machine displaying the time, a microwave with a glowing clock, or a kettle with an illuminated base all consume standby power continuously."
+t9e950428,Basic › subheading,Theory
+t495ef39c,Basic,"Small kitchen appliances generally have high power ratings but short usage times. An electric kettle uses 2,000–3,000 W but only runs for a few minutes. The total energy per use is therefore small."
+tb5188ef2,Basic,"STANDBY POWER typically ranges from 0.5 to 5 W per appliance. This seems negligible, but a device consuming 3 W continuously uses:"
+ta9347876,Basic,"3 W × 24 h × 365 days ÷ 1,000 = 26.3 kWh per year"
+t63ffc10f,Basic,"With 5–10 appliances on standby in a kitchen, this can exceed 100–200 kWh per year – equivalent to running a modern refrigerator."
+t1908e453,Basic › box,Worked example
+tdaed6bdf,Basic › Worked example,"**A coffee machine uses 1,200 W during brewing (5 min) and 3 W on standby (23 h 55 min).**"
+t53e591bb,Basic › Worked example,"**Active: 1,200 × 5/60 ÷ 1,000 = 0.10 kWh**"
+t46721bce,Basic › Worked example,"**Standby: 3 × 23.92/1,000 = 0.072 kWh**"
+t8ea7be28,Basic › Worked example,**Total daily: 0.172 kWh**
+tbc7597c8,Basic › Worked example,"**Surprisingly, standby accounts for 42% of the daily consumption!**"
+t1cb43d37,Basic › subheading,Key terms
+t22fa6af7,Basic › table r0c1,Term
+t0d4aaec0,Basic › table r0c2,Definition
+t84b24feb,Basic › table r1c1,Standby power
+t0ee81605,Basic › table r1c2,Electricity consumed by a plugged-in appliance when it is not performing its main function.
+t2428bbe6,Basic › table r2c1,Phantom load
+tb154d875,Basic › table r2c2,"Another name for standby power – energy ""leaking"" from appliances that appear to be off."
+tdb7cf4ee,Basic › table r3c1,Smart plug
+tc9eb553f,Basic › table r3c2,"A device that can automatically cut power to appliances, eliminating standby consumption."
+ta49a5eac,Basic › table r4c1,Power strip
+t71fdd70e,Basic › table r4c2,"A multi-socket extension with an on/off switch, allowing multiple appliances to be truly disconnected."
+t342b588b,Basic › table r5c1,Duty cycle
+t72df4cc1,Basic › table r5c2,The fraction of time an appliance is actively operating versus idle or on standby.
+t235c24cb,Basic › Task 1 › title,Small appliance inventory
+te2f665ab,Basic › Task 1,Look at the table below showing typical small kitchen appliances.
+t3bef6ea4,Basic › Task 1 › table r0c1,Appliance
+tbd185fae,Basic › Task 1 › table r0c2,Active power (W)
+t1743b37d,Basic › Task 1 › table r0c3,Typical use per day
+t1be3f3d7,Basic › Task 1 › table r0c4,Standby power (W)
+t65d5dccd,Basic › Task 1 › table r1c1,Electric kettle
+teb6f69ea,Basic › Task 1 › table r1c2,"2,200 W"
+t40ed4ab5,Basic › Task 1 › table r1c3,4 min × 3 uses = 12 min
+tffe90573,Basic › Task 1 › table r1c4,0.5 W
+t37ddcfc7,Basic › Task 1 › table r2c1,Toaster
+t4c4cb0d5,Basic › Task 1 › table r2c2,"1,000 W"
+tacf141f6,Basic › Task 1 › table r2c3,3 min × 2 uses = 6 min
+t54630d63,Basic › Task 1 › table r2c4,0 W (no standby)
+tdb3adf4e,Basic › Task 1 › table r3c1,Coffee machine (drip)
+tf68fa02f,Basic › Task 1 › table r3c2,"1,200 W"
+t0281e027,Basic › Task 1 › table r3c3,5 min × 2 uses = 10 min
+te02842c3,Basic › Task 1 › table r3c4,3 W
+t4b1ad71a,Basic › Task 1 › table r4c1,Coffee machine (capsule)
+t17f73249,Basic › Task 1 › table r4c2,"1,400 W"
+t0b8cd3ce,Basic › Task 1 › table r4c3,1 min × 3 uses = 3 min
+t465ab019,Basic › Task 1 › table r4c4,1 W
+t0b2c214f,Basic › Task 1 › table r5c1,Blender
+t7b33a3a5,Basic › Task 1 › table r5c2,500 W
+t89f9ce15,Basic › Task 1 › table r5c3,2 min × 1 use = 2 min
+t82a38f7e,Basic › Task 1 › table r5c4,0 W
+tefa13522,Basic › Task 1 › table r6c1,Electric hand mixer
+tbfcfee93,Basic › Task 1 › table r6c2,300 W
+ta665073b,Basic › Task 1 › table r6c3,5 min × 0.5 use = 2.5 min
+taa807e4c,Basic › Task 1 › Q,Which appliance has the highest power rating? Which has the lowest? Does higher power mean higher daily energy use?
+t4c2f5735,Basic › Task 1 › Q,Which appliances have standby power? How many hours per day are they on standby?
+tef64c161,Basic › Task 1 › Q,"A student says: ""My kettle uses 2,200 W, so it must be the biggest energy waster in the kitchen."" Do you agree or disagree? Explain."
+t6beddb7e,Basic › Task 1 › Q,Name two actions you can take today to reduce standby power consumption in your kitchen.
+t2c0944ad,Basic › Task 2 › title,Standby power detectives
+t415bbdb8,Basic › Task 2,"Walk around your kitchen at home (or the school kitchen). List every appliance that is plugged in and identify which ones have a light, display, or indicator when not in active use."
+t798a6f22,Basic › Task 2 › Q,"List at least 5 kitchen appliances that are plugged in at home. For each, note whether it has a visible standby indicator (light, clock, display)."
+t4ee52296,Basic › Task 2 › Q,Estimate the total standby power in your kitchen (in Watts). Multiply by 24 hours and 365 days to estimate the annual standby energy in kWh.
+t6d1a1dc3,Medium,"At this level you will calculate the exact energy consumption and cost of small kitchen appliances, separating active use from standby power. You will discover that standby consumption can rival or exceed active consumption for some appliances."
+tf337a054,Medium,"**What you should already know: You should be able to identify small kitchen appliances and their power ratings, understand the concept of standby power, and know the formula Energy (kWh) = Power (W) × Time (h) ÷ 1,000.**"
+t5ffc7887,Medium,"For appliances with standby power, the total daily energy consumption has two parts:"
+t3c7ebc55,Medium,Total daily kWh = Active kWh + Standby kWh
+t06fb4a12,Medium,"Active kWh = Active power (W) × Active time (h) ÷ 1,000"
+ta1243091,Medium,"Standby kWh = Standby power (W) × Standby time (h) ÷ 1,000"
+tcf96eb84,Medium,Standby time = 24 h – Active time
+tc3a21ab3,Medium › Worked example,"**Electric kettle: 2,200 W active, 12 min/day active, 0.5 W standby.**"
+tb450bd02,Medium › Worked example,"**Active: 2,200 × (12/60) ÷ 1,000 = 0.440 kWh**"
+tb2f1d202,Medium › Worked example,"**Standby: 0.5 × (23.8) ÷ 1,000 = 0.012 kWh**"
+tac0abb43,Medium › Worked example,**Total: 0.452 kWh/day → 165 kWh/year**
+ted86c16c,Medium › Worked example,**Annual cost at €0.30/kWh: €49.50**
+t0412635b,Medium › Worked example,**Standby share: 0.012/0.452 = 2.7%**
+t2675a9e5,Medium › Worked example,"**Coffee machine: 1,200 W active, 10 min/day, 3 W standby.**"
+tc0a830cb,Medium › Worked example,"**Active: 1,200 × (10/60) ÷ 1,000 = 0.200 kWh**"
+tc40d8628,Medium › Worked example,"**Standby: 3 × (23.83) ÷ 1,000 = 0.071 kWh**"
+te1b5c7d0,Medium › Worked example,**Total: 0.271 kWh/day → 99 kWh/year**
+ta204f50e,Medium › Worked example,**Standby share: 0.071/0.271 = 26.4%**
+t33e7a75c,Medium › table r1c1,Active consumption
+t85d08659,Medium › table r1c2,Energy used while the appliance is performing its main function.
+t7aef09a5,Medium › table r2c1,Standby consumption
+t34fe2763,Medium › table r2c2,Energy used while the appliance is plugged in but idle.
+te35a45c9,Medium › table r3c1,Standby ratio
+t98bc4d61,Medium › table r3c2,The percentage of total energy that comes from standby power.
+tc36b5251,Medium › table r4c1,Smart power strip
+t12dbe057,Medium › table r4c2,A power strip that automatically cuts standby power when appliances are not in use.
+t22eba6f7,Medium › Task 1 › title,Complete energy profile
+t174e95bb,Medium › Task 1,"Calculate the daily energy for each appliance, separating active and standby. Use a tariff of €0.30/kWh."
+t4b73020c,Medium › Task 1 › table r0c2,Active kWh/day
+t482e8a41,Medium › Task 1 › table r0c3,Standby kWh/day
+ta674724e,Medium › Task 1 › table r0c4,Total kWh/day
+t8e543700,Medium › Task 1 › table r0c5,Annual kWh
+tb9117880,Medium › Task 1 › table r0c6,Annual cost (€)
+te38f8c4d,Medium › Task 1 › table r0c7,Standby %
+tad066d9d,Medium › Task 1 › table r6c1,Total
+t517e2b6d,Medium › Task 1 › Q,Complete the table using the appliance data from the Basic level. Which appliance has the highest standby percentage?
+t86e3f78b,Medium › Task 1 › Q,"If the family eliminates ALL standby power by unplugging appliances or using a switched power strip, how much energy and money would they save per year?"
+t199cfde6,Medium › Task 2 › title,Kettle efficiency experiment
+t23a373fd,Medium › Task 2,The amount of energy a kettle uses depends on how much water you boil. Many people boil more water than they need.
+tadddc2a9,Medium › Task 2 › Q,"Calculate the energy used to boil 250 ml (1 cup), 500 ml (2 cups), 1 litre, and 1.5 litres. Assume 2,200 W and boiling times of 1.5 min, 2.5 min, 4 min, and 5.5 min respectively."
+te67a2fb5,Medium › Task 2 › Q,"If someone always boils 1.5 litres but only uses 250 ml (one cup), how much energy is wasted per use? How much per year (assuming 3 uses/day)?"
+t259514ed,Advanced,"Phantom loads from small appliances represent one of the easiest areas for energy savings in a household. Smart plugs and timed power strips can automatically eliminate standby power. At this level you will model the total phantom load of a kitchen, evaluate smart plug solutions, and analyse the broader environmental impact."
+t7a1fbc14,Advanced,"**What you should already know: You should be able to calculate active and standby energy separately, compute standby percentages, and understand the concept of phantom loads.**"
+t00f61313,Advanced,"A SMART PLUG is a device inserted between the wall socket and the appliance. It can be programmed to cut power completely at certain times, or to switch off automatically after a period of inactivity. Smart plugs typically cost €10–25 each."
+tdd01747b,Advanced,The PAYBACK PERIOD for a smart plug depends on:
+t36a1838d,Advanced,Payback (years) = Smart plug cost (€) ÷ Annual standby cost saved (€/year)
+tdd39f882,Advanced,"For appliances with high standby power (3–5 W), payback can be less than one year."
+tea934ffb,Advanced › Worked example,**A smart plug costs €15. It eliminates 3 W of standby from a coffee machine.**
+te1210f22,Advanced › Worked example,"**Annual standby eliminated: 3 × 24 × 365 ÷ 1,000 = 26.3 kWh**"
+t98b0b6cc,Advanced › Worked example,**Annual saving: 26.3 × 0.30 = €7.89**
+t403aa3e8,Advanced › Worked example,**Payback: 15 ÷ 7.89 = 1.9 years**
+t9bde8c23,Advanced › Task 1 › title,Smart plug payback analysis
+t903f4163,Advanced › Task 1,A family considers buying smart plugs (€15 each) for their kitchen appliances. Evaluate whether each appliance justifies a smart plug.
+t9bcdbb4e,Advanced › Task 1 › table r0c2,Standby (W)
+te73b6db9,Advanced › Task 1 › table r0c3,Annual standby kWh
+tcbf3977b,Advanced › Task 1 › table r0c4,Annual standby cost (€)
+t3c1c4cbb,Advanced › Task 1 › table r0c5,Payback (years)
+t1b544715,Advanced › Task 1 › table r0c6,Worth it?
+tc6828630,Advanced › Task 1 › table r1c1,Coffee machine
+t90f2ec0a,Advanced › Task 1 › table r2c1,Microwave
+t31b11269,Advanced › Task 1 › table r3c1,Capsule machine
+t5926af22,Advanced › Task 1 › table r4c1,Kettle
+tac3736a9,Advanced › Task 1 › table r5c1,Oven display
+tc8bc3fbc,Advanced › Task 1 › Q,Complete the table. Which appliances have a payback of less than 2 years? Which ones are not worth a smart plug?
+ta28c5273,Advanced › Task 1 › Q,"If the family buys smart plugs for all appliances with a payback under 3 years, what is the total investment, total annual saving, and combined payback period?"
+t39caf278,Advanced › Task 2 › title,National phantom load impact
+t051bfe09,Advanced › Task 2 › Q,The average Turkish household has 8 kitchen appliances with an average standby power of 2 W each. There are approximately 25 million households in Turkey. Calculate the total national standby energy waste in GWh/year and the CO₂ emissions (Turkey: 0.44 kgCO₂/kWh).
+t3317bb8b,Advanced › Task 2 › Q,"Write a 100–150 word recommendation for a public awareness campaign about kitchen standby power. Include at least three specific actions households can take, supported by numbers from your calculations."

@@ -1,0 +1,283 @@
+{
+  "schema": 1,
+  "id": "pt-how-much-energy-does-a-computer-use",
+  "source": {
+    "type": "docx",
+    "file": "New Worksheets septemeber 2026/Portúgal/PT_Worksheet_3.docx",
+    "modified": "2026-09-07T19:29:47.000Z",
+    "readAt": "2026-09-18T23:06:23.444Z"
+  },
+  "country": "pt",
+  "code": "3B",
+  "title": "t83ff084b",
+  "subtitle": null,
+  "levels": [
+    "medium"
+  ],
+  "meta": {
+    "topic": "t7993ae70",
+    "outcomes": [
+      {
+        "level": null,
+        "text": "t0e11a771"
+      },
+      {
+        "level": null,
+        "text": "tfe1d1345"
+      },
+      {
+        "level": null,
+        "text": "t24c33fb2"
+      }
+    ],
+    "time": [
+      {
+        "level": null,
+        "text": "t403231e3"
+      }
+    ],
+    "resources": [
+      {
+        "level": null,
+        "text": "t6dee91ef"
+      },
+      {
+        "level": null,
+        "text": "t57219b6d"
+      }
+    ],
+    "extra": []
+  },
+  "sections": [
+    {
+      "kind": "level",
+      "level": "medium",
+      "title": null,
+      "blocks": [
+        {
+          "t": "h",
+          "text": "t65803a19"
+        },
+        {
+          "t": "p",
+          "text": "t506ff6b2"
+        },
+        {
+          "t": "p",
+          "text": "tf778037a"
+        },
+        {
+          "t": "h",
+          "text": "t9e950428"
+        },
+        {
+          "t": "p",
+          "text": "tb992b4bb"
+        },
+        {
+          "t": "p",
+          "text": "ted426f69"
+        },
+        {
+          "t": "p",
+          "text": "tac775541"
+        },
+        {
+          "t": "box",
+          "title": "t1908e453",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "tf680775a"
+            },
+            {
+              "t": "p",
+              "text": "t9f8e1db0"
+            },
+            {
+              "t": "p",
+              "text": "t2d50fe55"
+            },
+            {
+              "t": "p",
+              "text": "t4820fd75"
+            },
+            {
+              "t": "p",
+              "text": "t95b27365"
+            },
+            {
+              "t": "p",
+              "text": "t27b1b222"
+            },
+            {
+              "t": "p",
+              "text": "te5f44404"
+            },
+            {
+              "t": "p",
+              "text": "t0984794b"
+            },
+            {
+              "t": "p",
+              "text": "tc56f1680"
+            },
+            {
+              "t": "p",
+              "text": "t2d50fe55"
+            },
+            {
+              "t": "p",
+              "text": "t27640345"
+            },
+            {
+              "t": "p",
+              "text": "t72650d88"
+            },
+            {
+              "t": "p",
+              "text": "t9307cc6d"
+            },
+            {
+              "t": "p",
+              "text": "t3f6f910b"
+            }
+          ]
+        },
+        {
+          "t": "h",
+          "text": "t1cb43d37"
+        },
+        {
+          "t": "table",
+          "head": [
+            "t22fa6af7",
+            "t0d4aaec0"
+          ],
+          "rows": [
+            [
+              "t9cd8ce64",
+              "t9a9990de"
+            ],
+            [
+              "t8864914d",
+              "t7cc07acf"
+            ],
+            [
+              "t6f567ccd",
+              "td88703a4"
+            ],
+            [
+              "t0f420e78",
+              "tfac8ee9a"
+            ],
+            [
+              "tf5d24780",
+              "t2d71b3de"
+            ]
+          ]
+        },
+        {
+          "t": "task",
+          "title": "t829c18b3",
+          "blocks": [
+            {
+              "t": "table",
+              "head": [
+                "tbdcbb413",
+                "tcc9354d6"
+              ],
+              "rows": [
+                [
+                  "tb0831f88",
+                  ""
+                ],
+                [
+                  "t8864914d",
+                  ""
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "t5238c405",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t34b3cbdb"
+            },
+            {
+              "t": "p",
+              "text": "t4017a2e6"
+            },
+            {
+              "t": "p",
+              "text": "t385505ea"
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "t0f47418a",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t0984794b"
+            },
+            {
+              "t": "p",
+              "text": "tc3db7b53"
+            },
+            {
+              "t": "p",
+              "text": "t2d50fe55"
+            },
+            {
+              "t": "p",
+              "text": "tc3db7b53"
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "tab2d66b9",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "tc5fc655e"
+            },
+            {
+              "t": "p",
+              "text": "tf475fedc"
+            },
+            {
+              "t": "p",
+              "text": "te222167a"
+            },
+            {
+              "t": "p",
+              "text": "t2fe2c276"
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "tbb09864f",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "tb60e6c77"
+            },
+            {
+              "t": "p",
+              "text": "t022330a1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "_warnings": []
+}

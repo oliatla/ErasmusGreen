@@ -1,0 +1,411 @@
+{
+  "schema": 1,
+  "id": "hr-cleaning-household-maintenance-washing",
+  "source": {
+    "type": "docx",
+    "file": "New Worksheets septemeber 2026/Króatía/3.1. Washing machines and dryers _new_version.docx",
+    "modified": "2026-09-07T19:29:47.000Z",
+    "readAt": "2026-09-18T23:06:22.351Z"
+  },
+  "country": "hr",
+  "code": "3.1",
+  "title": "t087405d7",
+  "subtitle": null,
+  "levels": [
+    "basic",
+    "medium"
+  ],
+  "meta": {
+    "topic": "tb2acde30",
+    "outcomes": [
+      {
+        "level": null,
+        "text": "tfed11f1c"
+      },
+      {
+        "level": null,
+        "text": "te8212174"
+      },
+      {
+        "level": null,
+        "text": "t34fa43f3"
+      },
+      {
+        "level": null,
+        "text": "t562b4e7d"
+      },
+      {
+        "level": null,
+        "text": "tfa0837a7"
+      },
+      {
+        "level": null,
+        "text": "t82b03788"
+      }
+    ],
+    "time": [
+      {
+        "level": null,
+        "text": "t98b9f7b8"
+      }
+    ],
+    "resources": "t6542528b",
+    "extra": []
+  },
+  "sections": [
+    {
+      "kind": "level",
+      "level": "basic",
+      "title": null,
+      "blocks": [
+        {
+          "t": "h",
+          "text": "t65803a19"
+        },
+        {
+          "t": "ul",
+          "items": [
+            "t0496c8db"
+          ]
+        },
+        {
+          "t": "h",
+          "text": "t9e950428"
+        },
+        {
+          "t": "ul",
+          "items": [
+            "t26eae0a9",
+            "t5fc17b37",
+            "t8b8de1a1",
+            "t35abccf6",
+            "taf2fa582"
+          ]
+        },
+        {
+          "t": "li",
+          "ordered": true,
+          "n": 1,
+          "text": "t8ed87545"
+        },
+        {
+          "t": "li",
+          "ordered": true,
+          "n": 2,
+          "text": "tb933dcab"
+        },
+        {
+          "t": "li",
+          "ordered": true,
+          "n": 3,
+          "text": "te0d5a492"
+        },
+        {
+          "t": "ul",
+          "items": [
+            "tc435ac92",
+            "t8fd5efe2",
+            "tbc971ada",
+            "t3180299b"
+          ]
+        },
+        {
+          "t": "video",
+          "youtube": "rWn9UzKTWtM",
+          "caption": "t9eec27e5"
+        },
+        {
+          "t": "video",
+          "youtube": "lFawUa2Ssjk",
+          "caption": "tefec8bf9"
+        },
+        {
+          "t": "box",
+          "title": "t1908e453",
+          "blocks": [
+            {
+              "t": "ul",
+              "items": [
+                "t179ec96b",
+                "t9b150e8f",
+                "t190e3f27",
+                "teb0fd199"
+              ]
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "t34034d8c",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t4d3a913c"
+            },
+            {
+              "t": "table",
+              "head": [
+                "t30718235",
+                "t3c7af286",
+                "tf0185069",
+                "t18f6e3da",
+                "t30718235"
+              ],
+              "rows": [
+                [
+                  "t31d43809",
+                  "t2090c5d6",
+                  {
+                    "n": "1.8"
+                  },
+                  {
+                    "n": "55"
+                  },
+                  "t31d43809"
+                ],
+                [
+                  "t9eece73f",
+                  "t806052c8",
+                  {
+                    "n": "0.9"
+                  },
+                  {
+                    "n": "45"
+                  },
+                  "t9eece73f"
+                ],
+                [
+                  "ta8f7e0b2",
+                  "t846b58ba",
+                  {
+                    "n": "0.3"
+                  },
+                  {
+                    "n": "45"
+                  },
+                  "ta8f7e0b2"
+                ]
+              ]
+            },
+            {
+              "t": "ul",
+              "items": [
+                "t951c6d74",
+                "tc86d682b"
+              ]
+            },
+            {
+              "t": "q",
+              "text": "tbd6ba803",
+              "lines": 2
+            },
+            {
+              "t": "q",
+              "text": "tb2829c29",
+              "lines": 2
+            },
+            {
+              "t": "q",
+              "text": "t68309fff",
+              "lines": 2
+            },
+            {
+              "t": "q",
+              "text": "t596cb0ed",
+              "lines": 2
+            },
+            {
+              "t": "q",
+              "text": "t69668fbb",
+              "lines": 2
+            },
+            {
+              "t": "p",
+              "text": "t2dc19f55"
+            },
+            {
+              "t": "video",
+              "youtube": "0cuUhK3tM3E",
+              "caption": "tb80564ea"
+            },
+            {
+              "t": "video",
+              "youtube": "S-hDpODzIV0",
+              "caption": "t37f14e0c"
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "tc728bc1a",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "tc5c482b4"
+            },
+            {
+              "t": "table",
+              "head": [
+                "tac17e313",
+                "t8fcd5a4f",
+                "td4510c88",
+                "tadf57ad3"
+              ],
+              "rows": [
+                [
+                  "t0035897f",
+                  {
+                    "n": "3.2"
+                  },
+                  {
+                    "n": "350"
+                  },
+                  {
+                    "n": "8"
+                  }
+                ],
+                [
+                  "t24c12010",
+                  {
+                    "n": "2.8"
+                  },
+                  {
+                    "n": "450"
+                  },
+                  {
+                    "n": "10"
+                  }
+                ],
+                [
+                  "t0881482f",
+                  {
+                    "n": "1.2"
+                  },
+                  {
+                    "n": "800"
+                  },
+                  {
+                    "n": "12"
+                  }
+                ]
+              ]
+            },
+            {
+              "t": "p",
+              "text": "t4dabf069"
+            },
+            {
+              "t": "q",
+              "text": "tcd52784f",
+              "lines": 2
+            },
+            {
+              "t": "q",
+              "text": "t4574f6f6",
+              "lines": 2
+            },
+            {
+              "t": "q",
+              "text": "tf1c93d22",
+              "lines": 2
+            },
+            {
+              "t": "q",
+              "text": "tcdae0d97",
+              "lines": 0,
+              "options": [
+                "t1ba4fa71",
+                "t391fe5f7",
+                "t154d4e3b"
+              ]
+            },
+            {
+              "t": "box",
+              "title": "tfd7585e1",
+              "blocks": [
+                {
+                  "t": "box",
+                  "title": "ta05c2111",
+                  "blocks": [
+                    {
+                      "t": "p",
+                      "text": "t46618e41"
+                    }
+                  ]
+                },
+                {
+                  "t": "q",
+                  "text": "t3667d826",
+                  "lines": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "t": "h",
+          "text": "t971574c4"
+        },
+        {
+          "t": "q",
+          "text": "t15885d2f",
+          "lines": 5
+        },
+        {
+          "t": "q",
+          "text": "te5fd8161",
+          "lines": 5
+        },
+        {
+          "t": "q",
+          "text": "t0cf8c4d3",
+          "lines": 2
+        },
+        {
+          "t": "h",
+          "text": "tdc65667e"
+        },
+        {
+          "t": "q",
+          "text": "ta7b83e46",
+          "lines": 2
+        },
+        {
+          "t": "q",
+          "text": "t4d6418f0",
+          "lines": 2
+        },
+        {
+          "t": "q",
+          "text": "ted848c31",
+          "lines": 2
+        },
+        {
+          "t": "q",
+          "text": "tc1d4a50a",
+          "lines": 2
+        },
+        {
+          "t": "q",
+          "text": "t49c90880",
+          "lines": 2
+        },
+        {
+          "t": "q",
+          "text": "tb53d924b",
+          "lines": 2
+        },
+        {
+          "t": "q",
+          "text": "t89aeb4c6",
+          "lines": 2
+        }
+      ],
+      "levels": [
+        "basic",
+        "medium"
+      ]
+    }
+  ],
+  "_warnings": []
+}

@@ -1,0 +1,269 @@
+{
+  "schema": 1,
+  "id": "pt-do-you-know-your-electricity",
+  "source": {
+    "type": "docx",
+    "file": "New Worksheets septemeber 2026/Portúgal/PT_Worksheet_4.docx",
+    "modified": "2026-09-07T19:29:48.000Z",
+    "readAt": "2026-09-18T23:06:23.623Z"
+  },
+  "country": "pt",
+  "code": "4A",
+  "title": "t1df2f733",
+  "subtitle": null,
+  "levels": [
+    "basic"
+  ],
+  "meta": {
+    "topic": "tb5ed7250",
+    "outcomes": [
+      {
+        "level": null,
+        "text": "tf62a562f"
+      },
+      {
+        "level": null,
+        "text": "t5dd98129"
+      },
+      {
+        "level": null,
+        "text": "t8bf547f5"
+      }
+    ],
+    "time": [
+      {
+        "level": null,
+        "text": "t403231e3"
+      }
+    ],
+    "resources": [
+      {
+        "level": null,
+        "text": "tbb5d1c25"
+      },
+      {
+        "level": null,
+        "text": "t57219b6d"
+      }
+    ],
+    "extra": []
+  },
+  "sections": [
+    {
+      "kind": "level",
+      "level": "basic",
+      "title": null,
+      "blocks": [
+        {
+          "t": "h",
+          "text": "t65803a19"
+        },
+        {
+          "t": "p",
+          "text": "t5f059c25"
+        },
+        {
+          "t": "p",
+          "text": "te7553867"
+        },
+        {
+          "t": "h",
+          "text": "t9e950428"
+        },
+        {
+          "t": "p",
+          "text": "tef9f8a50"
+        },
+        {
+          "t": "p",
+          "text": "t07466978"
+        },
+        {
+          "t": "p",
+          "text": "td8e36acc"
+        },
+        {
+          "t": "box",
+          "title": "t1908e453",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t1b069887"
+            },
+            {
+              "t": "p",
+              "text": "te5f44404"
+            },
+            {
+              "t": "p",
+              "text": "td504b524"
+            },
+            {
+              "t": "p",
+              "text": "t744f1e91"
+            },
+            {
+              "t": "p",
+              "text": "t9777ecc3"
+            },
+            {
+              "t": "p",
+              "text": "tada0c6a4"
+            }
+          ]
+        },
+        {
+          "t": "h",
+          "text": "t1cb43d37"
+        },
+        {
+          "t": "table",
+          "head": [
+            "t22fa6af7",
+            "t0d4aaec0"
+          ],
+          "rows": [
+            [
+              "tde1e9d59",
+              "t64396e03"
+            ],
+            [
+              "t922ed124",
+              "t7c52e75a"
+            ],
+            [
+              "t4b6227b1",
+              "t37aa7429"
+            ],
+            [
+              "tc11b5684",
+              "t528bcbf3"
+            ],
+            [
+              "t37038c3e",
+              "t3f38ac85"
+            ]
+          ]
+        },
+        {
+          "t": "task",
+          "title": "t60c88c35",
+          "blocks": [
+            {
+              "t": "table",
+              "head": [
+                "tbdcbb413",
+                "tcc9354d6",
+                "t65a01399"
+              ],
+              "rows": [
+                [
+                  "te2932a91",
+                  "",
+                  ""
+                ],
+                [
+                  "t94560251",
+                  "",
+                  ""
+                ],
+                [
+                  "t922ed124",
+                  "",
+                  ""
+                ],
+                [
+                  "t6163882a",
+                  "",
+                  ""
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "teacc700c",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "tbe16ee45"
+            },
+            {
+              "t": "p",
+              "text": "t2dc188cc"
+            },
+            {
+              "t": "p",
+              "text": "t42bb754d"
+            },
+            {
+              "t": "table",
+              "head": [
+                "tbdcbb413",
+                "t75e5befb"
+              ],
+              "rows": [
+                [
+                  "t4930944f",
+                  ""
+                ],
+                [
+                  "t94560251",
+                  ""
+                ],
+                [
+                  "t922ed124",
+                  ""
+                ],
+                [
+                  "te74c7b6e",
+                  ""
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "t68887f58",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "tc5fc655e"
+            },
+            {
+              "t": "p",
+              "text": "t327e70b2"
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "t84475925",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t3d3688e9"
+            },
+            {
+              "t": "p",
+              "text": "t32d0b7d4"
+            }
+          ]
+        },
+        {
+          "t": "task",
+          "title": "tc4c0296d",
+          "blocks": [
+            {
+              "t": "p",
+              "text": "t64d370de"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "_warnings": []
+}

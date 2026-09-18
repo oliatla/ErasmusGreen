@@ -1,0 +1,125 @@
+key,where,en
+tece50b20,Title,Energy Efficiency in the School Computer Lab
+tfa646bd7,Subtitle,"Comprehensive Multilevel Assignment Framework: BASIC, MEDIUM & ADVANCED Levels"
+tf402decc,Info › Topic,**Energy Efficiency in the School Computer Lab**
+tc1780411,Info › Learning outcomes,**Technical knowledge:** Students learn about energy consumption of ICT equipment and methods to regulate it.
+tccae9f8f,Info › Learning outcomes,"**Mathematical skills:** Students calculate consumption based on different variables (units, days, standby vs. active)."
+te456ef82,Info › Learning outcomes,**Environmental awareness:** Students gain knowledge about how their digital habits impact electricity use and the climate.
+t12636581,Info › Learning outcomes,"**Green skills:** Critical thinking regarding small changes in daily habits, such as turning off monitors"
+tac45e1cc,Info › Time needed,60 - 120 minutes
+t4bcebdb8,Info › Resources,"Internet, calculator and price for kwh, (*Watt × hour) / 1000 = kWh*"
+t991d74eb,Introduction & Theoreti… › heading,Introduction & Theoretical Background
+tdb85ec26,Introduction & Theoreti…,"Our school's computer lab is a core hub of educational activity, but it is also a major consumer of electrical energy. Every workstation consists of multiple components (the computer unit, the monitor, and peripheral accessories) that draw power constantly while in active use. More importantly, many IT devices continue to draw power even when they appear to be asleep or turned off—a phenomenon known as 'Vampire Power' or standby load."
+t9f374d18,Introduction & Theoreti…,"By conducting an energy audit of the school computer lab, we can quantify exactly how electricity is spent, calculate the financial costs incurred by the school, and identify targeted behavioral and technical strategies to dramatically decrease our environmental and budget footprint."
+tc44929ed,Key Concepts & Power Fo… › heading,Key Concepts & Power Formulas
+ta5da7bbf,Key Concepts & Power Fo… › bullet 1,**Power Rating (Wattage):** – The rate at which an electrical device consumes energy. It is measured in Watts (W). A higher wattage means a device requires more electricity per second to run.
+t6623e478,Key Concepts & Power Fo… › bullet 2,**Energy Consumption:** – The total amount of electricity consumed over time. Electric utility companies measure and bill energy in Kilowatt-hours (kWh).
+t535fac52,Key Concepts & Power Fo… › bullet 3,**Standby Load (Vampire Power):** – Power drawn by an electronic appliance while it is switched off or in a standby mode but remains plugged into a live socket.
+tc302db8c,Key Concepts & Power Fo…,"To perform energy audits, we use the following standard conversion equations:"
+tcffa759e,Key Concepts & Power Fo… › bullet 1,"Energy (kWh) = [Power (Watts) × Time (Hours)] / 1,000"
+t743ce811,Key Concepts & Power Fo… › bullet 2,Financial Cost (€) = Energy Consumption (kWh) × Electricity Tariff (€/kWh)
+t347629e3,Standard Laboratory Ben… › heading,Standard Laboratory Benchmarks Table
+t06be3e52,Standard Laboratory Ben…,The metrics below represent standard power values for common institutional computer hardware found in typical schools:
+t45bba236,Standard Laboratory Ben… › table r0c1,Hardware Component
+tc6577b61,Standard Laboratory Ben… › table r0c2,Active Mode Wattage
+tc6418ff5,Standard Laboratory Ben… › table r0c3,Standby/Sleep Wattage
+te78480f3,Standard Laboratory Ben… › table r0c4,Off (Plugged In) Wattage
+t81292505,Standard Laboratory Ben… › table r1c1,Desktop PC Tower
+td8f8054c,Standard Laboratory Ben… › table r1c2,150 W
+tb9d73b77,Standard Laboratory Ben… › table r1c3,5.0 W
+t574ee6e4,Standard Laboratory Ben… › table r1c4,1.5 W
+t9215ced0,Standard Laboratory Ben… › table r2c1,LED Monitor (24-inch)
+t8200116f,Standard Laboratory Ben… › table r2c2,30 W
+t8e03c0d3,Standard Laboratory Ben… › table r2c3,1.0 W
+tffe90573,Standard Laboratory Ben… › table r2c4,0.5 W
+t8fc2f173,Standard Laboratory Ben… › table r3c1,Network Switch / Router
+tec2a10a3,Standard Laboratory Ben… › table r3c2,45 W
+t16c807a1,Standard Laboratory Ben… › table r3c3,45.0 W (Always Active)
+t643714b9,Standard Laboratory Ben… › table r3c4,45.0 W
+t03e655a1,Standard Laboratory Ben… › table r4c1,Central Laser Printer
+t4cb13fd0,Standard Laboratory Ben… › table r4c2,550 W (Printing) / 50 W (Idle)
+t1e645871,Standard Laboratory Ben… › table r4c3,12.0 W
+t4c31d30a,Standard Laboratory Ben… › table r4c4,2.0 W
+t2bfd0783,Basic › box,Target Learning Outcomes
+t536e37de,Basic › Target Learning Outcomes,"*Identification of laboratory equipment types, extraction of power data from the reference table, and basic multi-choice recognition of energy habits.*"
+t145146ba,Basic › Task 1 › title,Component & Power Matching
+t7a353672,Basic › Task 1 › Q,Look at the Standard Laboratory Benchmarks table. Which individual component uses the absolute highest amount of electricity when actively operating?
+tcfcccabd,Basic › Task 1 › Q,How many Watts does a 24-inch LED Monitor use when it is switched to Active Mode?
+tba8801c7,Basic › Task 1 › Q,"True or False: When a Desktop PC Tower is turned 'Off' but remains plugged into the wall socket, its power consumption drops to exactly 0 Watts."
+t7f522ad1,Basic › Task 1 › Q,Why does a Network Switch/Router use the same wattage (45W) in both active and standby modes? Explain in one sentence.
+t0e1a5071,Basic › Task 2 › title,Identifying Energy Leaks
+t442a1625,Basic › Task 2,Circle or bold the best answer for each school scenario below:
+tef0c6a29,Basic › Task 2 › Q,"**A student finishes a programming assignment and walks away, leaving the monitor and PC fully turned on for the weekend. This habit is:**"
+t6048b4da,Basic › Task 2 › Q option,Energy Efficient
+tae70626b,Basic › Task 2 › Q option,Highly Wasteful
+t03175c0d,Basic › Task 2 › Q option,Good for hardware health
+t383c93b5,Basic › Task 2 › Q,**The most effective user action to kill 'Vampire Power' completely at the end of a school day is to:**
+tb66f9704,Basic › Task 2 › Q option,Leave the PC on standby
+te6e5ef8c,Basic › Task 2 › Q option,Turn off the monitor screen only
+tae35622f,Basic › Task 2 › Q option,Switch off the main power strip wall switch
+tc8bb01c2,Medium › Target Learning Outcomes,"*Conduct an audit based on physical station metrics, apply conversion formulas to compute kilowatt-hours (kWh), evaluate utility billing costs, and structure an implementation action plan.*"
+tfe542814,Medium › Task 1 › title,Equipment Inventory & Baseline Specs
+t018b5f43,Medium › Task 1,Examine a typical workstation inside your school's computer lab. Inspect the technical label (found on the back or on the power supply brick) or refer to the provided benchmark data to list average values below:
+tb4cdfe5e,Medium › Task 1 › Q,Desktop/Laptop Unit Power: ______________ Watts
+tdc2b5168,Medium › Task 1 › Q,Monitor Power Rating: ______________ Watts
+t773e6054,Medium › Task 1 › Q,Peripherals / Local Printer Power: ______________ Watts
+te825958b,Medium › Task 1 › Q,Combined Total Watts per Station: ______________ Watts
+t8d06d55f,Medium › Task 2 › title,Active Energy & Cost Modeling
+t3e0f1e99,Medium › Task 2,Scenario Assumptions: There are exactly 20 workstations in this school lab. The lab is used actively for 6 hours per school day. The school pays a fixed electricity tariff of €0.30 per kWh.
+t8e9bfc4b,Medium › Task 2,Calculate the active energy consumption metrics step-by-step (Show your complete calculation steps):
+tf39fe1a2,Medium › Task 2 › Q,Calculate the total power load (in Watts) when all 20 stations are simultaneously active:
+ta9e65752,Medium › Task 2,Calculation: __________________________________________________
+t048e878b,Medium › Task 2,Answer: _________________ Watts
+tae87853c,Medium › Task 2 › Q,"Convert this total load into Kilowatts (kW) [Total Watts / 1,000]:"
+t6f0de364,Medium › Task 2,Answer: _________________ kW
+t05821529,Medium › Task 2 › Q,Determine the daily energy consumption in kilowatt-hours (kWh) over 6 hours of active use:
+tdedc6be4,Medium › Task 2,Answer: _________________ kWh
+t4f722628,Medium › Task 2 › Q,Compute the financial cost incurred by the school for running this active lab for a single school day:
+tf7f140fa,Medium › Task 2,Answer: _________________ €
+t15f3adb6,Medium › Task 2 › Q,Compute the total active operational cost for an entire school year consisting of 180 school days:
+td5202562,Medium › Task 3 › title,The Standby & Vampire Power Assessment
+t41109e5a,Medium › Task 3,"Assume that when school closes, the computers are not shut down completely but are left in 'Standby/Sleep' mode. This state lasts for the remaining 18 hours of each school day, and for a full 24 hours on weekends."
+tb1f64ba2,Medium › Task 3 › bullet 1,Assume a single workstation draws an average standby load of 6.0 W (PC tower + Monitor combined).
+tced9f2ae,Medium › Task 3 › Q,Calculate the weekly total standby hours (18 hours × 5 weekdays + 24 hours × 2 weekend days):
+t42050609,Medium › Task 3,Answer: _________________ Hours
+t8d5a4527,Medium › Task 3 › Q,Calculate the weekly energy waste in kWh for all 20 computers sitting on standby during those hours:
+td9def90d,Medium › Task 3 › Q,Calculate the weekly financial cost of this waste at €0.30/kWh:
+t58bf89d9,Medium › Task 3 › Q,"School Year Savings: If the school enforces a strict shutdown policy to completely kill standby load at 4:00 PM every day and over weekends, how much money would the school save across a 40-week school year?"
+t746ce24e,Medium › Task 4 › title,Action Plan & Contextual Awareness
+tfb1cbac2,Medium › Task 4 › Q,Context Challenge: The electrical energy wasted by leaving this lab on standby for just one weekend is equivalent to charging a standard smartphone approximately ____________ times.
+t440e4dba,Medium › Task 4 › Q,Proposed Improvements: Propose three distinct solutions to reduce energy waste in the lab:
+t693b8c9b,Medium › Task 4 › Q item,"**1. Technical Solution** (e.g., smart power strips, centralized auto-sleep Group Policies via server): ___________________________________________"
+t85c3a0c9,Medium › Task 4 › Q item,"**2. Behavioral Change** (e.g., student responsibilities, 'last person out' checklists): ___________________________________________"
+tc3aa481d,Medium › Task 4 › Q item,"**3. Institutional Policy** (e.g., strict computer lab operating hours rules enforced by management): ___________________________________________"
+t98acb374,Advanced › heading,ENGINEERING & SUSTAINABILITY LOGISTICS
+t131661b3,Advanced › Target Learning Outcomes,"*Formulate analytical continuous mathematical models of facility power loads, evaluate multi-variable carbon intensity thresholds, execute break-even capital investments for power equipment, and perform lifetime lifecycle assessments.*"
+t8405471a,Advanced › subheading,Mathematical System Formulation
+tc173161f,Advanced,"To evaluate large institutional networks, facility managers express the total operational energy expenditure as a continuous multi-state function. The total weekly cost function of a computer laboratory with N stations is modeled by:"
+t55696efc,Advanced,"**Cost_weekly = N × [ (W_active × t_active) + (W_standby × t_standby) + (W_off × t_off) ] / 1,000 × τ**"
+t7309b1ed,Advanced,Where: N = number of stations; W = wattage in each state; t = weekly hours spent in each state; and τ = energy tariff (€/kWh).
+t6030b52e,Advanced › Task 1 › title,Mathematical Optimization & Parameter Modeling
+ta3b2620f,Advanced › Task 1 › Q,A school has N = 50 workstations. A technical audit shows the following parameters:
+tcdc2cc0b,Advanced › Task 1 › Q item,W_active = 180W (PC + Monitor combined) | t_active = 30 hours per week
+t21b7f319,Advanced › Task 1 › Q item,W_standby = 8W | t_standby = 40 hours per week
+t5b9f0446,Advanced › Task 1 › Q item,W_off = 2W (Vampire load when off but plugged in) | t_off = 98 hours per week
+tab8a8190,Advanced › Task 1 › Q item,Electricity tariff: τ = €0.35 / kWh
+t5ec08faf,Advanced › Task 1,Calculate the absolute contribution of each operational state to the weekly bill. What percentage of the weekly financial cost is spent on computers that are completely inactive (Standby + Off states)?
+t73bfcef3,Advanced › Task 1,Calculations Workplace:
+t6401bac1,Advanced › Task 1,Answer: Inactive state expenditure percentage = _________________ %
+t1350e9ae,Advanced › Task 2 › title,Capital Investment & Break-Even Analysis
+tfdff03d1,Advanced › Task 2 › Q,Capital Expenditure (CapEx) Optimization: The IT department proposes buying 50 master-slave smart power strips to completely eliminate the W_off and W_standby loads when the lab is empty. Each smart strip costs exactly €15.00 to purchase and install.
+t1e158b47,Advanced › Task 2 › Q,Calculate the total upfront investment required: €_________________
+te4e8c4a4,Advanced › Task 2 › Q,"Using your calculations from Activity 3.1, determine the weekly financial savings generated by eliminating all inactive loads:"
+t9565a4e0,Advanced › Task 2,Weekly Savings = _________________ € per week
+t1ea5cfc8,Advanced › Task 2 › Q,Calculate the exact operational break-even point (in active school weeks) required to fully recover the capital investment:
+tf49e24ff,Advanced › Task 2,Calculations:
+tb33a1cfa,Advanced › Task 2,Answer: Break-even point = _________________ weeks
+t9a749093,Advanced › Task 3 › title,Carbon Auditing & Grid Intensity Sensitivity Analysis
+tb0eefc6e,Advanced › Task 3 › Q,Environmental Lifecycle Impact: The environmental cost of electricity depends heavily on how the grid energy is generated. Compare the annual CO2 output of the active laboratory operations under two different regional grid carbon intensity profiles:
+te79568f1,Advanced › Task 3 › Q item,Grid Profile A (High Fossil Fuel Mix): Emission factor = 0.45 kg CO2 / kWh
+t5d2db607,Advanced › Task 3 › bullet 1,Grid Profile B (High Renewable/Icelandic Mix): Emission factor = 0.02 kg CO2 / kWh
+t58dd39a3,Advanced › Task 3,Calculate the total annual greenhouse gas emissions (in kg of CO2) generated by 50 active computers operating for 30 hours per week over 40 weeks per year:
+t9c1fabc6,Advanced › Task 3 › Q,Total Annual Lab Energy Consumption = _________________ kWh
+tab575ca6,Advanced › Task 3 › Q,Annual CO2 under Grid Profile A = _________________ kg CO2
+t69bbe8c9,Advanced › Task 3 › Q,Annual CO2 under Grid Profile B = _________________ kg CO2
+t74f95363,Advanced › Task 3 › Q,"Policy Synthesis: Based on these figures, explain why a school operating on a green energy grid must still practice strict power conservation, focusing on resource life, hardware breakdown frequencies, and indirect grid load demands:"

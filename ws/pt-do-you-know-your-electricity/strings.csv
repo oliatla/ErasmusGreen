@@ -1,0 +1,58 @@
+key,where,en
+t1df2f733,Title,Do you know your electricity consumption habits?
+tb5ed7250,Info › Topic,Charging & Infrastructure – Everyday Energy Use
+tf62a562f,Info › Learning outcomes,Understand energy used by small devices
+t5dd98129,Info › Learning outcomes,Analyze charging habits
+t8bf547f5,Info › Learning outcomes,Evaluate network and surveillance consumption
+t403231e3,Info › Time needed,45 – 60 min
+tbb5d1c25,Info › Resources,Charger specifications
+t57219b6d,Info › Resources,Calculator
+t65803a19,Basic › subheading,Introduction
+t5f059c25,Basic,"Many small electronic devices are used every day without us thinking about their energy consumption. Mobile phone chargers, wireless routers, tablets and security cameras often operate for long periods or even continuously."
+te7553867,Basic,"Although each device consumes relatively little energy, their combined impact can be significant over a year."
+t9e950428,Basic › subheading,Theory
+tef9f8a50,Basic,Energy consumption depends on both power and time.
+t07466978,Basic,Devices such as routers and security cameras may operate 24 hours a day throughout the year. Continuous operation can result in surprisingly high annual electricity consumption.
+td8e36acc,Basic,Smart charging habits and efficient devices can reduce energy use while maintaining the same level of comfort and connectivity.
+t1908e453,Basic › box,Worked example
+t1b069887,Basic › Worked example,A router uses 10 W continuously.
+te5f44404,Basic › Worked example,Annual energy:
+td504b524,Basic › Worked example,10 × 24 × 365 ÷ 1000 = 87.6 kWh/year
+t744f1e91,Basic › Worked example,At €0.20/kWh:
+t9777ecc3,Basic › Worked example,87.6 × 0.20 = €17.52/year
+tada0c6a4,Basic › Worked example,"While one router may not seem expensive, multiple always-on devices can noticeably increase household energy consumption."
+t1cb43d37,Basic › subheading,Key terms
+t22fa6af7,Basic › table r0c1,Term
+t0d4aaec0,Basic › table r0c2,Definition
+tde1e9d59,Basic › table r1c1,Charger
+t64396e03,Basic › table r1c2,Device used to recharge batteries
+t922ed124,Basic › table r2c1,Router
+t7c52e75a,Basic › table r2c2,Device that provides internet connectivity
+t4b6227b1,Basic › table r3c1,Continuous Consumption
+t37aa7429,Basic › table r3c2,Energy used without interruption
+tc11b5684,Basic › table r4c1,Optimization
+t528bcbf3,Basic › table r4c2,Reducing energy use while maintaining performance
+t37038c3e,Basic › table r5c1,Renewable Energy
+t3f38ac85,Basic › table r5c2,Energy from sustainable natural sources
+t60c88c35,Basic › Task 1 › title,Device List
+tbdcbb413,Basic › Task 1 › table r0c1,Device
+tcc9354d6,Basic › Task 1 › table r0c2,Power (W)
+t65a01399,Basic › Task 1 › table r0c3,Hours/day
+te2932a91,Basic › Task 1 › table r1c1,Phone charger
+t94560251,Basic › Task 1 › table r2c1,Tablet
+t6163882a,Basic › Task 1 › table r4c1,Security camera
+teacc700c,Basic › Task 2 › title,Energy Calculation
+tbe16ee45,Basic › Task 2,Formula:
+t2dc188cc,Basic › Task 2,Energy = Power × Time × 365 / 1000
+t42bb754d,Basic › Task 2,Fill in results:
+t75e5befb,Basic › Task 2 › table r0c2,kWh/year
+t4930944f,Basic › Task 2 › table r1c1,Phone
+te74c7b6e,Basic › Task 2 › table r4c1,Camera
+t68887f58,Basic › Task 3 › title,Cost
+tc5fc655e,Basic › Task 3,Electricity price: ______ €/kWh
+t327e70b2,Basic › Task 3,Total cost/year: ______ €
+t84475925,Basic › Task 4 › title,Real Scenario
+t3d3688e9,Basic › Task 4,Router works 24h/day
+t32d0b7d4,Basic › Task 4,Energy/year = ______ kWh
+tc4c0296d,Basic › Task 5 › title,Optimization Challenge
+t64d370de,Basic › Task 5,Suggest 3 ways to reduce energy consumption:

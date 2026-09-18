@@ -1,0 +1,178 @@
+key,where,en
+t12073d83,Title,Refrigerators and freezers
+td3213880,Info › Topic › basic,How does a refrigerator use electricity?
+tceb0e78b,Info › Topic › medium,"Energy labels, consumption calculations and cost"
+t8ff16936,Info › Topic › advanced,Lifecycle cost modelling and environmental impact
+t54e37fea,Info › Learning outcomes › basic,"Students will identify the main components of a refrigerator and freezer, understand why they run continuously, and recognise how daily habits affect energy use."
+t20e0413b,Info › Learning outcomes › medium,"Students will calculate annual energy consumption and cost, compare EU energy label classes, and evaluate the financial benefit of upgrading."
+ta22fa0d5,Info › Learning outcomes › advanced,"Students will build total cost of ownership models, analyse CO₂ emissions, perform payback calculations, and propose evidence-based recommendations."
+t5431687b,Info › Time needed › basic,60 min
+t98b9f7b8,Info › Time needed › medium,90 min
+tfa15a37e,Info › Time needed › advanced,120 min
+t365d4538,Info › Resources › basic,Appliance data table (in this worksheet); access to one or more kitchen appliances at home or at school.
+t1e064e5b,Info › Resources › medium,Calculator; electricity tariff (€/kWh); EU energy label examples.
+t0c418f9f,Info › Resources › advanced,Spreadsheet software; CO₂ emission factor data; appliance price lists.
+t65803a19,Basic › subheading,Introduction
+tad22fcdd,Basic,"A refrigerator is the only kitchen appliance that runs 24 hours a day, 365 days a year. It keeps food fresh by continuously pumping heat from inside the cabinet to the outside. Because it never switches off, even a small difference in power consumption adds up to a large difference in annual electricity use."
+t4dbd9b71,Basic,Understanding how a refrigerator works and what affects its energy use is the first step toward making smarter choices in the kitchen.
+t9e950428,Basic › subheading,Theory
+t6e83bece,Basic,"A refrigerator uses a compressor and a refrigerant gas to move heat. The compressor cycles on and off throughout the day. When the inside temperature rises above the set point (usually 3–5 °C), the compressor starts and cools the air back down. A well-maintained refrigerator cycles less often and uses less electricity."
+t1c9dec23,Basic,Several factors affect how much electricity a refrigerator uses:
+t5f57c434,Basic › bullet 1,Temperature setting: Every 1 °C below the recommended 4 °C increases energy use by about 5%.
+t6547958d,Basic › bullet 2,"Door openings: Each time the door opens, cold air escapes and the compressor must work harder."
+tf274f8e9,Basic › bullet 3,Location: Placing a refrigerator next to an oven or in direct sunlight increases energy consumption.
+tdd995386,Basic › bullet 4,Age and efficiency class: A modern A-rated refrigerator uses about 50% less electricity than a 15-year-old model.
+t337a3c8b,Basic,"A FREEZER works on the same principle but maintains a much colder temperature (–18 °C). Because the temperature difference with the room is larger, a freezer typically uses more energy per litre of storage than a refrigerator."
+t1908e453,Basic › box,Worked example
+t4053b175,Basic › Worked example,**A refrigerator uses 150 W when the compressor is running. The compressor runs about 8 hours per day (it cycles on and off).**
+t268f694f,Basic › Worked example,"**Daily energy = 150 W × 8 h ÷ 1,000 = 1.2 kWh**"
+t13292e8f,Basic › Worked example,**Annual energy = 1.2 × 365 = 438 kWh per year**
+t1cb43d37,Basic › subheading,Key terms
+t22fa6af7,Basic › table r0c1,Term
+t0d4aaec0,Basic › table r0c2,Definition
+t2ec9287c,Basic › table r1c1,Compressor
+tc5455b5b,Basic › table r1c2,The electric pump inside a refrigerator that circulates refrigerant and removes heat.
+t2d77a074,Basic › table r2c1,Thermostat
+tadd3964b,Basic › table r2c2,A sensor that measures temperature and tells the compressor when to start and stop.
+t5d87fb3d,Basic › table r3c1,kWh
+t2ed74010,Basic › table r3c2,"Kilowatt-hour – the unit used on electricity bills. 1 kWh = using 1,000 W for 1 hour."
+t714b6eef,Basic › table r4c1,EU Energy Label
+t2552f972,Basic › table r4c2,A label from A (most efficient) to G (least efficient) that helps consumers compare appliances.
+t84b24feb,Basic › table r5c1,Standby power
+t790c4a2f,Basic › table r5c2,The small amount of electricity used by electronic displays or lights even when the main function is off.
+t2a05ba40,Basic › Task 1 › title,Getting to know your refrigerator
+t55c2552b,Basic › Task 1,Look at the refrigerator data table below.
+t3bef6ea4,Basic › Task 1 › table r0c1,Appliance
+t106c07b2,Basic › Task 1 › table r0c2,Typical power (W)
+taad2a361,Basic › Task 1 › table r0c3,Compressor run-time (h/day)
+t01d2fab9,Basic › Task 1 › table r0c4,Set temperature
+ta29ceccb,Basic › Task 1 › table r0c5,Annual energy (kWh)
+t8124bb3c,Basic › Task 1 › table r1c1,Old refrigerator (15+ years)
+t9f8e1db0,Basic › Task 1 › table r1c2,200 W
+t4a6f674c,Basic › Task 1 › table r1c3,10 h
+t61983293,Basic › Task 1 › table r1c4,3 °C
+t9b5790d1,Basic › Task 1 › table r2c1,Standard refrigerator (class D)
+td8f8054c,Basic › Task 1 › table r2c2,150 W
+tf577bc37,Basic › Task 1 › table r2c3,8 h
+td42039f8,Basic › Task 1 › table r2c4,4 °C
+tcbd510cc,Basic › Task 1 › table r3c1,Efficient refrigerator (class A)
+ta9d51ee8,Basic › Task 1 › table r3c2,80 W
+tb07506d9,Basic › Task 1 › table r3c3,6 h
+t03ba8b71,Basic › Task 1 › table r4c1,Chest freezer
+t52296ce7,Basic › Task 1 › table r4c2,120 W
+t5373dc18,Basic › Task 1 › table r4c4,–18 °C
+t896678cd,Basic › Task 1 › table r5c1,Upright freezer
+t479e33a2,Basic › Task 1 › table r5c3,12 h
+tce8110d9,Basic › Task 1 › Q,Which appliance in the table uses the most electricity per year? Why do you think that is?
+t0990573d,Basic › Task 1 › Q,"The old refrigerator and the chest freezer have the same annual consumption (438 kWh), but for different reasons. Explain the difference."
+te8890cb1,Basic › Task 1 › Q,What is the difference in annual energy use between the old refrigerator and the efficient (class A) model?
+t842b59f0,Basic › Task 1 › Q,Name three things a family could do today – without buying a new appliance – to reduce their refrigerator's electricity consumption.
+t60b2af1c,Basic › Task 2 › title,Temperature and energy
+t46c87b11,Basic › Task 2,Every 1 °C reduction below the recommended 4 °C increases energy consumption by about 5%. Use the standard refrigerator (438 kWh/year at 4 °C) for these questions.
+tb0c80e7b,Basic › Task 2 › Q,"If a family sets their refrigerator to 2 °C instead of 4 °C, how much extra energy does it use per year? Express your answer in kWh and as a percentage."
+t29fa6e25,Basic › Task 2 › Q,"A student says: ""I always set my fridge to 1 °C because colder is always better for food."" Do you agree? Explain your reasoning, considering both food safety and energy use."
+t8262a3a3,Medium › heading,"Energy labels, consumption and cost"
+td4bc7e64,Medium,"A refrigerator runs 24 hours a day, making it one of the most important appliances to get right when it comes to energy efficiency. At this level you will calculate exactly how much electricity and money different refrigerators use, and evaluate whether upgrading to a more efficient model is financially worthwhile."
+tf3b71fcc,Medium,"**What you should already know: You should know the basic components of a refrigerator (compressor, thermostat), understand that it runs continuously, and be able to identify factors that affect energy use (temperature setting, door openings, location).**"
+tb62b5480,Medium,"The EU Energy Label rates refrigerators from A (most efficient) to G (least efficient). Since March 2021, the scale was rescaled – what used to be A+++ is now roughly class C or D. A genuine class A refrigerator today is extremely efficient."
+te17cca54,Medium,"The label shows the annual energy consumption in kWh. This number is measured under standardised test conditions. Real-world consumption may be 10–30% higher depending on usage habits, ambient temperature, and how often the door is opened."
+t16cde147,Medium,Key formulas:
+t2a88ee91,Medium,"Energy (kWh) = Power (W) × Time (h) ÷ 1,000"
+tfcfb1f98,Medium,Annual cost (€) = Annual energy (kWh) × Tariff (€/kWh)
+t996707ae,Medium,Annual saving (€) = Cost_old – Cost_new
+t768c2d52,Medium,Payback (years) = Purchase price (€) ÷ Annual saving (€/year)
+tf151457b,Medium › Worked example,**An old refrigerator uses 730 kWh/year. A new class A model uses 175 kWh/year.**
+tf8b52696,Medium › Worked example,**At a tariff of €0.30/kWh:**
+t12d40eb7,Medium › Worked example,**Old cost = 730 × 0.30 = €219/year**
+t41f834b5,Medium › Worked example,**New cost = 175 × 0.30 = €52.50/year**
+t9a5a93db,Medium › Worked example,**Annual saving = 219 – 52.50 = €166.50/year**
+t80c8c2a6,Medium › Worked example,**If the new refrigerator costs €650:**
+t44b2b8ed,Medium › Worked example,**Payback = 650 ÷ 166.50 ≈ 3.9 years**
+tce3005af,Medium › table r1c1,Energy label class
+t222200b6,Medium › table r1c2,EU rating from A (best) to G (worst) based on standardised energy consumption tests.
+tc0718a5d,Medium › table r2c1,Annual energy consumption
+tbc25958c,Medium › table r2c2,"The total kWh a refrigerator uses in one year, as shown on the EU energy label."
+tfa247e8c,Medium › table r3c1,Electricity tariff
+t46fc623f,Medium › table r3c2,The price per kWh charged by the electricity provider (varies by country and contract).
+tb9f79c53,Medium › table r4c1,Payback period
+tf0cc387d,Medium › table r4c2,The number of years it takes for energy savings to cover the purchase cost of a new appliance.
+t81b80a57,Medium › Task 1 › title,Comparing energy label classes
+t2462dd5f,Medium › Task 1,Use the data in the table below. Assume an electricity tariff of €0.30/kWh.
+tf7163991,Medium › Task 1 › table r0c1,Energy class
+t0dba2c68,Medium › Task 1 › table r0c2,Annual consumption (kWh)
+td4510c88,Medium › Task 1 › table r0c3,Purchase price (€)
+t53114b16,Medium › Task 1 › table r1c1,"G (old model, 15+ years)"
+t113ed003,Medium › Task 1 › table r1c3,—
+t95b7d5bc,Medium › Task 1 › table r2c1,D (standard new model)
+t5a461675,Medium › Task 1 › table r2c3,€400
+tde80aeef,Medium › Task 1 › table r3c1,C (good new model)
+tfbaee2aa,Medium › Task 1 › table r3c3,€500
+tbb38bb4c,Medium › Task 1 › table r4c1,A (best available)
+t7f0ab3b2,Medium › Task 1 › table r4c3,€650
+tcd111b43,Medium › Task 1 › Q,Calculate the annual electricity cost for each of the four models
+t424ff238,Medium › Task 1 › Q,How much money does a family save per year by replacing the old G-rated model with each of the three new options?
+t75d8b99c,Medium › Task 1 › Q,"Calculate the payback period for each upgrade (from G to D, G to C, and G to A). Which upgrade has the shortest payback?"
+tb95ff6df,Medium › Task 1 › Q,A family has a budget of €500. Which model would you recommend? Justify your answer using both payback period and long-term savings over 10 years.
+t9a855076,Medium › Task 2 › title,Real-world vs. label consumption
+t1fe1589b,Medium › Task 2,"The EU energy label measures consumption under standardised conditions. In practice, consumption depends on how the refrigerator is used."
+t081b7bfe,Medium › Task 2 › Q,"A class C refrigerator is labelled at 280 kWh/year. If real-world usage adds 25% to this figure, what is the actual annual consumption and cost at €0.30/kWh?"
+td8fe15df,Medium › Task 2 › Q,"List three user behaviours that increase a refrigerator's real-world consumption above the label value. For each, estimate the percentage increase based on the theory section."
+tf59afc41,Advanced › heading,Lifecycle cost and environmental impact
+t20721e4a,Advanced,"A refrigerator is a 10–15 year investment. The purchase price is only a fraction of the total cost; electricity consumption over its lifetime dominates. At this level you will build a total cost of ownership model, analyse CO₂ emissions, and evaluate the financial and environmental case for early replacement of an old refrigerator."
+t68f5953d,Advanced,"**What you should already know: You should be able to calculate annual energy consumption and cost, compare EU energy label classes, and compute simple payback periods for appliance upgrades.**"
+t9df0e2bf,Advanced,TOTAL COST OF OWNERSHIP (TCO) for a refrigerator over t years is:
+te48ecdb4,Advanced,TCO(t) = Purchase price + (Annual energy × Tariff × t)
+t17d4e1e8,Advanced,"For a refrigerator kept 12 years, the electricity cost typically exceeds the purchase price."
+t720ef9b7,Advanced,"CO₂ EMISSIONS from a refrigerator depend on the electricity grid of the country. Cleaner grids (France, Norway) produce far less CO₂ per kWh than coal-heavy grids (Poland)."
+tbb8da705,Advanced,Annual CO₂ (kg) = Annual energy (kWh) × Emission factor (kgCO₂/kWh)
+t21048f1f,Advanced,EARLY REPLACEMENT ANALYSIS: Sometimes it makes environmental and financial sense to replace a working appliance before it breaks. The key question is whether the savings from reduced consumption outweigh the embedded energy and cost of manufacturing a new unit.
+t9777a5ff,Advanced › Worked example,"**Old refrigerator: 730 kWh/year, already 10 years old, expected to last 5 more years.**"
+t2241bacd,Advanced › Worked example,"**New class A refrigerator: 175 kWh/year, costs €650, expected lifetime 15 years.**"
+tb9d235ff,Advanced › Worked example,**Tariff: €0.30/kWh. Emission factor (EU average): 0.23 kgCO₂/kWh.**
+tb40c2d40,Advanced › Worked example,**Keeping the old unit 5 more years:**
+t7e1e4c1d,Advanced › Worked example,"**Cost = 730 × 0.30 × 5 = €1,095**"
+t9a8955a5,Advanced › Worked example,**CO₂ = 730 × 0.23 × 5 = 839 kg**
+tab32ca52,Advanced › Worked example,**Replacing now (over same 5 years):**
+tafadfa4f,Advanced › Worked example,**Cost = 650 + (175 × 0.30 × 5) = 650 + 262.50 = €912.50**
+t6ef4b50c,Advanced › Worked example,**CO₂ = 175 × 0.23 × 5 = 201 kg (+ ~50 kg manufacturing)**
+t512a3695,Advanced › Worked example,**Replacing now saves €182.50 and 588 kgCO₂ over 5 years.**
+ta71bd73f,Advanced › table r1c1,Total cost of ownership (TCO)
+t5853ace4,Advanced › table r1c2,Purchase price + all electricity costs over the appliance's full lifetime.
+t6afb527d,Advanced › table r2c1,Emission factor
+tb8191205,Advanced › table r2c2,"The kg of CO₂ released per kWh of electricity, depending on the national grid mix."
+t3a77eb1d,Advanced › table r3c1,Embedded energy
+t3cb6d24e,Advanced › table r3c2,"The energy used to manufacture, transport, and install a new appliance."
+tfab15df0,Advanced › table r4c1,Early replacement
+t44387bff,Advanced › table r4c2,Replacing a working but inefficient appliance before it reaches end-of-life.
+tf08cd726,Advanced › table r5c1,Sensitivity analysis
+tc01174f4,Advanced › table r5c2,"Testing how conclusions change when input values (tariff, emission factor) vary."
+tec816343,Advanced › Task 1 › title,Total cost of ownership model
+t4904fa7d,Advanced › Task 1,Build a TCO model for the four refrigerator classes. Assume a 12-year lifetime and a tariff of €0.30/kWh.
+t8285e8fa,Advanced › Task 1 › table r0c1,Model
+t8e543700,Advanced › Task 1 › table r0c2,Annual kWh
+tb9117880,Advanced › Task 1 › table r0c4,Annual cost (€)
+tac07dbd5,Advanced › Task 1 › table r0c5,12-year electricity cost (€)
+td95daa45,Advanced › Task 1 › table r0c6,TCO over 12 years (€)
+t71ed3c66,Advanced › Task 1 › table r1c1,G (old)
+tc10bf213,Advanced › Task 1 › table r2c1,D
+tc60bf9f2,Advanced › Task 1 › table r3c1,C
+tc40bf6cc,Advanced › Task 1 › table r4c1,A
+ta40973b8,Advanced › Task 1 › Q,"Complete the table above. Which model has the lowest TCO over 12 years, even though it has the highest purchase price?"
+t323cca84,Advanced › Task 1 › Q,Plot (or sketch) TCO as a function of time (years) for all four models on the same axes. At what year does the class A model become cheaper than the class D model?
+t12aa8dbe,Advanced › Task 2 › title,CO₂ emissions across countries
+t829ab75c,Advanced › Task 2,Use the class A refrigerator (175 kWh/year) and calculate annual CO₂ emissions for each country.
+t04f4fe71,Advanced › Task 2 › table r0c1,Country
+t9b6caae7,Advanced › Task 2 › table r0c2,Emission factor (kgCO₂/kWh)
+t0d4d825b,Advanced › Task 2 › table r0c3,Annual CO₂ (kg)
+tcc6b18e4,Advanced › Task 2 › table r0c4,CO₂ saved vs. old model (kg)
+t263d0c7e,Advanced › Task 2 › table r1c1,Germany
+t7b2e4bba,Advanced › Task 2 › table r2c1,France
+t3e695605,Advanced › Task 2 › table r3c1,Poland
+tdc75eef7,Advanced › Task 2 › table r4c1,Norway
+t0bb24bef,Advanced › Task 2 › table r5c1,Turkey
+tef7a20f0,Advanced › Task 2 › table r6c1,EU average
+t0f4c91f0,Advanced › Task 2 › Q,Complete the table. In which country does upgrading from an old (730 kWh) to a class A (175 kWh) refrigerator save the most CO₂? In which country does it save the least? Explain why.
+t964181db,Advanced › Task 2 › Q,"If 1 million households in Turkey each upgrade their refrigerator from old to class A, calculate the total annual CO₂ reduction in tonnes. Is this equivalent to taking cars off the road? (Average car: 4.6 tonnes CO₂/year.)"
+t0f0d6692,Advanced › Task 3 › title,Sensitivity analysis and policy recommendation
+t6cfc439d,Advanced › Task 3 › Q,Recompute the payback period for upgrading from G to A if the tariff increases from €0.30 to €0.50/kWh. How does a higher tariff affect the financial case for upgrading?
+ta1724d53,Advanced › Task 3 › Q,"Write a 100–150 word policy recommendation to the Ministry of Energy, arguing for a national refrigerator replacement programme. Use specific numbers from your calculations."
