@@ -25,6 +25,24 @@
         Translation Sheet (CSV export) → ws/<slug>/lang/<lang>.json
         (and lang/google/<lang>.json for "(Google)" columns)
 
+   node tools/reader.mjs word <slug> --lang is [--out file.docx]
+        Worksheet + one language → a Word document for the partner
+        school to read and correct (default: the "Þýðingar/<LANG>"
+        folder next to the source documents, named IS_<original>.docx).
+
+   node tools/reader.mjs md <slug> --lang is [--out file.md]
+        Same, as Markdown (every text keeps its key as an invisible
+        <!--key--> marker) — to read, correct or translate in any editor.
+
+   node tools/reader.mjs from-md <file.md> [--id <slug>] [--lang is] [--reviewed]
+        A corrected Markdown file → ws/<slug>/lang/<lang>.json (only the
+        texts that changed; slug and language come from the file).
+
+   node tools/reader.mjs index
+        ws/worksheets.json — the data behind worksheets.html (title, topic,
+        country, levels, counts and translation status of every worksheet
+        in every language). Written by "folder" as well.
+
    node tools/reader.mjs check <slug>
         Per-language coverage: missing and obsolete texts.
    ============================================================ */
@@ -38,6 +56,8 @@ import { fileURLToPath } from 'node:url';
 const require = createRequire(import.meta.url);
 const { parseDoc } = require('./parse-doc.js');
 const { parseDocx } = require('./parse-docx.js');
+const { buildDocx } = require('./write-docx.js');
+const { buildMd, parseMd } = require('./write-md.js');
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const LANGS = ['is', 'pt', 'hr', 'tr', 'nl'];                 // targets; English is the source
@@ -116,6 +136,7 @@ function args(argv) {
   }
   return { pos, opt };
 }
+const TRANSLATIONS = /^(þýðingar|thydingar|translations)$/i;   // generated per-language documents, not sources
 const wsDir = slug => path.join(ROOT, 'ws', slug);
 const readJSON = f => JSON.parse(fs.readFileSync(f, 'utf8'));
 const writeJSON = (f, o) => { fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, JSON.stringify(o, null, 2) + '\n'); };
@@ -233,7 +254,7 @@ function cmdFolder(dir, opt) {
   (function find(d) {
     for (const e of fs.readdirSync(d, { withFileTypes: true })) {
       const p = path.join(d, e.name);
-      if (e.isDirectory()) find(p);
+      if (e.isDirectory()) { if (!TRANSLATIONS.test(e.name)) find(p); }
       else if (/\.docx$/i.test(e.name) && !e.name.startsWith('~$')) files.push(p);
     }
   })(dir);
@@ -354,6 +375,185 @@ ${tr}
   fs.writeFileSync(path.join(ROOT, 'ws', 'new-format.html'), html);
 }
 
+/* worksheet + one language → the parts both document writers need */
+function loadTranslation(slug, lang) {
+  const dir = wsDir(slug);
+  const content = readJSON(path.join(dir, 'content.json'));
+  const en = texts(readJSON(path.join(dir, 'lang', 'en.json')));
+  const file = path.join(dir, 'lang', `${lang}.json`);
+  const raw = fs.existsSync(file) ? readJSON(file) : {};
+  const strings = { ...en, ...texts(raw) };
+  const missing = Object.keys(en).filter(k => !texts(raw)[k]).length;
+  const ui = readJSON(path.join(ROOT, 'lang', 'worksheet-ui.json'))[lang] || {};
+  const notice = lang !== 'en' && raw._meta?.reviewed !== true && ui.machineNotice
+    ? `⚠ ${ui.machineNotice} (${raw._meta?.engine || ui.sourceAI}, ${new Date().toLocaleDateString('is-IS')})`
+    : null;
+  return { dir, content, en, strings, missing, ui, notice };
+}
+
+/* default output: <source folder>/Þýðingar/<LANG>/<LANG>_<original name>.<ext> */
+function translationPath(content, slug, lang, ext, opt) {
+  if (opt.out) return path.resolve(opt.out);
+  const src = content.source && content.source.file;
+  const base = src ? path.basename(src, '.docx') : slug;
+  const root = src ? src.split('/')[0] : 'New Worksheets septemeber 2026';
+  return path.join(ROOT, root, 'Þýðingar', lang.toUpperCase(), `${lang.toUpperCase()}_${base}.${ext}`);
+}
+
+/* worksheet + one language → .docx for the partner school */
+function cmdWord(slug, opt) {
+  const lang = (opt.lang || 'is').toLowerCase();
+  const { dir, content, en, strings, missing, ui, notice } = loadTranslation(slug, lang);
+  const { buffer, bookmarks, images } = buildDocx({ content, strings, ui, lang, slug, dir, notice });
+
+  const out = translationPath(content, slug, lang, 'docx', opt);
+  fs.mkdirSync(path.dirname(out), { recursive: true });
+  fs.writeFileSync(out, buffer);
+
+  const rel = path.relative(ROOT, out).split(path.sep).join('/');
+  console.log(`✔ ${rel}`);
+  console.log(`  ${Object.keys(en).length} texts, ${bookmarks} bookmarks, ${images} images` +
+    (missing ? `, ${missing} still in English` : '') + (notice ? ', marked as a machine translation' : ''));
+}
+
+/* worksheet + one language → Markdown */
+function cmdMd(slug, opt) {
+  const lang = (opt.lang || 'is').toLowerCase();
+  const { dir, content, en, strings, missing, ui, notice } = loadTranslation(slug, lang);
+  const out = translationPath(content, slug, lang, 'md', opt);
+  const imgDir = path.relative(path.dirname(out), path.join(dir, 'img')).split(path.sep).join('/');
+  const { text, keys } = buildMd({ content, strings, ui, lang, slug, imgDir, notice });
+  fs.mkdirSync(path.dirname(out), { recursive: true });
+  fs.writeFileSync(out, text);
+
+  const rel = path.relative(ROOT, out).split(path.sep).join('/');
+  console.log(`✔ ${rel}`);
+  console.log(`  ${keys}/${Object.keys(en).length} texts` +
+    (missing ? `, ${missing} still in English` : '') + (notice ? ', marked as a machine translation' : ''));
+}
+
+/* corrected Markdown → lang/<lang>.json (changed texts only) */
+function cmdFromMd(file, opt) {
+  const { texts: got, conflicts, front } = parseMd(fs.readFileSync(path.resolve(file), 'utf8'));
+  const slug = opt.id || front.worksheet;
+  const lang = (opt.lang || front.language || '').toLowerCase();
+  if (!slug || !lang) throw new Error('slug and language are missing — give --id <slug> --lang <code> (or keep the front matter)');
+  if (lang === 'en') throw new Error('English is the source; it is only changed by re-reading the Word document');
+
+  const en = texts(readJSON(path.join(wsDir(slug), 'lang', 'en.json')));
+  const target = path.join(wsDir(slug), 'lang', `${lang}.json`);
+  const old = fs.existsSync(target) ? readJSON(target) : {};
+  const prev = texts(old);
+  const next = { ...prev };
+  let changed = 0, same = 0, english = 0, unknown = 0;
+  for (const [k, v] of Object.entries(got)) {
+    if (!(k in en)) { unknown++; continue; }
+    if (v === prev[k]) { same++; continue; }
+    if (!prev[k] && v === en[k]) { english++; continue; }      // still English → not a translation
+    next[k] = v; changed++;
+  }
+
+  if (changed) {
+    writeJSON(target, { _meta: { ...(old._meta || {}), language: lang, source: 'md', reviewed: !!opt.reviewed, readAt: new Date().toISOString() }, ...next });
+  }
+  const total = Object.keys(en).length;
+  console.log(`${changed ? '✔' : '·'} ${slug} lang/${lang}.json: ${changed} changed, ${same} unchanged` +
+    (english ? `, ${english} still English` : '') + ` — ${Object.keys(next).length}/${total} translated`);
+  if (unknown) console.log(`⚠ ${unknown} markers do not belong to this worksheet (ignored)`);
+  const clash = [...new Set(conflicts)];
+  if (clash.length) console.log(`⚠ ${clash.length} text${clash.length > 1 ? 's appear' : ' appears'} more than once with different wording (the first one is used): ${clash.join(', ')}`);
+}
+
+/* ---------- ws/worksheets.json: the list behind worksheets.html ---------- */
+/* first match wins, so the more specific words come first */
+const TOPIC_WORDS = [
+  ['lighting',    /\b(light|lighting|bulb|lamp|lumen|led)\b/i],
+  ['household',   /(washing machine|dryer|laundry|vacuum|floor care|personal care|hair dr|iron)/i],
+  ['kitchen',     /(kitchen|cook|oven|hob|fridge|refrigerat|freezer|dishwash|kettle|microwave)/i],
+  ['renewable',   /(solar|renewable|photovolta|wind power|heat pump)/i],
+  ['electronics', /(computer|laptop|standby|screen|monitor|energy class|energy label|electricity|appliance)/i],
+  ['school',      /(school|classroom|restroom|toilet|building|water tap)/i]
+];
+const guessTopic = title => (TOPIC_WORDS.find(([, re]) => re.test(title)) || ['other'])[0];
+const TOPIC_ORDER = ['lighting', 'kitchen', 'household', 'electronics', 'school', 'renewable', 'other'];
+
+function cmdIndex(opt = {}) {
+  const overrideFile = path.join(ROOT, 'ws', 'topics.json');
+  const override = fs.existsSync(overrideFile) ? readJSON(overrideFile) : {};
+  const items = [];
+
+  for (const e of fs.readdirSync(path.join(ROOT, 'ws'), { withFileTypes: true })) {
+    const dir = wsDir(e.name);
+    if (!e.isDirectory() || !fs.existsSync(path.join(dir, 'content.json'))) continue;
+    const c = readJSON(path.join(dir, 'content.json'));
+    if (c.schema !== 1) continue;                              // only the new format
+
+    const lang = {};
+    for (const l of ['en', ...LANGS]) {
+      const f = path.join(dir, 'lang', `${l}.json`);
+      if (!fs.existsSync(f)) continue;
+      try { lang[l] = texts(readJSON(f)); } catch (_) { /* reported by check */ }
+    }
+    const pick = key => {                                      // one key → { language: text }
+      const o = {};
+      for (const [l, t] of Object.entries(lang)) if (t[key]) o[l] = t[key];
+      return o;
+    };
+    const byLevel = list => {                                  // [{level,text}] → { level: {language: text} }
+      const o = {};
+      for (const x of list || []) if (x.level && !o[x.level]) o[x.level] = pick(x.text);
+      return o;
+    };
+
+    const counts = {};
+    for (const sec of c.sections) {
+      let tasks = 0, questions = 0;
+      walk(sec.blocks, b => { if (b.t === 'task') tasks++; if (b.t === 'q') questions++; });
+      for (const l of sec.levels || [sec.level]) {
+        if (!l) continue;
+        counts[l] = counts[l] || { tasks: 0, questions: 0 };
+        counts[l].tasks += tasks;
+        counts[l].questions += questions;
+      }
+    }
+
+    const translated = {};
+    for (const r of coverage(e.name)) {
+      if (r.error || r.lang.includes('/')) continue;
+      let meta = {};
+      try { meta = readJSON(path.join(dir, 'lang', `${r.lang}.json`))._meta || {}; } catch (_) {}
+      translated[r.lang] = { done: r.done, total: r.total, reviewed: meta.reviewed === true };
+    }
+
+    const title = pick(c.title);
+    items.push({
+      slug: e.name, code: c.code || null, country: c.country || null,
+      topic: override[e.name] || guessTopic(title.en || e.name.replace(/-/g, ' ')),
+      demo: !(c.source && c.source.type === 'docx'),           // the Google Doc example, not a partner document
+      levels: c.levels || [], counts, title,
+      subject: byLevel(c.meta && c.meta.topic),
+      time: byLevel(c.meta && c.meta.time),
+      translated
+    });
+  }
+
+  items.sort((a, b) => (a.demo - b.demo)
+    || (TOPIC_ORDER.indexOf(a.topic) - TOPIC_ORDER.indexOf(b.topic))
+    || String(a.country).localeCompare(String(b.country))
+    || String(a.code).localeCompare(String(b.code), undefined, { numeric: true })
+    || a.slug.localeCompare(b.slug));
+
+  writeJSON(path.join(ROOT, 'ws', 'worksheets.json'),
+    { generated: new Date().toISOString(), languages: ['en', ...LANGS], topics: TOPIC_ORDER, worksheets: items });
+
+  if (!opt.quiet) {
+    const per = {};
+    for (const i of items) per[i.topic] = (per[i.topic] || 0) + 1;
+    console.log(`✔ ws/worksheets.json: ${items.length} worksheets — ` +
+      TOPIC_ORDER.filter(t => per[t]).map(t => `${t} ${per[t]}`).join(', '));
+  }
+}
+
 function cmdSheetCsv(slug, opt) {
   const dir = wsDir(slug);
   const strings = csvParse(fs.readFileSync(path.join(dir, 'strings.csv'), 'utf8')).slice(1).filter(r => r[0]);
@@ -431,6 +631,10 @@ try {
   if (cmd === 'folder') cmdFolder(path.resolve(pos[0] || path.join(ROOT, 'New Worksheets septemeber 2026')), opt);
   else if (cmd === 'docx') cmdDocx(pos[0], opt);
   else if (cmd === 'doc') cmdDoc(pos[0], opt);
+  else if (cmd === 'index') cmdIndex(opt);
+  else if (cmd === 'word') cmdWord(pos[0], opt);
+  else if (cmd === 'md') cmdMd(pos[0], opt);
+  else if (cmd === 'from-md') cmdFromMd(pos[0], opt);
   else if (cmd === 'sheet-csv') cmdSheetCsv(pos[0], opt);
   else if (cmd === 'from-sheet') cmdFromSheet(pos[0], opt);
   else if (cmd === 'check') { console.log(pos[0]); for (const l of coverageLines(pos[0])) console.log(l); }

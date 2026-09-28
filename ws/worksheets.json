@@ -1,0 +1,821 @@
+{
+  "generated": "2026-09-25T06:51:25.623Z",
+  "languages": [
+    "en",
+    "is",
+    "pt",
+    "hr",
+    "tr",
+    "nl"
+  ],
+  "topics": [
+    "lighting",
+    "kitchen",
+    "household",
+    "electronics",
+    "school",
+    "renewable",
+    "other"
+  ],
+  "worksheets": [
+    {
+      "slug": "nl-comparing-bulb-types",
+      "code": "1",
+      "country": "nl",
+      "topic": "lighting",
+      "demo": false,
+      "levels": [
+        "basic",
+        "medium",
+        "advanced"
+      ],
+      "counts": {
+        "basic": {
+          "tasks": 2,
+          "questions": 5
+        },
+        "medium": {
+          "tasks": 2,
+          "questions": 8
+        },
+        "advanced": {
+          "tasks": 3,
+          "questions": 5
+        }
+      },
+      "title": {
+        "en": "Comparing Bulb types"
+      },
+      "subject": {
+        "basic": {
+          "en": "What is inside a light bulb?"
+        },
+        "medium": {
+          "en": "Efficiency and lifetime of light bulbs"
+        },
+        "advanced": {
+          "en": "Total cost of ownership and environmental impact"
+        }
+      },
+      "time": {
+        "basic": {
+          "en": "60 min"
+        },
+        "medium": {
+          "en": "90 min"
+        },
+        "advanced": {
+          "en": "120 min"
+        }
+      },
+      "translated": {}
+    },
+    {
+      "slug": "nl-energy-consumption-of-light-bulbs",
+      "code": "2",
+      "country": "nl",
+      "topic": "lighting",
+      "demo": false,
+      "levels": [
+        "basic",
+        "medium",
+        "advanced"
+      ],
+      "counts": {
+        "basic": {
+          "tasks": 2,
+          "questions": 7
+        },
+        "medium": {
+          "tasks": 3,
+          "questions": 12
+        },
+        "advanced": {
+          "tasks": 3,
+          "questions": 8
+        }
+      },
+      "title": {
+        "en": "Energy consumption of light bulbs"
+      },
+      "subject": {
+        "basic": {
+          "en": "How much does a light bulb cost to use?"
+        },
+        "medium": {
+          "en": "Calculating cost and CO₂ at home and at school"
+        },
+        "advanced": {
+          "en": "Real-world energy modelling and dynamic tariffs"
+        }
+      },
+      "time": {
+        "basic": {
+          "en": "60 min"
+        },
+        "medium": {
+          "en": "90 min"
+        },
+        "advanced": {
+          "en": "120 min"
+        }
+      },
+      "translated": {}
+    },
+    {
+      "slug": "nl-lighting-audit-at-your-school",
+      "code": "3",
+      "country": "nl",
+      "topic": "lighting",
+      "demo": false,
+      "levels": [
+        "basic",
+        "medium",
+        "advanced"
+      ],
+      "counts": {
+        "basic": {
+          "tasks": 2,
+          "questions": 8
+        },
+        "medium": {
+          "tasks": 3,
+          "questions": 9
+        },
+        "advanced": {
+          "tasks": 3,
+          "questions": 9
+        }
+      },
+      "title": {
+        "en": "Lighting audit at your school"
+      },
+      "subject": {
+        "basic": {
+          "en": "Counting the lights"
+        },
+        "medium": {
+          "en": "Quantifying energy and cost"
+        },
+        "advanced": {
+          "en": "Designing a retrofit business case"
+        }
+      },
+      "time": {},
+      "translated": {}
+    },
+    {
+      "slug": "nl-smart-lighting",
+      "code": "4",
+      "country": "nl",
+      "topic": "lighting",
+      "demo": false,
+      "levels": [
+        "basic",
+        "medium",
+        "advanced"
+      ],
+      "counts": {
+        "basic": {
+          "tasks": 2,
+          "questions": 9
+        },
+        "medium": {
+          "tasks": 3,
+          "questions": 8
+        },
+        "advanced": {
+          "tasks": 4,
+          "questions": 11
+        }
+      },
+      "title": {
+        "en": "Smart lighting",
+        "is": "Snjalllýsing"
+      },
+      "subject": {
+        "basic": {
+          "en": "Sensors that switch lights for you",
+          "is": "Skynjarar sem kveikja og slökkva ljósin fyrir þig"
+        },
+        "medium": {
+          "en": "Sensors, dimming and energy savings",
+          "is": "Skynjarar, deyfing og orkusparnaður"
+        },
+        "advanced": {
+          "en": "Designing a building-wide automation strategy",
+          "is": "Hönnun sjálfvirkrar lýsingar fyrir heila byggingu"
+        }
+      },
+      "time": {
+        "basic": {
+          "en": "60 min",
+          "is": "60 mín."
+        },
+        "medium": {
+          "en": "90 min",
+          "is": "90 mín."
+        },
+        "advanced": {
+          "en": "150 min",
+          "is": "150 mín."
+        }
+      },
+      "translated": {
+        "is": {
+          "done": 127,
+          "total": 127,
+          "reviewed": false
+        }
+      }
+    },
+    {
+      "slug": "hr-energy-and-water-efficiency-of",
+      "code": "3.2",
+      "country": "hr",
+      "topic": "kitchen",
+      "demo": false,
+      "levels": [
+        "basic",
+        "medium"
+      ],
+      "counts": {
+        "basic": {
+          "tasks": 3,
+          "questions": 22
+        },
+        "medium": {
+          "tasks": 3,
+          "questions": 22
+        }
+      },
+      "title": {
+        "en": "Energy and water efficiency of dishwashers"
+      },
+      "subject": {},
+      "time": {},
+      "translated": {}
+    },
+    {
+      "slug": "tr-refrigerators-and-freezers",
+      "code": "1",
+      "country": "tr",
+      "topic": "kitchen",
+      "demo": false,
+      "levels": [
+        "basic",
+        "medium",
+        "advanced"
+      ],
+      "counts": {
+        "basic": {
+          "tasks": 2,
+          "questions": 6
+        },
+        "medium": {
+          "tasks": 2,
+          "questions": 6
+        },
+        "advanced": {
+          "tasks": 3,
+          "questions": 6
+        }
+      },
+      "title": {
+        "en": "Refrigerators and freezers"
+      },
+      "subject": {
+        "basic": {
+          "en": "How does a refrigerator use electricity?"
+        },
+        "medium": {
+          "en": "Energy labels, consumption calculations and cost"
+        },
+        "advanced": {
+          "en": "Lifecycle cost modelling and environmental impact"
+        }
+      },
+      "time": {
+        "basic": {
+          "en": "60 min"
+        },
+        "medium": {
+          "en": "90 min"
+        },
+        "advanced": {
+          "en": "120 min"
+        }
+      },
+      "translated": {}
+    },
+    {
+      "slug": "tr-cooking-appliances",
+      "code": "2",
+      "country": "tr",
+      "topic": "kitchen",
+      "demo": false,
+      "levels": [
+        "basic",
+        "medium",
+        "advanced"
+      ],
+      "counts": {
+        "basic": {
+          "tasks": 2,
+          "questions": 8
+        },
+        "medium": {
+          "tasks": 2,
+          "questions": 4
+        },
+        "advanced": {
+          "tasks": 3,
+          "questions": 6
+        }
+      },
+      "title": {
+        "en": "Cooking appliances"
+      },
+      "subject": {
+        "basic": {
+          "en": "Which cooking method uses the most electricity?"
+        },
+        "medium": {
+          "en": "Comparing cooking appliances: energy, time and cost"
+        },
+        "advanced": {
+          "en": "Optimising kitchen energy use and carbon footprint"
+        }
+      },
+      "time": {
+        "basic": {
+          "en": "60 min"
+        },
+        "medium": {
+          "en": "90 min"
+        },
+        "advanced": {
+          "en": "120 min"
+        }
+      },
+      "translated": {}
+    },
+    {
+      "slug": "tr-small-kitchen-appliances",
+      "code": "3",
+      "country": "tr",
+      "topic": "kitchen",
+      "demo": false,
+      "levels": [
+        "basic",
+        "medium",
+        "advanced"
+      ],
+      "counts": {
+        "basic": {
+          "tasks": 2,
+          "questions": 6
+        },
+        "medium": {
+          "tasks": 2,
+          "questions": 4
+        },
+        "advanced": {
+          "tasks": 2,
+          "questions": 4
+        }
+      },
+      "title": {
+        "en": "Small kitchen appliances"
+      },
+      "subject": {
+        "basic": {
+          "en": "Hidden energy users in the kitchen"
+        },
+        "medium": {
+          "en": "Calculating the real cost of small appliances"
+        },
+        "advanced": {
+          "en": "Standby power, phantom loads and smart solutions"
+        }
+      },
+      "time": {
+        "basic": {
+          "en": "60 min"
+        },
+        "medium": {
+          "en": "90 min"
+        },
+        "advanced": {
+          "en": "120 min"
+        }
+      },
+      "translated": {}
+    },
+    {
+      "slug": "tr-dishwashers-energy-and-water-efficiency",
+      "code": "4",
+      "country": "tr",
+      "topic": "kitchen",
+      "demo": false,
+      "levels": [
+        "basic",
+        "medium",
+        "advanced"
+      ],
+      "counts": {
+        "basic": {
+          "tasks": 2,
+          "questions": 6
+        },
+        "medium": {
+          "tasks": 2,
+          "questions": 5
+        },
+        "advanced": {
+          "tasks": 2,
+          "questions": 3
+        }
+      },
+      "title": {
+        "en": "Dishwashers: energy and water efficiency"
+      },
+      "subject": {
+        "basic": {
+          "en": "How does a dishwasher use energy and water?"
+        },
+        "medium": {
+          "en": "Comparing programmes, calculating cost and water savings"
+        },
+        "advanced": {
+          "en": "Lifecycle analysis, water-energy nexus and policy"
+        }
+      },
+      "time": {
+        "basic": {
+          "en": "60 min"
+        },
+        "medium": {
+          "en": "90 min"
+        },
+        "advanced": {
+          "en": "120 min"
+        }
+      },
+      "translated": {}
+    },
+    {
+      "slug": "hr-cleaning-household-maintenance-washing",
+      "code": "3.1",
+      "country": "hr",
+      "topic": "household",
+      "demo": false,
+      "levels": [
+        "basic",
+        "medium"
+      ],
+      "counts": {
+        "basic": {
+          "tasks": 2,
+          "questions": 20
+        },
+        "medium": {
+          "tasks": 2,
+          "questions": 20
+        }
+      },
+      "title": {
+        "en": "Cleaning & Household Maintenance: Washing machines and dryers"
+      },
+      "subject": {},
+      "time": {},
+      "translated": {}
+    },
+    {
+      "slug": "hr-floor-care-traditional-vacuum-vs-robot",
+      "code": "3.3",
+      "country": "hr",
+      "topic": "household",
+      "demo": false,
+      "levels": [
+        "basic",
+        "medium"
+      ],
+      "counts": {
+        "basic": {
+          "tasks": 4,
+          "questions": 26
+        },
+        "medium": {
+          "tasks": 4,
+          "questions": 26
+        }
+      },
+      "title": {
+        "en": "Floor care – traditional vacuum vs. robot vacuum"
+      },
+      "subject": {},
+      "time": {},
+      "translated": {}
+    },
+    {
+      "slug": "hr-energy-efficiency-of-personal-care",
+      "code": "3.4",
+      "country": "hr",
+      "topic": "household",
+      "demo": false,
+      "levels": [
+        "basic",
+        "medium"
+      ],
+      "counts": {
+        "basic": {
+          "tasks": 3,
+          "questions": 22
+        },
+        "medium": {
+          "tasks": 3,
+          "questions": 22
+        }
+      },
+      "title": {
+        "en": "Energy efficiency of personal care appliances: Hair dryers"
+      },
+      "subject": {},
+      "time": {},
+      "translated": {}
+    },
+    {
+      "slug": "is-energy-efficiency-in-the-school",
+      "code": null,
+      "country": "is",
+      "topic": "electronics",
+      "demo": false,
+      "levels": [
+        "basic",
+        "medium",
+        "advanced"
+      ],
+      "counts": {
+        "basic": {
+          "tasks": 2,
+          "questions": 6
+        },
+        "medium": {
+          "tasks": 4,
+          "questions": 15
+        },
+        "advanced": {
+          "tasks": 3,
+          "questions": 10
+        }
+      },
+      "title": {
+        "en": "Energy Efficiency in the School Computer Lab"
+      },
+      "subject": {},
+      "time": {},
+      "translated": {}
+    },
+    {
+      "slug": "pt-what-is-the-impact-of-standby-power",
+      "code": "1A",
+      "country": "pt",
+      "topic": "electronics",
+      "demo": false,
+      "levels": [
+        "basic"
+      ],
+      "counts": {
+        "basic": {
+          "tasks": 5,
+          "questions": 0
+        }
+      },
+      "title": {
+        "en": "What is the impact of standby power consumption?"
+      },
+      "subject": {},
+      "time": {},
+      "translated": {}
+    },
+    {
+      "slug": "pt-i-understand-the-energy-classes",
+      "code": "2B",
+      "country": "pt",
+      "topic": "electronics",
+      "demo": false,
+      "levels": [
+        "medium"
+      ],
+      "counts": {
+        "medium": {
+          "tasks": 5,
+          "questions": 0
+        }
+      },
+      "title": {
+        "en": "I understand the energy classes?"
+      },
+      "subject": {},
+      "time": {},
+      "translated": {}
+    },
+    {
+      "slug": "pt-how-much-energy-does-a-computer-use",
+      "code": "3B",
+      "country": "pt",
+      "topic": "electronics",
+      "demo": false,
+      "levels": [
+        "medium"
+      ],
+      "counts": {
+        "medium": {
+          "tasks": 5,
+          "questions": 0
+        }
+      },
+      "title": {
+        "en": "How much energy does a computer use?"
+      },
+      "subject": {},
+      "time": {},
+      "translated": {}
+    },
+    {
+      "slug": "pt-do-you-know-your-electricity",
+      "code": "4A",
+      "country": "pt",
+      "topic": "electronics",
+      "demo": false,
+      "levels": [
+        "basic"
+      ],
+      "counts": {
+        "basic": {
+          "tasks": 5,
+          "questions": 0
+        }
+      },
+      "title": {
+        "en": "Do you know your electricity consumption habits?"
+      },
+      "subject": {},
+      "time": {},
+      "translated": {}
+    },
+    {
+      "slug": "is-school-restroom-audit",
+      "code": null,
+      "country": "is",
+      "topic": "school",
+      "demo": false,
+      "levels": [
+        "basic",
+        "medium",
+        "advanced"
+      ],
+      "counts": {
+        "basic": {
+          "tasks": 2,
+          "questions": 6
+        },
+        "medium": {
+          "tasks": 4,
+          "questions": 11
+        },
+        "advanced": {
+          "tasks": 3,
+          "questions": 11
+        }
+      },
+      "title": {
+        "en": "School Restroom Audit"
+      },
+      "subject": {},
+      "time": {},
+      "translated": {}
+    },
+    {
+      "slug": "is-renewable-energy-solar-potential-of-our",
+      "code": null,
+      "country": "is",
+      "topic": "renewable",
+      "demo": false,
+      "levels": [
+        "basic",
+        "medium",
+        "advanced"
+      ],
+      "counts": {
+        "basic": {
+          "tasks": 2,
+          "questions": 6
+        },
+        "medium": {
+          "tasks": 4,
+          "questions": 11
+        },
+        "advanced": {
+          "tasks": 3,
+          "questions": 7
+        }
+      },
+      "title": {
+        "en": "Renewable Energy – Solar Potential of our School"
+      },
+      "subject": {},
+      "time": {},
+      "translated": {}
+    },
+    {
+      "slug": "smart-lighting",
+      "code": null,
+      "country": "nl",
+      "topic": "lighting",
+      "demo": true,
+      "levels": [
+        "basic",
+        "medium",
+        "advanced"
+      ],
+      "counts": {
+        "basic": {
+          "tasks": 2,
+          "questions": 3
+        },
+        "medium": {
+          "tasks": 3,
+          "questions": 8
+        },
+        "advanced": {
+          "tasks": 4,
+          "questions": 11
+        }
+      },
+      "title": {
+        "en": "Smart lighting",
+        "is": "Snjalllýsing",
+        "pt": "Iluminação inteligente",
+        "hr": "Pametna rasvjeta",
+        "tr": "Akıllı aydınlatma",
+        "nl": "Slimme verlichting"
+      },
+      "subject": {},
+      "time": {
+        "basic": {
+          "en": "60 min",
+          "is": "60 mín.",
+          "pt": "60 min",
+          "hr": "60 min",
+          "tr": "60 dk",
+          "nl": "60 min"
+        },
+        "medium": {
+          "en": "90 min",
+          "is": "90 mín.",
+          "pt": "90 min",
+          "hr": "90 min",
+          "tr": "90 dk",
+          "nl": "90 min"
+        },
+        "advanced": {
+          "en": "150 min",
+          "is": "150 mín.",
+          "pt": "150 min",
+          "hr": "150 min",
+          "tr": "150 dk",
+          "nl": "150 min"
+        }
+      },
+      "translated": {
+        "is": {
+          "done": 119,
+          "total": 119,
+          "reviewed": false
+        },
+        "pt": {
+          "done": 119,
+          "total": 119,
+          "reviewed": false
+        },
+        "hr": {
+          "done": 119,
+          "total": 119,
+          "reviewed": false
+        },
+        "tr": {
+          "done": 119,
+          "total": 119,
+          "reviewed": false
+        },
+        "nl": {
+          "done": 119,
+          "total": 119,
+          "reviewed": false
+        }
+      }
+    }
+  ]
+}

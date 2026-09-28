@@ -1,7 +1,7 @@
 {
   "_README": {
     "purpose": "Interface texts for worksheets rendered by js/worksheet.js (toolbar, headers, footers, level names).",
-    "instructions": "One block per language. Texts from back to of were reviewed by partners (copied from ws03); the rest are machine-translated and need a check."
+    "instructions": "One block per language. Texts from back to of were reviewed by partners (copied from ws03); the rest are machine-translated and need a check. The \"index\" block belongs to worksheets.html, the list of every worksheet."
   },
   "en": {
     "back": "← Back",
@@ -42,6 +42,30 @@
       "hr": "Croatia",
       "tr": "Türkiye",
       "nl": "Netherlands"
+    },
+    "index": {
+      "title": "GREEN worksheets",
+      "lede": "Every worksheet comes at three levels. Pick a level and go straight to it.",
+      "allTopics": "All topics",
+      "allCountries": "All countries",
+      "country": "Country",
+      "open": "Open",
+      "tasks": "tasks",
+      "questions": "questions",
+      "onlyEnglish": "English only",
+      "reviewed": "Reviewed",
+      "demo": "Demo",
+      "count": "{n} worksheets",
+      "none": "No worksheet matches the filter.",
+      "topics": {
+        "lighting": "💡 Lighting",
+        "kitchen": "🍳 Kitchen",
+        "household": "🧺 Household appliances",
+        "electronics": "💻 Devices & electricity",
+        "school": "🏫 School building",
+        "renewable": "☀️ Renewable energy",
+        "other": "📄 Other"
+      }
     }
   },
   "is": {
@@ -83,6 +107,30 @@
       "hr": "Króatía",
       "tr": "Tyrkland",
       "nl": "Holland"
+    },
+    "index": {
+      "title": "GREEN verkefnablöð",
+      "lede": "Hvert verkefnablað er á þremur þyngdarstigum. Veldu stig og farðu beint inn á það.",
+      "allTopics": "Öll viðfangsefni",
+      "allCountries": "Öll lönd",
+      "country": "Land",
+      "open": "Opna",
+      "tasks": "verkefni",
+      "questions": "spurningar",
+      "onlyEnglish": "Aðeins á ensku",
+      "reviewed": "Yfirfarið",
+      "demo": "Sýnidæmi",
+      "count": "{n} verkefnablöð",
+      "none": "Ekkert verkefnablað passar við valið.",
+      "topics": {
+        "lighting": "💡 Lýsing",
+        "kitchen": "🍳 Eldhús",
+        "household": "🧺 Heimilistæki",
+        "electronics": "💻 Tæki og rafmagn",
+        "school": "🏫 Skólabyggingin",
+        "renewable": "☀️ Endurnýjanleg orka",
+        "other": "📄 Annað"
+      }
     }
   },
   "pt": {
@@ -124,6 +172,30 @@
       "hr": "Croácia",
       "tr": "Turquia",
       "nl": "Países Baixos"
+    },
+    "index": {
+      "title": "Fichas GREEN",
+      "lede": "Cada ficha existe em três níveis. Escolha um nível e vá diretamente para ele.",
+      "allTopics": "Todos os temas",
+      "allCountries": "Todos os países",
+      "country": "País",
+      "open": "Abrir",
+      "tasks": "tarefas",
+      "questions": "perguntas",
+      "onlyEnglish": "Apenas em inglês",
+      "reviewed": "Revisto",
+      "demo": "Exemplo",
+      "count": "{n} fichas",
+      "none": "Nenhuma ficha corresponde ao filtro.",
+      "topics": {
+        "lighting": "💡 Iluminação",
+        "kitchen": "🍳 Cozinha",
+        "household": "🧺 Eletrodomésticos",
+        "electronics": "💻 Equipamentos e eletricidade",
+        "school": "🏫 Edifício escolar",
+        "renewable": "☀️ Energias renováveis",
+        "other": "📄 Outros"
+      }
     }
   },
   "hr": {
@@ -165,6 +237,30 @@
       "hr": "Hrvatska",
       "tr": "Turska",
       "nl": "Nizozemska"
+    },
+    "index": {
+      "title": "GREEN radni listovi",
+      "lede": "Svaki radni list postoji na tri razine. Odaberite razinu i idite izravno na nju.",
+      "allTopics": "Sve teme",
+      "allCountries": "Sve zemlje",
+      "country": "Zemlja",
+      "open": "Otvori",
+      "tasks": "zadataka",
+      "questions": "pitanja",
+      "onlyEnglish": "Samo na engleskom",
+      "reviewed": "Provjereno",
+      "demo": "Primjer",
+      "count": "{n} radnih listova",
+      "none": "Nijedan radni list ne odgovara odabiru.",
+      "topics": {
+        "lighting": "💡 Rasvjeta",
+        "kitchen": "🍳 Kuhinja",
+        "household": "🧺 Kućanski uređaji",
+        "electronics": "💻 Uređaji i struja",
+        "school": "🏫 Školska zgrada",
+        "renewable": "☀️ Obnovljiva energija",
+        "other": "📄 Ostalo"
+      }
     }
   },
   "tr": {
@@ -206,6 +302,30 @@
       "hr": "Hırvatistan",
       "tr": "Türkiye",
       "nl": "Hollanda"
+    },
+    "index": {
+      "title": "GREEN çalışma yaprakları",
+      "lede": "Her çalışma yaprağı üç düzeyde hazırlanmıştır. Bir düzey seçin ve doğrudan ona gidin.",
+      "allTopics": "Tüm konular",
+      "allCountries": "Tüm ülkeler",
+      "country": "Ülke",
+      "open": "Aç",
+      "tasks": "etkinlik",
+      "questions": "soru",
+      "onlyEnglish": "Yalnızca İngilizce",
+      "reviewed": "Kontrol edildi",
+      "demo": "Örnek",
+      "count": "{n} çalışma yaprağı",
+      "none": "Seçime uyan çalışma yaprağı yok.",
+      "topics": {
+        "lighting": "💡 Aydınlatma",
+        "kitchen": "🍳 Mutfak",
+        "household": "🧺 Ev aletleri",
+        "electronics": "💻 Cihazlar ve elektrik",
+        "school": "🏫 Okul binası",
+        "renewable": "☀️ Yenilenebilir enerji",
+        "other": "📄 Diğer"
+      }
     }
   },
   "nl": {
@@ -247,6 +367,30 @@
       "hr": "Kroatië",
       "tr": "Turkije",
       "nl": "Nederland"
+    },
+    "index": {
+      "title": "GREEN werkbladen",
+      "lede": "Elk werkblad bestaat op drie niveaus. Kies een niveau en ga er direct naartoe.",
+      "allTopics": "Alle onderwerpen",
+      "allCountries": "Alle landen",
+      "country": "Land",
+      "open": "Openen",
+      "tasks": "opdrachten",
+      "questions": "vragen",
+      "onlyEnglish": "Alleen in het Engels",
+      "reviewed": "Nagekeken",
+      "demo": "Voorbeeld",
+      "count": "{n} werkbladen",
+      "none": "Geen werkblad voldoet aan de filter.",
+      "topics": {
+        "lighting": "💡 Verlichting",
+        "kitchen": "🍳 Keuken",
+        "household": "🧺 Huishoudapparaten",
+        "electronics": "💻 Apparaten en elektriciteit",
+        "school": "🏫 Schoolgebouw",
+        "renewable": "☀️ Hernieuwbare energie",
+        "other": "📄 Overig"
+      }
     }
   }
 }

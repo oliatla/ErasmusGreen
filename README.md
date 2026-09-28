@@ -130,9 +130,25 @@ breaks, level filter, six languages, B/W, QR codes for videos in print.
 - **Example:** `ws/smart-lighting/` (ws16–ws18 merged into one worksheet, in six languages).
 - **What the reader understands, and the full procedure:** `.claude/skills/lesa/SKILL.md`
   (in Claude Code, type `/lesa`).
-- **Commands:** `node tools/reader.mjs folder | docx | doc | sheet-csv | from-sheet | check`
+- **Back to Word:** `node tools/reader.mjs word <slug> --lang is` writes the worksheet in
+  one language as a .docx (`New Worksheets septemeber 2026/Þýðingar/IS/IS_<original>.docx`)
+  so a partner school can correct its own language in Word. Each paragraph carries an
+  invisible bookmark with its translation key, so corrections can be read back later.
+  Documents in a `Þýðingar` folder are never read as sources.
+- **Corrections back:** `node tools/reader.mjs md <slug> --lang is` writes the same worksheet
+  as Markdown, where every text keeps its key in an invisible `<!--key-->` marker. The file
+  can be corrected in any editor (or handed to an AI), and
+  `node tools/reader.mjs from-md <file.md>` writes the changed texts back into
+  `lang/<lang>.json` — only what actually changed, with `--reviewed` to clear the
+  "machine translation" notice.
+- **Commands:** `node tools/reader.mjs folder | docx | doc | word | md | from-md | sheet-csv | from-sheet | check`
   (usage in the file header). Needs Node 18+, no packages.
-- **Interface texts** (toolbar, footer, level names) for all languages:
+- **The list of every worksheet:** [`worksheets.html`](worksheets.html) — filter by level,
+  topic and country, in all six languages, and go straight into a worksheet at one level
+  (`ws/<slug>/?lang=is&level=basic`). Its data is `ws/worksheets.json`, written by
+  `node tools/reader.mjs index` (and by `folder`); the topic of a worksheet is guessed from
+  its English title and can be overridden in `ws/topics.json` (`{"<slug>": "kitchen"}`).
+- **Interface texts** (toolbar, footer, level names, the list page) for all languages:
   `lang/worksheet-ui.json`.
 - Translations can be reviewed in a Google Sheet (one column per language);
   a teacher sets the `_reviewed` row to TRUE and the "machine translation"

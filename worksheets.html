@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GREEN — worksheets</title>
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="apple-touch-icon" href="img/favicon.svg">
+<meta name="theme-color" content="#059669">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* ---- the bits this page adds to css/style.css ---- */
+  .filters { display: flex; flex-direction: column; gap: .6rem; margin-bottom: 1.4rem; }
+  .filter-row { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; }
+  .filter-row .label {
+    font-size: .72rem; text-transform: uppercase; letter-spacing: .04em;
+    color: var(--text-muted); min-width: 6.5rem;
+  }
+  .chip {
+    display: inline-flex; align-items: center; gap: .35rem;
+    padding: .3rem .7rem; border: 1px solid var(--border); border-radius: 999px;
+    background: var(--bg-card); color: var(--text-sec); cursor: pointer;
+    font: inherit; font-size: .84rem; line-height: 1.4;
+  }
+  .chip:hover { background: var(--bg-subtle); color: var(--text); }
+  .chip[aria-pressed="true"] { background: var(--green-light); color: var(--green); border-color: var(--green-border); font-weight: 600; }
+  .chip[aria-pressed="true"].basic    { background: var(--green-light);  color: var(--green);  border-color: var(--green-border); }
+  .chip[aria-pressed="true"].medium   { background: var(--water-light);  color: var(--water);  border-color: var(--water-border); }
+  .chip[aria-pressed="true"].advanced { background: var(--energy-light); color: var(--energy); border-color: var(--energy-border); }
+  .chip img { width: 18px; height: 13px; border-radius: 2px; display: block; }
+
+  .count { color: var(--text-muted); font-size: .82rem; margin: 0 0 .8rem; }
+
+  /* the card is one link (the whole surface opens the worksheet); the level
+     bubbles sit on top of it and lead straight to one level */
+  .ws-card { display: flex; flex-direction: column; position: relative; }
+  .ws-head { display: flex; align-items: flex-start; justify-content: space-between; gap: .5rem; }
+  .ws-head .ws-topic { margin-bottom: .4rem; }
+  .ws-head .flag-icon { margin-top: -.1rem; }
+  .ws-card h3 { margin-bottom: .3rem; }
+  .ws-card h3 a { color: inherit; text-decoration: none; }
+  .ws-card h3 a::after { content: ''; position: absolute; inset: 0; border-radius: var(--r); }
+  .ws-card .ws-desc { flex: 1 1 auto; }
+
+  /* three doors into the same worksheet — bars only, the name is in the tooltip.
+     Only the bubbles are lifted above the card link, so the rest of the card
+     (the status text included) still opens the worksheet itself. */
+  .levels { display: inline-flex; gap: .3rem; position: relative; z-index: 1; }
+  .lvl-dot {
+    display: inline-flex; align-items: flex-end; gap: 2px;
+    padding: .3rem .5rem; border: 1px solid var(--border); border-radius: 999px;
+    background: var(--bg-input); color: var(--text-muted); text-decoration: none;
+  }
+  .lvl-dot i { display: block; width: 3px; border: 1px solid currentColor; border-radius: 1px; }
+  .lvl-dot i:nth-child(1) { height: 5px; }
+  .lvl-dot i:nth-child(2) { height: 8px; }
+  .lvl-dot i:nth-child(3) { height: 11px; }
+  .lvl-dot i.on { background: currentColor; }
+  .lvl-dot.basic    { color: var(--green); }
+  .lvl-dot.medium   { color: var(--water); }
+  .lvl-dot.advanced { color: var(--energy); }
+  .lvl-dot:hover { border-color: currentColor; background: var(--bg-card); }
+  .lvl-dot.on { border-color: currentColor; box-shadow: inset 0 0 0 1px currentColor; }
+  .lvl-dot.off { color: var(--border-strong); opacity: .55; pointer-events: none; }
+
+  .ws-status.partial { color: var(--energy); }
+  .ws-status.none    { color: var(--text-muted); }
+  .ws-demo {
+    font-size: .68rem; text-transform: uppercase; letter-spacing: .05em;
+    color: var(--text-muted); border: 1px solid var(--border); border-radius: 999px; padding: .05rem .45rem;
+  }
+  .empty { color: var(--text-muted); padding: 2rem 0; text-align: center; }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <a href="index.html" class="brand-mark" aria-label="GREEN">
+    <img src="img/greenlogo.png" alt="" class="brand-logo">
+    <span class="brand-text">
+      <strong>GREEN</strong>
+      <span class="brand-sub">Erasmus+ KA220-VET</span>
+    </span>
+  </a>
+  <div class="top-bar-actions">
+    <div class="lang-switcher" id="lang-switcher"></div>
+    <button class="theme-toggle" id="theme-btn" onclick="theme.toggle()" aria-label="Toggle theme">🌙</button>
+  </div>
+</div>
+
+<header class="page-header">
+  <div class="header-inner hero">
+    <span class="badge">GREEN Erasmus+ · KA220-VET · WP2</span>
+    <h1 id="title">GREEN worksheets</h1>
+    <p id="lede"></p>
+  </div>
+</header>
+
+<main class="main">
+  <div class="filters">
+    <div class="filter-row" id="row-level"></div>
+    <div class="filter-row" id="row-topic"></div>
+    <div class="filter-row" id="row-country"></div>
+  </div>
+  <p class="count" id="count"></p>
+  <div class="ws-grid" id="grid"></div>
+</main>
+
+<footer class="page-footer">
+  <div class="footer-grid">
+    <div class="footer-eu">
+      <img src="img/eufounded.png" alt="Co-funded by the European Union" class="eu-logo">
+      <p class="eu-disclaimer" id="disclaimer"></p>
+    </div>
+    <div class="footer-meta">
+      <p class="footer-project" id="project"></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/theme.js"></script>
+<script>
+/* ============================================================
+   The list of every new-format worksheet.
+   Data: ws/worksheets.json (written by tools/reader.mjs index)
+   Texts: lang/worksheet-ui.json (the same file the worksheets use)
+   Every card is three doors into one worksheet — one per level —
+   so a teacher never has to pick the level inside the worksheet.
+   ============================================================ */
+(function () {
+  const LANGS = ['en', 'is', 'pt', 'hr', 'tr', 'nl'];
+  const LEVELS = ['basic', 'medium', 'advanced'];
+  const STORAGE_KEY = 'green-ws-lang';                 // shared with the worksheets
+
+  const params = new URLSearchParams(location.search);
+  const state = {
+    lang: pick(params.get('lang'), read(STORAGE_KEY), 'en', c => LANGS.includes(c)),
+    level: pick(params.get('level'), 'all', c => c === 'all' || LEVELS.includes(c)),
+    topic: params.get('topic') || 'all',
+    country: params.get('country') || 'all',
+    data: null, uiAll: {}
+  };
+
+  function pick(...args) {
+    const ok = args.pop();
+    return args.find(v => v && ok(v)) || args[args.length - 1];
+  }
+  function read(key) { try { return localStorage.getItem(key); } catch (_) { return null; } }
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  /* interface text, falling back to English */
+  function ui(path) {
+    for (const code of [state.lang, 'en']) {
+      const v = path.split('.').reduce((o, k) => (o == null ? undefined : o[k]), state.uiAll[code]);
+      if (v != null) return v;
+    }
+    return path;
+  }
+  /* a worksheet's own text (title, subject, time), falling back to English */
+  const t = o => (o && (o[state.lang] || o.en)) || '';
+
+  /* ---------- render ---------- */
+  function chip(kind, value, label, extra) {
+    const on = state[kind] === value;
+    return `<button class="chip ${extra || ''}" data-kind="${kind}" data-value="${value}" aria-pressed="${on}">${label}</button>`;
+  }
+
+  function filters() {
+    document.getElementById('row-level').innerHTML =
+      `<span class="label">${esc(ui('show'))}</span>` +
+      chip('level', 'all', esc(ui('allLevels'))) +
+      LEVELS.map(l => chip('level', l, esc(ui('levels.' + l)), l)).join('');
+
+    const topics = state.data.topics.filter(x => state.data.worksheets.some(w => w.topic === x));
+    document.getElementById('row-topic').innerHTML =
+      `<span class="label">${esc(ui('topic'))}</span>` +
+      chip('topic', 'all', esc(ui('index.allTopics'))) +
+      topics.map(x => chip('topic', x, esc(ui('index.topics.' + x)))).join('');
+
+    const countries = [...new Set(state.data.worksheets.map(w => w.country).filter(Boolean))].sort();
+    document.getElementById('row-country').innerHTML =
+      `<span class="label">${esc(ui('index.country'))}</span>` +
+      chip('country', 'all', esc(ui('index.allCountries'))) +
+      countries.map(c => chip('country', c,
+        `<img src="img/flags/${c}.svg" alt=""> ${esc(ui('countries.' + c))}`)).join('');
+  }
+
+  function status(w) {
+    if (state.lang === 'en') return '';
+    const c = w.translated[state.lang];
+    if (!c || !c.done) return `<span class="ws-status none">${esc(ui('index.onlyEnglish'))}</span>`;
+    if (c.done < c.total) return `<span class="ws-status partial">${c.done}/${c.total}</span>`;
+    return c.reviewed
+      ? `<span class="ws-status live">● ${esc(ui('index.reviewed'))}</span>`
+      : `<span class="ws-status partial">● ${esc(ui('machineShort'))}</span>`;
+  }
+
+  function card(w) {
+    const shown = state.level !== 'all' ? state.level : w.levels[0];
+    const bars = l => [0, 1, 2].map(i => `<i class="${i <= LEVELS.indexOf(l) ? 'on' : ''}"></i>`).join('');
+    const levels = LEVELS.map(l => {
+      const has = w.levels.includes(l);
+      const c = w.counts[l] || {};
+      const tip = [ui('levels.' + l), has ? t(w.time[l]) : '—',
+        has && c.tasks ? `${c.tasks} ${ui('index.tasks')}` : '',
+        has && c.questions ? `${c.questions} ${ui('index.questions')}` : ''].filter(Boolean).join(' · ');
+      return has
+        ? `<a class="lvl-dot ${l}${state.level === l ? ' on' : ''}" href="ws/${w.slug}/?lang=${state.lang}&level=${l}"
+              title="${esc(tip)}" aria-label="${esc(tip)}">${bars(l)}</a>`
+        : `<span class="lvl-dot ${l} off" title="${esc(tip)}" aria-hidden="true">${bars(l)}</span>`;
+    }).join('');
+
+    // the subject line of the level on show; some documents only name it once
+    const desc = t(w.subject[shown]) || t(w.subject[w.levels.find(l => w.subject[l])] || {});
+    const where = [w.country ? ui('countries.' + w.country) : '', w.code ? `${ui('worksheet')} ${w.code}` : '']
+      .filter(Boolean).join(' · ');
+
+    return `<article class="ws-card ready">
+      <div class="ws-head">
+        <span class="ws-topic">${esc(ui('index.topics.' + w.topic))}${w.demo ? ` <span class="ws-demo">${esc(ui('index.demo'))}</span>` : ''}</span>
+        ${w.country ? `<span class="flag-icon" title="${esc(where)}"><img src="img/flags/${w.country}.svg" alt="${esc(where)}"></span>` : ''}
+      </div>
+      <h3><a href="ws/${w.slug}/?lang=${state.lang}">${esc(t(w.title))}</a></h3>
+      ${desc ? `<p class="ws-desc">${esc(desc)}</p>` : ''}
+      <div class="ws-footer">
+        <span class="levels">${levels}</span>
+        ${status(w)}
+      </div>
+    </article>`;
+  }
+
+  function render() {
+    document.documentElement.lang = state.lang;
+    document.title = ui('index.title');
+    document.getElementById('title').textContent = ui('index.title');
+    document.getElementById('lede').textContent = ui('index.lede');
+    document.getElementById('disclaimer').textContent = ui('disclaimer');
+    document.getElementById('project').textContent = ui('projectLine');
+    document.querySelectorAll('.lang-flag').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === state.lang));
+
+    filters();
+
+    const list = state.data.worksheets.filter(w =>
+      (state.level === 'all' || w.levels.includes(state.level)) &&
+      (state.topic === 'all' || w.topic === state.topic) &&
+      (state.country === 'all' || w.country === state.country));
+
+    document.getElementById('count').textContent = ui('index.count').replace('{n}', list.length);
+    document.getElementById('grid').innerHTML = list.length
+      ? list.map(card).join('')
+      : `<p class="empty">${esc(ui('index.none'))}</p>`;
+
+    const p = new URLSearchParams();
+    if (state.lang !== 'en') p.set('lang', state.lang);
+    for (const k of ['level', 'topic', 'country']) if (state[k] !== 'all') p.set(k, state[k]);
+    history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
+  }
+
+  /* ---------- events ---------- */
+  function switcher() {
+    document.getElementById('lang-switcher').innerHTML = LANGS.map(c =>
+      `<button class="lang-flag" data-lang="${c}" title="${c.toUpperCase()}"><img src="img/flags/${c}.svg" alt="${c}"></button>`).join('');
+  }
+
+  document.addEventListener('click', e => {
+    const flag = e.target.closest('.lang-flag');
+    if (flag) {
+      state.lang = flag.dataset.lang;
+      try { localStorage.setItem(STORAGE_KEY, state.lang); } catch (_) {}
+      return render();
+    }
+    const c = e.target.closest('.chip');
+    if (c) { state[c.dataset.kind] = c.dataset.value; render(); }
+  });
+
+  /* ---------- start ---------- */
+  Promise.all([
+    fetch('ws/worksheets.json', { cache: 'no-cache' }).then(r => r.json()),
+    fetch('lang/worksheet-ui.json', { cache: 'no-cache' }).then(r => r.json())
+  ]).then(([data, uiAll]) => {
+    state.data = data;
+    state.uiAll = uiAll;
+    switcher();
+    render();
+  }).catch(err => {
+    document.getElementById('grid').innerHTML =
+      `<p class="empty">ws/worksheets.json — ${esc(err.message)}<br>node tools/reader.mjs index</p>`;
+  });
+})();
+</script>
+
+</body>
+</html>

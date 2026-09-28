@@ -33,7 +33,31 @@ Demo Doc + translation Sheet: Drive folder "Demo – lesari og þýðingar" (id 
 - *AI*: `node tools/reader.mjs check <slug>` lists what is missing. Translate only missing keys into `ws/<slug>/lang/<lang>.json` (flat `{ key: text }`, `_meta: { "source": "ai", "reviewed": false }`). Keep `**bold**`, `$…$` formulas and `____` blanks, use the language's decimal comma and quotes, European Portuguese, the level names from `lang/worksheet-ui.json`, and the terms of the worksheet's key-terms table.
 - *Sheet*: `node tools/reader.mjs sheet-csv <slug> --google --out <scratchpad>/t.csv`, then `create_file` (contentMimeType `text/csv`) with that text. Wait a minute before exporting (GOOGLETRANSLATE shows "Loading..." at first). Read back with `download_file_content(…, "text/csv")` → `fetch-export.mjs` → `node tools/reader.mjs from-sheet <file.csv> --id <slug>`. The connector cannot edit an existing Sheet, only create new ones.
 
-## 4. Check and report
+## 4. Word document for a partner school
+`node tools/reader.mjs word <slug> --lang <is|pt|hr|tr|nl>` → `New Worksheets septemeber 2026/Þýðingar/<LANG>/<LANG>_<original>.docx`:
+the whole worksheet in that language (levels, boxes, tables, numbered questions, answer lines),
+with the "machine translation" line under the title until `_meta.reviewed` is true.
+Every paragraph carries a Word bookmark named after its key, so a corrected document can be
+mapped back onto `lang/<lang>.json`. Never re-read these with `folder`/`docx` — they are
+translations, not sources (the `Þýðingar` folder is skipped for that reason).
+
+## 5. Corrections from a partner school
+`node tools/reader.mjs md <slug> --lang <code>` writes the worksheet as Markdown next to the
+.docx; every text keeps its key as an invisible `<!--key-->` marker, so the file can be
+corrected in any editor or by an AI. `node tools/reader.mjs from-md <file.md>` reads it back:
+slug and language come from the front matter, only changed texts are written, texts that are
+still English are left out, and `--reviewed` sets `_meta.reviewed` (the "machine translation"
+notice disappears). It warns when one key appears twice with different wording — the same
+English sentence is the same key everywhere, so it has to be corrected the same way.
+
+## 6. The list page
+`folder` also writes `ws/worksheets.json` (`node tools/reader.mjs index` on its own), the data behind
+`worksheets.html`: title, subject, time, task/question counts per level and translation status per
+language, for every worksheet with `schema: 1`. Topics are guessed from the English title
+(lighting / kitchen / household / electronics / school / renewable) — correct one in `ws/topics.json`.
+Texts for that page: the `index` block in `lang/worksheet-ui.json`.
+
+## 7. Check and report
 Open a worksheet (`http://localhost:8765/ws/<slug>/?lang=is`), look at page count, questions, boxes, formulas. Report in the user's language (Icelandic): what was read, warnings, content problems spotted in the source, translation coverage. Do not commit or push unless asked.
 
 ## What the reader understands (Word and Google Docs)

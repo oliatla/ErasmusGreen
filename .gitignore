@@ -9,3 +9,6 @@
 *.gsite
 *.gmap
 *.gjam
+
+# Word owner files, created while a document is open
+~$*
