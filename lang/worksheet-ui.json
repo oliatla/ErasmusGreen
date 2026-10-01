@@ -45,7 +45,7 @@
     },
     "index": {
       "title": "GREEN worksheets",
-      "lede": "Every worksheet comes at three levels. Pick a level and go straight to it.",
+      "lede": "Teaching materials on the efficient use of energy and water, created by five European vocational schools. Every worksheet has three levels — open it at the one that fits your class.",
       "allTopics": "All topics",
       "allCountries": "All countries",
       "country": "Country",
@@ -65,7 +65,32 @@
         "school": "🏫 School building",
         "renewable": "☀️ Renewable energy",
         "other": "📄 Other"
-      }
+      },
+      "levelsTitle": "Three levels in every worksheet",
+      "levelsHint": "Click a level to list only the worksheets that have it — click again to show all.",
+      "levelInfo": {
+        "basic": {
+          "title": "Observe & Measure",
+          "desc": "Hands-on data collection. Students walk through a building, observe, measure, and record. Minimal calculations, focus on understanding what uses energy and water."
+        },
+        "medium": {
+          "title": "Calculate & Compare",
+          "desc": "Apply formulas to real data. Students use measurements to calculate costs, savings, and payback periods. Combine data from multiple sources."
+        },
+        "advanced": {
+          "title": "Analyze & Recommend",
+          "desc": "Synthesize findings into recommendations. Students analyze trade-offs, create cost-benefit analyses, and produce reports or videos with actionable proposals."
+        }
+      },
+      "about": {
+        "title": "📌 About these worksheets",
+        "p1": "These worksheets are part of GREEN Erasmus+ (KA220-VET), Work Package 2: Creation of teaching materials on efficient use of energy and water. Five partner schools each lead one topic area, creating materials in all partner languages.",
+        "p2": "Each worksheet contains all three levels, so a whole class can work on the same topic at different depths — from hands-on observation (Basic) through calculation exercises (Medium) to full analysis and recommendation projects (Advanced). The bars on each card open the worksheet directly at that level.",
+        "p3": "The worksheets are written in English and translated into the partner languages with the help of AI. Teachers in each partner country review their own language; until they have, the worksheet is marked as a machine translation."
+      },
+      "source": "Source on GitHub",
+      "guide": "Translator guide",
+      "older": "Earlier worksheets"
     }
   },
   "is": {
@@ -110,7 +135,7 @@
     },
     "index": {
       "title": "GREEN verkefnablöð",
-      "lede": "Hvert verkefnablað er á þremur þyngdarstigum. Veldu stig og farðu beint inn á það.",
+      "lede": "Kennsluefni um skilvirka notkun orku og vatns, unnið af fimm evrópskum verkmenntaskólum. Hvert verkefnablað er á þremur þyngdarstigum — opnaðu það á því stigi sem hentar hópnum.",
       "allTopics": "Öll viðfangsefni",
       "allCountries": "Öll lönd",
       "country": "Land",
@@ -130,7 +155,32 @@
         "school": "🏫 Skólabyggingin",
         "renewable": "☀️ Endurnýjanleg orka",
         "other": "📄 Annað"
-      }
+      },
+      "levelsTitle": "Þrjú þyngdarstig í hverju blaði",
+      "levelsHint": "Smelltu á stig til að sjá aðeins blöð með því stigi — smelltu aftur til að sjá öll.",
+      "levelInfo": {
+        "basic": {
+          "title": "Skoða og mæla",
+          "desc": "Gagnasöfnun í verki. Nemendur ganga um bygginguna, skoða, mæla og skrá. Lítið um útreikninga; áherslan er á að skilja hvað notar orku og vatn."
+        },
+        "medium": {
+          "title": "Reikna og bera saman",
+          "desc": "Formúlum beitt á raunveruleg gögn. Nemendur nota mælingar til að reikna kostnað, sparnað og endurgreiðslutíma og tengja saman gögn úr ólíkum heimildum."
+        },
+        "advanced": {
+          "title": "Greina og gera tillögur",
+          "desc": "Niðurstöður dregnar saman í tillögur. Nemendur vega kosti og galla, gera kostnaðar- og ábatagreiningu og skila skýrslu eða myndbandi með raunhæfum tillögum."
+        }
+      },
+      "about": {
+        "title": "📌 Um verkefnablöðin",
+        "p1": "Verkefnablöðin eru hluti af GREEN Erasmus+ (KA220-VET), verkþætti 2: Gerð kennsluefnis um skilvirka notkun orku og vatns. Hver samstarfsskólanna fimm leiðir eitt viðfangsefni og efnið er unnið á öllum tungumálum samstarfslandanna.",
+        "p2": "Í hverju verkefnablaði eru öll þrjú stigin, svo allur hópurinn getur unnið með sama viðfangsefni á ólíku dýpi — frá athugunum í verki (grunnstig) og útreikningum (miðstig) til greiningar og tillagna (framhaldsstig). Súlurnar á hverju spjaldi opna blaðið beint á viðkomandi stigi.",
+        "p3": "Verkefnablöðin eru skrifuð á ensku og þýdd á tungumál samstarfslandanna með aðstoð gervigreindar. Kennarar í hverju landi fara yfir sitt tungumál; þangað til er blaðið merkt sem vélþýðing."
+      },
+      "source": "Kóðinn á GitHub",
+      "guide": "Leiðbeiningar fyrir þýðendur",
+      "older": "Eldri verkefnablöð"
     }
   },
   "pt": {
@@ -175,7 +225,7 @@
     },
     "index": {
       "title": "Fichas GREEN",
-      "lede": "Cada ficha existe em três níveis. Escolha um nível e vá diretamente para ele.",
+      "lede": "Materiais didáticos sobre a utilização eficiente da energia e da água, criados por cinco escolas profissionais europeias. Cada ficha tem três níveis — abra-a no nível adequado à sua turma.",
       "allTopics": "Todos os temas",
       "allCountries": "Todos os países",
       "country": "País",
@@ -195,7 +245,32 @@
         "school": "🏫 Edifício escolar",
         "renewable": "☀️ Energias renováveis",
         "other": "📄 Outros"
-      }
+      },
+      "levelsTitle": "Três níveis em cada ficha",
+      "levelsHint": "Clique num nível para ver apenas as fichas que o têm — clique novamente para ver todas.",
+      "levelInfo": {
+        "basic": {
+          "title": "Observar e medir",
+          "desc": "Recolha prática de dados. Os alunos percorrem um edifício, observam, medem e registam. Poucos cálculos; o foco é perceber o que consome energia e água."
+        },
+        "medium": {
+          "title": "Calcular e comparar",
+          "desc": "Aplicar fórmulas a dados reais. Os alunos usam medições para calcular custos, poupanças e períodos de retorno, combinando dados de várias fontes."
+        },
+        "advanced": {
+          "title": "Analisar e recomendar",
+          "desc": "Transformar resultados em recomendações. Os alunos analisam vantagens e desvantagens, fazem análises de custo-benefício e produzem relatórios ou vídeos com propostas concretas."
+        }
+      },
+      "about": {
+        "title": "📌 Sobre estas fichas",
+        "p1": "Estas fichas fazem parte do projeto GREEN Erasmus+ (KA220-VET), Pacote de Trabalho 2: Criação de materiais didáticos sobre a utilização eficiente da energia e da água. Cada uma das cinco escolas parceiras lidera uma área temática e os materiais são criados em todas as línguas dos parceiros.",
+        "p2": "Cada ficha contém os três níveis, para que toda a turma possa trabalhar o mesmo tema com diferentes graus de profundidade — da observação prática (Básico) aos exercícios de cálculo (Intermédio) e a projetos completos de análise e recomendação (Avançado). As barras em cada cartão abrem a ficha diretamente nesse nível.",
+        "p3": "As fichas são escritas em inglês e traduzidas para as línguas dos parceiros com a ajuda de IA. Os professores de cada país parceiro revêem a sua própria língua; até lá, a ficha fica assinalada como tradução automática."
+      },
+      "source": "Código no GitHub",
+      "guide": "Guia para tradutores",
+      "older": "Fichas anteriores"
     }
   },
   "hr": {
@@ -240,7 +315,7 @@
     },
     "index": {
       "title": "GREEN radni listovi",
-      "lede": "Svaki radni list postoji na tri razine. Odaberite razinu i idite izravno na nju.",
+      "lede": "Nastavni materijali o učinkovitoj uporabi energije i vode koje je izradilo pet europskih strukovnih škola. Svaki radni list ima tri razine — otvorite ga na razini koja odgovara vašem razredu.",
       "allTopics": "Sve teme",
       "allCountries": "Sve zemlje",
       "country": "Zemlja",
@@ -260,7 +335,32 @@
         "school": "🏫 Školska zgrada",
         "renewable": "☀️ Obnovljiva energija",
         "other": "📄 Ostalo"
-      }
+      },
+      "levelsTitle": "Tri razine u svakom radnom listu",
+      "levelsHint": "Kliknite na razinu za prikaz samo onih radnih listova koji je imaju — ponovno kliknite za prikaz svih.",
+      "levelInfo": {
+        "basic": {
+          "title": "Promatraj i mjeri",
+          "desc": "Praktično prikupljanje podataka. Učenici obilaze zgradu, promatraju, mjere i bilježe. Malo izračuna; naglasak je na razumijevanju što troši energiju i vodu."
+        },
+        "medium": {
+          "title": "Izračunaj i usporedi",
+          "desc": "Primjena formula na stvarne podatke. Učenici iz mjerenja izračunavaju troškove, uštede i razdoblja povrata te kombiniraju podatke iz više izvora."
+        },
+        "advanced": {
+          "title": "Analiziraj i preporuči",
+          "desc": "Sažimanje rezultata u preporuke. Učenici analiziraju prednosti i nedostatke, izrađuju analize troškova i koristi te izvještaje ili videozapise s konkretnim prijedlozima."
+        }
+      },
+      "about": {
+        "title": "📌 O ovim radnim listovima",
+        "p1": "Ovi radni listovi dio su projekta GREEN Erasmus+ (KA220-VET), radnog paketa 2: Izrada nastavnih materijala o učinkovitoj uporabi energije i vode. Svaka od pet partnerskih škola vodi jedno tematsko područje, a materijali se izrađuju na svim jezicima partnera.",
+        "p2": "Svaki radni list sadrži sve tri razine, pa cijeli razred može raditi na istoj temi različitom dubinom — od praktičnog promatranja (Osnovno) preko računskih zadataka (Srednje) do cjelovite analize i preporuka (Napredno). Stupići na svakoj kartici otvaraju radni list izravno na toj razini.",
+        "p3": "Radni listovi pišu se na engleskom i prevode na jezike partnera uz pomoć umjetne inteligencije. Nastavnici u svakoj partnerskoj zemlji pregledavaju svoj jezik; dok to ne učine, radni list je označen kao strojni prijevod."
+      },
+      "source": "Izvorni kod na GitHubu",
+      "guide": "Vodič za prevoditelje",
+      "older": "Raniji radni listovi"
     }
   },
   "tr": {
@@ -305,7 +405,7 @@
     },
     "index": {
       "title": "GREEN çalışma yaprakları",
-      "lede": "Her çalışma yaprağı üç düzeyde hazırlanmıştır. Bir düzey seçin ve doğrudan ona gidin.",
+      "lede": "Beş Avrupa meslek okulu tarafından hazırlanan, enerji ve suyun verimli kullanımına yönelik öğretim materyalleri. Her çalışma yaprağı üç düzeyden oluşur — sınıfınıza uygun düzeyde açın.",
       "allTopics": "Tüm konular",
       "allCountries": "Tüm ülkeler",
       "country": "Ülke",
@@ -325,7 +425,32 @@
         "school": "🏫 Okul binası",
         "renewable": "☀️ Yenilenebilir enerji",
         "other": "📄 Diğer"
-      }
+      },
+      "levelsTitle": "Her çalışma yaprağında üç düzey",
+      "levelsHint": "Yalnızca o düzeye sahip çalışma yapraklarını görmek için bir düzeye tıklayın — tümünü görmek için yeniden tıklayın.",
+      "levelInfo": {
+        "basic": {
+          "title": "Gözlemle ve ölç",
+          "desc": "Uygulamalı veri toplama. Öğrenciler binayı dolaşır; gözlemler, ölçer ve kaydeder. Hesaplama azdır; amaç neyin enerji ve su tükettiğini anlamaktır."
+        },
+        "medium": {
+          "title": "Hesapla ve karşılaştır",
+          "desc": "Formülleri gerçek verilere uygulama. Öğrenciler ölçümlerden maliyet, tasarruf ve geri ödeme süresi hesaplar; farklı kaynaklardan gelen verileri birleştirir."
+        },
+        "advanced": {
+          "title": "Analiz et ve öner",
+          "desc": "Bulguları önerilere dönüştürme. Öğrenciler artıları ve eksileri tartar, maliyet-fayda analizi yapar ve uygulanabilir öneriler içeren raporlar ya da videolar hazırlar."
+        }
+      },
+      "about": {
+        "title": "📌 Bu çalışma yaprakları hakkında",
+        "p1": "Bu çalışma yaprakları, GREEN Erasmus+ (KA220-VET) projesinin 2. İş Paketi’nin (Enerji ve suyun verimli kullanımına yönelik öğretim materyallerinin hazırlanması) bir parçasıdır. Beş ortak okulun her biri bir konu alanına liderlik eder ve materyaller tüm ortak dillerde hazırlanır.",
+        "p2": "Her çalışma yaprağı üç düzeyin tamamını içerir; böylece tüm sınıf aynı konu üzerinde farklı derinliklerde çalışabilir — uygulamalı gözlemden (Temel) hesaplama alıştırmalarına (Orta) ve kapsamlı analiz ve öneri projelerine (İleri) kadar. Her karttaki çubuklar çalışma yaprağını doğrudan o düzeyde açar.",
+        "p3": "Çalışma yaprakları İngilizce yazılır ve yapay zekâ desteğiyle ortak dillere çevrilir. Her ortak ülkedeki öğretmenler kendi dillerini kontrol eder; o zamana kadar çalışma yaprağı makine çevirisi olarak işaretlenir."
+      },
+      "source": "GitHub’daki kaynak kod",
+      "guide": "Çevirmen kılavuzu",
+      "older": "Önceki çalışma yaprakları"
     }
   },
   "nl": {
@@ -370,7 +495,7 @@
     },
     "index": {
       "title": "GREEN werkbladen",
-      "lede": "Elk werkblad bestaat op drie niveaus. Kies een niveau en ga er direct naartoe.",
+      "lede": "Lesmateriaal over efficiënt gebruik van energie en water, gemaakt door vijf Europese beroepsscholen. Elk werkblad heeft drie niveaus — open het op het niveau dat bij je klas past.",
       "allTopics": "Alle onderwerpen",
       "allCountries": "Alle landen",
       "country": "Land",
@@ -390,7 +515,32 @@
         "school": "🏫 Schoolgebouw",
         "renewable": "☀️ Hernieuwbare energie",
         "other": "📄 Overig"
-      }
+      },
+      "levelsTitle": "Drie niveaus in elk werkblad",
+      "levelsHint": "Klik op een niveau om alleen de werkbladen met dat niveau te tonen — klik nogmaals om alles te zien.",
+      "levelInfo": {
+        "basic": {
+          "title": "Observeren en meten",
+          "desc": "Praktisch gegevens verzamelen. Leerlingen lopen door een gebouw, observeren, meten en noteren. Weinig rekenwerk; de nadruk ligt op begrijpen wat energie en water verbruikt."
+        },
+        "medium": {
+          "title": "Berekenen en vergelijken",
+          "desc": "Formules toepassen op echte gegevens. Leerlingen gebruiken metingen om kosten, besparingen en terugverdientijden te berekenen en combineren gegevens uit verschillende bronnen."
+        },
+        "advanced": {
+          "title": "Analyseren en adviseren",
+          "desc": "Bevindingen omzetten in aanbevelingen. Leerlingen wegen voor- en nadelen af, maken kosten-batenanalyses en maken verslagen of video’s met concrete voorstellen."
+        }
+      },
+      "about": {
+        "title": "📌 Over deze werkbladen",
+        "p1": "Deze werkbladen maken deel uit van GREEN Erasmus+ (KA220-VET), werkpakket 2: het maken van lesmateriaal over efficiënt gebruik van energie en water. Elk van de vijf partnerscholen leidt één themagebied, en het materiaal wordt in alle partnertalen gemaakt.",
+        "p2": "Elk werkblad bevat alle drie de niveaus, zodat de hele klas met hetzelfde onderwerp kan werken op verschillende diepte — van praktisch observeren (Basis) via rekenopdrachten (Gemiddeld) tot volledige analyse- en adviesprojecten (Gevorderd). De balkjes op elke kaart openen het werkblad direct op dat niveau.",
+        "p3": "De werkbladen worden in het Engels geschreven en met behulp van AI vertaald in de partnertalen. Docenten in elk partnerland controleren hun eigen taal; tot die tijd is het werkblad gemarkeerd als machinevertaling."
+      },
+      "source": "Broncode op GitHub",
+      "guide": "Handleiding voor vertalers",
+      "older": "Eerdere werkbladen"
     }
   }
 }

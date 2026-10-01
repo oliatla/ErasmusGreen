@@ -9,27 +9,32 @@
 <meta name="theme-color" content="#059669">
 <link rel="stylesheet" href="css/style.css">
 <style>
-  /* ---- the bits this page adds to css/style.css ---- */
-  .filters { display: flex; flex-direction: column; gap: .6rem; margin-bottom: 1.4rem; }
-  .filter-row { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; }
-  .filter-row .label {
-    font-size: .72rem; text-transform: uppercase; letter-spacing: .04em;
-    color: var(--text-muted); min-width: 6.5rem;
-  }
-  .chip {
-    display: inline-flex; align-items: center; gap: .35rem;
-    padding: .3rem .7rem; border: 1px solid var(--border); border-radius: 999px;
-    background: var(--bg-card); color: var(--text-sec); cursor: pointer;
-    font: inherit; font-size: .84rem; line-height: 1.4;
-  }
-  .chip:hover { background: var(--bg-subtle); color: var(--text); }
-  .chip[aria-pressed="true"] { background: var(--green-light); color: var(--green); border-color: var(--green-border); font-weight: 600; }
-  .chip[aria-pressed="true"].basic    { background: var(--green-light);  color: var(--green);  border-color: var(--green-border); }
-  .chip[aria-pressed="true"].medium   { background: var(--water-light);  color: var(--water);  border-color: var(--water-border); }
-  .chip[aria-pressed="true"].advanced { background: var(--energy-light); color: var(--energy); border-color: var(--energy-border); }
-  .chip img { width: 18px; height: 13px; border-radius: 2px; display: block; }
+  /* ---- the bits this page adds to css/style.css (same look as index.html) ---- */
+  .topic-nav { margin: .9rem 0 0; }
+  .topic-nav + .topic-nav { margin-top: .45rem; }
+  .topic-btn { display: inline-flex; align-items: center; gap: .35rem; }
+  .topic-btn img { width: 18px; height: 13px; border-radius: 2px; display: block; }
+  .filters { margin-bottom: 1.75rem; }
 
-  .count { color: var(--text-muted); font-size: .82rem; margin: 0 0 .8rem; }
+  /* the three levels: description and level filter in one */
+  .level-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: .85rem; }
+  .level-card {
+    --lc: var(--green); --lb: var(--green-bg); --lbo: var(--green-border);
+    display: flex; flex-direction: column; gap: .45rem; text-align: left;
+    padding: 1rem 1.1rem; cursor: pointer; font: inherit; color: inherit;
+    background: var(--bg-card); border: 1px solid var(--border); border-top: 3px solid var(--lc);
+    border-radius: var(--r); box-shadow: var(--shadow);
+    transition: box-shadow .15s, background .15s, opacity .15s;
+  }
+  .level-card.medium   { --lc: var(--water);  --lb: var(--water-bg);  --lbo: var(--water-border); }
+  .level-card.advanced { --lc: var(--energy); --lb: var(--energy-bg); --lbo: var(--energy-border); }
+  .level-card:hover { box-shadow: var(--shadow-md); }
+  .level-card[aria-pressed="true"] { background: var(--lb); border-color: var(--lbo); border-top-color: var(--lc); }
+  .level-cards.filtered .level-card:not([aria-pressed="true"]) { opacity: .55; }
+  .level-card-head { display: flex; align-items: center; gap: .5rem; }
+  .level-card strong { font-size: 1rem; font-weight: 700; }
+  .level-card-desc { font-size: .84rem; color: var(--text-sec); line-height: 1.55; }
+  .level-section .level-desc { margin-bottom: .85rem; }
 
   /* the card is one link (the whole surface opens the worksheet); the level
      bubbles sit on top of it and lead straight to one level */
@@ -42,9 +47,8 @@
   .ws-card h3 a::after { content: ''; position: absolute; inset: 0; border-radius: var(--r); }
   .ws-card .ws-desc { flex: 1 1 auto; }
 
-  /* three doors into the same worksheet — bars only, the name is in the tooltip.
-     Only the bubbles are lifted above the card link, so the rest of the card
-     (the status text included) still opens the worksheet itself. */
+  /* level bubbles — bars only, the name is in the tooltip. Only the bubbles are
+     lifted above the card link, so the rest of the card still opens the worksheet. */
   .levels { display: inline-flex; gap: .3rem; position: relative; z-index: 1; }
   .lvl-dot {
     display: inline-flex; align-items: flex-end; gap: 2px;
@@ -59,17 +63,19 @@
   .lvl-dot.basic    { color: var(--green); }
   .lvl-dot.medium   { color: var(--water); }
   .lvl-dot.advanced { color: var(--energy); }
-  .lvl-dot:hover { border-color: currentColor; background: var(--bg-card); }
+  a.lvl-dot:hover { border-color: currentColor; background: var(--bg-card); }
   .lvl-dot.on { border-color: currentColor; box-shadow: inset 0 0 0 1px currentColor; }
-  .lvl-dot.off { color: var(--border-strong); opacity: .55; pointer-events: none; }
+  .lvl-dot.off { color: var(--border-strong); opacity: .55; }
 
   .ws-status.partial { color: var(--energy); }
   .ws-status.none    { color: var(--text-muted); }
   .ws-demo {
-    font-size: .68rem; text-transform: uppercase; letter-spacing: .05em;
-    color: var(--text-muted); border: 1px solid var(--border); border-radius: 999px; padding: .05rem .45rem;
+    font-size: .62rem; letter-spacing: .05em; color: var(--text-muted);
+    border: 1px solid var(--border); border-radius: 999px; padding: .02rem .4rem; margin-left: .3rem;
   }
-  .empty { color: var(--text-muted); padding: 2rem 0; text-align: center; }
+  .empty { color: var(--text-muted); padding: 2rem 0; text-align: center; grid-column: 1 / -1; }
+
+  @media (max-width: 760px) { .level-cards { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -84,6 +90,12 @@
   </a>
   <div class="top-bar-actions">
     <div class="lang-switcher" id="lang-switcher"></div>
+    <a href="https://github.com/oliatla/ErasmusGreen" class="icon-btn" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.06c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .3.21.67.79.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
+      </svg>
+    </a>
+    <a href="index.html" class="icon-btn" id="older-link">Earlier worksheets</a>
     <button class="theme-toggle" id="theme-btn" onclick="theme.toggle()" aria-label="Toggle theme">🌙</button>
   </div>
 </div>
@@ -97,13 +109,34 @@
 </header>
 
 <main class="main">
+
+  <!-- ===== THE THREE LEVELS (description + level filter) ===== -->
+  <section class="level-section">
+    <div class="level-header"><h2 id="levels-title"></h2></div>
+    <p class="level-desc" id="levels-hint"></p>
+    <div class="level-cards" id="level-cards"></div>
+  </section>
+
+  <!-- ===== TOPIC AND COUNTRY FILTERS ===== -->
   <div class="filters">
-    <div class="filter-row" id="row-level"></div>
-    <div class="filter-row" id="row-topic"></div>
-    <div class="filter-row" id="row-country"></div>
+    <div class="topic-nav" id="row-topic"></div>
+    <div class="topic-nav" id="row-country"></div>
   </div>
-  <p class="count" id="count"></p>
-  <div class="ws-grid" id="grid"></div>
+
+  <!-- ===== THE WORKSHEETS ===== -->
+  <section class="level-section">
+    <div class="level-header" id="list-header"></div>
+    <div class="ws-grid" id="grid"></div>
+  </section>
+
+  <!-- ===== FOOTNOTE ===== -->
+  <div class="footnote">
+    <h3 id="about-title"></h3>
+    <p id="about-p1"></p>
+    <p id="about-p2"></p>
+    <p id="about-p3"></p>
+  </div>
+
 </main>
 
 <footer class="page-footer">
@@ -113,7 +146,18 @@
       <p class="eu-disclaimer" id="disclaimer"></p>
     </div>
     <div class="footer-meta">
-      <p class="footer-project" id="project"></p>
+      <div class="footer-project">
+        <strong>GREEN Erasmus+ · KA220-VET</strong><br>
+        <span id="project"></span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/oliatla/ErasmusGreen" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" style="vertical-align: -2px; margin-right: 4px;">
+            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.06c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .3.21.67.79.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
+          </svg><span id="source-link">Source on GitHub</span></a>
+        <span class="dot-sep">·</span>
+        <a href="translator-guide.html" id="guide-link">Translator guide</a>
+      </div>
     </div>
   </div>
 </footer>
@@ -121,11 +165,12 @@
 <script src="js/theme.js"></script>
 <script>
 /* ============================================================
-   The list of every new-format worksheet.
+   The list of every new-format worksheet — laid out like index.html.
    Data: ws/worksheets.json (written by tools/reader.mjs index)
    Texts: lang/worksheet-ui.json (the same file the worksheets use)
-   Every card is three doors into one worksheet — one per level —
-   so a teacher never has to pick the level inside the worksheet.
+   The three level cards describe the levels and filter the list;
+   every worksheet card opens the worksheet in the chosen language,
+   and its three bubbles open it straight at one level.
    ============================================================ */
 (function () {
   const LANGS = ['en', 'is', 'pt', 'hr', 'tr', 'nl'];
@@ -147,6 +192,7 @@
   }
   function read(key) { try { return localStorage.getItem(key); } catch (_) { return null; } }
   const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const $ = id => document.getElementById(id);
 
   /* interface text, falling back to English */
   function ui(path) {
@@ -158,33 +204,41 @@
   }
   /* a worksheet's own text (title, subject, time), falling back to English */
   const t = o => (o && (o[state.lang] || o.en)) || '';
+  const bars = l => [0, 1, 2].map(i => `<i class="${i <= LEVELS.indexOf(l) ? 'on' : ''}"></i>`).join('');
 
-  /* ---------- render ---------- */
-  function chip(kind, value, label, extra) {
+  /* ---------- the three levels ---------- */
+  function levelCards() {
+    $('level-cards').classList.toggle('filtered', state.level !== 'all');
+    $('level-cards').innerHTML = LEVELS.map(l => `
+      <button class="level-card ${l}" data-level="${l}" aria-pressed="${state.level === l}">
+        <span class="level-card-head">
+          <span class="lvl-dot ${l}" aria-hidden="true">${bars(l)}</span>
+          <span class="level-badge ${l}">${esc(ui('levels.' + l))}</span>
+        </span>
+        <strong>${esc(ui(`index.levelInfo.${l}.title`))}</strong>
+        <span class="level-card-desc">${esc(ui(`index.levelInfo.${l}.desc`))}</span>
+      </button>`).join('');
+  }
+
+  /* ---------- topic and country ---------- */
+  function filterButton(kind, value, label) {
     const on = state[kind] === value;
-    return `<button class="chip ${extra || ''}" data-kind="${kind}" data-value="${value}" aria-pressed="${on}">${label}</button>`;
+    return `<button class="topic-btn${on ? ' active' : ''}" data-kind="${kind}" data-value="${value}" aria-pressed="${on}">${label}</button>`;
   }
 
   function filters() {
-    document.getElementById('row-level').innerHTML =
-      `<span class="label">${esc(ui('show'))}</span>` +
-      chip('level', 'all', esc(ui('allLevels'))) +
-      LEVELS.map(l => chip('level', l, esc(ui('levels.' + l)), l)).join('');
-
     const topics = state.data.topics.filter(x => state.data.worksheets.some(w => w.topic === x));
-    document.getElementById('row-topic').innerHTML =
-      `<span class="label">${esc(ui('topic'))}</span>` +
-      chip('topic', 'all', esc(ui('index.allTopics'))) +
-      topics.map(x => chip('topic', x, esc(ui('index.topics.' + x)))).join('');
+    $('row-topic').innerHTML =
+      filterButton('topic', 'all', esc(ui('index.allTopics'))) +
+      topics.map(x => filterButton('topic', x, esc(ui('index.topics.' + x)))).join('');
 
     const countries = [...new Set(state.data.worksheets.map(w => w.country).filter(Boolean))].sort();
-    document.getElementById('row-country').innerHTML =
-      `<span class="label">${esc(ui('index.country'))}</span>` +
-      chip('country', 'all', esc(ui('index.allCountries'))) +
-      countries.map(c => chip('country', c,
-        `<img src="img/flags/${c}.svg" alt=""> ${esc(ui('countries.' + c))}`)).join('');
+    $('row-country').innerHTML =
+      filterButton('country', 'all', esc(ui('index.allCountries'))) +
+      countries.map(c => filterButton('country', c, `<img src="img/flags/${c}.svg" alt=""> ${esc(ui('countries.' + c))}`)).join('');
   }
 
+  /* ---------- worksheet cards ---------- */
   function status(w) {
     if (state.lang === 'en') return '';
     const c = w.translated[state.lang];
@@ -197,7 +251,6 @@
 
   function card(w) {
     const shown = state.level !== 'all' ? state.level : w.levels[0];
-    const bars = l => [0, 1, 2].map(i => `<i class="${i <= LEVELS.indexOf(l) ? 'on' : ''}"></i>`).join('');
     const levels = LEVELS.map(l => {
       const has = w.levels.includes(l);
       const c = w.counts[l] || {};
@@ -217,7 +270,7 @@
 
     return `<article class="ws-card ready">
       <div class="ws-head">
-        <span class="ws-topic">${esc(ui('index.topics.' + w.topic))}${w.demo ? ` <span class="ws-demo">${esc(ui('index.demo'))}</span>` : ''}</span>
+        <span class="ws-topic">${esc(ui('index.topics.' + w.topic))}${w.demo ? `<span class="ws-demo">${esc(ui('index.demo'))}</span>` : ''}</span>
         ${w.country ? `<span class="flag-icon" title="${esc(where)}"><img src="img/flags/${w.country}.svg" alt="${esc(where)}"></span>` : ''}
       </div>
       <h3><a href="ws/${w.slug}/?lang=${state.lang}">${esc(t(w.title))}</a></h3>
@@ -229,15 +282,23 @@
     </article>`;
   }
 
+  /* ---------- the page ---------- */
   function render() {
     document.documentElement.lang = state.lang;
     document.title = ui('index.title');
-    document.getElementById('title').textContent = ui('index.title');
-    document.getElementById('lede').textContent = ui('index.lede');
-    document.getElementById('disclaimer').textContent = ui('disclaimer');
-    document.getElementById('project').textContent = ui('projectLine');
+    $('title').textContent = ui('index.title');
+    $('lede').textContent = ui('index.lede');
+    $('levels-title').textContent = ui('index.levelsTitle');
+    $('levels-hint').textContent = ui('index.levelsHint');
+    $('older-link').textContent = ui('index.older');
+    for (const p of ['title', 'p1', 'p2', 'p3']) $('about-' + p).textContent = ui('index.about.' + p);
+    $('disclaimer').textContent = ui('disclaimer');
+    $('project').textContent = ui('projectLine');
+    $('source-link').textContent = ui('index.source');
+    $('guide-link').textContent = ui('index.guide');
     document.querySelectorAll('.lang-flag').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === state.lang));
 
+    levelCards();
     filters();
 
     const list = state.data.worksheets.filter(w =>
@@ -245,8 +306,10 @@
       (state.topic === 'all' || w.topic === state.topic) &&
       (state.country === 'all' || w.country === state.country));
 
-    document.getElementById('count').textContent = ui('index.count').replace('{n}', list.length);
-    document.getElementById('grid').innerHTML = list.length
+    $('list-header').innerHTML =
+      (state.level !== 'all' ? `<span class="level-badge ${state.level}">${esc(ui('levels.' + state.level))}</span>` : '') +
+      `<h2>${esc(ui('index.count').replace('{n}', list.length))}</h2>`;
+    $('grid').innerHTML = list.length
       ? list.map(card).join('')
       : `<p class="empty">${esc(ui('index.none'))}</p>`;
 
@@ -257,11 +320,6 @@
   }
 
   /* ---------- events ---------- */
-  function switcher() {
-    document.getElementById('lang-switcher').innerHTML = LANGS.map(c =>
-      `<button class="lang-flag" data-lang="${c}" title="${c.toUpperCase()}"><img src="img/flags/${c}.svg" alt="${c}"></button>`).join('');
-  }
-
   document.addEventListener('click', e => {
     const flag = e.target.closest('.lang-flag');
     if (flag) {
@@ -269,8 +327,13 @@
       try { localStorage.setItem(STORAGE_KEY, state.lang); } catch (_) {}
       return render();
     }
-    const c = e.target.closest('.chip');
-    if (c) { state[c.dataset.kind] = c.dataset.value; render(); }
+    const level = e.target.closest('.level-card');
+    if (level) {
+      state.level = state.level === level.dataset.level ? 'all' : level.dataset.level;   // click again: all levels
+      return render();
+    }
+    const f = e.target.closest('.topic-btn');
+    if (f) { state[f.dataset.kind] = f.dataset.value; render(); }
   });
 
   /* ---------- start ---------- */
@@ -280,11 +343,11 @@
   ]).then(([data, uiAll]) => {
     state.data = data;
     state.uiAll = uiAll;
-    switcher();
+    $('lang-switcher').innerHTML = LANGS.map(c =>
+      `<button class="lang-flag" data-lang="${c}" title="${c.toUpperCase()}"><img src="img/flags/${c}.svg" alt="${c}"></button>`).join('');
     render();
   }).catch(err => {
-    document.getElementById('grid').innerHTML =
-      `<p class="empty">ws/worksheets.json — ${esc(err.message)}<br>node tools/reader.mjs index</p>`;
+    $('grid').innerHTML = `<p class="empty">ws/worksheets.json — ${esc(err.message)}<br>node tools/reader.mjs index</p>`;
   });
 })();
 </script>

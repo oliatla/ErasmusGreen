@@ -19,7 +19,7 @@ Google Doc (Drive MCP, export text/markdown)            ─┴▶ tools/reader.m
 The Drive folder is synced to disk by Google Drive for desktop, so no connector is needed.
 1. `node tools/reader.mjs folder` — reads every .docx under `New Worksheets septemeber 2026/` (one sub-folder per country: Holland, Tyrkland, Ísland, Króatía, Portúgal). Documents that have not changed since the last read are skipped; `--force` re-reads all.
 2. Show the summary lines. For every ⚠ warning, tell the user what to change in the Word document (never patch the JSON by hand — it is overwritten on the next read).
-3. The overview is `ws/new-format.html` (http://localhost:8765/ws/new-format.html with the `static` server in `.claude/launch.json`).
+3. The overview is `ws/new-format.html` (http://localhost:8766/ws/new-format.html with the `static` server in `.claude/launch.json`).
 Slugs are `<country>-<title>`; a document keeps its folder when re-read.
 
 ## 2. Google Docs (Drive MCP connector)
@@ -58,7 +58,7 @@ language, for every worksheet with `schema: 1`. Topics are guessed from the Engl
 Texts for that page: the `index` block in `lang/worksheet-ui.json`.
 
 ## 7. Check and report
-Open a worksheet (`http://localhost:8765/ws/<slug>/?lang=is`), look at page count, questions, boxes, formulas. Report in the user's language (Icelandic): what was read, warnings, content problems spotted in the source, translation coverage. Do not commit or push unless asked.
+Open a worksheet (`http://localhost:8766/ws/<slug>/?lang=is`), look at page count, questions, boxes, formulas. Report in the user's language (Icelandic): what was read, warnings, content problems spotted in the source, translation coverage. Do not commit or push unless asked.
 
 ## What the reader understands (Word and Google Docs)
 - **Title**: Title style / Heading 1 (Docs) or the first line; "Worksheet 4 – X", "Worksheet: X", "3.2. X" give code + title. A line "Worksheet 1A" is a code.
