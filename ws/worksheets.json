@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25T06:51:25.623Z",
+  "generated": "2026-11-16T14:43:57.331Z",
   "languages": [
     "en",
     "is",
@@ -44,31 +44,44 @@
         }
       },
       "title": {
-        "en": "Comparing Bulb types"
+        "en": "Comparing Bulb types",
+        "is": "Samanburður á ljósaperum"
       },
       "subject": {
         "basic": {
-          "en": "What is inside a light bulb?"
+          "en": "What is inside a light bulb?",
+          "is": "Hvað er inni í ljósaperu?"
         },
         "medium": {
-          "en": "Efficiency and lifetime of light bulbs"
+          "en": "Efficiency and lifetime of light bulbs",
+          "is": "Nýtni og líftími ljósapera"
         },
         "advanced": {
-          "en": "Total cost of ownership and environmental impact"
+          "en": "Total cost of ownership and environmental impact",
+          "is": "Heildarkostnaður og umhverfisáhrif"
         }
       },
       "time": {
         "basic": {
-          "en": "60 min"
+          "en": "60 min",
+          "is": "60 mín."
         },
         "medium": {
-          "en": "90 min"
+          "en": "90 min",
+          "is": "90 mín."
         },
         "advanced": {
-          "en": "120 min"
+          "en": "120 min",
+          "is": "120 mín."
         }
       },
-      "translated": {}
+      "translated": {
+        "is": {
+          "done": 138,
+          "total": 138,
+          "reviewed": false
+        }
+      }
     },
     {
       "slug": "nl-energy-consumption-of-light-bulbs",
@@ -96,31 +109,44 @@
         }
       },
       "title": {
-        "en": "Energy consumption of light bulbs"
+        "en": "Energy consumption of light bulbs",
+        "is": "Orkunotkun ljósapera"
       },
       "subject": {
         "basic": {
-          "en": "How much does a light bulb cost to use?"
+          "en": "How much does a light bulb cost to use?",
+          "is": "Hvað kostar að nota ljósaperu?"
         },
         "medium": {
-          "en": "Calculating cost and CO₂ at home and at school"
+          "en": "Calculating cost and CO₂ at home and at school",
+          "is": "Kostnaður og CO₂ heima og í skólanum"
         },
         "advanced": {
-          "en": "Real-world energy modelling and dynamic tariffs"
+          "en": "Real-world energy modelling and dynamic tariffs",
+          "is": "Orkulíkön úr raunveruleikanum og breytilegt raforkuverð"
         }
       },
       "time": {
         "basic": {
-          "en": "60 min"
+          "en": "60 min",
+          "is": "60 mín."
         },
         "medium": {
-          "en": "90 min"
+          "en": "90 min",
+          "is": "90 mín."
         },
         "advanced": {
-          "en": "120 min"
+          "en": "120 min",
+          "is": "120 mín."
         }
       },
-      "translated": {}
+      "translated": {
+        "is": {
+          "done": 147,
+          "total": 147,
+          "reviewed": false
+        }
+      }
     },
     {
       "slug": "nl-lighting-audit-at-your-school",
@@ -148,21 +174,31 @@
         }
       },
       "title": {
-        "en": "Lighting audit at your school"
+        "en": "Lighting audit at your school",
+        "is": "Lýsingarúttekt í skólanum"
       },
       "subject": {
         "basic": {
-          "en": "Counting the lights"
+          "en": "Counting the lights",
+          "is": "Ljósin talin"
         },
         "medium": {
-          "en": "Quantifying energy and cost"
+          "en": "Quantifying energy and cost",
+          "is": "Orka og kostnaður metin í tölum"
         },
         "advanced": {
-          "en": "Designing a retrofit business case"
+          "en": "Designing a retrofit business case",
+          "is": "Rekstrarrök fyrir endurnýjun lýsingar"
         }
       },
       "time": {},
-      "translated": {}
+      "translated": {
+        "is": {
+          "done": 114,
+          "total": 114,
+          "reviewed": false
+        }
+      }
     },
     {
       "slug": "nl-smart-lighting",
@@ -250,11 +286,18 @@
         }
       },
       "title": {
-        "en": "Energy and water efficiency of dishwashers"
+        "en": "Energy and water efficiency of dishwashers",
+        "is": "Orku- og vatnsnýtni uppþvottavéla"
       },
       "subject": {},
       "time": {},
-      "translated": {}
+      "translated": {
+        "is": {
+          "done": 77,
+          "total": 77,
+          "reviewed": false
+        }
+      }
     },
     {
       "slug": "tr-refrigerators-and-freezers",
@@ -282,31 +325,44 @@
         }
       },
       "title": {
-        "en": "Refrigerators and freezers"
+        "en": "Refrigerators and freezers",
+        "is": "Kæliskápar og frystar"
       },
       "subject": {
         "basic": {
-          "en": "How does a refrigerator use electricity?"
+          "en": "How does a refrigerator use electricity?",
+          "is": "Hvernig notar kæliskápur rafmagn?"
         },
         "medium": {
-          "en": "Energy labels, consumption calculations and cost"
+          "en": "Energy labels, consumption calculations and cost",
+          "is": "Orkumerkingar, útreikningar á notkun og kostnaður"
         },
         "advanced": {
-          "en": "Lifecycle cost modelling and environmental impact"
+          "en": "Lifecycle cost modelling and environmental impact",
+          "is": "Líkan af kostnaði á líftíma og umhverfisáhrif"
         }
       },
       "time": {
         "basic": {
-          "en": "60 min"
+          "en": "60 min",
+          "is": "60 mín."
         },
         "medium": {
-          "en": "90 min"
+          "en": "90 min",
+          "is": "90 mín."
         },
         "advanced": {
-          "en": "120 min"
+          "en": "120 min",
+          "is": "120 mín."
         }
       },
-      "translated": {}
+      "translated": {
+        "is": {
+          "done": 177,
+          "total": 177,
+          "reviewed": false
+        }
+      }
     },
     {
       "slug": "tr-cooking-appliances",
@@ -334,31 +390,44 @@
         }
       },
       "title": {
-        "en": "Cooking appliances"
+        "en": "Cooking appliances",
+        "is": "Eldunartæki"
       },
       "subject": {
         "basic": {
-          "en": "Which cooking method uses the most electricity?"
+          "en": "Which cooking method uses the most electricity?",
+          "is": "Hvaða eldunaraðferð notar mest rafmagn?"
         },
         "medium": {
-          "en": "Comparing cooking appliances: energy, time and cost"
+          "en": "Comparing cooking appliances: energy, time and cost",
+          "is": "Eldunartæki borin saman: orka, tími og kostnaður"
         },
         "advanced": {
-          "en": "Optimising kitchen energy use and carbon footprint"
+          "en": "Optimising kitchen energy use and carbon footprint",
+          "is": "Orkunotkun og kolefnisspor eldhússins bætt"
         }
       },
       "time": {
         "basic": {
-          "en": "60 min"
+          "en": "60 min",
+          "is": "60 mín."
         },
         "medium": {
-          "en": "90 min"
+          "en": "90 min",
+          "is": "90 mín."
         },
         "advanced": {
-          "en": "120 min"
+          "en": "120 min",
+          "is": "120 mín."
         }
       },
-      "translated": {}
+      "translated": {
+        "is": {
+          "done": 148,
+          "total": 148,
+          "reviewed": false
+        }
+      }
     },
     {
       "slug": "tr-small-kitchen-appliances",
@@ -386,31 +455,44 @@
         }
       },
       "title": {
-        "en": "Small kitchen appliances"
+        "en": "Small kitchen appliances",
+        "is": "Smá eldhústæki"
       },
       "subject": {
         "basic": {
-          "en": "Hidden energy users in the kitchen"
+          "en": "Hidden energy users in the kitchen",
+          "is": "Faldir orkunotendur í eldhúsinu"
         },
         "medium": {
-          "en": "Calculating the real cost of small appliances"
+          "en": "Calculating the real cost of small appliances",
+          "is": "Raunverulegur kostnaður smátækja reiknaður"
         },
         "advanced": {
-          "en": "Standby power, phantom loads and smart solutions"
+          "en": "Standby power, phantom loads and smart solutions",
+          "is": "Biðstöðuafl, draugaálag og snjallar lausnir"
         }
       },
       "time": {
         "basic": {
-          "en": "60 min"
+          "en": "60 min",
+          "is": "60 mín."
         },
         "medium": {
-          "en": "90 min"
+          "en": "90 min",
+          "is": "90 mín."
         },
         "advanced": {
-          "en": "120 min"
+          "en": "120 min",
+          "is": "120 mín."
         }
       },
-      "translated": {}
+      "translated": {
+        "is": {
+          "done": 145,
+          "total": 145,
+          "reviewed": false
+        }
+      }
     },
     {
       "slug": "tr-dishwashers-energy-and-water-efficiency",
@@ -438,31 +520,44 @@
         }
       },
       "title": {
-        "en": "Dishwashers: energy and water efficiency"
+        "en": "Dishwashers: energy and water efficiency",
+        "is": "Uppþvottavélar: orku- og vatnsnýtni"
       },
       "subject": {
         "basic": {
-          "en": "How does a dishwasher use energy and water?"
+          "en": "How does a dishwasher use energy and water?",
+          "is": "Hvernig notar uppþvottavél orku og vatn?"
         },
         "medium": {
-          "en": "Comparing programmes, calculating cost and water savings"
+          "en": "Comparing programmes, calculating cost and water savings",
+          "is": "Kerfi borin saman, kostnaður og vatnssparnaður reiknaður"
         },
         "advanced": {
-          "en": "Lifecycle analysis, water-energy nexus and policy"
+          "en": "Lifecycle analysis, water-energy nexus and policy",
+          "is": "Vistferilsgreining, tengsl vatns og orku og stefnumótun"
         }
       },
       "time": {
         "basic": {
-          "en": "60 min"
+          "en": "60 min",
+          "is": "60 mín."
         },
         "medium": {
-          "en": "90 min"
+          "en": "90 min",
+          "is": "90 mín."
         },
         "advanced": {
-          "en": "120 min"
+          "en": "120 min",
+          "is": "120 mín."
         }
       },
-      "translated": {}
+      "translated": {
+        "is": {
+          "done": 128,
+          "total": 128,
+          "reviewed": false
+        }
+      }
     },
     {
       "slug": "hr-cleaning-household-maintenance-washing",
@@ -485,11 +580,18 @@
         }
       },
       "title": {
-        "en": "Cleaning & Household Maintenance: Washing machines and dryers"
+        "en": "Cleaning & Household Maintenance: Washing machines and dryers",
+        "is": "Þrif og heimilishald: þvottavélar og þurrkarar"
       },
       "subject": {},
       "time": {},
-      "translated": {}
+      "translated": {
+        "is": {
+          "done": 87,
+          "total": 87,
+          "reviewed": false
+        }
+      }
     },
     {
       "slug": "hr-floor-care-traditional-vacuum-vs-robot",
@@ -512,11 +614,18 @@
         }
       },
       "title": {
-        "en": "Floor care – traditional vacuum vs. robot vacuum"
+        "en": "Floor care – traditional vacuum vs. robot vacuum",
+        "is": "Gólfþrif – hefðbundin ryksuga eða vélmennaryksuga"
       },
       "subject": {},
       "time": {},
-      "translated": {}
+      "translated": {
+        "is": {
+          "done": 88,
+          "total": 88,
+          "reviewed": false
+        }
+      }
     },
     {
       "slug": "hr-energy-efficiency-of-personal-care",
@@ -539,11 +648,18 @@
         }
       },
       "title": {
-        "en": "Energy efficiency of personal care appliances: Hair dryers"
+        "en": "Energy efficiency of personal care appliances: Hair dryers",
+        "is": "Orkunýtni snyrtitækja: hárblásarar"
       },
       "subject": {},
       "time": {},
-      "translated": {}
+      "translated": {
+        "is": {
+          "done": 77,
+          "total": 77,
+          "reviewed": false
+        }
+      }
     },
     {
       "slug": "is-energy-efficiency-in-the-school",
@@ -571,11 +687,18 @@
         }
       },
       "title": {
-        "en": "Energy Efficiency in the School Computer Lab"
+        "en": "Energy Efficiency in the School Computer Lab",
+        "is": "Orkunýtni í tölvuveri skólans"
       },
       "subject": {},
       "time": {},
-      "translated": {}
+      "translated": {
+        "is": {
+          "done": 124,
+          "total": 124,
+          "reviewed": false
+        }
+      }
     },
     {
       "slug": "pt-what-is-the-impact-of-standby-power",
@@ -593,11 +716,18 @@
         }
       },
       "title": {
-        "en": "What is the impact of standby power consumption?"
+        "en": "What is the impact of standby power consumption?",
+        "is": "Hver eru áhrif biðstöðunotkunar?"
       },
       "subject": {},
       "time": {},
-      "translated": {}
+      "translated": {
+        "is": {
+          "done": 65,
+          "total": 65,
+          "reviewed": false
+        }
+      }
     },
     {
       "slug": "pt-i-understand-the-energy-classes",
@@ -615,11 +745,18 @@
         }
       },
       "title": {
-        "en": "I understand the energy classes?"
+        "en": "I understand the energy classes?",
+        "is": "Skil ég orkuflokkana?"
       },
       "subject": {},
       "time": {},
-      "translated": {}
+      "translated": {
+        "is": {
+          "done": 70,
+          "total": 70,
+          "reviewed": false
+        }
+      }
     },
     {
       "slug": "pt-how-much-energy-does-a-computer-use",
@@ -637,11 +774,18 @@
         }
       },
       "title": {
-        "en": "How much energy does a computer use?"
+        "en": "How much energy does a computer use?",
+        "is": "Hve mikla orku notar tölva?"
       },
       "subject": {},
       "time": {},
-      "translated": {}
+      "translated": {
+        "is": {
+          "done": 60,
+          "total": 60,
+          "reviewed": false
+        }
+      }
     },
     {
       "slug": "pt-do-you-know-your-electricity",
@@ -659,11 +803,18 @@
         }
       },
       "title": {
-        "en": "Do you know your electricity consumption habits?"
+        "en": "Do you know your electricity consumption habits?",
+        "is": "Þekkir þú rafmagnsvenjurnar þínar?"
       },
       "subject": {},
       "time": {},
-      "translated": {}
+      "translated": {
+        "is": {
+          "done": 57,
+          "total": 57,
+          "reviewed": false
+        }
+      }
     },
     {
       "slug": "is-school-restroom-audit",
@@ -691,11 +842,18 @@
         }
       },
       "title": {
-        "en": "School Restroom Audit"
+        "en": "School Restroom Audit",
+        "is": "Úttekt á salernum skólans"
       },
       "subject": {},
       "time": {},
-      "translated": {}
+      "translated": {
+        "is": {
+          "done": 117,
+          "total": 117,
+          "reviewed": false
+        }
+      }
     },
     {
       "slug": "is-renewable-energy-solar-potential-of-our",
@@ -723,11 +881,18 @@
         }
       },
       "title": {
-        "en": "Renewable Energy – Solar Potential of our School"
+        "en": "Renewable Energy – Solar Potential of our School",
+        "is": "Endurnýjanleg orka – sólarorkumöguleikar skólans"
       },
       "subject": {},
       "time": {},
-      "translated": {}
+      "translated": {
+        "is": {
+          "done": 119,
+          "total": 119,
+          "reviewed": false
+        }
+      }
     },
     {
       "slug": "smart-lighting",

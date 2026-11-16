@@ -12,3 +12,10 @@
 
 # Word owner files, created while a document is open
 ~$*
+
+# Secrets (Supabase service_role key etc.)
+.env
+.env.*
+
+# Obsidian: personal window layout, changes all the time
+**/.obsidian/workspace*.json

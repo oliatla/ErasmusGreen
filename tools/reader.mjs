@@ -43,6 +43,11 @@
         country, levels, counts and translation status of every worksheet
         in every language). Written by "folder" as well.
 
+   node tools/reader.mjs from-supabase [--dry]
+        Corrections and reviews from the translation phase (Supabase)
+        → ws/<slug>/lang/<code>.json. Needs SUPABASE_SECRET_KEY in .env
+        (the secret / service_role key — never commit it).
+
    node tools/reader.mjs check <slug>
         Per-language coverage: missing and obsolete texts.
    ============================================================ */
@@ -554,6 +559,72 @@ function cmdIndex(opt = {}) {
   }
 }
 
+/* ---------- corrections from Supabase → lang/<code>.json ---------- */
+function readEnv() {
+  const f = path.join(ROOT, '.env');
+  const env = { ...process.env };
+  if (fs.existsSync(f)) for (const line of fs.readFileSync(f, 'utf8').split(/\r?\n/)) {
+    const m = /^\s*([A-Z0-9_]+)\s*=\s*(.*?)\s*$/.exec(line);
+    if (m) env[m[1]] = m[2].replace(/^["']|["']$/g, '');
+  }
+  return env;
+}
+
+async function cmdFromSupabase(opt) {
+  const env = readEnv();
+  const cfg = fs.readFileSync(path.join(ROOT, 'js', 'supabase-config.js'), 'utf8');
+  const url = env.SUPABASE_URL || /url:\s*'([^']+)'/.exec(cfg)[1];
+  const key = env.SUPABASE_SECRET_KEY;
+  if (!key) throw new Error('SUPABASE_SECRET_KEY is missing — put it in .env (it is in .gitignore)');
+  const get = async table => {
+    const rows = [];
+    for (let from = 0; ; from += 1000) {
+      const r = await fetch(`${url}/rest/v1/${table}`, { headers: { apikey: key, Range: `${from}-${from + 999}`, 'Range-Unit': 'items' } });
+      if (!r.ok) throw new Error(`${table}: ${r.status} ${await r.text()}`);
+      const page = await r.json();
+      rows.push(...page);
+      if (page.length < 1000) return rows;
+    }
+  };
+  const [translations, reviews] = await Promise.all([get('translations?select=lang,key,text'), get('reviews?select=worksheet,lang')]);
+  const fix = {};                                   // lang → key → text
+  for (const r of translations) (fix[r.lang] = fix[r.lang] || {})[r.key] = r.text;
+  const reviewed = new Set(reviews.map(r => `${r.worksheet}|${r.lang}`));
+
+  const used = new Set();
+  let files = 0, changed = 0;
+  for (const e of fs.readdirSync(path.join(ROOT, 'ws'), { withFileTypes: true })) {
+    const dir = wsDir(e.name);
+    if (!e.isDirectory() || !fs.existsSync(path.join(dir, 'content.json'))) continue;
+    const en = texts(readJSON(path.join(dir, 'lang', 'en.json')));
+    for (const lang of LANGS) {
+      const file = path.join(dir, 'lang', `${lang}.json`);
+      const old = fs.existsSync(file) ? readJSON(file) : {};
+      const next = texts(old);
+      let n = 0;
+      for (const k of Object.keys(en)) {
+        const v = fix[lang] && fix[lang][k];
+        if (v == null) continue;
+        used.add(`${lang}|${k}`);
+        if (next[k] !== v) { next[k] = v; n++; }
+      }
+      const isReviewed = reviewed.has(`${e.name}|${lang}`);
+      const metaChanged = !!(old._meta && old._meta.reviewed) !== isReviewed;
+      if (!n && !metaChanged) continue;
+      files++;
+      changed += n;
+      console.log(`  ${e.name} ${lang}: ${n} corrections${isReviewed ? ', reviewed' : ''}`);
+      if (!opt.dry) writeJSON(file, { _meta: { ...(old._meta || {}), language: lang, reviewed: isReviewed,
+        source: n || (old._meta && old._meta.source === 'supabase') ? 'supabase' : (old._meta && old._meta.source) || 'ai',
+        exportedAt: new Date().toISOString() }, ...next });
+    }
+  }
+  const orphans = translations.filter(r => !used.has(`${r.lang}|${r.key}`));
+  console.log(`${opt.dry ? '(dry run) ' : ''}✔ ${changed} corrections in ${files} files, ${reviews.length} reviews`);
+  if (orphans.length) console.log(`⚠ ${orphans.length} corrections belong to English texts that no longer exist (the source changed): ${orphans.slice(0, 10).map(r => r.lang + ':' + r.key).join(', ')}`);
+  if (!opt.dry) cmdIndex({ quiet: true });
+}
+
 function cmdSheetCsv(slug, opt) {
   const dir = wsDir(slug);
   const strings = csvParse(fs.readFileSync(path.join(dir, 'strings.csv'), 'utf8')).slice(1).filter(r => r[0]);
@@ -632,6 +703,7 @@ try {
   else if (cmd === 'docx') cmdDocx(pos[0], opt);
   else if (cmd === 'doc') cmdDoc(pos[0], opt);
   else if (cmd === 'index') cmdIndex(opt);
+  else if (cmd === 'from-supabase') await cmdFromSupabase(opt);
   else if (cmd === 'word') cmdWord(pos[0], opt);
   else if (cmd === 'md') cmdMd(pos[0], opt);
   else if (cmd === 'from-md') cmdFromMd(pos[0], opt);

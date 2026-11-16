@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GREEN translations</title>
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<meta name="theme-color" content="#059669">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .box { max-width: 560px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border);
+         border-radius: var(--r); padding: 1.5rem 1.6rem; box-shadow: var(--shadow); }
+  .box h2 { font-size: 1.15rem; margin-bottom: .8rem; }
+  .box label { display: block; font-size: .8rem; font-weight: 600; color: var(--text-sec); margin: .9rem 0 .3rem; }
+  .box input, .box select { width: 100%; font: inherit; padding: .55rem .7rem; border: 1px solid var(--border-strong);
+         border-radius: var(--rs); background: var(--bg-input); color: var(--text); }
+  .btn { display: inline-block; margin-top: 1rem; font: inherit; font-weight: 700; padding: .6rem 1.1rem; border-radius: var(--rs);
+         border: 0; background: var(--green); color: #fff; cursor: pointer; text-decoration: none; }
+  .btn.ghost { background: transparent; color: var(--text-sec); border: 1px solid var(--border); font-weight: 600; }
+  .msg { margin-top: 1rem; color: var(--text-sec); font-size: .9rem; }
+  .msg.err { color: #b00020; }
+  .dash { max-width: 900px; margin: 0 auto; }
+  .dash-head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: .6rem; }
+  .bar { height: 10px; background: var(--bg-subtle); border-radius: 99px; overflow: hidden; margin: .4rem 0 1.2rem; }
+  .bar i { display: block; height: 100%; background: var(--green); }
+  .how { font-size: .88rem; color: var(--text-sec); margin-bottom: 1.2rem; max-width: 70ch; }
+  table.list { width: 100%; border-collapse: collapse; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; }
+  table.list td { padding: .6rem .8rem; border-top: 1px solid var(--border); font-size: .9rem; vertical-align: middle; }
+  table.list tr:first-child td { border-top: 0; }
+  table.list img { width: 18px; height: 13px; border-radius: 2px; vertical-align: -2px; margin-right: .4rem; }
+  table.list .meta { color: var(--text-muted); font-size: .8rem; white-space: nowrap; }
+  table.list .ok { color: var(--green); font-weight: 700; white-space: nowrap; }
+  table.list a.btn { margin: 0; padding: .35rem .8rem; font-size: .82rem; }
+  @media (max-width: 640px) { table.list .meta { display: none; } }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <a href="../worksheets.html" class="brand-mark" aria-label="GREEN">
+    <img src="../img/greenlogo.png" alt="" class="brand-logo">
+    <span class="brand-text"><strong>GREEN</strong><span class="brand-sub">Erasmus+ KA220-VET</span></span>
+  </a>
+  <div class="top-bar-actions">
+    <div class="lang-switcher" id="lang-switcher"></div>
+    <button class="theme-toggle" id="theme-btn" onclick="theme.toggle()" aria-label="Toggle theme">🌙</button>
+  </div>
+</div>
+
+<header class="page-header">
+  <div class="header-inner hero">
+    <span class="badge">GREEN Erasmus+ · KA220-VET · WP2</span>
+    <h1 id="title">GREEN translations</h1>
+    <p id="lede"></p>
+  </div>
+</header>
+
+<main class="main" id="main"></main>
+
+<script src="../js/theme.js"></script>
+<script src="../js/supabase-config.js"></script>
+<script>
+/* ============================================================
+   /translations — sign in with a magic link, choose your language,
+   see your worksheets and open them in edit mode.
+   ============================================================ */
+(async function () {
+  const LANGS = ['en', 'is', 'pt', 'hr', 'tr', 'nl'];
+  const TARGETS = ['is', 'pt', 'hr', 'tr', 'nl'];
+  const NAMES = { is: 'Íslenska', pt: 'Português', hr: 'Hrvatski', tr: 'Türkçe', nl: 'Nederlands' };
+  const STORAGE_KEY = 'green-ws-lang';
+  const params = new URLSearchParams(location.search);
+  const next = params.get('next');
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  let lang = (() => { try { return params.get('lang') || localStorage.getItem(STORAGE_KEY) || 'en'; } catch (_) { return 'en'; } })();
+  if (!LANGS.includes(lang)) lang = 'en';
+
+  theme.init && theme.init();
+  const uiAll = await fetch('../lang/worksheet-ui.json', { cache: 'no-cache' }).then(r => r.json());
+  const ui = path => {
+    for (const c of [lang, 'en']) {
+      const v = path.split('.').reduce((o, k) => (o == null ? undefined : o[k]), uiAll[c]);
+      if (v != null) return v;
+    }
+    return path;
+  };
+
+  $('lang-switcher').innerHTML = LANGS.map(c =>
+    `<button class="lang-flag" data-lang="${c}" title="${c.toUpperCase()}"><img src="../img/flags/${c}.svg" alt="${c}"></button>`).join('');
+  document.addEventListener('click', e => {
+    const f = e.target.closest('.lang-flag');
+    if (!f) return;
+    lang = f.dataset.lang;
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (_) {}
+    show();
+  });
+
+  const main = $('main');
+  const error = err => `<p class="msg err">${esc(ui('trans.error'))} ${esc(err.message || err)}</p>`;
+  let sb, session = null, me = null, data = null;
+
+  try {
+    sb = await window.greenSupabase();
+    ({ data: { session } } = await sb.auth.getSession());
+  } catch (e) { main.innerHTML = error(e); return; }
+
+  async function loadMe() {
+    if (!session) { me = null; return; }
+    ({ data: me } = await sb.from('translators').select('*').eq('user_id', session.user.id).maybeSingle());
+    if (me && me.lang && lang !== me.lang) lang = me.lang;      // the page speaks the translator's language
+  }
+  await loadMe();
+  if (session && me && next) { location.replace(next); return; }
+
+  sb.auth.onAuthStateChange(async (_e, s) => {
+    if (!!s === !!session) return;
+    session = s;
+    await loadMe();
+    if (session && me && next) { location.replace(next); return; }
+    show();
+  });
+
+  function chrome() {
+    document.documentElement.lang = lang;
+    document.title = ui('trans.title');
+    $('title').textContent = ui('trans.title');
+    $('lede').textContent = ui('trans.lede');
+    document.querySelectorAll('.lang-flag').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === lang));
+  }
+
+  /* ---------- 1. not signed in: email → magic link ---------- */
+  function signIn() {
+    main.innerHTML = `<form class="box" id="f">
+        <h2>${esc(ui('trans.send'))}</h2>
+        <label for="email">${esc(ui('trans.emailLabel'))}</label>
+        <input id="email" type="email" required autocomplete="email" placeholder="name@school.eu">
+        <button class="btn">${esc(ui('trans.send'))}</button>
+        <p class="msg">${esc(ui('trans.deadline'))}</p>
+      </form>`;
+    $('f').addEventListener('submit', async e => {
+      e.preventDefault();
+      const btn = e.target.querySelector('button');
+      btn.disabled = true;
+      const back = location.origin + location.pathname + (next ? `?next=${encodeURIComponent(next)}` : '');
+      const { error: err } = await sb.auth.signInWithOtp({ email: $('email').value.trim(), options: { emailRedirectTo: back } });
+      e.target.insertAdjacentHTML('beforeend', err ? error(err) : `<p class="msg">✉️ ${esc(ui('trans.sent'))}</p>`);
+      if (err) btn.disabled = false;
+    });
+  }
+
+  /* ---------- 2. first visit: name + language ---------- */
+  function profile() {
+    const guess = TARGETS.includes(lang) ? lang : '';
+    main.innerHTML = `<form class="box" id="f">
+        <h2>${esc(ui('trans.profileTitle'))}</h2>
+        <label for="name">${esc(ui('trans.nameLabel'))}</label>
+        <input id="name" required maxlength="80" autocomplete="name">
+        <label for="tl">${esc(ui('trans.langLabel'))}</label>
+        <select id="tl" required><option value=""></option>${TARGETS.map(c =>
+          `<option value="${c}"${c === guess ? ' selected' : ''}>${NAMES[c]}</option>`).join('')}</select>
+        <button class="btn">${esc(ui('trans.start'))}</button>
+        <p class="msg">${esc(session.user.email)}</p>
+      </form>`;
+    $('f').addEventListener('submit', async e => {
+      e.preventDefault();
+      const row = { user_id: session.user.id, email: session.user.email, name: $('name').value.trim(), lang: $('tl').value };
+      const { error: err } = await sb.from('translators').insert(row);
+      if (err) { e.target.insertAdjacentHTML('beforeend', error(err)); return; }
+      me = row;
+      lang = row.lang;
+      try { localStorage.setItem(STORAGE_KEY, lang); } catch (_) {}
+      if (next) { location.replace(next); return; }
+      show();
+    });
+  }
+
+  /* ---------- 3. the translator's worksheets ---------- */
+  async function dashboard() {
+    if (!data) data = await fetch('../ws/worksheets.json', { cache: 'no-cache' }).then(r => r.json());
+    const sheets = data.worksheets;
+    const [{ data: reviews }, edits] = await Promise.all([
+      sb.from('reviews').select('worksheet').eq('lang', me.lang),
+      (async () => {                                   // all corrections in my language, page by page
+        const rows = [];
+        for (let from = 0; ; from += 1000) {
+          const { data: page, error: err } = await sb.from('translations').select('worksheet').eq('lang', me.lang).range(from, from + 999);
+          if (err || !page.length) break;
+          rows.push(...page);
+          if (page.length < 1000) break;
+        }
+        return rows;
+      })()
+    ]);
+    const done = new Set((reviews || []).map(r => r.worksheet));
+    const count = {};
+    for (const r of edits) count[r.worksheet] = (count[r.worksheet] || 0) + 1;
+    const pct = Math.round(100 * done.size / sheets.length);
+    const title = w => w.title[me.lang] || w.title.en || w.slug;
+
+    main.innerHTML = `<div class="dash">
+      <div class="dash-head">
+        <h2>${esc(ui('trans.dashboard'))} — ${NAMES[me.lang]}</h2>
+        <span>${esc(me.name || '')} · <button class="btn ghost" id="out">${esc(ui('trans.signOut'))}</button></span>
+      </div>
+      <div>${esc(ui('trans.progress').replace('{n}', done.size).replace('{total}', sheets.length))}</div>
+      <div class="bar"><i style="width:${pct}%"></i></div>
+      <p class="how">${esc(ui('trans.how'))} ${esc(ui('trans.deadline'))}</p>
+      <table class="list">${sheets.map(w => `<tr>
+          <td>${w.country ? `<img src="../img/flags/${w.country}.svg" alt="">` : ''}${esc(title(w))}</td>
+          <td class="meta">${count[w.slug] ? esc(ui('trans.edits').replace('{n}', count[w.slug])) : ''}</td>
+          <td>${done.has(w.slug) ? `<span class="ok">${esc(ui('trans.reviewed'))}</span>` : ''}</td>
+          <td><a class="btn" href="../ws/${w.slug}/?lang=${me.lang}&edit=1">${esc(ui('trans.open'))}</a></td>
+        </tr>`).join('')}</table>
+    </div>`;
+    $('out').addEventListener('click', async () => { await sb.auth.signOut(); session = null; me = null; show(); });
+  }
+
+  async function show() {
+    chrome();
+    try {
+      if (!session) signIn();
+      else if (!me) profile();
+      else await dashboard();
+    } catch (e) { main.innerHTML = error(e); }
+  }
+  show();
+})();
+</script>
+</body>
+</html>

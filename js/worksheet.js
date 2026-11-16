@@ -9,7 +9,9 @@
 
    A worksheet page only needs:
      <body data-root="../../">  +  css/worksheet.css  +  this file
-   URL options: ?lang=is  &level=basic  &mt=google
+   URL options: ?lang=is  &level=basic  &mt=google  &edit=1
+   (edit=1 loads js/translate.js: signed-in translators correct texts
+   in place, saved to Supabase — see supabase/migrations/)
    ============================================================ */
 (function () {
   'use strict';
@@ -31,6 +33,9 @@
     lang: pickLang(),
     level: LEVELS.includes(params.get('level')) ? params.get('level') : 'all',
     source: params.get('mt') === 'google' ? 'google' : 'main',
+    edit: params.get('edit') === '1',
+    overrides: {},                              // corrections from Supabase (edit mode)
+    base: {},                                   // the translation from the JSON file, before corrections
     content: null, en: {}, tr: {}, meta: {}, uiAll: {}, googleAvail: {}, missing: 0
   };
 
@@ -64,16 +69,27 @@
       state.tr = strip(pick);
       state.meta = (pick && pick._meta) || {};
     }
+    state.base = { ...state.tr };
+    if (state.edit && state.lang !== 'en') Object.assign(state.tr, state.overrides);
   }
 
   /* text for a key, falling back to English */
   function T(key, raw) {
     if (!key) return '';
     const t = state.tr[key];
-    if (t) return raw ? t : inline(t);
-    const en = state.en[key] || '';
-    if (state.lang !== 'en') state.missing++;
-    return raw ? en : (state.lang !== 'en' ? `<span class="untranslated">${inline(en)}</span>` : inline(en));
+    let out;
+    if (t) out = raw ? t : inline(t);
+    else {
+      const en = state.en[key] || '';
+      if (state.lang !== 'en') state.missing++;
+      out = raw ? en : (state.lang !== 'en' ? `<span class="untranslated">${inline(en)}</span>` : inline(en));
+    }
+    // edit mode: every translated text knows its key, so a click can open it
+    if (state.edit && !raw && state.lang !== 'en') {
+      const cls = state.overrides[key] != null ? 'tk tk-changed' : 'tk';
+      return `<span class="${cls}" data-k="${key}">${out}</span>`;
+    }
+    return out;
   }
   function ui(key) {
     const parts = key.split('.');
@@ -340,7 +356,25 @@
     updateNotice();
     const title = state.content.title ? T(state.content.title, true) : '';
     document.title = `${title} — ${ui('worksheet')}`;
+    document.dispatchEvent(new CustomEvent('ws:rendered'));
   }
+
+  /* ---------- API for the translation editor (js/translate.js) ---------- */
+  window.greenWorksheet = {
+    state, ui, inline, render, syncURL: () => syncURL(),
+    setLang(lang) { state.lang = lang; syncURL(); return render(); },
+    setOverrides(map) { state.overrides = map || {}; return render(); },
+    // one corrected text: update it on the page without a full re-layout
+    setText(key, text) {
+      if (text == null) { delete state.overrides[key]; state.tr[key] = state.base[key]; }
+      else { state.overrides[key] = text; state.tr[key] = text; }
+      const shown = state.tr[key] != null ? state.tr[key] : (state.en[key] || '');
+      document.querySelectorAll(`.tk[data-k="${key}"]`).forEach(el => {
+        el.innerHTML = inline(shown);
+        el.classList.toggle('tk-changed', text != null);
+      });
+    }
+  };
 
   /* ---------- toolbar ---------- */
   function toolbar() {
@@ -448,6 +482,12 @@
     state.content = content;
     state.en = strip(en);
     state.uiAll = uiAll || {};
+    if (state.edit) {
+      // the editor needs the Supabase settings first; it re-renders with the corrections
+      for (const src of [`${ROOT}js/supabase-config.js`, `${ROOT}js/translate.js`]) {
+        await new Promise(done => { const s = h('script'); s.src = src; s.onload = done; s.onerror = done; document.head.appendChild(s); });
+      }
+    }
     await render();
   }
 
