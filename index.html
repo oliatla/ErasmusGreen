@@ -1,345 +1,368 @@
 <!DOCTYPE html>
-<html lang="en" data-lang-root="lang/">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GREEN Erasmus+ — Worksheets</title>
+<title>GREEN — worksheets</title>
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link rel="apple-touch-icon" href="img/favicon.svg">
 <meta name="theme-color" content="#059669">
 <link rel="stylesheet" href="css/style.css">
+<style>
+  /* ---- the bits this page adds to css/style.css (same look as archive.html, the earlier landing page) ---- */
+  .topic-nav { margin: .9rem 0 0; }
+  .topic-nav + .topic-nav { margin-top: .45rem; }
+  .topic-btn { display: inline-flex; align-items: center; gap: .35rem; }
+  .topic-btn img { width: 18px; height: 13px; border-radius: 2px; display: block; }
+  .filters { margin-bottom: 1.75rem; }
+
+  /* the three levels: description and level filter in one */
+  .level-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: .85rem; }
+  .level-card {
+    --lc: var(--green); --lb: var(--green-bg); --lbo: var(--green-border);
+    display: flex; flex-direction: column; gap: .45rem; text-align: left;
+    padding: 1rem 1.1rem; cursor: pointer; font: inherit; color: inherit;
+    background: var(--bg-card); border: 1px solid var(--border); border-top: 3px solid var(--lc);
+    border-radius: var(--r); box-shadow: var(--shadow);
+    transition: box-shadow .15s, background .15s, opacity .15s;
+  }
+  .level-card.medium   { --lc: var(--water);  --lb: var(--water-bg);  --lbo: var(--water-border); }
+  .level-card.advanced { --lc: var(--energy); --lb: var(--energy-bg); --lbo: var(--energy-border); }
+  .level-card:hover { box-shadow: var(--shadow-md); }
+  .level-card[aria-pressed="true"] { background: var(--lb); border-color: var(--lbo); border-top-color: var(--lc); }
+  .level-cards.filtered .level-card:not([aria-pressed="true"]) { opacity: .55; }
+  .level-card-head { display: flex; align-items: center; gap: .5rem; }
+  .level-card strong { font-size: 1rem; font-weight: 700; }
+  .level-card-desc { font-size: .84rem; color: var(--text-sec); line-height: 1.55; }
+  .level-section .level-desc { margin-bottom: .85rem; }
+
+  /* the card is one link (the whole surface opens the worksheet); the level
+     bubbles sit on top of it and lead straight to one level */
+  .ws-card { display: flex; flex-direction: column; position: relative; }
+  .ws-head { display: flex; align-items: flex-start; justify-content: space-between; gap: .5rem; }
+  .ws-head .ws-topic { margin-bottom: .4rem; }
+  .ws-head .flag-icon { margin-top: -.1rem; }
+  .ws-card h3 { margin-bottom: .3rem; }
+  .ws-card h3 a { color: inherit; text-decoration: none; }
+  .ws-card h3 a::after { content: ''; position: absolute; inset: 0; border-radius: var(--r); }
+  .ws-card .ws-desc { flex: 1 1 auto; }
+
+  /* level bubbles — bars only, the name is in the tooltip. Only the bubbles are
+     lifted above the card link, so the rest of the card still opens the worksheet. */
+  .levels { display: inline-flex; gap: .3rem; position: relative; z-index: 1; }
+  .lvl-dot {
+    display: inline-flex; align-items: flex-end; gap: 2px;
+    padding: .3rem .5rem; border: 1px solid var(--border); border-radius: 999px;
+    background: var(--bg-input); color: var(--text-muted); text-decoration: none;
+  }
+  .lvl-dot i { display: block; width: 3px; border: 1px solid currentColor; border-radius: 1px; }
+  .lvl-dot i:nth-child(1) { height: 5px; }
+  .lvl-dot i:nth-child(2) { height: 8px; }
+  .lvl-dot i:nth-child(3) { height: 11px; }
+  .lvl-dot i.on { background: currentColor; }
+  .lvl-dot.basic    { color: var(--green); }
+  .lvl-dot.medium   { color: var(--water); }
+  .lvl-dot.advanced { color: var(--energy); }
+  a.lvl-dot:hover { border-color: currentColor; background: var(--bg-card); }
+  .lvl-dot.on { border-color: currentColor; box-shadow: inset 0 0 0 1px currentColor; }
+  .lvl-dot.off { color: var(--border-strong); opacity: .55; }
+
+  .ws-end { display: inline-flex; align-items: center; gap: .5rem; }
+  .docx-link { position: relative; z-index: 1; font-weight: 700; font-size: .72rem; text-decoration: none; color: #2b579a;
+    border: 1px solid #2b579a; border-radius: 999px; padding: .1rem .5rem; white-space: nowrap; }
+  .docx-link:hover { background: #2b579a; color: #fff; }
+  .ws-status.partial { color: var(--energy); }
+  .ws-status.none    { color: var(--text-muted); }
+  .ws-demo {
+    font-size: .62rem; letter-spacing: .05em; color: var(--text-muted);
+    border: 1px solid var(--border); border-radius: 999px; padding: .02rem .4rem; margin-left: .3rem;
+  }
+  .phase-banner { background: var(--green-light); border-bottom: 1px solid var(--green-border); color: var(--text);
+    text-align: center; padding: .65rem 1.25rem; font-size: .9rem; }
+  .phase-banner a { color: var(--green); font-weight: 700; margin-left: .4rem; white-space: nowrap; }
+  .empty { color: var(--text-muted); padding: 2rem 0; text-align: center; grid-column: 1 / -1; }
+
+  @media (max-width: 760px) { .level-cards { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
 
 <div class="top-bar">
-
-  <a href="#" class="brand-mark" aria-label="GREEN — home">
+  <a href="index.html" class="brand-mark" aria-label="GREEN">
     <img src="img/greenlogo.png" alt="" class="brand-logo">
     <span class="brand-text">
       <strong>GREEN</strong>
       <span class="brand-sub">Erasmus+ KA220-VET</span>
     </span>
   </a>
-
   <div class="top-bar-actions">
-    <div id="lang-switcher"></div>
-    <a href="https://github.com/oliatla/ErasmusGreen"
-       class="icon-btn"
-       target="_blank"
-       rel="noopener"
-       title="View source on GitHub"
-       aria-label="GitHub">
+    <div class="lang-switcher" id="lang-switcher"></div>
+    <a href="https://github.com/oliatla/ErasmusGreen" class="icon-btn" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
       <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
         <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.06c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .3.21.67.79.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
       </svg>
     </a>
-    <a href="worksheets.html" class="icon-btn" data-i18n="ui.newFormat">Worksheets 2026</a>
-    <a href="translator-guide.html" class="icon-btn" data-i18n-attr="title:ui.infoTip">
-      <span data-i18n="ui.info">About</span>
-    </a>
+    <a href="archive.html" class="icon-btn" id="older-link">Earlier worksheets</a>
     <button class="theme-toggle" id="theme-btn" onclick="theme.toggle()" aria-label="Toggle theme">🌙</button>
   </div>
-
 </div>
 
 <header class="page-header">
   <div class="header-inner hero">
-    <span class="badge" data-i18n="header.badge">GREEN Erasmus+ · KA220-VET · WP2</span>
-    <h1 data-i18n="header.title">Energy & Water Worksheets</h1>
-    <p data-i18n="header.lede">Interactive teaching materials on efficient use of energy and water — created by five European vocational schools.</p>
+    <span class="badge">GREEN Erasmus+ · KA220-VET · WP2</span>
+    <h1 id="title">GREEN worksheets</h1>
+    <p id="lede"></p>
   </div>
 </header>
 
+<!-- translation phase: remove this block (and its two lines in render) when the phase ends -->
+<div class="phase-banner" id="phase"><span id="phase-text"></span> <a href="translations/" id="phase-link"></a></div>
+
 <main class="main">
 
-  <!-- ===== Topic filter ===== -->
-  <div class="topic-nav">
-    <button class="topic-btn active" data-topic="all"           onclick="filterTopic(this)" data-i18n="topicFilter.all">All topics</button>
-    <button class="topic-btn"        data-topic="entertainment" onclick="filterTopic(this)" data-i18n="topicFilter.entertainment">🎮 Entertainment</button>
-    <button class="topic-btn"        data-topic="kitchen"       onclick="filterTopic(this)" data-i18n="topicFilter.kitchen">🍳 Kitchen</button>
-    <button class="topic-btn"        data-topic="cleaning"      onclick="filterTopic(this)" data-i18n="topicFilter.cleaning">🧹 Cleaning</button>
-    <button class="topic-btn"        data-topic="lighting"      onclick="filterTopic(this)" data-i18n="topicFilter.lighting">💡 Lighting</button>
-    <button class="topic-btn"        data-topic="school"        onclick="filterTopic(this)" data-i18n="topicFilter.school">🏫 School Environment</button>
+  <!-- ===== THE THREE LEVELS (description + level filter) ===== -->
+  <section class="level-section">
+    <div class="level-header"><h2 id="levels-title"></h2></div>
+    <p class="level-desc" id="levels-hint"></p>
+    <div class="level-cards" id="level-cards"></div>
+  </section>
+
+  <!-- ===== TOPIC AND COUNTRY FILTERS ===== -->
+  <div class="filters">
+    <div class="topic-nav" id="row-topic"></div>
+    <div class="topic-nav" id="row-country"></div>
   </div>
 
-  <!-- ===== BASIC ===== -->
+  <!-- ===== THE WORKSHEETS ===== -->
   <section class="level-section">
-    <div class="level-header">
-      <span class="level-badge basic" data-i18n="levels.basic.label">Basic</span>
-      <h2 data-i18n="levels.basic.title">Observe & Measure</h2>
-    </div>
-    <p class="level-desc" data-i18n="levels.basic.desc">Hands-on data collection. Students walk through a building, observe, measure, and record. Minimal calculations, focus on understanding what uses energy and water.</p>
-
-    <div class="ws-grid">
-
-      <a class="ws-card ready" data-topic="school" href="ws/ws01/" data-pdf="1IS_Worksheet_template_Water_Tap_Flow.pdf">
-        <div class="ws-topic"   data-i18n="worksheets.w01.topic">🏫 School Environment</div>
-        <h3                     data-i18n="worksheets.w01.title">💧 Water — Tap Flow Measurement</h3>
-        <p class="ws-desc"      data-i18n="worksheets.w01.desc">Measure actual tap flow rates in school bathrooms. Compare with automatic sensor taps and calculate water savings.</p>
-        <div class="ws-footer">
-          <span class="ws-country"><span class="flag-icon" data-flag="is"></span> <span data-i18n="countries.is">Iceland</span></span>
-          <span class="ws-status live" data-langs="is" title="Translated to: Icelandic">● Ready</span>
-        </div>
-      </a>
-
-      <a class="ws-card ready" data-topic="entertainment" href="ws/ws02/" data-pdf="1PT_Worksheet_Standby_vs_OFF.pdf">
-        <div class="ws-topic"   data-i18n="worksheets.w02.topic">🎮 Entertainment & Electronics</div>
-        <h3                     data-i18n="worksheets.w02.title">📺 Standby vs. OFF</h3>
-        <p class="ws-desc"      data-i18n="worksheets.w02.desc">Measure standby power of TVs, consoles and monitors. Calculate the yearly cost of leaving devices plugged in.</p>
-        <div class="ws-footer">
-          <span class="ws-country"><span class="flag-icon" data-flag="pt"></span> <span data-i18n="countries.pt">Portugal</span></span>
-          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
-        </div>
-      </a>
-
-      <a class="ws-card ready" data-topic="cleaning" href="ws/ws03/" data-pdf="2HR_Energy_and_Water_Efficiency_of_Dishwashers.pdf">
-        <div class="ws-topic"   data-i18n="worksheets.w03.topic">🧹 Cleaning & Household</div>
-        <h3                     data-i18n="worksheets.w03.title">🍽 Dishwasher Efficiency</h3>
-        <p class="ws-desc"      data-i18n="worksheets.w03.desc">Compare intensive, auto and eco programmes. Calculate annual energy, water and carbon impact of running a dishwasher.</p>
-        <div class="ws-footer">
-          <span class="ws-country"><span class="flag-icon" data-flag="hr"></span> <span data-i18n="countries.hr">Croatia</span></span>
-          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
-        </div>
-      </a>
-
-      <a class="ws-card ready" data-topic="kitchen" href="ws/ws04/" data-pdf="TR-WORKSHEET-Kitchen-2.pdf">
-        <div class="ws-topic"   data-i18n="worksheets.w04.topic">🍳 The Kitchen</div>
-        <h3                     data-i18n="worksheets.w04.title">🔌 Kitchen Appliances</h3>
-        <p class="ws-desc"      data-i18n="worksheets.w04.desc">Conservation of energy in ovens, refrigerators and dishwashers. Includes formulas, worked examples and a 15-question quiz.</p>
-        <div class="ws-footer">
-          <span class="ws-country"><span class="flag-icon" data-flag="tr"></span> <span data-i18n="countries.tr">Türkiye</span></span>
-          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
-        </div>
-      </a>
-
-      <a class="ws-card ready" data-topic="lighting" href="ws/ws05/" data-pdf="NL1_Worksheet_1A_BASIC_Comparing_bulb_types.pdf">
-        <div class="ws-topic"   data-i18n="worksheets.w05.topic">💡 Lighting</div>
-        <h3                     data-i18n="worksheets.w05.title">💡 What is inside a light bulb?</h3>
-        <p class="ws-desc"      data-i18n="worksheets.w05.desc">Compare the four common bulb types — incandescent, halogen, CFL and LED — by wattage, lifetime and cost. Includes matching exercise.</p>
-        <div class="ws-footer">
-          <span class="ws-country"><span class="flag-icon" data-flag="nl"></span> <span data-i18n="countries.nl">Netherlands</span></span>
-          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
-        </div>
-      </a>
-
-      <a class="ws-card ready" data-topic="school" href="ws/ws07/" data-pdf="2IS_Worksheet_template_School_Restroom_Audit.pdf">
-        <div class="ws-topic"   data-i18n="worksheets.w07.topic">🏫 School Environment</div>
-        <h3                     data-i18n="worksheets.w07.title">🚻 School Restroom Audit</h3>
-        <p class="ws-desc"      data-i18n="worksheets.w07.desc">Audit lighting and water use in a school restroom. Calculate kWh and litre savings for motion-sensor lights and dual-flush toilets across a school year.</p>
-        <div class="ws-footer">
-          <span class="ws-country"><span class="flag-icon" data-flag="is"></span> <span data-i18n="countries.is">Iceland</span></span>
-          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
-        </div>
-      </a>
-
-      <a class="ws-card ready" data-topic="school" href="ws/ws08/" data-pdf="2IS_Worksheet_Energy_Efficiency_School_Computer_Lab.pdf">
-        <div class="ws-topic"   data-i18n="worksheets.w08.topic">🏫 School Environment</div>
-        <h3                     data-i18n="worksheets.w08.title">🖥 Computer Lab Energy Audit</h3>
-        <p class="ws-desc"      data-i18n="worksheets.w08.desc">Audit a school computer lab. Calculate active vs. standby energy use, identify "vampire power" waste, and propose technical, behavioural and policy improvements.</p>
-        <div class="ws-footer">
-          <span class="ws-country"><span class="flag-icon" data-flag="is"></span> <span data-i18n="countries.is">Iceland</span></span>
-          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
-        </div>
-      </a>
-
-      <a class="ws-card ready" data-topic="kitchen" href="ws/ws13/" data-pdf="TR-WORKSHEET-Kitchen-1.pdf">
-        <div class="ws-topic"   data-i18n="worksheets.w09.topic">🍳 The Kitchen</div>
-        <h3                     data-i18n="worksheets.w09.title">☕ Kettle, Toaster &amp; Microwave</h3>
-        <p class="ws-desc"      data-i18n="worksheets.w09.desc">Three classic kitchen heaters: how each one converts electrical energy into heat, energy use per cycle, cost calculations, and a 15-question multiple-choice quiz with answer key.</p>
-        <div class="ws-footer">
-          <span class="ws-country"><span class="flag-icon" data-flag="tr"></span> <span data-i18n="countries.tr">Türkiye</span></span>
-          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
-        </div>
-      </a>
-
-      <a class="ws-card ready" data-topic="entertainment" href="ws/ws15/" data-pdf="2PT_03_Worksheet_-_Desktop_vs__Laptop.pdf">
-        <div class="ws-topic"   data-i18n="worksheets.w13.topic">💻 Entertainment &amp; Electronics</div>
-        <h3                     data-i18n="worksheets.w13.title">🖥 Desktop vs. Laptop</h3>
-        <p class="ws-desc"      data-i18n="worksheets.w13.desc">Look up the power rating of a desktop and a laptop, calculate annual kWh and cost at 6 h/day, and estimate how much a school could save by replacing 20 desktops with laptops.</p>
-        <div class="ws-footer">
-          <span class="ws-country"><span class="flag-icon" data-flag="pt"></span> <span data-i18n="countries.pt">Portugal</span></span>
-          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
-        </div>
-      </a>
-
-      <a class="ws-card ready" data-topic="kitchen" href="ws/ws14/" data-pdf="TR-WORKSHEET-Kitchen-3.pdf">
-        <div class="ws-topic"   data-i18n="worksheets.w14.topic">🍳 The Kitchen</div>
-        <h3                     data-i18n="worksheets.w14.title">🥤 Blender, Coffee Maker &amp; LED</h3>
-        <p class="ws-desc"      data-i18n="worksheets.w14.desc">Compare three different energy conversions in one worksheet: motor (blender), heating (coffee maker) and lighting (LED). Includes worked examples, 5 W vs. 10 W comparison, and a 15-question quiz with answer key.</p>
-        <div class="ws-footer">
-          <span class="ws-country"><span class="flag-icon" data-flag="tr"></span> <span data-i18n="countries.tr">Türkiye</span></span>
-          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
-        </div>
-      </a>
-
-      <a class="ws-card ready" data-topic="lighting" href="ws/ws16/" data-pdf="NL1_Worksheet_4A_BASIC_Smart_lighting__1_.pdf">
-        <div class="ws-topic"   data-i18n="worksheets.w17.topic">💡 Lighting</div>
-        <h3                     data-i18n="worksheets.w17.title">🌅 Smart Lighting — Sensors that switch lights for you</h3>
-        <p class="ws-desc"      data-i18n="worksheets.w17.desc">Identify motion and daylight sensors and the rooms where each one saves the most energy. Reason about a school storage-room scenario and estimate the % saving.</p>
-        <div class="ws-footer">
-          <span class="ws-country"><span class="flag-icon" data-flag="nl"></span> <span data-i18n="countries.nl">Netherlands</span></span>
-          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
-        </div>
-      </a>
-
-      <div class="ws-card placeholder" data-topic="lighting">
-        <div class="ws-topic"   data-i18n="worksheets.w06.topic">💡 Lighting</div>
-
-    </div>
-  </section>
-
-  <!-- ===== MEDIUM ===== -->
-  <section class="level-section">
-    <div class="level-header">
-      <span class="level-badge medium" data-i18n="levels.medium.label">Medium</span>
-      <h2 data-i18n="levels.medium.title">Calculate & Compare</h2>
-    </div>
-    <p class="level-desc" data-i18n="levels.medium.desc">Apply formulas to real data. Students use measurements to calculate costs, savings, and payback periods. Combine data from multiple sources.</p>
-
-    <div class="ws-grid">
-
-      <a class="ws-card ready" data-topic="cleaning" href="ws/ws11/" data-pdf="3HR_Washing_Machines___Dryers.pdf">
-        <div class="ws-topic"   data-i18n="worksheets.w10.topic">🧹 Cleaning &amp; Household</div>
-        <h3                     data-i18n="worksheets.w10.title">👕 Washing Machines &amp; Dryers</h3>
-        <p class="ws-desc"      data-i18n="worksheets.w10.desc">Compare eco vs. hot washing programmes and vented/condenser/heat-pump dryers. Calculate annual energy, water and CO₂ savings, plus 10-year total cost.</p>
-        <div class="ws-footer">
-          <span class="ws-country"><span class="flag-icon" data-flag="hr"></span> <span data-i18n="countries.hr">Croatia</span></span>
-          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
-        </div>
-      </a>
-
-      <a class="ws-card ready" data-topic="entertainment" href="ws/ws10/" data-pdf="3HR_Energy_Efficiency_of_Personal_Care_Appliances.pdf">
-        <div class="ws-topic"   data-i18n="worksheets.w11.topic">💇 Personal Care</div>
-        <h3                     data-i18n="worksheets.w11.title">💨 Hair Dryer Energy Audit</h3>
-        <p class="ws-desc"      data-i18n="worksheets.w11.desc">Compare high/low/cool settings and ionic technology. Calculate annual cost and CO₂ across 300 sessions/year, plus a hair-salon scenario. Includes electrical engineering bonus tasks.</p>
-        <div class="ws-footer">
-          <span class="ws-country"><span class="flag-icon" data-flag="hr"></span> <span data-i18n="countries.hr">Croatia</span></span>
-          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
-        </div>
-      </a>
-
-      <a class="ws-card ready" data-topic="lighting" href="ws/ws17/" data-pdf="NL2_Worksheet_4B_MEDIUM_Smart_lighting.pdf">
-        <div class="ws-topic"   data-i18n="worksheets.w18.topic">💡 Lighting</div>
-        <h3                     data-i18n="worksheets.w18.title">📈 Smart Lighting — Sensors, dimming and energy savings</h3>
-        <p class="ws-desc"      data-i18n="worksheets.w18.desc">Quantify motion-sensor and daylight-dimming savings across three spaces (toilet, storage, classroom). Calculate annual kWh, € and payback period at €0.25/kWh.</p>
-        <div class="ws-footer">
-          <span class="ws-country"><span class="flag-icon" data-flag="nl"></span> <span data-i18n="countries.nl">Netherlands</span></span>
-          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
-        </div>
-      </a>
-
-    </div>
-  </section>
-
-  <!-- ===== ADVANCED ===== -->
-  <section class="level-section">
-    <div class="level-header">
-      <span class="level-badge advanced" data-i18n="levels.advanced.label">Advanced</span>
-      <h2 data-i18n="levels.advanced.title">Analyze & Recommend</h2>
-    </div>
-    <p class="level-desc" data-i18n="levels.advanced.desc">Synthesize findings into recommendations. Students analyze trade-offs, create cost-benefit analyses, and produce reports or videos with actionable proposals.</p>
-
-    <div class="ws-grid">
-
-      <a class="ws-card ready" data-topic="school" href="ws/ws09/" data-pdf="2IS_Worksheet_Solar_Energy_Potential_Audit.pdf">
-        <div class="ws-topic"   data-i18n="worksheets.w12.topic">🏫 School Environment</div>
-        <h3                     data-i18n="worksheets.w12.title">☀ Solar Potential of our School</h3>
-        <p class="ws-desc"      data-i18n="worksheets.w12.desc">Use PVGIS to model how much solar energy your school roof could produce. Calculate yearly kWh, financial value, EV km equivalent, and propose technical and policy improvements.</p>
-        <div class="ws-footer">
-          <span class="ws-country"><span class="flag-icon" data-flag="is"></span> <span data-i18n="countries.is">Iceland</span></span>
-          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
-        </div>
-      </a>
-
-      <a class="ws-card ready" data-topic="cleaning" href="ws/ws12/" data-pdf="2HR_Floor_Care___Traditional_Vacuum_vs__Robot_Vacuum.pdf">
-        <div class="ws-topic"   data-i18n="worksheets.w15.topic">🧹 Cleaning &amp; Household</div>
-        <h3                     data-i18n="worksheets.w15.title">🤖 Vacuum vs. Robot Vacuum</h3>
-        <p class="ws-desc"      data-i18n="worksheets.w15.desc">Lifecycle cost analysis: traditional vs. cordless vs. robot. Examines "vampire power" standby, carbon price of convenience, and apartment-vs-house recommendations. Includes electrical engineering bonus tasks.</p>
-        <div class="ws-footer">
-          <span class="ws-country"><span class="flag-icon" data-flag="hr"></span> <span data-i18n="countries.hr">Croatia</span></span>
-          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
-        </div>
-      </a>
-
-      <a class="ws-card ready" data-topic="lighting" href="ws/ws06/" data-pdf="NL3_Worksheet_1C_ADVANCED_Comparing_bulb_types.pdf">
-        <div class="ws-topic"   data-i18n="worksheets.w16.topic">💡 Lighting</div>
-        <h3                     data-i18n="worksheets.w16.title">📊 Total Cost of Ownership</h3>
-        <p class="ws-desc"      data-i18n="worksheets.w16.desc">Build a mathematical TCO model for bulb selection. Includes break-even analysis, sensitivity to electricity tariff, and lifecycle CO₂ emissions.</p>
-        <div class="ws-footer">
-          <span class="ws-country"><span class="flag-icon" data-flag="nl"></span> <span data-i18n="countries.nl">Netherlands</span></span>
-          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
-        </div>
-      </a>
-
-      <a class="ws-card ready" data-topic="lighting" href="ws/ws18/" data-pdf="NL3_Worksheet_4C_ADVANCED_Smart_lighting.pdf">
-        <div class="ws-topic"   data-i18n="worksheets.w19.topic">💡 Lighting</div>
-        <h3                     data-i18n="worksheets.w19.title">🏢 Smart Lighting — Building-wide automation strategy</h3>
-        <p class="ws-desc"      data-i18n="worksheets.w19.desc">Design a multi-zone smart lighting strategy for one floor. Integrate with HVAC and timetable, analyse GDPR/EU AI Act privacy trade-offs, and complete an optional WP3 Arduino extension.</p>
-        <div class="ws-footer">
-          <span class="ws-country"><span class="flag-icon" data-flag="nl"></span> <span data-i18n="countries.nl">Netherlands</span></span>
-          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
-        </div>
-      </a>
-
-    </div>
+    <div class="level-header" id="list-header"></div>
+    <div class="ws-grid" id="grid"></div>
   </section>
 
   <!-- ===== FOOTNOTE ===== -->
   <div class="footnote">
-    <h3 data-i18n="footnote.title">📌 About these worksheets</h3>
-    <p data-i18n="footnote.p1">These worksheets are part of GREEN Erasmus+ (KA220-VET), Work Package 2: Creation of teaching materials on efficient use of energy and water. Five partner schools each lead one topic area, creating materials in all partner languages.</p>
-    <p data-i18n="footnote.p2">Difficulty levels are designed so teachers can choose appropriate worksheets for their students — from hands-on observation (Basic) through calculation exercises (Medium) to full analysis and recommendation projects (Advanced).</p>
+    <h3 id="about-title"></h3>
+    <p id="about-p1"></p>
+    <p id="about-p2"></p>
+    <p id="about-p3"></p>
   </div>
 
 </main>
 
 <footer class="page-footer">
-
   <div class="footer-grid">
     <div class="footer-eu">
       <img src="img/eufounded.png" alt="Co-funded by the European Union" class="eu-logo">
-      <p class="eu-disclaimer">
-        Funded by the European Union. Views and opinions expressed are however those of the
-        author(s) only and do not necessarily reflect those of the European Union or the
-        European Education and Culture Executive Agency (EACEA). Neither the European Union
-        nor EACEA can be held responsible for them.
-      </p>
+      <p class="eu-disclaimer" id="disclaimer"></p>
     </div>
-
     <div class="footer-meta">
       <div class="footer-project">
         <strong>GREEN Erasmus+ · KA220-VET</strong><br>
-        Project № 2025-1-HR01-KA220-VET-000353056
+        <span id="project"></span>
       </div>
       <div class="footer-links">
         <a href="https://github.com/oliatla/ErasmusGreen" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" style="vertical-align: -2px; margin-right: 4px;">
             <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.06c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .3.21.67.79.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
-          </svg>Source on GitHub</a>
+          </svg><span id="source-link">Source on GitHub</span></a>
         <span class="dot-sep">·</span>
-        <a href="translator-guide.html">Translator guide</a>
+        <a href="translator-guide.html" id="guide-link">Translator guide</a>
       </div>
     </div>
   </div>
-
 </footer>
 
-<!-- ===== SCRIPTS ===== -->
 <script src="js/theme.js"></script>
-<script src="js/i18n.js"></script>
 <script>
-  theme.init();
-  i18n.buildSwitcher(document.getElementById('lang-switcher'));
-  i18n.renderFlags();
-  i18n.init();
+/* ============================================================
+   The list of every new-format worksheet — the GREEN landing page (the earlier one is archive.html).
+   Data: ws/worksheets.json (written by tools/reader.mjs index)
+   Texts: lang/worksheet-ui.json (the same file the worksheets use)
+   The three level cards describe the levels and filter the list;
+   every worksheet card opens the worksheet in the chosen language,
+   and its three bubbles open it straight at one level.
+   ============================================================ */
+(function () {
+  const LANGS = ['en', 'is', 'pt', 'hr', 'tr', 'nl'];
+  const LEVELS = ['basic', 'medium', 'advanced'];
+  const STORAGE_KEY = 'green-ws-lang';                 // shared with the worksheets
 
-  function filterTopic(btn) {
-    const topic = btn.dataset.topic;
-    document.querySelectorAll('.topic-btn').forEach(b => b.classList.toggle('active', b === btn));
-    document.querySelectorAll('.ws-card').forEach(card => {
-      card.style.display = (topic === 'all' || card.dataset.topic === topic) ? '' : 'none';
-    });
+  const params = new URLSearchParams(location.search);
+  const state = {
+    lang: pick(params.get('lang'), read(STORAGE_KEY), 'en', c => LANGS.includes(c)),
+    level: pick(params.get('level'), 'all', c => c === 'all' || LEVELS.includes(c)),
+    topic: params.get('topic') || 'all',
+    country: params.get('country') || 'all',
+    data: null, uiAll: {}
+  };
+
+  function pick(...args) {
+    const ok = args.pop();
+    return args.find(v => v && ok(v)) || args[args.length - 1];
   }
+  function read(key) { try { return localStorage.getItem(key); } catch (_) { return null; } }
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const $ = id => document.getElementById(id);
+
+  /* interface text, falling back to English */
+  function ui(path) {
+    for (const code of [state.lang, 'en']) {
+      const v = path.split('.').reduce((o, k) => (o == null ? undefined : o[k]), state.uiAll[code]);
+      if (v != null) return v;
+    }
+    return path;
+  }
+  /* a worksheet's own text (title, subject, time), falling back to English */
+  const t = o => (o && (o[state.lang] || o.en)) || '';
+  const bars = l => [0, 1, 2].map(i => `<i class="${i <= LEVELS.indexOf(l) ? 'on' : ''}"></i>`).join('');
+
+  /* ---------- the three levels ---------- */
+  function levelCards() {
+    $('level-cards').classList.toggle('filtered', state.level !== 'all');
+    $('level-cards').innerHTML = LEVELS.map(l => `
+      <button class="level-card ${l}" data-level="${l}" aria-pressed="${state.level === l}">
+        <span class="level-card-head">
+          <span class="lvl-dot ${l}" aria-hidden="true">${bars(l)}</span>
+          <span class="level-badge ${l}">${esc(ui('levels.' + l))}</span>
+        </span>
+        <strong>${esc(ui(`index.levelInfo.${l}.title`))}</strong>
+        <span class="level-card-desc">${esc(ui(`index.levelInfo.${l}.desc`))}</span>
+      </button>`).join('');
+  }
+
+  /* ---------- topic and country ---------- */
+  function filterButton(kind, value, label) {
+    const on = state[kind] === value;
+    return `<button class="topic-btn${on ? ' active' : ''}" data-kind="${kind}" data-value="${value}" aria-pressed="${on}">${label}</button>`;
+  }
+
+  function filters() {
+    const topics = state.data.topics.filter(x => state.data.worksheets.some(w => w.topic === x));
+    $('row-topic').innerHTML =
+      filterButton('topic', 'all', esc(ui('index.allTopics'))) +
+      topics.map(x => filterButton('topic', x, esc(ui('index.topics.' + x)))).join('');
+
+    const countries = [...new Set(state.data.worksheets.map(w => w.country).filter(Boolean))].sort();
+    $('row-country').innerHTML =
+      filterButton('country', 'all', esc(ui('index.allCountries'))) +
+      countries.map(c => filterButton('country', c, `<img src="img/flags/${c}.svg" alt=""> ${esc(ui('countries.' + c))}`)).join('');
+  }
+
+  /* ---------- worksheet cards ---------- */
+  function status(w) {
+    if (state.lang === 'en') return '';
+    const c = w.translated[state.lang];
+    if (!c || !c.done) return `<span class="ws-status none">${esc(ui('index.onlyEnglish'))}</span>`;
+    if (c.done < c.total) return `<span class="ws-status partial">${c.done}/${c.total}</span>`;
+    return c.reviewed
+      ? `<span class="ws-status live">● ${esc(ui('index.reviewed'))}</span>`
+      : `<span class="ws-status partial">● ${esc(ui('machineShort'))}</span>`;
+  }
+
+  function card(w) {
+    const shown = state.level !== 'all' ? state.level : w.levels[0];
+    const levels = LEVELS.map(l => {
+      const has = w.levels.includes(l);
+      const c = w.counts[l] || {};
+      const tip = [ui('levels.' + l), has ? t(w.time[l]) : '—',
+        has && c.tasks ? `${c.tasks} ${ui('index.tasks')}` : '',
+        has && c.questions ? `${c.questions} ${ui('index.questions')}` : ''].filter(Boolean).join(' · ');
+      return has
+        ? `<a class="lvl-dot ${l}${state.level === l ? ' on' : ''}" href="ws/${w.slug}/?lang=${state.lang}&level=${l}"
+              title="${esc(tip)}" aria-label="${esc(tip)}">${bars(l)}</a>`
+        : `<span class="lvl-dot ${l} off" title="${esc(tip)}" aria-hidden="true">${bars(l)}</span>`;
+    }).join('');
+
+    // the subject line of the level on show; some documents only name it once
+    const desc = t(w.subject[shown]) || t(w.subject[w.levels.find(l => w.subject[l])] || {});
+    const where = [w.country ? ui('countries.' + w.country) : '', w.code ? `${ui('worksheet')} ${w.code}` : '']
+      .filter(Boolean).join(' · ');
+
+    return `<article class="ws-card ready">
+      <div class="ws-head">
+        <span class="ws-topic">${esc(ui('index.topics.' + w.topic))}${w.demo ? `<span class="ws-demo">${esc(ui('index.demo'))}</span>` : ''}</span>
+        ${w.country ? `<span class="flag-icon" title="${esc(where)}"><img src="img/flags/${w.country}.svg" alt="${esc(where)}"></span>` : ''}
+      </div>
+      <h3><a href="ws/${w.slug}/?lang=${state.lang}">${esc(t(w.title))}</a></h3>
+      ${desc ? `<p class="ws-desc">${esc(desc)}</p>` : ''}
+      <div class="ws-footer">
+        <span class="levels">${levels}</span>
+        <span class="ws-end">${status(w)}${(w.docx || []).includes(state.lang)
+          ? `<a class="docx-link" href="ws/${w.slug}/docx/${state.lang}.docx" download="${esc(t(w.title))} (${state.lang.toUpperCase()}).docx" title="${esc(ui('downloadTip'))}">${esc(ui('download'))}</a>` : ''}</span>
+      </div>
+    </article>`;
+  }
+
+  /* ---------- the page ---------- */
+  function render() {
+    document.documentElement.lang = state.lang;
+    document.title = ui('index.title');
+    $('title').textContent = ui('index.title');
+    $('lede').textContent = ui('index.lede');
+    $('levels-title').textContent = ui('index.levelsTitle');
+    $('levels-hint').textContent = ui('index.levelsHint');
+    $('older-link').textContent = ui('index.older');
+    $('phase-text').textContent = ui('index.phase');
+    $('phase-link').textContent = ui('index.phaseLink');
+    for (const p of ['title', 'p1', 'p2', 'p3']) $('about-' + p).textContent = ui('index.about.' + p);
+    $('disclaimer').textContent = ui('disclaimer');
+    $('project').textContent = ui('projectLine');
+    $('source-link').textContent = ui('index.source');
+    $('guide-link').textContent = ui('index.guide');
+    document.querySelectorAll('.lang-flag').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === state.lang));
+
+    levelCards();
+    filters();
+
+    const list = state.data.worksheets.filter(w =>
+      (state.level === 'all' || w.levels.includes(state.level)) &&
+      (state.topic === 'all' || w.topic === state.topic) &&
+      (state.country === 'all' || w.country === state.country));
+
+    $('list-header').innerHTML =
+      (state.level !== 'all' ? `<span class="level-badge ${state.level}">${esc(ui('levels.' + state.level))}</span>` : '') +
+      `<h2>${esc(ui('index.count').replace('{n}', list.length))}</h2>`;
+    $('grid').innerHTML = list.length
+      ? list.map(card).join('')
+      : `<p class="empty">${esc(ui('index.none'))}</p>`;
+
+    const p = new URLSearchParams();
+    if (state.lang !== 'en') p.set('lang', state.lang);
+    for (const k of ['level', 'topic', 'country']) if (state[k] !== 'all') p.set(k, state[k]);
+    history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
+  }
+
+  /* ---------- events ---------- */
+  document.addEventListener('click', e => {
+    const flag = e.target.closest('.lang-flag');
+    if (flag) {
+      state.lang = flag.dataset.lang;
+      try { localStorage.setItem(STORAGE_KEY, state.lang); } catch (_) {}
+      return render();
+    }
+    const level = e.target.closest('.level-card');
+    if (level) {
+      state.level = state.level === level.dataset.level ? 'all' : level.dataset.level;   // click again: all levels
+      return render();
+    }
+    const f = e.target.closest('.topic-btn');
+    if (f) { state[f.dataset.kind] = f.dataset.value; render(); }
+  });
+
+  /* ---------- start ---------- */
+  Promise.all([
+    fetch('ws/worksheets.json', { cache: 'no-cache' }).then(r => r.json()),
+    fetch('lang/worksheet-ui.json', { cache: 'no-cache' }).then(r => r.json())
+  ]).then(([data, uiAll]) => {
+    state.data = data;
+    state.uiAll = uiAll;
+    $('lang-switcher').innerHTML = LANGS.map(c =>
+      `<button class="lang-flag" data-lang="${c}" title="${c.toUpperCase()}"><img src="img/flags/${c}.svg" alt="${c}"></button>`).join('');
+    render();
+  }).catch(err => {
+    $('grid').innerHTML = `<p class="empty">ws/worksheets.json — ${esc(err.message)}<br>node tools/reader.mjs index</p>`;
+  });
+})();
 </script>
 
 </body>

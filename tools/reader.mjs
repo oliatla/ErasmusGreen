@@ -39,7 +39,7 @@
         texts that changed; slug and language come from the file).
 
    node tools/reader.mjs index
-        ws/worksheets.json — the data behind worksheets.html (title, topic,
+        ws/worksheets.json — the data behind index.html (the worksheet list) (title, topic,
         country, levels, counts and translation status of every worksheet
         in every language). Written by "folder" as well.
 
@@ -484,7 +484,7 @@ function cmdFromMd(file, opt) {
   if (clash.length) console.log(`⚠ ${clash.length} text${clash.length > 1 ? 's appear' : ' appears'} more than once with different wording (the first one is used): ${clash.join(', ')}`);
 }
 
-/* ---------- ws/worksheets.json: the list behind worksheets.html ---------- */
+/* ---------- ws/worksheets.json: the list behind index.html ---------- */
 /* first match wins, so the more specific words come first */
 const TOPIC_WORDS = [
   ['lighting',    /\b(light|lighting|bulb|lamp|lumen|led)\b/i],

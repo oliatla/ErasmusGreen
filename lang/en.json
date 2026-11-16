@@ -14,7 +14,9 @@
     "_comment": "Small bits of interface text used across the page.",
     "info": "About",
     "infoTip": "About this project",
-    "newFormat": "Worksheets 2026"
+    "newFormat": "Worksheets 2026",
+    "archiveNote": "This is the earlier version of the GREEN worksheets.",
+    "archiveLink": "See the new worksheets →"
   },
   "topicFilter": {
     "_comment": "Buttons at the top of the worksheet grid. Emoji is part of the label — keep it.",

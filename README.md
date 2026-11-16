@@ -143,7 +143,7 @@ breaks, level filter, six languages, B/W, QR codes for videos in print.
   "machine translation" notice.
 - **Commands:** `node tools/reader.mjs folder | docx | doc | word | md | from-md | sheet-csv | from-sheet | check`
   (usage in the file header). Needs Node 18+, no packages.
-- **The list of every worksheet:** [`worksheets.html`](worksheets.html) — filter by level,
+- **The list of every worksheet:** [`index.html`](index.html) (the front page; the earlier landing page is `archive.html`) — filter by level,
   topic and country, in all six languages, and go straight into a worksheet at one level
   (`ws/<slug>/?lang=is&level=basic`). Its data is `ws/worksheets.json`, written by
   `node tools/reader.mjs index` (and by `folder`); the topic of a worksheet is guessed from

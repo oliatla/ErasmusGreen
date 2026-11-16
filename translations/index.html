@@ -18,6 +18,10 @@
   .btn { display: inline-block; margin-top: 1rem; font: inherit; font-weight: 700; padding: .6rem 1.1rem; border-radius: var(--rs);
          border: 0; background: var(--green); color: #fff; cursor: pointer; text-decoration: none; }
   .btn.ghost { background: transparent; color: var(--text-sec); border: 1px solid var(--border); font-weight: 600; }
+  .login-help { margin-top: 1rem; }
+  .login-help ol { margin: 0 0 .8rem 1.2rem; font-size: .9rem; color: var(--text-sec); }
+  .login-help li { margin-bottom: .4rem; }
+  .login-help .warn { font-size: .88rem; background: var(--energy-bg); border: 1px solid var(--energy-border); border-radius: var(--rs); padding: .6rem .8rem; }
   .msg { margin-top: 1rem; color: var(--text-sec); font-size: .9rem; }
   .msg.err { color: #b00020; }
   .dash { max-width: 900px; margin: 0 auto; }
@@ -42,7 +46,7 @@
 <body>
 
 <div class="top-bar">
-  <a href="../worksheets.html" class="brand-mark" aria-label="GREEN">
+  <a href="../index.html" class="brand-mark" aria-label="GREEN">
     <img src="../img/greenlogo.png" alt="" class="brand-logo">
     <span class="brand-text"><strong>GREEN</strong><span class="brand-sub">Erasmus+ KA220-VET</span></span>
   </a>
@@ -142,7 +146,12 @@
         <input id="email" type="email" required autocomplete="email" placeholder="name@school.eu">
         <button class="btn">${esc(ui('trans.send'))}</button>
         <p class="msg">${esc(ui('trans.deadline'))}</p>
-      </form>`;
+      </form>
+      <div class="box login-help">
+        <h2>${esc(ui('trans.loginTitle'))}</h2>
+        <ol>${(ui('trans.loginSteps') || []).map(s => `<li>${esc(s)}</li>`).join('')}</ol>
+        <p class="warn">⚠ ${esc(ui('trans.schoolMail'))}</p>
+      </div>`;
     $('f').addEventListener('submit', async e => {
       e.preventDefault();
       const btn = e.target.querySelector('button');

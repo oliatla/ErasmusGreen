@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" data-lang-root="lang/">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GREEN Erasmus+ — Worksheets</title>
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="apple-touch-icon" href="img/favicon.svg">
+<meta name="theme-color" content="#059669">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="top-bar">
+
+  <a href="#" class="brand-mark" aria-label="GREEN — home">
+    <img src="img/greenlogo.png" alt="" class="brand-logo">
+    <span class="brand-text">
+      <strong>GREEN</strong>
+      <span class="brand-sub">Erasmus+ KA220-VET</span>
+    </span>
+  </a>
+
+  <div class="top-bar-actions">
+    <div id="lang-switcher"></div>
+    <a href="https://github.com/oliatla/ErasmusGreen"
+       class="icon-btn"
+       target="_blank"
+       rel="noopener"
+       title="View source on GitHub"
+       aria-label="GitHub">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.06c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .3.21.67.79.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
+      </svg>
+    </a>
+    <a href="index.html" class="icon-btn" data-i18n="ui.newFormat">Worksheets 2026</a>
+    <a href="translator-guide.html" class="icon-btn" data-i18n-attr="title:ui.infoTip">
+      <span data-i18n="ui.info">About</span>
+    </a>
+    <button class="theme-toggle" id="theme-btn" onclick="theme.toggle()" aria-label="Toggle theme">🌙</button>
+  </div>
+
+</div>
+
+<div class="archive-note" style="background:var(--energy-light);border-bottom:1px solid var(--energy-border);text-align:center;padding:.6rem 1rem;font-size:.9rem">
+  <span data-i18n="ui.archiveNote">This is the earlier version of the GREEN worksheets.</span>
+  <a href="index.html" style="font-weight:700;margin-left:.4rem" data-i18n="ui.archiveLink">See the new worksheets →</a>
+</div>
+
+<header class="page-header">
+  <div class="header-inner hero">
+    <span class="badge" data-i18n="header.badge">GREEN Erasmus+ · KA220-VET · WP2</span>
+    <h1 data-i18n="header.title">Energy & Water Worksheets</h1>
+    <p data-i18n="header.lede">Interactive teaching materials on efficient use of energy and water — created by five European vocational schools.</p>
+  </div>
+</header>
+
+<main class="main">
+
+  <!-- ===== Topic filter ===== -->
+  <div class="topic-nav">
+    <button class="topic-btn active" data-topic="all"           onclick="filterTopic(this)" data-i18n="topicFilter.all">All topics</button>
+    <button class="topic-btn"        data-topic="entertainment" onclick="filterTopic(this)" data-i18n="topicFilter.entertainment">🎮 Entertainment</button>
+    <button class="topic-btn"        data-topic="kitchen"       onclick="filterTopic(this)" data-i18n="topicFilter.kitchen">🍳 Kitchen</button>
+    <button class="topic-btn"        data-topic="cleaning"      onclick="filterTopic(this)" data-i18n="topicFilter.cleaning">🧹 Cleaning</button>
+    <button class="topic-btn"        data-topic="lighting"      onclick="filterTopic(this)" data-i18n="topicFilter.lighting">💡 Lighting</button>
+    <button class="topic-btn"        data-topic="school"        onclick="filterTopic(this)" data-i18n="topicFilter.school">🏫 School Environment</button>
+  </div>
+
+  <!-- ===== BASIC ===== -->
+  <section class="level-section">
+    <div class="level-header">
+      <span class="level-badge basic" data-i18n="levels.basic.label">Basic</span>
+      <h2 data-i18n="levels.basic.title">Observe & Measure</h2>
+    </div>
+    <p class="level-desc" data-i18n="levels.basic.desc">Hands-on data collection. Students walk through a building, observe, measure, and record. Minimal calculations, focus on understanding what uses energy and water.</p>
+
+    <div class="ws-grid">
+
+      <a class="ws-card ready" data-topic="school" href="ws/ws01/" data-pdf="1IS_Worksheet_template_Water_Tap_Flow.pdf">
+        <div class="ws-topic"   data-i18n="worksheets.w01.topic">🏫 School Environment</div>
+        <h3                     data-i18n="worksheets.w01.title">💧 Water — Tap Flow Measurement</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w01.desc">Measure actual tap flow rates in school bathrooms. Compare with automatic sensor taps and calculate water savings.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="is"></span> <span data-i18n="countries.is">Iceland</span></span>
+          <span class="ws-status live" data-langs="is" title="Translated to: Icelandic">● Ready</span>
+        </div>
+      </a>
+
+      <a class="ws-card ready" data-topic="entertainment" href="ws/ws02/" data-pdf="1PT_Worksheet_Standby_vs_OFF.pdf">
+        <div class="ws-topic"   data-i18n="worksheets.w02.topic">🎮 Entertainment & Electronics</div>
+        <h3                     data-i18n="worksheets.w02.title">📺 Standby vs. OFF</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w02.desc">Measure standby power of TVs, consoles and monitors. Calculate the yearly cost of leaving devices plugged in.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="pt"></span> <span data-i18n="countries.pt">Portugal</span></span>
+          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
+        </div>
+      </a>
+
+      <a class="ws-card ready" data-topic="cleaning" href="ws/ws03/" data-pdf="2HR_Energy_and_Water_Efficiency_of_Dishwashers.pdf">
+        <div class="ws-topic"   data-i18n="worksheets.w03.topic">🧹 Cleaning & Household</div>
+        <h3                     data-i18n="worksheets.w03.title">🍽 Dishwasher Efficiency</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w03.desc">Compare intensive, auto and eco programmes. Calculate annual energy, water and carbon impact of running a dishwasher.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="hr"></span> <span data-i18n="countries.hr">Croatia</span></span>
+          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
+        </div>
+      </a>
+
+      <a class="ws-card ready" data-topic="kitchen" href="ws/ws04/" data-pdf="TR-WORKSHEET-Kitchen-2.pdf">
+        <div class="ws-topic"   data-i18n="worksheets.w04.topic">🍳 The Kitchen</div>
+        <h3                     data-i18n="worksheets.w04.title">🔌 Kitchen Appliances</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w04.desc">Conservation of energy in ovens, refrigerators and dishwashers. Includes formulas, worked examples and a 15-question quiz.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="tr"></span> <span data-i18n="countries.tr">Türkiye</span></span>
+          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
+        </div>
+      </a>
+
+      <a class="ws-card ready" data-topic="lighting" href="ws/ws05/" data-pdf="NL1_Worksheet_1A_BASIC_Comparing_bulb_types.pdf">
+        <div class="ws-topic"   data-i18n="worksheets.w05.topic">💡 Lighting</div>
+        <h3                     data-i18n="worksheets.w05.title">💡 What is inside a light bulb?</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w05.desc">Compare the four common bulb types — incandescent, halogen, CFL and LED — by wattage, lifetime and cost. Includes matching exercise.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="nl"></span> <span data-i18n="countries.nl">Netherlands</span></span>
+          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
+        </div>
+      </a>
+
+      <a class="ws-card ready" data-topic="school" href="ws/ws07/" data-pdf="2IS_Worksheet_template_School_Restroom_Audit.pdf">
+        <div class="ws-topic"   data-i18n="worksheets.w07.topic">🏫 School Environment</div>
+        <h3                     data-i18n="worksheets.w07.title">🚻 School Restroom Audit</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w07.desc">Audit lighting and water use in a school restroom. Calculate kWh and litre savings for motion-sensor lights and dual-flush toilets across a school year.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="is"></span> <span data-i18n="countries.is">Iceland</span></span>
+          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
+        </div>
+      </a>
+
+      <a class="ws-card ready" data-topic="school" href="ws/ws08/" data-pdf="2IS_Worksheet_Energy_Efficiency_School_Computer_Lab.pdf">
+        <div class="ws-topic"   data-i18n="worksheets.w08.topic">🏫 School Environment</div>
+        <h3                     data-i18n="worksheets.w08.title">🖥 Computer Lab Energy Audit</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w08.desc">Audit a school computer lab. Calculate active vs. standby energy use, identify "vampire power" waste, and propose technical, behavioural and policy improvements.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="is"></span> <span data-i18n="countries.is">Iceland</span></span>
+          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
+        </div>
+      </a>
+
+      <a class="ws-card ready" data-topic="kitchen" href="ws/ws13/" data-pdf="TR-WORKSHEET-Kitchen-1.pdf">
+        <div class="ws-topic"   data-i18n="worksheets.w09.topic">🍳 The Kitchen</div>
+        <h3                     data-i18n="worksheets.w09.title">☕ Kettle, Toaster &amp; Microwave</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w09.desc">Three classic kitchen heaters: how each one converts electrical energy into heat, energy use per cycle, cost calculations, and a 15-question multiple-choice quiz with answer key.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="tr"></span> <span data-i18n="countries.tr">Türkiye</span></span>
+          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
+        </div>
+      </a>
+
+      <a class="ws-card ready" data-topic="entertainment" href="ws/ws15/" data-pdf="2PT_03_Worksheet_-_Desktop_vs__Laptop.pdf">
+        <div class="ws-topic"   data-i18n="worksheets.w13.topic">💻 Entertainment &amp; Electronics</div>
+        <h3                     data-i18n="worksheets.w13.title">🖥 Desktop vs. Laptop</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w13.desc">Look up the power rating of a desktop and a laptop, calculate annual kWh and cost at 6 h/day, and estimate how much a school could save by replacing 20 desktops with laptops.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="pt"></span> <span data-i18n="countries.pt">Portugal</span></span>
+          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
+        </div>
+      </a>
+
+      <a class="ws-card ready" data-topic="kitchen" href="ws/ws14/" data-pdf="TR-WORKSHEET-Kitchen-3.pdf">
+        <div class="ws-topic"   data-i18n="worksheets.w14.topic">🍳 The Kitchen</div>
+        <h3                     data-i18n="worksheets.w14.title">🥤 Blender, Coffee Maker &amp; LED</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w14.desc">Compare three different energy conversions in one worksheet: motor (blender), heating (coffee maker) and lighting (LED). Includes worked examples, 5 W vs. 10 W comparison, and a 15-question quiz with answer key.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="tr"></span> <span data-i18n="countries.tr">Türkiye</span></span>
+          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
+        </div>
+      </a>
+
+      <a class="ws-card ready" data-topic="lighting" href="ws/ws16/" data-pdf="NL1_Worksheet_4A_BASIC_Smart_lighting__1_.pdf">
+        <div class="ws-topic"   data-i18n="worksheets.w17.topic">💡 Lighting</div>
+        <h3                     data-i18n="worksheets.w17.title">🌅 Smart Lighting — Sensors that switch lights for you</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w17.desc">Identify motion and daylight sensors and the rooms where each one saves the most energy. Reason about a school storage-room scenario and estimate the % saving.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="nl"></span> <span data-i18n="countries.nl">Netherlands</span></span>
+          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
+        </div>
+      </a>
+
+      <div class="ws-card placeholder" data-topic="lighting">
+        <div class="ws-topic"   data-i18n="worksheets.w06.topic">💡 Lighting</div>
+
+    </div>
+  </section>
+
+  <!-- ===== MEDIUM ===== -->
+  <section class="level-section">
+    <div class="level-header">
+      <span class="level-badge medium" data-i18n="levels.medium.label">Medium</span>
+      <h2 data-i18n="levels.medium.title">Calculate & Compare</h2>
+    </div>
+    <p class="level-desc" data-i18n="levels.medium.desc">Apply formulas to real data. Students use measurements to calculate costs, savings, and payback periods. Combine data from multiple sources.</p>
+
+    <div class="ws-grid">
+
+      <a class="ws-card ready" data-topic="cleaning" href="ws/ws11/" data-pdf="3HR_Washing_Machines___Dryers.pdf">
+        <div class="ws-topic"   data-i18n="worksheets.w10.topic">🧹 Cleaning &amp; Household</div>
+        <h3                     data-i18n="worksheets.w10.title">👕 Washing Machines &amp; Dryers</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w10.desc">Compare eco vs. hot washing programmes and vented/condenser/heat-pump dryers. Calculate annual energy, water and CO₂ savings, plus 10-year total cost.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="hr"></span> <span data-i18n="countries.hr">Croatia</span></span>
+          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
+        </div>
+      </a>
+
+      <a class="ws-card ready" data-topic="entertainment" href="ws/ws10/" data-pdf="3HR_Energy_Efficiency_of_Personal_Care_Appliances.pdf">
+        <div class="ws-topic"   data-i18n="worksheets.w11.topic">💇 Personal Care</div>
+        <h3                     data-i18n="worksheets.w11.title">💨 Hair Dryer Energy Audit</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w11.desc">Compare high/low/cool settings and ionic technology. Calculate annual cost and CO₂ across 300 sessions/year, plus a hair-salon scenario. Includes electrical engineering bonus tasks.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="hr"></span> <span data-i18n="countries.hr">Croatia</span></span>
+          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
+        </div>
+      </a>
+
+      <a class="ws-card ready" data-topic="lighting" href="ws/ws17/" data-pdf="NL2_Worksheet_4B_MEDIUM_Smart_lighting.pdf">
+        <div class="ws-topic"   data-i18n="worksheets.w18.topic">💡 Lighting</div>
+        <h3                     data-i18n="worksheets.w18.title">📈 Smart Lighting — Sensors, dimming and energy savings</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w18.desc">Quantify motion-sensor and daylight-dimming savings across three spaces (toilet, storage, classroom). Calculate annual kWh, € and payback period at €0.25/kWh.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="nl"></span> <span data-i18n="countries.nl">Netherlands</span></span>
+          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ===== ADVANCED ===== -->
+  <section class="level-section">
+    <div class="level-header">
+      <span class="level-badge advanced" data-i18n="levels.advanced.label">Advanced</span>
+      <h2 data-i18n="levels.advanced.title">Analyze & Recommend</h2>
+    </div>
+    <p class="level-desc" data-i18n="levels.advanced.desc">Synthesize findings into recommendations. Students analyze trade-offs, create cost-benefit analyses, and produce reports or videos with actionable proposals.</p>
+
+    <div class="ws-grid">
+
+      <a class="ws-card ready" data-topic="school" href="ws/ws09/" data-pdf="2IS_Worksheet_Solar_Energy_Potential_Audit.pdf">
+        <div class="ws-topic"   data-i18n="worksheets.w12.topic">🏫 School Environment</div>
+        <h3                     data-i18n="worksheets.w12.title">☀ Solar Potential of our School</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w12.desc">Use PVGIS to model how much solar energy your school roof could produce. Calculate yearly kWh, financial value, EV km equivalent, and propose technical and policy improvements.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="is"></span> <span data-i18n="countries.is">Iceland</span></span>
+          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
+        </div>
+      </a>
+
+      <a class="ws-card ready" data-topic="cleaning" href="ws/ws12/" data-pdf="2HR_Floor_Care___Traditional_Vacuum_vs__Robot_Vacuum.pdf">
+        <div class="ws-topic"   data-i18n="worksheets.w15.topic">🧹 Cleaning &amp; Household</div>
+        <h3                     data-i18n="worksheets.w15.title">🤖 Vacuum vs. Robot Vacuum</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w15.desc">Lifecycle cost analysis: traditional vs. cordless vs. robot. Examines "vampire power" standby, carbon price of convenience, and apartment-vs-house recommendations. Includes electrical engineering bonus tasks.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="hr"></span> <span data-i18n="countries.hr">Croatia</span></span>
+          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
+        </div>
+      </a>
+
+      <a class="ws-card ready" data-topic="lighting" href="ws/ws06/" data-pdf="NL3_Worksheet_1C_ADVANCED_Comparing_bulb_types.pdf">
+        <div class="ws-topic"   data-i18n="worksheets.w16.topic">💡 Lighting</div>
+        <h3                     data-i18n="worksheets.w16.title">📊 Total Cost of Ownership</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w16.desc">Build a mathematical TCO model for bulb selection. Includes break-even analysis, sensitivity to electricity tariff, and lifecycle CO₂ emissions.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="nl"></span> <span data-i18n="countries.nl">Netherlands</span></span>
+          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
+        </div>
+      </a>
+
+      <a class="ws-card ready" data-topic="lighting" href="ws/ws18/" data-pdf="NL3_Worksheet_4C_ADVANCED_Smart_lighting.pdf">
+        <div class="ws-topic"   data-i18n="worksheets.w19.topic">💡 Lighting</div>
+        <h3                     data-i18n="worksheets.w19.title">🏢 Smart Lighting — Building-wide automation strategy</h3>
+        <p class="ws-desc"      data-i18n="worksheets.w19.desc">Design a multi-zone smart lighting strategy for one floor. Integrate with HVAC and timetable, analyse GDPR/EU AI Act privacy trade-offs, and complete an optional WP3 Arduino extension.</p>
+        <div class="ws-footer">
+          <span class="ws-country"><span class="flag-icon" data-flag="nl"></span> <span data-i18n="countries.nl">Netherlands</span></span>
+          <span class="ws-status live" data-langs="en" title="Translated to: English">● Ready</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTNOTE ===== -->
+  <div class="footnote">
+    <h3 data-i18n="footnote.title">📌 About these worksheets</h3>
+    <p data-i18n="footnote.p1">These worksheets are part of GREEN Erasmus+ (KA220-VET), Work Package 2: Creation of teaching materials on efficient use of energy and water. Five partner schools each lead one topic area, creating materials in all partner languages.</p>
+    <p data-i18n="footnote.p2">Difficulty levels are designed so teachers can choose appropriate worksheets for their students — from hands-on observation (Basic) through calculation exercises (Medium) to full analysis and recommendation projects (Advanced).</p>
+  </div>
+
+</main>
+
+<footer class="page-footer">
+
+  <div class="footer-grid">
+    <div class="footer-eu">
+      <img src="img/eufounded.png" alt="Co-funded by the European Union" class="eu-logo">
+      <p class="eu-disclaimer">
+        Funded by the European Union. Views and opinions expressed are however those of the
+        author(s) only and do not necessarily reflect those of the European Union or the
+        European Education and Culture Executive Agency (EACEA). Neither the European Union
+        nor EACEA can be held responsible for them.
+      </p>
+    </div>
+
+    <div class="footer-meta">
+      <div class="footer-project">
+        <strong>GREEN Erasmus+ · KA220-VET</strong><br>
+        Project № 2025-1-HR01-KA220-VET-000353056
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/oliatla/ErasmusGreen" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" style="vertical-align: -2px; margin-right: 4px;">
+            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.06c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .3.21.67.79.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
+          </svg>Source on GitHub</a>
+        <span class="dot-sep">·</span>
+        <a href="translator-guide.html">Translator guide</a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="js/theme.js"></script>
+<script src="js/i18n.js"></script>
+<script>
+  theme.init();
+  i18n.buildSwitcher(document.getElementById('lang-switcher'));
+  i18n.renderFlags();
+  i18n.init();
+
+  function filterTopic(btn) {
+    const topic = btn.dataset.topic;
+    document.querySelectorAll('.topic-btn').forEach(b => b.classList.toggle('active', b === btn));
+    document.querySelectorAll('.ws-card').forEach(card => {
+      card.style.display = (topic === 'all' || card.dataset.topic === topic) ? '' : 'none';
+    });
+  }
+</script>
+
+</body>
+</html>

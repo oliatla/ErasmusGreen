@@ -90,7 +90,9 @@
       },
       "source": "Source on GitHub",
       "guide": "Translator guide",
-      "older": "Earlier worksheets"
+      "older": "Earlier worksheets (archive)",
+      "phase": "Translation phase until 15 December 2026 — teachers at the partner schools review the worksheets in their own language.",
+      "phaseLink": "Translators: sign in →"
     },
     "edit": {
       "signIn": "Sign in to correct the translation of this worksheet.",
@@ -172,7 +174,15 @@
       "signOut": "Sign out",
       "how": "Open a worksheet, click any text that is wrong, and type the correction. It is saved automatically. When a worksheet is done, press “I have reviewed this worksheet” at the bottom.",
       "error": "Something went wrong:",
-      "deadline": "Translation phase ends 15 December 2026."
+      "deadline": "Translation phase ends 15 December 2026.",
+      "loginTitle": "How to sign in",
+      "loginSteps": [
+        "Write your email address and press the button.",
+        "You get an email from noreply@rafdeild.com (“VMA Rafdeild”) with a sign-in link. The link works once and for one hour.",
+        "Click the link and you are signed in here. The first time, you write your name and choose the language you translate into.",
+        "Next time you do the same — there is no password."
+      ],
+      "schoolMail": "School email addresses often block or delay emails from outside senders. If nothing arrives within a few minutes, look in your junk/spam folder and the quarantine — or use another email address, for example a personal one. Any address works; what matters is the language you choose."
     },
     "download": "⬇ Word",
     "downloadTip": "Download this worksheet as a Word document"
@@ -264,7 +274,9 @@
       },
       "source": "Kóðinn á GitHub",
       "guide": "Leiðbeiningar fyrir þýðendur",
-      "older": "Eldri verkefnablöð"
+      "older": "Eldri verkefnablöð (safn)",
+      "phase": "Þýðingarfasi stendur yfir til 15. desember 2026 — kennarar í samstarfsskólunum fara yfir blöðin á sínu tungumáli.",
+      "phaseLink": "Þýðendur: skrá inn →"
     },
     "edit": {
       "signIn": "Skráðu þig inn til að laga þýðinguna á þessu blaði.",
@@ -346,7 +358,15 @@
       "signOut": "Skrá út",
       "how": "Opnaðu blað, smelltu á texta sem er rangur og skrifaðu leiðréttinguna. Hún vistast sjálfkrafa. Þegar blaðið er búið ýtirðu á „Ég hef farið yfir þetta blað“ neðst.",
       "error": "Eitthvað fór úrskeiðis:",
-      "deadline": "Þýðingarfasanum lýkur 15. desember 2026."
+      "deadline": "Þýðingarfasanum lýkur 15. desember 2026.",
+      "loginTitle": "Svona skráir þú þig inn",
+      "loginSteps": [
+        "Skrifaðu netfangið þitt og ýttu á hnappinn.",
+        "Þú færð tölvupóst frá noreply@rafdeild.com („VMA Rafdeild“) með innskráningarhlekk. Hlekkurinn virkar einu sinni og í eina klukkustund.",
+        "Smelltu á hlekkinn og þá ertu innskráð(ur) hér. Í fyrsta sinn skrifar þú nafnið þitt og velur tungumálið sem þú þýðir á.",
+        "Næst gerir þú það sama — það er ekkert lykilorð."
+      ],
+      "schoolMail": "Skólanetföng hafna oft eða tefja póst frá utanaðkomandi sendendum. Ef ekkert berst innan fárra mínútna skaltu leita í ruslpósti og sóttkví — eða nota annað netfang, til dæmis einkanetfang. Öll netföng virka; það sem skiptir máli er tungumálið sem þú velur."
     },
     "download": "⬇ Word",
     "downloadTip": "Sækja blaðið sem Word-skjal"
@@ -438,7 +458,9 @@
       },
       "source": "Código no GitHub",
       "guide": "Guia para tradutores",
-      "older": "Fichas anteriores"
+      "older": "Fichas anteriores (arquivo)",
+      "phase": "Fase de tradução até 15 de dezembro de 2026 — os professores das escolas parceiras revêem as fichas na sua própria língua.",
+      "phaseLink": "Tradutores: iniciar sessão →"
     },
     "edit": {
       "signIn": "Inicie sessão para corrigir a tradução desta ficha.",
@@ -520,7 +542,15 @@
       "signOut": "Terminar sessão",
       "how": "Abra uma ficha, clique num texto que esteja errado e escreva a correção. É guardada automaticamente. Quando a ficha estiver pronta, carregue em “Revi esta ficha” no fim da página.",
       "error": "Algo correu mal:",
-      "deadline": "A fase de tradução termina a 15 de dezembro de 2026."
+      "deadline": "A fase de tradução termina a 15 de dezembro de 2026.",
+      "loginTitle": "Como iniciar sessão",
+      "loginSteps": [
+        "Escreva o seu endereço de e-mail e carregue no botão.",
+        "Recebe um e-mail de noreply@rafdeild.com («VMA Rafdeild») com uma ligação de acesso. A ligação funciona uma vez e durante uma hora.",
+        "Clique na ligação e fica com a sessão iniciada aqui. Da primeira vez, escreve o seu nome e escolhe a língua para a qual traduz.",
+        "Da próxima vez faz o mesmo — não há palavra-passe."
+      ],
+      "schoolMail": "Os endereços de e-mail das escolas bloqueiam ou atrasam muitas vezes mensagens de remetentes externos. Se nada chegar em poucos minutos, procure na pasta de lixo/spam e na quarentena — ou use outro endereço, por exemplo um pessoal. Qualquer endereço serve; o que importa é a língua que escolhe."
     },
     "download": "⬇ Word",
     "downloadTip": "Descarregar esta ficha como documento Word"
@@ -612,7 +642,9 @@
       },
       "source": "Izvorni kod na GitHubu",
       "guide": "Vodič za prevoditelje",
-      "older": "Raniji radni listovi"
+      "older": "Raniji radni listovi (arhiva)",
+      "phase": "Faza prevođenja do 15. prosinca 2026. — nastavnici partnerskih škola pregledavaju radne listove na svom jeziku.",
+      "phaseLink": "Prevoditelji: prijava →"
     },
     "edit": {
       "signIn": "Prijavite se kako biste ispravili prijevod ovog radnog lista.",
@@ -694,7 +726,15 @@
       "signOut": "Odjava",
       "how": "Otvorite radni list, kliknite na tekst koji je pogrešan i upišite ispravak. Sprema se automatski. Kad završite, pritisnite „Pregledao/la sam ovaj radni list” na dnu.",
       "error": "Nešto nije u redu:",
-      "deadline": "Faza prevođenja završava 15. prosinca 2026."
+      "deadline": "Faza prevođenja završava 15. prosinca 2026.",
+      "loginTitle": "Kako se prijaviti",
+      "loginSteps": [
+        "Upišite svoju adresu e-pošte i pritisnite gumb.",
+        "Dobit ćete e-poruku s adrese noreply@rafdeild.com („VMA Rafdeild”) s poveznicom za prijavu. Poveznica vrijedi jednom i jedan sat.",
+        "Kliknite na poveznicu i prijavljeni ste ovdje. Prvi put upisujete svoje ime i birate jezik na koji prevodite.",
+        "Sljedeći put učinite isto — nema lozinke."
+      ],
+      "schoolMail": "Školske adrese e-pošte često blokiraju ili kasne s porukama vanjskih pošiljatelja. Ako ništa ne stigne za nekoliko minuta, pogledajte u neželjenu poštu i karantenu — ili upotrijebite drugu adresu, primjerice osobnu. Svaka adresa radi; važan je jezik koji odaberete."
     },
     "download": "⬇ Word",
     "downloadTip": "Preuzmi ovaj radni list kao Word dokument"
@@ -786,7 +826,9 @@
       },
       "source": "GitHub’daki kaynak kod",
       "guide": "Çevirmen kılavuzu",
-      "older": "Önceki çalışma yaprakları"
+      "older": "Önceki çalışma yaprakları (arşiv)",
+      "phase": "Çeviri aşaması 15 Aralık 2026’ya kadar sürüyor — ortak okullardaki öğretmenler çalışma yapraklarını kendi dillerinde kontrol ediyor.",
+      "phaseLink": "Çevirmenler: oturum aç →"
     },
     "edit": {
       "signIn": "Bu çalışma yaprağının çevirisini düzeltmek için oturum açın.",
@@ -868,7 +910,15 @@
       "signOut": "Oturumu kapat",
       "how": "Bir çalışma yaprağı açın, yanlış olan metne tıklayın ve düzeltmeyi yazın. Otomatik olarak kaydedilir. Yaprak bittiğinde en alttaki “Bu çalışma yaprağını kontrol ettim” düğmesine basın.",
       "error": "Bir şeyler ters gitti:",
-      "deadline": "Çeviri aşaması 15 Aralık 2026’da sona erer."
+      "deadline": "Çeviri aşaması 15 Aralık 2026’da sona erer.",
+      "loginTitle": "Nasıl oturum açılır",
+      "loginSteps": [
+        "E-posta adresinizi yazın ve düğmeye basın.",
+        "noreply@rafdeild.com adresinden (“VMA Rafdeild”) giriş bağlantısı içeren bir e-posta alırsınız. Bağlantı bir kez ve bir saat boyunca çalışır.",
+        "Bağlantıya tıklayın; burada oturumunuz açılır. İlk seferde adınızı yazar ve çeviri yaptığınız dili seçersiniz.",
+        "Bir sonraki sefer aynısını yapın — şifre yoktur."
+      ],
+      "schoolMail": "Okul e-posta adresleri dış göndericilerden gelen e-postaları sık sık engeller veya geciktirir. Birkaç dakika içinde bir şey gelmezse önemsiz/spam klasörüne ve karantinaya bakın ya da başka bir adres, örneğin kişisel adresinizi kullanın. Her adres çalışır; önemli olan seçtiğiniz dildir."
     },
     "download": "⬇ Word",
     "downloadTip": "Bu çalışma yaprağını Word belgesi olarak indir"
@@ -960,7 +1010,9 @@
       },
       "source": "Broncode op GitHub",
       "guide": "Handleiding voor vertalers",
-      "older": "Eerdere werkbladen"
+      "older": "Eerdere werkbladen (archief)",
+      "phase": "Vertaalfase tot 15 december 2026 — docenten van de partnerscholen kijken de werkbladen na in hun eigen taal.",
+      "phaseLink": "Vertalers: inloggen →"
     },
     "edit": {
       "signIn": "Log in om de vertaling van dit werkblad te verbeteren.",
@@ -1042,7 +1094,15 @@
       "signOut": "Uitloggen",
       "how": "Open een werkblad, klik op een tekst die fout is en typ de verbetering. Die wordt automatisch opgeslagen. Is het werkblad klaar, druk dan onderaan op „Ik heb dit werkblad nagekeken”.",
       "error": "Er ging iets mis:",
-      "deadline": "De vertaalfase eindigt op 15 december 2026."
+      "deadline": "De vertaalfase eindigt op 15 december 2026.",
+      "loginTitle": "Zo log je in",
+      "loginSteps": [
+        "Vul je e-mailadres in en druk op de knop.",
+        "Je krijgt een e-mail van noreply@rafdeild.com („VMA Rafdeild”) met een inloglink. De link werkt één keer en één uur lang.",
+        "Klik op de link en je bent hier ingelogd. De eerste keer vul je je naam in en kies je de taal waarin je vertaalt.",
+        "De volgende keer doe je hetzelfde — er is geen wachtwoord."
+      ],
+      "schoolMail": "E-mailadressen van scholen blokkeren of vertragen vaak e-mails van externe afzenders. Komt er binnen een paar minuten niets binnen, kijk dan in je spam-/ongewenste map en in de quarantaine — of gebruik een ander adres, bijvoorbeeld een persoonlijk. Elk adres werkt; het gaat om de taal die je kiest."
     },
     "download": "⬇ Word",
     "downloadTip": "Dit werkblad downloaden als Word-document"
