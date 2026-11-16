@@ -272,7 +272,21 @@
       "respTitle": "Responsible for the content",
       "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, electrical department) is responsible for the content published on this website and for the way AI is used in this work. Every worksheet remains the work of its authors at the partner schools."
     },
-    "license": "Content licensed under CC BY 4.0 — The GREEN Partnership"
+    "license": "Content licensed under CC BY 4.0 — The GREEN Partnership",
+    "status": {
+      "navLabel": "Translation status",
+      "title": "How far is the translation?",
+      "lede": "Every worksheet in every language. Updated live as teachers review their language.",
+      "reviewed": "Reviewed by a teacher",
+      "progress": "Being corrected",
+      "machine": "Machine translation, not reviewed yet",
+      "original": "Original language of the worksheet",
+      "worksheet": "Worksheet",
+      "translators": "translators",
+      "corrections": "{n} corrections",
+      "updated": "Updated",
+      "total": "reviewed"
+    }
   },
   "is": {
     "back": "← Til baka",
@@ -543,7 +557,21 @@
       "respTitle": "Ábyrgð á efninu",
       "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, rafdeild) ber ábyrgð á efninu sem birt er á þessum vef og á því hvernig gervigreind er notuð í þessari vinnu. Hvert verkefnablað er áfram verk höfunda sinna í samstarfsskólunum."
     },
-    "license": "Efnið er með leyfinu CC BY 4.0 — The GREEN Partnership"
+    "license": "Efnið er með leyfinu CC BY 4.0 — The GREEN Partnership",
+    "status": {
+      "navLabel": "Staða þýðinga",
+      "title": "Hvernig gengur að þýða?",
+      "lede": "Öll verkefnablöð á öllum tungumálum. Uppfærist um leið og kennarar fara yfir sitt tungumál.",
+      "reviewed": "Kennari hefur farið yfir",
+      "progress": "Verið að laga",
+      "machine": "Vélþýðing, ekki yfirfarin enn",
+      "original": "Upprunalegt tungumál blaðsins",
+      "worksheet": "Verkefnablað",
+      "translators": "þýðendur",
+      "corrections": "{n} leiðréttingar",
+      "updated": "Uppfært",
+      "total": "yfirfarin"
+    }
   },
   "pt": {
     "back": "← Voltar",
@@ -814,7 +842,21 @@
       "respTitle": "Responsável pelo conteúdo",
       "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, departamento de eletricidade) é responsável pelo conteúdo publicado neste site e pela forma como a IA é usada neste trabalho. Cada ficha continua a ser obra dos seus autores nas escolas parceiras."
     },
-    "license": "Conteúdo sob a licença CC BY 4.0 — The GREEN Partnership"
+    "license": "Conteúdo sob a licença CC BY 4.0 — The GREEN Partnership",
+    "status": {
+      "navLabel": "Estado das traduções",
+      "title": "Em que ponto está a tradução?",
+      "lede": "Todas as fichas em todas as línguas. Atualizado em direto à medida que os professores revêem a sua língua.",
+      "reviewed": "Revista por um professor",
+      "progress": "Em correção",
+      "machine": "Tradução automática, ainda não revista",
+      "original": "Língua original da ficha",
+      "worksheet": "Ficha",
+      "translators": "tradutores",
+      "corrections": "{n} correções",
+      "updated": "Atualizado",
+      "total": "revistas"
+    }
   },
   "hr": {
     "back": "← Natrag",
@@ -1085,7 +1127,21 @@
       "respTitle": "Odgovornost za sadržaj",
       "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, elektrotehnički odjel) odgovoran je za sadržaj objavljen na ovoj web-stranici i za način na koji se umjetna inteligencija koristi u ovom radu. Svaki radni list ostaje djelo svojih autora u partnerskim školama."
     },
-    "license": "Sadržaj je pod licencijom CC BY 4.0 — The GREEN Partnership"
+    "license": "Sadržaj je pod licencijom CC BY 4.0 — The GREEN Partnership",
+    "status": {
+      "navLabel": "Stanje prijevoda",
+      "title": "Dokle je stigao prijevod?",
+      "lede": "Svi radni listovi na svim jezicima. Ažurira se uživo dok nastavnici pregledavaju svoj jezik.",
+      "reviewed": "Pregledao nastavnik",
+      "progress": "U ispravljanju",
+      "machine": "Strojni prijevod, još nije pregledan",
+      "original": "Izvorni jezik radnog lista",
+      "worksheet": "Radni list",
+      "translators": "prevoditelja",
+      "corrections": "{n} ispravaka",
+      "updated": "Ažurirano",
+      "total": "pregledano"
+    }
   },
   "tr": {
     "back": "← Geri",
@@ -1356,7 +1412,21 @@
       "respTitle": "İçerikten sorumlu kişi",
       "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, elektrik bölümü), bu web sitesinde yayımlanan içerikten ve bu çalışmada yapay zekânın nasıl kullanıldığından sorumludur. Her çalışma yaprağı, ortak okullardaki yazarlarının eseri olmaya devam eder."
     },
-    "license": "İçerik CC BY 4.0 lisansı altındadır — The GREEN Partnership"
+    "license": "İçerik CC BY 4.0 lisansı altındadır — The GREEN Partnership",
+    "status": {
+      "navLabel": "Çeviri durumu",
+      "title": "Çeviri ne durumda?",
+      "lede": "Tüm dillerde tüm çalışma yaprakları. Öğretmenler kendi dillerini kontrol ettikçe canlı olarak güncellenir.",
+      "reviewed": "Bir öğretmen tarafından kontrol edildi",
+      "progress": "Düzeltiliyor",
+      "machine": "Makine çevirisi, henüz kontrol edilmedi",
+      "original": "Çalışma yaprağının özgün dili",
+      "worksheet": "Çalışma yaprağı",
+      "translators": "çevirmen",
+      "corrections": "{n} düzeltme",
+      "updated": "Güncellendi",
+      "total": "kontrol edildi"
+    }
   },
   "nl": {
     "back": "← Terug",
@@ -1627,6 +1697,20 @@
       "respTitle": "Verantwoordelijk voor de inhoud",
       "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, afdeling elektrotechniek) is verantwoordelijk voor de inhoud die op deze website wordt gepubliceerd en voor de manier waarop AI in dit werk wordt gebruikt. Elk werkblad blijft het werk van de auteurs op de partnerscholen."
     },
-    "license": "Inhoud onder licentie CC BY 4.0 — The GREEN Partnership"
+    "license": "Inhoud onder licentie CC BY 4.0 — The GREEN Partnership",
+    "status": {
+      "navLabel": "Status vertalingen",
+      "title": "Hoe ver is de vertaling?",
+      "lede": "Elk werkblad in elke taal. Wordt live bijgewerkt terwijl docenten hun taal nakijken.",
+      "reviewed": "Nagekeken door een docent",
+      "progress": "Wordt verbeterd",
+      "machine": "Machinevertaling, nog niet nagekeken",
+      "original": "Oorspronkelijke taal van het werkblad",
+      "worksheet": "Werkblad",
+      "translators": "vertalers",
+      "corrections": "{n} verbeteringen",
+      "updated": "Bijgewerkt",
+      "total": "nagekeken"
+    }
   }
 }

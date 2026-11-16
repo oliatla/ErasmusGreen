@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Translation status — GREEN</title>
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<meta name="theme-color" content="#059669">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .legend { display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; justify-content: center; margin-bottom: 1.4rem; font-size: .88rem; color: var(--text-sec); }
+  .legend span { white-space: nowrap; }
+  .wrap { overflow-x: auto; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r); box-shadow: var(--shadow); }
+  table.status { width: 100%; border-collapse: collapse; font-size: .88rem; }
+  table.status th, table.status td { padding: .5rem .6rem; border-top: 1px solid var(--border); }
+  table.status thead th { border-top: 0; background: var(--bg-subtle); text-align: center; vertical-align: bottom; }
+  table.status thead th:first-child { text-align: left; }
+  table.status th img, table.status td img { width: 20px; height: 14px; border-radius: 2px; vertical-align: -2px; }
+  table.status td:first-child img { margin-right: .45rem; }
+  table.status td.icon { text-align: center; font-size: 1.2rem; line-height: 1; cursor: default; }
+  table.status tbody tr:hover { background: var(--bg-subtle); }
+  .sum { display: block; font-size: .72rem; font-weight: 600; color: var(--text-muted); margin-top: .25rem; white-space: nowrap; }
+  .sum b { color: var(--green); }
+  .bar { height: 5px; background: var(--border); border-radius: 99px; margin-top: .3rem; overflow: hidden; }
+  .bar i { display: block; height: 100%; background: var(--green); }
+  .updated { text-align: center; color: var(--text-muted); font-size: .78rem; margin-top: .8rem; }
+  td a { color: inherit; text-decoration: none; }
+  td a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <a href="../index.html" class="brand-mark" aria-label="GREEN">
+    <img src="../img/greenlogo.png" alt="" class="brand-logo">
+    <span class="brand-text"><strong>GREEN</strong><span class="brand-sub">Erasmus+ KA220-VET</span></span>
+  </a>
+  <div class="top-bar-actions">
+    <div class="lang-switcher" id="lang-switcher"></div>
+    <a href="./" class="icon-btn" id="home-link">Translations</a>
+    <button class="theme-toggle" id="theme-btn" onclick="theme.toggle()" aria-label="Toggle theme">🌙</button>
+  </div>
+</div>
+
+<header class="page-header">
+  <div class="header-inner hero">
+    <span class="badge">GREEN Erasmus+ · translation phase</span>
+    <h1 id="title">How far is the translation?</h1>
+    <p id="lede"></p>
+  </div>
+</header>
+
+<main class="main">
+  <div class="legend" id="legend"></div>
+  <div class="wrap"><table class="status" id="table"></table></div>
+  <p class="updated" id="updated"></p>
+</main>
+
+<script src="../js/theme.js"></script>
+<script src="../js/supabase-config.js"></script>
+<script>
+/* Public: only counts from translation_status() / translator_counts() — no names, no emails */
+(async function () {
+  const LANGS = ['en', 'is', 'pt', 'hr', 'tr', 'nl'];
+  const TARGETS = ['is', 'pt', 'hr', 'tr', 'nl'];
+  const ICON = { reviewed: '✅', progress: '✏️', machine: '🤖' };
+  const STORAGE_KEY = 'green-ws-lang';
+  const params = new URLSearchParams(location.search);
+  let lang = (() => { try { return params.get('lang') || localStorage.getItem(STORAGE_KEY) || 'en'; } catch (_) { return 'en'; } })();
+  if (!LANGS.includes(lang)) lang = 'en';
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  theme.init && theme.init();
+
+  const [uiAll, index] = await Promise.all([
+    fetch('../lang/worksheet-ui.json', { cache: 'no-cache' }).then(r => r.json()),
+    fetch('../ws/worksheets.json', { cache: 'no-cache' }).then(r => r.json())
+  ]);
+  const ui = path => {
+    for (const c of [lang, 'en']) {
+      const v = path.split('.').reduce((o, k) => (o == null ? undefined : o[k]), uiAll[c]);
+      if (v != null) return v;
+    }
+    return path;
+  };
+  const sheets = index.worksheets;
+  let status = [], counts = [], when = null;
+
+  async function load() {
+    try {
+      const sb = await window.greenSupabase();
+      const [a, b] = await Promise.all([sb.rpc('translation_status'), sb.rpc('translator_counts')]);
+      if (a.error) throw a.error;
+      status = a.data || [];
+      counts = b.data || [];
+      when = new Date();
+    } catch (e) {
+      $('updated').textContent = `⚠ ${e.message || e}`;
+    }
+    render();
+  }
+
+  function render() {
+    document.documentElement.lang = lang;
+    document.title = `${ui('status.navLabel')} — GREEN`;
+    $('title').textContent = ui('status.title');
+    $('lede').textContent = ui('status.lede');
+    $('home-link').textContent = ui('trans.title');
+    $('legend').innerHTML =
+      `<span>${ICON.reviewed} ${esc(ui('status.reviewed'))}</span>` +
+      `<span>${ICON.progress} ${esc(ui('status.progress'))}</span>` +
+      `<span>${ICON.machine} ${esc(ui('status.machine'))}</span>`;
+    document.querySelectorAll('.lang-flag').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === lang));
+
+    const cell = (slug, l) => status.find(s => s.worksheet === slug && s.lang === l);
+    const head = TARGETS.map(l => {
+      const done = sheets.filter(w => (cell(w.slug, l) || {}).reviewed).length;
+      const people = (counts.find(c => c.lang === l) || {}).translators || 0;
+      return `<th><img src="../img/flags/${l}.svg" alt=""> ${l.toUpperCase()}
+        <span class="sum">${ICON.reviewed} <b>${done}</b>/${sheets.length} · 👥 ${people}</span>
+        <div class="bar"><i style="width:${Math.round(100 * done / sheets.length)}%"></i></div></th>`;
+    }).join('');
+    const rows = sheets.map(w => {
+      const title = w.title[lang] || w.title.en || w.slug;
+      return `<tr><td>${w.country ? `<img src="../img/flags/${w.country}.svg" alt="">` : ''}<a href="../ws/${w.slug}/?lang=${lang}">${esc(title)}</a></td>` +
+        TARGETS.map(l => {
+          const c = cell(w.slug, l);
+          const kind = c && c.reviewed ? 'reviewed' : (c && c.corrections > 0 ? 'progress' : 'machine');
+          const tip = [ui('status.' + kind), c && c.corrections ? ui('status.corrections').replace('{n}', c.corrections) : '']
+            .filter(Boolean).join(' · ');
+          return `<td class="icon" title="${esc(tip)}" aria-label="${esc(tip)}">${ICON[kind]}</td>`;
+        }).join('') + '</tr>';
+    }).join('');
+    $('table').innerHTML = `<thead><tr><th>${esc(ui('status.worksheet'))}</th>${head}</tr></thead><tbody>${rows}</tbody>`;
+    if (when) $('updated').textContent = `${ui('status.updated')} ${when.toLocaleTimeString(lang, { hour: '2-digit', minute: '2-digit' })}`;
+  }
+
+  $('lang-switcher').innerHTML = LANGS.map(c =>
+    `<button class="lang-flag" data-lang="${c}" title="${c.toUpperCase()}"><img src="../img/flags/${c}.svg" alt="${c}"></button>`).join('');
+  document.addEventListener('click', e => {
+    const f = e.target.closest('.lang-flag');
+    if (!f) return;
+    lang = f.dataset.lang;
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (_) {}
+    render();
+  });
+
+  render();
+  await load();
+  setInterval(load, 60000);                          // a minute is live enough for a status page
+})();
+</script>
+</body>
+</html>

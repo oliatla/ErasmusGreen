@@ -117,7 +117,7 @@
 </header>
 
 <!-- translation phase: remove this block (and its two lines in render) when the phase ends -->
-<div class="phase-banner" id="phase"><span id="phase-text"></span> <a href="translations/" id="phase-link"></a></div>
+<div class="phase-banner" id="phase"><span id="phase-text"></span> <a href="translations/" id="phase-link"></a> · <a href="translations/status.html" id="status-link"></a></div>
 
 <main class="main">
 
@@ -309,6 +309,7 @@
     $('about-foot').textContent = ui('about.navLabel');
     $('phase-text').textContent = ui('index.phase');
     $('phase-link').textContent = ui('index.phaseLink');
+    $('status-link').textContent = '📊 ' + ui('status.navLabel');
     for (const p of ['title', 'p1', 'p2', 'p3']) $('about-' + p).textContent = ui('index.about.' + p);
     $('disclaimer').textContent = ui('disclaimer');
     $('project').textContent = ui('projectLine');
