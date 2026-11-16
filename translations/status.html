@@ -132,7 +132,7 @@
         }).join('') + '</tr>';
     }).join('');
     $('table').innerHTML = `<thead><tr><th>${esc(ui('status.worksheet'))}</th>${head}</tr></thead><tbody>${rows}</tbody>`;
-    if (when) $('updated').textContent = `${ui('status.updated')} ${when.toLocaleTimeString(lang, { hour: '2-digit', minute: '2-digit' })}`;
+    if (when) $('updated').textContent = `${ui('status.updated')} ${when.toLocaleTimeString(lang, { hour: '2-digit', minute: '2-digit', hour12: false })}`;
   }
 
   $('lang-switcher').innerHTML = LANGS.map(c =>
