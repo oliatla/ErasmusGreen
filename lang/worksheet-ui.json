@@ -185,7 +185,56 @@
       "schoolMail": "School email addresses often block or delay emails from outside senders. If nothing arrives within a few minutes, look in your junk/spam folder and the quarantine — or use another email address, for example a personal one. Any address works; what matters is the language you choose."
     },
     "download": "⬇ Word",
-    "downloadTip": "Download this worksheet as a Word document"
+    "downloadTip": "Download this worksheet as a Word document",
+    "about": {
+      "navLabel": "How it works",
+      "title": "How the GREEN worksheets are made",
+      "lede": "Five schools write worksheets in Word. Everything after that — the web pages, the translations and the Word documents in every language — is generated from those files, so nothing is typed twice.",
+      "steps": [
+        [
+          "Written in Word",
+          "Each partner school writes its worksheets in Word, with Basic, Medium and Advanced tasks in one document."
+        ],
+        [
+          "Read automatically",
+          "A reader goes through the Word file and recognises its structure: levels, tasks, questions and answer lines, tables, boxes, formulas, images and videos."
+        ],
+        [
+          "Published on the web",
+          "Each worksheet becomes a web page laid out on A4 pages: choose a level, a language or black-and-white printing. Videos become QR codes on paper."
+        ],
+        [
+          "Translated by AI",
+          "Every text is machine-translated into the partner languages with a shared list of terms, so the same word is always translated the same way."
+        ],
+        [
+          "Reviewed by teachers",
+          "Teachers in each country sign in, click any text that is wrong and correct it. Changes are saved at once, with a full history."
+        ],
+        [
+          "Back to Word",
+          "From the reviewed texts, a Word document is produced for every worksheet in every language — ready to print or to edit."
+        ]
+      ],
+      "wordTitle": "The Word documents",
+      "wordLede": "Every worksheet can be downloaded as a Word document in each language with the “⬇ Word” button. The documents are generated, not copied by hand:",
+      "wordItems": [
+        "GREEN and EU logos in the header and the EU funding disclaimer in the footer of every page, with page numbers.",
+        "Each level starts on a new page; boxes, tables and key terms keep their layout.",
+        "Questions are numbered and followed by answer lines for the students.",
+        "Formulas are real Word equations, not pictures — they can be edited.",
+        "Everything is ordinary Word text and styles, so teachers can adapt the document freely.",
+        "Each paragraph carries an invisible marker, so corrections made in Word could later be read back into the website."
+      ],
+      "wordTry": "Download an example (English)",
+      "whyTitle": "Why it is built this way",
+      "whyItems": [
+        "One source: a correction is made once and appears on the web, on paper and in Word.",
+        "Everyone works in a tool they already know — Word for authors, a web page for reviewers. Nobody has to learn AI tools.",
+        "Translations survive changes: when an author edits one sentence, only that sentence has to be translated again."
+      ],
+      "techTitle": "For developers"
+    }
   },
   "is": {
     "back": "← Til baka",
@@ -369,7 +418,56 @@
       "schoolMail": "Skólanetföng hafna oft eða tefja póst frá utanaðkomandi sendendum. Ef ekkert berst innan fárra mínútna skaltu leita í ruslpósti og sóttkví — eða nota annað netfang, til dæmis einkanetfang. Öll netföng virka; það sem skiptir máli er tungumálið sem þú velur."
     },
     "download": "⬇ Word",
-    "downloadTip": "Sækja blaðið sem Word-skjal"
+    "downloadTip": "Sækja blaðið sem Word-skjal",
+    "about": {
+      "navLabel": "Um verkefnið",
+      "title": "Svona verða GREEN verkefnablöðin til",
+      "lede": "Fimm skólar skrifa verkefnablöð í Word. Allt sem kemur á eftir — vefsíðurnar, þýðingarnar og Word-skjölin á öllum tungumálum — er búið til úr þeim skrám, svo ekkert er skrifað tvisvar.",
+      "steps": [
+        [
+          "Skrifað í Word",
+          "Hver samstarfsskóli skrifar sín verkefnablöð í Word, með grunn-, mið- og framhaldsstigi í einu skjali."
+        ],
+        [
+          "Lesið sjálfkrafa",
+          "Lesari fer yfir Word-skjalið og þekkir uppbyggingu þess: stig, verkefni, spurningar og svarlínur, töflur, ramma, formúlur, myndir og myndbönd."
+        ],
+        [
+          "Birt á vefnum",
+          "Hvert blað verður að vefsíðu sem raðast á A4-síður: veldu stig, tungumál eða svarthvíta prentun. Myndbönd verða að QR-kóðum á pappír."
+        ],
+        [
+          "Þýtt með gervigreind",
+          "Hver texti er vélþýddur á tungumál samstarfslandanna með sameiginlegum hugtakalista, svo sama orðið er alltaf þýtt eins."
+        ],
+        [
+          "Yfirfarið af kennurum",
+          "Kennarar í hverju landi skrá sig inn, smella á texta sem er rangur og laga hann. Breytingar vistast strax, með allri sögunni."
+        ],
+        [
+          "Aftur í Word",
+          "Úr yfirförnu textunum verður til Word-skjal fyrir hvert blað á hverju tungumáli — tilbúið til prentunar eða breytinga."
+        ]
+      ],
+      "wordTitle": "Word-skjölin",
+      "wordLede": "Hvert blað má sækja sem Word-skjal á hverju tungumáli með hnappinum „⬇ Word“. Skjölin eru búin til sjálfkrafa, ekki afrituð í höndunum:",
+      "wordItems": [
+        "GREEN- og ESB-merki í haus og fyrirvari ESB um styrkinn í fæti á hverri síðu, ásamt síðutali.",
+        "Hvert stig byrjar á nýrri síðu; rammar, töflur og lykilhugtök halda útliti sínu.",
+        "Spurningar eru tölusettar og með svarlínum fyrir nemendur.",
+        "Formúlur eru raunverulegar Word-jöfnur, ekki myndir — það má breyta þeim.",
+        "Allt er venjulegur Word-texti og stílar, svo kennarar geta aðlagað skjalið að vild.",
+        "Hver málsgrein ber ósýnilegt merki, svo hægt væri síðar að lesa leiðréttingar úr Word aftur inn á vefinn."
+      ],
+      "wordTry": "Sækja dæmi (á ensku)",
+      "whyTitle": "Hvers vegna svona",
+      "whyItems": [
+        "Ein uppspretta: leiðrétting er gerð einu sinni og birtist á vefnum, á pappír og í Word.",
+        "Hver vinnur í tóli sem hann þekkir — höfundar í Word, yfirlesarar á vefsíðu. Enginn þarf að læra á gervigreindartól.",
+        "Þýðingar lifa breytingar af: þegar höfundur breytir einni setningu þarf aðeins að þýða þá setningu aftur."
+      ],
+      "techTitle": "Fyrir forritara"
+    }
   },
   "pt": {
     "back": "← Voltar",
@@ -553,7 +651,56 @@
       "schoolMail": "Os endereços de e-mail das escolas bloqueiam ou atrasam muitas vezes mensagens de remetentes externos. Se nada chegar em poucos minutos, procure na pasta de lixo/spam e na quarentena — ou use outro endereço, por exemplo um pessoal. Qualquer endereço serve; o que importa é a língua que escolhe."
     },
     "download": "⬇ Word",
-    "downloadTip": "Descarregar esta ficha como documento Word"
+    "downloadTip": "Descarregar esta ficha como documento Word",
+    "about": {
+      "navLabel": "Como funciona",
+      "title": "Como são feitas as fichas GREEN",
+      "lede": "Cinco escolas escrevem fichas em Word. Tudo o que vem depois — as páginas web, as traduções e os documentos Word em todas as línguas — é gerado a partir desses ficheiros, por isso nada é escrito duas vezes.",
+      "steps": [
+        [
+          "Escrito em Word",
+          "Cada escola parceira escreve as suas fichas em Word, com tarefas de nível Básico, Intermédio e Avançado num só documento."
+        ],
+        [
+          "Lido automaticamente",
+          "Um leitor percorre o ficheiro Word e reconhece a sua estrutura: níveis, tarefas, perguntas e linhas de resposta, tabelas, caixas, fórmulas, imagens e vídeos."
+        ],
+        [
+          "Publicado na web",
+          "Cada ficha torna-se uma página web paginada em A4: escolha um nível, uma língua ou impressão a preto e branco. Os vídeos tornam-se códigos QR no papel."
+        ],
+        [
+          "Traduzido por IA",
+          "Cada texto é traduzido automaticamente para as línguas dos parceiros com uma lista comum de termos, para que a mesma palavra seja sempre traduzida da mesma forma."
+        ],
+        [
+          "Revisto por professores",
+          "Os professores de cada país iniciam sessão, clicam num texto que esteja errado e corrigem-no. As alterações são guardadas de imediato, com todo o histórico."
+        ],
+        [
+          "De volta ao Word",
+          "A partir dos textos revistos, é produzido um documento Word para cada ficha em cada língua — pronto a imprimir ou a editar."
+        ]
+      ],
+      "wordTitle": "Os documentos Word",
+      "wordLede": "Cada ficha pode ser descarregada como documento Word em cada língua com o botão «⬇ Word». Os documentos são gerados, não copiados à mão:",
+      "wordItems": [
+        "Logótipos GREEN e da UE no cabeçalho e a declaração de financiamento da UE no rodapé de cada página, com numeração de páginas.",
+        "Cada nível começa numa nova página; caixas, tabelas e termos-chave mantêm o seu aspeto.",
+        "As perguntas são numeradas e seguidas de linhas de resposta para os alunos.",
+        "As fórmulas são equações Word reais, não imagens — podem ser editadas.",
+        "Tudo é texto e estilos Word normais, por isso os professores podem adaptar o documento livremente.",
+        "Cada parágrafo tem uma marca invisível, para que correções feitas em Word possam mais tarde ser lidas de volta para o site."
+      ],
+      "wordTry": "Descarregar um exemplo (inglês)",
+      "whyTitle": "Porque é feito assim",
+      "whyItems": [
+        "Uma só fonte: uma correção é feita uma vez e aparece na web, no papel e em Word.",
+        "Cada pessoa trabalha numa ferramenta que já conhece — Word para os autores, uma página web para os revisores. Ninguém precisa de aprender ferramentas de IA.",
+        "As traduções sobrevivem às alterações: quando um autor altera uma frase, só essa frase tem de ser traduzida de novo."
+      ],
+      "techTitle": "Para programadores"
+    }
   },
   "hr": {
     "back": "← Natrag",
@@ -737,7 +884,56 @@
       "schoolMail": "Školske adrese e-pošte često blokiraju ili kasne s porukama vanjskih pošiljatelja. Ako ništa ne stigne za nekoliko minuta, pogledajte u neželjenu poštu i karantenu — ili upotrijebite drugu adresu, primjerice osobnu. Svaka adresa radi; važan je jezik koji odaberete."
     },
     "download": "⬇ Word",
-    "downloadTip": "Preuzmi ovaj radni list kao Word dokument"
+    "downloadTip": "Preuzmi ovaj radni list kao Word dokument",
+    "about": {
+      "navLabel": "Kako funkcionira",
+      "title": "Kako nastaju GREEN radni listovi",
+      "lede": "Pet škola piše radne listove u Wordu. Sve što slijedi — web-stranice, prijevodi i Word dokumenti na svim jezicima — nastaje iz tih datoteka, pa se ništa ne piše dvaput.",
+      "steps": [
+        [
+          "Napisano u Wordu",
+          "Svaka partnerska škola piše svoje radne listove u Wordu, sa zadacima osnovne, srednje i napredne razine u jednom dokumentu."
+        ],
+        [
+          "Automatski pročitano",
+          "Čitač prolazi kroz Word datoteku i prepoznaje njezinu strukturu: razine, zadatke, pitanja i crte za odgovore, tablice, okvire, formule, slike i videozapise."
+        ],
+        [
+          "Objavljeno na webu",
+          "Svaki radni list postaje web-stranica složena na A4 stranice: odaberite razinu, jezik ili crno-bijeli ispis. Videozapisi na papiru postaju QR kodovi."
+        ],
+        [
+          "Prevedeno umjetnom inteligencijom",
+          "Svaki tekst strojno se prevodi na jezike partnera uz zajednički popis pojmova, tako da se ista riječ uvijek prevodi jednako."
+        ],
+        [
+          "Pregledali nastavnici",
+          "Nastavnici u svakoj zemlji prijave se, kliknu na tekst koji je pogrešan i isprave ga. Promjene se odmah spremaju, s cijelom poviješću."
+        ],
+        [
+          "Natrag u Word",
+          "Iz pregledanih tekstova nastaje Word dokument za svaki radni list na svakom jeziku — spreman za ispis ili uređivanje."
+        ]
+      ],
+      "wordTitle": "Word dokumenti",
+      "wordLede": "Svaki radni list može se preuzeti kao Word dokument na svakom jeziku gumbom „⬇ Word”. Dokumenti se generiraju, a ne prepisuju ručno:",
+      "wordItems": [
+        "Logotipi GREEN i EU u zaglavlju te izjava o financiranju EU u podnožju svake stranice, s brojevima stranica.",
+        "Svaka razina počinje na novoj stranici; okviri, tablice i ključni pojmovi zadržavaju izgled.",
+        "Pitanja su numerirana, a ispod njih su crte za odgovore učenika.",
+        "Formule su prave Word jednadžbe, a ne slike — mogu se uređivati.",
+        "Sve je običan Word tekst i stilovi, pa nastavnici mogu slobodno prilagoditi dokument.",
+        "Svaki odlomak nosi nevidljivu oznaku, pa bi se ispravci napravljeni u Wordu kasnije mogli vratiti na web-stranicu."
+      ],
+      "wordTry": "Preuzmi primjer (engleski)",
+      "whyTitle": "Zašto je ovako napravljeno",
+      "whyItems": [
+        "Jedan izvor: ispravak se napravi jednom i pojavi se na webu, na papiru i u Wordu.",
+        "Svatko radi u alatu koji već poznaje — autori u Wordu, recenzenti na web-stranici. Nitko ne mora učiti alate umjetne inteligencije.",
+        "Prijevodi preživljavaju promjene: kad autor promijeni jednu rečenicu, samo se ta rečenica mora ponovno prevesti."
+      ],
+      "techTitle": "Za programere"
+    }
   },
   "tr": {
     "back": "← Geri",
@@ -921,7 +1117,56 @@
       "schoolMail": "Okul e-posta adresleri dış göndericilerden gelen e-postaları sık sık engeller veya geciktirir. Birkaç dakika içinde bir şey gelmezse önemsiz/spam klasörüne ve karantinaya bakın ya da başka bir adres, örneğin kişisel adresinizi kullanın. Her adres çalışır; önemli olan seçtiğiniz dildir."
     },
     "download": "⬇ Word",
-    "downloadTip": "Bu çalışma yaprağını Word belgesi olarak indir"
+    "downloadTip": "Bu çalışma yaprağını Word belgesi olarak indir",
+    "about": {
+      "navLabel": "Nasıl çalışır",
+      "title": "GREEN çalışma yaprakları nasıl hazırlanır",
+      "lede": "Beş okul çalışma yapraklarını Word’de yazar. Sonrasındaki her şey — web sayfaları, çeviriler ve tüm dillerdeki Word belgeleri — bu dosyalardan üretilir; böylece hiçbir şey iki kez yazılmaz.",
+      "steps": [
+        [
+          "Word’de yazılır",
+          "Her ortak okul çalışma yapraklarını Temel, Orta ve İleri düzey görevleri tek bir belgede olacak şekilde Word’de yazar."
+        ],
+        [
+          "Otomatik okunur",
+          "Bir okuyucu Word dosyasını tarar ve yapısını tanır: düzeyler, görevler, sorular ve cevap çizgileri, tablolar, kutular, formüller, resimler ve videolar."
+        ],
+        [
+          "Web’de yayımlanır",
+          "Her çalışma yaprağı A4 sayfalara dizilmiş bir web sayfasına dönüşür: düzey, dil veya siyah-beyaz baskı seçin. Videolar kâğıtta QR koduna dönüşür."
+        ],
+        [
+          "Yapay zekâ ile çevrilir",
+          "Her metin, ortak bir terim listesiyle ortak dillere makine ile çevrilir; böylece aynı sözcük her zaman aynı şekilde çevrilir."
+        ],
+        [
+          "Öğretmenler kontrol eder",
+          "Her ülkedeki öğretmenler oturum açar, yanlış olan bir metne tıklar ve düzeltir. Değişiklikler tüm geçmişiyle birlikte hemen kaydedilir."
+        ],
+        [
+          "Yeniden Word’e",
+          "Kontrol edilen metinlerden her dilde her çalışma yaprağı için bir Word belgesi üretilir — yazdırmaya veya düzenlemeye hazır."
+        ]
+      ],
+      "wordTitle": "Word belgeleri",
+      "wordLede": "Her çalışma yaprağı, “⬇ Word” düğmesiyle her dilde Word belgesi olarak indirilebilir. Belgeler elle kopyalanmaz, otomatik üretilir:",
+      "wordItems": [
+        "Her sayfanın üst bilgisinde GREEN ve AB logoları, alt bilgisinde AB finansman beyanı ve sayfa numaraları.",
+        "Her düzey yeni bir sayfada başlar; kutular, tablolar ve anahtar terimler düzenini korur.",
+        "Sorular numaralıdır ve ardından öğrenciler için cevap çizgileri gelir.",
+        "Formüller resim değil, gerçek Word denklemleridir — düzenlenebilir.",
+        "Her şey sıradan Word metni ve stilleridir; öğretmenler belgeyi istedikleri gibi uyarlayabilir.",
+        "Her paragraf görünmez bir işaret taşır; böylece Word’de yapılan düzeltmeler ileride web sitesine geri okunabilir."
+      ],
+      "wordTry": "Örnek indir (İngilizce)",
+      "whyTitle": "Neden böyle yapıldı",
+      "whyItems": [
+        "Tek kaynak: bir düzeltme bir kez yapılır ve web’de, kâğıtta ve Word’de görünür.",
+        "Herkes zaten bildiği bir araçla çalışır — yazarlar Word’de, kontrol edenler bir web sayfasında. Kimsenin yapay zekâ araçlarını öğrenmesi gerekmez.",
+        "Çeviriler değişikliklere dayanır: bir yazar tek bir cümleyi değiştirdiğinde yalnızca o cümlenin yeniden çevrilmesi gerekir."
+      ],
+      "techTitle": "Geliştiriciler için"
+    }
   },
   "nl": {
     "back": "← Terug",
@@ -1105,6 +1350,55 @@
       "schoolMail": "E-mailadressen van scholen blokkeren of vertragen vaak e-mails van externe afzenders. Komt er binnen een paar minuten niets binnen, kijk dan in je spam-/ongewenste map en in de quarantaine — of gebruik een ander adres, bijvoorbeeld een persoonlijk. Elk adres werkt; het gaat om de taal die je kiest."
     },
     "download": "⬇ Word",
-    "downloadTip": "Dit werkblad downloaden als Word-document"
+    "downloadTip": "Dit werkblad downloaden als Word-document",
+    "about": {
+      "navLabel": "Hoe het werkt",
+      "title": "Zo worden de GREEN-werkbladen gemaakt",
+      "lede": "Vijf scholen schrijven werkbladen in Word. Alles wat daarna komt — de webpagina’s, de vertalingen en de Word-documenten in elke taal — wordt uit die bestanden gemaakt, zodat niets twee keer getypt wordt.",
+      "steps": [
+        [
+          "Geschreven in Word",
+          "Elke partnerschool schrijft haar werkbladen in Word, met opdrachten op basis-, gemiddeld en gevorderd niveau in één document."
+        ],
+        [
+          "Automatisch gelezen",
+          "Een lezer loopt het Word-bestand door en herkent de opbouw: niveaus, opdrachten, vragen en antwoordlijnen, tabellen, kaders, formules, afbeeldingen en video’s."
+        ],
+        [
+          "Gepubliceerd op het web",
+          "Elk werkblad wordt een webpagina op A4-pagina’s: kies een niveau, een taal of zwart-witafdruk. Video’s worden op papier QR-codes."
+        ],
+        [
+          "Vertaald met AI",
+          "Elke tekst wordt machinaal vertaald in de partnertalen met een gedeelde begrippenlijst, zodat hetzelfde woord altijd op dezelfde manier vertaald wordt."
+        ],
+        [
+          "Nagekeken door docenten",
+          "Docenten in elk land loggen in, klikken op een tekst die fout is en verbeteren die. Wijzigingen worden direct opgeslagen, met de volledige geschiedenis."
+        ],
+        [
+          "Terug naar Word",
+          "Uit de nagekeken teksten wordt voor elk werkblad in elke taal een Word-document gemaakt — klaar om te printen of te bewerken."
+        ]
+      ],
+      "wordTitle": "De Word-documenten",
+      "wordLede": "Elk werkblad kan in elke taal als Word-document worden gedownload met de knop „⬇ Word”. De documenten worden gegenereerd, niet met de hand overgenomen:",
+      "wordItems": [
+        "GREEN- en EU-logo’s in de koptekst en de EU-financieringsverklaring in de voettekst van elke pagina, met paginanummers.",
+        "Elk niveau begint op een nieuwe pagina; kaders, tabellen en kernbegrippen behouden hun opmaak.",
+        "Vragen zijn genummerd en gevolgd door antwoordlijnen voor de leerlingen.",
+        "Formules zijn echte Word-vergelijkingen, geen afbeeldingen — ze zijn te bewerken.",
+        "Alles is gewone Word-tekst met stijlen, zodat docenten het document vrij kunnen aanpassen.",
+        "Elke alinea draagt een onzichtbare markering, zodat verbeteringen in Word later naar de website teruggelezen kunnen worden."
+      ],
+      "wordTry": "Download een voorbeeld (Engels)",
+      "whyTitle": "Waarom het zo gebouwd is",
+      "whyItems": [
+        "Eén bron: een verbetering wordt één keer gemaakt en verschijnt op het web, op papier en in Word.",
+        "Iedereen werkt in een programma dat hij al kent — Word voor auteurs, een webpagina voor nakijkers. Niemand hoeft AI-programma’s te leren.",
+        "Vertalingen overleven wijzigingen: als een auteur één zin aanpast, hoeft alleen die zin opnieuw vertaald te worden."
+      ],
+      "techTitle": "Voor ontwikkelaars"
+    }
   }
 }
