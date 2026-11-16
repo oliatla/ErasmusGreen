@@ -28,6 +28,10 @@
   .privacy-more summary { cursor: pointer; color: var(--text-sec); }
   .account { margin-top: 1.5rem; max-width: none; }
   .btn.danger { background: #b00020; }
+  .agreed { font-size: .82rem; color: var(--green); font-weight: 600; margin-bottom: .6rem; }
+  .agreed .link { font: inherit; font-weight: 400; background: none; border: 0; padding: 0; color: var(--text-muted); text-decoration: underline; cursor: pointer; margin-left: .4rem; }
+  #f .login-help { background: var(--bg-subtle); border-radius: var(--rs); padding: .8rem .9rem; margin-bottom: .4rem; }
+  #f .login-help h2 { font-size: 1rem; }
   .login-help { margin-top: 1rem; }
   .login-help ol { margin: 0 0 .8rem 1.2rem; font-size: .9rem; color: var(--text-sec); }
   .login-help li { margin-bottom: .4rem; }
@@ -151,24 +155,46 @@
   }
 
   /* ---------- 1. not signed in: email → magic link ---------- */
+  /* step 1: read and accept the privacy notice; step 2: how to sign in + email field */
   function signIn() {
+    let agreed = false;
+    try { agreed = !!localStorage.getItem('green-tr-consent'); } catch (_) {}
     main.innerHTML = `<form class="box" id="f">
-        <h2>${esc(ui('trans.send'))}</h2>
-        <label for="email">${esc(ui('trans.emailLabel'))}</label>
-        <input id="email" type="email" required autocomplete="email" placeholder="name@school.eu">
-        <div class="privacy">
+        <div class="privacy" id="privacy-step">
           <h3>🔒 ${esc(ui('trans.privacyTitle'))}</h3>
           <ul>${(ui('trans.privacy') || []).map(s => `<li>${esc(s)}</li>`).join('')}</ul>
-          <label class="check"><input type="checkbox" id="consent" required> ${esc(ui('trans.accept'))}</label>
+          <label class="check"><input type="checkbox" id="consent"> ${esc(ui('trans.accept'))}</label>
         </div>
-        <button class="btn">${esc(ui('trans.send'))}</button>
-        <p class="msg">${esc(ui('trans.deadline'))}</p>
-      </form>
-      <div class="box login-help">
-        <h2>${esc(ui('trans.loginTitle'))}</h2>
-        <ol>${(ui('trans.loginSteps') || []).map(s => `<li>${esc(s)}</li>`).join('')}</ol>
-        <p class="warn">⚠ ${esc(ui('trans.schoolMail'))}</p>
-      </div>`;
+        <div id="email-step" hidden>
+          <p class="agreed">✓ ${esc(ui('trans.accept'))} <button type="button" class="link" id="reread">${esc(ui('trans.privacyAgain'))}</button></p>
+          <div class="login-help">
+            <h2>${esc(ui('trans.loginTitle'))}</h2>
+            <ol>${(ui('trans.loginSteps') || []).map(s => `<li>${esc(s)}</li>`).join('')}</ol>
+            <p class="warn">⚠ ${esc(ui('trans.schoolMail'))}</p>
+          </div>
+          <label for="email">${esc(ui('trans.emailLabel'))}</label>
+          <input id="email" type="email" required autocomplete="email" placeholder="name@school.eu">
+          <button class="btn">${esc(ui('trans.send'))}</button>
+          <p class="msg">${esc(ui('trans.deadline'))}</p>
+        </div>
+      </form>`;
+    const step = done => {
+      $('privacy-step').hidden = done;
+      $('email-step').hidden = !done;
+      $('consent').checked = done;
+    };
+    step(agreed);
+    $('consent').addEventListener('change', e => {
+      if (!e.target.checked) return;
+      try { localStorage.setItem('green-tr-consent', new Date().toISOString()); } catch (_) {}
+      step(true);
+      // show the sign-in steps from the top, so they are read before the email field
+      $('email-step').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    $('reread').addEventListener('click', () => {
+      try { localStorage.removeItem('green-tr-consent'); } catch (_) {}
+      step(false);
+    });
     $('f').addEventListener('submit', async e => {
       e.preventDefault();
       if (!$('consent').checked) { alert(ui('trans.mustAccept')); return; }
