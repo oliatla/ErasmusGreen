@@ -97,12 +97,12 @@ create trigger translations_history after insert or update on public.translation
   for each row execute function public.log_revision();
 
 create function public.log_revert() returns trigger
-language plpgsql security definer set search_path = public as $
+language plpgsql security definer set search_path = public as $$
 begin
   insert into public.revisions (lang, key, text, worksheet, changed_by)
   values (old.lang, old.key, null, old.worksheet, auth.uid());
   return old;
-end $;
+end $$;
 
 create trigger translations_revert after delete on public.translations
   for each row execute function public.log_revert();
