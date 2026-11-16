@@ -200,7 +200,8 @@
       "settings": "Your account",
       "deleteMe": "Delete me",
       "deleteConfirm": "Delete your account? Your name, email and sign-in are removed for good. Your corrections stay on the worksheets, anonymously. This cannot be undone.",
-      "deleted": "Your account has been deleted. Thank you for your help!"
+      "deleted": "Your account has been deleted. Thank you for your help!",
+      "issuesLink": "Problems found in the English source texts →"
     },
     "download": "⬇ Word",
     "downloadTip": "Download this worksheet as a Word document",
@@ -469,7 +470,8 @@
       "settings": "Aðgangurinn þinn",
       "deleteMe": "Eyða mér",
       "deleteConfirm": "Eyða aðganginum þínum? Nafn, netfang og innskráning hverfa fyrir fullt og allt. Leiðréttingarnar þínar standa áfram á blöðunum, nafnlaust. Þetta er ekki hægt að afturkalla.",
-      "deleted": "Aðgangi þínum hefur verið eytt. Takk fyrir hjálpina!"
+      "deleted": "Aðgangi þínum hefur verið eytt. Takk fyrir hjálpina!",
+      "issuesLink": "Villur sem fundust í enska frumtextanum →"
     },
     "download": "⬇ Word",
     "downloadTip": "Sækja blaðið sem Word-skjal",
@@ -738,7 +740,8 @@
       "settings": "A sua conta",
       "deleteMe": "Apagar-me",
       "deleteConfirm": "Apagar a sua conta? O seu nome, e-mail e acesso são removidos definitivamente. As suas correções ficam nas fichas, de forma anónima. Esta ação não pode ser anulada.",
-      "deleted": "A sua conta foi apagada. Obrigado pela sua ajuda!"
+      "deleted": "A sua conta foi apagada. Obrigado pela sua ajuda!",
+      "issuesLink": "Problemas encontrados nos textos originais em inglês →"
     },
     "download": "⬇ Word",
     "downloadTip": "Descarregar esta ficha como documento Word",
@@ -1007,7 +1010,8 @@
       "settings": "Vaš račun",
       "deleteMe": "Izbriši me",
       "deleteConfirm": "Izbrisati vaš račun? Vaše ime, e-pošta i prijava trajno se uklanjaju. Vaši ispravci ostaju na radnim listovima, anonimno. Ovo se ne može poništiti.",
-      "deleted": "Vaš je račun izbrisan. Hvala na pomoći!"
+      "deleted": "Vaš je račun izbrisan. Hvala na pomoći!",
+      "issuesLink": "Pogreške pronađene u engleskim izvornim tekstovima →"
     },
     "download": "⬇ Word",
     "downloadTip": "Preuzmi ovaj radni list kao Word dokument",
@@ -1276,7 +1280,8 @@
       "settings": "Hesabınız",
       "deleteMe": "Beni sil",
       "deleteConfirm": "Hesabınız silinsin mi? Adınız, e-postanız ve oturum bilgileriniz kalıcı olarak kaldırılır. Düzeltmeleriniz çalışma yapraklarında anonim olarak kalır. Bu işlem geri alınamaz.",
-      "deleted": "Hesabınız silindi. Yardımınız için teşekkürler!"
+      "deleted": "Hesabınız silindi. Yardımınız için teşekkürler!",
+      "issuesLink": "İngilizce kaynak metinlerde bulunan sorunlar →"
     },
     "download": "⬇ Word",
     "downloadTip": "Bu çalışma yaprağını Word belgesi olarak indir",
@@ -1545,7 +1550,8 @@
       "settings": "Je account",
       "deleteMe": "Verwijder mij",
       "deleteConfirm": "Je account verwijderen? Je naam, e-mail en inloggegevens worden definitief verwijderd. Je verbeteringen blijven anoniem op de werkbladen staan. Dit kan niet ongedaan worden gemaakt.",
-      "deleted": "Je account is verwijderd. Bedankt voor je hulp!"
+      "deleted": "Je account is verwijderd. Bedankt voor je hulp!",
+      "issuesLink": "Problemen gevonden in de Engelse brontekst →"
     },
     "download": "⬇ Word",
     "downloadTip": "Dit werkblad downloaden als Word-document",

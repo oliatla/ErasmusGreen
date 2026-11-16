@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Issues in the English source texts — GREEN</title>
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<meta name="theme-color" content="#059669">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .intro { max-width: 78ch; color: var(--text-sec); margin: 0 auto 1.4rem; font-size: .95rem; }
+  .intro li { margin: .3rem 0 .3rem 1.2rem; }
+  .summary { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; margin-bottom: 1.6rem; }
+  .summary button { display: inline-flex; align-items: center; gap: .4rem; }
+  .summary img, h2 img { width: 20px; height: 14px; border-radius: 2px; }
+  .country { margin-bottom: 2.2rem; }
+  .country h2 { display: flex; align-items: center; gap: .5rem; font-size: 1.2rem; margin-bottom: .8rem; padding-bottom: .4rem; border-bottom: 2px solid var(--border); }
+  .sheet { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r); box-shadow: var(--shadow); margin-bottom: 1rem; overflow: hidden; }
+  .sheet-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; padding: .7rem 1rem; background: var(--bg-subtle); }
+  .sheet-head h3 { font-size: 1rem; }
+  .sheet-head .file { font-size: .78rem; color: var(--text-muted); }
+  .sheet-head a { font-size: .8rem; font-weight: 700; color: var(--green); text-decoration: none; white-space: nowrap; }
+  .issue { padding: .8rem 1rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 7.5rem 1fr; gap: .3rem 1rem; }
+  .issue.fixed { opacity: .55; }
+  .tag { align-self: start; font-size: .68rem; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; padding: .2rem .5rem; border-radius: 999px; text-align: center; }
+  .tag.error { background: #fde2e1; color: #b00020; }
+  .tag.copy { background: var(--energy-light); color: var(--energy); }
+  .tag.consistency { background: var(--water-light); color: var(--water); }
+  .tag.typo { background: var(--bg-subtle); color: var(--text-sec); }
+  .tag.suggestion { background: var(--green-light); color: var(--green); }
+  .tag.done { background: var(--green); color: #fff; margin-top: .3rem; }
+  .quote { font-size: .85rem; color: var(--text-muted); border-left: 3px solid var(--border); padding-left: .6rem; margin-bottom: .3rem; white-space: pre-wrap; }
+  .quote code { font-size: .72rem; color: var(--text-muted); }
+  .problem { font-size: .9rem; }
+  .fix { font-size: .88rem; color: var(--green); margin-top: .25rem; }
+  .fix::before { content: '→ '; font-weight: 700; }
+  @media (max-width: 640px) { .issue { grid-template-columns: 1fr; } .tag { justify-self: start; } }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <a href="../index.html" class="brand-mark" aria-label="GREEN">
+    <img src="../img/greenlogo.png" alt="" class="brand-logo">
+    <span class="brand-text"><strong>GREEN</strong><span class="brand-sub">Erasmus+ KA220-VET</span></span>
+  </a>
+  <div class="top-bar-actions">
+    <a href="./" class="icon-btn">Translations</a>
+    <button class="theme-toggle" id="theme-btn" onclick="theme.toggle()" aria-label="Toggle theme">🌙</button>
+  </div>
+</div>
+
+<header class="page-header">
+  <div class="header-inner hero">
+    <span class="badge">GREEN Erasmus+ · translation phase</span>
+    <h1>Issues found in the English source texts</h1>
+    <p id="lede"></p>
+  </div>
+</header>
+
+<main class="main">
+  <div class="intro">
+    <p>While every worksheet was machine-translated into the five partner languages, the AI translators and our checks compared each sentence with the English original. On the way they found these problems <b>in the English texts themselves</b> — not in the translations.</p>
+    <ul>
+      <li><b>Authors:</b> please fix them in your Word document. The website reads the document again and the change appears in every language.</li>
+      <li><b>Translators:</b> the translations follow the English as it is written now. When a sentence here is fixed, it shows up again as “not translated” in your language — check it then.</li>
+      <li>Each problem names the text it is about (<code>t…</code> is the text’s id) and suggests a fix. Nothing here has been changed for you.</li>
+    </ul>
+  </div>
+  <div class="summary" id="summary"></div>
+  <div id="list"></div>
+</main>
+
+<footer class="page-footer">
+  <div class="footer-grid">
+    <div class="footer-eu">
+      <img src="../img/eufounded.png" alt="Co-funded by the European Union" class="eu-logo">
+      <p class="eu-disclaimer">Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</p>
+    </div>
+    <div class="footer-meta"><div class="footer-project"><strong>GREEN Erasmus+ · KA220-VET</strong><br>Project № 2025-1-HR01-KA220-VET-000353056</div></div>
+  </div>
+</footer>
+
+<script src="../js/theme.js"></script>
+<script>
+/* The list lives in translations/source-issues.json; this page only shows it. */
+(async function () {
+  theme.init && theme.init();
+  const COUNTRY = { hr: 'Croatia', is: 'Iceland', nl: 'Netherlands', pt: 'Portugal', tr: 'Türkiye' };
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const get = u => fetch(u, { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null);
+
+  const [data, index] = await Promise.all([get('source-issues.json'), get('../ws/worksheets.json')]);
+  const slugs = [...new Set(data.issues.map(i => i.worksheet))];
+  const en = {}, content = {};
+  await Promise.all(slugs.map(async s => {
+    [en[s], content[s]] = await Promise.all([get(`../ws/${s}/lang/en.json`), get(`../ws/${s}/content.json`)]);
+  }));
+  const title = s => (index.worksheets.find(w => w.slug === s) || { title: {} }).title.en || s;
+  const file = s => content[s] && content[s].source && content[s].source.file ? content[s].source.file.split('/').pop() : '';
+
+  const open = data.issues.filter(i => i.status !== 'fixed').length;
+  document.getElementById('lede').textContent =
+    `${data.issues.length} problems in ${slugs.length} worksheets — ${open} still open. Last updated ${data.updated}.`;
+
+  let filter = 'all';
+  const countries = [...new Set(data.issues.map(i => i.country))];
+  function render() {
+    document.getElementById('summary').innerHTML =
+      `<button class="topic-btn${filter === 'all' ? ' active' : ''}" data-c="all">All countries (${data.issues.length})</button>` +
+      countries.map(c => `<button class="topic-btn${filter === c ? ' active' : ''}" data-c="${c}"><img src="../img/flags/${c}.svg" alt=""> ${COUNTRY[c]} (${data.issues.filter(i => i.country === c).length})</button>`).join('');
+    document.getElementById('list').innerHTML = countries.filter(c => filter === 'all' || filter === c).map(c => {
+      const sheets = [...new Set(data.issues.filter(i => i.country === c).map(i => i.worksheet))];
+      return `<section class="country"><h2><img src="../img/flags/${c}.svg" alt=""> ${COUNTRY[c]}</h2>` +
+        sheets.map(s => `<div class="sheet">
+          <div class="sheet-head"><div><h3>${esc(title(s))}</h3><div class="file">${esc(file(s))}</div></div>
+            <a href="../ws/${s}/?lang=en" target="_blank">Open worksheet →</a></div>` +
+          data.issues.filter(i => i.worksheet === s).map(i => `<div class="issue${i.status === 'fixed' ? ' fixed' : ''}">
+            <div><div class="tag ${i.type}" title="${esc(data.types[i.type])}">${esc(i.type)}</div>${i.status === 'fixed' ? '<div class="tag done">fixed</div>' : ''}</div>
+            <div>
+              ${en[s] && en[s][i.key] ? `<div class="quote">“${esc(en[s][i.key])}” <code>${i.key}</code></div>` : ''}
+              <div class="problem">${esc(i.problem)}</div>
+              <div class="fix">${esc(i.fix)}</div>
+            </div></div>`).join('') + '</div>').join('') + '</section>';
+    }).join('');
+  }
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-c]');
+    if (b) { filter = b.dataset.c; render(); }
+  });
+  render();
+})();
+</script>
+</body>
+</html>

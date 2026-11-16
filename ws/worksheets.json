@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T16:31:32.278Z",
+  "generated": "2026-11-16T17:48:43.547Z",
   "languages": [
     "en",
     "is",
@@ -45,20 +45,36 @@
       },
       "title": {
         "en": "Comparing Bulb types",
-        "is": "Samanburður á ljósaperum"
+        "is": "Samanburður á ljósaperum",
+        "pt": "Comparação de tipos de lâmpadas",
+        "hr": "Usporedba vrsta žarulja",
+        "tr": "Ampul Türlerinin Karşılaştırılması",
+        "nl": "Lampsoorten vergelijken"
       },
       "subject": {
         "basic": {
           "en": "What is inside a light bulb?",
-          "is": "Hvað er inni í ljósaperu?"
+          "is": "Hvað er inni í ljósaperu?",
+          "pt": "O que há dentro de uma lâmpada?",
+          "hr": "Što je unutar žarulje?",
+          "tr": "Bir ampulün içinde ne var?",
+          "nl": "Wat zit er in een gloeilamp?"
         },
         "medium": {
           "en": "Efficiency and lifetime of light bulbs",
-          "is": "Nýtni og líftími ljósapera"
+          "is": "Nýtni og líftími ljósapera",
+          "pt": "Eficiência e vida útil das lâmpadas",
+          "hr": "Učinkovitost i vijek trajanja žarulja",
+          "tr": "Ampullerin verimliliği ve ömrü",
+          "nl": "Rendement en levensduur van lampen"
         },
         "advanced": {
           "en": "Total cost of ownership and environmental impact",
-          "is": "Heildarkostnaður og umhverfisáhrif"
+          "is": "Heildarkostnaður og umhverfisáhrif",
+          "pt": "Custo total de propriedade e impacto ambiental",
+          "hr": "Ukupni trošak vlasništva i utjecaj na okoliš",
+          "tr": "Toplam sahip olma maliyeti ve çevresel etki",
+          "nl": "Totale eigendomskosten en milieueffect"
         }
       },
       "docx": [
@@ -67,19 +83,51 @@
       "time": {
         "basic": {
           "en": "60 min",
-          "is": "60 mín."
+          "is": "60 mín.",
+          "pt": "60 min",
+          "hr": "60 min",
+          "tr": "60 dk",
+          "nl": "60 min"
         },
         "medium": {
           "en": "90 min",
-          "is": "90 mín."
+          "is": "90 mín.",
+          "pt": "90 min",
+          "hr": "90 min",
+          "tr": "90 dk",
+          "nl": "90 min"
         },
         "advanced": {
           "en": "120 min",
-          "is": "120 mín."
+          "is": "120 mín.",
+          "pt": "120 min",
+          "hr": "120 min",
+          "tr": "120 dk",
+          "nl": "120 min"
         }
       },
       "translated": {
         "is": {
+          "done": 138,
+          "total": 138,
+          "reviewed": false
+        },
+        "pt": {
+          "done": 138,
+          "total": 138,
+          "reviewed": false
+        },
+        "hr": {
+          "done": 138,
+          "total": 138,
+          "reviewed": false
+        },
+        "tr": {
+          "done": 138,
+          "total": 138,
+          "reviewed": false
+        },
+        "nl": {
           "done": 138,
           "total": 138,
           "reviewed": false
@@ -113,20 +161,36 @@
       },
       "title": {
         "en": "Energy consumption of light bulbs",
-        "is": "Orkunotkun ljósapera"
+        "is": "Orkunotkun ljósapera",
+        "pt": "Consumo de energia das lâmpadas",
+        "hr": "Potrošnja energije žarulja",
+        "tr": "Ampullerin enerji tüketimi",
+        "nl": "Energieverbruik van lampen"
       },
       "subject": {
         "basic": {
           "en": "How much does a light bulb cost to use?",
-          "is": "Hvað kostar að nota ljósaperu?"
+          "is": "Hvað kostar að nota ljósaperu?",
+          "pt": "Quanto custa utilizar uma lâmpada?",
+          "hr": "Koliko košta rad žarulje?",
+          "tr": "Bir ampulü çalıştırmanın maliyeti nedir?",
+          "nl": "Hoeveel kost het om een lamp te gebruiken?"
         },
         "medium": {
           "en": "Calculating cost and CO₂ at home and at school",
-          "is": "Kostnaður og CO₂ heima og í skólanum"
+          "is": "Kostnaður og CO₂ heima og í skólanum",
+          "pt": "Calcular o custo e o CO₂ em casa e na escola",
+          "hr": "Izračun troška i CO₂ kod kuće i u školi",
+          "tr": "Evde ve okulda maliyet ve CO₂ hesaplama",
+          "nl": "Kosten en CO₂ berekenen thuis en op school"
         },
         "advanced": {
           "en": "Real-world energy modelling and dynamic tariffs",
-          "is": "Orkulíkön úr raunveruleikanum og breytilegt raforkuverð"
+          "is": "Orkulíkön úr raunveruleikanum og breytilegt raforkuverð",
+          "pt": "Modelação energética no mundo real e tarifas dinâmicas",
+          "hr": "Modeliranje energije u stvarnim uvjetima i dinamične tarife",
+          "tr": "Gerçek dünya enerji modellemesi ve dinamik tarifeler",
+          "nl": "Energiemodellen uit de praktijk en dynamische tarieven"
         }
       },
       "docx": [
@@ -135,19 +199,51 @@
       "time": {
         "basic": {
           "en": "60 min",
-          "is": "60 mín."
+          "is": "60 mín.",
+          "pt": "60 min",
+          "hr": "60 min",
+          "tr": "60 dk",
+          "nl": "60 min"
         },
         "medium": {
           "en": "90 min",
-          "is": "90 mín."
+          "is": "90 mín.",
+          "pt": "90 min",
+          "hr": "90 min",
+          "tr": "90 dk",
+          "nl": "90 min"
         },
         "advanced": {
           "en": "120 min",
-          "is": "120 mín."
+          "is": "120 mín.",
+          "pt": "120 min",
+          "hr": "120 min",
+          "tr": "120 dk",
+          "nl": "120 min"
         }
       },
       "translated": {
         "is": {
+          "done": 147,
+          "total": 147,
+          "reviewed": false
+        },
+        "pt": {
+          "done": 147,
+          "total": 147,
+          "reviewed": false
+        },
+        "hr": {
+          "done": 147,
+          "total": 147,
+          "reviewed": false
+        },
+        "tr": {
+          "done": 147,
+          "total": 147,
+          "reviewed": false
+        },
+        "nl": {
           "done": 147,
           "total": 147,
           "reviewed": false
@@ -181,20 +277,36 @@
       },
       "title": {
         "en": "Lighting audit at your school",
-        "is": "Lýsingarúttekt í skólanum"
+        "is": "Lýsingarúttekt í skólanum",
+        "pt": "Auditoria à iluminação da sua escola",
+        "hr": "Energetski pregled rasvjete u vašoj školi",
+        "tr": "Okulunuzda aydınlatma denetimi",
+        "nl": "Verlichtingsaudit op jouw school"
       },
       "subject": {
         "basic": {
           "en": "Counting the lights",
-          "is": "Ljósin talin"
+          "is": "Ljósin talin",
+          "pt": "Contar as luzes",
+          "hr": "Brojanje svjetala",
+          "tr": "Işıkları sayma",
+          "nl": "De lampen tellen"
         },
         "medium": {
           "en": "Quantifying energy and cost",
-          "is": "Orka og kostnaður metin í tölum"
+          "is": "Orka og kostnaður metin í tölum",
+          "pt": "Quantificar a energia e o custo",
+          "hr": "Kvantificiranje energije i troškova",
+          "tr": "Enerjiyi ve maliyeti nicel olarak belirleme",
+          "nl": "Energie en kosten kwantificeren"
         },
         "advanced": {
           "en": "Designing a retrofit business case",
-          "is": "Rekstrarrök fyrir endurnýjun lýsingar"
+          "is": "Rekstrarrök fyrir endurnýjun lýsingar",
+          "pt": "Conceber um plano de negócio de modernização",
+          "hr": "Izrada poslovnog slučaja za obnovu rasvjete",
+          "tr": "Bir yenileme iş planı tasarlama",
+          "nl": "Een businesscase voor vervanging ontwerpen"
         }
       },
       "docx": [
@@ -203,6 +315,26 @@
       "time": {},
       "translated": {
         "is": {
+          "done": 114,
+          "total": 114,
+          "reviewed": false
+        },
+        "pt": {
+          "done": 114,
+          "total": 114,
+          "reviewed": false
+        },
+        "hr": {
+          "done": 114,
+          "total": 114,
+          "reviewed": false
+        },
+        "tr": {
+          "done": 114,
+          "total": 114,
+          "reviewed": false
+        },
+        "nl": {
           "done": 114,
           "total": 114,
           "reviewed": false
@@ -236,20 +368,36 @@
       },
       "title": {
         "en": "Smart lighting",
-        "is": "Snjalllýsing"
+        "is": "Snjalllýsing",
+        "pt": "Iluminação inteligente",
+        "hr": "Pametna rasvjeta",
+        "tr": "Akıllı aydınlatma",
+        "nl": "Slimme verlichting"
       },
       "subject": {
         "basic": {
           "en": "Sensors that switch lights for you",
-          "is": "Skynjarar sem kveikja og slökkva ljósin fyrir þig"
+          "is": "Skynjarar sem kveikja og slökkva ljósin fyrir þig",
+          "pt": "Sensores que ligam as luzes por si",
+          "hr": "Senzori koji umjesto vas pale i gase svjetla",
+          "tr": "Işıkları sizin yerinize açıp kapatan sensörler",
+          "nl": "Sensoren die het licht voor je schakelen"
         },
         "medium": {
           "en": "Sensors, dimming and energy savings",
-          "is": "Skynjarar, deyfing og orkusparnaður"
+          "is": "Skynjarar, deyfing og orkusparnaður",
+          "pt": "Sensores, regulação da intensidade e poupança de energia",
+          "hr": "Senzori, prigušivanje i ušteda energije",
+          "tr": "Sensörler, ışık kısma ve enerji tasarrufu",
+          "nl": "Sensoren, dimmen en energiebesparing"
         },
         "advanced": {
           "en": "Designing a building-wide automation strategy",
-          "is": "Hönnun sjálfvirkrar lýsingar fyrir heila byggingu"
+          "is": "Hönnun sjálfvirkrar lýsingar fyrir heila byggingu",
+          "pt": "Conceber uma estratégia de automação para todo o edifício",
+          "hr": "Izrada strategije automatizacije za cijelu zgradu",
+          "tr": "Bina genelinde bir otomasyon stratejisi tasarlama",
+          "nl": "Een automatiseringsstrategie voor het hele gebouw ontwerpen"
         }
       },
       "docx": [
@@ -258,19 +406,51 @@
       "time": {
         "basic": {
           "en": "60 min",
-          "is": "60 mín."
+          "is": "60 mín.",
+          "pt": "60 min",
+          "hr": "60 min",
+          "tr": "60 dk",
+          "nl": "60 min"
         },
         "medium": {
           "en": "90 min",
-          "is": "90 mín."
+          "is": "90 mín.",
+          "pt": "90 min",
+          "hr": "90 min",
+          "tr": "90 dk",
+          "nl": "90 min"
         },
         "advanced": {
           "en": "150 min",
-          "is": "150 mín."
+          "is": "150 mín.",
+          "pt": "150 min",
+          "hr": "150 min",
+          "tr": "150 dk",
+          "nl": "150 min"
         }
       },
       "translated": {
         "is": {
+          "done": 127,
+          "total": 127,
+          "reviewed": false
+        },
+        "pt": {
+          "done": 127,
+          "total": 127,
+          "reviewed": false
+        },
+        "hr": {
+          "done": 127,
+          "total": 127,
+          "reviewed": false
+        },
+        "tr": {
+          "done": 127,
+          "total": 127,
+          "reviewed": false
+        },
+        "nl": {
           "done": 127,
           "total": 127,
           "reviewed": false
@@ -299,7 +479,11 @@
       },
       "title": {
         "en": "Energy and water efficiency of dishwashers",
-        "is": "Orku- og vatnsnýtni uppþvottavéla"
+        "is": "Orku- og vatnsnýtni uppþvottavéla",
+        "pt": "Eficiência energética e hídrica das máquinas de lavar loiça",
+        "hr": "Energetska i vodna učinkovitost perilica posuđa",
+        "tr": "Bulaşık makinelerinin enerji ve su verimliliği",
+        "nl": "Energie- en waterefficiëntie van vaatwassers"
       },
       "subject": {},
       "docx": [
@@ -308,6 +492,26 @@
       "time": {},
       "translated": {
         "is": {
+          "done": 77,
+          "total": 77,
+          "reviewed": false
+        },
+        "pt": {
+          "done": 77,
+          "total": 77,
+          "reviewed": false
+        },
+        "hr": {
+          "done": 77,
+          "total": 77,
+          "reviewed": false
+        },
+        "tr": {
+          "done": 77,
+          "total": 77,
+          "reviewed": false
+        },
+        "nl": {
           "done": 77,
           "total": 77,
           "reviewed": false
@@ -341,20 +545,36 @@
       },
       "title": {
         "en": "Refrigerators and freezers",
-        "is": "Kæliskápar og frystar"
+        "is": "Kæliskápar og frystar",
+        "pt": "Frigoríficos e congeladores",
+        "hr": "Hladnjaci i zamrzivači",
+        "tr": "Buzdolapları ve derin dondurucular",
+        "nl": "Koelkasten en vriezers"
       },
       "subject": {
         "basic": {
           "en": "How does a refrigerator use electricity?",
-          "is": "Hvernig notar kæliskápur rafmagn?"
+          "is": "Hvernig notar kæliskápur rafmagn?",
+          "pt": "Como é que um frigorífico utiliza eletricidade?",
+          "hr": "Kako hladnjak troši električnu energiju?",
+          "tr": "Bir buzdolabı elektriği nasıl kullanır?",
+          "nl": "Hoe gebruikt een koelkast elektriciteit?"
         },
         "medium": {
           "en": "Energy labels, consumption calculations and cost",
-          "is": "Orkumerkingar, útreikningar á notkun og kostnaður"
+          "is": "Orkumerkingar, útreikningar á notkun og kostnaður",
+          "pt": "Etiquetas energéticas, cálculos de consumo e custo",
+          "hr": "Energetske oznake, izračuni potrošnje i trošak",
+          "tr": "Enerji etiketleri, tüketim hesapları ve maliyet",
+          "nl": "Energielabels, verbruiksberekeningen en kosten"
         },
         "advanced": {
           "en": "Lifecycle cost modelling and environmental impact",
-          "is": "Líkan af kostnaði á líftíma og umhverfisáhrif"
+          "is": "Líkan af kostnaði á líftíma og umhverfisáhrif",
+          "pt": "Modelação do custo do ciclo de vida e impacto ambiental",
+          "hr": "Modeliranje troškova tijekom životnog ciklusa i utjecaj na okoliš",
+          "tr": "Yaşam döngüsü maliyet modellemesi ve çevresel etki",
+          "nl": "Levenscycluskosten modelleren en milieueffect"
         }
       },
       "docx": [
@@ -363,19 +583,51 @@
       "time": {
         "basic": {
           "en": "60 min",
-          "is": "60 mín."
+          "is": "60 mín.",
+          "pt": "60 min",
+          "hr": "60 min",
+          "tr": "60 dk",
+          "nl": "60 min"
         },
         "medium": {
           "en": "90 min",
-          "is": "90 mín."
+          "is": "90 mín.",
+          "pt": "90 min",
+          "hr": "90 min",
+          "tr": "90 dk",
+          "nl": "90 min"
         },
         "advanced": {
           "en": "120 min",
-          "is": "120 mín."
+          "is": "120 mín.",
+          "pt": "120 min",
+          "hr": "120 min",
+          "tr": "120 dk",
+          "nl": "120 min"
         }
       },
       "translated": {
         "is": {
+          "done": 177,
+          "total": 177,
+          "reviewed": false
+        },
+        "pt": {
+          "done": 177,
+          "total": 177,
+          "reviewed": false
+        },
+        "hr": {
+          "done": 177,
+          "total": 177,
+          "reviewed": false
+        },
+        "tr": {
+          "done": 177,
+          "total": 177,
+          "reviewed": false
+        },
+        "nl": {
           "done": 177,
           "total": 177,
           "reviewed": false
@@ -409,20 +661,36 @@
       },
       "title": {
         "en": "Cooking appliances",
-        "is": "Eldunartæki"
+        "is": "Eldunartæki",
+        "pt": "Aparelhos de cozinha",
+        "hr": "Uređaji za kuhanje",
+        "tr": "Pişirme cihazları",
+        "nl": "Kookapparaten"
       },
       "subject": {
         "basic": {
           "en": "Which cooking method uses the most electricity?",
-          "is": "Hvaða eldunaraðferð notar mest rafmagn?"
+          "is": "Hvaða eldunaraðferð notar mest rafmagn?",
+          "pt": "Que método de cozinhar consome mais eletricidade?",
+          "hr": "Koji način kuhanja troši najviše električne energije?",
+          "tr": "Hangi pişirme yöntemi en çok elektrik kullanır?",
+          "nl": "Welke kookmethode gebruikt de meeste elektriciteit?"
         },
         "medium": {
           "en": "Comparing cooking appliances: energy, time and cost",
-          "is": "Eldunartæki borin saman: orka, tími og kostnaður"
+          "is": "Eldunartæki borin saman: orka, tími og kostnaður",
+          "pt": "Comparar aparelhos de cozinha: energia, tempo e custo",
+          "hr": "Usporedba uređaja za kuhanje: energija, vrijeme i trošak",
+          "tr": "Pişirme cihazlarını karşılaştırma: enerji, süre ve maliyet",
+          "nl": "Kookapparaten vergelijken: energie, tijd en kosten"
         },
         "advanced": {
           "en": "Optimising kitchen energy use and carbon footprint",
-          "is": "Orkunotkun og kolefnisspor eldhússins bætt"
+          "is": "Orkunotkun og kolefnisspor eldhússins bætt",
+          "pt": "Otimizar o consumo de energia da cozinha e a pegada de carbono",
+          "hr": "Optimizacija potrošnje energije u kuhinji i ugljičnog otiska",
+          "tr": "Mutfak enerji kullanımını ve karbon ayak izini optimize etme",
+          "nl": "Energiegebruik in de keuken en CO₂-voetafdruk optimaliseren"
         }
       },
       "docx": [
@@ -431,19 +699,51 @@
       "time": {
         "basic": {
           "en": "60 min",
-          "is": "60 mín."
+          "is": "60 mín.",
+          "pt": "60 min",
+          "hr": "60 min",
+          "tr": "60 dk",
+          "nl": "60 min"
         },
         "medium": {
           "en": "90 min",
-          "is": "90 mín."
+          "is": "90 mín.",
+          "pt": "90 min",
+          "hr": "90 min",
+          "tr": "90 dk",
+          "nl": "90 min"
         },
         "advanced": {
           "en": "120 min",
-          "is": "120 mín."
+          "is": "120 mín.",
+          "pt": "120 min",
+          "hr": "120 min",
+          "tr": "120 dk",
+          "nl": "120 min"
         }
       },
       "translated": {
         "is": {
+          "done": 148,
+          "total": 148,
+          "reviewed": false
+        },
+        "pt": {
+          "done": 148,
+          "total": 148,
+          "reviewed": false
+        },
+        "hr": {
+          "done": 148,
+          "total": 148,
+          "reviewed": false
+        },
+        "tr": {
+          "done": 148,
+          "total": 148,
+          "reviewed": false
+        },
+        "nl": {
           "done": 148,
           "total": 148,
           "reviewed": false
@@ -477,20 +777,36 @@
       },
       "title": {
         "en": "Small kitchen appliances",
-        "is": "Smá eldhústæki"
+        "is": "Smá eldhústæki",
+        "pt": "Pequenos eletrodomésticos de cozinha",
+        "hr": "Mali kuhinjski uređaji",
+        "tr": "Küçük mutfak aletleri",
+        "nl": "Kleine keukenapparaten"
       },
       "subject": {
         "basic": {
           "en": "Hidden energy users in the kitchen",
-          "is": "Faldir orkunotendur í eldhúsinu"
+          "is": "Faldir orkunotendur í eldhúsinu",
+          "pt": "Consumidores de energia ocultos na cozinha",
+          "hr": "Skriveni potrošači energije u kuhinji",
+          "tr": "Mutfaktaki gizli enerji tüketicileri",
+          "nl": "Verborgen energieverbruikers in de keuken"
         },
         "medium": {
           "en": "Calculating the real cost of small appliances",
-          "is": "Raunverulegur kostnaður smátækja reiknaður"
+          "is": "Raunverulegur kostnaður smátækja reiknaður",
+          "pt": "Calcular o custo real dos pequenos eletrodomésticos",
+          "hr": "Izračun stvarnog troška malih uređaja",
+          "tr": "Küçük aletlerin gerçek maliyetini hesaplama",
+          "nl": "De werkelijke kosten van kleine apparaten berekenen"
         },
         "advanced": {
           "en": "Standby power, phantom loads and smart solutions",
-          "is": "Biðstöðuafl, draugaálag og snjallar lausnir"
+          "is": "Biðstöðuafl, draugaálag og snjallar lausnir",
+          "pt": "Consumo em modo de espera, cargas fantasma e soluções inteligentes",
+          "hr": "Snaga u stanju pripravnosti, fantomska opterećenja i pametna rješenja",
+          "tr": "Bekleme modu gücü, hayalet yükler ve akıllı çözümler",
+          "nl": "Stand-byvermogen, sluipverbruik en slimme oplossingen"
         }
       },
       "docx": [
@@ -499,19 +815,51 @@
       "time": {
         "basic": {
           "en": "60 min",
-          "is": "60 mín."
+          "is": "60 mín.",
+          "pt": "60 min",
+          "hr": "60 min",
+          "tr": "60 dk",
+          "nl": "60 min"
         },
         "medium": {
           "en": "90 min",
-          "is": "90 mín."
+          "is": "90 mín.",
+          "pt": "90 min",
+          "hr": "90 min",
+          "tr": "90 dk",
+          "nl": "90 min"
         },
         "advanced": {
           "en": "120 min",
-          "is": "120 mín."
+          "is": "120 mín.",
+          "pt": "120 min",
+          "hr": "120 min",
+          "tr": "120 dk",
+          "nl": "120 min"
         }
       },
       "translated": {
         "is": {
+          "done": 145,
+          "total": 145,
+          "reviewed": false
+        },
+        "pt": {
+          "done": 145,
+          "total": 145,
+          "reviewed": false
+        },
+        "hr": {
+          "done": 145,
+          "total": 145,
+          "reviewed": false
+        },
+        "tr": {
+          "done": 145,
+          "total": 145,
+          "reviewed": false
+        },
+        "nl": {
           "done": 145,
           "total": 145,
           "reviewed": false
@@ -545,20 +893,36 @@
       },
       "title": {
         "en": "Dishwashers: energy and water efficiency",
-        "is": "Uppþvottavélar: orku- og vatnsnýtni"
+        "is": "Uppþvottavélar: orku- og vatnsnýtni",
+        "pt": "Máquinas de lavar loiça: eficiência energética e hídrica",
+        "hr": "Perilice posuđa: energetska i vodna učinkovitost",
+        "tr": "Bulaşık makineleri: enerji ve su verimliliği",
+        "nl": "Vaatwassers: energie- en waterefficiëntie"
       },
       "subject": {
         "basic": {
           "en": "How does a dishwasher use energy and water?",
-          "is": "Hvernig notar uppþvottavél orku og vatn?"
+          "is": "Hvernig notar uppþvottavél orku og vatn?",
+          "pt": "Como é que uma máquina de lavar loiça utiliza energia e água?",
+          "hr": "Kako perilica posuđa troši energiju i vodu?",
+          "tr": "Bir bulaşık makinesi enerji ve suyu nasıl kullanır?",
+          "nl": "Hoe gebruikt een vaatwasser energie en water?"
         },
         "medium": {
           "en": "Comparing programmes, calculating cost and water savings",
-          "is": "Kerfi borin saman, kostnaður og vatnssparnaður reiknaður"
+          "is": "Kerfi borin saman, kostnaður og vatnssparnaður reiknaður",
+          "pt": "Comparar programas, calcular custos e poupanças de água",
+          "hr": "Usporedba programa, izračun troška i uštede vode",
+          "tr": "Programları karşılaştırma, maliyet ve su tasarrufu hesaplama",
+          "nl": "Programma's vergelijken, kosten en waterbesparing berekenen"
         },
         "advanced": {
           "en": "Lifecycle analysis, water-energy nexus and policy",
-          "is": "Vistferilsgreining, tengsl vatns og orku og stefnumótun"
+          "is": "Vistferilsgreining, tengsl vatns og orku og stefnumótun",
+          "pt": "Análise do ciclo de vida, relação água-energia e políticas",
+          "hr": "Analiza životnog ciklusa, povezanost vode i energije te politike",
+          "tr": "Yaşam döngüsü analizi, su-enerji bağlantısı ve politika",
+          "nl": "Levenscyclusanalyse, de verbinding tussen water en energie en beleid"
         }
       },
       "docx": [
@@ -567,19 +931,51 @@
       "time": {
         "basic": {
           "en": "60 min",
-          "is": "60 mín."
+          "is": "60 mín.",
+          "pt": "60 min",
+          "hr": "60 min",
+          "tr": "60 dk",
+          "nl": "60 min"
         },
         "medium": {
           "en": "90 min",
-          "is": "90 mín."
+          "is": "90 mín.",
+          "pt": "90 min",
+          "hr": "90 min",
+          "tr": "90 dk",
+          "nl": "90 min"
         },
         "advanced": {
           "en": "120 min",
-          "is": "120 mín."
+          "is": "120 mín.",
+          "pt": "120 min",
+          "hr": "120 min",
+          "tr": "120 dk",
+          "nl": "120 min"
         }
       },
       "translated": {
         "is": {
+          "done": 128,
+          "total": 128,
+          "reviewed": false
+        },
+        "pt": {
+          "done": 128,
+          "total": 128,
+          "reviewed": false
+        },
+        "hr": {
+          "done": 128,
+          "total": 128,
+          "reviewed": false
+        },
+        "tr": {
+          "done": 128,
+          "total": 128,
+          "reviewed": false
+        },
+        "nl": {
           "done": 128,
           "total": 128,
           "reviewed": false
@@ -608,7 +1004,11 @@
       },
       "title": {
         "en": "Cleaning & Household Maintenance: Washing machines and dryers",
-        "is": "Þrif og heimilishald: þvottavélar og þurrkarar"
+        "is": "Þrif og heimilishald: þvottavélar og þurrkarar",
+        "pt": "Limpeza e manutenção doméstica: máquinas de lavar roupa e de secar",
+        "hr": "Čišćenje i održavanje kućanstva: perilice i sušilice rublja",
+        "tr": "Temizlik ve Ev Bakımı: Çamaşır makineleri ve kurutma makineleri",
+        "nl": "Schoonmaak en huishoudelijk onderhoud: wasmachines en wasdrogers"
       },
       "subject": {},
       "docx": [
@@ -617,6 +1017,26 @@
       "time": {},
       "translated": {
         "is": {
+          "done": 87,
+          "total": 87,
+          "reviewed": false
+        },
+        "pt": {
+          "done": 87,
+          "total": 87,
+          "reviewed": false
+        },
+        "hr": {
+          "done": 87,
+          "total": 87,
+          "reviewed": false
+        },
+        "tr": {
+          "done": 87,
+          "total": 87,
+          "reviewed": false
+        },
+        "nl": {
           "done": 87,
           "total": 87,
           "reviewed": false
@@ -645,7 +1065,11 @@
       },
       "title": {
         "en": "Floor care – traditional vacuum vs. robot vacuum",
-        "is": "Gólfþrif – hefðbundin ryksuga eða vélmennaryksuga"
+        "is": "Gólfþrif – hefðbundin ryksuga eða vélmennaryksuga",
+        "pt": "Cuidado do chão – aspirador tradicional vs. aspirador robô",
+        "hr": "Njega podova – klasični usisavač i robotski usisavač",
+        "tr": "Zemin bakımı – geleneksel elektrikli süpürge ve robot süpürge",
+        "nl": "Vloerverzorging – gewone stofzuiger versus robotstofzuiger"
       },
       "subject": {},
       "docx": [
@@ -654,6 +1078,26 @@
       "time": {},
       "translated": {
         "is": {
+          "done": 88,
+          "total": 88,
+          "reviewed": false
+        },
+        "pt": {
+          "done": 88,
+          "total": 88,
+          "reviewed": false
+        },
+        "hr": {
+          "done": 88,
+          "total": 88,
+          "reviewed": false
+        },
+        "tr": {
+          "done": 88,
+          "total": 88,
+          "reviewed": false
+        },
+        "nl": {
           "done": 88,
           "total": 88,
           "reviewed": false
@@ -682,7 +1126,11 @@
       },
       "title": {
         "en": "Energy efficiency of personal care appliances: Hair dryers",
-        "is": "Orkunýtni snyrtitækja: hárblásarar"
+        "is": "Orkunýtni snyrtitækja: hárblásarar",
+        "pt": "Eficiência energética dos aparelhos de cuidado pessoal: secadores de cabelo",
+        "hr": "Energetska učinkovitost uređaja za osobnu njegu: sušila za kosu",
+        "tr": "Kişisel bakım cihazlarının enerji verimliliği: Saç kurutma makineleri",
+        "nl": "Energie-efficiëntie van verzorgingsapparaten: haardrogers"
       },
       "subject": {},
       "docx": [
@@ -691,6 +1139,26 @@
       "time": {},
       "translated": {
         "is": {
+          "done": 77,
+          "total": 77,
+          "reviewed": false
+        },
+        "pt": {
+          "done": 77,
+          "total": 77,
+          "reviewed": false
+        },
+        "hr": {
+          "done": 77,
+          "total": 77,
+          "reviewed": false
+        },
+        "tr": {
+          "done": 77,
+          "total": 77,
+          "reviewed": false
+        },
+        "nl": {
           "done": 77,
           "total": 77,
           "reviewed": false
@@ -724,7 +1192,11 @@
       },
       "title": {
         "en": "Energy Efficiency in the School Computer Lab",
-        "is": "Orkunýtni í tölvuveri skólans"
+        "is": "Orkunýtni í tölvuveri skólans",
+        "pt": "Eficiência energética na sala de informática da escola",
+        "hr": "Energetska učinkovitost u školskoj računalnoj učionici",
+        "tr": "Okul Bilgisayar Laboratuvarında Enerji Verimliliği",
+        "nl": "Energie-efficiëntie in het computerlokaal van de school"
       },
       "subject": {},
       "docx": [
@@ -733,6 +1205,26 @@
       "time": {},
       "translated": {
         "is": {
+          "done": 124,
+          "total": 124,
+          "reviewed": false
+        },
+        "pt": {
+          "done": 124,
+          "total": 124,
+          "reviewed": false
+        },
+        "hr": {
+          "done": 124,
+          "total": 124,
+          "reviewed": false
+        },
+        "tr": {
+          "done": 124,
+          "total": 124,
+          "reviewed": false
+        },
+        "nl": {
           "done": 124,
           "total": 124,
           "reviewed": false
@@ -756,7 +1248,11 @@
       },
       "title": {
         "en": "What is the impact of standby power consumption?",
-        "is": "Hver eru áhrif biðstöðunotkunar?"
+        "is": "Hver eru áhrif biðstöðunotkunar?",
+        "pt": "Qual é o impacto do consumo em modo de espera?",
+        "hr": "Kakav je utjecaj potrošnje u stanju pripravnosti?",
+        "tr": "Bekleme modu güç tüketiminin etkisi nedir?",
+        "nl": "Wat is het effect van stand-byverbruik?"
       },
       "subject": {},
       "docx": [
@@ -765,6 +1261,26 @@
       "time": {},
       "translated": {
         "is": {
+          "done": 65,
+          "total": 65,
+          "reviewed": false
+        },
+        "pt": {
+          "done": 65,
+          "total": 65,
+          "reviewed": false
+        },
+        "hr": {
+          "done": 65,
+          "total": 65,
+          "reviewed": false
+        },
+        "tr": {
+          "done": 65,
+          "total": 65,
+          "reviewed": false
+        },
+        "nl": {
           "done": 65,
           "total": 65,
           "reviewed": false
@@ -788,7 +1304,11 @@
       },
       "title": {
         "en": "I understand the energy classes?",
-        "is": "Skil ég orkuflokkana?"
+        "is": "Skil ég orkuflokkana?",
+        "pt": "Compreendo as classes energéticas?",
+        "hr": "Razumijem li energetske razrede?",
+        "tr": "Enerji sınıflarını anlıyor muyum?",
+        "nl": "Begrijp ik de energieklassen?"
       },
       "subject": {},
       "docx": [
@@ -797,6 +1317,26 @@
       "time": {},
       "translated": {
         "is": {
+          "done": 70,
+          "total": 70,
+          "reviewed": false
+        },
+        "pt": {
+          "done": 70,
+          "total": 70,
+          "reviewed": false
+        },
+        "hr": {
+          "done": 70,
+          "total": 70,
+          "reviewed": false
+        },
+        "tr": {
+          "done": 70,
+          "total": 70,
+          "reviewed": false
+        },
+        "nl": {
           "done": 70,
           "total": 70,
           "reviewed": false
@@ -820,7 +1360,11 @@
       },
       "title": {
         "en": "How much energy does a computer use?",
-        "is": "Hve mikla orku notar tölva?"
+        "is": "Hve mikla orku notar tölva?",
+        "pt": "Quanta energia consome um computador?",
+        "hr": "Koliko energije troši računalo?",
+        "tr": "Bir bilgisayar ne kadar enerji kullanır?",
+        "nl": "Hoeveel energie gebruikt een computer?"
       },
       "subject": {},
       "docx": [
@@ -829,6 +1373,26 @@
       "time": {},
       "translated": {
         "is": {
+          "done": 60,
+          "total": 60,
+          "reviewed": false
+        },
+        "pt": {
+          "done": 60,
+          "total": 60,
+          "reviewed": false
+        },
+        "hr": {
+          "done": 60,
+          "total": 60,
+          "reviewed": false
+        },
+        "tr": {
+          "done": 60,
+          "total": 60,
+          "reviewed": false
+        },
+        "nl": {
           "done": 60,
           "total": 60,
           "reviewed": false
@@ -852,7 +1416,11 @@
       },
       "title": {
         "en": "Do you know your electricity consumption habits?",
-        "is": "Þekkir þú rafmagnsvenjurnar þínar?"
+        "is": "Þekkir þú rafmagnsvenjurnar þínar?",
+        "pt": "Conhece os seus hábitos de consumo de eletricidade?",
+        "hr": "Poznajete li svoje navike potrošnje električne energije?",
+        "tr": "Elektrik tüketim alışkanlıklarınızı biliyor musunuz?",
+        "nl": "Ken jij je elektriciteitsgewoonten?"
       },
       "subject": {},
       "docx": [
@@ -861,6 +1429,26 @@
       "time": {},
       "translated": {
         "is": {
+          "done": 57,
+          "total": 57,
+          "reviewed": false
+        },
+        "pt": {
+          "done": 57,
+          "total": 57,
+          "reviewed": false
+        },
+        "hr": {
+          "done": 57,
+          "total": 57,
+          "reviewed": false
+        },
+        "tr": {
+          "done": 57,
+          "total": 57,
+          "reviewed": false
+        },
+        "nl": {
           "done": 57,
           "total": 57,
           "reviewed": false
@@ -894,7 +1482,11 @@
       },
       "title": {
         "en": "School Restroom Audit",
-        "is": "Úttekt á salernum skólans"
+        "is": "Úttekt á salernum skólans",
+        "pt": "Auditoria às casas de banho da escola",
+        "hr": "Pregled školskih sanitarnih prostorija",
+        "tr": "Okul Tuvaleti Denetimi",
+        "nl": "Audit van de schooltoiletten"
       },
       "subject": {},
       "docx": [
@@ -903,6 +1495,26 @@
       "time": {},
       "translated": {
         "is": {
+          "done": 117,
+          "total": 117,
+          "reviewed": false
+        },
+        "pt": {
+          "done": 117,
+          "total": 117,
+          "reviewed": false
+        },
+        "hr": {
+          "done": 117,
+          "total": 117,
+          "reviewed": false
+        },
+        "tr": {
+          "done": 117,
+          "total": 117,
+          "reviewed": false
+        },
+        "nl": {
           "done": 117,
           "total": 117,
           "reviewed": false
@@ -936,7 +1548,11 @@
       },
       "title": {
         "en": "Renewable Energy – Solar Potential of our School",
-        "is": "Endurnýjanleg orka – sólarorkumöguleikar skólans"
+        "is": "Endurnýjanleg orka – sólarorkumöguleikar skólans",
+        "pt": "Energias renováveis – O potencial solar da nossa escola",
+        "hr": "Obnovljiva energija – sunčev potencijal naše škole",
+        "tr": "Yenilenebilir Enerji – Okulumuzun Güneş Potansiyeli",
+        "nl": "Hernieuwbare energie – zonnepotentieel van onze school"
       },
       "subject": {},
       "docx": [
@@ -945,6 +1561,26 @@
       "time": {},
       "translated": {
         "is": {
+          "done": 119,
+          "total": 119,
+          "reviewed": false
+        },
+        "pt": {
+          "done": 119,
+          "total": 119,
+          "reviewed": false
+        },
+        "hr": {
+          "done": 119,
+          "total": 119,
+          "reviewed": false
+        },
+        "tr": {
+          "done": 119,
+          "total": 119,
+          "reviewed": false
+        },
+        "nl": {
           "done": 119,
           "total": 119,
           "reviewed": false

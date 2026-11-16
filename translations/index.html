@@ -248,6 +248,7 @@
       <div>${esc(ui('trans.progress').replace('{n}', done.size).replace('{total}', sheets.length))}</div>
       <div class="bar"><i style="width:${pct}%"></i></div>
       <p class="how">${esc(ui('trans.how'))} ${esc(ui('trans.deadline'))}</p>
+      <p class="how"><a href="issues.html" style="font-weight:700;color:var(--energy)">⚠ ${esc(ui('trans.issuesLink'))}</a></p>
       <details class="help"><summary>❓ ${esc(ui('edit.help'))} — ${esc(ui('edit.helpTitle'))}</summary>
         <ol>${(ui('edit.helpSteps') || []).map(([h, b]) => `<li><b>${esc(h)}</b><br>${esc(b)}</li>`).join('')}</ol></details>
       <table class="list">${sheets.map(w => `<tr>
