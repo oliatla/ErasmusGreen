@@ -233,7 +233,25 @@
         "Everyone works in a tool they already know — Word for authors, a web page for reviewers. Nobody has to learn AI tools.",
         "Translations survive changes: when an author edits one sentence, only that sentence has to be translated again."
       ],
-      "techTitle": "For developers"
+      "techTitle": "For developers",
+      "aiTitle": "How we use artificial intelligence",
+      "aiLede": "We want to be completely open about this: artificial intelligence (AI) is used in several parts of this work. Here is exactly where — and where it is not.",
+      "aiDoesTitle": "What AI does",
+      "aiDoes": [
+        "Translation: every worksheet is first machine-translated by Claude, an AI model made by Anthropic. A shared list of terms keeps the wording consistent.",
+        "Software: the tools behind the website — the reader that turns Word files into web pages, the translation editor and the Word export — were written with the help of Claude, directed and checked by a person.",
+        "Interface texts: buttons, menus and help texts on this website were translated with AI."
+      ],
+      "aiNotTitle": "What AI does not do",
+      "aiNot": [
+        "AI does not write the teaching content. The worksheets are written by teachers at the five partner schools.",
+        "AI does not decide what is published. A machine translation is marked “Machine translation — not yet reviewed” on every page until a teacher in that country has checked it.",
+        "AI does not see any student data. Only the worksheet texts are translated; nothing about students is collected."
+      ],
+      "dataTitle": "Data",
+      "dataText": "Translators sign in with an email address. Their name, email, chosen language and the corrections they make are stored in a database in the EU (Supabase, Frankfurt) for the translation phase, so every change can be traced and undone. The worksheet texts are sent to Anthropic to be translated.",
+      "respTitle": "Responsible for the content",
+      "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, electrical department) is responsible for the content published on this website and for the way AI is used in this work. Every worksheet remains the work of its authors at the partner schools."
     }
   },
   "is": {
@@ -466,7 +484,25 @@
         "Hver vinnur í tóli sem hann þekkir — höfundar í Word, yfirlesarar á vefsíðu. Enginn þarf að læra á gervigreindartól.",
         "Þýðingar lifa breytingar af: þegar höfundur breytir einni setningu þarf aðeins að þýða þá setningu aftur."
       ],
-      "techTitle": "Fyrir forritara"
+      "techTitle": "Fyrir forritara",
+      "aiTitle": "Hvernig við notum gervigreind",
+      "aiLede": "Við viljum vera algjörlega opin um þetta: gervigreind er notuð í nokkrum hlutum þessarar vinnu. Hér kemur nákvæmlega fram hvar — og hvar ekki.",
+      "aiDoesTitle": "Það sem gervigreindin gerir",
+      "aiDoes": [
+        "Þýðingar: hvert verkefnablað er fyrst vélþýtt af Claude, gervigreindarlíkani frá Anthropic. Sameiginlegur hugtakalisti heldur orðalaginu samræmdu.",
+        "Hugbúnaður: tólin á bak við vefinn — lesarinn sem breytir Word-skjölum í vefsíður, þýðingaritillinn og Word-útflutningurinn — voru skrifuð með aðstoð Claude, undir stjórn og eftirliti manneskju.",
+        "Viðmótstextar: hnappar, valmyndir og hjálpartextar á vefnum voru þýddir með gervigreind."
+      ],
+      "aiNotTitle": "Það sem gervigreindin gerir ekki",
+      "aiNot": [
+        "Gervigreindin skrifar ekki kennsluefnið. Verkefnablöðin eru skrifuð af kennurum í samstarfsskólunum fimm.",
+        "Gervigreindin ákveður ekki hvað er birt. Vélþýðing er merkt „Vélþýðing — kennari hefur ekki enn farið yfir hana“ á hverri síðu þar til kennari í viðkomandi landi hefur yfirfarið hana.",
+        "Gervigreindin sér engin gögn um nemendur. Aðeins textar verkefnablaðanna eru þýddir; engu er safnað um nemendur."
+      ],
+      "dataTitle": "Gögn",
+      "dataText": "Þýðendur skrá sig inn með netfangi. Nafn þeirra, netfang, valið tungumál og leiðréttingarnar sem þeir gera eru geymd í gagnagrunni innan ESB (Supabase, Frankfurt) á meðan þýðingarfasinn stendur yfir, svo hægt sé að rekja og afturkalla hverja breytingu. Textar verkefnablaðanna eru sendir til Anthropic til þýðingar.",
+      "respTitle": "Ábyrgð á efninu",
+      "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, rafdeild) ber ábyrgð á efninu sem birt er á þessum vef og á því hvernig gervigreind er notuð í þessari vinnu. Hvert verkefnablað er áfram verk höfunda sinna í samstarfsskólunum."
     }
   },
   "pt": {
@@ -699,7 +735,25 @@
         "Cada pessoa trabalha numa ferramenta que já conhece — Word para os autores, uma página web para os revisores. Ninguém precisa de aprender ferramentas de IA.",
         "As traduções sobrevivem às alterações: quando um autor altera uma frase, só essa frase tem de ser traduzida de novo."
       ],
-      "techTitle": "Para programadores"
+      "techTitle": "Para programadores",
+      "aiTitle": "Como usamos a inteligência artificial",
+      "aiLede": "Queremos ser totalmente transparentes: a inteligência artificial (IA) é usada em várias partes deste trabalho. Eis exatamente onde — e onde não é.",
+      "aiDoesTitle": "O que a IA faz",
+      "aiDoes": [
+        "Tradução: cada ficha é primeiro traduzida automaticamente pelo Claude, um modelo de IA da Anthropic. Uma lista comum de termos mantém a terminologia coerente.",
+        "Software: as ferramentas por detrás do site — o leitor que transforma ficheiros Word em páginas web, o editor de traduções e a exportação para Word — foram escritas com a ajuda do Claude, sob a direção e verificação de uma pessoa.",
+        "Textos da interface: botões, menus e textos de ajuda deste site foram traduzidos com IA."
+      ],
+      "aiNotTitle": "O que a IA não faz",
+      "aiNot": [
+        "A IA não escreve o conteúdo pedagógico. As fichas são escritas por professores das cinco escolas parceiras.",
+        "A IA não decide o que é publicado. Uma tradução automática fica assinalada como «Tradução automática — ainda não revista» em todas as páginas até um professor desse país a verificar.",
+        "A IA não vê quaisquer dados de alunos. Apenas os textos das fichas são traduzidos; nada é recolhido sobre os alunos."
+      ],
+      "dataTitle": "Dados",
+      "dataText": "Os tradutores iniciam sessão com um endereço de e-mail. O nome, o e-mail, a língua escolhida e as correções que fazem são guardados numa base de dados na UE (Supabase, Frankfurt) durante a fase de tradução, para que cada alteração possa ser rastreada e anulada. Os textos das fichas são enviados à Anthropic para serem traduzidos.",
+      "respTitle": "Responsável pelo conteúdo",
+      "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, departamento de eletricidade) é responsável pelo conteúdo publicado neste site e pela forma como a IA é usada neste trabalho. Cada ficha continua a ser obra dos seus autores nas escolas parceiras."
     }
   },
   "hr": {
@@ -932,7 +986,25 @@
         "Svatko radi u alatu koji već poznaje — autori u Wordu, recenzenti na web-stranici. Nitko ne mora učiti alate umjetne inteligencije.",
         "Prijevodi preživljavaju promjene: kad autor promijeni jednu rečenicu, samo se ta rečenica mora ponovno prevesti."
       ],
-      "techTitle": "Za programere"
+      "techTitle": "Za programere",
+      "aiTitle": "Kako koristimo umjetnu inteligenciju",
+      "aiLede": "Želimo biti potpuno otvoreni: umjetna inteligencija (UI) koristi se u nekoliko dijelova ovog rada. Evo točno gdje — i gdje ne.",
+      "aiDoesTitle": "Što radi umjetna inteligencija",
+      "aiDoes": [
+        "Prijevod: svaki radni list najprije strojno prevodi Claude, model umjetne inteligencije tvrtke Anthropic. Zajednički popis pojmova održava ujednačenu terminologiju.",
+        "Softver: alati iza web-stranice — čitač koji Word datoteke pretvara u web-stranice, uređivač prijevoda i izvoz u Word — napisani su uz pomoć Claudea, pod vodstvom i nadzorom čovjeka.",
+        "Tekstovi sučelja: gumbi, izbornici i tekstovi pomoći na ovoj web-stranici prevedeni su uz pomoć umjetne inteligencije."
+      ],
+      "aiNotTitle": "Što umjetna inteligencija ne radi",
+      "aiNot": [
+        "Umjetna inteligencija ne piše nastavni sadržaj. Radne listove pišu nastavnici pet partnerskih škola.",
+        "Umjetna inteligencija ne odlučuje što se objavljuje. Strojni prijevod označen je „Strojni prijevod — još nije pregledan” na svakoj stranici dok ga nastavnik iz te zemlje ne provjeri.",
+        "Umjetna inteligencija ne vidi nikakve podatke o učenicima. Prevode se samo tekstovi radnih listova; o učenicima se ništa ne prikuplja."
+      ],
+      "dataTitle": "Podaci",
+      "dataText": "Prevoditelji se prijavljuju adresom e-pošte. Njihovo ime, e-pošta, odabrani jezik i ispravci koje unose pohranjuju se u bazi podataka u EU (Supabase, Frankfurt) tijekom faze prevođenja, tako da se svaka promjena može pratiti i poništiti. Tekstovi radnih listova šalju se tvrtki Anthropic na prijevod.",
+      "respTitle": "Odgovornost za sadržaj",
+      "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, elektrotehnički odjel) odgovoran je za sadržaj objavljen na ovoj web-stranici i za način na koji se umjetna inteligencija koristi u ovom radu. Svaki radni list ostaje djelo svojih autora u partnerskim školama."
     }
   },
   "tr": {
@@ -1165,7 +1237,25 @@
         "Herkes zaten bildiği bir araçla çalışır — yazarlar Word’de, kontrol edenler bir web sayfasında. Kimsenin yapay zekâ araçlarını öğrenmesi gerekmez.",
         "Çeviriler değişikliklere dayanır: bir yazar tek bir cümleyi değiştirdiğinde yalnızca o cümlenin yeniden çevrilmesi gerekir."
       ],
-      "techTitle": "Geliştiriciler için"
+      "techTitle": "Geliştiriciler için",
+      "aiTitle": "Yapay zekâyı nasıl kullanıyoruz",
+      "aiLede": "Bu konuda tamamen açık olmak istiyoruz: yapay zekâ bu çalışmanın birkaç bölümünde kullanılıyor. İşte tam olarak nerede kullanıldığı — ve nerede kullanılmadığı.",
+      "aiDoesTitle": "Yapay zekânın yaptıkları",
+      "aiDoes": [
+        "Çeviri: her çalışma yaprağı önce Anthropic’in yapay zekâ modeli Claude tarafından makine ile çevrilir. Ortak bir terim listesi ifadelerin tutarlı kalmasını sağlar.",
+        "Yazılım: web sitesinin arkasındaki araçlar — Word dosyalarını web sayfalarına dönüştüren okuyucu, çeviri düzenleyicisi ve Word’e aktarma — bir insanın yönlendirmesi ve denetimiyle Claude’un yardımıyla yazıldı.",
+        "Arayüz metinleri: bu sitedeki düğmeler, menüler ve yardım metinleri yapay zekâ ile çevrildi."
+      ],
+      "aiNotTitle": "Yapay zekânın yapmadıkları",
+      "aiNot": [
+        "Yapay zekâ öğretim içeriğini yazmaz. Çalışma yaprakları beş ortak okuldaki öğretmenler tarafından yazılır.",
+        "Yapay zekâ neyin yayımlanacağına karar vermez. Makine çevirisi, o ülkedeki bir öğretmen kontrol edene kadar her sayfada “Makine çevirisi — henüz kontrol edilmedi” olarak işaretlenir.",
+        "Yapay zekâ hiçbir öğrenci verisini görmez. Yalnızca çalışma yaprağı metinleri çevrilir; öğrenciler hakkında hiçbir şey toplanmaz."
+      ],
+      "dataTitle": "Veriler",
+      "dataText": "Çevirmenler bir e-posta adresiyle oturum açar. Adları, e-postaları, seçtikleri dil ve yaptıkları düzeltmeler, her değişikliğin izlenebilmesi ve geri alınabilmesi için çeviri aşaması boyunca AB’deki bir veritabanında (Supabase, Frankfurt) saklanır. Çalışma yaprağı metinleri çeviri için Anthropic’e gönderilir.",
+      "respTitle": "İçerikten sorumlu kişi",
+      "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, elektrik bölümü), bu web sitesinde yayımlanan içerikten ve bu çalışmada yapay zekânın nasıl kullanıldığından sorumludur. Her çalışma yaprağı, ortak okullardaki yazarlarının eseri olmaya devam eder."
     }
   },
   "nl": {
@@ -1398,7 +1488,25 @@
         "Iedereen werkt in een programma dat hij al kent — Word voor auteurs, een webpagina voor nakijkers. Niemand hoeft AI-programma’s te leren.",
         "Vertalingen overleven wijzigingen: als een auteur één zin aanpast, hoeft alleen die zin opnieuw vertaald te worden."
       ],
-      "techTitle": "Voor ontwikkelaars"
+      "techTitle": "Voor ontwikkelaars",
+      "aiTitle": "Hoe we kunstmatige intelligentie gebruiken",
+      "aiLede": "We willen hier volledig open over zijn: kunstmatige intelligentie (AI) wordt in verschillende delen van dit werk gebruikt. Hier staat precies waar — en waar niet.",
+      "aiDoesTitle": "Wat AI doet",
+      "aiDoes": [
+        "Vertaling: elk werkblad wordt eerst machinaal vertaald door Claude, een AI-model van Anthropic. Een gedeelde begrippenlijst houdt de terminologie consistent.",
+        "Software: de hulpmiddelen achter de website — de lezer die Word-bestanden omzet in webpagina’s, de vertaaleditor en de Word-export — zijn geschreven met hulp van Claude, onder leiding en controle van een mens.",
+        "Interfaceteksten: knoppen, menu’s en hulpteksten op deze website zijn met AI vertaald."
+      ],
+      "aiNotTitle": "Wat AI niet doet",
+      "aiNot": [
+        "AI schrijft de lesinhoud niet. De werkbladen worden geschreven door docenten van de vijf partnerscholen.",
+        "AI beslist niet wat er gepubliceerd wordt. Een machinevertaling staat op elke pagina gemarkeerd als „Machinevertaling — nog niet nagekeken” totdat een docent uit dat land haar heeft gecontroleerd.",
+        "AI ziet geen gegevens van leerlingen. Alleen de teksten van de werkbladen worden vertaald; over leerlingen wordt niets verzameld."
+      ],
+      "dataTitle": "Gegevens",
+      "dataText": "Vertalers loggen in met een e-mailadres. Hun naam, e-mail, gekozen taal en de verbeteringen die ze maken worden tijdens de vertaalfase opgeslagen in een database in de EU (Supabase, Frankfurt), zodat elke wijziging te volgen en ongedaan te maken is. De teksten van de werkbladen worden naar Anthropic gestuurd om te worden vertaald.",
+      "respTitle": "Verantwoordelijk voor de inhoud",
+      "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, afdeling elektrotechniek) is verantwoordelijk voor de inhoud die op deze website wordt gepubliceerd en voor de manier waarop AI in dit werk wordt gebruikt. Elk werkblad blijft het werk van de auteurs op de partnerscholen."
     }
   }
 }

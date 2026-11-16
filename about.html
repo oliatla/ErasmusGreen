@@ -42,6 +42,16 @@
   .why { display: grid; grid-template-columns: repeat(3, 1fr); gap: .85rem; }
   .why div { background: var(--green-bg); border: 1px solid var(--green-border); border-radius: var(--r); padding: .9rem 1rem; font-size: .9rem; }
 
+  .ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .85rem; margin-bottom: .85rem; }
+  .ai-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r); padding: 1rem 1.1rem; box-shadow: var(--shadow); }
+  .ai-box h3 { font-size: 1rem; margin-bottom: .5rem; }
+  .ai-box ul { margin: 0; padding-left: 1.1rem; }
+  .ai-box li, .ai-box p { font-size: .88rem; color: var(--text-sec); line-height: 1.55; margin-bottom: .45rem; }
+  .ai-box.yes { border-top: 3px solid var(--water); }
+  .ai-box.no  { border-top: 3px solid var(--green); }
+  .ai-box.resp { background: var(--green-bg); border-color: var(--green-border); }
+  .ai-box.resp p { color: var(--text); }
+  @media (max-width: 860px) { .ai-grid { grid-template-columns: 1fr; } }
   details.tech { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r); padding: .8rem 1rem; }
   details.tech summary { cursor: pointer; font-weight: 700; }
   details.tech pre { background: var(--bg-subtle); border-radius: var(--rs); padding: .8rem 1rem; overflow-x: auto; font: .8rem/1.6 var(--mono); margin-top: .8rem; }
@@ -100,6 +110,20 @@
   <section class="section">
     <h2 id="why-title"></h2>
     <div class="why" id="why"></div>
+  </section>
+
+  <!-- ===== AI: open about where it is and is not used, and who is responsible ===== -->
+  <section class="section" id="ai">
+    <h2 id="ai-title"></h2>
+    <p id="ai-lede"></p>
+    <div class="ai-grid">
+      <div class="ai-box yes"><h3 id="ai-does-title"></h3><ul id="ai-does"></ul></div>
+      <div class="ai-box no"><h3 id="ai-not-title"></h3><ul id="ai-not"></ul></div>
+    </div>
+    <div class="ai-grid">
+      <div class="ai-box"><h3 id="data-title"></h3><p id="data-text"></p></div>
+      <div class="ai-box resp"><h3 id="resp-title"></h3><p id="resp-text"></p></div>
+    </div>
   </section>
 
   <section class="section">
@@ -177,6 +201,10 @@ https://github.com/oliatla/ErasmusGreen</pre>
     $('why-title').textContent = ui('about.whyTitle');
     $('why').innerHTML = ui('about.whyItems').map(t => `<div>${esc(t)}</div>`).join('');
     $('tech-title').textContent = ui('about.techTitle');
+    for (const [id, key] of [['ai-title', 'aiTitle'], ['ai-lede', 'aiLede'], ['ai-does-title', 'aiDoesTitle'], ['ai-not-title', 'aiNotTitle'],
+      ['data-title', 'dataTitle'], ['data-text', 'dataText'], ['resp-title', 'respTitle'], ['resp-text', 'respText']]) $(id).textContent = ui('about.' + key);
+    $('ai-does').innerHTML = ui('about.aiDoes').map(t => `<li>${esc(t)}</li>`).join('');
+    $('ai-not').innerHTML = ui('about.aiNot').map(t => `<li>${esc(t)}</li>`).join('');
     $('disclaimer').textContent = ui('disclaimer');
     $('project').textContent = ui('projectLine');
     document.querySelectorAll('.lang-flag').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === lang));
