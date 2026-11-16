@@ -119,7 +119,40 @@
       "original": "Machine translation (original)",
       "reverted": "set back to the machine translation",
       "current": "current",
-      "noHistory": "No changes yet."
+      "noHistory": "No changes yet.",
+      "help": "Help",
+      "helpTitle": "How to review a worksheet",
+      "helpOk": "Got it",
+      "helpSteps": [
+        [
+          "Click a text",
+          "Click any text on the worksheet that is wrong. It turns yellow and a panel opens on the right."
+        ],
+        [
+          "Correct it",
+          "The panel shows the English original above and your translation below. Type the correction — it is saved automatically a second after you stop typing (“✓ Saved”)."
+        ],
+        [
+          "Green = corrected",
+          "Corrected texts are green on the page. The same sentence is corrected everywhere it appears, in all worksheets."
+        ],
+        [
+          "Change your mind?",
+          "Under “History of changes” you see every version, who saved it and when. “Use this version” brings an older one back; “Use the machine translation again” undoes your change."
+        ],
+        [
+          "Mark it as reviewed",
+          "When the whole worksheet is checked, press “I have reviewed this worksheet” in the green bar at the bottom. Your progress is shown on the translations page."
+        ],
+        [
+          "Error in the English text?",
+          "Write a note to the author in the green bar. Only the translation is changed here — the English original is fixed by its author."
+        ],
+        [
+          "Good to know",
+          "Keep **bold** marks, $formulas$ and ____ answer lines as they are, and use your language’s decimal comma. Esc closes the panel. You can only change your own language."
+        ]
+      ]
     },
     "trans": {
       "title": "GREEN translations",
@@ -258,7 +291,40 @@
       "original": "Vélþýðing (upphafleg)",
       "reverted": "sett aftur í vélþýðinguna",
       "current": "núverandi",
-      "noHistory": "Engar breytingar enn."
+      "noHistory": "Engar breytingar enn.",
+      "help": "Aðstoð",
+      "helpTitle": "Svona ferðu yfir verkefnablað",
+      "helpOk": "Ég skil",
+      "helpSteps": [
+        [
+          "Smelltu á texta",
+          "Smelltu á texta á blaðinu sem er rangur. Hann verður gulur og spjald opnast hægra megin."
+        ],
+        [
+          "Lagaðu hann",
+          "Í spjaldinu er enski frumtextinn efst og þýðingin þín fyrir neðan. Skrifaðu leiðréttinguna — hún vistast sjálfkrafa sekúndu eftir að þú hættir að skrifa („✓ Vistað“)."
+        ],
+        [
+          "Grænt = leiðrétt",
+          "Leiðréttir textar eru grænir á blaðinu. Sama setning lagast alls staðar þar sem hún kemur fyrir, í öllum blöðunum."
+        ],
+        [
+          "Skiptir þú um skoðun?",
+          "Undir „Saga breytinga“ sérðu allar útgáfur, hver vistaði þær og hvenær. „Nota þessa útgáfu“ sækir eldri útgáfu; „Nota vélþýðinguna aftur“ afturkallar breytinguna."
+        ],
+        [
+          "Merktu blaðið yfirfarið",
+          "Þegar allt blaðið er yfirfarið ýtirðu á „Ég hef farið yfir þetta blað“ í grænu stikunni neðst. Framvindan þín sést á þýðingasíðunni."
+        ],
+        [
+          "Villa í enska textanum?",
+          "Skrifaðu athugasemd til höfundar í grænu stikunni. Hér er aðeins þýðingunni breytt — höfundurinn lagar enska frumtextann."
+        ],
+        [
+          "Gott að vita",
+          "Haltu **feitletrun**, $formúlum$ og ____ svarlínum óbreyttum og notaðu kommu í tugabrotum. Esc lokar spjaldinu. Þú getur aðeins breytt þínu tungumáli."
+        ]
+      ]
     },
     "trans": {
       "title": "GREEN þýðingar",
@@ -397,7 +463,40 @@
       "original": "Tradução automática (original)",
       "reverted": "reposta a tradução automática",
       "current": "atual",
-      "noHistory": "Ainda sem alterações."
+      "noHistory": "Ainda sem alterações.",
+      "help": "Ajuda",
+      "helpTitle": "Como rever uma ficha",
+      "helpOk": "Entendi",
+      "helpSteps": [
+        [
+          "Clique num texto",
+          "Clique em qualquer texto da ficha que esteja errado. Fica amarelo e abre-se um painel à direita."
+        ],
+        [
+          "Corrija-o",
+          "O painel mostra o original em inglês em cima e a sua tradução em baixo. Escreva a correção — é guardada automaticamente um segundo depois de parar de escrever («✓ Guardado»)."
+        ],
+        [
+          "Verde = corrigido",
+          "Os textos corrigidos ficam verdes na página. A mesma frase é corrigida em todo o lado onde aparece, em todas as fichas."
+        ],
+        [
+          "Mudou de ideias?",
+          "Em «Histórico de alterações» vê todas as versões, quem as guardou e quando. «Usar esta versão» recupera uma versão anterior; «Usar novamente a tradução automática» anula a alteração."
+        ],
+        [
+          "Marque como revista",
+          "Quando a ficha inteira estiver verificada, carregue em «Revi esta ficha» na barra verde em baixo. O seu progresso aparece na página de traduções."
+        ],
+        [
+          "Erro no texto em inglês?",
+          "Escreva uma nota para o autor na barra verde. Aqui só se altera a tradução — o original em inglês é corrigido pelo autor."
+        ],
+        [
+          "É bom saber",
+          "Mantenha as marcas de **negrito**, as $fórmulas$ e as linhas de resposta ____ tal como estão, e use a vírgula decimal. Esc fecha o painel. Só pode alterar a sua própria língua."
+        ]
+      ]
     },
     "trans": {
       "title": "Traduções GREEN",
@@ -536,7 +635,40 @@
       "original": "Strojni prijevod (izvorni)",
       "reverted": "vraćeno na strojni prijevod",
       "current": "trenutačno",
-      "noHistory": "Još nema promjena."
+      "noHistory": "Još nema promjena.",
+      "help": "Pomoć",
+      "helpTitle": "Kako pregledati radni list",
+      "helpOk": "Razumijem",
+      "helpSteps": [
+        [
+          "Kliknite na tekst",
+          "Kliknite na bilo koji tekst na radnom listu koji je pogrešan. Postane žut, a s desne strane otvori se ploča."
+        ],
+        [
+          "Ispravite ga",
+          "Ploča prikazuje engleski izvornik gore i vaš prijevod ispod. Upišite ispravak — sprema se automatski sekundu nakon što prestanete tipkati („✓ Spremljeno”)."
+        ],
+        [
+          "Zeleno = ispravljeno",
+          "Ispravljeni tekstovi su zeleni na stranici. Ista rečenica ispravlja se svugdje gdje se pojavljuje, u svim radnim listovima."
+        ],
+        [
+          "Predomislili ste se?",
+          "Pod „Povijest promjena” vidite sve verzije, tko ih je spremio i kada. „Upotrijebi ovu verziju” vraća stariju verziju; „Ponovno upotrijebi strojni prijevod” poništava promjenu."
+        ],
+        [
+          "Označite kao pregledano",
+          "Kad je cijeli radni list provjeren, pritisnite „Pregledao/la sam ovaj radni list” na zelenoj traci na dnu. Vaš napredak vidi se na stranici za prijevode."
+        ],
+        [
+          "Pogreška u engleskom tekstu?",
+          "Napišite napomenu autoru na zelenoj traci. Ovdje se mijenja samo prijevod — engleski izvornik ispravlja autor."
+        ],
+        [
+          "Dobro je znati",
+          "Ostavite oznake za **podebljano**, $formule$ i ____ crte za odgovore kakve jesu i koristite decimalni zarez. Esc zatvara ploču. Možete mijenjati samo svoj jezik."
+        ]
+      ]
     },
     "trans": {
       "title": "GREEN prijevodi",
@@ -675,7 +807,40 @@
       "original": "Makine çevirisi (orijinal)",
       "reverted": "makine çevirisine geri döndürüldü",
       "current": "şu anki",
-      "noHistory": "Henüz değişiklik yok."
+      "noHistory": "Henüz değişiklik yok.",
+      "help": "Yardım",
+      "helpTitle": "Bir çalışma yaprağı nasıl kontrol edilir",
+      "helpOk": "Anladım",
+      "helpSteps": [
+        [
+          "Bir metne tıklayın",
+          "Çalışma yaprağında yanlış olan herhangi bir metne tıklayın. Metin sarıya döner ve sağda bir panel açılır."
+        ],
+        [
+          "Düzeltin",
+          "Panelde üstte İngilizce asıl metin, altta sizin çeviriniz vardır. Düzeltmeyi yazın — yazmayı bıraktıktan bir saniye sonra otomatik olarak kaydedilir (“✓ Kaydedildi”)."
+        ],
+        [
+          "Yeşil = düzeltildi",
+          "Düzeltilen metinler sayfada yeşil görünür. Aynı cümle, tüm çalışma yapraklarında geçtiği her yerde düzeltilir."
+        ],
+        [
+          "Fikrinizi mi değiştirdiniz?",
+          "“Değişiklik geçmişi” altında tüm sürümleri, kimin ne zaman kaydettiğini görürsünüz. “Bu sürümü kullan” eski bir sürümü geri getirir; “Makine çevirisini yeniden kullan” değişikliğinizi geri alır."
+        ],
+        [
+          "Kontrol edildi olarak işaretleyin",
+          "Yaprağın tamamı kontrol edildiğinde alttaki yeşil çubukta “Bu çalışma yaprağını kontrol ettim” düğmesine basın. İlerlemeniz çeviri sayfasında görünür."
+        ],
+        [
+          "İngilizce metinde hata mı var?",
+          "Yeşil çubuktan yazara bir not yazın. Burada yalnızca çeviri değiştirilir — İngilizce asıl metni yazarı düzeltir."
+        ],
+        [
+          "Bilmekte fayda var",
+          "**Kalın** işaretlerini, $formülleri$ ve ____ cevap çizgilerini olduğu gibi bırakın ve ondalık virgül kullanın. Esc paneli kapatır. Yalnızca kendi dilinizi değiştirebilirsiniz."
+        ]
+      ]
     },
     "trans": {
       "title": "GREEN çevirileri",
@@ -814,7 +979,40 @@
       "original": "Machinevertaling (origineel)",
       "reverted": "teruggezet naar de machinevertaling",
       "current": "huidig",
-      "noHistory": "Nog geen wijzigingen."
+      "noHistory": "Nog geen wijzigingen.",
+      "help": "Hulp",
+      "helpTitle": "Zo kijk je een werkblad na",
+      "helpOk": "Begrepen",
+      "helpSteps": [
+        [
+          "Klik op een tekst",
+          "Klik op een tekst op het werkblad die fout is. Die wordt geel en rechts opent een paneel."
+        ],
+        [
+          "Verbeter hem",
+          "Het paneel toont het Engelse origineel bovenaan en jouw vertaling eronder. Typ de verbetering — die wordt automatisch opgeslagen een seconde nadat je stopt met typen („✓ Opgeslagen”)."
+        ],
+        [
+          "Groen = verbeterd",
+          "Verbeterde teksten zijn groen op de pagina. Dezelfde zin wordt overal verbeterd waar hij voorkomt, in alle werkbladen."
+        ],
+        [
+          "Toch iets anders?",
+          "Onder „Wijzigingsgeschiedenis” zie je alle versies, wie ze opsloeg en wanneer. „Deze versie gebruiken” haalt een oudere versie terug; „Machinevertaling weer gebruiken” maakt je wijziging ongedaan."
+        ],
+        [
+          "Markeer als nagekeken",
+          "Is het hele werkblad gecontroleerd, druk dan op „Ik heb dit werkblad nagekeken” in de groene balk onderaan. Je voortgang staat op de vertaalpagina."
+        ],
+        [
+          "Fout in de Engelse tekst?",
+          "Schrijf een opmerking voor de auteur in de groene balk. Hier wordt alleen de vertaling veranderd — het Engelse origineel verbetert de auteur."
+        ],
+        [
+          "Goed om te weten",
+          "Laat **vet**-tekens, $formules$ en ____ antwoordlijnen zoals ze zijn en gebruik de decimale komma. Esc sluit het paneel. Je kunt alleen je eigen taal wijzigen."
+        ]
+      ]
     },
     "trans": {
       "title": "GREEN vertalingen",

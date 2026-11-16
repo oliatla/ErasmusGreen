@@ -32,6 +32,10 @@
   table.list .meta { color: var(--text-muted); font-size: .8rem; white-space: nowrap; }
   table.list .ok { color: var(--green); font-weight: 700; white-space: nowrap; }
   table.list a.btn { margin: 0; padding: .35rem .8rem; font-size: .82rem; }
+  details.help { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r); padding: .7rem 1rem; margin-bottom: 1.2rem; }
+  details.help summary { cursor: pointer; font-weight: 700; color: var(--green); }
+  details.help ol { margin: .8rem 0 .2rem 1.2rem; font-size: .9rem; color: var(--text-sec); }
+  details.help li { margin-bottom: .55rem; }
   @media (max-width: 640px) { table.list .meta { display: none; } }
 </style>
 </head>
@@ -207,6 +211,8 @@
       <div>${esc(ui('trans.progress').replace('{n}', done.size).replace('{total}', sheets.length))}</div>
       <div class="bar"><i style="width:${pct}%"></i></div>
       <p class="how">${esc(ui('trans.how'))} ${esc(ui('trans.deadline'))}</p>
+      <details class="help"><summary>❓ ${esc(ui('edit.help'))} — ${esc(ui('edit.helpTitle'))}</summary>
+        <ol>${(ui('edit.helpSteps') || []).map(([h, b]) => `<li><b>${esc(h)}</b><br>${esc(b)}</li>`).join('')}</ol></details>
       <table class="list">${sheets.map(w => `<tr>
           <td>${w.country ? `<img src="../img/flags/${w.country}.svg" alt="">` : ''}${esc(title(w))}</td>
           <td class="meta">${count[w.slug] ? esc(ui('trans.edits').replace('{n}', count[w.slug])) : ''}</td>

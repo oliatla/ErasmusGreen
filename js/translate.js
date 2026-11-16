@@ -43,6 +43,15 @@
     .tr-panel .tr-status.err { color: #b00020; font-weight: 600; }
     .tr-panel button { font: inherit; font-size: 13px; border: 1px solid #c1c7d0; background: #fff; border-radius: 6px; padding: 4px 10px; cursor: pointer; }
     .tr-panel .tr-close { float: right; border: 0; font-size: 18px; line-height: 1; padding: 0 4px; }
+    .tr-modal { position: fixed; inset: 0; z-index: 80; background: rgba(17,19,24,.55); display: flex; align-items: center; justify-content: center; padding: 16px; }
+    .tr-modal[hidden] { display: none; }
+    .tr-modal-box { position: relative; background: #fff; color: #1a1d27; border-radius: 12px; max-width: 560px; width: 100%; max-height: calc(100vh - 32px); overflow: auto;
+      padding: 22px 26px; font: 15px/1.55 "Open Sans", system-ui, sans-serif; box-shadow: 0 12px 40px rgba(0,0,0,.3); }
+    .tr-modal-box h3 { margin: 0 0 12px; color: #1b6b3a; font-size: 19px; }
+    .tr-modal-box ol { margin: 0 0 16px; padding-left: 22px; }
+    .tr-modal-box li { margin-bottom: 10px; }
+    .tr-modal-box .tr-close { position: absolute; top: 10px; right: 12px; border: 0; background: none; font-size: 22px; cursor: pointer; color: #5f6b76; }
+    .tr-modal-box .tr-ok { font: inherit; font-weight: 700; background: #1b6b3a; color: #fff; border: 0; border-radius: 6px; padding: 8px 18px; cursor: pointer; }
     .tr-history { font-size: 13px; }
     .tr-h { border-left: 3px solid #dfe1e6; padding: 4px 0 6px 10px; margin: 6px 0; }
     .tr-h.now { border-left-color: #1b6b3a; }
@@ -110,10 +119,40 @@
   function drawBar() {
     say(`<span class="tr-hint">✏️ ${esc(t('hint'))} · ${esc(t('signedInAs'))} ${esc(me.name || session.user.email)} (${me.lang.toUpperCase()}) · <a href="${home}">${esc(t('home'))}</a></span>
       <form class="tr-note"><input name="note" maxlength="4000" placeholder="${esc(t('note'))}"><button>${esc(t('sendNote'))}</button></form>
-      <button class="tr-review" aria-pressed="${reviewed}">${esc(reviewed ? t('reviewedDone') : t('reviewed'))}</button>`);
+      <button class="tr-review" aria-pressed="${reviewed}">${esc(reviewed ? t('reviewedDone') : t('reviewed'))}</button>
+      <button class="tr-help">❓ ${esc(t('help'))}</button>`);
   }
   drawBar();
+
+  /* ---------- help: opens by itself the first time ---------- */
+  const help = document.createElement('div');
+  help.className = 'tr-modal';
+  help.hidden = true;
+  document.body.appendChild(help);
+  function showHelp() {
+    const steps = api.ui('edit.helpSteps');
+    help.innerHTML = `<div class="tr-modal-box" role="dialog" aria-modal="true" aria-labelledby="tr-help-title">
+        <button class="tr-close" title="${esc(t('close'))}">×</button>
+        <h3 id="tr-help-title">${esc(t('helpTitle'))}</h3>
+        <ol>${(Array.isArray(steps) ? steps : []).map(([head, body]) =>
+          `<li><b>${esc(head)}</b><br>${esc(body)}</li>`).join('')}</ol>
+        <button class="tr-ok">${esc(t('helpOk'))}</button>
+      </div>`;
+    help.hidden = false;
+    help.querySelector('.tr-ok').focus();
+  }
+  function hideHelp() {
+    help.hidden = true;
+    try { localStorage.setItem('green-tr-help-seen', '1'); } catch (_) {}
+  }
+  help.addEventListener('click', e => {
+    if (e.target === help || e.target.closest('.tr-ok') || e.target.closest('.tr-close')) hideHelp();
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !help.hidden) hideHelp(); });
+  try { if (!localStorage.getItem('green-tr-help-seen')) showHelp(); } catch (_) { showHelp(); }
+
   bar.addEventListener('click', async e => {
+    if (e.target.closest('.tr-help')) { showHelp(); return; }
     if (!e.target.closest('.tr-review')) return;
     const want = !reviewed;
     const { error } = want
