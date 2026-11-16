@@ -219,16 +219,19 @@
     if (error) { box.textContent = error.message; return; }
     const missing = [...new Set(rows.map(r => r.changed_by).filter(id => id && !(id in names)))];
     if (missing.length) {
-      const { data: people } = await sb.from('translators').select('user_id,name,email').in('user_id', missing);
-      for (const p of people || []) names[p.user_id] = p.name || p.email;
+      // only the names translators chose to show; everyone else (and deleted accounts) is anonymous
+      const { data: people } = await sb.from('translator_names').select('user_id,name').in('user_id', missing);
+      for (const id of missing) names[id] = null;
+      for (const p of people || []) names[p.user_id] = p.name;
     }
+    const who = id => (id === session.user.id ? (me.name || session.user.email) : names[id]) || `${t('anon')} · ${me.lang.toUpperCase()}`;
     const when = d => new Date(d).toLocaleString(me.lang, { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
     const item = (text, meta, isNow) => `<div class="tr-h${isNow ? ' now' : ''}">
         <div class="tr-h-meta">${meta}${isNow ? ` · <b>${esc(t('current'))}</b>` : ''}</div>
         <div class="tr-h-text">${text == null ? `<i>${esc(t('reverted'))}</i>` : esc(text)}</div>
         ${!isNow && text != null ? `<button class="tr-use" data-text="${esc(text)}">${esc(t('restore'))}</button>` : ''}</div>`;
     const nowText = st.overrides[key] != null ? st.overrides[key] : null;
-    let html = rows.map((r, i) => item(r.text, `${esc(when(r.changed_at))} · ${esc(names[r.changed_by] || '?')}`,
+    let html = rows.map((r, i) => item(r.text, `${esc(when(r.changed_at))} · ${esc(who(r.changed_by))}`,
       i === 0 && (r.text === nowText || (r.text == null && nowText == null)))).join('');
     if (st.base[key] != null) html += item(st.base[key], esc(t('original')), !rows.length || (rows[0].text == null && nowText == null));
     box.innerHTML = rows.length || st.base[key] != null ? html : esc(t('noHistory'));

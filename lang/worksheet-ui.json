@@ -154,7 +154,8 @@
           "Good to know",
           "Keep **bold** marks, $formulas$ and ____ answer lines as they are, and use your language’s decimal comma. Esc closes the panel. You can only change your own language."
         ]
-      ]
+      ],
+      "anon": "Anonymous translator"
     },
     "trans": {
       "title": "GREEN translations",
@@ -182,7 +183,24 @@
         "Click the link and you are signed in here. The first time, you write your name and choose the language you translate into.",
         "Next time you do the same — there is no password."
       ],
-      "schoolMail": "School email addresses often block or delay emails from outside senders. If nothing arrives within a few minutes, look in your junk/spam folder and the quarantine — or use another email address, for example a personal one. Any address works; what matters is the language you choose."
+      "schoolMail": "School email addresses often block or delay emails from outside senders. If nothing arrives within a few minutes, look in your junk/spam folder and the quarantine — or use another email address, for example a personal one. Any address works; what matters is the language you choose.",
+      "privacyTitle": "Your data — please read before signing in",
+      "privacy": [
+        "Who is responsible: VMA – Verkmenntaskólinn á Akureyri (Friðrik Óli Atlason).",
+        "What is stored: your email address, your name, your language, and the corrections you make with the time of each change.",
+        "Why: only to manage the translations and to see who changed what. Nothing is used for anything else or passed on.",
+        "Where: in a database in the EU (Supabase, Frankfurt). When you sign in, Supabase also records your IP address for security.",
+        "How long: everything about you is deleted after the translation phase, at the latest on 31 January 2027. Your corrections become part of the worksheets (open licence CC BY 4.0) without your name.",
+        "Your name: you choose whether other translators see it. If not, they see “Anonymous translator” and your language.",
+        "Your rights: you can delete your account yourself at any time (“Delete me”). Your corrections then stay, but anonymously — only the language is shown."
+      ],
+      "accept": "I have read this and I agree.",
+      "mustAccept": "Please tick the box first.",
+      "showName": "Show my name to other translators (otherwise: “Anonymous translator” and my language)",
+      "settings": "Your account",
+      "deleteMe": "Delete me",
+      "deleteConfirm": "Delete your account? Your name, email and sign-in are removed for good. Your corrections stay on the worksheets, anonymously. This cannot be undone.",
+      "deleted": "Your account has been deleted. Thank you for your help!"
     },
     "download": "⬇ Word",
     "downloadTip": "Download this worksheet as a Word document",
@@ -249,7 +267,7 @@
         "AI does not see any student data. Only the worksheet texts are translated; nothing about students is collected."
       ],
       "dataTitle": "Data",
-      "dataText": "Translators sign in with an email address. Their name, email, chosen language and the corrections they make are stored in a database in the EU (Supabase, Frankfurt) for the translation phase, so every change can be traced and undone. The worksheet texts are sent to Anthropic to be translated.",
+      "dataText": "Translators sign in with an email address. Their name, email, chosen language and the corrections they make are stored in a database in the EU (Supabase, Frankfurt), so every change can be traced and undone. Everything about the translators is deleted after the translation phase, at the latest on 31 January 2027, and each translator can delete their own account at any time; their corrections then stay, anonymously. Translators choose whether others see their name. The worksheet texts are sent to Anthropic to be translated.",
       "respTitle": "Responsible for the content",
       "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, electrical department) is responsible for the content published on this website and for the way AI is used in this work. Every worksheet remains the work of its authors at the partner schools."
     }
@@ -405,7 +423,8 @@
           "Gott að vita",
           "Haltu **feitletrun**, $formúlum$ og ____ svarlínum óbreyttum og notaðu kommu í tugabrotum. Esc lokar spjaldinu. Þú getur aðeins breytt þínu tungumáli."
         ]
-      ]
+      ],
+      "anon": "Nafnlaus þýðandi"
     },
     "trans": {
       "title": "GREEN þýðingar",
@@ -433,7 +452,24 @@
         "Smelltu á hlekkinn og þá ertu innskráð(ur) hér. Í fyrsta sinn skrifar þú nafnið þitt og velur tungumálið sem þú þýðir á.",
         "Næst gerir þú það sama — það er ekkert lykilorð."
       ],
-      "schoolMail": "Skólanetföng hafna oft eða tefja póst frá utanaðkomandi sendendum. Ef ekkert berst innan fárra mínútna skaltu leita í ruslpósti og sóttkví — eða nota annað netfang, til dæmis einkanetfang. Öll netföng virka; það sem skiptir máli er tungumálið sem þú velur."
+      "schoolMail": "Skólanetföng hafna oft eða tefja póst frá utanaðkomandi sendendum. Ef ekkert berst innan fárra mínútna skaltu leita í ruslpósti og sóttkví — eða nota annað netfang, til dæmis einkanetfang. Öll netföng virka; það sem skiptir máli er tungumálið sem þú velur.",
+      "privacyTitle": "Gögnin þín — lestu þetta áður en þú skráir þig inn",
+      "privacy": [
+        "Ábyrgðaraðili: VMA – Verkmenntaskólinn á Akureyri (Friðrik Óli Atlason).",
+        "Hvað er geymt: netfangið þitt, nafn, tungumál og leiðréttingarnar sem þú gerir, ásamt tíma hverrar breytingar.",
+        "Til hvers: eingöngu til að halda utan um þýðingarnar og sjá hver breytti hverju. Ekkert er notað í annað eða afhent öðrum.",
+        "Hvar: í gagnagrunni innan ESB (Supabase, Frankfurt). Við innskráningu skráir Supabase einnig IP-tölu þína af öryggisástæðum.",
+        "Hve lengi: öllu um þig er eytt eftir þýðingarfasann, eigi síðar en 31. janúar 2027. Leiðréttingarnar þínar verða hluti af verkefnablöðunum (opið leyfi CC BY 4.0), án nafns.",
+        "Nafnið þitt: þú velur hvort aðrir þýðendur sjá það. Ef ekki, sjá þeir „Nafnlaus þýðandi“ og tungumálið þitt.",
+        "Réttur þinn: þú getur hvenær sem er eytt aðganginum sjálf(ur) („Eyða mér“). Leiðréttingarnar standa þá áfram, en nafnlaust — aðeins tungumálið sést."
+      ],
+      "accept": "Ég hef lesið þetta og samþykki.",
+      "mustAccept": "Hakaðu fyrst í reitinn.",
+      "showName": "Sýna nafnið mitt öðrum þýðendum (annars: „Nafnlaus þýðandi“ og tungumálið mitt)",
+      "settings": "Aðgangurinn þinn",
+      "deleteMe": "Eyða mér",
+      "deleteConfirm": "Eyða aðganginum þínum? Nafn, netfang og innskráning hverfa fyrir fullt og allt. Leiðréttingarnar þínar standa áfram á blöðunum, nafnlaust. Þetta er ekki hægt að afturkalla.",
+      "deleted": "Aðgangi þínum hefur verið eytt. Takk fyrir hjálpina!"
     },
     "download": "⬇ Word",
     "downloadTip": "Sækja blaðið sem Word-skjal",
@@ -500,7 +536,7 @@
         "Gervigreindin sér engin gögn um nemendur. Aðeins textar verkefnablaðanna eru þýddir; engu er safnað um nemendur."
       ],
       "dataTitle": "Gögn",
-      "dataText": "Þýðendur skrá sig inn með netfangi. Nafn þeirra, netfang, valið tungumál og leiðréttingarnar sem þeir gera eru geymd í gagnagrunni innan ESB (Supabase, Frankfurt) á meðan þýðingarfasinn stendur yfir, svo hægt sé að rekja og afturkalla hverja breytingu. Textar verkefnablaðanna eru sendir til Anthropic til þýðingar.",
+      "dataText": "Þýðendur skrá sig inn með netfangi. Nafn þeirra, netfang, valið tungumál og leiðréttingarnar sem þeir gera eru geymd í gagnagrunni innan ESB (Supabase, Frankfurt), svo hægt sé að rekja og afturkalla hverja breytingu. Öllu um þýðendurna er eytt eftir þýðingarfasann, eigi síðar en 31. janúar 2027, og hver þýðandi getur eytt eigin aðgangi hvenær sem er; leiðréttingarnar standa þá áfram, nafnlaust. Þýðendur velja hvort aðrir sjá nafn þeirra. Textar verkefnablaðanna eru sendir til Anthropic til þýðingar.",
       "respTitle": "Ábyrgð á efninu",
       "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, rafdeild) ber ábyrgð á efninu sem birt er á þessum vef og á því hvernig gervigreind er notuð í þessari vinnu. Hvert verkefnablað er áfram verk höfunda sinna í samstarfsskólunum."
     }
@@ -656,7 +692,8 @@
           "É bom saber",
           "Mantenha as marcas de **negrito**, as $fórmulas$ e as linhas de resposta ____ tal como estão, e use a vírgula decimal. Esc fecha o painel. Só pode alterar a sua própria língua."
         ]
-      ]
+      ],
+      "anon": "Tradutor anónimo"
     },
     "trans": {
       "title": "Traduções GREEN",
@@ -684,7 +721,24 @@
         "Clique na ligação e fica com a sessão iniciada aqui. Da primeira vez, escreve o seu nome e escolhe a língua para a qual traduz.",
         "Da próxima vez faz o mesmo — não há palavra-passe."
       ],
-      "schoolMail": "Os endereços de e-mail das escolas bloqueiam ou atrasam muitas vezes mensagens de remetentes externos. Se nada chegar em poucos minutos, procure na pasta de lixo/spam e na quarentena — ou use outro endereço, por exemplo um pessoal. Qualquer endereço serve; o que importa é a língua que escolhe."
+      "schoolMail": "Os endereços de e-mail das escolas bloqueiam ou atrasam muitas vezes mensagens de remetentes externos. Se nada chegar em poucos minutos, procure na pasta de lixo/spam e na quarentena — ou use outro endereço, por exemplo um pessoal. Qualquer endereço serve; o que importa é a língua que escolhe.",
+      "privacyTitle": "Os seus dados — leia antes de iniciar sessão",
+      "privacy": [
+        "Responsável: VMA – Verkmenntaskólinn á Akureyri (Friðrik Óli Atlason).",
+        "O que é guardado: o seu endereço de e-mail, o seu nome, a sua língua e as correções que faz, com a hora de cada alteração.",
+        "Para quê: apenas para gerir as traduções e ver quem alterou o quê. Nada é usado para outro fim nem cedido a terceiros.",
+        "Onde: numa base de dados na UE (Supabase, Frankfurt). Ao iniciar sessão, a Supabase regista também o seu endereço IP por razões de segurança.",
+        "Durante quanto tempo: tudo o que lhe diz respeito é apagado após a fase de tradução, o mais tardar a 31 de janeiro de 2027. As suas correções passam a fazer parte das fichas (licença aberta CC BY 4.0), sem o seu nome.",
+        "O seu nome: escolhe se os outros tradutores o veem. Se não, veem «Tradutor anónimo» e a sua língua.",
+        "Os seus direitos: pode apagar a sua conta a qualquer momento («Apagar-me»). As suas correções mantêm-se, mas de forma anónima — só a língua é mostrada."
+      ],
+      "accept": "Li e concordo.",
+      "mustAccept": "Assinale primeiro a caixa.",
+      "showName": "Mostrar o meu nome aos outros tradutores (caso contrário: «Tradutor anónimo» e a minha língua)",
+      "settings": "A sua conta",
+      "deleteMe": "Apagar-me",
+      "deleteConfirm": "Apagar a sua conta? O seu nome, e-mail e acesso são removidos definitivamente. As suas correções ficam nas fichas, de forma anónima. Esta ação não pode ser anulada.",
+      "deleted": "A sua conta foi apagada. Obrigado pela sua ajuda!"
     },
     "download": "⬇ Word",
     "downloadTip": "Descarregar esta ficha como documento Word",
@@ -751,7 +805,7 @@
         "A IA não vê quaisquer dados de alunos. Apenas os textos das fichas são traduzidos; nada é recolhido sobre os alunos."
       ],
       "dataTitle": "Dados",
-      "dataText": "Os tradutores iniciam sessão com um endereço de e-mail. O nome, o e-mail, a língua escolhida e as correções que fazem são guardados numa base de dados na UE (Supabase, Frankfurt) durante a fase de tradução, para que cada alteração possa ser rastreada e anulada. Os textos das fichas são enviados à Anthropic para serem traduzidos.",
+      "dataText": "Os tradutores iniciam sessão com um endereço de e-mail. O nome, o e-mail, a língua escolhida e as correções que fazem são guardados numa base de dados na UE (Supabase, Frankfurt), para que cada alteração possa ser rastreada e anulada. Tudo o que diz respeito aos tradutores é apagado após a fase de tradução, o mais tardar a 31 de janeiro de 2027, e cada tradutor pode apagar a sua conta a qualquer momento; as suas correções mantêm-se, de forma anónima. Os tradutores escolhem se os outros veem o seu nome. Os textos das fichas são enviados à Anthropic para serem traduzidos.",
       "respTitle": "Responsável pelo conteúdo",
       "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, departamento de eletricidade) é responsável pelo conteúdo publicado neste site e pela forma como a IA é usada neste trabalho. Cada ficha continua a ser obra dos seus autores nas escolas parceiras."
     }
@@ -907,7 +961,8 @@
           "Dobro je znati",
           "Ostavite oznake za **podebljano**, $formule$ i ____ crte za odgovore kakve jesu i koristite decimalni zarez. Esc zatvara ploču. Možete mijenjati samo svoj jezik."
         ]
-      ]
+      ],
+      "anon": "Anonimni prevoditelj"
     },
     "trans": {
       "title": "GREEN prijevodi",
@@ -935,7 +990,24 @@
         "Kliknite na poveznicu i prijavljeni ste ovdje. Prvi put upisujete svoje ime i birate jezik na koji prevodite.",
         "Sljedeći put učinite isto — nema lozinke."
       ],
-      "schoolMail": "Školske adrese e-pošte često blokiraju ili kasne s porukama vanjskih pošiljatelja. Ako ništa ne stigne za nekoliko minuta, pogledajte u neželjenu poštu i karantenu — ili upotrijebite drugu adresu, primjerice osobnu. Svaka adresa radi; važan je jezik koji odaberete."
+      "schoolMail": "Školske adrese e-pošte često blokiraju ili kasne s porukama vanjskih pošiljatelja. Ako ništa ne stigne za nekoliko minuta, pogledajte u neželjenu poštu i karantenu — ili upotrijebite drugu adresu, primjerice osobnu. Svaka adresa radi; važan je jezik koji odaberete.",
+      "privacyTitle": "Vaši podaci — pročitajte prije prijave",
+      "privacy": [
+        "Voditelj obrade: VMA – Verkmenntaskólinn á Akureyri (Friðrik Óli Atlason).",
+        "Što se pohranjuje: vaša adresa e-pošte, ime, jezik i ispravci koje unosite, s vremenom svake promjene.",
+        "Zašto: samo radi upravljanja prijevodima i praćenja tko je što promijenio. Ništa se ne koristi u druge svrhe niti se prosljeđuje drugima.",
+        "Gdje: u bazi podataka u EU (Supabase, Frankfurt). Pri prijavi Supabase iz sigurnosnih razloga bilježi i vašu IP adresu.",
+        "Koliko dugo: sve o vama briše se nakon faze prevođenja, najkasnije 31. siječnja 2027. Vaši ispravci postaju dio radnih listova (otvorena licencija CC BY 4.0), bez vašeg imena.",
+        "Vaše ime: birate vide li ga drugi prevoditelji. Ako ne, vide „Anonimni prevoditelj” i vaš jezik.",
+        "Vaša prava: svoj račun možete sami izbrisati u bilo kojem trenutku („Izbriši me”). Vaši ispravci tada ostaju, ali anonimno — vidi se samo jezik."
+      ],
+      "accept": "Pročitao/la sam ovo i slažem se.",
+      "mustAccept": "Najprije označite okvir.",
+      "showName": "Prikaži moje ime drugim prevoditeljima (inače: „Anonimni prevoditelj” i moj jezik)",
+      "settings": "Vaš račun",
+      "deleteMe": "Izbriši me",
+      "deleteConfirm": "Izbrisati vaš račun? Vaše ime, e-pošta i prijava trajno se uklanjaju. Vaši ispravci ostaju na radnim listovima, anonimno. Ovo se ne može poništiti.",
+      "deleted": "Vaš je račun izbrisan. Hvala na pomoći!"
     },
     "download": "⬇ Word",
     "downloadTip": "Preuzmi ovaj radni list kao Word dokument",
@@ -1002,7 +1074,7 @@
         "Umjetna inteligencija ne vidi nikakve podatke o učenicima. Prevode se samo tekstovi radnih listova; o učenicima se ništa ne prikuplja."
       ],
       "dataTitle": "Podaci",
-      "dataText": "Prevoditelji se prijavljuju adresom e-pošte. Njihovo ime, e-pošta, odabrani jezik i ispravci koje unose pohranjuju se u bazi podataka u EU (Supabase, Frankfurt) tijekom faze prevođenja, tako da se svaka promjena može pratiti i poništiti. Tekstovi radnih listova šalju se tvrtki Anthropic na prijevod.",
+      "dataText": "Prevoditelji se prijavljuju adresom e-pošte. Njihovo ime, e-pošta, odabrani jezik i ispravci koje unose pohranjuju se u bazi podataka u EU (Supabase, Frankfurt), tako da se svaka promjena može pratiti i poništiti. Sve o prevoditeljima briše se nakon faze prevođenja, najkasnije 31. siječnja 2027., a svaki prevoditelj može u bilo kojem trenutku izbrisati vlastiti račun; ispravci tada ostaju, anonimno. Prevoditelji biraju vide li drugi njihovo ime. Tekstovi radnih listova šalju se tvrtki Anthropic na prijevod.",
       "respTitle": "Odgovornost za sadržaj",
       "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, elektrotehnički odjel) odgovoran je za sadržaj objavljen na ovoj web-stranici i za način na koji se umjetna inteligencija koristi u ovom radu. Svaki radni list ostaje djelo svojih autora u partnerskim školama."
     }
@@ -1158,7 +1230,8 @@
           "Bilmekte fayda var",
           "**Kalın** işaretlerini, $formülleri$ ve ____ cevap çizgilerini olduğu gibi bırakın ve ondalık virgül kullanın. Esc paneli kapatır. Yalnızca kendi dilinizi değiştirebilirsiniz."
         ]
-      ]
+      ],
+      "anon": "Anonim çevirmen"
     },
     "trans": {
       "title": "GREEN çevirileri",
@@ -1186,7 +1259,24 @@
         "Bağlantıya tıklayın; burada oturumunuz açılır. İlk seferde adınızı yazar ve çeviri yaptığınız dili seçersiniz.",
         "Bir sonraki sefer aynısını yapın — şifre yoktur."
       ],
-      "schoolMail": "Okul e-posta adresleri dış göndericilerden gelen e-postaları sık sık engeller veya geciktirir. Birkaç dakika içinde bir şey gelmezse önemsiz/spam klasörüne ve karantinaya bakın ya da başka bir adres, örneğin kişisel adresinizi kullanın. Her adres çalışır; önemli olan seçtiğiniz dildir."
+      "schoolMail": "Okul e-posta adresleri dış göndericilerden gelen e-postaları sık sık engeller veya geciktirir. Birkaç dakika içinde bir şey gelmezse önemsiz/spam klasörüne ve karantinaya bakın ya da başka bir adres, örneğin kişisel adresinizi kullanın. Her adres çalışır; önemli olan seçtiğiniz dildir.",
+      "privacyTitle": "Verileriniz — oturum açmadan önce lütfen okuyun",
+      "privacy": [
+        "Sorumlu: VMA – Verkmenntaskólinn á Akureyri (Friðrik Óli Atlason).",
+        "Saklananlar: e-posta adresiniz, adınız, diliniz ve yaptığınız düzeltmeler ile her değişikliğin zamanı.",
+        "Neden: yalnızca çevirileri yönetmek ve kimin neyi değiştirdiğini görmek için. Hiçbir şey başka bir amaçla kullanılmaz veya başkalarıyla paylaşılmaz.",
+        "Nerede: AB içindeki bir veritabanında (Supabase, Frankfurt). Oturum açtığınızda Supabase güvenlik nedeniyle IP adresinizi de kaydeder.",
+        "Ne kadar süre: sizinle ilgili her şey çeviri aşamasından sonra, en geç 31 Ocak 2027’de silinir. Düzeltmeleriniz adınız olmadan çalışma yapraklarının bir parçası olur (açık lisans CC BY 4.0).",
+        "Adınız: diğer çevirmenlerin adınızı görüp görmeyeceğini siz seçersiniz. Görmezlerse “Anonim çevirmen” ve dilinizi görürler.",
+        "Haklarınız: hesabınızı istediğiniz zaman kendiniz silebilirsiniz (“Beni sil”). Düzeltmeleriniz kalır, ancak anonim olarak — yalnızca dil görünür."
+      ],
+      "accept": "Bunu okudum ve kabul ediyorum.",
+      "mustAccept": "Lütfen önce kutuyu işaretleyin.",
+      "showName": "Adımı diğer çevirmenlere göster (aksi hâlde: “Anonim çevirmen” ve dilim)",
+      "settings": "Hesabınız",
+      "deleteMe": "Beni sil",
+      "deleteConfirm": "Hesabınız silinsin mi? Adınız, e-postanız ve oturum bilgileriniz kalıcı olarak kaldırılır. Düzeltmeleriniz çalışma yapraklarında anonim olarak kalır. Bu işlem geri alınamaz.",
+      "deleted": "Hesabınız silindi. Yardımınız için teşekkürler!"
     },
     "download": "⬇ Word",
     "downloadTip": "Bu çalışma yaprağını Word belgesi olarak indir",
@@ -1253,7 +1343,7 @@
         "Yapay zekâ hiçbir öğrenci verisini görmez. Yalnızca çalışma yaprağı metinleri çevrilir; öğrenciler hakkında hiçbir şey toplanmaz."
       ],
       "dataTitle": "Veriler",
-      "dataText": "Çevirmenler bir e-posta adresiyle oturum açar. Adları, e-postaları, seçtikleri dil ve yaptıkları düzeltmeler, her değişikliğin izlenebilmesi ve geri alınabilmesi için çeviri aşaması boyunca AB’deki bir veritabanında (Supabase, Frankfurt) saklanır. Çalışma yaprağı metinleri çeviri için Anthropic’e gönderilir.",
+      "dataText": "Çevirmenler bir e-posta adresiyle oturum açar. Adları, e-postaları, seçtikleri dil ve yaptıkları düzeltmeler, her değişikliğin izlenebilmesi ve geri alınabilmesi için AB’deki bir veritabanında (Supabase, Frankfurt) saklanır. Çevirmenlerle ilgili her şey çeviri aşamasından sonra, en geç 31 Ocak 2027’de silinir ve her çevirmen kendi hesabını istediği zaman silebilir; düzeltmeleri anonim olarak kalır. Çevirmenler adlarının başkalarına görünüp görünmeyeceğini seçer. Çalışma yaprağı metinleri çeviri için Anthropic’e gönderilir.",
       "respTitle": "İçerikten sorumlu kişi",
       "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, elektrik bölümü), bu web sitesinde yayımlanan içerikten ve bu çalışmada yapay zekânın nasıl kullanıldığından sorumludur. Her çalışma yaprağı, ortak okullardaki yazarlarının eseri olmaya devam eder."
     }
@@ -1409,7 +1499,8 @@
           "Goed om te weten",
           "Laat **vet**-tekens, $formules$ en ____ antwoordlijnen zoals ze zijn en gebruik de decimale komma. Esc sluit het paneel. Je kunt alleen je eigen taal wijzigen."
         ]
-      ]
+      ],
+      "anon": "Anonieme vertaler"
     },
     "trans": {
       "title": "GREEN vertalingen",
@@ -1437,7 +1528,24 @@
         "Klik op de link en je bent hier ingelogd. De eerste keer vul je je naam in en kies je de taal waarin je vertaalt.",
         "De volgende keer doe je hetzelfde — er is geen wachtwoord."
       ],
-      "schoolMail": "E-mailadressen van scholen blokkeren of vertragen vaak e-mails van externe afzenders. Komt er binnen een paar minuten niets binnen, kijk dan in je spam-/ongewenste map en in de quarantaine — of gebruik een ander adres, bijvoorbeeld een persoonlijk. Elk adres werkt; het gaat om de taal die je kiest."
+      "schoolMail": "E-mailadressen van scholen blokkeren of vertragen vaak e-mails van externe afzenders. Komt er binnen een paar minuten niets binnen, kijk dan in je spam-/ongewenste map en in de quarantaine — of gebruik een ander adres, bijvoorbeeld een persoonlijk. Elk adres werkt; het gaat om de taal die je kiest.",
+      "privacyTitle": "Je gegevens — lees dit voordat je inlogt",
+      "privacy": [
+        "Verantwoordelijke: VMA – Verkmenntaskólinn á Akureyri (Friðrik Óli Atlason).",
+        "Wat wordt opgeslagen: je e-mailadres, je naam, je taal en de verbeteringen die je maakt, met het tijdstip van elke wijziging.",
+        "Waarom: alleen om de vertalingen te beheren en te zien wie wat heeft gewijzigd. Niets wordt voor iets anders gebruikt of aan anderen doorgegeven.",
+        "Waar: in een database in de EU (Supabase, Frankfurt). Bij het inloggen legt Supabase om veiligheidsredenen ook je IP-adres vast.",
+        "Hoe lang: alles over jou wordt na de vertaalfase verwijderd, uiterlijk op 31 januari 2027. Je verbeteringen worden zonder je naam deel van de werkbladen (open licentie CC BY 4.0).",
+        "Je naam: je kiest zelf of andere vertalers die zien. Zo niet, dan zien ze „Anonieme vertaler” en je taal.",
+        "Je rechten: je kunt je account op elk moment zelf verwijderen („Verwijder mij”). Je verbeteringen blijven dan staan, maar anoniem — alleen de taal is zichtbaar."
+      ],
+      "accept": "Ik heb dit gelezen en ga akkoord.",
+      "mustAccept": "Vink eerst het vakje aan.",
+      "showName": "Mijn naam tonen aan andere vertalers (anders: „Anonieme vertaler” en mijn taal)",
+      "settings": "Je account",
+      "deleteMe": "Verwijder mij",
+      "deleteConfirm": "Je account verwijderen? Je naam, e-mail en inloggegevens worden definitief verwijderd. Je verbeteringen blijven anoniem op de werkbladen staan. Dit kan niet ongedaan worden gemaakt.",
+      "deleted": "Je account is verwijderd. Bedankt voor je hulp!"
     },
     "download": "⬇ Word",
     "downloadTip": "Dit werkblad downloaden als Word-document",
@@ -1504,7 +1612,7 @@
         "AI ziet geen gegevens van leerlingen. Alleen de teksten van de werkbladen worden vertaald; over leerlingen wordt niets verzameld."
       ],
       "dataTitle": "Gegevens",
-      "dataText": "Vertalers loggen in met een e-mailadres. Hun naam, e-mail, gekozen taal en de verbeteringen die ze maken worden tijdens de vertaalfase opgeslagen in een database in de EU (Supabase, Frankfurt), zodat elke wijziging te volgen en ongedaan te maken is. De teksten van de werkbladen worden naar Anthropic gestuurd om te worden vertaald.",
+      "dataText": "Vertalers loggen in met een e-mailadres. Hun naam, e-mail, gekozen taal en de verbeteringen die ze maken worden opgeslagen in een database in de EU (Supabase, Frankfurt), zodat elke wijziging te volgen en ongedaan te maken is. Alles over de vertalers wordt na de vertaalfase verwijderd, uiterlijk op 31 januari 2027, en elke vertaler kan zijn eigen account op elk moment verwijderen; de verbeteringen blijven dan anoniem staan. Vertalers kiezen zelf of anderen hun naam zien. De teksten van de werkbladen worden naar Anthropic gestuurd om te worden vertaald.",
       "respTitle": "Verantwoordelijk voor de inhoud",
       "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, afdeling elektrotechniek) is verantwoordelijk voor de inhoud die op deze website wordt gepubliceerd en voor de manier waarop AI in dit werk wordt gebruikt. Elk werkblad blijft het werk van de auteurs op de partnerscholen."
     }

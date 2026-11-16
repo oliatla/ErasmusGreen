@@ -18,6 +18,16 @@
   .btn { display: inline-block; margin-top: 1rem; font: inherit; font-weight: 700; padding: .6rem 1.1rem; border-radius: var(--rs);
          border: 0; background: var(--green); color: #fff; cursor: pointer; text-decoration: none; }
   .btn.ghost { background: transparent; color: var(--text-sec); border: 1px solid var(--border); font-weight: 600; }
+  .privacy { margin-top: 1rem; background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--rs); padding: .8rem .9rem; }
+  .privacy h3 { font-size: .9rem; margin-bottom: .4rem; }
+  .privacy ul, .privacy-more ul { margin: 0 0 .6rem 1.1rem; font-size: .82rem; color: var(--text-sec); }
+  .privacy li, .privacy-more li { margin-bottom: .3rem; }
+  .box label.check { display: flex; gap: .5rem; align-items: flex-start; font-size: .88rem; font-weight: 600; color: var(--text); margin: .7rem 0 0; }
+  .box label.check input { width: auto; margin-top: .2rem; }
+  .privacy-more { margin-top: .8rem; font-size: .85rem; }
+  .privacy-more summary { cursor: pointer; color: var(--text-sec); }
+  .account { margin-top: 1.5rem; max-width: none; }
+  .btn.danger { background: #b00020; }
   .login-help { margin-top: 1rem; }
   .login-help ol { margin: 0 0 .8rem 1.2rem; font-size: .9rem; color: var(--text-sec); }
   .login-help li { margin-bottom: .4rem; }
@@ -144,6 +154,11 @@
         <h2>${esc(ui('trans.send'))}</h2>
         <label for="email">${esc(ui('trans.emailLabel'))}</label>
         <input id="email" type="email" required autocomplete="email" placeholder="name@school.eu">
+        <div class="privacy">
+          <h3>🔒 ${esc(ui('trans.privacyTitle'))}</h3>
+          <ul>${(ui('trans.privacy') || []).map(s => `<li>${esc(s)}</li>`).join('')}</ul>
+          <label class="check"><input type="checkbox" id="consent" required> ${esc(ui('trans.accept'))}</label>
+        </div>
         <button class="btn">${esc(ui('trans.send'))}</button>
         <p class="msg">${esc(ui('trans.deadline'))}</p>
       </form>
@@ -154,6 +169,8 @@
       </div>`;
     $('f').addEventListener('submit', async e => {
       e.preventDefault();
+      if (!$('consent').checked) { alert(ui('trans.mustAccept')); return; }
+      try { localStorage.setItem('green-tr-consent', new Date().toISOString()); } catch (_) {}
       const btn = e.target.querySelector('button');
       btn.disabled = true;
       const back = location.origin + location.pathname + (next ? `?next=${encodeURIComponent(next)}` : '');
@@ -173,12 +190,19 @@
         <label for="tl">${esc(ui('trans.langLabel'))}</label>
         <select id="tl" required><option value=""></option>${TARGETS.map(c =>
           `<option value="${c}"${c === guess ? ' selected' : ''}>${NAMES[c]}</option>`).join('')}</select>
+        <label class="check"><input type="checkbox" id="show-name"> ${esc(ui('trans.showName'))}</label>
+        <label class="check"><input type="checkbox" id="consent" required> ${esc(ui('trans.accept'))}</label>
+        <details class="privacy-more"><summary>🔒 ${esc(ui('trans.privacyTitle'))}</summary>
+          <ul>${(ui('trans.privacy') || []).map(s => `<li>${esc(s)}</li>`).join('')}</ul></details>
         <button class="btn">${esc(ui('trans.start'))}</button>
         <p class="msg">${esc(session.user.email)}</p>
       </form>`;
+    // ticked already on the sign-in form in this browser? then it stays ticked
+    try { if (localStorage.getItem('green-tr-consent')) $('consent').checked = true; } catch (_) {}
     $('f').addEventListener('submit', async e => {
       e.preventDefault();
-      const row = { user_id: session.user.id, email: session.user.email, name: $('name').value.trim(), lang: $('tl').value };
+      const row = { user_id: session.user.id, email: session.user.email, name: $('name').value.trim(), lang: $('tl').value,
+        anonymous: !$('show-name').checked, consented_at: new Date().toISOString() };
       const { error: err } = await sb.from('translators').insert(row);
       if (err) { e.target.insertAdjacentHTML('beforeend', error(err)); return; }
       me = row;
@@ -213,6 +237,10 @@
     const title = w => w.title[me.lang] || w.title.en || w.slug;
 
     main.innerHTML = `<div class="dash">
+      ${me.consented_at ? '' : `<div class="box privacy" id="consent-box" style="max-width:none;margin-bottom:1.2rem">
+        <h3>🔒 ${esc(ui('trans.privacyTitle'))}</h3>
+        <ul>${(ui('trans.privacy') || []).map(s => `<li>${esc(s)}</li>`).join('')}</ul>
+        <label class="check"><input type="checkbox" id="consent-late"> ${esc(ui('trans.accept'))}</label></div>`}
       <div class="dash-head">
         <h2>${esc(ui('trans.dashboard'))} — ${NAMES[me.lang]}</h2>
         <span>${esc(me.name || '')} · <button class="btn ghost" id="out">${esc(ui('trans.signOut'))}</button></span>
@@ -228,8 +256,39 @@
           <td>${done.has(w.slug) ? `<span class="ok">${esc(ui('trans.reviewed'))}</span>` : ''}</td>
           <td><a class="btn" href="../ws/${w.slug}/?lang=${me.lang}&edit=1">${esc(ui('trans.open'))}</a></td>
         </tr>`).join('')}</table>
+      <div class="box account">
+        <h2>${esc(ui('trans.settings'))}</h2>
+        <label class="check"><input type="checkbox" id="show-name" ${me.anonymous === false ? 'checked' : ''}> ${esc(ui('trans.showName'))}</label>
+        <details class="privacy-more"><summary>🔒 ${esc(ui('trans.privacyTitle'))}</summary>
+          <ul>${(ui('trans.privacy') || []).map(s => `<li>${esc(s)}</li>`).join('')}</ul></details>
+        <button class="btn danger" id="delete-me">${esc(ui('trans.deleteMe'))}</button>
+      </div>
     </div>`;
     $('out').addEventListener('click', async () => { await sb.auth.signOut(); session = null; me = null; show(); });
+    // translators who signed up before the privacy notice existed accept it here
+    if ($('consent-late')) $('consent-late').addEventListener('change', async e => {
+      if (!e.target.checked) return;
+      const consented_at = new Date().toISOString();
+      const { error: err } = await sb.from('translators').update({ consented_at }).eq('user_id', session.user.id);
+      if (err) { e.target.checked = false; alert(err.message); return; }
+      me.consented_at = consented_at;
+      $('consent-box').remove();
+    });
+    $('show-name').addEventListener('change', async e => {
+      const anonymous = !e.target.checked;
+      const { error: err } = await sb.from('translators').update({ anonymous }).eq('user_id', session.user.id);
+      if (err) { e.target.checked = !e.target.checked; alert(err.message); return; }
+      me.anonymous = anonymous;
+    });
+    $('delete-me').addEventListener('click', async () => {
+      if (!confirm(ui('trans.deleteConfirm'))) return;
+      const { error: err } = await sb.rpc('delete_me');
+      if (err) { alert(err.message); return; }
+      await sb.auth.signOut();
+      try { localStorage.removeItem('green-tr-consent'); localStorage.removeItem('green-tr-help-seen'); } catch (_) {}
+      session = null; me = null;
+      main.innerHTML = `<div class="box"><p>${esc(ui('trans.deleted'))}</p></div>`;
+    });
   }
 
   async function show() {
