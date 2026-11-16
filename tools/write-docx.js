@@ -450,7 +450,7 @@ function buildDocx(opts) {
   const field = instr => `<w:fldSimple w:instr=" ${instr} "><w:r><w:rPr><w:sz w:val="14"/><w:color w:val="${GREY}"/></w:rPr><w:t>1</w:t></w:r></w:fldSimple>`;
   const footerXml = XML + `<w:ftr ${NS}>` +
     `<w:p><w:pPr><w:pBdr><w:top w:val="single" w:sz="4" w:space="4" w:color="${BORDER}"/></w:pBdr><w:spacing w:after="40"/></w:pPr>${small(ui.disclaimer || '')}</w:p>` +
-    `<w:p><w:pPr>${rightTab}<w:spacing w:after="0"/></w:pPr>${small('GREEN Erasmus+ KA220-VET · ' + (ui.projectLine || ''))}<w:r><w:tab/></w:r>` +
+    `<w:p><w:pPr>${rightTab}<w:spacing w:after="0"/></w:pPr>${small('GREEN Erasmus+ KA220-VET · ' + (ui.projectLine || '') + ' · CC BY 4.0')}<w:r><w:tab/></w:r>` +
     `${small(`${ui.page || 'Page'} `)}${field(String.raw`PAGE \* MERGEFORMAT`)}${small(` ${ui.of || 'of'} `)}${field(String.raw`NUMPAGES \* MERGEFORMAT`)}</w:p></w:ftr>`;
   rels.push('<Relationship Id="rIdHdr" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/header" Target="header1.xml"/>',
     '<Relationship Id="rIdFtr" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer" Target="footer1.xml"/>');

@@ -271,7 +271,8 @@
       "dataText": "Translators sign in with an email address. Their name, email, chosen language and the corrections they make are stored in a database in the EU (Supabase, Frankfurt), so every change can be traced and undone. Everything about the translators is deleted after the translation phase, at the latest on 31 January 2027, and each translator can delete their own account at any time; their corrections then stay, anonymously. Translators choose whether others see their name. The worksheet texts are sent to Anthropic to be translated.",
       "respTitle": "Responsible for the content",
       "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, electrical department) is responsible for the content published on this website and for the way AI is used in this work. Every worksheet remains the work of its authors at the partner schools."
-    }
+    },
+    "license": "Content licensed under CC BY 4.0 — The GREEN Partnership"
   },
   "is": {
     "back": "← Til baka",
@@ -541,7 +542,8 @@
       "dataText": "Þýðendur skrá sig inn með netfangi. Nafn þeirra, netfang, valið tungumál og leiðréttingarnar sem þeir gera eru geymd í gagnagrunni innan ESB (Supabase, Frankfurt), svo hægt sé að rekja og afturkalla hverja breytingu. Öllu um þýðendurna er eytt eftir þýðingarfasann, eigi síðar en 31. janúar 2027, og hver þýðandi getur eytt eigin aðgangi hvenær sem er; leiðréttingarnar standa þá áfram, nafnlaust. Þýðendur velja hvort aðrir sjá nafn þeirra. Textar verkefnablaðanna eru sendir til Anthropic til þýðingar.",
       "respTitle": "Ábyrgð á efninu",
       "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, rafdeild) ber ábyrgð á efninu sem birt er á þessum vef og á því hvernig gervigreind er notuð í þessari vinnu. Hvert verkefnablað er áfram verk höfunda sinna í samstarfsskólunum."
-    }
+    },
+    "license": "Efnið er með leyfinu CC BY 4.0 — The GREEN Partnership"
   },
   "pt": {
     "back": "← Voltar",
@@ -811,7 +813,8 @@
       "dataText": "Os tradutores iniciam sessão com um endereço de e-mail. O nome, o e-mail, a língua escolhida e as correções que fazem são guardados numa base de dados na UE (Supabase, Frankfurt), para que cada alteração possa ser rastreada e anulada. Tudo o que diz respeito aos tradutores é apagado após a fase de tradução, o mais tardar a 31 de janeiro de 2027, e cada tradutor pode apagar a sua conta a qualquer momento; as suas correções mantêm-se, de forma anónima. Os tradutores escolhem se os outros veem o seu nome. Os textos das fichas são enviados à Anthropic para serem traduzidos.",
       "respTitle": "Responsável pelo conteúdo",
       "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, departamento de eletricidade) é responsável pelo conteúdo publicado neste site e pela forma como a IA é usada neste trabalho. Cada ficha continua a ser obra dos seus autores nas escolas parceiras."
-    }
+    },
+    "license": "Conteúdo sob a licença CC BY 4.0 — The GREEN Partnership"
   },
   "hr": {
     "back": "← Natrag",
@@ -1081,7 +1084,8 @@
       "dataText": "Prevoditelji se prijavljuju adresom e-pošte. Njihovo ime, e-pošta, odabrani jezik i ispravci koje unose pohranjuju se u bazi podataka u EU (Supabase, Frankfurt), tako da se svaka promjena može pratiti i poništiti. Sve o prevoditeljima briše se nakon faze prevođenja, najkasnije 31. siječnja 2027., a svaki prevoditelj može u bilo kojem trenutku izbrisati vlastiti račun; ispravci tada ostaju, anonimno. Prevoditelji biraju vide li drugi njihovo ime. Tekstovi radnih listova šalju se tvrtki Anthropic na prijevod.",
       "respTitle": "Odgovornost za sadržaj",
       "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, elektrotehnički odjel) odgovoran je za sadržaj objavljen na ovoj web-stranici i za način na koji se umjetna inteligencija koristi u ovom radu. Svaki radni list ostaje djelo svojih autora u partnerskim školama."
-    }
+    },
+    "license": "Sadržaj je pod licencijom CC BY 4.0 — The GREEN Partnership"
   },
   "tr": {
     "back": "← Geri",
@@ -1351,7 +1355,8 @@
       "dataText": "Çevirmenler bir e-posta adresiyle oturum açar. Adları, e-postaları, seçtikleri dil ve yaptıkları düzeltmeler, her değişikliğin izlenebilmesi ve geri alınabilmesi için AB’deki bir veritabanında (Supabase, Frankfurt) saklanır. Çevirmenlerle ilgili her şey çeviri aşamasından sonra, en geç 31 Ocak 2027’de silinir ve her çevirmen kendi hesabını istediği zaman silebilir; düzeltmeleri anonim olarak kalır. Çevirmenler adlarının başkalarına görünüp görünmeyeceğini seçer. Çalışma yaprağı metinleri çeviri için Anthropic’e gönderilir.",
       "respTitle": "İçerikten sorumlu kişi",
       "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, elektrik bölümü), bu web sitesinde yayımlanan içerikten ve bu çalışmada yapay zekânın nasıl kullanıldığından sorumludur. Her çalışma yaprağı, ortak okullardaki yazarlarının eseri olmaya devam eder."
-    }
+    },
+    "license": "İçerik CC BY 4.0 lisansı altındadır — The GREEN Partnership"
   },
   "nl": {
     "back": "← Terug",
@@ -1621,6 +1626,7 @@
       "dataText": "Vertalers loggen in met een e-mailadres. Hun naam, e-mail, gekozen taal en de verbeteringen die ze maken worden opgeslagen in een database in de EU (Supabase, Frankfurt), zodat elke wijziging te volgen en ongedaan te maken is. Alles over de vertalers wordt na de vertaalfase verwijderd, uiterlijk op 31 januari 2027, en elke vertaler kan zijn eigen account op elk moment verwijderen; de verbeteringen blijven dan anoniem staan. Vertalers kiezen zelf of anderen hun naam zien. De teksten van de werkbladen worden naar Anthropic gestuurd om te worden vertaald.",
       "respTitle": "Verantwoordelijk voor de inhoud",
       "respText": "Friðrik Óli Atlason (VMA – Verkmenntaskólinn á Akureyri, afdeling elektrotechniek) is verantwoordelijk voor de inhoud die op deze website wordt gepubliceerd en voor de manier waarop AI in dit werk wordt gebruikt. Elk werkblad blijft het werk van de auteurs op de partnerscholen."
-    }
+    },
+    "license": "Inhoud onder licentie CC BY 4.0 — The GREEN Partnership"
   }
 }

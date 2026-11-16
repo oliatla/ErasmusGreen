@@ -159,7 +159,7 @@
     <div class="footer-meta">
       <div class="footer-project">
         <strong>GREEN Erasmus+ · KA220-VET</strong><br>
-        <span id="project"></span>
+        <span id="project"></span><br><a id="license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:inherit">CC BY 4.0</a>
       </div>
       <div class="footer-links">
         <a href="https://github.com/oliatla/ErasmusGreen" target="_blank" rel="noopener">
@@ -312,6 +312,7 @@
     for (const p of ['title', 'p1', 'p2', 'p3']) $('about-' + p).textContent = ui('index.about.' + p);
     $('disclaimer').textContent = ui('disclaimer');
     $('project').textContent = ui('projectLine');
+    $('license').textContent = ui('license');
     $('source-link').textContent = ui('index.source');
     $('guide-link').textContent = ui('index.guide');
     document.querySelectorAll('.lang-flag').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === state.lang));

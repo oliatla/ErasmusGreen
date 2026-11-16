@@ -75,6 +75,7 @@
 </header>
 
 <main class="main" id="main"></main>
+<p style="text-align:center;font-size:.75rem;color:var(--text-muted);margin:0 0 2rem"><a id="license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:inherit">CC BY 4.0</a></p>
 
 <script src="../js/theme.js"></script>
 <script src="../js/supabase-config.js"></script>
@@ -145,6 +146,7 @@
     document.title = ui('trans.title');
     $('title').textContent = ui('trans.title');
     $('lede').textContent = ui('trans.lede');
+    $('license').textContent = ui('license');
     document.querySelectorAll('.lang-flag').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === lang));
   }
 

@@ -188,6 +188,7 @@ html, body {
 .r-footer .footer-left { display: flex; flex-direction: column; gap: 1mm; }
 .r-footer .proj-line { font-size: 7pt; font-weight: 700; }
 .r-footer .disclaimer { font-size: 6.6pt; line-height: 1.35; color: var(--ink-soft); }
+.r-footer .license { font-size: 6.6pt; color: var(--ink-soft); }
 .r-footer .mt-note { font-size: 6.6pt; font-style: italic; color: var(--ink-mute); }
 .r-footer .pageno { font-size: 9pt; font-weight: 700; white-space: nowrap; }
 

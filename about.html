@@ -148,7 +148,7 @@ https://github.com/oliatla/ErasmusGreen</pre>
       <p class="eu-disclaimer" id="disclaimer"></p>
     </div>
     <div class="footer-meta">
-      <div class="footer-project"><strong>GREEN Erasmus+ · KA220-VET</strong><br><span id="project"></span></div>
+      <div class="footer-project"><strong>GREEN Erasmus+ · KA220-VET</strong><br><span id="project"></span><br><a id="license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" style="color:inherit">CC BY 4.0</a></div>
     </div>
   </div>
 </footer>
@@ -207,6 +207,7 @@ https://github.com/oliatla/ErasmusGreen</pre>
     $('ai-not').innerHTML = ui('about.aiNot').map(t => `<li>${esc(t)}</li>`).join('');
     $('disclaimer').textContent = ui('disclaimer');
     $('project').textContent = ui('projectLine');
+    $('license').textContent = ui('license');
     document.querySelectorAll('.lang-flag').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === lang));
   }
   render();

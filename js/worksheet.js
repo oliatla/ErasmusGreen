@@ -294,6 +294,7 @@
       `<div class="page-body"></div>` +
       `<div class="r-footer"><div class="footer-left"><div class="proj-line">${esc(ui('projectLine'))}</div>` +
       `<div class="disclaimer">${esc(ui('disclaimer'))}</div>` +
+      `<div class="license">${esc(ui('license'))}</div>` +
       (machineTranslated() ? `<div class="mt-note">${esc(ui('machineShort'))} · ${esc(sourceName())}</div>` : '') +
       `</div><div class="pageno"></div></div>`);
     host.appendChild(page);
