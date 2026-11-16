@@ -107,7 +107,7 @@ html, body {
 }
 .seg button:first-child { border-left: 0; }
 .seg button[aria-pressed="true"] { background: var(--green-dark); color: #fff; }
-.back-btn, .bw-toggle, .print-btn {
+.back-btn, .bw-toggle, .print-btn, .docx-btn {
   font: inherit;
   font-size: 13px;
   font-weight: 600;
@@ -122,6 +122,9 @@ html, body {
 .bw-toggle[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
 .print-btn { border: 1.5px solid var(--green-dark); background: var(--green-dark); color: #fff; }
 .print-btn:hover { background: var(--green-mid); }
+.docx-btn { border: 1.5px solid #2b579a; background: #fff; color: #2b579a; }   /* Word blue */
+.docx-btn:hover { background: #2b579a; color: #fff; }
+.docx-btn[hidden] { display: none; }
 
 .notice {
   max-width: 210mm;

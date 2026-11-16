@@ -173,7 +173,9 @@
       "how": "Open a worksheet, click any text that is wrong, and type the correction. It is saved automatically. When a worksheet is done, press “I have reviewed this worksheet” at the bottom.",
       "error": "Something went wrong:",
       "deadline": "Translation phase ends 15 December 2026."
-    }
+    },
+    "download": "⬇ Word",
+    "downloadTip": "Download this worksheet as a Word document"
   },
   "is": {
     "back": "← Til baka",
@@ -345,7 +347,9 @@
       "how": "Opnaðu blað, smelltu á texta sem er rangur og skrifaðu leiðréttinguna. Hún vistast sjálfkrafa. Þegar blaðið er búið ýtirðu á „Ég hef farið yfir þetta blað“ neðst.",
       "error": "Eitthvað fór úrskeiðis:",
       "deadline": "Þýðingarfasanum lýkur 15. desember 2026."
-    }
+    },
+    "download": "⬇ Word",
+    "downloadTip": "Sækja blaðið sem Word-skjal"
   },
   "pt": {
     "back": "← Voltar",
@@ -517,7 +521,9 @@
       "how": "Abra uma ficha, clique num texto que esteja errado e escreva a correção. É guardada automaticamente. Quando a ficha estiver pronta, carregue em “Revi esta ficha” no fim da página.",
       "error": "Algo correu mal:",
       "deadline": "A fase de tradução termina a 15 de dezembro de 2026."
-    }
+    },
+    "download": "⬇ Word",
+    "downloadTip": "Descarregar esta ficha como documento Word"
   },
   "hr": {
     "back": "← Natrag",
@@ -689,7 +695,9 @@
       "how": "Otvorite radni list, kliknite na tekst koji je pogrešan i upišite ispravak. Sprema se automatski. Kad završite, pritisnite „Pregledao/la sam ovaj radni list” na dnu.",
       "error": "Nešto nije u redu:",
       "deadline": "Faza prevođenja završava 15. prosinca 2026."
-    }
+    },
+    "download": "⬇ Word",
+    "downloadTip": "Preuzmi ovaj radni list kao Word dokument"
   },
   "tr": {
     "back": "← Geri",
@@ -861,7 +869,9 @@
       "how": "Bir çalışma yaprağı açın, yanlış olan metne tıklayın ve düzeltmeyi yazın. Otomatik olarak kaydedilir. Yaprak bittiğinde en alttaki “Bu çalışma yaprağını kontrol ettim” düğmesine basın.",
       "error": "Bir şeyler ters gitti:",
       "deadline": "Çeviri aşaması 15 Aralık 2026’da sona erer."
-    }
+    },
+    "download": "⬇ Word",
+    "downloadTip": "Bu çalışma yaprağını Word belgesi olarak indir"
   },
   "nl": {
     "back": "← Terug",
@@ -1033,6 +1043,8 @@
       "how": "Open een werkblad, klik op een tekst die fout is en typ de verbetering. Die wordt automatisch opgeslagen. Is het werkblad klaar, druk dan onderaan op „Ik heb dit werkblad nagekeken”.",
       "error": "Er ging iets mis:",
       "deadline": "De vertaalfase eindigt op 15 december 2026."
-    }
+    },
+    "download": "⬇ Word",
+    "downloadTip": "Dit werkblad downloaden als Word-document"
   }
 }

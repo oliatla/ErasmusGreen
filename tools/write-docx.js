@@ -16,6 +16,7 @@
 const fs = require('fs');
 const path = require('path');
 const zlib = require('zlib');
+const { ommlInline, ommlBlock } = require('./latex-omml.js');
 
 /* ---------- ZIP ---------- */
 const CRC_TABLE = (() => {
@@ -108,11 +109,16 @@ function runs(text, o = {}) {
       .map((line, i) => (i ? '<w:br/>' : '') + `<w:t xml:space="preserve">${esc(line)}</w:t>`).join('');
     out.push(`<w:r>${props.length ? `<w:rPr>${props.join('')}</w:rPr>` : ''}${body}</w:r>`);
   };
-  for (const piece of String(text ?? '').split(/(\*\*[^*]+\*\*|\*[^*\n]+\*)/g)) {
-    if (!piece) continue;
-    if (/^\*\*[^*]+\*\*$/.test(piece)) push(piece.slice(2, -2), true, false);
-    else if (/^\*[^*]+\*$/.test(piece)) push(piece.slice(1, -1), false, true);
-    else push(piece, false, false);
+  // $…$ with LaTeX in it becomes a real Word equation; "$5 or $10" stays text
+  for (const part of String(text ?? '').split(/(\$[^$\n]{1,300}\$)/)) {
+    const m = /^\$([^$]+)\$$/.exec(part);
+    if (m && /[\\_^{}=]/.test(m[1])) { out.push(ommlInline(m[1])); continue; }
+    for (const piece of part.split(/(\*\*[^*]+\*\*|\*[^*\n]+\*)/g)) {
+      if (!piece) continue;
+      if (/^\*\*[^*]+\*\*$/.test(piece)) push(piece.slice(2, -2), true, false);
+      else if (/^\*[^*]+\*$/.test(piece)) push(piece.slice(1, -1), false, true);
+      else push(piece, false, false);
+    }
   }
   return out.join('');
 }
@@ -321,9 +327,12 @@ function buildDocx(opts) {
         para(`▶ ${b.caption ? T(b.caption) + ' — ' : ''}https://youtu.be/${b.youtube}`, { key: b.caption, italic: true, color: GREY });
         break;
 
-      case 'math':
-        para(b.tex, { mono: true, color: GREEN, jc: 'center' });
+      case 'math': {
+        // words inside a formula (\text{@0}) are translated texts
+        const tex = String(b.tex).replace(/@(\d+)/g, (m, i) => (b.args && b.args[i] != null ? T(b.args[i]) : m));
+        out.push(`<w:p><w:pPr><w:spacing w:before="120" w:after="120"/><w:jc w:val="center"/></w:pPr>${ommlBlock(tex)}</w:p>`);
         break;
+      }
 
       default:
         if (b.text) para(T(b.text), { key: b.text });
@@ -408,15 +417,50 @@ function buildDocx(opts) {
     style('ListParagraph', 'List Paragraph', { basedOn: 'Normal', ppr: '<w:ind w:left="720"/><w:contextualSpacing/>' }) +
     '</w:styles>';
 
-  const docXml = XML +
-    '<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" ' +
+  /* ---------- header and footer: the logos and the EU funding text on every page ---------- */
+  const NS = 'xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" ' +
     'xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" ' +
     'xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" ' +
     'xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" ' +
-    'xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><w:body>' +
+    'xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture" ' +
+    'xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"';
+  const IMG = path.join(__dirname, '..', 'img');
+  const headerRels = [];
+  const logo = (file, rid, heightCm, docId) => {
+    const p = path.join(IMG, file);
+    if (!fs.existsSync(p)) return '';
+    const data = fs.readFileSync(p);
+    media.push({ name: file, data });
+    headerRels.push(`<Relationship Id="${rid}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/${file}"/>`);
+    const px = imageSize(data) || { w: 300, h: 100 };
+    const h = Math.round(heightCm * 360000), w = Math.round(h * px.w / px.h);
+    return `<w:r><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0"><wp:extent cx="${w}" cy="${h}"/>` +
+      `<wp:effectExtent l="0" t="0" r="0" b="0"/><wp:docPr id="${docId}" name="${file}"/>` +
+      `<a:graphic><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic>` +
+      `<pic:nvPicPr><pic:cNvPr id="${docId}" name="${file}"/><pic:cNvPicPr/></pic:nvPicPr>` +
+      `<pic:blipFill><a:blip r:embed="${rid}"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill>` +
+      `<pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="${w}" cy="${h}"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr>` +
+      `</pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r>`;
+  };
+  const rightTab = `<w:tabs><w:tab w:val="right" w:pos="${W_TOTAL}"/></w:tabs>`;
+  const headerXml = XML + `<w:hdr ${NS}><w:p><w:pPr>${rightTab}<w:spacing w:after="0"/></w:pPr>` +
+    logo('greenlogo.png', 'rIdLogo1', 1.2, 9001) + '<w:r><w:tab/></w:r>' + logo('eufounded.png', 'rIdLogo2', 1.1, 9002) +
+    '</w:p></w:hdr>';
+  const small = (text, o = {}) => runs(text, { size: 14, color: GREY, ...o });
+  const field = instr => `<w:fldSimple w:instr=" ${instr} "><w:r><w:rPr><w:sz w:val="14"/><w:color w:val="${GREY}"/></w:rPr><w:t>1</w:t></w:r></w:fldSimple>`;
+  const footerXml = XML + `<w:ftr ${NS}>` +
+    `<w:p><w:pPr><w:pBdr><w:top w:val="single" w:sz="4" w:space="4" w:color="${BORDER}"/></w:pBdr><w:spacing w:after="40"/></w:pPr>${small(ui.disclaimer || '')}</w:p>` +
+    `<w:p><w:pPr>${rightTab}<w:spacing w:after="0"/></w:pPr>${small('GREEN Erasmus+ KA220-VET · ' + (ui.projectLine || ''))}<w:r><w:tab/></w:r>` +
+    `${small(`${ui.page || 'Page'} `)}${field(String.raw`PAGE \* MERGEFORMAT`)}${small(` ${ui.of || 'of'} `)}${field(String.raw`NUMPAGES \* MERGEFORMAT`)}</w:p></w:ftr>`;
+  rels.push('<Relationship Id="rIdHdr" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/header" Target="header1.xml"/>',
+    '<Relationship Id="rIdFtr" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer" Target="footer1.xml"/>');
+
+  const docXml = XML +
+    `<w:document ${NS}><w:body>` +
     out.join('') +
-    '<w:sectPr><w:pgSz w:w="11906" w:h="16838"/>' +
-    '<w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134" w:header="567" w:footer="567" w:gutter="0"/>' +
+    '<w:sectPr><w:headerReference w:type="default" r:id="rIdHdr"/><w:footerReference w:type="default" r:id="rIdFtr"/>' +
+    '<w:pgSz w:w="11906" w:h="16838"/>' +
+    '<w:pgMar w:top="1531" w:right="1134" w:bottom="1588" w:left="1134" w:header="510" w:footer="454" w:gutter="0"/>' +
     '</w:sectPr></w:body></w:document>';
 
   const core = XML +
@@ -441,6 +485,8 @@ function buildDocx(opts) {
     '<Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/>' +
     '<Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/>' +
     '<Override PartName="/word/numbering.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml"/>' +
+    '<Override PartName="/word/header1.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml"/>' +
+    '<Override PartName="/word/footer1.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml"/>' +
     '<Override PartName="/docProps/core.xml" ContentType="application/vnd.openxmlformats-package.core-properties+xml"/>' +
     '</Types>';
 
@@ -459,6 +505,9 @@ function buildDocx(opts) {
       { name: 'word/styles.xml', data: stylesXml },
       { name: 'word/numbering.xml', data: numXml },
       { name: 'word/_rels/document.xml.rels', data: XML + `<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">${rels.join('')}</Relationships>` },
+      { name: 'word/header1.xml', data: headerXml },
+      { name: 'word/footer1.xml', data: footerXml },
+      { name: 'word/_rels/header1.xml.rels', data: XML + `<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">${headerRels.join('')}</Relationships>` },
       ...media.map(m => ({ name: `word/media/${m.name}`, data: m.data }))
     ]),
     bookmarks: bookmarkId,

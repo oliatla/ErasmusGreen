@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16T14:43:57.331Z",
+  "generated": "2026-11-16T16:31:32.278Z",
   "languages": [
     "en",
     "is",
@@ -61,6 +61,9 @@
           "is": "Heildarkostnaður og umhverfisáhrif"
         }
       },
+      "docx": [
+        "en"
+      ],
       "time": {
         "basic": {
           "en": "60 min",
@@ -126,6 +129,9 @@
           "is": "Orkulíkön úr raunveruleikanum og breytilegt raforkuverð"
         }
       },
+      "docx": [
+        "en"
+      ],
       "time": {
         "basic": {
           "en": "60 min",
@@ -191,6 +197,9 @@
           "is": "Rekstrarrök fyrir endurnýjun lýsingar"
         }
       },
+      "docx": [
+        "en"
+      ],
       "time": {},
       "translated": {
         "is": {
@@ -243,6 +252,9 @@
           "is": "Hönnun sjálfvirkrar lýsingar fyrir heila byggingu"
         }
       },
+      "docx": [
+        "en"
+      ],
       "time": {
         "basic": {
           "en": "60 min",
@@ -290,6 +302,9 @@
         "is": "Orku- og vatnsnýtni uppþvottavéla"
       },
       "subject": {},
+      "docx": [
+        "en"
+      ],
       "time": {},
       "translated": {
         "is": {
@@ -342,6 +357,9 @@
           "is": "Líkan af kostnaði á líftíma og umhverfisáhrif"
         }
       },
+      "docx": [
+        "en"
+      ],
       "time": {
         "basic": {
           "en": "60 min",
@@ -407,6 +425,9 @@
           "is": "Orkunotkun og kolefnisspor eldhússins bætt"
         }
       },
+      "docx": [
+        "en"
+      ],
       "time": {
         "basic": {
           "en": "60 min",
@@ -472,6 +493,9 @@
           "is": "Biðstöðuafl, draugaálag og snjallar lausnir"
         }
       },
+      "docx": [
+        "en"
+      ],
       "time": {
         "basic": {
           "en": "60 min",
@@ -537,6 +561,9 @@
           "is": "Vistferilsgreining, tengsl vatns og orku og stefnumótun"
         }
       },
+      "docx": [
+        "en"
+      ],
       "time": {
         "basic": {
           "en": "60 min",
@@ -584,6 +611,9 @@
         "is": "Þrif og heimilishald: þvottavélar og þurrkarar"
       },
       "subject": {},
+      "docx": [
+        "en"
+      ],
       "time": {},
       "translated": {
         "is": {
@@ -618,6 +648,9 @@
         "is": "Gólfþrif – hefðbundin ryksuga eða vélmennaryksuga"
       },
       "subject": {},
+      "docx": [
+        "en"
+      ],
       "time": {},
       "translated": {
         "is": {
@@ -652,6 +685,9 @@
         "is": "Orkunýtni snyrtitækja: hárblásarar"
       },
       "subject": {},
+      "docx": [
+        "en"
+      ],
       "time": {},
       "translated": {
         "is": {
@@ -691,6 +727,9 @@
         "is": "Orkunýtni í tölvuveri skólans"
       },
       "subject": {},
+      "docx": [
+        "en"
+      ],
       "time": {},
       "translated": {
         "is": {
@@ -720,6 +759,9 @@
         "is": "Hver eru áhrif biðstöðunotkunar?"
       },
       "subject": {},
+      "docx": [
+        "en"
+      ],
       "time": {},
       "translated": {
         "is": {
@@ -749,6 +791,9 @@
         "is": "Skil ég orkuflokkana?"
       },
       "subject": {},
+      "docx": [
+        "en"
+      ],
       "time": {},
       "translated": {
         "is": {
@@ -778,6 +823,9 @@
         "is": "Hve mikla orku notar tölva?"
       },
       "subject": {},
+      "docx": [
+        "en"
+      ],
       "time": {},
       "translated": {
         "is": {
@@ -807,6 +855,9 @@
         "is": "Þekkir þú rafmagnsvenjurnar þínar?"
       },
       "subject": {},
+      "docx": [
+        "en"
+      ],
       "time": {},
       "translated": {
         "is": {
@@ -846,6 +897,9 @@
         "is": "Úttekt á salernum skólans"
       },
       "subject": {},
+      "docx": [
+        "en"
+      ],
       "time": {},
       "translated": {
         "is": {
@@ -885,6 +939,9 @@
         "is": "Endurnýjanleg orka – sólarorkumöguleikar skólans"
       },
       "subject": {},
+      "docx": [
+        "en"
+      ],
       "time": {},
       "translated": {
         "is": {
@@ -928,6 +985,9 @@
         "nl": "Slimme verlichting"
       },
       "subject": {},
+      "docx": [
+        "en"
+      ],
       "time": {
         "basic": {
           "en": "60 min",

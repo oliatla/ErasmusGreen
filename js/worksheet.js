@@ -390,6 +390,7 @@
       `<button data-source="main"></button><button data-source="google"></button></div></div>` +
       `<div class="spacer"></div>` +
       `<button class="bw-toggle" aria-pressed="false"></button>` +
+      `<a class="docx-btn" hidden></a>` +
       `<button class="print-btn"></button>`;
     document.body.prepend(bar);
 
@@ -411,12 +412,31 @@
     });
   }
 
+  /* "⬇ Word": shown only when docx/<lang>.docx has been published (reader.mjs word --all --web) */
+  const docxExists = {};
+  async function updateDownload(a) {
+    const lang = state.lang;
+    if (!(lang in docxExists)) {
+      docxExists[lang] = fetch(`docx/${lang}.docx`, { method: 'HEAD', cache: 'no-cache' }).then(r => r.ok).catch(() => false);
+    }
+    const ok = await docxExists[lang];
+    if (lang !== state.lang) return;
+    a.hidden = !ok;
+    if (!ok) return;
+    const title = state.content.title ? T(state.content.title, true) : 'worksheet';
+    a.href = `docx/${lang}.docx`;
+    a.download = `${title} (${lang.toUpperCase()}).docx`;
+    a.textContent = ui('download');
+    a.title = ui('downloadTip');
+  }
+
   function updateToolbar() {
     const bar = document.querySelector('.toolbar');
     bar.querySelector('.back-btn').textContent = ui('back');
     bar.querySelectorAll('[data-ui]').forEach(el => { el.textContent = ui(el.dataset.ui); });
     bar.querySelector('.bw-toggle').textContent = ui('bwToggle');
     bar.querySelector('.print-btn').textContent = ui('print');
+    updateDownload(bar.querySelector('.docx-btn'));
     bar.querySelectorAll('.flag-btn').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === state.lang));
     const seg = bar.querySelector('#level-seg');
     seg.innerHTML = [['all', esc(ui('allLevels'))], ...state.content.levels.map(l => [l, bars(l) + esc(ui('levels.' + l))])]

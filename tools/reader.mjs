@@ -407,11 +407,26 @@ function translationPath(content, slug, lang, ext, opt) {
 
 /* worksheet + one language → .docx for the partner school */
 function cmdWord(slug, opt) {
+  // --all: every worksheet; --lang en,is,…: several languages (default: every fully translated one)
+  if (opt.all) {
+    const slugs = fs.readdirSync(path.join(ROOT, 'ws'), { withFileTypes: true })
+      .filter(e => e.isDirectory() && fs.existsSync(path.join(wsDir(e.name), 'content.json')) &&
+        readJSON(path.join(wsDir(e.name), 'content.json')).schema === 1)
+      .map(e => e.name);
+    for (const s of slugs) {
+      const langs = opt.lang && opt.lang !== true ? String(opt.lang).split(',')
+        : ['en', ...coverage(s).filter(c => !c.error && !c.lang.includes('/') && c.done === c.total).map(c => c.lang)];
+      for (const l of langs) cmdWord(s, { ...opt, all: false, lang: l.trim(), out: null });
+    }
+    if (opt.web) cmdIndex({ quiet: true });
+    return;
+  }
   const lang = (opt.lang || 'is').toLowerCase();
   const { dir, content, en, strings, missing, ui, notice } = loadTranslation(slug, lang);
   const { buffer, bookmarks, images } = buildDocx({ content, strings, ui, lang, slug, dir, notice });
 
-  const out = translationPath(content, slug, lang, 'docx', opt);
+  // --web: next to the worksheet (ws/<slug>/docx/<lang>.docx) so the website can offer it for download
+  const out = opt.web ? path.join(dir, 'docx', `${lang}.docx`) : translationPath(content, slug, lang, 'docx', opt);
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, buffer);
 
@@ -529,6 +544,9 @@ function cmdIndex(opt = {}) {
       try { meta = readJSON(path.join(dir, 'lang', `${r.lang}.json`))._meta || {}; } catch (_) {}
       translated[r.lang] = { done: r.done, total: r.total, reviewed: meta.reviewed === true };
     }
+    // Word documents published with the worksheet (reader.mjs word --all --web)
+    const docxDir = path.join(dir, 'docx');
+    const docx = fs.existsSync(docxDir) ? fs.readdirSync(docxDir).filter(f => /^[a-z]{2}\.docx$/.test(f)).map(f => f.slice(0, 2)) : [];
 
     const title = pick(c.title);
     items.push({
@@ -537,6 +555,7 @@ function cmdIndex(opt = {}) {
       demo: !(c.source && c.source.type === 'docx'),           // the Google Doc example, not a partner document
       levels: c.levels || [], counts, title,
       subject: byLevel(c.meta && c.meta.topic),
+      docx,
       time: byLevel(c.meta && c.meta.time),
       translated
     });
