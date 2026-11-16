@@ -380,7 +380,8 @@
   function toolbar() {
     const bar = h('div', 'toolbar');
     bar.innerHTML =
-      `<a class="back-btn" href="${ROOT}index.html"></a>` +
+      // back to where you came from: the translators' page in edit mode, otherwise the list of worksheets
+      `<a class="back-btn" href="${ROOT}${state.edit ? 'translations/' : 'worksheets.html'}"></a>` +
       `<div class="group"><span class="label" data-ui="language"></span><div class="flags">` +
       LANGS.map(l => `<button class="flag-btn" data-lang="${l.code}" title="${l.name}"><img src="${ROOT}img/flags/${l.code}.svg" alt="${l.code}"></button>`).join('') +
       `</div></div>` +
