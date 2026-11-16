@@ -43,6 +43,12 @@
     .tr-panel .tr-status.err { color: #b00020; font-weight: 600; }
     .tr-panel button { font: inherit; font-size: 13px; border: 1px solid #c1c7d0; background: #fff; border-radius: 6px; padding: 4px 10px; cursor: pointer; }
     .tr-panel .tr-close { float: right; border: 0; font-size: 18px; line-height: 1; padding: 0 4px; }
+    .tr-history { font-size: 13px; }
+    .tr-h { border-left: 3px solid #dfe1e6; padding: 4px 0 6px 10px; margin: 6px 0; }
+    .tr-h.now { border-left-color: #1b6b3a; }
+    .tr-h-meta { color: #5f6b76; font-size: 12px; }
+    .tr-h-text { white-space: pre-wrap; margin: 2px 0 4px; }
+    .tr-panel .tr-use { font-size: 12px; padding: 2px 8px; }
     .tr-note { display: flex; gap: 8px; flex: 1 1 320px; }
     .tr-note input { flex: 1; font: inherit; padding: 5px 8px; border-radius: 6px; border: 0; }
     #pages { padding-bottom: 80px; }
@@ -148,8 +154,10 @@
       ${ai != null && st.overrides[key] != null ? `<h4>${esc(t('ai'))}</h4><div class="tr-src">${esc(ai)}</div>` : ''}
       <h4>${esc(t('yours'))}</h4><textarea spellcheck="true" lang="${me.lang}">${esc(now)}</textarea>
       <div class="tr-row"><span class="tr-status"></span>
-        ${ai != null ? `<button class="tr-revert">${esc(t('revert'))}</button>` : ''}</div>`;
+        ${ai != null ? `<button class="tr-revert">${esc(t('revert'))}</button>` : ''}</div>
+      <h4>${esc(t('history'))}</h4><div class="tr-history">…</div>`;
     panel.hidden = false;
+    loadHistory(key);
     const ta = panel.querySelector('textarea');
     ta.focus();
     ta.setSelectionRange(ta.value.length, ta.value.length);
@@ -160,6 +168,33 @@
       timer = setTimeout(() => save(key, ta.value), 900);
     });
   }
+  /* every saved version of this text, newest first, with who and when */
+  const names = {};
+  async function loadHistory(key) {
+    const box = panel.querySelector('.tr-history');
+    if (!box) return;
+    const { data: rows, error } = await sb.from('revisions')
+      .select('id,text,changed_by,changed_at').eq('lang', me.lang).eq('key', key)
+      .order('changed_at', { ascending: false }).limit(50);
+    if (key !== current) return;                     // another text was opened meanwhile
+    if (error) { box.textContent = error.message; return; }
+    const missing = [...new Set(rows.map(r => r.changed_by).filter(id => id && !(id in names)))];
+    if (missing.length) {
+      const { data: people } = await sb.from('translators').select('user_id,name,email').in('user_id', missing);
+      for (const p of people || []) names[p.user_id] = p.name || p.email;
+    }
+    const when = d => new Date(d).toLocaleString(me.lang, { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+    const item = (text, meta, isNow) => `<div class="tr-h${isNow ? ' now' : ''}">
+        <div class="tr-h-meta">${meta}${isNow ? ` · <b>${esc(t('current'))}</b>` : ''}</div>
+        <div class="tr-h-text">${text == null ? `<i>${esc(t('reverted'))}</i>` : esc(text)}</div>
+        ${!isNow && text != null ? `<button class="tr-use" data-text="${esc(text)}">${esc(t('restore'))}</button>` : ''}</div>`;
+    const nowText = st.overrides[key] != null ? st.overrides[key] : null;
+    let html = rows.map((r, i) => item(r.text, `${esc(when(r.changed_at))} · ${esc(names[r.changed_by] || '?')}`,
+      i === 0 && (r.text === nowText || (r.text == null && nowText == null)))).join('');
+    if (st.base[key] != null) html += item(st.base[key], esc(t('original')), !rows.length || (rows[0].text == null && nowText == null));
+    box.innerHTML = rows.length || st.base[key] != null ? html : esc(t('noHistory'));
+  }
+
   function status(text, err) {
     const s = panel.querySelector('.tr-status');
     if (s) { s.textContent = text; s.classList.toggle('err', !!err); }
@@ -181,7 +216,7 @@
         : await sb.from('translations').upsert({ lang: me.lang, key, text: value, worksheet: slug });
       if (res.error) { status(`${t('error')}: ${res.error.message}`, true); return; }
       api.setText(key, (!value || value === st.base[key]) ? null : value);
-      if (key === current) status(t('saved'));
+      if (key === current) { status(t('saved')); loadHistory(key); }
     });
     return saving;
   }
@@ -194,6 +229,15 @@
   }
 
   panel.addEventListener('click', e => {
+    const use = e.target.closest('.tr-use');
+    if (use && current) {
+      const ta = panel.querySelector('textarea');
+      ta.value = use.dataset.text;
+      api.setText(current, ta.value);
+      status(t('saving'));
+      save(current, ta.value);
+      return;
+    }
     if (e.target.closest('.tr-close')) close();
     else if (e.target.closest('.tr-revert') && current) {
       const ta = panel.querySelector('textarea');

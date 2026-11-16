@@ -113,7 +113,13 @@
       "noteSent": "✓ Note sent",
       "changed": "changed",
       "signedInAs": "Signed in as",
-      "home": "Translations page"
+      "home": "Translations page",
+      "history": "History of changes",
+      "restore": "Use this version",
+      "original": "Machine translation (original)",
+      "reverted": "set back to the machine translation",
+      "current": "current",
+      "noHistory": "No changes yet."
     },
     "trans": {
       "title": "GREEN translations",
@@ -246,7 +252,13 @@
       "noteSent": "✓ Athugasemd send",
       "changed": "breytt",
       "signedInAs": "Innskráð(ur) sem",
-      "home": "Þýðingasíðan"
+      "home": "Þýðingasíðan",
+      "history": "Saga breytinga",
+      "restore": "Nota þessa útgáfu",
+      "original": "Vélþýðing (upphafleg)",
+      "reverted": "sett aftur í vélþýðinguna",
+      "current": "núverandi",
+      "noHistory": "Engar breytingar enn."
     },
     "trans": {
       "title": "GREEN þýðingar",
@@ -379,7 +391,13 @@
       "noteSent": "✓ Nota enviada",
       "changed": "alterado",
       "signedInAs": "Sessão iniciada como",
-      "home": "Página de traduções"
+      "home": "Página de traduções",
+      "history": "Histórico de alterações",
+      "restore": "Usar esta versão",
+      "original": "Tradução automática (original)",
+      "reverted": "reposta a tradução automática",
+      "current": "atual",
+      "noHistory": "Ainda sem alterações."
     },
     "trans": {
       "title": "Traduções GREEN",
@@ -512,7 +530,13 @@
       "noteSent": "✓ Napomena poslana",
       "changed": "promijenjeno",
       "signedInAs": "Prijavljeni ste kao",
-      "home": "Stranica za prijevode"
+      "home": "Stranica za prijevode",
+      "history": "Povijest promjena",
+      "restore": "Upotrijebi ovu verziju",
+      "original": "Strojni prijevod (izvorni)",
+      "reverted": "vraćeno na strojni prijevod",
+      "current": "trenutačno",
+      "noHistory": "Još nema promjena."
     },
     "trans": {
       "title": "GREEN prijevodi",
@@ -645,7 +669,13 @@
       "noteSent": "✓ Not gönderildi",
       "changed": "değiştirildi",
       "signedInAs": "Oturum açan:",
-      "home": "Çeviri sayfası"
+      "home": "Çeviri sayfası",
+      "history": "Değişiklik geçmişi",
+      "restore": "Bu sürümü kullan",
+      "original": "Makine çevirisi (orijinal)",
+      "reverted": "makine çevirisine geri döndürüldü",
+      "current": "şu anki",
+      "noHistory": "Henüz değişiklik yok."
     },
     "trans": {
       "title": "GREEN çevirileri",
@@ -778,7 +808,13 @@
       "noteSent": "✓ Opmerking verstuurd",
       "changed": "gewijzigd",
       "signedInAs": "Ingelogd als",
-      "home": "Vertaalpagina"
+      "home": "Vertaalpagina",
+      "history": "Wijzigingsgeschiedenis",
+      "restore": "Deze versie gebruiken",
+      "original": "Machinevertaling (origineel)",
+      "reverted": "teruggezet naar de machinevertaling",
+      "current": "huidig",
+      "noHistory": "Nog geen wijzigingen."
     },
     "trans": {
       "title": "GREEN vertalingen",
