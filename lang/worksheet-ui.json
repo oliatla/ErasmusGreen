@@ -202,7 +202,8 @@
       "deleteConfirm": "Delete your account? Your name, email and sign-in are removed for good. Your corrections stay on the worksheets, anonymously. This cannot be undone.",
       "deleted": "Your account has been deleted. Thank you for your help!",
       "issuesLink": "Problems found in the English source texts →",
-      "privacyAgain": "read again"
+      "privacyAgain": "read again",
+      "tutorial": "Step-by-step guide with pictures"
     },
     "download": "⬇ Word",
     "downloadTip": "Download this worksheet as a Word document",
@@ -488,7 +489,8 @@
       "deleteConfirm": "Eyða aðganginum þínum? Nafn, netfang og innskráning hverfa fyrir fullt og allt. Leiðréttingarnar þínar standa áfram á blöðunum, nafnlaust. Þetta er ekki hægt að afturkalla.",
       "deleted": "Aðgangi þínum hefur verið eytt. Takk fyrir hjálpina!",
       "issuesLink": "Villur sem fundust í enska frumtextanum →",
-      "privacyAgain": "lesa aftur"
+      "privacyAgain": "lesa aftur",
+      "tutorial": "Leiðbeiningar skref fyrir skref, með myndum (á ensku)"
     },
     "download": "⬇ Word",
     "downloadTip": "Sækja blaðið sem Word-skjal",
@@ -774,7 +776,8 @@
       "deleteConfirm": "Apagar a sua conta? O seu nome, e-mail e acesso são removidos definitivamente. As suas correções ficam nas fichas, de forma anónima. Esta ação não pode ser anulada.",
       "deleted": "A sua conta foi apagada. Obrigado pela sua ajuda!",
       "issuesLink": "Problemas encontrados nos textos originais em inglês →",
-      "privacyAgain": "ler novamente"
+      "privacyAgain": "ler novamente",
+      "tutorial": "Guia passo a passo com imagens (em inglês)"
     },
     "download": "⬇ Word",
     "downloadTip": "Descarregar esta ficha como documento Word",
@@ -1060,7 +1063,8 @@
       "deleteConfirm": "Izbrisati vaš račun? Vaše ime, e-pošta i prijava trajno se uklanjaju. Vaši ispravci ostaju na radnim listovima, anonimno. Ovo se ne može poništiti.",
       "deleted": "Vaš je račun izbrisan. Hvala na pomoći!",
       "issuesLink": "Pogreške pronađene u engleskim izvornim tekstovima →",
-      "privacyAgain": "pročitaj ponovno"
+      "privacyAgain": "pročitaj ponovno",
+      "tutorial": "Vodič korak po korak sa slikama (na engleskom)"
     },
     "download": "⬇ Word",
     "downloadTip": "Preuzmi ovaj radni list kao Word dokument",
@@ -1346,7 +1350,8 @@
       "deleteConfirm": "Hesabınız silinsin mi? Adınız, e-postanız ve oturum bilgileriniz kalıcı olarak kaldırılır. Düzeltmeleriniz çalışma yapraklarında anonim olarak kalır. Bu işlem geri alınamaz.",
       "deleted": "Hesabınız silindi. Yardımınız için teşekkürler!",
       "issuesLink": "İngilizce kaynak metinlerde bulunan sorunlar →",
-      "privacyAgain": "yeniden oku"
+      "privacyAgain": "yeniden oku",
+      "tutorial": "Resimli adım adım kılavuz (İngilizce)"
     },
     "download": "⬇ Word",
     "downloadTip": "Bu çalışma yaprağını Word belgesi olarak indir",
@@ -1632,7 +1637,8 @@
       "deleteConfirm": "Je account verwijderen? Je naam, e-mail en inloggegevens worden definitief verwijderd. Je verbeteringen blijven anoniem op de werkbladen staan. Dit kan niet ongedaan worden gemaakt.",
       "deleted": "Je account is verwijderd. Bedankt voor je hulp!",
       "issuesLink": "Problemen gevonden in de Engelse brontekst →",
-      "privacyAgain": "opnieuw lezen"
+      "privacyAgain": "opnieuw lezen",
+      "tutorial": "Stapsgewijze handleiding met afbeeldingen (in het Engels)"
     },
     "download": "⬇ Word",
     "downloadTip": "Dit werkblad downloaden als Word-document",

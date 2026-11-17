@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Step-by-step guide — GREEN translations</title>
+<link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+<meta name="theme-color" content="#059669">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  :root { --mark: #e8590c; }
+  .tut { max-width: 860px; margin: 0 auto; font-size: 1.08rem; line-height: 1.6; }
+  .tut h2 { font-size: 1.5rem; margin: 2.6rem 0 .4rem; padding-top: 1rem; border-top: 2px solid var(--border); }
+  .tut h2:first-of-type { border-top: 0; margin-top: 1rem; }
+  .tut .part { color: var(--green); font-weight: 800; letter-spacing: .06em; text-transform: uppercase; font-size: .8rem; }
+  .intro, .note-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r); box-shadow: var(--shadow); padding: 1.1rem 1.3rem; }
+  .intro ul { margin: .4rem 0 0; padding-left: 1.2rem; }
+  .note-box { background: #fff8e6; border-color: #f5d27a; color: #4a3b10; margin: 1rem 0; }
+  .toc { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0 0; }
+  .toc a { background: var(--bg-subtle); border: 1px solid var(--border); border-radius: 99px; padding: .3rem .9rem; font-weight: 700; font-size: .9rem; color: var(--text); text-decoration: none; }
+  .toc a:hover { border-color: var(--green); }
+
+  .step { display: grid; grid-template-columns: 3rem 1fr; gap: 0 1rem; margin: 2rem 0; }
+  .step-n { width: 3rem; height: 3rem; border-radius: 50%; background: var(--green); color: #fff; font-weight: 800; font-size: 1.35rem; display: grid; place-items: center; }
+  .step h3 { margin: .45rem 0 .5rem; font-size: 1.22rem; }
+  .step p { margin: .3rem 0; }
+  .step ol.marks { margin: .7rem 0 0; padding: 0; list-style: none; }
+  .step ol.marks li { display: flex; gap: .6rem; align-items: baseline; margin: .35rem 0; }
+  .step ol.marks li b.m { flex: none; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--mark); color: #fff; font-size: .9rem; display: inline-grid; place-items: center; transform: translateY(.2rem); }
+  .is { color: var(--text-muted); font-size: .92rem; }
+  .btn-like { display: inline-block; background: var(--green); color: #fff; border-radius: 6px; padding: 0 .45rem; font-weight: 700; font-size: .95rem; white-space: nowrap; }
+
+  .shot { position: relative; margin: .9rem 0 0; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); background: #fff; }
+  .shot img { display: block; width: 100%; height: auto; }
+  .shot.narrow { max-width: 560px; }
+  .mk { position: absolute; border: 3px solid var(--mark); border-radius: 8px; box-shadow: 0 0 0 3px rgba(255,255,255,.85), 0 0 18px rgba(232,89,12,.45); pointer-events: none; }
+  .mk.r::after { left: auto; right: -15px; }
+  .mk::after { content: attr(data-n); position: absolute; top: -15px; left: -15px; width: 28px; height: 28px; border-radius: 50%; background: var(--mark); color: #fff; font: 800 15px/28px system-ui, sans-serif; text-align: center; box-shadow: 0 0 0 2px #fff; }
+
+  .mail { max-width: 560px; margin: .9rem 0 0; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); background: #fff; color: #1a1d27; font-family: Arial, sans-serif; }
+  .mail-head { background: #f1f3f6; padding: .6rem 1rem; font-size: .88rem; color: #3c4450; border-bottom: 1px solid #dde1e6; }
+  .mail-head div { margin: .1rem 0; }
+  .mail-body { padding: 1rem 1.3rem 1.2rem; position: relative; }
+  .mail-body h4 { color: #1B6B3A; margin: 0 0 .6rem; font-size: 1.15rem; }
+  .mail-btn { display: inline-block; background: #1B6B3A; color: #fff; padding: .6rem 1.2rem; border-radius: 6px; font-weight: 700; margin: .6rem 0; position: relative; }
+  .mail-btn .mk { inset: -8px; }
+  .mail small { color: #5f6b76; }
+
+  .form-mock { max-width: 460px; margin: .9rem 0 0; border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; background: var(--bg-card); box-shadow: var(--shadow); font-size: .95rem; }
+  .form-mock h4 { margin: 0 0 .7rem; }
+  .form-mock label { display: block; font-weight: 600; color: var(--text-sec); font-size: .85rem; margin-top: .6rem; }
+  .form-mock .field { border: 1px solid var(--border); border-radius: 6px; padding: .45rem .7rem; background: var(--bg-subtle); margin-top: .2rem; }
+  .form-mock .check { margin-top: .8rem; font-size: .88rem; }
+  .form-mock .go { display: inline-block; margin-top: .9rem; background: var(--green); color: #fff; font-weight: 700; padding: .45rem 1.1rem; border-radius: 6px; }
+
+  .faq details { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: .7rem 1rem; margin: .5rem 0; }
+  .faq summary { font-weight: 700; cursor: pointer; }
+  .faq details p { margin: .5rem 0 .2rem; }
+  .actions { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; margin: 1.2rem 0 0; }
+  .actions a, .actions button { font: inherit; font-weight: 700; font-size: .95rem; padding: .55rem 1.1rem; border-radius: 8px; border: 1px solid var(--green); background: var(--green); color: #fff; cursor: pointer; text-decoration: none; }
+  .actions .ghost { background: transparent; color: var(--green); }
+  .license { text-align: center; color: var(--text-muted); font-size: .8rem; margin: 2.5rem 0 1rem; }
+
+  @media (max-width: 600px) {
+    .tut { font-size: 1rem; }
+    .step { grid-template-columns: 2.2rem 1fr; gap: 0 .7rem; }
+    .step-n { width: 2.2rem; height: 2.2rem; font-size: 1.05rem; }
+    .mk::after { width: 22px; height: 22px; font-size: 12px; line-height: 22px; top: -12px; left: -12px; }
+  }
+  @media print {
+    .top-bar, .actions, .toc { display: none !important; }
+    .step, .shot, .mail { break-inside: avoid; }
+    .faq details { display: block; }
+    .tut { font-size: 11pt; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <a href="../index.html" class="brand-mark" aria-label="GREEN">
+    <img src="../img/greenlogo.png" alt="" class="brand-logo">
+    <span class="brand-text"><strong>GREEN</strong><span class="brand-sub">Erasmus+ KA220-VET</span></span>
+  </a>
+  <div class="top-bar-actions">
+    <a href="./" class="icon-btn">Translations</a>
+    <button class="theme-toggle" id="theme-btn" onclick="theme.toggle()" aria-label="Toggle theme">🌙</button>
+  </div>
+</div>
+
+<header class="page-header">
+  <div class="header-inner hero">
+    <span class="badge">GREEN Erasmus+ · translation phase</span>
+    <h1>Step-by-step guide for translators</h1>
+    <p>How to sign in and correct a worksheet in your language — with pictures. No experience needed. It takes about 5 minutes to learn.</p>
+    <div class="actions">
+      <a href="./">Open the translations page →</a>
+      <button class="ghost" onclick="window.print()">🖨 Print this guide</button>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+<div class="tut">
+
+  <div class="intro">
+    <b>What you will do:</b> the worksheets have already been translated into your language by a computer (AI).
+    The computer makes mistakes. You read the worksheet and <b>fix only the texts that are wrong</b>.
+    <ul>
+      <li>You do not need a password, a program or an app — only a web browser (Chrome, Edge, Firefox or Safari) and your email.</li>
+      <li>Everything is <b>saved automatically</b>. You cannot break anything: every change can be undone.</li>
+      <li>You can stop at any time and continue later.</li>
+    </ul>
+    <div class="toc">
+      <a href="#sign-in">A · Sign in</a>
+      <a href="#correct">B · Correct a text</a>
+      <a href="#finish">C · Finish a worksheet</a>
+      <a href="#faq">Problems?</a>
+    </div>
+  </div>
+
+  <div class="note-box">
+    <b>About the pictures:</b> in the pictures below, the translator works in <b>Icelandic</b>, so some buttons are in Icelandic.
+    On your screen the same buttons are <b>in your own language, in the same place</b>. Under each picture we write the English name of the button.
+    The <b style="color:var(--mark)">orange numbered frames</b> show where to look or click.
+  </div>
+
+  <!-- ===================== A ===================== -->
+  <h2 id="sign-in"><span class="part">Part A</span><br>Sign in</h2>
+  <p>You do this the first time, and again when you come back on another day or another computer.</p>
+
+  <section class="step">
+    <div class="step-n">1</div>
+    <div>
+      <h3>Open the website</h3>
+      <p>Type <b>green.rafdeild.com</b> in the address bar of your browser and press <kbd>Enter</kbd>.</p>
+      <div class="shot">
+        <img src="../img/tutorial/t01-home.png" alt="The front page of green.rafdeild.com with a green band about the translation phase" loading="lazy">
+        <span class="mk" data-n="1" style="left:33.5%;top:82%;width:17%;height:10%"></span>
+      </div>
+      <ol class="marks">
+        <li><b class="m">1</b><span>In the green band, click <b>“Translators: sign in →”</b>.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="step-n">2</div>
+    <div>
+      <h3>Read about your data and tick the box</h3>
+      <p>The first box tells you what we store about you and for how long. Please read it.</p>
+      <div class="shot narrow">
+        <img src="../img/tutorial/t02-privacy.png" alt="The privacy notice with a checkbox at the bottom" loading="lazy">
+        <span class="mk" data-n="1" style="left:5.5%;top:86.5%;width:89%;height:8%"></span>
+      </div>
+      <ol class="marks">
+        <li><b class="m">1</b><span>Click the small box <b>“I have read this and I agree.”</b> so that a tick ✓ appears. The text then disappears and the next step opens.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="step-n">3</div>
+    <div>
+      <h3>Write your email address</h3>
+      <div class="shot narrow">
+        <img src="../img/tutorial/t03-email.png" alt="How to sign in, a warning about school email, the email field and the green button" loading="lazy">
+        <span class="mk" data-n="1" style="left:6%;top:43%;width:88%;height:24%"></span>
+        <span class="mk" data-n="2" style="left:3.5%;top:72%;width:93%;height:9.5%"></span>
+        <span class="mk" data-n="3" style="left:3.5%;top:82%;width:39%;height:9%"></span>
+      </div>
+      <ol class="marks">
+        <li><b class="m">1</b><span><b>Important:</b> school email addresses often block emails like ours. If you can, use a <b>personal email</b> (Gmail, Outlook…). Any address works.</span></li>
+        <li><b class="m">2</b><span>Click in the white field and type your email address.</span></li>
+        <li><b class="m">3</b><span>Click the green button <span class="btn-like">Send me a sign-in link</span>.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="step-n">4</div>
+    <div>
+      <h3>Open the email and click the button</h3>
+      <p>Go to your email (in a new tab or on your phone). Within a minute you get this email:</p>
+      <div class="mail" aria-label="Example of the sign-in email">
+        <div class="mail-head">
+          <div><b>From:</b> VMA Rafdeild &lt;noreply@rafdeild.com&gt;</div>
+          <div><b>Subject:</b> Your sign-in link — GREEN translations</div>
+        </div>
+        <div class="mail-body">
+          <h4>GREEN Erasmus+ · translations</h4>
+          <p>Click the button to sign in and review the worksheets in your language.</p>
+          <span class="mail-btn">Sign in to GREEN translations<span class="mk" data-n="1"></span></span>
+          <p><small>The link works once and expires after one hour.</small></p>
+        </div>
+      </div>
+      <ol class="marks">
+        <li><b class="m">1</b><span>Click the green button in the email. The translations page opens and you are signed in.</span></li>
+      </ol>
+      <p class="is">No email? Wait two minutes, then look in the <b>spam / junk</b> folder. Still nothing? Go back to step 3 and use another email address.</p>
+      <p class="is">Tip: open the email <b>on the same computer</b> where you will work. If you click the link on your phone, you are signed in on your phone.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="step-n">5</div>
+    <div>
+      <h3>Only the first time: your name and language</h3>
+      <p>The first time, the page asks who you are:</p>
+      <div class="form-mock" aria-label="Example of the first-time form">
+        <h4>Welcome! Tell us who you are</h4>
+        <label>Your name</label><div class="field">Ana Silva</div>
+        <label>The language you translate into</label><div class="field">Português ▾</div>
+        <div class="check">☐ Show my name to other translators (otherwise: “Anonymous translator” and my language)</div>
+        <span class="go">Start</span>
+      </div>
+      <p>Write your name, choose <b>your language</b>, and click <span class="btn-like">Start</span>.
+        You decide if other translators can see your name — if you leave the box empty, you are “Anonymous translator”.</p>
+    </div>
+  </section>
+
+  <!-- ===================== B ===================== -->
+  <h2 id="correct"><span class="part">Part B</span><br>Correct a text</h2>
+
+  <section class="step">
+    <div class="step-n">6</div>
+    <div>
+      <h3>Choose a worksheet</h3>
+      <p>Now you see <b>your worksheets</b>: all 20 worksheets in your language.</p>
+      <div class="shot">
+        <img src="../img/tutorial/t05-dashboard.jpg" alt="The list of worksheets with a progress bar and green Review buttons" loading="lazy">
+        <span class="mk" data-n="1" style="left:2%;top:19%;width:94%;height:10%"></span>
+        <span class="mk" data-n="2" style="left:4%;top:53.5%;width:90%;height:8.5%"></span>
+        <span class="mk" data-n="3" style="left:83%;top:66%;width:11.5%;height:8.5%"></span>
+      </div>
+      <ol class="marks">
+        <li><b class="m">1</b><span>How many worksheets you have finished.</span></li>
+        <li><b class="m">2</b><span>A short help text, if you forget how it works.</span></li>
+        <li><b class="m">3</b><span>Click <span class="btn-like">Review</span> next to a worksheet to open it. Start with any one — the order does not matter.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="step-n">7</div>
+    <div>
+      <h3>The first time: a help window</h3>
+      <p>The first time you open a worksheet, a window with instructions appears. Read it if you like.</p>
+      <div class="shot">
+        <img src="../img/tutorial/t06-help.jpg" alt="The help window over the worksheet" loading="lazy">
+        <span class="mk" data-n="1" style="left:16%;top:88.5%;width:13%;height:10%"></span>
+      </div>
+      <ol class="marks">
+        <li><b class="m">1</b><span>Click <span class="btn-like">Got it</span> <span class="is">(in the picture: “Ég skil”)</span> to close it. You can open it again with the <b>❓ Help</b> button at the bottom.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="step-n">8</div>
+    <div>
+      <h3>The worksheet in edit mode</h3>
+      <p>The worksheet looks like the printed version, with a <b>green bar at the bottom</b> of the screen. Scroll down and read the worksheet.</p>
+      <div class="shot">
+        <img src="../img/tutorial/t07-editor.jpg" alt="The worksheet in edit mode, with the green bar at the bottom" loading="lazy">
+        <span class="mk" data-n="1" style="left:1%;top:20%;width:98%;height:7.5%"></span>
+        <span class="mk" data-n="2" style="left:1%;top:91.5%;width:26.5%;height:8%"></span>
+        <span class="mk" data-n="3" style="left:1%;top:1%;width:13.5%;height:7.5%"></span>
+      </div>
+      <ol class="marks">
+        <li><b class="m">1</b><span>The yellow note says that this is still a machine translation. It disappears when the worksheet is reviewed.</span></li>
+        <li><b class="m">2</b><span>The green bar has the buttons you need — more about them in Part C.</span></li>
+        <li><b class="m">3</b><span><b>“← Back”</b> takes you back to your list of worksheets.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="step-n">9</div>
+    <div>
+      <h3>Click a text that is wrong</h3>
+      <p>Found a mistake? <b>Click on the text.</b> It turns yellow, and a panel opens on the right.</p>
+      <div class="shot">
+        <img src="../img/tutorial/t08-panel.jpg" alt="A text is clicked and the edit panel shows the English original and the translation" loading="lazy">
+        <span class="mk" data-n="1" style="left:36%;top:46%;width:8%;height:5.5%;"></span>
+        <span class="mk" data-n="2" style="left:44.5%;top:18%;width:51%;height:12.5%"></span>
+        <span class="mk" data-n="3" style="left:44.5%;top:33.5%;width:51%;height:21.5%"></span>
+      </div>
+      <ol class="marks">
+        <li><b class="m">1</b><span>The text you clicked is yellow.</span></li>
+        <li><b class="m">2</b><span>The <b>English original</b> — what the text should say.</span></li>
+        <li><b class="m">3</b><span><b>Your translation</b> — the box where you write.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="step-n">10</div>
+    <div>
+      <h3>Type the correction — it saves itself</h3>
+      <p>Click in the box, correct the words, and <b>just stop typing</b>. There is no save button.</p>
+      <div class="shot">
+        <img src="../img/tutorial/t09-saved.jpg" alt="The corrected translation with the text Saved under the box" loading="lazy">
+        <span class="mk" data-n="1" style="left:44.5%;top:33.5%;width:49.5%;height:21.5%"></span>
+        <span class="mk" data-n="2" style="left:44.5%;top:56%;width:9%;height:6.5%"></span>
+      </div>
+      <ol class="marks">
+        <li><b class="m">1</b><span>Here we changed one word.</span></li>
+        <li><b class="m">2</b><span>After one second you see <b>“✓ Saved”</b> <span class="is">(in the picture: “✓ Vistað”)</span>. Done!</span></li>
+      </ol>
+      <p>To close the panel, press <kbd>Esc</kbd> on the keyboard or click the <b>✕</b> at the top of the panel. Then click the next text you want to fix.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="step-n">11</div>
+    <div>
+      <h3>Corrected texts turn green</h3>
+      <div class="shot">
+        <img src="../img/tutorial/t11-changed.jpg" alt="The corrected sentence has a green background on the worksheet" loading="lazy">
+        <span class="mk" data-n="1" style="left:35.5%;top:47%;width:49%;height:6%"></span>
+      </div>
+      <ol class="marks">
+        <li><b class="m">1</b><span>A <b>green</b> background means: corrected by a teacher. A <b>yellow</b> background only shows where your mouse is.</span></li>
+      </ol>
+      <p class="is">Good to know: if the same sentence is used on other worksheets, your correction is used there too.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="step-n">12</div>
+    <div>
+      <h3>Made a mistake? Undo it</h3>
+      <p>Click the text again. Under the box you see every version of this text.</p>
+      <div class="shot">
+        <img src="../img/tutorial/t10-history.jpg" alt="The history of changes with the machine translation and the corrected version" loading="lazy">
+        <span class="mk r" data-n="1" style="left:70%;top:43%;width:23.5%;height:8%"></span>
+        <span class="mk" data-n="2" style="left:44.5%;top:53.5%;width:49.5%;height:30%"></span>
+        <span class="mk r" data-n="3" style="left:46%;top:76%;width:17.5%;height:6.5%"></span>
+      </div>
+      <ol class="marks">
+        <li><b class="m">1</b><span><b>“Use the machine translation again”</b> — removes your change and puts back the computer’s text.</span></li>
+        <li><b class="m">2</b><span><b>“History of changes”</b> — every version, who saved it and when. The top one is the current one.</span></li>
+        <li><b class="m">3</b><span><b>“Use this version”</b> — brings back an older version.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===================== C ===================== -->
+  <h2 id="finish"><span class="part">Part C</span><br>Finish a worksheet</h2>
+
+  <section class="step">
+    <div class="step-n">13</div>
+    <div>
+      <h3>An error in the English text? Write a note</h3>
+      <p>Sometimes the <b>English original</b> is wrong (a wrong number, a missing word). You cannot change the English text — but you can tell the author.</p>
+      <div class="shot">
+        <img src="../img/tutorial/t11-changed.jpg" alt="The green bar with the note field and the reviewed button" loading="lazy">
+        <span class="mk" data-n="1" style="left:45%;top:81.5%;width:52%;height:8.5%"></span>
+      </div>
+      <ol class="marks">
+        <li><b class="m">1</b><span>Write what is wrong in the field <b>“Note to the author”</b> and click <b>“Send note”</b>. Example: <i>“Task 3: 60 W should be 6 W.”</i></span></li>
+      </ol>
+      <p class="is">Problems we already know about are listed on the page <a href="issues.html">Problems found in the English source texts</a>.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="step-n">14</div>
+    <div>
+      <h3>When the whole worksheet is checked</h3>
+      <div class="shot">
+        <img src="../img/tutorial/t11-changed.jpg" alt="The button I have reviewed this worksheet in the green bar" loading="lazy">
+        <span class="mk" data-n="1" style="left:1%;top:91.5%;width:26.5%;height:8%"></span>
+      </div>
+      <ol class="marks">
+        <li><b class="m">1</b><span>Click <b>“I have reviewed this worksheet”</b> <span class="is">(in the picture: “Ég hef farið yfir þetta blað”)</span>. It changes to <b>“✓ Reviewed”</b>.</span></li>
+      </ol>
+      <p>Then click <b>“← Back”</b> at the top and choose the next worksheet. Clicked it too early? Click the button again to undo it.</p>
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="step-n">15</div>
+    <div>
+      <h3>See how everyone is doing</h3>
+      <p>The <a href="status.html">translation status page</a> shows all worksheets and all languages. Anyone can open it — no names are shown.</p>
+      <div class="shot">
+        <img src="../img/tutorial/t12-status.jpg" alt="The status table with icons per worksheet and language" loading="lazy">
+      </div>
+      <p>✅ reviewed by a teacher &nbsp;·&nbsp; ✏️ being corrected &nbsp;·&nbsp; 🤖 machine translation, not reviewed yet</p>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <h2 id="faq"><span class="part">Help</span><br>Problems and questions</h2>
+  <div class="faq">
+    <details><summary>The email does not arrive</summary>
+      <p>Wait two minutes. Look in the <b>spam / junk</b> folder (and the “quarantine”, if your school has one). School email systems often stop emails from outside — use a personal email address instead. It does not matter which address you use.</p></details>
+    <details><summary>The link says “expired” or “invalid”</summary>
+      <p>A link works <b>once</b> and for <b>one hour</b>. Go to the translations page and ask for a new link (steps 1–4). Use the newest email.</p></details>
+    <details><summary>I came back the next day — do I need to sign in again?</summary>
+      <p>Usually not, on the same computer and browser. If the page asks you to sign in, do steps 1–4 again. There is no password to remember.</p></details>
+    <details><summary>Can I lose my work?</summary>
+      <p>No. Every correction is saved on the server one second after you stop typing. You can close the browser at any time.</p></details>
+    <details><summary>The text has strange symbols like ** or $ or ____</summary>
+      <p>Leave them as they are. <b>**text**</b> makes text bold, <b>$…$</b> is a formula and <b>____</b> is a line where students write an answer. Translate only the words around them. Use the decimal comma of your language (2,5 not 2.5) if that is normal in your country.</p></details>
+    <details><summary>Two of us translate the same language — is that a problem?</summary>
+      <p>No. You both see the corrections live. The history shows who changed what. Agree who takes which worksheets.</p></details>
+    <details><summary>How do I delete my account?</summary>
+      <p>On the translations page, at the bottom under “Your account”, click <b>“Delete me”</b>. Your corrections stay on the worksheets without your name. All personal data is deleted after the translation phase anyway, at the latest on 31 January 2027.</p></details>
+    <details><summary>Something else does not work</summary>
+      <p>Ask in the project’s WhatsApp group, with a screenshot if possible.</p></details>
+  </div>
+
+  <div class="actions">
+    <a href="./">Open the translations page →</a>
+    <a class="ghost" href="status.html">📊 Translation status</a>
+  </div>
+
+  <p class="license">GREEN Erasmus+ KA220-VET · 2025-1-HR01-KA220-VET-000353056 · CC BY 4.0</p>
+</div>
+</main>
+
+<script src="../js/theme.js"></script>
+<script>theme.init && theme.init();</script>
+</body>
+</html>

@@ -171,6 +171,7 @@
             <h2>${esc(ui('trans.loginTitle'))}</h2>
             <ol>${(ui('trans.loginSteps') || []).map(s => `<li>${esc(s)}</li>`).join('')}</ol>
             <p class="warn">⚠ ${esc(ui('trans.schoolMail'))}</p>
+            <p><a href="tutorial.html" style="font-weight:700;color:var(--green)">📖 ${esc(ui('trans.tutorial'))} →</a></p>
           </div>
           <label for="email">${esc(ui('trans.emailLabel'))}</label>
           <input id="email" type="email" required autocomplete="email" placeholder="name@school.eu">
@@ -276,7 +277,7 @@
       <div>${esc(ui('trans.progress').replace('{n}', done.size).replace('{total}', sheets.length))}</div>
       <div class="bar"><i style="width:${pct}%"></i></div>
       <p class="how">${esc(ui('trans.how'))} ${esc(ui('trans.deadline'))}</p>
-      <p class="how"><a href="status.html" style="font-weight:700;color:var(--green)">📊 ${esc(ui('status.navLabel'))} →</a> &nbsp; <a href="issues.html" style="font-weight:700;color:var(--energy)">⚠ ${esc(ui('trans.issuesLink'))}</a></p>
+      <p class="how"><a href="status.html" style="font-weight:700;color:var(--green)">📊 ${esc(ui('status.navLabel'))} →</a> &nbsp; <a href="issues.html" style="font-weight:700;color:var(--energy)">⚠ ${esc(ui('trans.issuesLink'))}</a> &nbsp; <a href="tutorial.html" style="font-weight:700;color:var(--green)">📖 ${esc(ui('trans.tutorial'))} →</a></p>
       <details class="help"><summary>❓ ${esc(ui('edit.help'))} — ${esc(ui('edit.helpTitle'))}</summary>
         <ol>${(ui('edit.helpSteps') || []).map(([h, b]) => `<li><b>${esc(h)}</b><br>${esc(b)}</li>`).join('')}</ol></details>
       <table class="list">${sheets.map(w => `<tr>

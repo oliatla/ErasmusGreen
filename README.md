@@ -156,6 +156,38 @@ breaks, level filter, six languages, B/W, QR codes for videos in print.
 
 ---
 
+## Translation phase (November – 15 December 2026)
+
+All 20 worksheets were machine-translated (Claude) into IS, PT, HR, TR and NL and
+are being reviewed by teachers in each partner country, in the browser.
+
+| Page | What it is |
+|---|---|
+| [`/translations/`](translations/) | Sign in with a magic link (privacy notice + consent first), choose your language, list of worksheets, account settings and “Delete me” |
+| `ws/<slug>/?lang=xx&edit=1` | The editor: click a text, correct it, autosave; history, help, “I have reviewed this worksheet” — [`js/translate.js`](js/translate.js) |
+| [`/translations/tutorial.html`](translations/tutorial.html) | Step-by-step guide with screenshots for translators with little computer experience (images in `img/tutorial/`) |
+| [`/translations/status.html`](translations/status.html) | Public status: ✅ reviewed · ✏️ being corrected · 🤖 machine translation, per worksheet and language (counts only) |
+| [`/translations/issues.html`](translations/issues.html) | Problems found in the English source texts, per country and Word file — data in `translations/source-issues.json` (`"status": "fixed"` when done) |
+| [`/about.html`](about.html) | How the worksheets are made, how AI is used and not used, data, who is responsible |
+
+- **Backend:** Supabase (EU, Frankfurt). Schema and row-level security in
+  `supabase/migrations/` (applied automatically on push through the Supabase GitHub
+  integration). The site holds only the public key (`js/supabase-config.js`).
+- **Mail:** Supabase Auth → Resend SMTP, sender `noreply@rafdeild.com`.
+- **Corrections are not written to the JSON files until the end:**
+  `node tools/reader.mjs from-supabase` (needs `SUPABASE_SECRET_KEY` in `.env`).
+- **When the phase ends:**
+  1. `node tools/reader.mjs from-supabase` → commit
+  2. `node tools/reader.mjs word --all --web` → Word documents in every language → commit
+  3. run `supabase/manual/delete-personal-data.sql` in the Supabase SQL editor —
+     **at the latest 31 January 2027** (promised in the privacy notice)
+  4. remove the translation-phase banner from `index.html`
+- **Setting the sign-in up again elsewhere** (step by step, lessons learned):
+  [`docs/innskraning-magic-link.md`](docs/innskraning-magic-link.md). The original setup
+  checklist is [`docs/Green/translations-setup.md`](docs/Green/translations-setup.md).
+
+---
+
 ## Tech stack
 
 - **HTML / CSS / vanilla JavaScript** — no frameworks

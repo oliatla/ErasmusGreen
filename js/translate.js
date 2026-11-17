@@ -51,6 +51,7 @@
     .tr-modal-box ol { margin: 0 0 16px; padding-left: 22px; }
     .tr-modal-box li { margin-bottom: 10px; }
     .tr-modal-box .tr-close { position: absolute; top: 10px; right: 12px; border: 0; background: none; font-size: 22px; cursor: pointer; color: #5f6b76; }
+    .tr-modal-box .tr-guide { margin-left: 14px; font-weight: 700; color: #1b6b3a; }
     .tr-modal-box .tr-ok { font: inherit; font-weight: 700; background: #1b6b3a; color: #fff; border: 0; border-radius: 6px; padding: 8px 18px; cursor: pointer; }
     .tr-history { font-size: 13px; }
     .tr-h { border-left: 3px solid #dfe1e6; padding: 4px 0 6px 10px; margin: 6px 0; }
@@ -137,6 +138,7 @@
         <ol>${(Array.isArray(steps) ? steps : []).map(([head, body]) =>
           `<li><b>${esc(head)}</b><br>${esc(body)}</li>`).join('')}</ol>
         <button class="tr-ok">${esc(t('helpOk'))}</button>
+        <a class="tr-guide" href="../../translations/tutorial.html" target="_blank" rel="noopener">📖 ${esc(api.ui('trans.tutorial'))}</a>
       </div>`;
     help.hidden = false;
     help.querySelector('.tr-ok').focus();
@@ -225,7 +227,7 @@
       for (const p of people || []) names[p.user_id] = p.name;
     }
     const who = id => (id === session.user.id ? (me.name || session.user.email) : names[id]) || `${t('anon')} · ${me.lang.toUpperCase()}`;
-    const when = d => new Date(d).toLocaleString(me.lang, { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+    const when = d => new Date(d).toLocaleString(me.lang, { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', hour12: false });
     const item = (text, meta, isNow) => `<div class="tr-h${isNow ? ' now' : ''}">
         <div class="tr-h-meta">${meta}${isNow ? ` · <b>${esc(t('current'))}</b>` : ''}</div>
         <div class="tr-h-text">${text == null ? `<i>${esc(t('reverted'))}</i>` : esc(text)}</div>
